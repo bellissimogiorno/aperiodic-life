@@ -8,6 +8,7 @@ import hashlib
 import http.server
 import os
 from pathlib import Path
+import shlex
 import socketserver
 import subprocess
 import sys
@@ -57,9 +58,31 @@ PROFILES = {
 }
 
 
+def workflow_message(kind: str, message: str) -> None:
+    """Emit an Actions command without interpreting newlines in its message."""
+    escaped = message.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+    print(f"::{kind}::{escaped}", flush=True)
+
+
 def run(command: list[str]) -> None:
-    print("+", " ".join(command), flush=True)
-    subprocess.run(command, cwd=ROOT, check=True)
+    label = shlex.join(command)
+    github_actions = os.environ.get("GITHUB_ACTIONS") == "true"
+    if github_actions:
+        workflow_message("group", label)
+    print("+", label, flush=True)
+    try:
+        subprocess.run(command, cwd=ROOT, check=True)
+    except subprocess.CalledProcessError as error:
+        if github_actions:
+            workflow_message("error", f"Failed: {label} (exit status {error.returncode}). See this command's log for details.")
+        raise
+    except OSError as error:
+        if github_actions:
+            workflow_message("error", f"Could not run {label}: {error}")
+        raise
+    finally:
+        if github_actions:
+            workflow_message("endgroup", "")
 
 
 def command_test(profile: str) -> None:
@@ -130,5 +153,5 @@ if __name__ == "__main__":
     try:
         raise SystemExit(main())
     except subprocess.CalledProcessError as error:
-        print(f"Command failed with exit status {error.returncode}.", file=sys.stderr)
+        print(f"Command failed with exit status {error.returncode}: {shlex.join(error.cmd)}", file=sys.stderr)
         raise SystemExit(error.returncode)

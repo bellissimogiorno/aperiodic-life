@@ -13,6 +13,37 @@ The browser job locates a Chromium-compatible executable and sets `CHROMIUM`. Th
 
 When configuring branch protection, select the four check names above after their first run. The optional packaging job is skipped during ordinary CI and should not be required. If the default branch is renamed, update the `push.branches` entry in `ci.yml`.
 
+## If a check fails
+
+The **CI** workflow tests the project. It is separate from **Deploy Pages (manual)**
+and GitHub's **pages build and deployment** workflow. A failed CI run does not by
+itself establish that the website is unavailable. Check the Pages deployment and
+open the published URL to determine whether the site is running.
+
+Open the failed run, select the red job, and expand its failed step. Each command
+in a test profile has an expandable log group; a failed command also appears in
+the run's error annotations with its exit status. Read its assertion or traceback
+above the final exit-status message. A deprecation warning or runner-image notice
+is not the same as a failed test.
+
+Failed standard/topology jobs retain their output as `check-logs-node-22` or
+`check-logs-node-24`; the large-patch job uses `check-logs-large`. Pages verification
+uses `pages-check-logs`. These downloadable artefacts are retained for 14 days.
+If setup fails before a test starts, there may be no test log to upload; use the
+failed setup step's own log. The Bash pipelines preserve test failures when
+copying output to log files.
+
+When reporting a failure, include the failed command and its complete output,
+the commit SHA, and the Node.js version. A screenshot containing only
+“Process completed with exit code 1” does not identify the cause. GitHub explains
+how to [view and download workflow logs](https://docs.github.com/en/actions/how-tos/monitor-workflows/use-workflow-run-logs).
+
+If GitHub shows different job names from the table above, compare the workflow
+at that run's commit with `.github/workflows/ci.yml` in this release. When copying
+a release into a clone, include the `.github` directory and review the staged
+changes. Rerunning an old workflow run uses its original commit; push the updated
+files to test the new version.
+
 ## Local equivalents
 
 Run these from the repository root with Node 22 or 24 and Python 3.10 or later:

@@ -97,11 +97,28 @@ Check a discovery, stepping, state-file save/load, and browser-console errors on
 
 ## Later changes and release files
 
-Commit reviewed changes and push normally:
+When updating an existing clone from a release ZIP, copy the contents of the
+extracted `aperiodic-life` directory into the repository root, including
+`.github`, `.gitattributes`, `.gitignore`, and `.nojekyll`. Some file managers
+hide names beginning with a full stop. Keep the clone's own `.git` directory.
+The application files must sit beside the repository's `README.md`, rather than
+inside a second nested `aperiodic-life` directory.
+
+Review and commit the update, including the workflow files:
 
 ```bash
+git status --short
+git add -A
+git diff --cached --stat
+git commit -m "Update Aperiodic Life"
 git push
 ```
+
+The next CI run should show **Standard and topology (Node 22)**,
+**Standard and topology (Node 24)**, **Large patches**, and
+**Browser (HTTP and standalone file)**. If a check fails, see
+[how to read the CI failure](CI.md#if-a-check-fails). Re-running an older failed
+run does not pick up files from a newer commit.
 
 Use [release operations](OPERATIONS.md) to rebuild and verify the standalone and deterministic archives. GitHub Releases can carry the standalone HTML and release archives as downloadable assets; keep their version and evidence consistent with the tagged source.
 

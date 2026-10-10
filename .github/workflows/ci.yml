@@ -47,9 +47,19 @@ jobs:
           node --version
           python3 --version
       - name: Run standard checks
-        run: python3 tools/project.py test standard
+        run: python3 tools/project.py test standard 2>&1 | tee "$RUNNER_TEMP/standard-checks.log"
       - name: Reconstruct topology independently
-        run: python3 tools/project.py test topology
+        run: python3 tools/project.py test topology 2>&1 | tee "$RUNNER_TEMP/topology-checks.log"
+      - name: Retain failed check logs
+        if: failure()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: check-logs-node-${{ matrix.node }}
+          path: |
+            ${{ runner.temp }}/standard-checks.log
+            ${{ runner.temp }}/topology-checks.log
+          if-no-files-found: warn
+          retention-days: 14
 
   large:
     name: Large patches
@@ -66,7 +76,15 @@ jobs:
           node-version: '24'
           package-manager-cache: false
       - name: Run large-patch checks
-        run: python3 tools/project.py test large
+        run: python3 tools/project.py test large 2>&1 | tee "$RUNNER_TEMP/large-checks.log"
+      - name: Retain failed large-patch logs
+        if: failure()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: check-logs-large
+          path: ${{ runner.temp }}/large-checks.log
+          if-no-files-found: warn
+          retention-days: 14
 
   browser:
     name: Browser (HTTP and standalone file)
