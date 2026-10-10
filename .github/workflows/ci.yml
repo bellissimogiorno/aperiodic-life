@@ -1,0 +1,149 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      build_package:
+        description: Build downloadable release files after all checks pass
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  standard:
+    name: Standard and topology (Node ${{ matrix.node }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['22', '24']
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ matrix.node }}
+          package-manager-cache: false
+      - name: Show runtime versions
+        run: |
+          node --version
+          python3 --version
+      - name: Run standard checks
+        run: python3 tools/project.py test standard
+      - name: Reconstruct topology independently
+        run: python3 tools/project.py test topology
+
+  large:
+    name: Large patches
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Run large-patch checks
+        run: python3 tools/project.py test large
+
+  browser:
+    name: Browser (HTTP and standalone file)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Locate the runner's preinstalled browser
+        run: |
+          chrome_bin="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser || true)"
+          if [[ -z "$chrome_bin" ]]; then
+            echo 'No Chromium-compatible browser is installed on this runner.' >&2
+            exit 1
+          fi
+          printf 'CHROMIUM=%s\n' "$chrome_bin" >> "$GITHUB_ENV"
+          "$chrome_bin" --version
+      - name: Verify the committed standalone bundle
+        run: node build-standalone.js --check
+      - name: Run browser interactions and require real navigation
+        env:
+          APERIODIC_PREVIEW_PATH: ${{ runner.temp }}/aperiodic-life-browser-preview.png
+        run: |
+          node test-browser.js | tee "$RUNNER_TEMP/aperiodic-life-browser-result.json"
+          python3 - "$RUNNER_TEMP/aperiodic-life-browser-result.json" <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+          result = json.loads(Path(sys.argv[1]).read_text())
+          if result.get('mode') != 'http-and-file':
+              raise SystemExit('CI requires HTTP and file navigation; document injection is insufficient.')
+          PY
+      - name: Retain browser evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: browser-evidence
+          path: |
+            ${{ runner.temp }}/aperiodic-life-browser-result.json
+            ${{ runner.temp }}/aperiodic-life-browser-preview.png
+          if-no-files-found: warn
+          retention-days: 14
+
+  package:
+    name: Downloadable release (manual)
+    if: github.event_name == 'workflow_dispatch' && inputs.build_package
+    needs: [standard, large, browser]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out the tested source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Build outside the source tree
+        run: python3 tools/package.py --output-dir "$RUNNER_TEMP/aperiodic-life-packages"
+      - name: Upload downloadable files
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: aperiodic-life-release-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/aperiodic-life-packages/*.zip
+            ${{ runner.temp }}/aperiodic-life-packages/*.html
+            ${{ runner.temp }}/aperiodic-life-packages/*.manifest.json
+            ${{ runner.temp }}/aperiodic-life-packages/*.sha256
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30

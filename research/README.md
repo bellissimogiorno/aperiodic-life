@@ -1,0 +1,65 @@
+# Reproducible automaton search
+
+The research tools verify the 48 examples in the application catalogue and search for additional structures on square, hexagonal, Penrose and Einstein-hat tilings. They run with Node.js and require no package-manager dependencies.
+
+## Verify the catalogue
+
+Run these commands from the repository root:
+
+```bash
+node research/verify-catalog.js
+node test-research.js
+node test-traveller-evidence.js
+node test-structures.js
+```
+
+`verify-catalog.js` reconstructs every catalogue configuration and checks its stated contract: an exact period, translated complete state, replication, extinction time or finite activity horizon. `fixtures/catalogue-verification.json` contains the expected results. Tests also compare sparse and dense evolution and independently replay the moving patterns and selected localised structures.
+
+The compact source record in `fixtures/hex-b245s3-source.json` credits Golly's hexagonal RLE example and its relationship to the period-10 ship described by Carter Bays. Preserve this attribution when reusing the pattern.
+
+## Search tools
+
+| Script | Purpose |
+| --- | --- |
+| `mine-oscillators.js` | Evolve deterministic soups, isolate connected cycle components and verify exact localised oscillators. |
+| `search-transients.js` | Search for compact seeds with long activity, delayed extinction or eventual localised cycles. |
+| `search-movers.js` | Explore seeds using bounded centroid-motion heuristics. |
+| `search-mobile-patterns.js` | Detect translated complete states and check the surrounding local graph. |
+| `verify-penrose-traveller.js` | Transplant the compact four-state Penrose traveller to congruent placements and replay each placement. |
+| `survey-fields.js` | Run a deterministic 32-case, 3,000-generation field panel. |
+
+The search scripts provide `--help`. Store new search output outside the source tree, retaining the exact seed, rule, state count, patch and generation limit. A useful starting point is:
+
+```bash
+node research/mine-oscillators.js --help
+node research/search-mobile-patterns.js --help
+node research/verify-penrose-traveller.js --depth 10 --horizon 300
+```
+
+`lib/sparse-automaton.js` supplies the sparse engine used by the search tools. It supports rules without `B0`; zero-neighbour births require dense whole-board updates.
+
+## Interpreting a result
+
+A recurrence requires equality of the complete state, including refractory cells. Hashes and shape signatures identify candidates for exact comparison; they do not establish recurrence on their own. The oscillator miner's fingerprints suppress duplicates heuristically and are not counts of graph-isomorphism classes.
+
+A translated return on a finite Penrose patch is a checked observation over a stated interval. The surrounding tiling need not repeat, so such a return does not establish indefinite travel. The catalogue includes finite Penrose travellers, stationary Penrose and hat oscillators, and a hat directional transient that becomes fully extinct at generation 83. It does not claim a sustained Einstein-hat glider.
+
+On the regular square and hexagonal lattices, an exact translated complete state can establish a repeating spaceship when the local evolution is independent of the finite boundary. Independent traveller checks include this boundary condition. Every bounded negative search remains a result about its sampled configurations and horizon, not a proof of nonexistence.
+
+## Figures and performance
+
+`figures/oscillator-atlas.svg` and its PNG preview show exact simulation phases of five localised oscillators. Regenerate the SVG with:
+
+```bash
+node research/render-oscillator-atlas.js
+```
+
+Measure construction and simulation timings for the current implementation:
+
+```bash
+node --expose-gc research/benchmark-core-performance.js --rounds 5 --output ../benchmark.json
+```
+
+Use `--quick` to limit construction measurements to smaller Penrose patches. The output includes host and runtime details, samples and medians; timings depend on the machine and its workload.
+
+See [the rule survey](../docs/RULE_SURVEY.md) for the catalogue's rules and interpretation.

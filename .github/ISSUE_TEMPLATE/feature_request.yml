@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest a useful improvement to the simulator or research workflow.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What would this help you do?
+      description: Describe the task or difficulty, with a concrete example if possible.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour
+      description: Explain how the feature should work and what a successful result would look like.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context or alternatives
+      description: Include relevant tilings, experiment sizes, accessibility needs, existing workarounds, mockups, or related issues. Note any effect on offline use or reproducibility.

@@ -1,0 +1,59 @@
+name: Research result or candidate
+description: Share a reproducible structure, search result, or mathematical observation.
+title: "[Research]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tentative candidates are welcome. Distinguish what was observed from what has been proved, and include enough information to replay the result. See research/README.md for the existing methods and evidence.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type of result
+      options:
+        - Oscillator or still life
+        - Translating pattern or travelling candidate
+        - Transient
+        - Rule or geometry result
+        - Search result, including a bounded negative result
+        - Not yet classified
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: Result and scope
+      description: State the observed period, displacement, lifetime, or other property. Include the generation interval and distinguish finite-patch evidence from an infinite-tiling claim.
+    validations:
+      required: true
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Exact configuration
+      description: Include version/commit, tiling, patch depth or size, Penrose orientation if applicable, edge/touch graph, B/S rule, state count C, and dead-border rings. Cell IDs depend on the exact patch and ordering.
+      placeholder: |
+        Version or commit:
+        Tiling and patch size:
+        Orientation / seed:
+        Neighbourhood:
+        Rule and C:
+        Dead-border rings:
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Initial state and replay
+      description: Attach a saved state JSON or give every nonzero cell and its state, including refractory cells. Include the exact command or UI steps, generation origin, and horizon. For searches, include the deterministic seed and search parameters.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification so far
+      description: Report checks already performed and anything still uncertain. Useful checks include complete-state first return, boundary clearance across every phase, independent replay, larger-patch replay, or exact geometry and local-graph matching for a translated return. Matching populations or hashes alone do not establish recurrence.
+  - type: textarea
+    id: sources
+    attributes:
+      label: Related work and provenance
+      description: Link any earlier pattern, paper, issue, source code, or dataset used. If the result may be an existing phase or rule alias, mention that. Include licences for imported code or other third-party material.

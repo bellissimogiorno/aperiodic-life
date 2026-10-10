@@ -1,0 +1,10 @@
+* text=auto eol=lf
+
+# Keep verification fixtures byte-for-byte identical across platforms.
+research/fixtures/** -text
+
+*.png binary
+*.jpg binary
+*.gif binary
+*.pdf binary
+*.zip binary

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111a">
+  <link rel="icon" href="data:,">
+  <title>Aperiodic Life — cellular automata on periodic and aperiodic tilings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="controls" id="controls" aria-label="Simulation controls">
+      <header class="brand">
+        <div>
+          <p class="eyebrow">TILING CELLULAR AUTOMATA</p>
+          <h1>Aperiodic Life</h1>
+        </div>
+        <button class="icon-button mobile-only" id="closeControls" aria-label="Close controls">×</button>
+      </header>
+      <p class="lede">Each tile is one cell. Compare square and hexagonal grids with Einstein-hat and Penrose tilings, then explore oscillators, travelling patterns, and other structures.</p>
+
+      <div class="button-grid primary-actions">
+        <button class="primary" id="runButton" title="Run or pause (Space)" aria-keyshortcuts="Space">Run</button>
+        <button id="stepButton" title="Advance one generation (N)" aria-keyshortcuts="N">Step</button>
+        <button id="randomizeButton" title="Randomise from the seed (R)" aria-keyshortcuts="R">Randomise</button>
+        <button id="clearButton" title="Clear all cells (C)" aria-keyshortcuts="C">Clear</button>
+      </div>
+
+      <section>
+        <h2 class="section-title">
+          <span>Tiling</span>
+          <button class="info-button" id="neighborhoodInfoButton" type="button" aria-label="Explain neighbourhoods and finite borders" aria-haspopup="dialog" aria-controls="rulesDialog">?</button>
+        </h2>
+        <label class="field">
+          <span>Family</span>
+          <select id="tilingSelect">
+            <option value="hat" selected>Einstein hat</option>
+            <option value="penrose">Penrose P3 rhombs</option>
+            <option value="square">Square grid</option>
+            <option value="hex">Hexagonal grid</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Patch size</span>
+          <select id="depthSelect">
+            <option value="1">25 cells</option>
+            <option value="2">169 cells</option>
+            <option value="3">1,156 cells</option>
+            <option value="4" selected>7,921 cells</option>
+            <option value="5">54,289 cells</option>
+          </select>
+        </label>
+        <label class="field" id="penroseSeedField" hidden>
+          <span>Penrose seed</span>
+          <select id="penroseSeedSelect" disabled>
+            <option value="sun" selected>Sun wheel</option>
+            <option value="sun-mirror">Mirrored sun wheel</option>
+          </select>
+          <small>The mirrored choice is a congruent reflected view of the same undecorated rhomb substrate; it changes tile ordering, not graph-totalistic dynamics.</small>
+        </label>
+        <label class="field">
+          <span>Neighbourhood</span>
+          <select id="neighborhoodSelect" aria-describedby="neighborhoodHelp">
+            <option value="edge" selected>Shared edge</option>
+            <option value="touch">Edge or corner</option>
+          </select>
+          <small id="neighborhoodHelp">The two contact graphs can have different degrees and finite-patch boundaries.</small>
+        </label>
+        <label class="field">
+          <span>Dead border rings</span>
+          <input id="borderInput" type="number" min="0" max="12" step="1" value="1">
+          <small>Distance is measured using the selected neighbourhood.</small>
+        </label>
+      </section>
+
+      <section>
+        <h2 class="section-title">
+          <span>Rule</span>
+          <button class="info-button" id="ruleInfoButton" type="button" aria-label="Explain rule notation and cell states" aria-haspopup="dialog" aria-controls="rulesDialog">?</button>
+        </h2>
+        <label class="field">
+          <span>Preset</span>
+          <select id="presetSelect">
+            <option value="conway" selected>Conway — B3/S23</option>
+            <option value="highlife">HighLife — B36/S23</option>
+            <option value="seeds">Seeds — B2/S</option>
+            <option value="brain">Brian’s Brain — B2/S/C3</option>
+            <option value="starwars">Star Wars — B2/S345/C4</option>
+            <option value="lwd">Life without Death — B3/Sall</option>
+            <option value="custom">Custom</option>
+          </select>
+        </label>
+        <div class="field">
+          <span>Birth / survival</span>
+          <div class="inline-control">
+            <input id="ruleInput" type="text" value="B3/S23" spellcheck="false" aria-label="Rule in B slash S notation" aria-describedby="ruleMeaningHelp ruleHelp" aria-invalid="false">
+            <button class="compact" id="randomRuleButton" title="Generate a random valid rule">Dice</button>
+          </div>
+          <small id="ruleMeaningHelp"><code>B</code> lists birth counts; <code>S</code> lists survival counts. Only state-1 neighbours count.</small>
+          <small id="ruleHelp" aria-live="polite">Use compact digits, comma-separated counts, or brackets for multi-digit counts.</small>
+        </div>
+        <label class="field">
+          <span>Cell states (total)</span>
+          <input id="generationsInput" type="number" min="2" max="32" step="1" value="2">
+          <small>Includes state 0 (dead) and state 1 (live); any higher states are refractory.</small>
+        </label>
+      </section>
+
+      <section>
+        <h2>Discoveries</h2>
+        <label class="field">
+          <span>Search discoveries</span>
+          <input id="discoverySearch" type="search" placeholder="Penrose traveller, hat p26, B2/S…" autocomplete="off" aria-describedby="discoveryCount">
+          <small id="discoveryCount" role="status" aria-live="polite"></small>
+        </label>
+        <label class="field">
+          <span>Curated configuration</span>
+          <select id="discoverySelect">
+            <option value="">Choose a verified example…</option>
+          </select>
+        </label>
+        <div class="button-grid discovery-actions">
+          <button id="loadDiscoveryButton" disabled>Load</button>
+          <button id="loadRunDiscoveryButton" class="primary" disabled>Load &amp; run</button>
+        </div>
+        <p class="discovery-note" id="discoveryDescription">Includes classic reference patterns, high-period aperiodic oscillators, and evolving fields.</p>
+      </section>
+
+      <section>
+        <h2>Save an experiment</h2>
+        <div class="button-grid discovery-actions">
+          <button id="saveSnapshotButton" disabled>Save state</button>
+          <button id="loadSnapshotButton">Load state</button>
+        </div>
+        <input id="snapshotFileInput" type="file" accept=".json,application/json" hidden>
+        <p class="discovery-note" id="snapshotStatus" role="status" aria-live="polite">Save every live and refractory cell, the rules, and the generation to a JSON file. Load restores it paused.</p>
+      </section>
+
+      <section>
+        <h2>Seed and timing</h2>
+        <label class="field range-field">
+          <span>Initial density <output id="densityOutput">22%</output></span>
+          <input id="densityInput" type="range" min="0" max="1" step="0.01" value="0.22">
+        </label>
+        <div class="field">
+          <span>Random seed</span>
+          <div class="inline-control">
+            <input id="seedInput" type="text" value="aperiodic" spellcheck="false">
+            <button class="compact" id="newSeedButton" title="Create a new seed">New</button>
+          </div>
+        </div>
+        <label class="field range-field">
+          <span>Speed <output id="speedOutput">24 steps/s</output></span>
+          <input id="speedInput" type="range" min="1" max="240" step="1" value="24">
+        </label>
+      </section>
+
+      <section>
+        <h2>View</h2>
+        <label class="field">
+          <span>Pointer tool</span>
+          <select id="toolSelect">
+            <option value="paint">Paint / erase cells</option>
+            <option value="pan" selected>Pan view</option>
+          </select>
+        </label>
+        <label class="check-field">
+          <input id="gridCheckbox" type="checkbox" checked>
+          <span>Draw tile outlines</span>
+        </label>
+        <label class="check-field">
+          <input id="typeCheckbox" type="checkbox" checked disabled>
+          <span>Distinguish thin and thick Penrose rhombs</span>
+        </label>
+        <label class="field">
+          <span>Palette</span>
+          <select id="paletteSelect">
+            <option value="cyan" selected>Cyan night</option>
+            <option value="ember">Ember</option>
+            <option value="paper">Paper</option>
+          </select>
+        </label>
+        <div class="button-grid">
+          <button id="fitButton" title="Fit patch to view (F)" aria-keyshortcuts="F">Fit view</button>
+          <button id="saveButton">Save PNG</button>
+          <button id="copyButton" title="Copy settings only; use Save state to preserve the cells">Copy settings</button>
+          <button id="aboutButton">About</button>
+        </div>
+      </section>
+
+      <section class="stats-section">
+        <h2>Live statistics</h2>
+        <dl class="stats">
+          <div><dt>Tiling</dt><dd id="tilingStat">—</dd></div>
+          <div><dt>Generation</dt><dd id="generationStat">0</dd></div>
+          <div><dt>Live (state 1)</dt><dd id="aliveStat">0</dd></div>
+          <div><dt>Cells</dt><dd id="cellsStat">—</dd></div>
+          <div><dt>Degree</dt><dd id="degreeStat">—</dd></div>
+          <div><dt>Changed</dt><dd id="changedStat">0</dd></div>
+          <div><dt>Detected cycle</dt><dd id="cycleStat">—</dd></div>
+          <div><dt>Step time</dt><dd id="stepStat">—</dd></div>
+          <div><dt>Build time</dt><dd id="buildStat">—</dd></div>
+          <div><dt>Tile types</dt><dd id="tileTypesStat">—</dd></div>
+        </dl>
+      </section>
+
+      <p class="footer-note">Space: run · N: step · R: reseed · F: fit · Shift-drag or right-drag: pan</p>
+    </aside>
+
+    <main class="stage" id="stage">
+      <button class="menu-button mobile-only" id="openControls" aria-label="Open controls" aria-controls="controls" aria-expanded="false">Controls</button>
+      <canvas id="lifeCanvas" aria-label="Cellular automaton on a periodic or aperiodic tiling"></canvas>
+      <div class="busy" id="busy" role="status" aria-live="polite" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <strong id="busyTitle">Building tiling</strong>
+        <span id="busyDetail">Generating geometry and adjacency…</span>
+      </div>
+      <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+      <div class="canvas-hint">Drag to pan · wheel to zoom · choose Paint to edit</div>
+    </main>
+  </div>
+
+  <dialog id="aboutDialog">
+    <form method="dialog">
+      <button class="dialog-close" aria-label="Close">×</button>
+      <h2>Aperiodic Life</h2>
+      <p>The app supports traditional square and hexagonal boards, the Einstein “hat” monotile, and Penrose P3 rhombs. Every tile is one automaton cell.</p>
+      <p>The Einstein patch is generated from the H/T/P/F substitution system. The Penrose patch is generated by exact Robinson-triangle deflation and paired into thin and thick golden rhombs. Hat contacts use exact triangular-lattice coordinates; Penrose vertices use exact integer coefficients in <code>Z[φ]</code>. Adjacency is therefore not inferred from visual tolerances.</p>
+      <p><strong>Shared edge</strong> gives the von Neumann graph on squares and the ordinary six-neighbour graph on hexagons. <strong>Edge or corner</strong> gives the Moore graph on squares; it coincides with shared-edge adjacency for regular hexagons. On the aperiodic tilings it also counts point contacts. Missing cells outside the finite patch are dead; border rings can be locked dead to keep experiments away from the boundary.</p>
+      <p>Rules use <code>B…/S…</code> notation. For example, <code>B3/S23</code> births a dead cell with three live neighbours and preserves a live cell with two or three. Counts can be comma-separated; use brackets for multi-digit counts, such as <code>B[10]/S[9,10]</code>.</p>
+      <p>The Discoveries menu contains <span id="catalogueCount"></span> verified configurations: classic square references, hexagonal oscillators and travel, localised aperiodic oscillators, compact Penrose travelling dynamics, long transients, and collective fields. Search by tiling, rule, or pattern name. Use <strong>Load</strong> to inspect a paused initial state or <strong>Load &amp; run</strong> to start it immediately. <strong>Save state</strong> preserves an exact experimental phase, including refractory cells, for later inspection or sharing. Geometry attribution, search methodology, and licence details are included with the source project and in the standalone file’s source header.</p>
+      <button class="primary">Close</button>
+    </form>
+  </dialog>
+
+  <dialog class="rules-dialog" id="rulesDialog" aria-labelledby="rulesDialogTitle" aria-describedby="rulesDialogIntro">
+    <form method="dialog">
+      <button class="dialog-close" aria-label="Close rule help">×</button>
+      <h2 id="rulesDialogTitle">How the rules work</h2>
+      <p id="rulesDialogIntro">One tile is one cell. At each generation every cell reads the same old generation, then all cells update together. Changes made earlier in a step therefore cannot affect cells updated later in that step.</p>
+
+      <section aria-labelledby="neighboursTitle">
+        <h3 id="neighboursTitle">Neighbours and the finite patch</h3>
+        <p><strong>Shared edge</strong> counts cells whose tile boundaries share an edge segment. <strong>Edge or corner</strong> also counts tiles that meet only at a point. The regular hexagonal choices coincide; on square and aperiodic boards they can differ. A cell’s count is the number of its selected neighbours that are in <strong>state 1</strong>.</p>
+        <p>The displayed board is finite. Missing cells beyond it never contribute to a count—equivalently, they behave as permanently forced-dead cells. A value of <strong>1 dead border ring</strong> locks the outer graph boundary in state 0; each additional ring locks cells one more neighbour step inward, using the selected neighbourhood.</p>
+      </section>
+
+      <section aria-labelledby="notationTitle">
+        <h3 id="notationTitle">Reading <code>B…/S…</code></h3>
+        <p><code>B</code> gives the live-neighbour counts that turn a state-0 cell into state 1. <code>S</code> gives the counts that keep a state-1 cell in state 1. Thus <code>B3/S23</code> means birth with exactly 3 live neighbours, and survival with 2 or 3. A blank list means none, so <code>B2/S</code> has births at 2 but no survival count.</p>
+        <p>Compact digits are separate counts: <code>B36</code> means 3 or 6. Use commas or brackets when a count has more than one digit, for example <code>B[10]/S[9,10]</code>.</p>
+      </section>
+
+      <section aria-labelledby="statesTitle">
+        <h3 id="statesTitle">Cell states</h3>
+        <dl class="state-transitions">
+          <div><dt>State 0</dt><dd>Dead and receptive. A matching <code>B</code> count changes it to state 1; otherwise it stays 0.</dd></div>
+          <div><dt>State 1</dt><dd>Live, and the only state counted as a live neighbour. A matching <code>S</code> count keeps it at 1.</dd></div>
+          <div><dt>Two states</dt><dd>If a state-1 cell does not survive, it returns directly to state 0.</dd></div>
+          <div><dt>More than two</dt><dd>If it does not survive, state 1 advances through refractory states 2, 3, …, then returns to 0. Refractory cells ignore <code>B</code> and <code>S</code> while progressing.</dd></div>
+        </dl>
+      </section>
+
+      <aside class="rule-example" aria-labelledby="travellerRuleTitle">
+        <h3 id="travellerRuleTitle">Example: Penrose Compact Traveller</h3>
+        <p><code>B2/S</code> with <strong>4 cell states</strong> means states 0, 1, 2, and 3. A dead cell is born into state 1 when it has exactly two state-1 neighbours. Because <code>S</code> is empty, a state-1 cell never remains live: it advances to state 2, then 3, then 0. States 2 and 3 are visible refractory cells but do not count as live neighbours.</p>
+        <p>The <code>B24/S</code> launcher uses the same four states, but a dead cell may be born with either two <em>or</em> four live neighbours. Its extra four-neighbour births are used only during the measured launch transient.</p>
+      </aside>
+
+      <section aria-labelledby="travellerEvidenceTitle">
+        <h3 id="travellerEvidenceTitle">What “traveller” means here</h3>
+        <p>An <strong>exact translated return</strong> means the complete configuration—including every refractory state—was found again after a nonzero geometric translation. This is an exact statement about those two measured generations on the displayed finite patch; an aperiodic substrate need not repeat farther along the path.</p>
+        <p>An <strong>observed traveller</strong> need not have a translated recurrence. It must remain active, coherent, boundary-clear, and continue making net progress through the stated test horizon. The label never claims motion forever. Each curated summary states its measured horizon, and the source evidence records the population, radius, displacement, and border-distance checks.</p>
+      </section>
+
+      <button class="primary">Close</button>
+    </form>
+  </dialog>
+
+  <script src="core.js"></script>
+  <script src="discoveries.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

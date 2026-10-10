@@ -1,0 +1,53 @@
+{
+  "schema": "aperiodic-life-golly-hex-rle-source-v1",
+  "officialDocumentation": {
+    "publisher": "Golly",
+    "document": "QuickLife help, Hexagonal neighborhood section",
+    "url": "https://golly.sourceforge.io/Help/Algorithms/QuickLife.html",
+    "rule": "B245/S3H",
+    "declaredBounds": [
+      7,
+      6
+    ],
+    "rleBody": "obo$4bo$2bo$bo2bobo$3bo$5bo!",
+    "coordinateConvention": "Square embedding with the NE and SW Moore neighbours ignored",
+    "toAxial": "[q,r] = [x,y-x]"
+  },
+  "expectedReplay": {
+    "period": 10,
+    "mappedAxialTranslation": [
+      0,
+      -2
+    ],
+    "phasePopulationsGeneration0Through10": [
+      9,
+      13,
+      17,
+      18,
+      16,
+      17,
+      15,
+      16,
+      15,
+      11,
+      9
+    ],
+    "catalogueFixtureD6Equivalence": {
+      "rotation60Steps": 2,
+      "reflected": false
+    }
+  },
+  "scholarlyContext": {
+    "author": "Carter Bays",
+    "title": "A Note on the Game of Life in Hexagonal and Pentagonal Tessellations",
+    "journal": "Complex Systems",
+    "volume": 15,
+    "year": 2005,
+    "pages": "245-252",
+    "doi": "https://doi.org/10.25088/ComplexSystems.15.3.245",
+    "figure": 4,
+    "establishes": "Bays rule 3/2,4,5 (B245/S3), period 10, vertical displacement two",
+    "publishesMachineCoordinates": false
+  },
+  "attributionCaveat": "Golly presents the B245/S3H RLE as its hex-neighbourhood example but does not name Bays or Figure 4. Rule and executable D6/replay equivalence identify the same orbit; the Golly page itself is not an explicit attribution to Bays."
+}

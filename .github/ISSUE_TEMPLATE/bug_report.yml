@@ -1,0 +1,44 @@
+name: Bug report
+description: Report a reproducible problem with the simulator, tools, or documentation.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Include the smallest example that reproduces the problem. For security reports, follow SECURITY.md.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the observed behaviour and what you expected instead.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Give the release number or commit, and whether you used the standalone HTML, source build, or hosted site.
+      placeholder: "3.6.1, standalone HTML"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include the discovery name or exact tiling, size, orientation, neighbourhood, rule, state count, and dead-border rings when relevant. A saved state JSON can preserve the failing phase.
+      placeholder: |
+        1. Open ...
+        2. Select ...
+        3. Run for ... generations
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Browser and environment
+      description: Include browser/version and operating system for UI problems; Node.js/Python versions and the command for tool failures. Include GPU or display details if rendering is affected.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Attach a small saved state, screenshot, console error, or test output. Remove information you do not want published.

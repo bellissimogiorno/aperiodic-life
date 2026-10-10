@@ -1,0 +1,26 @@
+# Local environments and dependency caches (the application needs no npm install).
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Build outputs belong outside the checkout; these also guard common local paths.
+/dist/
+/build/
+/site/
+/logs/
+/coverage/
+/evidence/
+
+# Local configuration and editor/OS files.
+.env
+.env.*
+/.vscode/
+/.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# The generated standalone is intentionally committed and freshness-checked.
