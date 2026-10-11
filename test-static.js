@@ -105,7 +105,7 @@ for (const [id, title] of [
 assert(index.includes('Load &amp; run'));
 assert(index.includes('<option value="pan" selected>Pan view</option>'), 'pan must be the default pointer tool');
 assert(!index.includes('<option value="paint" selected>'), 'paint must remain an explicit pointer-tool choice');
-assert(index.includes('Drag to pan · wheel to zoom · choose Paint to edit'));
+assert(index.includes('Drag to pan · pinch or wheel to zoom · Paint to edit'));
 assert(index.includes('aria-labelledby="rulesDialogTitle"'), 'rule help dialog must have an accessible name');
 assert.equal(
   (index.match(/aria-haspopup="dialog" aria-controls="rulesDialog"/g) || []).length,

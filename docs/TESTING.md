@@ -42,7 +42,7 @@ Presentation checks are separate from dynamics. Playback speeds must match each 
 
 ## Interaction and state files
 
-Dependency-free interaction tests exercise camera ownership, responsive framing, containment, trajectory legibility, post-horizon following, painting and pan overrides, pointer cancellation, rule-dialog keyboard isolation, and synchronised playback controls during play, pause, and rebuilds.
+Dependency-free interaction tests exercise camera ownership, responsive framing, containment, trajectory legibility, post-horizon following, painting and pan overrides, pinch scale and midpoint anchoring, two-finger panning, finger lifting, zoom limits, touch paint deferral, pointer cancellation, rule-dialog keyboard isolation, and synchronised playback controls during play, pause, and rebuilds.
 
 Snapshot tests round-trip exact states across all tilings, both graphs, and both Penrose orientations, then continue the restored experiments. They reject malformed files, unsupported values, invalid cell indices, graph mismatches, and nonzero locked-border cells without replacing the current simulation.
 
@@ -63,11 +63,15 @@ The harness discovers Chromium on `PATH` or uses the executable named by `CHROMI
 Playback checks also use native touch events in portrait and landscape phone
 viewports. They verify that the canvas Play/Pause button remains reachable with
 the controls drawer closed, open, or scrolled, that pausing stops generations,
-and that both playback buttons agree after loading an example.
+and that both playback buttons agree after loading an example. Native two-finger
+checks cover pinch scale, midpoint anchoring, panning, cancellation and resumed
+painting in both tools and both orientations, for HTTP and standalone pages.
+Selective finger lifting and third-finger transitions are covered by the
+dependency-free interaction tests.
 
 The result records whether the application ran through HTTP and direct `file://` navigation or through document injection. GitHub CI requires the HTTP-and-file result. A missing browser or failed navigation is not a browser pass.
 
-Direct acceptance remains necessary for target browser/GPU combinations. Check touch/stylus input, wheel zoom, high-DPI coordinates, narrow layouts, PNG downloads, clipboard export, and standalone opening. Screenshot capture is not a test of the application's PNG-download path.
+Direct acceptance remains necessary for target browser/GPU combinations. Check touch/stylus input, pinch and wheel zoom, high-DPI coordinates, narrow layouts, PNG downloads, clipboard export, and standalone opening. Screenshot capture is not a test of the application's PNG-download path.
 
 ## Source and release checks
 

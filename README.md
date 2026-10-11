@@ -6,7 +6,7 @@ This package was vibe-coded by Murdoch J. Gabbay. I hope you find it useful and 
 
 Explore cellular automata on **square, hexagonal, Einstein-hat, and Penrose tilings**. Each tile is one cell. Change the rules, paint a seed, and watch patterns evolve on periodic and aperiodic boards.
 
-Aperiodic Life 3.6.3 runs offline in a WebGL2-capable browser and includes **69 verified examples**. No installation or npm dependencies are needed to use it.
+Aperiodic Life 3.6.4 runs offline in a WebGL2-capable browser and includes **69 verified examples**. No installation or npm dependencies are needed to use it.
 
 ![Penrose period-840 collective field rendered from catalogue data](preview.png)
 
@@ -30,7 +30,7 @@ Open [http://127.0.0.1:8000/index.html](http://127.0.0.1:8000/index.html). This 
 - Use **Play/Pause** at the top right of the canvas to start or stop the simulation. It stays accessible on mobile, including while the controls are open or scrolled.
 - Try the Penrose period-822 oscillator, Einstein-hat rotating waves, compact Penrose travellers, or familiar square-grid gliders.
 - For hexagonal highlights, search for **three-way spaceship gun**, **giant breather**, **self-repairing wall**, or **p4104**. The catalogue includes 28 hexagonal examples; the [hexagonal guide](docs/HEXAGONAL_STRUCTURES.md) explains their behaviour and evidence.
-- Drag to pan and use the wheel to zoom. Choose **Paint / erase cells** to edit the board.
+- Drag to pan; pinch with two fingers or use the wheel to zoom. Moving two fingers together pans, including with **Paint / erase cells** selected. Use a fresh one-finger tap or drag to paint.
 - Use **Save state** and **Load state** to exchange exact experiments, including refractory cells and generation. **Copy settings** copies controls only.
 - Open either **?** button for the rules, neighbourhoods, and finite-boundary explanation.
 

@@ -47,6 +47,7 @@ const { AperiodicLifeApp, WebGLRenderer } = windowStub.__interactionTestClasses;
   const viewportRunButton = makeButton();
   Object.assign(app, {
     running: false, busyState: false, simulation: {}, accumulator: 0,
+    activePointerId: null,
     busy: {}, busyTitle: {}, busyDetail: {},
     updateStats() {},
     elements: {
@@ -277,6 +278,9 @@ function harness(tool = 'pan', captureThrows = false) {
     pointerAction: null,
     activePointerId: null,
     lastPointer: null,
+    touchPointers: new Map(),
+    lastPinch: null,
+    pendingTouchPaint: null,
     lastPaintedCell: -1,
     paintValue: null,
     dirty: false,
@@ -665,4 +669,176 @@ for (const override of [{ shiftKey: true }, { altKey: true }, { button: 2 }]) {
   assert(!h.classes.has('dragging'));
 }
 
-console.log('viewport bounds, discovery camera policy, manual overrides, and pointer interaction checks passed');
+function touch(pointerId, clientX, clientY, overrides = {}) {
+  return event({ pointerType: 'touch', pointerId, clientX, clientY, ...overrides });
+}
+
+function useRealCamera(h) {
+  // Exercise the actual screen/world conversion and zoom limits together with
+  // the gesture, including a canvas displaced by controls or browser chrome.
+  h.app.renderer.canvas = {
+    getBoundingClientRect() { return { left: 15, top: 30, width: 300, height: 200 }; },
+  };
+  for (const name of ['screenToWorld', 'zoomAt', 'panPixels']) {
+    h.app.renderer[name] = WebGLRenderer.prototype[name];
+  }
+}
+
+function assertWorldPoint(renderer, screen, expected, message) {
+  const actual = renderer.screenToWorld(...screen);
+  closeTo(actual.x, expected.x, `${message}: world x`);
+  closeTo(actual.y, expected.y, `${message}: world y`);
+}
+
+for (const tool of ['pan', 'paint']) {
+  const h = harness(tool);
+  useRealCamera(h);
+  h.app.automaticDiscoveryView = true;
+  h.app.discoveryViewManaged = true;
+  const anchor = h.app.renderer.screenToWorld(130, 100);
+  h.app.pointerDown(touch(7, 80, 100));
+  h.app.pointerDown(touch(8, 180, 100));
+  assert.equal(h.app.pointerAction, 'pinch');
+  assert.deepEqual(h.painted, [], `${tool}: starting a pinch must not edit a cell`);
+  assert(h.captured.has(7) && h.captured.has(8), 'both fingers must be captured');
+  assert.equal(h.app.automaticDiscoveryView, true, 'stationary fingers must retain automatic framing');
+
+  h.app.pointerMove(touch(7, 55, 100));
+  h.app.pointerMove(touch(8, 205, 100));
+  closeTo(h.app.renderer.camera.zoom, 15, 'spreading fingers must zoom in proportion to their distance');
+  assertWorldPoint(h.app.renderer, [130, 100], anchor, 'off-centre pinch must keep its world anchor');
+  assert.equal(h.app.automaticDiscoveryView, false);
+  assert.equal(h.app.discoveryViewManaged, false);
+
+  h.app.pointerMove(touch(7, 79, 118));
+  h.app.pointerMove(touch(8, 229, 118));
+  closeTo(h.app.renderer.camera.zoom, 15, 'parallel finger movement must retain the final scale');
+  assertWorldPoint(h.app.renderer, [154, 118], anchor, 'the world anchor must follow the midpoint');
+
+  h.app.pointerMove(touch(7, 109, 118));
+  h.app.pointerMove(touch(8, 199, 118));
+  closeTo(h.app.renderer.camera.zoom, 9, 'bringing fingers together must zoom out');
+  assertWorldPoint(h.app.renderer, [154, 118], anchor, 'zoom out must preserve the anchor');
+  const camera = { ...h.app.renderer.camera };
+  h.app.pointerUp(touch(7, 109, 118));
+  assert.equal(h.app.pointerAction, 'pan');
+  assert.equal(h.app.activePointerId, 8);
+  assert.deepEqual(h.app.renderer.camera, camera, 'lifting the first finger must not jump the camera');
+  h.app.pointerCaptureLost(touch(7, 109, 118));
+  assert.equal(h.app.activePointerId, 8, 'automatic capture loss for the lifted finger must not cancel the survivor');
+  h.app.pointerMove(touch(8, 217, 127));
+  closeTo(h.app.renderer.camera.x, camera.x - 2, 'remaining finger must resume panning from its own position');
+  closeTo(h.app.renderer.camera.y, camera.y + 1, 'remaining finger pan y');
+  h.app.pointerUp(touch(8, 217, 127));
+  assert.equal(h.app.pointerAction, null);
+  assert.equal(h.app.touchPointers.size, 0);
+  assert.equal(h.captured.size, 0);
+  assert(!h.classes.has('dragging'));
+  assert.deepEqual(h.painted, [], `${tool}: navigation and finger release must not paint`);
+}
+
+{
+  const h = harness('paint');
+  h.app.pointerDown(touch(1, 10, 20));
+  h.app.pointerMove(touch(1, 12, 21));
+  assert.deepEqual(h.painted, [], 'minor finger jitter must not commit a paint stroke before a possible pinch');
+  h.app.pointerUp(touch(1, 12, 21));
+  assert.deepEqual(h.painted, [[0, 1]], 'a single-finger tap must paint once on release');
+  h.app.pointerDown(touch(1, 10, 20));
+  h.app.pointerUp(touch(1, 10, 20));
+  assert.deepEqual(h.painted, [[0, 1], [0, 0]], 'a fresh touch on a live cell must erase');
+  h.app.pointerDown(touch(1, 10, 20));
+  h.app.pointerMove(touch(1, 60, 20));
+  h.app.pointerUp(touch(1, 60, 20));
+  assert.deepEqual(h.painted.slice(2), [[0, 1], [1, 1]], 'touch painting must retain the stroke starting cell and its paint/erase action');
+}
+
+{
+  const h = harness('paint');
+  h.app.pointerDown(touch(1, 10, 20));
+  h.app.pointerDown(touch(2, 80, 20));
+  h.app.pointerUp(touch(2, 80, 20));
+  h.app.pointerCaptureLost(touch(2, 80, 20));
+  assert.equal(h.app.activePointerId, 1, 'lifting the second finger first must retain the first contact');
+  assert.equal(h.app.pointerAction, 'pan');
+  h.app.pointerMove(touch(1, 22, 26));
+  assert.deepEqual(h.pans, [[12, 6]], 'the first finger must continue from its own original position');
+  h.app.pointerUp(touch(1, 22, 26));
+  assert.deepEqual(h.painted, [], 'lifting the second finger must not restore a pending paint tap');
+  assert.equal(h.captured.size, 0);
+}
+
+for (const end of ['pointerCancel', 'pointerCaptureLost', 'finishPointer']) {
+  for (const fingers of [1, 2]) {
+    const h = harness('paint');
+    h.app.pointerDown(touch(1, 10, 20));
+    if (fingers === 2) h.app.pointerDown(touch(2, 70, 20));
+    h.app[end](touch(fingers, 70, 20));
+    assert.equal(h.app.touchPointers.size, 0, `${end}: all contacts must be cleared`);
+    assert.equal(h.app.pointerAction, null);
+    assert.equal(h.captured.size, 0);
+    assert.deepEqual(h.painted, [], `${end}: cancellation must not commit a pending paint tap`);
+    h.app.pointerMove(touch(1, 100, 20));
+    h.app.pointerUp(touch(1, 100, 20));
+    assert.deepEqual(h.painted, [], 'cancelled contacts must not cause ghost edits');
+    h.app.pointerDown(touch(3, 10, 20));
+    h.app.pointerUp(touch(3, 10, 20));
+    assert.deepEqual(h.painted, [[0, 1]], 'a new gesture must work after cancellation');
+  }
+}
+
+{
+  const h = harness('pan', true);
+  useRealCamera(h);
+  h.app.pointerDown(touch(1, 80, 100));
+  h.app.pointerDown(touch(2, 180, 100));
+  h.app.pointerMove(touch(2, 280, 100));
+  closeTo(h.app.renderer.camera.zoom, 20, 'pinching must work through window listeners when capture is rejected');
+  h.app.pointerDown(touch(3, 150, 180));
+  const before = { ...h.app.renderer.camera };
+  h.app.pointerMove(touch(3, 150, 200));
+  assert.deepEqual(h.app.renderer.camera, before, 'a third finger must not move the chosen pair');
+  h.app.pointerUp(touch(1, 80, 100));
+  assert.equal(h.app.pointerAction, 'pinch', 'two remaining fingers must continue as a fresh pair');
+  assert.deepEqual(h.app.renderer.camera, before, 'switching pairs must not jump the camera');
+  h.app.pointerMove(touch(3, 150, 220));
+  assert(h.app.renderer.camera.zoom > before.zoom);
+  h.app.finishPointer();
+}
+
+{
+  const h = harness('pan');
+  useRealCamera(h);
+  h.app.pointerDown(touch(1, 100, 100));
+  h.app.pointerDown(touch(2, 100, 100));
+  h.app.pointerMove(touch(2, 101, 100));
+  h.app.pointerMove(touch(2, 100000, 100));
+  closeTo(h.app.renderer.camera.zoom, 500, 'pinch must respect the maximum zoom');
+  h.app.pointerMove(touch(2, 101, 100));
+  closeTo(h.app.renderer.camera.zoom, 0.02, 'pinch must respect the minimum zoom');
+  h.app.pointerMove(touch(2, 100, 100));
+  assert(Object.values(h.app.renderer.camera).every(Number.isFinite), 'coincident fingers must not produce an invalid camera');
+  h.app.finishPointer();
+}
+
+{
+  const h = harness('paint');
+  h.app.busy = {};
+  h.app.busyTitle = {};
+  h.app.busyDetail = {};
+  for (const id of ['stepButton', 'randomizeButton', 'clearButton', 'runButton', 'viewportRunButton',
+    'saveSnapshotButton', 'loadSnapshotButton', 'loadDiscoveryButton', 'loadRunDiscoveryButton']) {
+    h.app.elements[id] = {};
+  }
+  h.app.pointerDown(touch(1, 10, 20));
+  h.app.pointerDown(touch(2, 70, 20));
+  h.app.setBusy(true);
+  assert.equal(h.app.touchPointers.size, 0, 'rebuilding must discard every contact on the old board');
+  assert.equal(h.captured.size, 0);
+  h.app.pointerUp(touch(1, 10, 20));
+  h.app.pointerDown(touch(3, 10, 20));
+  assert.deepEqual(h.painted, [], 'busy or stale touches must not paint');
+  assert.equal(h.app.activePointerId, null);
+}
+
+console.log('viewport bounds, discovery camera policy, manual overrides, pinch zoom, touch painting and pointer interaction checks passed');

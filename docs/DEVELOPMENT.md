@@ -23,9 +23,9 @@ The [rule survey](RULE_SURVEY.md) explains the catalogue's scientific claims. Th
 
 ## View and playback
 
-**Pan view** is the default pointer tool. Drag with the primary button to move the viewport; use the wheel to zoom around the pointer. **Paint / erase cells** edits the board. Shift-drag, Alt-drag, or a non-primary button temporarily pans even when Paint is selected.
+**Pan view** is the default pointer tool. Drag with the primary button or one finger to move the viewport; use the wheel to zoom around the pointer. On touch screens, pinch two fingers to zoom around their midpoint or move both fingers together to pan. Two-finger navigation works in either tool. **Paint / erase cells** edits the board. Shift-drag, Alt-drag, or a non-primary button temporarily pans even when Paint is selected.
 
-A Paint drag chooses its action at the first cell it reaches: a live cell starts erasing, and another cell starts painting state 1. A drag may begin in an empty margin. Cancellation, capture loss, window blur, and buttonless mouse/pen re-entry clear the gesture.
+A Paint drag chooses its action at the first cell it reaches: a live cell starts erasing, and another cell starts painting state 1. A drag may begin in an empty margin. Touch taps paint on release, and touch strokes begin after four CSS pixels of movement, so placing a second finger to pinch does not immediately edit a cell. An already-started paint stroke remains in the board when a second finger starts navigation. After a pinch, one remaining finger continues panning; lift all fingers before starting a fresh paint stroke. Cancellation, capture loss, window blur, a board rebuild, and buttonless mouse/pen re-entry clear the gesture without committing a pending tap.
 
 Discovery presentation has three policies:
 
@@ -37,7 +37,7 @@ Discovery presentation has three policies:
 
 Containment never zooms in. The trajectory legibility threshold is 3 CSS pixels per world unit. R-pentomino and Acorn use containment; other examples use their declared initial or trajectory views.
 
-Manual pan, wheel zoom, or **Fit view** cancels automatic framing. Resizing the viewport recomputes a managed view, including while paused, but preserves a manually chosen camera. This makes the same example usable in landscape and portrait layouts.
+Manual pan, pinch zoom, wheel zoom, or **Fit view** cancels automatic framing. Resizing the viewport recomputes a managed view, including while paused, but preserves a manually chosen camera. This makes the same example usable in landscape and portrait layouts.
 
 ## Boards
 

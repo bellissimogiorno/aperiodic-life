@@ -412,6 +412,98 @@ async function checkPlaybackControls(cdp) {
   }
 }
 
+async function checkMobilePinch(cdp) {
+  console.error('[browser] testing mobile pinch, two-finger pan and touch painting');
+  const touch = (type, points) => cdp.call('Input.dispatchTouchEvent', {
+    type,
+    touchPoints: points.map((point) => ({ ...point, radiusX: 1, radiusY: 1, force: 1 })),
+  });
+  const close = (actual, expected, tolerance, label) => {
+    assert(Math.abs(actual - expected) <= tolerance,
+      `${label}: expected ${expected}, received ${actual}`);
+  };
+  await cdp.call('Emulation.setTouchEmulationEnabled', { enabled: true, maxTouchPoints: 2 });
+  try {
+    for (const [width, height] of [[390, 844], [740, 360]]) {
+      await cdp.call('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: true });
+      await delay(250);
+      for (const tool of ['pan', 'paint']) {
+        const label = `${width}×${height} ${tool}`;
+        await loadDiscovery(cdp, 'square-glider', '2,601');
+        await click(cdp, 'clearButton');
+        await click(cdp, 'fitButton');
+        await setAndChange(cdp, 'toolSelect', tool);
+        await delay(100);
+        const rect = await cdp.evaluate(`(() => {
+          const rect = document.getElementById('lifeCanvas').getBoundingClientRect();
+          return { left: rect.left, top: rect.top, width: rect.width, height: rect.height };
+        })()`);
+        const midpoint = {
+          x: rect.left + rect.width / 2 + 24,
+          y: rect.top + rect.height / 2 + 30,
+        };
+        const worldAt = (view, point) => [
+          view.center[0] + (point.x - rect.left - rect.width / 2) / view.zoom,
+          view.center[1] - (point.y - rect.top - rect.height / 2) / view.zoom,
+        ];
+        const before = await cameraView(cdp);
+        const anchor = worldAt(before, midpoint);
+        let first = { id: 1, x: midpoint.x - 25, y: midpoint.y };
+        let second = { id: 2, x: midpoint.x + 25, y: midpoint.y };
+        await touch('touchStart', [first, second]);
+        for (const halfSpan of [30, 35, 40, 45, 50]) {
+          first = { ...first, x: midpoint.x - halfSpan };
+          second = { ...second, x: midpoint.x + halfSpan };
+          await touch('touchMove', [first, second]);
+        }
+        await delay(100);
+        const zoomed = await cameraView(cdp);
+        close(zoomed.zoom / before.zoom, 2, 0.002, `${label}: pinch scale`);
+        const zoomedAnchor = worldAt(zoomed, midpoint);
+        close(zoomedAnchor[0], anchor[0], 0.2 / zoomed.zoom, `${label}: horizontal pinch anchor`);
+        close(zoomedAnchor[1], anchor[1], 0.2 / zoomed.zoom, `${label}: vertical pinch anchor`);
+
+        first = { ...first, x: first.x + 20, y: first.y + 15 };
+        second = { ...second, x: second.x + 20, y: second.y + 15 };
+        await touch('touchMove', [first, second]);
+        await delay(100);
+        const panned = await cameraView(cdp);
+        close(panned.zoom / zoomed.zoom, 1, 0.002, `${label}: two-finger pan preserves zoom`);
+        close(panned.center[0], zoomed.center[0] - 20 / zoomed.zoom, 0.2 / zoomed.zoom, `${label}: two-finger horizontal pan`);
+        close(panned.center[1], zoomed.center[1] + 15 / zoomed.zoom, 0.2 / zoomed.zoom, `${label}: two-finger vertical pan`);
+
+        // Empty touchEnd/touchCancel point lists work across Chromium versions.
+        // Lifting one finger and continuing with the other is covered by the
+        // pointer interaction tests; CDP's selective-lift protocol varies.
+        await touch('touchEnd', []);
+        assert.strictEqual(await cdp.evaluate("document.getElementById('aliveStat').textContent.startsWith('0 ')"), true,
+          `${label}: pinch and two-finger pan must not paint`);
+        assert.strictEqual(await cdp.evaluate("document.getElementById('lifeCanvas').classList.contains('dragging')"), false,
+          `${label}: lifting all fingers ends the gesture`);
+
+        if (tool === 'paint') {
+          await click(cdp, 'fitButton');
+          await delay(100);
+          const tap = { id: 3, ...await canvasPoint(cdp) };
+          await touch('touchStart', [tap]);
+          await touch('touchCancel', []);
+          assert.strictEqual(await cdp.evaluate("document.getElementById('aliveStat').textContent.startsWith('0 ')"), true,
+            `${label}: cancelled tap must not paint`);
+          await touch('touchStart', [tap]);
+          await touch('touchEnd', []);
+          await waitFor(cdp, "document.getElementById('aliveStat').textContent.startsWith('1 ')",
+            `${label}: a new single-finger tap paints after pinch and cancellation`, 5_000);
+        }
+      }
+    }
+  } finally {
+    await touch('touchCancel', []).catch(() => {});
+    await cdp.call('Emulation.setTouchEmulationEnabled', { enabled: false });
+    await cdp.call('Emulation.clearDeviceMetricsOverride');
+    await delay(250);
+  }
+}
+
 async function setTilingAndDepth(cdp, tiling, depth) {
   await cdp.evaluate(`(() => {
     const tilingSelect = document.getElementById('tilingSelect');
@@ -1024,6 +1116,7 @@ async function checkPage(cdp) {
   await click(cdp, 'runButton');
 
   await checkPlaybackControls(cdp);
+  await checkMobilePinch(cdp);
 
   const errors = cdp.events.filter((event) => {
     if (event.method === 'Runtime.exceptionThrown') return true;
@@ -1059,6 +1152,7 @@ async function checkPage(cdp) {
     hatPeriod26: 'passed',
     coalescedRebuild: 'passed',
     mobilePlayback: 'passed',
+    mobilePinch: 'passed',
   };
 }
 
@@ -1099,6 +1193,7 @@ async function main() {
         "document.readyState === 'complete' && document.getElementById('busy')?.hidden && document.getElementById('cellsStat')?.textContent === '7,921'",
         'standalone file patch',
       );
+      await checkMobilePinch(browser.cdp);
     }
 
     const standalone = await browser.cdp.evaluate(`(() => {
@@ -1114,6 +1209,7 @@ async function main() {
     assert.strictEqual(standalone.webgl2, true);
     assert.strictEqual(standalone.glError, 0);
     assert.deepStrictEqual(standalone.externalResources, []);
+    standalone.mobilePinch = 'passed';
 
     console.error('[browser] standalone checks passed');
     console.log(JSON.stringify({ mode, interactions: httpResult, standalone }, null, 2));

@@ -650,6 +650,9 @@
       this.pointerAction = null;
       this.activePointerId = null;
       this.lastPointer = null;
+      this.touchPointers = new Map();
+      this.lastPinch = null;
+      this.pendingTouchPaint = null;
       this.lastPaintedCell = -1;
       this.paintValue = null;
       this.toastTimer = 0;
@@ -799,7 +802,7 @@
       // events bubble here too, so there is still exactly one move per event.
       window.addEventListener('pointermove', (event) => this.pointerMove(event));
       window.addEventListener('pointerup', (event) => this.pointerUp(event));
-      window.addEventListener('pointercancel', (event) => this.pointerUp(event));
+      window.addEventListener('pointercancel', (event) => this.pointerCancel(event));
       window.addEventListener('blur', () => this.finishPointer());
       this.canvas.addEventListener('lostpointercapture', (event) => this.pointerCaptureLost(event));
       this.canvas.addEventListener('wheel', (event) => this.wheel(event), { passive: false });
@@ -857,6 +860,7 @@
     }
 
     setBusy(active, title = 'Building tiling', detail = 'Generating geometry and adjacency…') {
+      if (active) this.finishPointer();
       this.busyState = active;
       this.busy.hidden = !active;
       this.busyTitle.textContent = title;
@@ -1235,7 +1239,30 @@
 
     pointerDown(event) {
       if (!this.simulation || this.busyState) return;
-      if (this.activePointerId !== null) return;
+      const touch = event.pointerType === 'touch';
+      if (touch) {
+        // Do not mix a mouse/stylus drag with a separate touch gesture.
+        if (this.activePointerId !== null && this.touchPointers.size === 0) return;
+        if (this.touchPointers.has(event.pointerId)) return;
+        this.touchPointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+      } else if (this.activePointerId !== null) {
+        return;
+      }
+      try {
+        this.canvas.setPointerCapture(event.pointerId);
+      } catch (_) {
+        // Window listeners continue the gesture when capture is unavailable.
+        // The canvas's touch-action:none leaves camera gestures to the app.
+      }
+      if (touch && this.touchPointers.size > 1) {
+        this.pointerAction = 'pinch';
+        this.lastPinch = this.pinchGeometry();
+        this.pendingTouchPaint = null;
+        this.lastPaintedCell = -1;
+        this.paintValue = null;
+        event.preventDefault();
+        return;
+      }
       const shouldPan =
         this.elements.toolSelect.value === 'pan' ||
         event.button !== 0 ||
@@ -1244,23 +1271,57 @@
       this.pointerAction = shouldPan ? 'pan' : 'paint';
       this.activePointerId = event.pointerId;
       this.lastPointer = { x: event.clientX, y: event.clientY };
+      this.lastPinch = null;
+      this.pendingTouchPaint = null;
       this.lastPaintedCell = -1;
       this.paintValue = null;
       this.canvas.classList.add('dragging');
-      try {
-        this.canvas.setPointerCapture(event.pointerId);
-      } catch (_) {
-        // The window listeners above keep mouse/stylus interaction usable if
-        // an embedded browser rejects capture. Touch still has touch-action:none.
-      }
-
       if (this.pointerAction === 'paint') {
-        this.paintAt(event.clientX, event.clientY);
+        // A second finger may be about to start a pinch. Commit a touch tap
+        // on release, or begin a stroke after a small intentional movement.
+        // Mouse and stylus painting retain their immediate response.
+        if (touch) this.pendingTouchPaint = this.lastPointer;
+        else this.paintAt(event.clientX, event.clientY);
       }
       event.preventDefault();
     }
 
+    pinchGeometry() {
+      const [first, second] = this.touchPointers.values();
+      if (!first || !second) return null;
+      return {
+        x: (first.x + second.x) / 2,
+        y: (first.y + second.y) / 2,
+        distance: Math.hypot(second.x - first.x, second.y - first.y),
+      };
+    }
+
     pointerMove(event) {
+      if (this.touchPointers.has(event.pointerId)) {
+        this.touchPointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+        if (this.pointerAction === 'pinch') {
+          const next = this.pinchGeometry();
+          const before = this.lastPinch;
+          if (before && next) {
+            // Zoom around the old midpoint, then carry that world point to
+            // the new midpoint. This combines zoom and two-finger panning.
+            const factor = before.distance >= 1 && next.distance >= 1
+              ? next.distance / before.distance : 1;
+            const dx = next.x - before.x;
+            const dy = next.y - before.y;
+            if (factor !== 1 || dx || dy) {
+              this.automaticDiscoveryView = false;
+              this.discoveryViewManaged = false;
+              this.renderer.zoomAt(before.x, before.y, factor);
+              this.renderer.panPixels(dx, dy);
+              this.dirty = true;
+            }
+          }
+          this.lastPinch = next;
+          event.preventDefault();
+          return;
+        }
+      }
       if (event.pointerId !== this.activePointerId || !this.pointerAction || !this.lastPointer) return;
       // If capture was rejected and the pointer was released outside this
       // window, the first mouse/pen move back arrives without a pressed
@@ -1280,25 +1341,70 @@
         this.lastPointer = { x: event.clientX, y: event.clientY };
         this.dirty = true;
       } else {
+        if (this.pendingTouchPaint) {
+          const start = this.pendingTouchPaint;
+          if (Math.hypot(event.clientX - start.x, event.clientY - start.y) < 4) {
+            event.preventDefault();
+            return;
+          }
+          this.pendingTouchPaint = null;
+          this.paintAt(start.x, start.y);
+        }
         this.paintAt(event.clientX, event.clientY);
       }
       event.preventDefault();
     }
 
     pointerUp(event) {
+      if (this.touchPointers.has(event.pointerId)) {
+        if (this.touchPointers.size === 1 && this.pendingTouchPaint) {
+          this.paintAt(this.pendingTouchPaint.x, this.pendingTouchPaint.y);
+        }
+        this.touchPointers.delete(event.pointerId);
+        this.pendingTouchPaint = null;
+        if (this.touchPointers.size) {
+          const [pointerId, point] = this.touchPointers.entries().next().value;
+          this.activePointerId = pointerId;
+          this.lastPointer = point;
+          // The remaining finger continues navigation, even in Paint mode.
+          // Painting needs a fresh touch after every finger has been lifted.
+          this.pointerAction = this.touchPointers.size > 1 ? 'pinch' : 'pan';
+          this.lastPinch = this.pinchGeometry();
+          this.releasePointer(event.pointerId);
+        } else {
+          this.finishPointer();
+        }
+        event.preventDefault();
+        return;
+      }
       if (event.pointerId !== this.activePointerId) return;
       this.finishPointer();
     }
 
+    pointerCancel(event) {
+      if (event.pointerId === this.activePointerId || this.touchPointers.has(event.pointerId)) {
+        this.finishPointer();
+      }
+    }
+
     finishPointer() {
       if (this.activePointerId === null) return;
-      const pointerId = this.activePointerId;
+      const pointers = new Set([this.activePointerId, ...this.touchPointers.keys()]);
       this.pointerAction = null;
       this.activePointerId = null;
       this.lastPointer = null;
+      this.touchPointers.clear();
+      this.lastPinch = null;
+      this.pendingTouchPaint = null;
       this.lastPaintedCell = -1;
       this.paintValue = null;
       this.canvas.classList.remove('dragging');
+      // Clear the gesture before releasing capture: lostpointercapture may
+      // arrive while another finger is still down.
+      for (const pointerId of pointers) this.releasePointer(pointerId);
+    }
+
+    releasePointer(pointerId) {
       if (
         typeof this.canvas.hasPointerCapture === 'function' &&
         this.canvas.hasPointerCapture(pointerId) &&
@@ -1313,8 +1419,7 @@
     }
 
     pointerCaptureLost(event) {
-      if (event.pointerId !== this.activePointerId) return;
-      this.finishPointer();
+      this.pointerCancel(event);
     }
 
     wheel(event) {

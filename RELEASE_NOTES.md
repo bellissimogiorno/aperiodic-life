@@ -1,4 +1,4 @@
-# Aperiodic Life 3.6.3
+# Aperiodic Life 3.6.4
 
 Aperiodic Life is an offline browser laboratory for cellular automata on square, hexagonal, Einstein-hat, and Penrose tilings.
 
@@ -9,6 +9,7 @@ Aperiodic Life is an offline browser laboratory for cellular automata on square,
 - A searchable catalogue of 69 reproducible configurations, with suitable playback speeds and automatic framing.
 - Curated configurations at the top of the controls and an always-visible canvas Play/Pause button, including on mobile.
 - Exact JSON state save/load, settings export, PNG export, painting, panning, and zooming.
+- Mobile pinch-to-zoom and two-finger panning in either tool, with single-finger painting protected from accidental edits when starting a pinch.
 - Localised Penrose oscillators of periods 822 and 14; Einstein-hat rotating waves of periods 39 and 219; and an eight-tile refractory clock.
 - Finite Penrose travellers, exact regular-lattice spaceships, long transients, replicators, and collective fields.
 - Twenty-eight hexagonal configurations, including a three-way spaceship gun, an oscillator-trail puffer, a self-repairing wall, a seven-copy replicator, rotating waves, wandering spaceships, and exact oscillator periods up to 4,104.
