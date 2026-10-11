@@ -680,7 +680,7 @@
 
     collectElements() {
       const ids = [
-        'runButton', 'stepButton', 'randomizeButton', 'clearButton', 'tilingSelect',
+        'runButton', 'viewportRunButton', 'stepButton', 'randomizeButton', 'clearButton', 'tilingSelect',
         'depthSelect', 'penroseSeedField', 'penroseSeedSelect',
         'neighborhoodSelect', 'neighborhoodHelp', 'neighborhoodInfoButton', 'borderInput', 'presetSelect',
         'ruleInput', 'ruleHelp', 'ruleInfoButton', 'rulesDialog', 'randomRuleButton', 'generationsInput',
@@ -732,6 +732,7 @@
     bindEvents() {
       const e = this.elements;
       e.runButton.addEventListener('click', () => this.setRunning(!this.running));
+      e.viewportRunButton.addEventListener('click', () => this.setRunning(!this.running));
       e.stepButton.addEventListener('click', () => this.stepOnce());
       e.randomizeButton.addEventListener('click', () => this.randomize());
       e.clearButton.addEventListener('click', () => this.clear());
@@ -861,11 +862,13 @@
       this.busyTitle.textContent = title;
       this.busyDetail.textContent = detail;
       for (const button of [
-        this.elements.runButton,
         this.elements.stepButton,
         this.elements.randomizeButton,
         this.elements.clearButton,
       ]) button.disabled = active;
+      for (const button of [this.elements.runButton, this.elements.viewportRunButton]) {
+        button.disabled = active || !this.simulation;
+      }
       this.elements.saveSnapshotButton.disabled = active || !this.simulation;
       this.elements.loadSnapshotButton.disabled = active;
       this.elements.loadDiscoveryButton.disabled = active || !this.elements.discoverySelect.value;
@@ -1068,9 +1071,17 @@
     setRunning(value) {
       const wasRunning = this.running;
       this.running = Boolean(value) && !this.busyState && Boolean(this.simulation);
-      this.elements.runButton.textContent = this.running ? 'Pause' : 'Run';
-      this.elements.runButton.classList.toggle('running', this.running);
-      this.elements.runButton.classList.toggle('primary', !this.running);
+      for (const [button, idleLabel] of [
+        [this.elements.runButton, 'Run'],
+        [this.elements.viewportRunButton, 'Play'],
+      ]) {
+        const label = this.running ? 'Pause' : idleLabel;
+        button.textContent = label;
+        button.setAttribute('aria-label', `${label} simulation`);
+        button.title = `${label} simulation (Space)`;
+        button.classList.toggle('running', this.running);
+        button.classList.toggle('primary', !this.running);
+      }
       if (!this.running) {
         this.accumulator = 0;
         if (wasRunning) this.updateStats(true);

@@ -15,7 +15,7 @@ import tempfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = "3.6.1"
+VERSION = "3.6.2"
 ARCHIVE_ROOT = "aperiodic-life"
 STANDALONE_NAME = f"aperiodic-life-{VERSION}.html"
 SOURCE_ZIP_NAME = f"aperiodic-life-source-{VERSION}.zip"

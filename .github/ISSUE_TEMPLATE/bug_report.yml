@@ -18,7 +18,7 @@ body:
     attributes:
       label: Version or commit
       description: Give the release number or commit, and whether you used the standalone HTML, source build, or hosted site.
-      placeholder: "3.6.1, standalone HTML"
+      placeholder: "3.6.2, standalone HTML"
     validations:
       required: true
   - type: textarea

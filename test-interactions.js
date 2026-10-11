@@ -28,6 +28,69 @@ class HTMLElementStub {}
 vm.runInNewContext(instrumented, { window: windowStub, HTMLElement: HTMLElementStub });
 const { AperiodicLifeApp, WebGLRenderer } = windowStub.__interactionTestClasses;
 
+{
+  // Both entry points must describe the same playback state, including while
+  // geometry is rebuilding and after an attempted start without a simulation.
+  const makeButton = () => {
+    const classes = new Set();
+    const attributes = new Map();
+    return {
+      classes, attributes, disabled: false, textContent: '',
+      setAttribute(name, value) { attributes.set(name, value); },
+      classList: {
+        toggle(name, enabled) { if (enabled) classes.add(name); else classes.delete(name); },
+      },
+    };
+  };
+  const app = Object.create(AperiodicLifeApp.prototype);
+  const runButton = makeButton();
+  const viewportRunButton = makeButton();
+  Object.assign(app, {
+    running: false, busyState: false, simulation: {}, accumulator: 0,
+    busy: {}, busyTitle: {}, busyDetail: {},
+    updateStats() {},
+    elements: {
+      runButton, viewportRunButton,
+      stepButton: {}, randomizeButton: {}, clearButton: {},
+      saveSnapshotButton: {}, loadSnapshotButton: {},
+      loadDiscoveryButton: {}, loadRunDiscoveryButton: {},
+      discoverySelect: { value: 'example' },
+    },
+  });
+  app.setRunning(true);
+  assert.equal(app.running, true);
+  for (const button of [runButton, viewportRunButton]) {
+    assert.equal(button.textContent, 'Pause');
+    assert.equal(button.attributes.get('aria-label'), 'Pause simulation');
+    assert(button.classes.has('running'));
+    assert(!button.classes.has('primary'));
+  }
+  app.accumulator = 42;
+  app.setRunning(false);
+  assert.equal(app.running, false);
+  assert.equal(app.accumulator, 0, 'pausing must not leave queued generations');
+  assert.equal(runButton.textContent, 'Run');
+  assert.equal(viewportRunButton.textContent, 'Play');
+  assert.equal(viewportRunButton.attributes.get('aria-label'), 'Play simulation');
+  for (const button of [runButton, viewportRunButton]) {
+    assert(!button.classes.has('running'));
+    assert(button.classes.has('primary'));
+  }
+  app.setBusy(true);
+  assert(runButton.disabled && viewportRunButton.disabled, 'both controls must be disabled during rebuild');
+  app.setRunning(true);
+  assert.equal(app.running, false, 'busy simulation must not start from either control');
+  assert.equal(viewportRunButton.textContent, 'Play');
+  app.setBusy(false);
+  assert(!runButton.disabled && !viewportRunButton.disabled, 'both controls must recover after rebuild');
+  app.simulation = null;
+  app.setBusy(false);
+  app.setRunning(true);
+  assert(runButton.disabled && viewportRunButton.disabled, 'an unavailable simulation cannot be started');
+  assert.equal(app.running, false);
+  assert.equal(viewportRunButton.textContent, 'Play');
+}
+
 function closeTo(actual, expected, message) {
   assert(
     Math.abs(actual - expected) <= 1e-10,

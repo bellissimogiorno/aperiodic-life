@@ -40,7 +40,7 @@ Presentation checks are separate from dynamics. Playback speeds must match each 
 
 ## Interaction and state files
 
-Dependency-free interaction tests exercise camera ownership, responsive framing, containment, trajectory legibility, post-horizon following, painting and pan overrides, pointer cancellation, and rule-dialog keyboard isolation.
+Dependency-free interaction tests exercise camera ownership, responsive framing, containment, trajectory legibility, post-horizon following, painting and pan overrides, pointer cancellation, rule-dialog keyboard isolation, and synchronised playback controls during play, pause, and rebuilds.
 
 Snapshot tests round-trip exact states across all tilings, both graphs, and both Penrose orientations, then continue the restored experiments. They reject malformed files, unsupported values, invalid cell indices, graph mismatches, and nonzero locked-border cells without replacing the current simulation.
 
@@ -57,6 +57,11 @@ node test-browser.js
 ```
 
 The harness discovers Chromium on `PATH` or uses the executable named by `CHROMIUM`. It exercises WebGL2, tiling and graph controls, discovery loading, playback and cycle display, native mouse interaction, rule-help focus, state-file import, catalogue filtering, rapid rebuilds, and absence of external runtime requests.
+
+Playback checks also use native touch events in portrait and landscape phone
+viewports. They verify that the canvas Play/Pause button remains reachable with
+the controls drawer closed, open, or scrolled, that pausing stops generations,
+and that both playback buttons agree after loading an example.
 
 The result records whether the application ran through HTTP and direct `file://` navigation or through document injection. GitHub CI requires the HTTP-and-file result. A missing browser or failed navigation is not a browser pass.
 

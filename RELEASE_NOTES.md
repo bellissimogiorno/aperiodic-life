@@ -1,4 +1,4 @@
-# Aperiodic Life 3.6.1
+# Aperiodic Life 3.6.2
 
 Aperiodic Life is an offline browser laboratory for cellular automata on square, hexagonal, Einstein-hat, and Penrose tilings.
 
@@ -7,6 +7,7 @@ Aperiodic Life is an offline browser laboratory for cellular automata on square,
 - Four geometry backends with shared-edge and edge-or-corner contact graphs.
 - Synchronous `B/S` rules with binary or refractory multistate evolution.
 - A searchable catalogue of 48 reproducible configurations, with suitable playback speeds and automatic framing.
+- Curated configurations at the top of the controls and an always-visible canvas Play/Pause button, including on mobile.
 - Exact JSON state save/load, settings export, PNG export, painting, panning, and zooming.
 - Localised Penrose oscillators of periods 822 and 14; Einstein-hat rotating waves of periods 39 and 219; and an eight-tile refractory clock.
 - Finite Penrose travellers, exact regular-lattice spaceships, long transients, replicators, and collective fields.

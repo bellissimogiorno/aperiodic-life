@@ -307,6 +307,111 @@ async function click(cdp, id) {
   await cdp.evaluate(`document.getElementById(${JSON.stringify(id)}).click(); true`);
 }
 
+async function touchButton(cdp, id) {
+  const target = await cdp.evaluate(`(() => {
+    const button = document.getElementById(${JSON.stringify(id)});
+    const rect = button.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+    return {
+      x, y,
+      visible: rect.left >= 0 && rect.top >= 0 && rect.right <= innerWidth && rect.bottom <= innerHeight,
+      reachable: button.contains(document.elementFromPoint(x, y)),
+      disabled: button.disabled,
+    };
+  })()`);
+  assert.strictEqual(target.visible, true, `${id}: fully inside the viewport`);
+  assert.strictEqual(target.reachable, true, `${id}: must not be covered by the drawer or another control`);
+  assert.strictEqual(target.disabled, false, `${id}: enabled`);
+  await cdp.call('Input.dispatchTouchEvent', {
+    type: 'touchStart', touchPoints: [{ x: target.x, y: target.y }],
+  });
+  await cdp.call('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+}
+
+async function assertPlaybackState(cdp, running) {
+  await waitFor(cdp, `
+    document.getElementById('runButton').textContent === ${JSON.stringify(running ? 'Pause' : 'Run')} &&
+    document.getElementById('viewportRunButton').textContent === ${JSON.stringify(running ? 'Pause' : 'Play')}
+  `, `synchronised ${running ? 'running' : 'paused'} buttons`, 5_000);
+  if (!running) {
+    const generation = await cdp.evaluate("document.getElementById('generationStat').textContent");
+    await delay(150);
+    assert.strictEqual(await cdp.evaluate("document.getElementById('generationStat').textContent"), generation,
+      'Pause must stop generation updates');
+  }
+}
+
+async function checkPlaybackControls(cdp) {
+  console.error('[browser] testing prominent configurations and persistent playback controls');
+  assert.strictEqual(await cdp.evaluate(`(() => {
+    const controls = document.getElementById('controls');
+    const firstSection = controls.querySelector('section');
+    return firstSection.contains(document.getElementById('discoverySelect')) &&
+      firstSection.contains(document.getElementById('loadDiscoveryButton')) &&
+      firstSection.contains(document.getElementById('loadRunDiscoveryButton')) &&
+      !controls.contains(document.getElementById('viewportRunButton'));
+  })()`), true, 'curated configurations must be first and viewport playback must be outside the drawer');
+
+  await loadDiscovery(cdp, 'square-glider', '2,601');
+  await assertPlaybackState(cdp, false);
+  await click(cdp, 'viewportRunButton');
+  await assertPlaybackState(cdp, true);
+  await waitFor(cdp, "Number(document.getElementById('generationStat').textContent) > 0", 'viewport Play advances generations', 5_000);
+  await click(cdp, 'runButton');
+  await assertPlaybackState(cdp, false);
+
+  await cdp.call('Emulation.setTouchEmulationEnabled', { enabled: true, maxTouchPoints: 1 });
+  try {
+    for (const [width, height] of [[390, 844], [740, 360]]) {
+      await cdp.call('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: true });
+      await delay(250);
+      assert.strictEqual(await cdp.evaluate("document.getElementById('controls').classList.contains('open')"), false);
+      const geometry = await cdp.evaluate(`(() => {
+        const play = document.getElementById('viewportRunButton').getBoundingClientRect();
+        const menu = document.getElementById('openControls').getBoundingClientRect();
+        return {
+          largeTarget: play.width >= 44 && play.height >= 44,
+          separate: play.right <= menu.left || play.left >= menu.right || play.bottom <= menu.top || play.top >= menu.bottom,
+        };
+      })()`);
+      assert.strictEqual(geometry.largeTarget, true, `${width}×${height}: playback touch target`);
+      assert.strictEqual(geometry.separate, true, `${width}×${height}: playback must not overlap Controls`);
+
+      await touchButton(cdp, 'viewportRunButton');
+      await assertPlaybackState(cdp, true);
+      await touchButton(cdp, 'viewportRunButton');
+      await assertPlaybackState(cdp, false);
+      await touchButton(cdp, 'openControls');
+      await waitFor(cdp, "document.getElementById('controls').classList.contains('open')", 'mobile controls drawer');
+      await delay(250);
+
+      await loadDiscovery(cdp, 'square-glider', '2,601', true);
+      await assertPlaybackState(cdp, true);
+      await waitFor(cdp, "!document.getElementById('controls').classList.contains('open')", 'Load and run closes mobile drawer');
+      await delay(250);
+      await touchButton(cdp, 'openControls');
+      await waitFor(cdp, "document.getElementById('controls').classList.contains('open')", 'reopened mobile controls drawer');
+      await delay(250);
+      await cdp.evaluate("document.getElementById('controls').scrollTop = 10000; true");
+      await touchButton(cdp, 'viewportRunButton');
+      await assertPlaybackState(cdp, false);
+      await touchButton(cdp, 'viewportRunButton');
+      await assertPlaybackState(cdp, true);
+      await cdp.evaluate("document.getElementById('controls').scrollTop = 0; true");
+      await touchButton(cdp, 'closeControls');
+      await waitFor(cdp, "!document.getElementById('controls').classList.contains('open')", 'closed mobile drawer');
+      await delay(250);
+      await loadDiscovery(cdp, 'square-glider', '2,601');
+      await assertPlaybackState(cdp, false);
+    }
+  } finally {
+    await cdp.call('Emulation.setTouchEmulationEnabled', { enabled: false });
+    await cdp.call('Emulation.clearDeviceMetricsOverride');
+    await delay(250);
+  }
+}
+
 async function setTilingAndDepth(cdp, tiling, depth) {
   await cdp.evaluate(`(() => {
     const tilingSelect = document.getElementById('tilingSelect');
@@ -918,6 +1023,8 @@ async function checkPage(cdp) {
   assert.strictEqual(await cdp.evaluate("document.getElementById('runButton').textContent"), 'Pause');
   await click(cdp, 'runButton');
 
+  await checkPlaybackControls(cdp);
+
   const errors = cdp.events.filter((event) => {
     if (event.method === 'Runtime.exceptionThrown') return true;
     if (event.method !== 'Log.entryAdded') return false;
@@ -951,6 +1058,7 @@ async function checkPage(cdp) {
     penrosePeriod840: 'passed',
     hatPeriod26: 'passed',
     coalescedRebuild: 'passed',
+    mobilePlayback: 'passed',
   };
 }
 
