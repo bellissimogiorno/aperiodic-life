@@ -1,0 +1,48 @@
+{
+  "campaigns": [
+    {
+      "seedDecimal": "7522551138070962214",
+      "prng": "xorshift64star",
+      "trials": 100000,
+      "records": 1649,
+      "extinct": 37017,
+      "boundaryStopped": 5510,
+      "populationStopped": 42788,
+      "periodic": 14490,
+      "maxPopulation": 1400,
+      "maximumRecurrencePopulation": 350,
+      "seconds": 40.2069,
+      "id": "first",
+      "stateEvaluations": 4734400,
+      "horizonStopped": 195,
+      "simulatedTransitions": 4634595,
+      "maxCheckedGeneration": 700,
+      "unusedFinalTransitionOnHorizonStop": true,
+      "command": "./search 100000 first 7522551138070962214"
+    },
+    {
+      "seedDecimal": "7529271334792788165",
+      "prng": "xorshift64star",
+      "trials": 1000000,
+      "records": 10153,
+      "extinct": 368230,
+      "boundaryStopped": 54561,
+      "populationStopped": 429422,
+      "periodic": 145982,
+      "maxPopulation": 1400,
+      "maximumRecurrencePopulation": 350,
+      "seconds": 392.509,
+      "id": "million",
+      "stateEvaluations": 47092773,
+      "horizonStopped": 1805,
+      "simulatedTransitions": 46094578,
+      "maxCheckedGeneration": 700,
+      "unusedFinalTransitionOnHorizonStop": true,
+      "command": "./search 1000000 million 7529271334792788165"
+    }
+  ],
+  "totalTrials": 1100000,
+  "totalStateEvaluations": 51827173,
+  "totalSimulatedTransitions": 50729173,
+  "qualification": "Candidate record counts are not distinct dynamics; candidates were independently replayed and deduplicated over phase and D6 symmetry. No exhaustive classification or discovery priority is claimed."
+}

@@ -1,0 +1,2157 @@
+{
+  "schema": 1,
+  "description": "Independent unbounded axial-grid evidence; complete nonzero states include every refractory value. Projection certificates prove emitter separation for all future cycles.",
+  "entries": [
+    {
+      "id": "hex-conway-p2",
+      "type": "cycle",
+      "rule": "B3/S23",
+      "generations": 2,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 0,
+        "period": 2,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          4,
+          4
+        ],
+        "activeRange": [
+          4,
+          4
+        ],
+        "unionSize": 7,
+        "unionComponents": [
+          7
+        ],
+        "perCellPeriods": {
+          "1": 1,
+          "2": 6
+        },
+        "ruleClauses": {
+          "S3": 2,
+          "B3": 6
+        },
+        "phaseStatesSha256": "2768126fa0c7132b21113a37215a74671d097bec76d5f47f129107ba34e40a72"
+      },
+      "rotation": {
+        "interval": 1,
+        "rotation60Steps": 1,
+        "translation": [
+          0,
+          0
+        ],
+        "centreAxial": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "verifiedPhases": 2
+      },
+      "coreSteps": 2
+    },
+    {
+      "id": "hex-conway-p3",
+      "type": "cycle",
+      "rule": "B3/S23",
+      "generations": 2,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 0,
+        "period": 3,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          19,
+          21
+        ],
+        "activeRange": [
+          19,
+          21
+        ],
+        "unionSize": 21,
+        "unionComponents": [
+          21
+        ],
+        "perCellPeriods": {
+          "1": 18,
+          "3": 3
+        },
+        "ruleClauses": {
+          "S2": 32,
+          "S3": 25,
+          "B3": 3
+        },
+        "phaseStatesSha256": "818f7036838dbf0cf5009416b1e767259c9b71973250709b231dad9fd583dd3b"
+      },
+      "rotation": null,
+      "coreSteps": 3
+    },
+    {
+      "id": "hex-conway-p6",
+      "type": "cycle",
+      "rule": "B3/S23",
+      "generations": 2,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 0,
+        "period": 6,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          19,
+          23
+        ],
+        "activeRange": [
+          19,
+          23
+        ],
+        "unionSize": 25,
+        "unionComponents": [
+          25
+        ],
+        "perCellPeriods": {
+          "1": 13,
+          "3": 4,
+          "6": 8
+        },
+        "ruleClauses": {
+          "S3": 68,
+          "S2": 42,
+          "B3": 16
+        },
+        "phaseStatesSha256": "80199071cbc4eaddb1ac67c3664fff9e49cea287662393b1a27bb7b05c055c8d"
+      },
+      "rotation": null,
+      "coreSteps": 6
+    },
+    {
+      "id": "hex-b2s35-p5-traveller",
+      "type": "cycle",
+      "rule": "B2/S35",
+      "generations": 2,
+      "expected": {
+        "kind": "spaceship",
+        "transient": 0,
+        "period": 5,
+        "translation": [
+          1,
+          0
+        ],
+        "liveRange": [
+          10,
+          18
+        ],
+        "activeRange": [
+          10,
+          18
+        ],
+        "unionSize": 41,
+        "unionComponents": [
+          41
+        ],
+        "perCellPeriods": null,
+        "ruleClauses": {
+          "B2": 62,
+          "S3": 8
+        },
+        "phaseStatesSha256": "6b64c550c6dad99f99c9dc857be7086d3ce92ff8e713fd7d3eccd452babbaf28"
+      },
+      "rotation": null,
+      "coreSteps": 5
+    },
+    {
+      "id": "hex-b245s3-p10-traveller",
+      "type": "cycle",
+      "rule": "B245/S3",
+      "generations": 2,
+      "expected": {
+        "kind": "spaceship",
+        "transient": 0,
+        "period": 10,
+        "translation": [
+          2,
+          0
+        ],
+        "liveRange": [
+          9,
+          18
+        ],
+        "activeRange": [
+          9,
+          18
+        ],
+        "unionSize": 54,
+        "unionComponents": [
+          54
+        ],
+        "perCellPeriods": null,
+        "ruleClauses": {
+          "B2": 90,
+          "S3": 22,
+          "B4": 32,
+          "B5": 3
+        },
+        "phaseStatesSha256": "ad133851becf0df2ba21c0905ffd1dc91053d060e9102695848a43f985c3d882"
+      },
+      "rotation": null,
+      "coreSteps": 10
+    },
+    {
+      "id": "hex-b235s146-c4-launcher-traveller",
+      "type": "cycle",
+      "rule": "B235/S146",
+      "generations": 4,
+      "expected": {
+        "kind": "spaceship",
+        "transient": 21,
+        "period": 10,
+        "translation": [
+          -5,
+          0
+        ],
+        "liveRange": [
+          6,
+          12
+        ],
+        "activeRange": [
+          13,
+          27
+        ],
+        "unionSize": 70,
+        "unionComponents": [
+          70
+        ],
+        "perCellPeriods": null,
+        "ruleClauses": {
+          "S1": 34,
+          "B3": 18,
+          "B2": 39
+        },
+        "phaseStatesSha256": "b3a61db8d82e26731ff3e69de89ceaf9a35029b9e81f3452561127cdb2617eab"
+      },
+      "rotation": null,
+      "coreSteps": 31
+    },
+    {
+      "id": "hex-b235s134-c5-launcher-traveller",
+      "type": "cycle",
+      "rule": "B235/S134",
+      "generations": 5,
+      "expected": {
+        "kind": "spaceship",
+        "transient": 58,
+        "period": 4,
+        "translation": [
+          2,
+          0
+        ],
+        "liveRange": [
+          4,
+          5
+        ],
+        "activeRange": [
+          8,
+          10
+        ],
+        "unionSize": 13,
+        "unionComponents": [
+          13
+        ],
+        "perCellPeriods": null,
+        "ruleClauses": {
+          "S3": 5,
+          "B2": 4,
+          "S1": 7,
+          "B3": 2,
+          "S4": 1
+        },
+        "phaseStatesSha256": "1081681de900ceef4a9bfaf3fcef6d616eca58b0a9c69816d73d3991ada542c6"
+      },
+      "rotation": null,
+      "coreSteps": 62
+    },
+    {
+      "id": "hex-conway-p4",
+      "type": "cycle",
+      "rule": "B3/S23",
+      "generations": 2,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 0,
+        "period": 4,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          14,
+          15
+        ],
+        "activeRange": [
+          14,
+          15
+        ],
+        "unionSize": 16,
+        "unionComponents": [
+          16
+        ],
+        "perCellPeriods": {
+          "1": 10,
+          "4": 6
+        },
+        "ruleClauses": {
+          "S2": 30,
+          "S3": 22,
+          "B3": 6
+        },
+        "phaseStatesSha256": "5ecac9e62ebdd429734ab7542029ef4275b6912acc4039ea1ee7ba59cee9d391"
+      },
+      "rotation": {
+        "interval": 2,
+        "rotation60Steps": 3,
+        "translation": [
+          1,
+          2
+        ],
+        "centreAxial": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "verifiedPhases": 4
+      },
+      "coreSteps": 4
+    },
+    {
+      "id": "hex-conway-p5",
+      "type": "cycle",
+      "rule": "B3/S23",
+      "generations": 2,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 0,
+        "period": 5,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          14,
+          16
+        ],
+        "activeRange": [
+          14,
+          16
+        ],
+        "unionSize": 19,
+        "unionComponents": [
+          19
+        ],
+        "perCellPeriods": {
+          "1": 11,
+          "5": 8
+        },
+        "ruleClauses": {
+          "S2": 37,
+          "S3": 29,
+          "B3": 8
+        },
+        "phaseStatesSha256": "db9fb12a8a40d60c0488b3730f792ddd6b4d33f66d703610e92af9ded90ec0fc"
+      },
+      "rotation": null,
+      "coreSteps": 5
+    },
+    {
+      "id": "hex-conway-p8",
+      "type": "cycle",
+      "rule": "B3/S23",
+      "generations": 2,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 0,
+        "period": 8,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          22,
+          25
+        ],
+        "activeRange": [
+          22,
+          25
+        ],
+        "unionSize": 27,
+        "unionComponents": [
+          27
+        ],
+        "perCellPeriods": {
+          "1": 19,
+          "8": 8
+        },
+        "ruleClauses": {
+          "S2": 113,
+          "S3": 63,
+          "B3": 14
+        },
+        "phaseStatesSha256": "d52efef67e1d8af29d5d85a6f84bf834e97341a48e54490cb77c11b71fffc6c8"
+      },
+      "rotation": null,
+      "coreSteps": 8
+    },
+    {
+      "id": "hex-b34s234-p269",
+      "type": "cycle",
+      "rule": "B34/S234",
+      "generations": 2,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 0,
+        "period": 269,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          25,
+          50
+        ],
+        "activeRange": [
+          25,
+          50
+        ],
+        "unionSize": 53,
+        "unionComponents": [
+          53
+        ],
+        "perCellPeriods": {
+          "1": 24,
+          "269": 29
+        },
+        "ruleClauses": {
+          "S2": 2601,
+          "S3": 3821,
+          "B3": 720,
+          "B4": 749,
+          "S4": 2631
+        },
+        "phaseStatesSha256": "e0521fb05456eaa11000aedb75c5a436a290595a5a64f12f2e116aade763df14"
+      },
+      "rotation": null,
+      "coreSteps": 269
+    },
+    {
+      "id": "hex-b245s35-p25-traveller",
+      "type": "cycle",
+      "rule": "B245/S35",
+      "generations": 2,
+      "expected": {
+        "kind": "spaceship",
+        "transient": 0,
+        "period": 25,
+        "translation": [
+          1,
+          1
+        ],
+        "liveRange": [
+          9,
+          24
+        ],
+        "activeRange": [
+          9,
+          24
+        ],
+        "unionSize": 51,
+        "unionComponents": [
+          51
+        ],
+        "perCellPeriods": null,
+        "ruleClauses": {
+          "B2": 233,
+          "B5": 2,
+          "S3": 62,
+          "B4": 90,
+          "S5": 4
+        },
+        "phaseStatesSha256": "110298532b07bcf59a40352e738d8bc08a3b4f6b6f8eb65eb8b5b55aa824bd35"
+      },
+      "rotation": null,
+      "coreSteps": 25
+    },
+    {
+      "id": "hex-b2s34-p48-rotor",
+      "type": "cycle",
+      "rule": "B2/S34",
+      "generations": 2,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 0,
+        "period": 48,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          6,
+          16
+        ],
+        "activeRange": [
+          6,
+          16
+        ],
+        "unionSize": 78,
+        "unionComponents": [
+          78
+        ],
+        "perCellPeriods": {
+          "24": 8,
+          "48": 70
+        },
+        "ruleClauses": {
+          "B2": 374,
+          "S3": 100,
+          "S4": 58
+        },
+        "phaseStatesSha256": "52b23e265a3cf908cb562c6ced765425619145ab51d5c68b691a313b6b33e603"
+      },
+      "rotation": {
+        "interval": 24,
+        "rotation60Steps": 3,
+        "translation": [
+          4,
+          -1
+        ],
+        "centreAxial": [
+          [
+            2,
+            1
+          ],
+          [
+            -1,
+            2
+          ]
+        ],
+        "verifiedPhases": 48
+      },
+      "coreSteps": 48
+    },
+    {
+      "id": "hex-b245s3-p57-pulsator",
+      "type": "cycle",
+      "rule": "B245/S3",
+      "generations": 2,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 0,
+        "period": 57,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          9,
+          99
+        ],
+        "activeRange": [
+          9,
+          99
+        ],
+        "unionSize": 231,
+        "unionComponents": [
+          231
+        ],
+        "perCellPeriods": {
+          "57": 231
+        },
+        "ruleClauses": {
+          "B2": 1566,
+          "S3": 372,
+          "B4": 411,
+          "B5": 54
+        },
+        "phaseStatesSha256": "8a8d584afbcf76643703f4e602b83d3785dc64bda61dba35443de38534f7f17c"
+      },
+      "rotation": null,
+      "coreSteps": 57
+    },
+    {
+      "id": "hex-b24s3-p128-rotor",
+      "type": "cycle",
+      "rule": "B24/S3",
+      "generations": 2,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 0,
+        "period": 128,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          9,
+          34
+        ],
+        "activeRange": [
+          9,
+          34
+        ],
+        "unionSize": 118,
+        "unionComponents": [
+          118
+        ],
+        "perCellPeriods": {
+          "64": 10,
+          "128": 108
+        },
+        "ruleClauses": {
+          "B2": 1752,
+          "S3": 424,
+          "B4": 332
+        },
+        "phaseStatesSha256": "8c855f0973f2e69e8650507e58985523c5c9e0f8eae09a99d6773fb08a514dc8"
+      },
+      "rotation": {
+        "interval": 64,
+        "rotation60Steps": 3,
+        "translation": [
+          -1,
+          -1
+        ],
+        "centreAxial": [
+          [
+            -1,
+            2
+          ],
+          [
+            -1,
+            2
+          ]
+        ],
+        "verifiedPhases": 128
+      },
+      "coreSteps": 128
+    },
+    {
+      "id": "hex-b234s3-p4104",
+      "type": "cycle",
+      "rule": "B234/S3",
+      "generations": 2,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 0,
+        "period": 4104,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          12,
+          36
+        ],
+        "activeRange": [
+          12,
+          36
+        ],
+        "unionSize": 50,
+        "unionComponents": [
+          50
+        ],
+        "perCellPeriods": {
+          "2": 22,
+          "2052": 2,
+          "4104": 26
+        },
+        "ruleClauses": {
+          "B2": 27022,
+          "B3": 34400,
+          "B4": 22030,
+          "S3": 22228
+        },
+        "phaseStatesSha256": "914405ea296c1314c447530d868873e826f0f8e5ef1774f7f2ec503226d8b37e"
+      },
+      "rotation": null,
+      "coreSteps": 4104
+    },
+    {
+      "id": "hex-b2s3456-c7-p372-rotor",
+      "type": "cycle",
+      "rule": "B2/S3456",
+      "generations": 7,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 0,
+        "period": 372,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          7,
+          13
+        ],
+        "activeRange": [
+          12,
+          21
+        ],
+        "unionSize": 37,
+        "unionComponents": [
+          37
+        ],
+        "perCellPeriods": {
+          "1": 7,
+          "372": 30
+        },
+        "ruleClauses": {
+          "S3": 1590,
+          "S4": 552,
+          "S6": 372,
+          "B2": 540,
+          "S5": 276
+        },
+        "phaseStatesSha256": "d9d18fe1e071269bced869bfc88522c5d1383d77a51299f5cbe8ec1528eab13b"
+      },
+      "rotation": {
+        "interval": 62,
+        "rotation60Steps": 1,
+        "translation": [
+          1,
+          -1
+        ],
+        "centreAxial": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "verifiedPhases": 372
+      },
+      "coreSteps": 372
+    },
+    {
+      "id": "hex-b24s16-c3-p248-breather",
+      "type": "cycle",
+      "rule": "B24/S16",
+      "generations": 3,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 0,
+        "period": 248,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          9,
+          124
+        ],
+        "activeRange": [
+          13,
+          209
+        ],
+        "unionSize": 1281,
+        "unionComponents": [
+          1281
+        ],
+        "perCellPeriods": {
+          "124": 27,
+          "248": 1254
+        },
+        "ruleClauses": {
+          "S1": 3904,
+          "B2": 7830,
+          "B4": 452,
+          "S6": 6
+        },
+        "phaseStatesSha256": "cc47ccf0e74c3124dc58cd05b432e981c52eae1d1bb0a5037000aab1be7f0850"
+      },
+      "rotation": {
+        "interval": 124,
+        "rotation60Steps": 3,
+        "translation": [
+          -6,
+          -6
+        ],
+        "centreAxial": [
+          [
+            -3,
+            1
+          ],
+          [
+            -3,
+            1
+          ]
+        ],
+        "verifiedPhases": 248
+      },
+      "coreSteps": 248
+    },
+    {
+      "id": "hex-b23s13-c5-p138-traveller",
+      "type": "cycle",
+      "rule": "B23/S13",
+      "generations": 5,
+      "expected": {
+        "kind": "spaceship",
+        "transient": 0,
+        "period": 138,
+        "translation": [
+          0,
+          -8
+        ],
+        "liveRange": [
+          9,
+          40
+        ],
+        "activeRange": [
+          26,
+          103
+        ],
+        "unionSize": 897,
+        "unionComponents": [
+          896,
+          1
+        ],
+        "perCellPeriods": null,
+        "ruleClauses": {
+          "S1": 876,
+          "S3": 464,
+          "B2": 1234,
+          "B3": 336
+        },
+        "phaseStatesSha256": "bc3cac9bd8d451b69e5e08006a0047e325018ae64d88b141d6b7653a68893116"
+      },
+      "rotation": null,
+      "coreSteps": 138
+    },
+    {
+      "id": "hex-b234s13-c4-p23-traveller",
+      "type": "cycle",
+      "rule": "B234/S13",
+      "generations": 4,
+      "expected": {
+        "kind": "spaceship",
+        "transient": 0,
+        "period": 23,
+        "translation": [
+          10,
+          -5
+        ],
+        "liveRange": [
+          15,
+          30
+        ],
+        "activeRange": [
+          29,
+          62
+        ],
+        "unionSize": 143,
+        "unionComponents": [
+          143
+        ],
+        "perCellPeriods": null,
+        "ruleClauses": {
+          "S3": 110,
+          "B2": 190,
+          "S1": 96,
+          "B4": 6,
+          "B3": 38
+        },
+        "phaseStatesSha256": "5354ec0163bb1d8b58bf04144815be2788b418f6cd1613489fda9a3b39663729"
+      },
+      "rotation": null,
+      "coreSteps": 23
+    },
+    {
+      "id": "hex-b246s246-c4-p30-gun",
+      "type": "emitter",
+      "rule": "B246/S246",
+      "generations": 4,
+      "proof": {
+        "emissionPeriod": 30,
+        "coreTranslation": [
+          0,
+          0
+        ],
+        "emittedGroups": [
+          {
+            "coordinateStates": [
+              [
+                18,
+                -8,
+                3
+              ],
+              [
+                20,
+                -10,
+                3
+              ],
+              [
+                20,
+                -9,
+                1
+              ],
+              [
+                20,
+                -8,
+                3
+              ],
+              [
+                21,
+                -10,
+                1
+              ],
+              [
+                21,
+                -9,
+                1
+              ],
+              [
+                22,
+                -10,
+                1
+              ]
+            ],
+            "period": 3,
+            "translationPer3": [
+              2,
+              -1
+            ],
+            "translationPer30": [
+              20,
+              -10
+            ]
+          },
+          {
+            "coordinateStates": [
+              [
+                -10,
+                -10,
+                1
+              ],
+              [
+                -10,
+                -9,
+                1
+              ],
+              [
+                -10,
+                -8,
+                3
+              ],
+              [
+                -9,
+                -10,
+                1
+              ],
+              [
+                -9,
+                -9,
+                1
+              ],
+              [
+                -8,
+                -10,
+                3
+              ],
+              [
+                -8,
+                -8,
+                3
+              ]
+            ],
+            "period": 3,
+            "translationPer3": [
+              -1,
+              -1
+            ],
+            "translationPer30": [
+              -10,
+              -10
+            ]
+          },
+          {
+            "coordinateStates": [
+              [
+                -10,
+                20,
+                3
+              ],
+              [
+                -10,
+                21,
+                1
+              ],
+              [
+                -10,
+                22,
+                1
+              ],
+              [
+                -9,
+                20,
+                1
+              ],
+              [
+                -9,
+                21,
+                1
+              ],
+              [
+                -8,
+                18,
+                3
+              ],
+              [
+                -8,
+                20,
+                3
+              ]
+            ],
+            "period": 3,
+            "translationPer3": [
+              -1,
+              2
+            ],
+            "translationPer30": [
+              -10,
+              20
+            ]
+          }
+        ]
+      },
+      "expected": {
+        "type": "gun",
+        "emissionPeriod": 30,
+        "groupsPerEmission": 3,
+        "velocities": [
+          [
+            20,
+            -10
+          ],
+          [
+            -10,
+            -10
+          ],
+          [
+            -10,
+            20
+          ]
+        ],
+        "separationChecks": 270,
+        "minimumProjectionGap": 7
+      },
+      "coreSteps": 120
+    },
+    {
+      "id": "hex-b25s34-p20-puffer",
+      "type": "emitter",
+      "rule": "B25/S34",
+      "generations": 2,
+      "proof": {
+        "emissionPeriod": 20,
+        "coreTranslation": [
+          0,
+          10
+        ],
+        "debrisCoordinateStates": [
+          [
+            2,
+            -4,
+            1
+          ],
+          [
+            2,
+            -3,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            4,
+            1,
+            1
+          ]
+        ],
+        "debrisPeriod": 2
+      },
+      "expected": {
+        "type": "puffer",
+        "emissionPeriod": 20,
+        "translation": [
+          0,
+          10
+        ],
+        "debrisPeriod": 2,
+        "debrisPopulation": 4,
+        "separationChecks": 40,
+        "minimumProjectionGap": 3
+      },
+      "coreSteps": 160
+    },
+    {
+      "id": "hex-b2s1-c3-p999-rotor",
+      "type": "cycle",
+      "rule": "B2/S1",
+      "generations": 3,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 0,
+        "period": 999,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          11,
+          80
+        ],
+        "activeRange": [
+          21,
+          129
+        ],
+        "unionSize": 1335,
+        "unionComponents": [
+          1335
+        ],
+        "perCellPeriods": {
+          "999": 1335
+        },
+        "ruleClauses": {
+          "S1": 12957,
+          "B2": 26355
+        },
+        "phaseStatesSha256": "05114048c8b023464950a636274aeddaae08f773ce45f5176bd83e83fe73dc61"
+      },
+      "rotation": {
+        "interval": 333,
+        "rotation60Steps": 4,
+        "translation": [
+          10,
+          3
+        ],
+        "centreAxial": [
+          [
+            23,
+            3
+          ],
+          [
+            -7,
+            3
+          ]
+        ],
+        "verifiedPhases": 999
+      },
+      "coreSteps": 999
+    },
+    {
+      "id": "hex-b23s4-p13-traveller",
+      "type": "cycle",
+      "rule": "B23/S4",
+      "generations": 2,
+      "expected": {
+        "kind": "spaceship",
+        "transient": 0,
+        "period": 13,
+        "translation": [
+          1,
+          1
+        ],
+        "liveRange": [
+          8,
+          15
+        ],
+        "activeRange": [
+          8,
+          15
+        ],
+        "unionSize": 43,
+        "unionComponents": [
+          43
+        ],
+        "perCellPeriods": null,
+        "ruleClauses": {
+          "B2": 97,
+          "B3": 38,
+          "S4": 1
+        },
+        "phaseStatesSha256": "78be783b960ff8ebb417b68b048b9ec4b0ea44b779fd553f213559d471d1c9b2"
+      },
+      "rotation": null,
+      "coreSteps": 13
+    },
+    {
+      "id": "hex-b2s1-c3-p158-traveller",
+      "type": "cycle",
+      "rule": "B2/S1",
+      "generations": 3,
+      "expected": {
+        "kind": "spaceship",
+        "transient": 0,
+        "period": 158,
+        "translation": [
+          -11,
+          22
+        ],
+        "liveRange": [
+          14,
+          73
+        ],
+        "activeRange": [
+          24,
+          126
+        ],
+        "unionSize": 833,
+        "unionComponents": [
+          833
+        ],
+        "perCellPeriods": null,
+        "ruleClauses": {
+          "S1": 2258,
+          "B2": 4476
+        },
+        "phaseStatesSha256": "053e35bbbea3abfed20d73f73edaf9a4663bcf90d98969695f779bb56f347463"
+      },
+      "rotation": null,
+      "coreSteps": 158
+    },
+    {
+      "id": "hex-b2s34-wall-repair",
+      "type": "cycle",
+      "rule": "B2/S34",
+      "generations": 2,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 44,
+        "period": 5,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          63,
+          73
+        ],
+        "activeRange": [
+          63,
+          73
+        ],
+        "unionSize": 87,
+        "unionComponents": [
+          87
+        ],
+        "perCellPeriods": {
+          "1": 59,
+          "5": 28
+        },
+        "ruleClauses": {
+          "S3": 200,
+          "S4": 103,
+          "B2": 38
+        },
+        "phaseStatesSha256": "02749d2955c0ffbe950f74b1b1331ff79b2a836da58f94e74f0c5fcd8f413a46"
+      },
+      "rotation": null,
+      "coreSteps": 49,
+      "repair": {
+        "missingCoordinateState": [
+          0,
+          0,
+          1
+        ],
+        "pristineCoordinateStates": [
+          [
+            -21,
+            10,
+            1
+          ],
+          [
+            -21,
+            11,
+            1
+          ],
+          [
+            -20,
+            10,
+            1
+          ],
+          [
+            -19,
+            9,
+            1
+          ],
+          [
+            -19,
+            10,
+            1
+          ],
+          [
+            -18,
+            9,
+            1
+          ],
+          [
+            -17,
+            8,
+            1
+          ],
+          [
+            -17,
+            9,
+            1
+          ],
+          [
+            -16,
+            8,
+            1
+          ],
+          [
+            -15,
+            7,
+            1
+          ],
+          [
+            -15,
+            8,
+            1
+          ],
+          [
+            -14,
+            7,
+            1
+          ],
+          [
+            -13,
+            6,
+            1
+          ],
+          [
+            -13,
+            7,
+            1
+          ],
+          [
+            -12,
+            6,
+            1
+          ],
+          [
+            -11,
+            5,
+            1
+          ],
+          [
+            -11,
+            6,
+            1
+          ],
+          [
+            -10,
+            5,
+            1
+          ],
+          [
+            -9,
+            4,
+            1
+          ],
+          [
+            -9,
+            5,
+            1
+          ],
+          [
+            -8,
+            4,
+            1
+          ],
+          [
+            -7,
+            3,
+            1
+          ],
+          [
+            -7,
+            4,
+            1
+          ],
+          [
+            -6,
+            3,
+            1
+          ],
+          [
+            -5,
+            2,
+            1
+          ],
+          [
+            -5,
+            3,
+            1
+          ],
+          [
+            -4,
+            2,
+            1
+          ],
+          [
+            -3,
+            1,
+            1
+          ],
+          [
+            -3,
+            2,
+            1
+          ],
+          [
+            -2,
+            1,
+            1
+          ],
+          [
+            -1,
+            0,
+            1
+          ],
+          [
+            -1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            -1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            2,
+            -1,
+            1
+          ],
+          [
+            3,
+            -2,
+            1
+          ],
+          [
+            3,
+            -1,
+            1
+          ],
+          [
+            4,
+            -2,
+            1
+          ],
+          [
+            5,
+            -3,
+            1
+          ],
+          [
+            5,
+            -2,
+            1
+          ],
+          [
+            6,
+            -3,
+            1
+          ],
+          [
+            7,
+            -4,
+            1
+          ],
+          [
+            7,
+            -3,
+            1
+          ],
+          [
+            8,
+            -4,
+            1
+          ],
+          [
+            9,
+            -5,
+            1
+          ],
+          [
+            9,
+            -4,
+            1
+          ],
+          [
+            10,
+            -5,
+            1
+          ],
+          [
+            11,
+            -6,
+            1
+          ],
+          [
+            11,
+            -5,
+            1
+          ],
+          [
+            12,
+            -6,
+            1
+          ],
+          [
+            13,
+            -7,
+            1
+          ],
+          [
+            13,
+            -6,
+            1
+          ],
+          [
+            14,
+            -7,
+            1
+          ],
+          [
+            15,
+            -8,
+            1
+          ],
+          [
+            15,
+            -7,
+            1
+          ],
+          [
+            16,
+            -8,
+            1
+          ],
+          [
+            17,
+            -9,
+            1
+          ],
+          [
+            17,
+            -8,
+            1
+          ],
+          [
+            18,
+            -9,
+            1
+          ],
+          [
+            19,
+            -10,
+            1
+          ],
+          [
+            19,
+            -9,
+            1
+          ],
+          [
+            20,
+            -10,
+            1
+          ],
+          [
+            21,
+            -11,
+            1
+          ],
+          [
+            21,
+            -10,
+            1
+          ]
+        ],
+        "exactMatchGeneration": 44,
+        "subsequentPeriod": 5,
+        "expectedCoordinateStates": [
+          [
+            -22,
+            10,
+            1
+          ],
+          [
+            -22,
+            12,
+            1
+          ],
+          [
+            -21,
+            10,
+            1
+          ],
+          [
+            -21,
+            11,
+            1
+          ],
+          [
+            -20,
+            8,
+            1
+          ],
+          [
+            -20,
+            10,
+            1
+          ],
+          [
+            -20,
+            12,
+            1
+          ],
+          [
+            -19,
+            9,
+            1
+          ],
+          [
+            -19,
+            10,
+            1
+          ],
+          [
+            -18,
+            9,
+            1
+          ],
+          [
+            -17,
+            8,
+            1
+          ],
+          [
+            -17,
+            9,
+            1
+          ],
+          [
+            -16,
+            8,
+            1
+          ],
+          [
+            -15,
+            7,
+            1
+          ],
+          [
+            -15,
+            8,
+            1
+          ],
+          [
+            -14,
+            7,
+            1
+          ],
+          [
+            -13,
+            6,
+            1
+          ],
+          [
+            -13,
+            7,
+            1
+          ],
+          [
+            -12,
+            6,
+            1
+          ],
+          [
+            -11,
+            5,
+            1
+          ],
+          [
+            -11,
+            6,
+            1
+          ],
+          [
+            -10,
+            5,
+            1
+          ],
+          [
+            -9,
+            4,
+            1
+          ],
+          [
+            -9,
+            5,
+            1
+          ],
+          [
+            -8,
+            4,
+            1
+          ],
+          [
+            -7,
+            3,
+            1
+          ],
+          [
+            -7,
+            4,
+            1
+          ],
+          [
+            -6,
+            3,
+            1
+          ],
+          [
+            -5,
+            2,
+            1
+          ],
+          [
+            -5,
+            3,
+            1
+          ],
+          [
+            -4,
+            2,
+            1
+          ],
+          [
+            -3,
+            1,
+            1
+          ],
+          [
+            -3,
+            2,
+            1
+          ],
+          [
+            -2,
+            1,
+            1
+          ],
+          [
+            -1,
+            0,
+            1
+          ],
+          [
+            -1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            -1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            2,
+            -1,
+            1
+          ],
+          [
+            3,
+            -2,
+            1
+          ],
+          [
+            3,
+            -1,
+            1
+          ],
+          [
+            4,
+            -2,
+            1
+          ],
+          [
+            5,
+            -3,
+            1
+          ],
+          [
+            5,
+            -2,
+            1
+          ],
+          [
+            6,
+            -3,
+            1
+          ],
+          [
+            7,
+            -4,
+            1
+          ],
+          [
+            7,
+            -3,
+            1
+          ],
+          [
+            8,
+            -4,
+            1
+          ],
+          [
+            9,
+            -5,
+            1
+          ],
+          [
+            9,
+            -4,
+            1
+          ],
+          [
+            10,
+            -5,
+            1
+          ],
+          [
+            11,
+            -6,
+            1
+          ],
+          [
+            11,
+            -5,
+            1
+          ],
+          [
+            12,
+            -6,
+            1
+          ],
+          [
+            13,
+            -7,
+            1
+          ],
+          [
+            13,
+            -6,
+            1
+          ],
+          [
+            14,
+            -7,
+            1
+          ],
+          [
+            15,
+            -8,
+            1
+          ],
+          [
+            15,
+            -7,
+            1
+          ],
+          [
+            16,
+            -8,
+            1
+          ],
+          [
+            17,
+            -9,
+            1
+          ],
+          [
+            17,
+            -8,
+            1
+          ],
+          [
+            18,
+            -9,
+            1
+          ],
+          [
+            19,
+            -10,
+            1
+          ],
+          [
+            19,
+            -9,
+            1
+          ],
+          [
+            20,
+            -12,
+            1
+          ],
+          [
+            20,
+            -10,
+            1
+          ],
+          [
+            20,
+            -8,
+            1
+          ],
+          [
+            21,
+            -11,
+            1
+          ],
+          [
+            21,
+            -10,
+            1
+          ],
+          [
+            22,
+            -12,
+            1
+          ],
+          [
+            22,
+            -10,
+            1
+          ]
+        ]
+      },
+      "expectedRepair": {
+        "firstExactMatch": 44,
+        "resultingSupport": 73
+      }
+    },
+    {
+      "id": "hex-b2s34-p2044-billiard",
+      "type": "cycle",
+      "rule": "B2/S34",
+      "generations": 2,
+      "expected": {
+        "kind": "oscillator",
+        "transient": 0,
+        "period": 2044,
+        "translation": [
+          0,
+          0
+        ],
+        "liveRange": [
+          146,
+          198
+        ],
+        "activeRange": [
+          146,
+          198
+        ],
+        "unionSize": 243,
+        "unionComponents": [
+          243
+        ],
+        "perCellPeriods": {
+          "1": 138,
+          "2": 12,
+          "1022": 3,
+          "2044": 90
+        },
+        "ruleClauses": {
+          "S3": 165528,
+          "S4": 116544,
+          "B2": 49128
+        },
+        "phaseStatesSha256": "8d303b8627774c4fc4504eafc725853d020e39e5475f323c4c9097ae0114ab2b"
+      },
+      "rotation": {
+        "interval": 1022,
+        "rotation60Steps": 3,
+        "translation": [
+          0,
+          0
+        ],
+        "centreAxial": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "verifiedPhases": 2044
+      },
+      "coreSteps": 2044
+    },
+    {
+      "id": "hex-parity-seven-copy",
+      "type": "replicator",
+      "rule": "B135/S0246",
+      "generations": 2,
+      "checks": [
+        {
+          "steps": 8,
+          "translations": [
+            [
+              0,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              0,
+              8
+            ],
+            [
+              -8,
+              8
+            ],
+            [
+              -8,
+              0
+            ],
+            [
+              0,
+              -8
+            ],
+            [
+              8,
+              -8
+            ]
+          ]
+        },
+        {
+          "steps": 16,
+          "translations": [
+            [
+              0,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              0,
+              16
+            ],
+            [
+              -16,
+              16
+            ],
+            [
+              -16,
+              0
+            ],
+            [
+              0,
+              -16
+            ],
+            [
+              16,
+              -16
+            ]
+          ]
+        },
+        {
+          "steps": 32,
+          "translations": [
+            [
+              0,
+              0
+            ],
+            [
+              32,
+              0
+            ],
+            [
+              0,
+              32
+            ],
+            [
+              -32,
+              32
+            ],
+            [
+              -32,
+              0
+            ],
+            [
+              0,
+              -32
+            ],
+            [
+              32,
+              -32
+            ]
+          ]
+        }
+      ],
+      "coreSteps": 32
+    }
+  ]
+}

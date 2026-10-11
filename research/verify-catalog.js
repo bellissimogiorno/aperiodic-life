@@ -56,6 +56,16 @@ function liveCoordinates(patch, simulation) {
   return result;
 }
 
+function stateCoordinates(patch, simulation) {
+  const result = [];
+  for (let cell = 0; cell < patch.tileCount; cell++) {
+    if (simulation.state[cell]) result.push([
+      patch.coordinates[cell * 2], patch.coordinates[cell * 2 + 1], simulation.state[cell],
+    ]);
+  }
+  return result;
+}
+
 function exactFirstCycle(simulation, limit) {
   const buckets = new Map();
   const states = [];
@@ -377,7 +387,7 @@ function verifyEntry(entry) {
   }
 
   if (entry.moving) {
-    const before = liveCoordinates(patch, simulation);
+    const before = stateCoordinates(patch, simulation);
     const phasePopulations = [simulation.aliveCount()];
     const clauseTrackers = ruleClauseTrackers(entry, simulation.rule);
     for (let step = 0; step < entry.expectedPeriod; step++) {
@@ -389,8 +399,8 @@ function verifyEntry(entry) {
       assert.deepEqual(phasePopulations, entry.expectedPhasePopulations, `${entry.id}: phase populations`);
     }
     const [dx, dy] = entry.translation;
-    const expected = before.map(([x, y]) => `${x + dx},${y + dy}`).sort();
-    const after = liveCoordinates(patch, simulation).map(([x, y]) => `${x},${y}`).sort();
+    const expected = before.map(([x, y, state]) => `${x + dx},${y + dy},${state}`).sort();
+    const after = stateCoordinates(patch, simulation).map(([x, y, state]) => `${x},${y},${state}`).sort();
     assert.deepEqual(after, expected, `${entry.id}: exact translation`);
     const ruleClauseActivity = verifyRuleClauses(entry, clauseTrackers);
     return {
@@ -398,7 +408,7 @@ function verifyEntry(entry) {
       kind: 'spaceship benchmark',
       steps: entry.expectedPeriod,
       translation: entry.translation,
-      liveCells: after.length,
+      liveCells: simulation.aliveCount(),
       phasePopulations,
       ruleClauseActivity,
     };

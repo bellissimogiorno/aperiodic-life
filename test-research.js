@@ -24,7 +24,7 @@ const expected = JSON.parse(fs.readFileSync(
 ));
 const catalogue = runJson('research/verify-catalog.js');
 assert.deepStrictEqual(catalogue, expected, 'current catalogue verification drift');
-assert.equal(catalogue.catalogEntries, 48, 'curated catalogue size');
+assert.equal(catalogue.catalogEntries, 69, 'curated catalogue size');
 assert.equal(new Set(catalogue.results.map((entry) => entry.id)).size, discoveries.length);
 assert.deepStrictEqual(
   catalogue.results.map((entry) => entry.id),

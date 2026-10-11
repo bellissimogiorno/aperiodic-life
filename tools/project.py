@@ -34,6 +34,7 @@ PROFILES = {
         ["node", "test-search-tools.js"],
         ["node", "test-research.js"],
         ["node", "test-traveller-evidence.js"],
+        ["node", "test-hexagonal-evidence.js"],
         ["node", "test-static.js"],
         ["node", "build-standalone.js", "--check"],
         ["python3", "test-package.py"],
@@ -54,6 +55,7 @@ PROFILES = {
         ["node", "test-structures.js"],
         ["node", "test-research.js"],
         ["node", "test-traveller-evidence.js"],
+        ["node", "test-hexagonal-evidence.js"],
     ],
 }
 

@@ -36,7 +36,7 @@ Browser cycle detection compares complete state bytes within a finite history wi
 
 Active fields and long transients are checked only through their stated horizons. They may later cycle, freeze, die, or reach the boundary. Search failure applies only to the recorded rules, seeds, horizons, and bounds; it is not a nonexistence proof.
 
-Coarse search fingerprints do not count distinct mathematical structures. Evolutionary candidates are correlated, and candidate totals are not statistical confidence levels. The 48 curated catalogue entries have individual verification contracts; raw search output does not automatically qualify for the catalogue.
+Coarse search fingerprints do not count distinct mathematical structures. Evolutionary candidates are correlated, and candidate totals are not statistical confidence levels. The 69 curated catalogue entries have individual verification contracts; raw search output does not automatically qualify for the catalogue.
 
 ## Expressiveness
 

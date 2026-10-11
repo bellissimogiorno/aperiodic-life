@@ -9,6 +9,28 @@ const VIEW_EPSILON = 1e-5;
 const VIEW_MODES = new Set(['initial', 'trajectory', 'contain']);
 const MAX_UI_SPEED = 240;
 const EXPECTED_SPEEDS = Object.freeze({
+  'hex-conway-p4': 4,
+  'hex-conway-p5': 5,
+  'hex-conway-p8': 5,
+  'hex-b34s234-p269': 30,
+  'hex-b245s35-p25-traveller': 8,
+  'hex-b2s34-p48-rotor': 8,
+  'hex-b245s3-p57-pulsator': 10,
+  'hex-b24s3-p128-rotor': 16,
+  'hex-b234s3-p4104': 180,
+  'hex-b2s3456-c7-p372-rotor': 30,
+  'hex-b24s16-c3-p248-breather': 20,
+  'hex-b23s13-c5-p138-traveller': 20,
+  'hex-b234s13-c4-p23-traveller': 10,
+  'hex-b246s246-c4-p30-gun': 12,
+  'hex-b25s34-p20-puffer': 10,
+  'hex-b2s1-c3-p999-rotor': 60,
+  'hex-b23s4-p13-traveller': 8,
+  'hex-b2s1-c3-p158-traveller': 20,
+  'hex-b2s34-wall-repair': 8,
+  'hex-b2s34-p2044-billiard': 100,
+  'hex-parity-seven-copy': 6,
+
   'hat-directional-transient-83': 6,
   'penrose-edge-b23s23-p822': 40,
   'penrose-conway-c3-p14': 7,
@@ -389,7 +411,7 @@ function exactFirstCycle(simulation, limit, observe = null) {
   return null;
 }
 
-assert.equal(discoveries.length, 48);
+assert.equal(discoveries.length, 69);
 assert.equal(new Set(discoveries.map((entry) => entry.id)).size, discoveries.length, 'discovery IDs must be unique');
 assert.equal(Object.keys(EXPECTED_SPEEDS).length, discoveries.length, 'expected speed table must cover the catalogue exactly');
 
@@ -550,12 +572,12 @@ for (const entry of discoveries) {
       for (const [x, y] of before) expected.push(`${x + dx},${y + dy}`);
     }
     assert.deepEqual(coordinateSet(patch, simulation), [...new Set(expected)].sort(), `${entry.id}: expected translated replicas`);
-    results.push({ id: entry.id, behavior: `two replicas after ${entry.expectedReplication.steps}`, alive: simulation.aliveCount() });
+    results.push({ id: entry.id, behavior: `${entry.expectedReplication.translations.length} replicas after ${entry.expectedReplication.steps}`, alive: simulation.aliveCount() });
   } else if (entry.moving) {
     assert(patch.coordinates, `${entry.id}: moving verification requires integer coordinates`);
     const before = [];
     for (let cell = 0; cell < patch.tileCount; cell++) {
-      if (simulation.state[cell] === 1) before.push([patch.coordinates[cell * 2], patch.coordinates[cell * 2 + 1]]);
+      if (simulation.state[cell]) before.push([patch.coordinates[cell * 2], patch.coordinates[cell * 2 + 1], simulation.state[cell]]);
     }
     const phasePopulations = [simulation.aliveCount()];
     const clauseTrackers = ruleClauseTrackers(entry, simulation.rule);
@@ -572,8 +594,12 @@ for (const entry of discoveries) {
       );
     }
     const [dx, dy] = entry.translation;
-    const expected = before.map(([x, y]) => `${x + dx},${y + dy}`).sort();
-    assert.deepEqual(coordinateSet(patch, simulation), expected, `${entry.id}: expected period-${entry.expectedPeriod} translation`);
+    const expected = before.map(([x, y, state]) => `${x + dx},${y + dy},${state}`).sort();
+    const after = [];
+    for (let cell = 0; cell < patch.tileCount; cell++) {
+      if (simulation.state[cell]) after.push(`${patch.coordinates[cell * 2]},${patch.coordinates[cell * 2 + 1]},${simulation.state[cell]}`);
+    }
+    assert.deepEqual(after.sort(), expected, `${entry.id}: expected period-${entry.expectedPeriod} translation`);
     assertRuleClauses(entry, clauseTrackers);
     results.push({ id: entry.id, behavior: `translation ${dx},${dy} after ${entry.expectedPeriod}`, alive: simulation.aliveCount() });
   } else if (entry.expectedExtinction) {

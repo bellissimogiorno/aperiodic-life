@@ -1,6 +1,6 @@
 # Catalogue rules and structures
 
-The 48 configurations in `discoveries.js` use a uniform graph-totalistic model: each tile is one cell, and rules inspect only its state and number of state-1 neighbours. Geometry and the selected contact graph supply the local structure. The [configuration reference](CONFIGURATION.md) defines binary and refractory transitions.
+The 69 configurations in `discoveries.js` use a uniform graph-totalistic model: each tile is one cell, and rules inspect only its state and number of state-1 neighbours. Geometry and the selected contact graph supply the local structure. The [configuration reference](CONFIGURATION.md) defines binary and refractory transitions.
 
 ## Exact localised oscillators
 
@@ -41,6 +41,8 @@ The launchers demonstrate distinct rule-dependent transients into related compac
 **All Penrose travel claims are finite.** A radius-3 graph match at two phases does not give a global translation symmetry. The continuation may encounter a different environment. These results do not establish an indefinitely propagating glider, a gun, a stable collision system, or computation on the tiling.
 
 ## Regular hexagonal spaceships
+
+The catalogue contains 28 hexagonal configurations. The [hexagonal guide](HEXAGONAL_STRUCTURES.md) covers the full selection, including exact spaceships, oscillators, rotors, a gun, a puffer, wall repair, a billiard table and a parity replicator. The table below records the original traveller benchmarks; the guide supplies the additional examples and their source and verification records.
 
 The regular hexagonal lattice is translation invariant. Exact complete-state recurrence under a nonzero axial translation therefore establishes indefinitely repeated motion on the unbounded lattice when the observed evolution is independent of the finite boundary.
 

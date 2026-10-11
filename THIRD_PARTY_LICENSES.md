@@ -45,3 +45,20 @@ are preserved in
 No Golly software implementation is bundled. Retain that source record when
 reusing or distributing the fixture; the project does not claim original
 authorship of this known pattern.
+
+The hexagonal catalogue also includes mathematical pattern data published by
+confocaloid (the three-way gun), Naszvadi (the oscillator-trail puffer, with an
+earlier example noted by Dmitry Maitak), c0b0p0 (the period-999 rotor and
+period-158 spaceship), John Cerkan (the period-13 spaceship), and Dean Hickerson
+(the repairing wall and period-2,044 billiard table). The period-48 B2/S34
+oscillator was also published by drc and was independently encountered by the
+project's search. Author names identify the cited publications and do not
+assert discovery priority.
+
+Original RLE or generating seeds, source URLs, coordinate conversions, and
+attribution are retained in the [hexagonal source records](research/fixtures/hexagonal-sources.json)
+and [hexagonal guide](docs/HEXAGONAL_STRUCTURES.md). The reference simulators
+and search code were written for this project; no forum or Golly simulator
+implementation is included. Preserve these pattern credits when redistributing
+the catalogue. The project does not claim original authorship of the published
+patterns or assign a separate software licence to their mathematical facts.

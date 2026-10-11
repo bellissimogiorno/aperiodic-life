@@ -30,7 +30,9 @@ node test-structures.js
 node test-traveller-evidence.js
 ```
 
-All 48 catalogue entries have explicit replay contracts. Exact periods require the first return of the complete state; population counts and hashes are insufficient. Extinction requires every cell to be zero, including refractory states. Transient-cycle entries must not return before the stated transient and period.
+All 69 catalogue entries have explicit replay contracts. Exact periods require the first return of the complete state; population counts and hashes are insufficient. Extinction requires every cell to be zero, including refractory states. Transient-cycle entries must not return before the stated transient and period.
+
+`test-hexagonal-evidence.js` additionally uses an unbounded coordinate-map reference whose update code is independent of the production engine. It checks complete-state periods and translations, rotations, genuine full-period cells, equivalence under lattice symmetries and phase shifts, and production parity with boundary clearance. Gun and puffer checks include exact emission equations and permanently separating projections; wall repair requires equality to the pristine evolving wall, including the empty exterior. Negative controls guard against accepting mutated refractory states or emission contracts. The fixture and source records are in `research/fixtures/hexagonal-*.json`.
 
 Spaceship checks compare exact translated states. Regular hexagonal fixtures use axial coordinates; Penrose traveller checks additionally compare the local contact graph and stay within their declared finite horizons. Catalogue contracts check the declared rule-clause activity during each finite trajectory.
 
@@ -69,7 +71,7 @@ Direct acceptance remains necessary for target browser/GPU combinations. Check t
 
 ## Source and release checks
 
-Static checks require the four tilings, all 48 entries, discovery and help controls, complete MIT and BSD notices, and absence of external runtime scripts or styles. `node build-standalone.js --check` requires the checked-in standalone to match the expanded source.
+Static checks require the four tilings, all 69 entries, discovery and help controls, complete MIT and BSD notices, and absence of external runtime scripts or styles. `node build-standalone.js --check` requires the checked-in standalone to match the expanded source.
 
 `test-package.py` and `test-repository.py` cover deterministic archives, source completeness, safe paths, file exclusions, integrity metadata, standalone freshness, output-path rejection, and the static-site payload. Both run in the standard profile. See [release operations](OPERATIONS.md) for packaging and [CI](CI.md) for hosted workflows.
 
