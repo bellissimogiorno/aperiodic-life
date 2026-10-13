@@ -1,0 +1,254 @@
+[
+  {
+    "id": "hat-priority-b-glider",
+    "title": "Hat B relay glider",
+    "rule": "TABLE:HAT-B",
+    "preset": "B",
+    "cellStates": [
+      [
+        2945,
+        1
+      ],
+      [
+        2943,
+        3
+      ]
+    ],
+    "category": "Einstein-hat gliders and launchers",
+    "generations": 4,
+    "speed": 16,
+    "summary": "A two-cell seed launches a compact published Hat B relay. All states are visible to neighbouring cells under the priority-table rule. Independently checked finite flight; perpetual travel is not proved.",
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "borderRings": 1,
+    "view": {
+      "mode": "contain",
+      "padding": 6
+    },
+    "searchObservation": {
+      "through": 250,
+      "maxPopulation": 13,
+      "minPopulation": 2,
+      "minimumBoundary": 11,
+      "territory": 612,
+      "displacement": 250.29469923802674,
+      "trajectoryBounds": [
+        -80.75,
+        -55.42562484741211,
+        169.75,
+        32.908966064453125
+      ]
+    }
+  },
+  {
+    "id": "hat-priority-a-glider",
+    "title": "Hat A relay glider",
+    "rule": "TABLE:HAT-A",
+    "preset": "A",
+    "cellStates": [
+      [
+        2945,
+        2
+      ],
+      [
+        2943,
+        1
+      ]
+    ],
+    "category": "Einstein-hat gliders and launchers",
+    "generations": 4,
+    "speed": 16,
+    "summary": "The published Hat A relay follows the same route as Hat B with a different multi-state body. Verified finite flight on the hat touch graph.",
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "borderRings": 1,
+    "view": {
+      "mode": "contain",
+      "padding": 6
+    },
+    "searchObservation": {
+      "through": 250,
+      "maxPopulation": 14,
+      "minPopulation": 2,
+      "minimumBoundary": 11,
+      "territory": 612,
+      "displacement": 250.3492463846219,
+      "trajectoryBounds": [
+        -80.75,
+        -55.42562484741211,
+        169.75,
+        32.908966064453125
+      ]
+    }
+  },
+  {
+    "id": "hat-priority-c-triple-launcher",
+    "title": "Hat C three-way launcher",
+    "rule": "TABLE:HAT-C",
+    "preset": "C",
+    "cellStates": [
+      [
+        23905,
+        1
+      ],
+      [
+        23907,
+        2
+      ]
+    ],
+    "category": "Einstein-hat gliders and launchers",
+    "generations": 4,
+    "speed": 16,
+    "summary": "Two adjacent seed tiles develop into three separated compact travellers under the published Hat C priority table. All three continue moving through the verified 160-generation observation.",
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "borderRings": 1,
+    "view": {
+      "mode": "contain",
+      "padding": 6
+    },
+    "searchObservation": {
+      "through": 160,
+      "maxPopulation": 39,
+      "minPopulation": 2,
+      "minimumBoundary": 34,
+      "territory": 1013,
+      "displacement": 80.43864155140803,
+      "trajectoryBounds": [
+        -143.75,
+        -132.93490600585938,
+        45.25,
+        35.507041931152344
+      ]
+    }
+  },
+  {
+    "id": "hat-priority-a-double-launcher",
+    "title": "Hat A double launcher",
+    "rule": "TABLE:HAT-A",
+    "preset": "A",
+    "cellStates": [
+      [
+        24629,
+        1
+      ],
+      [
+        24583,
+        2
+      ]
+    ],
+    "category": "Einstein-hat gliders and launchers",
+    "generations": 4,
+    "speed": 16,
+    "summary": "A two-tile seed produces two separated Hat A travellers. Both move through the verified finite observation window under the published priority table.",
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "borderRings": 1,
+    "view": {
+      "mode": "contain",
+      "padding": 6
+    },
+    "searchObservation": {
+      "through": 160,
+      "maxPopulation": 15,
+      "minPopulation": 2,
+      "minimumBoundary": 35,
+      "territory": 786,
+      "displacement": 157.45030630069834,
+      "trajectoryBounds": [
+        -25.25,
+        -33.341976165771484,
+        105.5,
+        111.71727752685547
+      ]
+    }
+  },
+  {
+    "id": "hat-priority-simple-glider",
+    "title": "Hat three-state relay",
+    "rule": "TABLE:HAT-SIMPLE",
+    "preset": "D",
+    "cellStates": [
+      [
+        2945,
+        1
+      ],
+      [
+        2943,
+        2
+      ]
+    ],
+    "category": "Einstein-hat gliders and launchers",
+    "generations": 3,
+    "speed": 16,
+    "summary": "A three-state simplification of published Hat B removes its empty-neighbour condition. It matches 37,858 checked launches after relabelling, but differs from the original rule on some other configurations.",
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "borderRings": 1,
+    "view": {
+      "mode": "contain",
+      "padding": 6
+    },
+    "searchObservation": {
+      "through": 250,
+      "maxPopulation": 13,
+      "minPopulation": 2,
+      "minimumBoundary": 11,
+      "territory": 612,
+      "displacement": 250.29469923802674,
+      "trajectoryBounds": [
+        -80.75,
+        -55.42562484741211,
+        169.75,
+        32.908966064453125
+      ]
+    }
+  },
+  {
+    "id": "hat-priority-spectre-wanderer",
+    "title": "Hat wandering relay",
+    "rule": "TABLE:SPECTRE",
+    "preset": "S",
+    "cellStates": [
+      [
+        11990,
+        3
+      ],
+      [
+        12004,
+        1
+      ]
+    ],
+    "category": "Einstein-hat gliders and launchers",
+    "generations": 4,
+    "speed": 24,
+    "summary": "The published Spectre relay rule, applied to a hat tiling, produces a compact moving pattern with a changing route. This is a finite observed wanderer, not an indefinitely travelling glider.",
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "borderRings": 1,
+    "view": {
+      "mode": "contain",
+      "padding": 6
+    },
+    "searchObservation": {
+      "through": 1000,
+      "maxPopulation": 14,
+      "minPopulation": 2,
+      "minimumBoundary": 38,
+      "territory": 1872,
+      "displacement": 44.125447239691205,
+      "trajectoryBounds": [
+        -19.25,
+        -98.29388427734375,
+        102.25,
+        26.413774490356445
+      ]
+    }
+  }
+]

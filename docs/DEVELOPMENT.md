@@ -12,7 +12,7 @@ Open [http://127.0.0.1:8000/index.html](http://127.0.0.1:8000/index.html). A Web
 
 ## Discoveries
 
-The catalogue contains **69 configurations** covering classic square patterns, hexagonal benchmarks, aperiodic oscillators, compact travelling dynamics, long transients, and collective fields. Search by name, tiling, graph, rule, or description.
+The catalogue contains **81 configurations** covering classic square patterns, hexagonal benchmarks, aperiodic oscillators, compact travelling dynamics, long transients, and collective fields. Search by name, tiling, graph, rule, or description.
 
 - **Load** prepares the exact initial configuration and remains paused.
 - **Load & run** prepares the same configuration and immediately starts the simulation.
@@ -95,3 +95,7 @@ python3 tools/project.py test topology
 ```
 
 All commands above run from the repository root. For details see [architecture](ARCHITECTURE.md), [core API](CORE_API.md), [testing](TESTING.md), [research tools](../research/README.md), and [contributing](../CONTRIBUTING.md).
+
+## Published Hat gliders
+
+Search the curated configurations for Hat glider or Hat triple launcher. These use named priority tables, whose higher states influence neighbours. Loading an example selects its exact seed, state count and edge-or-corner neighbourhood. Table state counts are fixed; choosing a birth/survival preset unlocks the count again. The three-state Hat variant is derived from Edmond’s B table, with experimentally checked flight agreement rather than equivalence on all inputs. See [the search report](GLIDER_SEARCH.md).

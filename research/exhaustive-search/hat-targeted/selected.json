@@ -1,0 +1,1676 @@
+[
+  {
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "ruleFamily": "priority-table",
+    "preset": "B",
+    "source": "https://arxiv.org/abs/2609.22579",
+    "cellStates": [
+      [
+        2945,
+        1
+      ],
+      [
+        2943,
+        3
+      ]
+    ],
+    "steps": 307,
+    "outcome": "boundary",
+    "maxPopulation": 13,
+    "maxRadius": 4.501559357812418,
+    "displacement": 311.62581402912474,
+    "minimumBoundary": 4,
+    "territory": 752,
+    "finalStates": [
+      [
+        48481,
+        1
+      ],
+      [
+        48476,
+        1
+      ],
+      [
+        48474,
+        1
+      ],
+      [
+        48555,
+        1
+      ],
+      [
+        48570,
+        3
+      ],
+      [
+        48572,
+        3
+      ]
+    ],
+    "trace": [
+      {
+        "generation": 0,
+        "population": 2,
+        "centre": [
+          -71.55768966674805,
+          27.812739372253418
+        ],
+        "radius": 0.7854063667698183,
+        "boundary": 58
+      },
+      {
+        "generation": 25,
+        "population": 6,
+        "centre": [
+          -67.30769220987956,
+          7.261289993921916
+        ],
+        "radius": 2.842251172040233,
+        "boundary": 55
+      },
+      {
+        "generation": 50,
+        "population": 6,
+        "centre": [
+          -40.801282246907554,
+          3.4974101781845093
+        ],
+        "radius": 2.438628701438217,
+        "boundary": 55
+      },
+      {
+        "generation": 75,
+        "population": 6,
+        "centre": [
+          -15.935897509256998,
+          -6.173206567764282
+        ],
+        "radius": 2.565160407335677,
+        "boundary": 55
+      },
+      {
+        "generation": 100,
+        "population": 6,
+        "centre": [
+          10.68589735031128,
+          -9.781645933787027
+        ],
+        "radius": 2.578580621184271,
+        "boundary": 55
+      },
+      {
+        "generation": 125,
+        "population": 6,
+        "centre": [
+          36.192307790120445,
+          -19.5854975382487
+        ],
+        "radius": 2.8422546641562825,
+        "boundary": 55
+      },
+      {
+        "generation": 150,
+        "population": 5,
+        "centre": [
+          62.723077392578126,
+          -23.68912582397461
+        ],
+        "radius": 2.3472005596894197,
+        "boundary": 55
+      },
+      {
+        "generation": 175,
+        "population": 6,
+        "centre": [
+          87.62179311116536,
+          -33.119920094807945
+        ],
+        "radius": 2.6174878574937126,
+        "boundary": 43
+      },
+      {
+        "generation": 200,
+        "population": 6,
+        "centre": [
+          115.05769220987956,
+          -37.05034383138021
+        ],
+        "radius": 2.501577458981588,
+        "boundary": 34
+      },
+      {
+        "generation": 225,
+        "population": 5,
+        "centre": [
+          139.6769226074219,
+          -45.939317321777345
+        ],
+        "radius": 2.382327656658885,
+        "boundary": 22
+      },
+      {
+        "generation": 250,
+        "population": 5,
+        "centre": [
+          166.21538696289062,
+          -50.36270751953125
+        ],
+        "radius": 2.518147563245188,
+        "boundary": 11
+      },
+      {
+        "generation": 275,
+        "population": 5,
+        "centre": [
+          191.73076782226562,
+          -59.19616622924805
+        ],
+        "radius": 2.726511170261815,
+        "boundary": 7
+      },
+      {
+        "generation": 300,
+        "population": 6,
+        "centre": [
+          218.56410217285156,
+          -63.75279299418131
+        ],
+        "radius": 2.37823122577935,
+        "boundary": 7
+      }
+    ],
+    "trial": 115
+  },
+  {
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "ruleFamily": "priority-table",
+    "preset": "A",
+    "source": "https://arxiv.org/abs/2609.22579",
+    "cellStates": [
+      [
+        2945,
+        2
+      ],
+      [
+        2943,
+        1
+      ]
+    ],
+    "steps": 307,
+    "outcome": "boundary",
+    "maxPopulation": 14,
+    "maxRadius": 4.564652275750605,
+    "displacement": 311.58530573543896,
+    "minimumBoundary": 4,
+    "territory": 752,
+    "finalStates": [
+      [
+        48481,
+        2
+      ],
+      [
+        48573,
+        3
+      ],
+      [
+        48476,
+        2
+      ],
+      [
+        48474,
+        2
+      ],
+      [
+        48555,
+        2
+      ],
+      [
+        48570,
+        1
+      ],
+      [
+        48572,
+        1
+      ]
+    ],
+    "trace": [
+      {
+        "generation": 0,
+        "population": 2,
+        "centre": [
+          -71.55768966674805,
+          27.812739372253418
+        ],
+        "radius": 0.7854063667698183,
+        "boundary": 58
+      },
+      {
+        "generation": 25,
+        "population": 7,
+        "centre": [
+          -67.3021981375558,
+          7.337424073900495
+        ],
+        "radius": 2.8160161990942028,
+        "boundary": 55
+      },
+      {
+        "generation": 50,
+        "population": 7,
+        "centre": [
+          -40.88461576189314,
+          3.397484200341361
+        ],
+        "radius": 2.347099934365275,
+        "boundary": 55
+      },
+      {
+        "generation": 75,
+        "population": 7,
+        "centre": [
+          -15.928571428571429,
+          -6.062177726200649
+        ],
+        "radius": 2.473065030846665,
+        "boundary": 55
+      },
+      {
+        "generation": 100,
+        "population": 7,
+        "centre": [
+          10.697802134922572,
+          -9.868882860456194
+        ],
+        "radius": 2.490580982025531,
+        "boundary": 55
+      },
+      {
+        "generation": 125,
+        "population": 7,
+        "centre": [
+          36.19780240740095,
+          -19.509363446916854
+        ],
+        "radius": 2.816020224260587,
+        "boundary": 55
+      },
+      {
+        "generation": 150,
+        "population": 6,
+        "centre": [
+          62.621795018514,
+          -23.815698623657227
+        ],
+        "radius": 2.341244731978709,
+        "boundary": 55
+      },
+      {
+        "generation": 175,
+        "population": 7,
+        "centre": [
+          87.62087794712612,
+          -32.994615827287944
+        ],
+        "radius": 2.6112933725416387,
+        "boundary": 43
+      },
+      {
+        "generation": 200,
+        "population": 7,
+        "centre": [
+          114.99450574602399,
+          -37.04875782557896
+        ],
+        "radius": 2.4711598292055816,
+        "boundary": 34
+      },
+      {
+        "generation": 225,
+        "population": 6,
+        "centre": [
+          139.68589782714844,
+          -45.932655334472656
+        ],
+        "radius": 2.371374517957842,
+        "boundary": 22
+      },
+      {
+        "generation": 250,
+        "population": 6,
+        "centre": [
+          166.24359130859375,
+          -50.45153045654297
+        ],
+        "radius": 2.4254506652761,
+        "boundary": 11
+      },
+      {
+        "generation": 275,
+        "population": 6,
+        "centre": [
+          191.75640869140625,
+          -59.11178461710612
+        ],
+        "radius": 2.7147751198204313,
+        "boundary": 7
+      },
+      {
+        "generation": 300,
+        "population": 7,
+        "centre": [
+          218.5,
+          -63.7718266078404
+        ],
+        "radius": 2.363864108075731,
+        "boundary": 7
+      }
+    ],
+    "trial": 115
+  },
+  {
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "ruleFamily": "priority-table",
+    "preset": "C",
+    "source": "https://arxiv.org/abs/2609.22579",
+    "cellStates": [
+      [
+        7267,
+        1
+      ],
+      [
+        7283,
+        2
+      ]
+    ],
+    "steps": 311,
+    "outcome": "boundary",
+    "maxPopulation": 18,
+    "maxRadius": 5.98168778032802,
+    "displacement": 268.49411037174406,
+    "minimumBoundary": 4,
+    "territory": 764,
+    "finalStates": [
+      [
+        47367,
+        3
+      ],
+      [
+        47368,
+        3
+      ],
+      [
+        47370,
+        1
+      ],
+      [
+        47959,
+        2
+      ],
+      [
+        47372,
+        1
+      ],
+      [
+        47957,
+        1
+      ],
+      [
+        47369,
+        1
+      ]
+    ],
+    "trace": [
+      {
+        "generation": 0,
+        "population": 2,
+        "centre": [
+          -50,
+          27.512961387634277
+        ],
+        "radius": 0.9475913534343693,
+        "boundary": 67
+      },
+      {
+        "generation": 25,
+        "population": 7,
+        "centre": [
+          -50.09890147617885,
+          36.12563105991909
+        ],
+        "radius": 2.454832417220561,
+        "boundary": 60
+      },
+      {
+        "generation": 50,
+        "population": 11,
+        "centre": [
+          -47.44055904041637,
+          14.195549271323465
+        ],
+        "radius": 3.2170550200267276,
+        "boundary": 60
+      },
+      {
+        "generation": 75,
+        "population": 7,
+        "centre": [
+          -37.83516420636858,
+          11.914986746651786
+        ],
+        "radius": 2.4548328259402883,
+        "boundary": 60
+      },
+      {
+        "generation": 100,
+        "population": 10,
+        "centre": [
+          -12.992307758331298,
+          2.5314588397741318
+        ],
+        "radius": 3.1533866832430393,
+        "boundary": 60
+      },
+      {
+        "generation": 125,
+        "population": 9,
+        "centre": [
+          13.619658046298557,
+          -1.324944823980327
+        ],
+        "radius": 4.0581007843003185,
+        "boundary": 60
+      },
+      {
+        "generation": 150,
+        "population": 7,
+        "centre": [
+          39.67032895769392,
+          -10.582640102931432
+        ],
+        "radius": 2.6081698633279147,
+        "boundary": 60
+      },
+      {
+        "generation": 175,
+        "population": 9,
+        "centre": [
+          65.91025500827365,
+          -14.529981931050619
+        ],
+        "radius": 3.1516922172594297,
+        "boundary": 57
+      },
+      {
+        "generation": 200,
+        "population": 10,
+        "centre": [
+          90.43846206665039,
+          -24.10215320587158
+        ],
+        "radius": 3.2702014350623743,
+        "boundary": 46
+      },
+      {
+        "generation": 225,
+        "population": 7,
+        "centre": [
+          117.31318664550781,
+          -28.73110662187849
+        ],
+        "radius": 2.6222762471356846,
+        "boundary": 35
+      },
+      {
+        "generation": 250,
+        "population": 6,
+        "centre": [
+          143.06410217285156,
+          -36.77277119954427
+        ],
+        "radius": 2.4683704052718913,
+        "boundary": 24
+      },
+      {
+        "generation": 275,
+        "population": 9,
+        "centre": [
+          169.4102579752604,
+          -41.42118114895291
+        ],
+        "radius": 3.194992979309342,
+        "boundary": 14
+      },
+      {
+        "generation": 300,
+        "population": 7,
+        "centre": [
+          195.1868155343192,
+          -50.07720511300223
+        ],
+        "radius": 2.6222780642965255,
+        "boundary": 8
+      }
+    ],
+    "trial": 405
+  },
+  {
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "ruleFamily": "priority-table",
+    "preset": "S",
+    "source": "https://arxiv.org/abs/2609.22579",
+    "cellStates": [
+      [
+        11990,
+        3
+      ],
+      [
+        12004,
+        1
+      ]
+    ],
+    "steps": 2644,
+    "outcome": "boundary",
+    "maxPopulation": 14,
+    "maxRadius": 8.099655103927654,
+    "displacement": 222.39028163357048,
+    "minimumBoundary": 4,
+    "territory": 4460,
+    "finalStates": [
+      [
+        28590,
+        3
+      ],
+      [
+        28591,
+        1
+      ],
+      [
+        28594,
+        1
+      ],
+      [
+        28598,
+        3
+      ],
+      [
+        28625,
+        3
+      ],
+      [
+        28626,
+        3
+      ]
+    ],
+    "trace": [
+      {
+        "generation": 0,
+        "population": 2,
+        "centre": [
+          26.865385055541992,
+          -24.681723594665527
+        ],
+        "radius": 0.9813348294953106,
+        "boundary": 68
+      },
+      {
+        "generation": 25,
+        "population": 7,
+        "centre": [
+          39.73076902117048,
+          -41.731004442487446
+        ],
+        "radius": 3.241311160607109,
+        "boundary": 57
+      },
+      {
+        "generation": 50,
+        "population": 6,
+        "centre": [
+          22.628204981486004,
+          -56.00297609965006
+        ],
+        "radius": 2.578581096745071,
+        "boundary": 56
+      },
+      {
+        "generation": 75,
+        "population": 5,
+        "centre": [
+          21.1,
+          -41.39601440429688
+        ],
+        "radius": 2.323993585906734,
+        "boundary": 56
+      },
+      {
+        "generation": 100,
+        "population": 5,
+        "centre": [
+          45.47692337036133,
+          -31.043679809570314
+        ],
+        "radius": 2.4115580750184202,
+        "boundary": 56
+      },
+      {
+        "generation": 125,
+        "population": 5,
+        "centre": [
+          37.82307662963867,
+          -11.311624145507812
+        ],
+        "radius": 2.3236873644697185,
+        "boundary": 56
+      },
+      {
+        "generation": 150,
+        "population": 6,
+        "centre": [
+          62.18589782714844,
+          -1.1880092124144237
+        ],
+        "radius": 2.6689760797275923,
+        "boundary": 56
+      },
+      {
+        "generation": 175,
+        "population": 5,
+        "centre": [
+          70.89230804443359,
+          19.74537925720215
+        ],
+        "radius": 2.436262646095072,
+        "boundary": 55
+      },
+      {
+        "generation": 200,
+        "population": 6,
+        "centre": [
+          57.11538441975912,
+          10.969655195871988
+        ],
+        "radius": 2.501578683851522,
+        "boundary": 55
+      },
+      {
+        "generation": 225,
+        "population": 6,
+        "centre": [
+          59.43589782714844,
+          2.353812555472056
+        ],
+        "radius": 2.7349496255970633,
+        "boundary": 55
+      },
+      {
+        "generation": 250,
+        "population": 6,
+        "centre": [
+          75.18589655558269,
+          13.02368974685669
+        ],
+        "radius": 2.7809875784142175,
+        "boundary": 55
+      },
+      {
+        "generation": 275,
+        "population": 5,
+        "centre": [
+          79.14615325927734,
+          -6.834939002990723
+        ],
+        "radius": 2.6011811343968323,
+        "boundary": 52
+      },
+      {
+        "generation": 300,
+        "population": 5,
+        "centre": [
+          95.28461608886718,
+          -11.125095558166503
+        ],
+        "radius": 2.518146252953825,
+        "boundary": 48
+      },
+      {
+        "generation": 325,
+        "population": 6,
+        "centre": [
+          86.37820434570312,
+          -26.702449798583984
+        ],
+        "radius": 2.5281774342329073,
+        "boundary": 46
+      },
+      {
+        "generation": 350,
+        "population": 8,
+        "centre": [
+          73.88942241668701,
+          -42.29368305206299
+        ],
+        "radius": 3.3255499182533805,
+        "boundary": 45
+      },
+      {
+        "generation": 375,
+        "population": 5,
+        "centre": [
+          75.25384674072265,
+          -61.75427322387695
+        ],
+        "radius": 2.472139705994832,
+        "boundary": 39
+      },
+      {
+        "generation": 400,
+        "population": 6,
+        "centre": [
+          53.878204345703125,
+          -47.487059911092125
+        ],
+        "radius": 2.5576514657151517,
+        "boundary": 38
+      },
+      {
+        "generation": 425,
+        "population": 6,
+        "centre": [
+          47.25640996297201,
+          -58.090319315592446
+        ],
+        "radius": 2.734947679342272,
+        "boundary": 38
+      },
+      {
+        "generation": 450,
+        "population": 5,
+        "centre": [
+          43.82307662963867,
+          -42.64841995239258
+        ],
+        "radius": 2.7453252640082746,
+        "boundary": 38
+      },
+      {
+        "generation": 475,
+        "population": 6,
+        "centre": [
+          64.07051277160645,
+          -29.256114323933918
+        ],
+        "radius": 2.4386311441443382,
+        "boundary": 38
+      },
+      {
+        "generation": 500,
+        "population": 6,
+        "centre": [
+          57.24359003702799,
+          -21.36196009318034
+        ],
+        "radius": 2.8202495097505857,
+        "boundary": 38
+      },
+      {
+        "generation": 525,
+        "population": 8,
+        "centre": [
+          76.09615516662598,
+          -24.365291595458984
+        ],
+        "radius": 3.3085725881997736,
+        "boundary": 38
+      },
+      {
+        "generation": 550,
+        "population": 6,
+        "centre": [
+          63.371795654296875,
+          -41.79127756754557
+        ],
+        "radius": 2.7712188555964676,
+        "boundary": 38
+      },
+      {
+        "generation": 575,
+        "population": 6,
+        "centre": [
+          54.12179438273112,
+          -56.21393076578776
+        ],
+        "radius": 2.529346345337363,
+        "boundary": 38
+      },
+      {
+        "generation": 600,
+        "population": 6,
+        "centre": [
+          41.37820561726888,
+          -72.66841506958008
+        ],
+        "radius": 2.998711979906244,
+        "boundary": 38
+      },
+      {
+        "generation": 625,
+        "population": 7,
+        "centre": [
+          45.99450520106724,
+          -91.4275403703962
+        ],
+        "radius": 3.4557941118623954,
+        "boundary": 38
+      },
+      {
+        "generation": 650,
+        "population": 5,
+        "centre": [
+          24.3230770111084,
+          -80.50039215087891
+        ],
+        "radius": 2.382332221318989,
+        "boundary": 38
+      },
+      {
+        "generation": 675,
+        "population": 6,
+        "centre": [
+          13.243589719136557,
+          -89.48929214477539
+        ],
+        "radius": 2.529348080085113,
+        "boundary": 38
+      },
+      {
+        "generation": 700,
+        "population": 6,
+        "centre": [
+          13.435897668202719,
+          -75.8771489461263
+        ],
+        "radius": 2.397642758880729,
+        "boundary": 38
+      },
+      {
+        "generation": 725,
+        "population": 6,
+        "centre": [
+          30.929487864176433,
+          -63.54183769226074
+        ],
+        "radius": 2.3976422194743696,
+        "boundary": 38
+      },
+      {
+        "generation": 750,
+        "population": 6,
+        "centre": [
+          30.128204663594563,
+          -45.32199668884277
+        ],
+        "radius": 2.5785806821511064,
+        "boundary": 38
+      },
+      {
+        "generation": 775,
+        "population": 5,
+        "centre": [
+          37.7538459777832,
+          -52.22799377441406
+        ],
+        "radius": 2.472141799826984,
+        "boundary": 38
+      },
+      {
+        "generation": 800,
+        "population": 8,
+        "centre": [
+          17.644230604171753,
+          -39.10437822341919
+        ],
+        "radius": 3.618259906826306,
+        "boundary": 38
+      },
+      {
+        "generation": 825,
+        "population": 5,
+        "centre": [
+          -0.35384614020586014,
+          -45.80608291625977
+        ],
+        "radius": 2.6011827494484856,
+        "boundary": 38
+      },
+      {
+        "generation": 850,
+        "population": 5,
+        "centre": [
+          2.7307692527770997,
+          -36.679507446289065
+        ],
+        "radius": 2.487505509488883,
+        "boundary": 38
+      },
+      {
+        "generation": 875,
+        "population": 6,
+        "centre": [
+          16.435897668202717,
+          -22.627689043680828
+        ],
+        "radius": 2.66897719249798,
+        "boundary": 38
+      },
+      {
+        "generation": 900,
+        "population": 5,
+        "centre": [
+          18.8538459777832,
+          -5.715767812728882
+        ],
+        "radius": 2.9107435992457917,
+        "boundary": 38
+      },
+      {
+        "generation": 925,
+        "population": 7,
+        "centre": [
+          29.230769293648855,
+          -4.606113042150225
+        ],
+        "radius": 3.2065895321451556,
+        "boundary": 38
+      },
+      {
+        "generation": 950,
+        "population": 6,
+        "centre": [
+          7.628205219904582,
+          0.5773502538601557
+        ],
+        "radius": 2.556109330813498,
+        "boundary": 38
+      },
+      {
+        "generation": 975,
+        "population": 5,
+        "centre": [
+          -13.553846168518067,
+          1.119171279668808
+        ],
+        "radius": 2.58273715582812,
+        "boundary": 38
+      },
+      {
+        "generation": 1000,
+        "population": 7,
+        "centre": [
+          -4.516483511243548,
+          6.338163886751447
+        ],
+        "radius": 3.572037192917575,
+        "boundary": 38
+      },
+      {
+        "generation": 1025,
+        "population": 6,
+        "centre": [
+          1.0064102746546268,
+          19.263513565063477
+        ],
+        "radius": 2.6610210137817205,
+        "boundary": 38
+      },
+      {
+        "generation": 1050,
+        "population": 8,
+        "centre": [
+          12.11057698726654,
+          37.097530364990234
+        ],
+        "radius": 3.3255477214597247,
+        "boundary": 38
+      },
+      {
+        "generation": 1075,
+        "population": 6,
+        "centre": [
+          17.56410264968872,
+          43.345681508382164
+        ],
+        "radius": 2.632797315884604,
+        "boundary": 38
+      },
+      {
+        "generation": 1100,
+        "population": 5,
+        "centre": [
+          -2.976923072338104,
+          39.53072891235352
+        ],
+        "radius": 2.657087281475112,
+        "boundary": 38
+      },
+      {
+        "generation": 1125,
+        "population": 7,
+        "centre": [
+          -10.45604419708252,
+          57.09105954851423
+        ],
+        "radius": 3.4673057727454855,
+        "boundary": 38
+      },
+      {
+        "generation": 1150,
+        "population": 6,
+        "centre": [
+          1.7564102672040462,
+          54.559600830078125
+        ],
+        "radius": 2.6357926985627302,
+        "boundary": 38
+      },
+      {
+        "generation": 1175,
+        "population": 5,
+        "centre": [
+          3.615384578704834,
+          29.57809829711914
+        ],
+        "radius": 2.5326271882468725,
+        "boundary": 38
+      },
+      {
+        "generation": 1200,
+        "population": 5,
+        "centre": [
+          19.5230770111084,
+          25.421176147460937
+        ],
+        "radius": 2.304818444445367,
+        "boundary": 38
+      },
+      {
+        "generation": 1225,
+        "population": 6,
+        "centre": [
+          21.570512453715008,
+          -0.32198379933834076
+        ],
+        "radius": 2.378230755860079,
+        "boundary": 38
+      },
+      {
+        "generation": 1250,
+        "population": 6,
+        "centre": [
+          31.564102490743,
+          -21.317548433939617
+        ],
+        "radius": 3.064827880907592,
+        "boundary": 38
+      },
+      {
+        "generation": 1275,
+        "population": 7,
+        "centre": [
+          28.263736452375138,
+          -2.3220900339739665
+        ],
+        "radius": 3.478000963496913,
+        "boundary": 38
+      },
+      {
+        "generation": 1300,
+        "population": 6,
+        "centre": [
+          21.006409962972004,
+          -0.4330126891533534
+        ],
+        "radius": 2.4003135046764204,
+        "boundary": 38
+      },
+      {
+        "generation": 1325,
+        "population": 7,
+        "centre": [
+          27.72527503967285,
+          -19.3380617414202
+        ],
+        "radius": 3.153138095735013,
+        "boundary": 38
+      },
+      {
+        "generation": 1350,
+        "population": 5,
+        "centre": [
+          7.146153736114502,
+          -10.911919784545898
+        ],
+        "radius": 2.4115599459742048,
+        "boundary": 38
+      },
+      {
+        "generation": 1375,
+        "population": 5,
+        "centre": [
+          -6.1307692527771,
+          -27.752783584594727
+        ],
+        "radius": 2.25183678674035,
+        "boundary": 38
+      },
+      {
+        "generation": 1400,
+        "population": 5,
+        "centre": [
+          -13.400000190734863,
+          -7.621023559570313
+        ],
+        "radius": 2.3239935560657403,
+        "boundary": 38
+      },
+      {
+        "generation": 1425,
+        "population": 5,
+        "centre": [
+          -21.653845977783202,
+          7.181348991394043
+        ],
+        "radius": 2.436263428923339,
+        "boundary": 38
+      },
+      {
+        "generation": 1450,
+        "population": 6,
+        "centre": [
+          -37.56410344441732,
+          17.653594970703125
+        ],
+        "radius": 2.3976409765656177,
+        "boundary": 38
+      },
+      {
+        "generation": 1475,
+        "population": 6,
+        "centre": [
+          -20.070512453715008,
+          29.988905270894367
+        ],
+        "radius": 2.397640739360785,
+        "boundary": 38
+      },
+      {
+        "generation": 1500,
+        "population": 6,
+        "centre": [
+          -23.756409962972004,
+          41.85789489746094
+        ],
+        "radius": 2.536649258090619,
+        "boundary": 38
+      },
+      {
+        "generation": 1525,
+        "population": 5,
+        "centre": [
+          -8.146153831481934,
+          37.15915145874023
+        ],
+        "radius": 2.47214100858861,
+        "boundary": 38
+      },
+      {
+        "generation": 1550,
+        "population": 6,
+        "centre": [
+          -9.814102331797281,
+          11.513696670532227
+        ],
+        "radius": 2.557651824763424,
+        "boundary": 38
+      },
+      {
+        "generation": 1575,
+        "population": 6,
+        "centre": [
+          2.3141025801499686,
+          11.158404350280762
+        ],
+        "radius": 2.6610205553452855,
+        "boundary": 38
+      },
+      {
+        "generation": 1600,
+        "population": 5,
+        "centre": [
+          -8.976922988891602,
+          0.386380535364151
+        ],
+        "radius": 2.7453241022159234,
+        "boundary": 38
+      },
+      {
+        "generation": 1625,
+        "population": 5,
+        "centre": [
+          -18.5,
+          16.108072662353514
+        ],
+        "radius": 2.6610040805871544,
+        "boundary": 38
+      },
+      {
+        "generation": 1650,
+        "population": 7,
+        "centre": [
+          -22.41758210318429,
+          35.72592762538365
+        ],
+        "radius": 3.5965974958991747,
+        "boundary": 38
+      },
+      {
+        "generation": 1675,
+        "population": 6,
+        "centre": [
+          -31.756409645080566,
+          50.29609044392904
+        ],
+        "radius": 2.7349488344734736,
+        "boundary": 38
+      },
+      {
+        "generation": 1700,
+        "population": 6,
+        "centre": [
+          -48.87179438273112,
+          58.60105196634928
+        ],
+        "radius": 2.7809865829007943,
+        "boundary": 38
+      },
+      {
+        "generation": 1725,
+        "population": 5,
+        "centre": [
+          -33.123076629638675,
+          71.92007904052734
+        ],
+        "radius": 2.3472002297745527,
+        "boundary": 38
+      },
+      {
+        "generation": 1750,
+        "population": 5,
+        "centre": [
+          -32.1461540222168,
+          89.1206771850586
+        ],
+        "radius": 2.4721391350144724,
+        "boundary": 38
+      },
+      {
+        "generation": 1775,
+        "population": 7,
+        "centre": [
+          -23.10988998413086,
+          87.097412109375
+        ],
+        "radius": 3.4128445737114945,
+        "boundary": 38
+      },
+      {
+        "generation": 1800,
+        "population": 5,
+        "centre": [
+          -44.52307662963867,
+          95.12956085205079
+        ],
+        "radius": 2.910745579969791,
+        "boundary": 38
+      },
+      {
+        "generation": 1825,
+        "population": 6,
+        "centre": [
+          -49.192307790120445,
+          114.84829203287761
+        ],
+        "radius": 2.842255468843933,
+        "boundary": 36
+      },
+      {
+        "generation": 1850,
+        "population": 6,
+        "centre": [
+          -60.512821197509766,
+          120.73282241821289
+        ],
+        "radius": 2.6582417686553446,
+        "boundary": 30
+      },
+      {
+        "generation": 1875,
+        "population": 6,
+        "centre": [
+          -65.25641250610352,
+          139.6521453857422
+        ],
+        "radius": 2.805345271033423,
+        "boundary": 22
+      },
+      {
+        "generation": 1900,
+        "population": 7,
+        "centre": [
+          -42.59890147617885,
+          151.1166730608259
+        ],
+        "radius": 3.6963432594440526,
+        "boundary": 20
+      },
+      {
+        "generation": 1925,
+        "population": 6,
+        "centre": [
+          -52.75640996297201,
+          147.6684341430664
+        ],
+        "radius": 2.5479942472088943,
+        "boundary": 18
+      },
+      {
+        "generation": 1950,
+        "population": 5,
+        "centre": [
+          -37.2461540222168,
+          139.6032958984375
+        ],
+        "radius": 2.6570897977549475,
+        "boundary": 18
+      },
+      {
+        "generation": 1975,
+        "population": 6,
+        "centre": [
+          -34.75640996297201,
+          118.35680516560872
+        ],
+        "radius": 2.5293468679608657,
+        "boundary": 18
+      },
+      {
+        "generation": 2000,
+        "population": 6,
+        "centre": [
+          -23.506409962972004,
+          111.0622075398763
+        ],
+        "radius": 2.3976384058763713,
+        "boundary": 18
+      },
+      {
+        "generation": 2025,
+        "population": 5,
+        "centre": [
+          -25.4,
+          125.74688873291015
+        ],
+        "radius": 2.323997338743795,
+        "boundary": 18
+      },
+      {
+        "generation": 2050,
+        "population": 5,
+        "centre": [
+          -1.0230768918991089,
+          136.09922485351564
+        ],
+        "radius": 2.411558329892568,
+        "boundary": 18
+      },
+      {
+        "generation": 2075,
+        "population": 5,
+        "centre": [
+          -10.999999809265137,
+          137.1784240722656
+        ],
+        "radius": 2.661001253275572,
+        "boundary": 18
+      },
+      {
+        "generation": 2100,
+        "population": 5,
+        "centre": [
+          5.284615421295166,
+          132.63511962890624
+        ],
+        "radius": 2.5181463284880508,
+        "boundary": 18
+      },
+      {
+        "generation": 2125,
+        "population": 5,
+        "centre": [
+          7.146153831481934,
+          107.48041534423828
+        ],
+        "radius": 2.6011846343697687,
+        "boundary": 18
+      },
+      {
+        "generation": 2150,
+        "population": 6,
+        "centre": [
+          9.378205060958862,
+          118.27908452351888
+        ],
+        "radius": 2.5348003098083822,
+        "boundary": 18
+      },
+      {
+        "generation": 2175,
+        "population": 6,
+        "centre": [
+          -3.4935897390047708,
+          102.69062678019206
+        ],
+        "radius": 2.5518592246384153,
+        "boundary": 18
+      },
+      {
+        "generation": 2200,
+        "population": 6,
+        "centre": [
+          -25.192307472229004,
+          118.31239318847656
+        ],
+        "radius": 2.8422523784176956,
+        "boundary": 18
+      },
+      {
+        "generation": 2225,
+        "population": 5,
+        "centre": [
+          -44.38461532592773,
+          112.71653747558594
+        ],
+        "radius": 2.5326260122356685,
+        "boundary": 18
+      },
+      {
+        "generation": 2250,
+        "population": 6,
+        "centre": [
+          -29.243590037027996,
+          105.07774861653645
+        ],
+        "radius": 2.529347593582151,
+        "boundary": 18
+      },
+      {
+        "generation": 2275,
+        "population": 5,
+        "centre": [
+          -26.153845977783202,
+          113.70247344970703
+        ],
+        "radius": 2.4362636370212436,
+        "boundary": 18
+      },
+      {
+        "generation": 2300,
+        "population": 6,
+        "centre": [
+          -42.06410344441732,
+          124.1747194925944
+        ],
+        "radius": 2.397640446618027,
+        "boundary": 18
+      },
+      {
+        "generation": 2325,
+        "population": 5,
+        "centre": [
+          -25.4,
+          135.8727264404297
+        ],
+        "radius": 2.786653952034524,
+        "boundary": 18
+      },
+      {
+        "generation": 2350,
+        "population": 7,
+        "centre": [
+          -28.736263547624862,
+          151.64009748186385
+        ],
+        "radius": 3.6365645368844515,
+        "boundary": 17
+      },
+      {
+        "generation": 2375,
+        "population": 7,
+        "centre": [
+          -10.615384714944023,
+          152.32530212402344
+        ],
+        "radius": 3.1531358001709853,
+        "boundary": 15
+      },
+      {
+        "generation": 2400,
+        "population": 6,
+        "centre": [
+          10.18589735031128,
+          144.59293365478516
+        ],
+        "radius": 2.5785793974089657,
+        "boundary": 15
+      },
+      {
+        "generation": 2425,
+        "population": 6,
+        "centre": [
+          1.0641025540729363,
+          141.9171371459961
+        ],
+        "radius": 2.8096512419850477,
+        "boundary": 15
+      },
+      {
+        "generation": 2450,
+        "population": 8,
+        "centre": [
+          -15.081730484962463,
+          149.63086891174316
+        ],
+        "radius": 3.8984077994653124,
+        "boundary": 15
+      },
+      {
+        "generation": 2475,
+        "population": 5,
+        "centre": [
+          -31.17692337036133,
+          135.9126983642578
+        ],
+        "radius": 3.0927690468806106,
+        "boundary": 15
+      },
+      {
+        "generation": 2500,
+        "population": 6,
+        "centre": [
+          -40.18589782714844,
+          146.9689509073893
+        ],
+        "radius": 2.556104729222758,
+        "boundary": 15
+      },
+      {
+        "generation": 2525,
+        "population": 5,
+        "centre": [
+          -50.153845977783206,
+          165.66399841308595
+        ],
+        "radius": 2.436262844276041,
+        "boundary": 13
+      },
+      {
+        "generation": 2550,
+        "population": 5,
+        "centre": [
+          -55.53846054077148,
+          172.93861083984376
+        ],
+        "radius": 2.618772249175997,
+        "boundary": 12
+      },
+      {
+        "generation": 2575,
+        "population": 6,
+        "centre": [
+          -58.75640996297201,
+          154.5078150431315
+        ],
+        "radius": 2.564199478307199,
+        "boundary": 12
+      },
+      {
+        "generation": 2600,
+        "population": 6,
+        "centre": [
+          -79.18589655558269,
+          160.18139139811197
+        ],
+        "radius": 2.7809810999959788,
+        "boundary": 10
+      },
+      {
+        "generation": 2625,
+        "population": 5,
+        "centre": [
+          -91.39230804443359,
+          158.13623962402343
+        ],
+        "radius": 2.472143749447687,
+        "boundary": 6
+      }
+    ],
+    "trial": 651
+  }
+]

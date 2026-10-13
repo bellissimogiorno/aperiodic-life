@@ -2152,6 +2152,192 @@
         }
       ],
       "coreSteps": 32
+    },
+    {
+      "id": "hex-b2s0-c3-three-cell-glider",
+      "rule": "B2/S0",
+      "generations": 3,
+      "type": "cycle",
+      "expected": {
+        "kind": "spaceship",
+        "transient": 0,
+        "period": 2,
+        "translation": [
+          0,
+          -1
+        ],
+        "liveRange": [
+          2,
+          3
+        ],
+        "activeRange": [
+          3,
+          5
+        ],
+        "unionSize": 5,
+        "unionComponents": [
+          5
+        ],
+        "perCellPeriods": null,
+        "ruleClauses": {
+          "B2": 3,
+          "S0": 2
+        },
+        "phaseStatesSha256": "e342b82be1ca6cee7eea2ad5a3c031bbb6c164c82acd83747831b94c11984ff2"
+      },
+      "coreSteps": 120
+    },
+    {
+      "id": "hex-b234s1346-c3-four-cell-launcher",
+      "rule": "B234/S1346",
+      "generations": 3,
+      "type": "cycle",
+      "expected": {
+        "kind": "spaceship",
+        "transient": 9,
+        "period": 8,
+        "translation": [
+          1,
+          1
+        ],
+        "liveRange": [
+          7,
+          19
+        ],
+        "activeRange": [
+          12,
+          27
+        ],
+        "unionSize": 43,
+        "unionComponents": [
+          43
+        ],
+        "perCellPeriods": null,
+        "ruleClauses": {
+          "S4": 21,
+          "S3": 26,
+          "B2": 41,
+          "B4": 4,
+          "S1": 8,
+          "B3": 12,
+          "S6": 2
+        },
+        "phaseStatesSha256": "8f9149a08f016c5e6af887bf08094941897e0d5da64c2766c738e0c85bd8d701"
+      },
+      "coreSteps": 120
+    },
+    {
+      "id": "hex-b2456s1345-c4-five-cell-launcher",
+      "rule": "B2456/S1345",
+      "generations": 4,
+      "type": "cycle",
+      "expected": {
+        "kind": "spaceship",
+        "transient": 6,
+        "period": 43,
+        "translation": [
+          -6,
+          3
+        ],
+        "liveRange": [
+          5,
+          32
+        ],
+        "activeRange": [
+          9,
+          48
+        ],
+        "unionSize": 101,
+        "unionComponents": [
+          101
+        ],
+        "perCellPeriods": null,
+        "ruleClauses": {
+          "S1": 130,
+          "S3": 156,
+          "B2": 213,
+          "S4": 98,
+          "B4": 21,
+          "S5": 34,
+          "B5": 4,
+          "B6": 4
+        },
+        "phaseStatesSha256": "2248a4af5213f101ea0bddc8380fe84d77a6fe06a5450e344a7094e44ed71941"
+      },
+      "coreSteps": 178
+    },
+    {
+      "id": "hex-b23s13-c4-p9-knightship-launcher",
+      "rule": "B23/S13",
+      "generations": 4,
+      "type": "cycle",
+      "expected": {
+        "kind": "spaceship",
+        "transient": 16,
+        "period": 9,
+        "translation": [
+          5,
+          -4
+        ],
+        "liveRange": [
+          7,
+          15
+        ],
+        "activeRange": [
+          15,
+          33
+        ],
+        "unionSize": 57,
+        "unionComponents": [
+          57
+        ],
+        "perCellPeriods": null,
+        "ruleClauses": {
+          "S1": 25,
+          "S3": 16,
+          "B3": 14,
+          "B2": 43
+        },
+        "phaseStatesSha256": "f9d11a9fb1a6c02ce9d0fdc4e302c6bc2ea24df6852981ffec2b13a1005eb1af"
+      },
+      "coreSteps": 120
+    },
+    {
+      "id": "hex-b234s245-c5-p10-knightship-launcher",
+      "rule": "B234/S245",
+      "generations": 5,
+      "type": "cycle",
+      "expected": {
+        "kind": "spaceship",
+        "transient": 12,
+        "period": 10,
+        "translation": [
+          1,
+          2
+        ],
+        "liveRange": [
+          7,
+          24
+        ],
+        "activeRange": [
+          22,
+          58
+        ],
+        "unionSize": 91,
+        "unionComponents": [
+          91
+        ],
+        "perCellPeriods": null,
+        "ruleClauses": {
+          "S2": 53,
+          "S4": 8,
+          "B2": 62,
+          "B3": 21,
+          "B4": 1
+        },
+        "phaseStatesSha256": "a4500772df3e409fab3e13c1648ff69374e2fa911e537c745f1e0afee788ccf8"
+      },
+      "coreSteps": 120
     }
   ]
 }

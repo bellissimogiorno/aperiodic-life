@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "tiling": "Einstein hat",
+  "depth": 5,
+  "tileCount": 54289,
+  "neighborhood": "touch",
+  "seedAdjacency": "shared edge",
+  "rulesSource": "James Edmond, arXiv:2609.22579v1, Tables 4\u20137",
+  "definitions": "First matching priority-table row fires; unmatched cells become zero. Every state is visible to neighbours. These are not B/S Generations rules.",
+  "exhaustiveRuns": {
+    "exhaustive-b": {
+      "kind": "summary",
+      "preset": "B",
+      "trials": 37858,
+      "totalEvolutionSteps": 6278457,
+      "minimumSeedBoundary": 50,
+      "horizon": 700,
+      "compactBoundaryArrivals": 3911,
+      "outcomes": {
+        "boundary": 37858
+      }
+    },
+    "exhaustive-c": {
+      "kind": "summary",
+      "preset": "C",
+      "trials": 8506,
+      "totalEvolutionSteps": 1609445,
+      "minimumSeedBoundary": 70,
+      "horizon": 700,
+      "compactBoundaryArrivals": 472,
+      "outcomes": {
+        "extinct": 98,
+        "population": 2221,
+        "boundary": 6187
+      }
+    },
+    "exhaustive-equivalence": {
+      "kind": "summary",
+      "preset": "E",
+      "trials": 37858,
+      "minimumSeedBoundary": 50,
+      "horizon": 700,
+      "compactBoundaryArrivals": 0,
+      "outcomes": {
+        "identical": 37858
+      },
+      "completeStateComparisons": 6316315
+    }
+  },
+  "sampledRuns": [
+    {
+      "script": "priority-probe.js",
+      "seed": 3651037,
+      "preset": "B",
+      "trials": 300,
+      "horizon": 3000,
+      "populationCap": 100,
+      "radiusCap": 100,
+      "cleanSingleBoundaryArrivals": 34
+    },
+    {
+      "script": "priority-probe.js",
+      "seed": 3651037,
+      "presets": [
+        "A",
+        "C",
+        "S"
+      ],
+      "trialsPerPreset": 1000,
+      "horizon": 3000,
+      "populationCap": 100,
+      "radiusCap": 100,
+      "cleanSingleBoundaryArrivals": {
+        "A": 112,
+        "C": 57,
+        "S": 33
+      },
+      "rngSequence": "One shared random stream in A,C,S order"
+    },
+    {
+      "script": "priority-experiments.js",
+      "seed": 3651039,
+      "trials": 2000,
+      "horizon": 500,
+      "completeStateComparisonsPerVariant": 331521,
+      "variants": [
+        "exact three-state compression",
+        "remove empty-neighbour clause"
+      ],
+      "mismatches": 0
+    },
+    {
+      "script": "priority-launchers.js",
+      "seed": 3651041,
+      "presets": [
+        "C",
+        "B",
+        "A"
+      ],
+      "trialsPerPreset": 3000,
+      "horizon": 160,
+      "populationCap": 45,
+      "accepted": 5047,
+      "acceptedByRuleAndMultiplicity": {
+        "C-three": 56,
+        "C-two": 370,
+        "B-two": 2324,
+        "A-two": 2297
+      },
+      "classification": "Two to four groups separated by a 12-unit clustering threshold at generations 80,120,160; every group has at least four cells, radius at most eight, and progresses at least 25 units per 40 generations."
+    }
+  ],
+  "scopeLimit": "Exhaustive means all shared-edge seed pairs in the explicitly bounded interior of one finite patch, not all rules, all patterns or the infinite tiling. Separate phases and samples can overlap and trial totals are not counts of distinct mathematical objects. Hash-based cycle screening in the search is not a recurrence proof; candidate verification is independent.",
+  "sourceSHA256": {
+    "priority-experiments.js": "ab5afa34da5442f1fa7f562ee62ed1a5951b5ebd422a73b420f77b51e296adf8",
+    "priority-probe.js": "bb93b1944b8341e4fd9b7740a1de4010413ebe26bddfafcaf44fce4c2077b0a2",
+    "priority-sweep.cpp": "254745a527bc23a31e38daa90a52d8901dac5d43385fb28d39ced7faa0bcf348",
+    "priority-launchers.js": "a176b8d66a468ffb8c0b1ccb3b50596784a44cabfcfc8255ebcc1413b3a6ae0b",
+    "export-graphs.js": "3ac6080f3cb471162676a6cbadf092a6281e67075f3a800a4702e05be74e051e"
+  },
+  "fieldDefinitions": {
+    "cleanSingleCount": "Sampled-probe boundary arrivals with maximum complete-support radius strictly below 12; no connectivity or independent-body-count check. This is a compactness screen, not a verified clean-single-glider count.",
+    "cleanSingleBoundaryArrivals": "The same sampled-probe compactness screen as cleanSingleCount; the internal name does not certify a single independent object.",
+    "compactBoundaryArrivals": "Sweep boundary arrivals with maximum complete-support radius strictly below 12; no connectivity or independent-body-count check."
+  }
+}

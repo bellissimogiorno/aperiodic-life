@@ -1,0 +1,2555 @@
+{
+  "schema": 1,
+  "scope": "Finite exact labelled-state replays on the app geometry; numerical polygon tolerance 0.002; no indefinite-motion or originality claim.",
+  "sources": [
+    {
+      "author": "James Edmond",
+      "paper": "https://arxiv.org/abs/2609.22579",
+      "date": "2026-09-18",
+      "notes": "Hat A/B/C reproduce published four-state first-match tables; SIMPLE is a separately labelled three-state derived variant."
+    }
+  ],
+  "cases": [
+    {
+      "id": "hat-edmond-a-glider",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-A",
+      "referenceTable": "hatA",
+      "generations": 4,
+      "cellStates": [
+        [
+          2943,
+          1
+        ],
+        [
+          2945,
+          2
+        ]
+      ],
+      "horizon": 307,
+      "translatedReturns": [
+        {
+          "from": 29,
+          "to": 97,
+          "transform": {
+            "dx": 70.49999761581421,
+            "dy": -18.186532974243164
+          },
+          "radius": 3
+        }
+      ],
+      "expected": {
+        "id": "hat-edmond-a-glider",
+        "verifiedThrough": 307,
+        "tileCount": 54289,
+        "trajectorySha256": "22f37ba0fdd621d58922909cd7f014faf55db27a400ba7fb58b1d437501dded7",
+        "finalCellStates": [
+          [
+            48474,
+            2
+          ],
+          [
+            48476,
+            2
+          ],
+          [
+            48481,
+            2
+          ],
+          [
+            48555,
+            2
+          ],
+          [
+            48570,
+            1
+          ],
+          [
+            48572,
+            1
+          ],
+          [
+            48573,
+            3
+          ]
+        ],
+        "minimumBoundaryDistance": 4,
+        "maxActive": 14,
+        "maxRadius": 4.564652275750605,
+        "centroidDisplacement": 311.58530573543896,
+        "absoluteRepeat": false,
+        "translatedReturns": [
+          {
+            "from": 29,
+            "to": 97,
+            "cells": 6,
+            "haloCells": 70,
+            "radius": 3,
+            "transform": {
+              "dx": 70.49999761581421,
+              "dy": -18.186532974243164
+            },
+            "worstPolygonError": 0.0000027804145311571597
+          }
+        ],
+        "emissions": []
+      }
+    },
+    {
+      "id": "hat-edmond-b-glider",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-B",
+      "referenceTable": "hatB",
+      "generations": 4,
+      "cellStates": [
+        [
+          2943,
+          3
+        ],
+        [
+          2945,
+          1
+        ]
+      ],
+      "horizon": 307,
+      "translatedReturns": [
+        {
+          "from": 29,
+          "to": 97,
+          "transform": {
+            "dx": 70.49999761581421,
+            "dy": -18.186532974243164
+          },
+          "radius": 3
+        }
+      ],
+      "expected": {
+        "id": "hat-edmond-b-glider",
+        "verifiedThrough": 307,
+        "tileCount": 54289,
+        "trajectorySha256": "fe4c06869886744ad399f8e0935eda6844f631586353be608bff2480bb5e2dc2",
+        "finalCellStates": [
+          [
+            48474,
+            1
+          ],
+          [
+            48476,
+            1
+          ],
+          [
+            48481,
+            1
+          ],
+          [
+            48555,
+            1
+          ],
+          [
+            48570,
+            3
+          ],
+          [
+            48572,
+            3
+          ]
+        ],
+        "minimumBoundaryDistance": 4,
+        "maxActive": 13,
+        "maxRadius": 4.501559357812418,
+        "centroidDisplacement": 311.62581402912474,
+        "absoluteRepeat": false,
+        "translatedReturns": [
+          {
+            "from": 29,
+            "to": 97,
+            "cells": 5,
+            "haloCells": 70,
+            "radius": 3,
+            "transform": {
+              "dx": 70.49999761581421,
+              "dy": -18.186532974243164
+            },
+            "worstPolygonError": 0.0000027804145311571597
+          }
+        ],
+        "emissions": []
+      }
+    },
+    {
+      "id": "hat-edmond-c-glider",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-C",
+      "referenceTable": "hatC",
+      "generations": 4,
+      "cellStates": [
+        [
+          7267,
+          1
+        ],
+        [
+          7283,
+          2
+        ]
+      ],
+      "horizon": 311,
+      "translatedReturns": [
+        {
+          "from": 63,
+          "to": 131,
+          "transform": {
+            "dx": 70.5,
+            "dy": -18.186533451080322
+          },
+          "radius": 3
+        }
+      ],
+      "expected": {
+        "id": "hat-edmond-c-glider",
+        "verifiedThrough": 311,
+        "tileCount": 54289,
+        "trajectorySha256": "44fdc2a845df92b5c498e5595085da286aeb1739fece10d64f5e703b409fdfa2",
+        "finalCellStates": [
+          [
+            47367,
+            3
+          ],
+          [
+            47368,
+            3
+          ],
+          [
+            47369,
+            1
+          ],
+          [
+            47370,
+            1
+          ],
+          [
+            47372,
+            1
+          ],
+          [
+            47957,
+            1
+          ],
+          [
+            47959,
+            2
+          ]
+        ],
+        "minimumBoundaryDistance": 4,
+        "maxActive": 18,
+        "maxRadius": 5.98168778032802,
+        "centroidDisplacement": 268.49411037174406,
+        "absoluteRepeat": false,
+        "translatedReturns": [
+          {
+            "from": 63,
+            "to": 131,
+            "cells": 7,
+            "haloCells": 76,
+            "radius": 3,
+            "transform": {
+              "dx": 70.5,
+              "dy": -18.186533451080322
+            },
+            "worstPolygonError": 9.5367431640625e-7
+          }
+        ],
+        "emissions": []
+      }
+    },
+    {
+      "id": "hat-simple-glider",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-SIMPLE",
+      "referenceTable": "hatSimple",
+      "generations": 3,
+      "cellStates": [
+        [
+          2943,
+          2
+        ],
+        [
+          2945,
+          1
+        ]
+      ],
+      "horizon": 307,
+      "translatedReturns": [
+        {
+          "from": 29,
+          "to": 97,
+          "transform": {
+            "dx": 70.49999761581421,
+            "dy": -18.186532974243164
+          },
+          "radius": 3
+        }
+      ],
+      "expected": {
+        "id": "hat-simple-glider",
+        "verifiedThrough": 307,
+        "tileCount": 54289,
+        "trajectorySha256": "6c56eae8c69f4e6094945ba6709860b45512be9570ffe072e11ff205ed36337c",
+        "finalCellStates": [
+          [
+            48474,
+            1
+          ],
+          [
+            48476,
+            1
+          ],
+          [
+            48481,
+            1
+          ],
+          [
+            48555,
+            1
+          ],
+          [
+            48570,
+            2
+          ],
+          [
+            48572,
+            2
+          ]
+        ],
+        "minimumBoundaryDistance": 4,
+        "maxActive": 13,
+        "maxRadius": 4.501559357812418,
+        "centroidDisplacement": 311.62581402912474,
+        "absoluteRepeat": false,
+        "translatedReturns": [
+          {
+            "from": 29,
+            "to": 97,
+            "cells": 5,
+            "haloCells": 70,
+            "radius": 3,
+            "transform": {
+              "dx": 70.49999761581421,
+              "dy": -18.186532974243164
+            },
+            "worstPolygonError": 0.0000027804145311571597
+          }
+        ],
+        "emissions": []
+      }
+    },
+    {
+      "id": "hat-edmond-c-triple-launcher",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-C",
+      "referenceTable": "hatC",
+      "generations": 4,
+      "cellStates": [
+        [
+          23905,
+          1
+        ],
+        [
+          23907,
+          2
+        ]
+      ],
+      "horizon": 160,
+      "emissions": {
+        "splitGeneration": 80,
+        "parts": [
+          {
+            "initial": [
+              [
+                24520,
+                2
+              ],
+              [
+                24523,
+                1
+              ],
+              [
+                24524,
+                1
+              ],
+              [
+                24525,
+                1
+              ],
+              [
+                24526,
+                1
+              ],
+              [
+                24531,
+                3
+              ],
+              [
+                24536,
+                1
+              ],
+              [
+                24538,
+                1
+              ],
+              [
+                24539,
+                1
+              ]
+            ],
+            "translatedReturn": {
+              "from": 86,
+              "to": 112,
+              "transform": {
+                "dx": -19.5,
+                "dy": -19.918583393096924
+              },
+              "radius": 3
+            }
+          },
+          {
+            "initial": [
+              [
+                12104,
+                3
+              ],
+              [
+                12105,
+                1
+              ],
+              [
+                12108,
+                1
+              ],
+              [
+                12109,
+                1
+              ],
+              [
+                12111,
+                1
+              ],
+              [
+                12407,
+                2
+              ]
+            ],
+            "translatedReturn": {
+              "from": 98,
+              "to": 124,
+              "transform": {
+                "dx": 7.5,
+                "dy": -26.846790313720703
+              },
+              "radius": 3
+            }
+          },
+          {
+            "initial": [
+              [
+                6501,
+                3
+              ],
+              [
+                6506,
+                3
+              ],
+              [
+                7313,
+                1
+              ],
+              [
+                7328,
+                1
+              ],
+              [
+                7331,
+                1
+              ],
+              [
+                7430,
+                2
+              ]
+            ],
+            "translatedReturn": {
+              "from": 91,
+              "to": 117,
+              "transform": {
+                "dx": -27,
+                "dy": 6.928203582763672
+              },
+              "radius": 3
+            }
+          }
+        ]
+      },
+      "expected": {
+        "id": "hat-edmond-c-triple-launcher",
+        "verifiedThrough": 160,
+        "tileCount": 54289,
+        "trajectorySha256": "d2a0eef36ad6c4c89450b111a249c990446c3e5084366c4b9fa2762f71093652",
+        "finalCellStates": [
+          [
+            1208,
+            2
+          ],
+          [
+            1215,
+            1
+          ],
+          [
+            1217,
+            1
+          ],
+          [
+            1220,
+            1
+          ],
+          [
+            1222,
+            3
+          ],
+          [
+            1312,
+            1
+          ],
+          [
+            1313,
+            1
+          ],
+          [
+            1314,
+            1
+          ],
+          [
+            1316,
+            1
+          ],
+          [
+            3938,
+            1
+          ],
+          [
+            3939,
+            1
+          ],
+          [
+            3941,
+            1
+          ],
+          [
+            3951,
+            1
+          ],
+          [
+            3953,
+            1
+          ],
+          [
+            3962,
+            2
+          ],
+          [
+            3965,
+            3
+          ],
+          [
+            13227,
+            3
+          ],
+          [
+            13228,
+            2
+          ],
+          [
+            13229,
+            1
+          ],
+          [
+            13230,
+            1
+          ],
+          [
+            13232,
+            1
+          ],
+          [
+            13234,
+            1
+          ],
+          [
+            13321,
+            1
+          ]
+        ],
+        "minimumBoundaryDistance": 34,
+        "maxActive": 39,
+        "maxRadius": 140.15442098569412,
+        "centroidDisplacement": 80.43864155140803,
+        "absoluteRepeat": false,
+        "translatedReturns": [],
+        "emissions": [
+          {
+            "emission": 1,
+            "maxActive": 10,
+            "maxRadius": 4.142814382596109,
+            "minimumBoundaryDistance": 37,
+            "centroidDisplacement": 85.47126336144684,
+            "translatedReturn": {
+              "from": 86,
+              "to": 112,
+              "cells": 7,
+              "haloCells": 74,
+              "radius": 3,
+              "transform": {
+                "dx": -19.5,
+                "dy": -19.918583393096924
+              },
+              "worstPolygonError": 0.0000019073486328125
+            }
+          },
+          {
+            "emission": 2,
+            "maxActive": 9,
+            "maxRadius": 3.9499493603479348,
+            "minimumBoundaryDistance": 36,
+            "centroidDisplacement": 85.45347739072193,
+            "translatedReturn": {
+              "from": 98,
+              "to": 124,
+              "cells": 7,
+              "haloCells": 73,
+              "radius": 3,
+              "transform": {
+                "dx": 7.5,
+                "dy": -26.846790313720703
+              },
+              "worstPolygonError": 0.00000762939453125
+            }
+          },
+          {
+            "emission": 3,
+            "maxActive": 9,
+            "maxRadius": 3.9499453976466325,
+            "minimumBoundaryDistance": 34,
+            "centroidDisplacement": 85.6259987362178,
+            "translatedReturn": {
+              "from": 91,
+              "to": 117,
+              "cells": 7,
+              "haloCells": 73,
+              "radius": 3,
+              "transform": {
+                "dx": -27,
+                "dy": 6.928203582763672
+              },
+              "worstPolygonError": 0.0000019073486328125
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "penrose-b2-c5-five-launcher",
+      "tiling": "penrose",
+      "depth": 11,
+      "neighborhood": "touch",
+      "penroseSeed": "sun",
+      "rule": "B2/S",
+      "generations": 5,
+      "cellStates": [
+        [
+          120863,
+          1
+        ],
+        [
+          120865,
+          1
+        ],
+        [
+          120867,
+          1
+        ]
+      ],
+      "horizon": 240,
+      "emissions": {
+        "splitGeneration": 120,
+        "parts": [
+          {
+            "initial": [
+              [
+                20606,
+                2
+              ],
+              [
+                20710,
+                3
+              ],
+              [
+                20711,
+                4
+              ],
+              [
+                20797,
+                4
+              ],
+              [
+                20856,
+                2
+              ],
+              [
+                20862,
+                3
+              ],
+              [
+                20863,
+                4
+              ],
+              [
+                20864,
+                4
+              ],
+              [
+                20866,
+                3
+              ],
+              [
+                20872,
+                2
+              ],
+              [
+                20874,
+                1
+              ],
+              [
+                20880,
+                2
+              ],
+              [
+                20884,
+                1
+              ]
+            ],
+            "translatedReturn": {
+              "from": 120,
+              "to": 183,
+              "transform": {
+                "dx": 17.066017150878906,
+                "dy": 52.52379608154297
+              },
+              "radius": 3
+            }
+          },
+          {
+            "initial": [
+              [
+                92071,
+                3
+              ],
+              [
+                92072,
+                3
+              ],
+              [
+                92076,
+                1
+              ],
+              [
+                92077,
+                3
+              ],
+              [
+                92078,
+                2
+              ],
+              [
+                92079,
+                2
+              ],
+              [
+                92095,
+                1
+              ],
+              [
+                92096,
+                2
+              ],
+              [
+                92098,
+                2
+              ],
+              [
+                92100,
+                1
+              ],
+              [
+                92124,
+                4
+              ],
+              [
+                92125,
+                4
+              ]
+            ],
+            "translatedReturn": {
+              "from": 120,
+              "to": 159,
+              "transform": {
+                "dx": -34.13203430175781,
+                "dy": 0
+              },
+              "radius": 3
+            }
+          },
+          {
+            "initial": [
+              [
+                92329,
+                3
+              ],
+              [
+                92336,
+                4
+              ],
+              [
+                92337,
+                4
+              ],
+              [
+                92351,
+                3
+              ],
+              [
+                92353,
+                2
+              ],
+              [
+                92354,
+                1
+              ],
+              [
+                92355,
+                1
+              ],
+              [
+                92360,
+                2
+              ],
+              [
+                92361,
+                3
+              ],
+              [
+                92363,
+                3
+              ],
+              [
+                92364,
+                4
+              ]
+            ],
+            "translatedReturn": {
+              "from": 120,
+              "to": 183,
+              "transform": {
+                "dx": -55.22678756713867,
+                "dy": 0
+              },
+              "radius": 3
+            }
+          },
+          {
+            "initial": [
+              [
+                135410,
+                1
+              ],
+              [
+                135412,
+                1
+              ],
+              [
+                135413,
+                1
+              ],
+              [
+                135416,
+                1
+              ],
+              [
+                136528,
+                4
+              ],
+              [
+                136529,
+                4
+              ],
+              [
+                136531,
+                2
+              ],
+              [
+                136532,
+                3
+              ],
+              [
+                136533,
+                3
+              ],
+              [
+                136534,
+                2
+              ],
+              [
+                136535,
+                3
+              ],
+              [
+                136538,
+                2
+              ],
+              [
+                136540,
+                3
+              ]
+            ],
+            "translatedReturn": {
+              "from": 120,
+              "to": 183,
+              "transform": {
+                "dx": -17.06601905822754,
+                "dy": 52.52379894256592
+              },
+              "radius": 3
+            }
+          },
+          {
+            "initial": [
+              [
+                141775,
+                1
+              ],
+              [
+                141786,
+                1
+              ],
+              [
+                142913,
+                4
+              ],
+              [
+                142914,
+                4
+              ],
+              [
+                142918,
+                2
+              ],
+              [
+                142919,
+                4
+              ],
+              [
+                142920,
+                3
+              ],
+              [
+                142921,
+                3
+              ],
+              [
+                142925,
+                1
+              ],
+              [
+                142928,
+                1
+              ],
+              [
+                142934,
+                2
+              ],
+              [
+                142935,
+                3
+              ],
+              [
+                142937,
+                3
+              ],
+              [
+                142939,
+                2
+              ]
+            ],
+            "translatedReturn": {
+              "from": 120,
+              "to": 159,
+              "transform": {
+                "dx": 27.61339569091797,
+                "dy": 20.06230926513672
+              },
+              "radius": 3
+            }
+          }
+        ]
+      },
+      "expected": {
+        "id": "penrose-b2-c5-five-launcher",
+        "verifiedThrough": 240,
+        "tileCount": 143010,
+        "trajectorySha256": "31f7f78be98f58c4603ba366214806c8d3e3b177ac3719101ce098aedd4fb8a5",
+        "finalCellStates": [
+          [
+            4914,
+            1
+          ],
+          [
+            4919,
+            2
+          ],
+          [
+            4925,
+            2
+          ],
+          [
+            4926,
+            1
+          ],
+          [
+            4930,
+            1
+          ],
+          [
+            5358,
+            1
+          ],
+          [
+            5360,
+            2
+          ],
+          [
+            5365,
+            3
+          ],
+          [
+            5366,
+            3
+          ],
+          [
+            5367,
+            4
+          ],
+          [
+            5368,
+            4
+          ],
+          [
+            5374,
+            3
+          ],
+          [
+            5375,
+            3
+          ],
+          [
+            5379,
+            4
+          ],
+          [
+            23812,
+            1
+          ],
+          [
+            23818,
+            1
+          ],
+          [
+            23828,
+            2
+          ],
+          [
+            23830,
+            2
+          ],
+          [
+            23831,
+            3
+          ],
+          [
+            23832,
+            3
+          ],
+          [
+            23835,
+            2
+          ],
+          [
+            23837,
+            3
+          ],
+          [
+            23838,
+            4
+          ],
+          [
+            23839,
+            4
+          ],
+          [
+            23841,
+            4
+          ],
+          [
+            23867,
+            4
+          ],
+          [
+            23882,
+            1
+          ],
+          [
+            23883,
+            2
+          ],
+          [
+            35043,
+            1
+          ],
+          [
+            35098,
+            4
+          ],
+          [
+            35101,
+            3
+          ],
+          [
+            35102,
+            3
+          ],
+          [
+            35108,
+            2
+          ],
+          [
+            35109,
+            2
+          ],
+          [
+            35112,
+            3
+          ],
+          [
+            35113,
+            4
+          ],
+          [
+            35114,
+            4
+          ],
+          [
+            35116,
+            4
+          ],
+          [
+            35118,
+            2
+          ],
+          [
+            35120,
+            2
+          ],
+          [
+            35122,
+            1
+          ],
+          [
+            35126,
+            1
+          ],
+          [
+            88493,
+            4
+          ],
+          [
+            88501,
+            1
+          ],
+          [
+            88502,
+            3
+          ],
+          [
+            88505,
+            1
+          ],
+          [
+            88506,
+            1
+          ],
+          [
+            88507,
+            1
+          ],
+          [
+            88508,
+            4
+          ],
+          [
+            88509,
+            4
+          ],
+          [
+            88511,
+            3
+          ],
+          [
+            88512,
+            2
+          ],
+          [
+            88513,
+            2
+          ],
+          [
+            95221,
+            4
+          ],
+          [
+            95222,
+            4
+          ],
+          [
+            95224,
+            2
+          ],
+          [
+            95225,
+            3
+          ],
+          [
+            95238,
+            1
+          ],
+          [
+            95265,
+            4
+          ],
+          [
+            95380,
+            1
+          ],
+          [
+            95382,
+            3
+          ],
+          [
+            95384,
+            3
+          ],
+          [
+            95385,
+            2
+          ],
+          [
+            95386,
+            2
+          ],
+          [
+            95387,
+            3
+          ],
+          [
+            95403,
+            1
+          ],
+          [
+            95404,
+            1
+          ]
+        ],
+        "minimumBoundaryDistance": 9,
+        "maxActive": 298,
+        "maxRadius": 194.81579132701873,
+        "centroidDisplacement": 96.34525546121215,
+        "absoluteRepeat": false,
+        "translatedReturns": [],
+        "emissions": [
+          {
+            "emission": 1,
+            "maxActive": 14,
+            "maxRadius": 2.3312213215078734,
+            "minimumBoundaryDistance": 13,
+            "centroidDisplacement": 104.60030510957306,
+            "translatedReturn": {
+              "from": 120,
+              "to": 183,
+              "cells": 13,
+              "haloCells": 136,
+              "radius": 3,
+              "transform": {
+                "dx": 17.066017150878906,
+                "dy": 52.52379608154297
+              },
+              "worstPolygonError": 0.0000095367431640625
+            }
+          },
+          {
+            "emission": 2,
+            "maxActive": 14,
+            "maxRadius": 2.3312187328276464,
+            "minimumBoundaryDistance": 9,
+            "centroidDisplacement": 104.70176278423106,
+            "translatedReturn": {
+              "from": 120,
+              "to": 159,
+              "cells": 12,
+              "haloCells": 137,
+              "radius": 3,
+              "transform": {
+                "dx": -34.13203430175781,
+                "dy": 0
+              },
+              "worstPolygonError": 0.000003814697265625
+            }
+          },
+          {
+            "emission": 3,
+            "maxActive": 14,
+            "maxRadius": 2.3312165141461123,
+            "minimumBoundaryDistance": 11,
+            "centroidDisplacement": 105.10606497736524,
+            "translatedReturn": {
+              "from": 120,
+              "to": 183,
+              "cells": 11,
+              "haloCells": 134,
+              "radius": 3,
+              "transform": {
+                "dx": -55.22678756713867,
+                "dy": 0
+              },
+              "worstPolygonError": 0.00000762939453125
+            }
+          },
+          {
+            "emission": 4,
+            "maxActive": 14,
+            "maxRadius": 2.331217411204953,
+            "minimumBoundaryDistance": 66,
+            "centroidDisplacement": 105.16938730069697,
+            "translatedReturn": {
+              "from": 120,
+              "to": 183,
+              "cells": 13,
+              "haloCells": 135,
+              "radius": 3,
+              "transform": {
+                "dx": -17.06601905822754,
+                "dy": 52.52379894256592
+              },
+              "worstPolygonError": 0.00000476837158203125
+            }
+          },
+          {
+            "emission": 5,
+            "maxActive": 14,
+            "maxRadius": 2.3312222675883745,
+            "minimumBoundaryDistance": 10,
+            "centroidDisplacement": 105.47378113165628,
+            "translatedReturn": {
+              "from": 120,
+              "to": 159,
+              "cells": 14,
+              "haloCells": 133,
+              "radius": 3,
+              "transform": {
+                "dx": 27.61339569091797,
+                "dy": 20.06230926513672
+              },
+              "worstPolygonError": 0.000008529922399520072
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "penrose-b2-c6-six-launcher",
+      "tiling": "penrose",
+      "depth": 11,
+      "neighborhood": "touch",
+      "penroseSeed": "sun",
+      "rule": "B2/S",
+      "generations": 6,
+      "cellStates": [
+        [
+          65271,
+          1
+        ],
+        [
+          65274,
+          1
+        ],
+        [
+          65275,
+          1
+        ]
+      ],
+      "horizon": 200,
+      "emissions": {
+        "splitGeneration": 120,
+        "parts": [
+          {
+            "initial": [
+              [
+                53186,
+                5
+              ],
+              [
+                53194,
+                4
+              ],
+              [
+                53197,
+                3
+              ],
+              [
+                53198,
+                3
+              ],
+              [
+                53203,
+                5
+              ],
+              [
+                53204,
+                2
+              ],
+              [
+                53205,
+                2
+              ],
+              [
+                53208,
+                3
+              ],
+              [
+                53209,
+                4
+              ],
+              [
+                53210,
+                4
+              ],
+              [
+                53211,
+                5
+              ],
+              [
+                53212,
+                4
+              ],
+              [
+                53214,
+                2
+              ],
+              [
+                53216,
+                2
+              ],
+              [
+                53218,
+                1
+              ],
+              [
+                53221,
+                1
+              ],
+              [
+                53304,
+                1
+              ]
+            ],
+            "translatedReturn": {
+              "from": 130,
+              "to": 193,
+              "transform": {
+                "dx": -55.22678756713867,
+                "dy": 0
+              },
+              "radius": 3
+            }
+          },
+          {
+            "initial": [
+              [
+                55048,
+                2
+              ],
+              [
+                55059,
+                2
+              ],
+              [
+                55064,
+                1
+              ],
+              [
+                56862,
+                5
+              ],
+              [
+                56863,
+                5
+              ],
+              [
+                56869,
+                3
+              ],
+              [
+                56870,
+                5
+              ],
+              [
+                56871,
+                4
+              ],
+              [
+                56872,
+                4
+              ],
+              [
+                56876,
+                2
+              ],
+              [
+                56877,
+                1
+              ],
+              [
+                56879,
+                2
+              ],
+              [
+                56885,
+                3
+              ],
+              [
+                56886,
+                4
+              ],
+              [
+                56888,
+                4
+              ],
+              [
+                56890,
+                3
+              ]
+            ],
+            "translatedReturn": {
+              "from": 120,
+              "to": 159,
+              "transform": {
+                "dx": -27.61339569091797,
+                "dy": 20.06231689453125
+              },
+              "radius": 3
+            }
+          },
+          {
+            "initial": [
+              [
+                64744,
+                3
+              ],
+              [
+                64745,
+                3
+              ],
+              [
+                64749,
+                1
+              ],
+              [
+                64750,
+                3
+              ],
+              [
+                64751,
+                2
+              ],
+              [
+                64752,
+                2
+              ],
+              [
+                64768,
+                1
+              ],
+              [
+                64769,
+                2
+              ],
+              [
+                64771,
+                2
+              ],
+              [
+                64773,
+                1
+              ],
+              [
+                64797,
+                4
+              ],
+              [
+                64798,
+                4
+              ],
+              [
+                64803,
+                5
+              ],
+              [
+                64818,
+                5
+              ]
+            ],
+            "translatedReturn": {
+              "from": 120,
+              "to": 159,
+              "transform": {
+                "dx": -10.547378540039062,
+                "dy": -32.46149218082428
+              },
+              "radius": 3
+            }
+          },
+          {
+            "initial": [
+              [
+                81783,
+                5
+              ],
+              [
+                81784,
+                5
+              ],
+              [
+                81786,
+                3
+              ],
+              [
+                81787,
+                4
+              ],
+              [
+                81788,
+                4
+              ],
+              [
+                81789,
+                4
+              ],
+              [
+                81792,
+                3
+              ],
+              [
+                81794,
+                4
+              ],
+              [
+                81796,
+                3
+              ],
+              [
+                81797,
+                2
+              ],
+              [
+                81798,
+                2
+              ],
+              [
+                81800,
+                1
+              ],
+              [
+                81809,
+                1
+              ],
+              [
+                81810,
+                1
+              ],
+              [
+                81811,
+                2
+              ],
+              [
+                81813,
+                2
+              ]
+            ],
+            "translatedReturn": {
+              "from": 120,
+              "to": 144,
+              "transform": {
+                "dx": -17.066017150878906,
+                "dy": -12.399187088012695
+              },
+              "radius": 3
+            }
+          },
+          {
+            "initial": [
+              [
+                85439,
+                4
+              ],
+              [
+                85442,
+                5
+              ],
+              [
+                85443,
+                5
+              ],
+              [
+                85449,
+                1
+              ],
+              [
+                85450,
+                3
+              ],
+              [
+                85453,
+                1
+              ],
+              [
+                85454,
+                1
+              ],
+              [
+                85456,
+                1
+              ],
+              [
+                85457,
+                4
+              ],
+              [
+                85458,
+                4
+              ],
+              [
+                85460,
+                3
+              ],
+              [
+                85461,
+                2
+              ],
+              [
+                85462,
+                2
+              ],
+              [
+                85597,
+                5
+              ],
+              [
+                85614,
+                4
+              ]
+            ],
+            "translatedReturn": {
+              "from": 120,
+              "to": 159,
+              "transform": {
+                "dx": -27.61339569091797,
+                "dy": -20.06230592727661
+              },
+              "radius": 3
+            }
+          },
+          {
+            "initial": [
+              [
+                121236,
+                4
+              ],
+              [
+                121243,
+                5
+              ],
+              [
+                121248,
+                5
+              ],
+              [
+                121389,
+                5
+              ],
+              [
+                121391,
+                4
+              ],
+              [
+                121398,
+                4
+              ],
+              [
+                121399,
+                3
+              ],
+              [
+                121400,
+                2
+              ],
+              [
+                121401,
+                2
+              ],
+              [
+                121404,
+                1
+              ],
+              [
+                121405,
+                1
+              ],
+              [
+                121407,
+                1
+              ],
+              [
+                121408,
+                4
+              ],
+              [
+                121412,
+                1
+              ],
+              [
+                121413,
+                3
+              ]
+            ],
+            "translatedReturn": {
+              "from": 130,
+              "to": 154,
+              "transform": {
+                "dx": 6.5186381340026855,
+                "dy": -20.06230926513672
+              },
+              "radius": 3
+            }
+          }
+        ]
+      },
+      "expected": {
+        "id": "penrose-b2-c6-six-launcher",
+        "verifiedThrough": 200,
+        "tileCount": 143010,
+        "trajectorySha256": "14d9dc8b8b7ae041f02454646809dc35dd7412ded25e3613cf104f5e504cc83c",
+        "finalCellStates": [
+          [
+            45624,
+            5
+          ],
+          [
+            45632,
+            2
+          ],
+          [
+            45633,
+            4
+          ],
+          [
+            45634,
+            1
+          ],
+          [
+            45635,
+            1
+          ],
+          [
+            45636,
+            2
+          ],
+          [
+            45637,
+            2
+          ],
+          [
+            45638,
+            2
+          ],
+          [
+            45639,
+            5
+          ],
+          [
+            45640,
+            5
+          ],
+          [
+            45642,
+            4
+          ],
+          [
+            45643,
+            3
+          ],
+          [
+            45644,
+            3
+          ],
+          [
+            45645,
+            1
+          ],
+          [
+            52404,
+            5
+          ],
+          [
+            57248,
+            2
+          ],
+          [
+            57259,
+            2
+          ],
+          [
+            57264,
+            1
+          ],
+          [
+            57602,
+            5
+          ],
+          [
+            57603,
+            5
+          ],
+          [
+            57607,
+            3
+          ],
+          [
+            57608,
+            5
+          ],
+          [
+            57609,
+            4
+          ],
+          [
+            57610,
+            4
+          ],
+          [
+            57614,
+            2
+          ],
+          [
+            57615,
+            1
+          ],
+          [
+            57617,
+            2
+          ],
+          [
+            57623,
+            3
+          ],
+          [
+            57624,
+            4
+          ],
+          [
+            57626,
+            4
+          ],
+          [
+            57628,
+            3
+          ],
+          [
+            80962,
+            4
+          ],
+          [
+            80963,
+            4
+          ],
+          [
+            80965,
+            2
+          ],
+          [
+            80966,
+            3
+          ],
+          [
+            80979,
+            1
+          ],
+          [
+            81024,
+            5
+          ],
+          [
+            81121,
+            1
+          ],
+          [
+            81123,
+            3
+          ],
+          [
+            81124,
+            5
+          ],
+          [
+            81125,
+            3
+          ],
+          [
+            81126,
+            2
+          ],
+          [
+            81127,
+            2
+          ],
+          [
+            81128,
+            3
+          ],
+          [
+            81144,
+            1
+          ],
+          [
+            81145,
+            1
+          ],
+          [
+            91382,
+            2
+          ],
+          [
+            91393,
+            2
+          ],
+          [
+            91398,
+            1
+          ],
+          [
+            94252,
+            5
+          ],
+          [
+            94253,
+            5
+          ],
+          [
+            94257,
+            3
+          ],
+          [
+            94258,
+            5
+          ],
+          [
+            94259,
+            4
+          ],
+          [
+            94260,
+            4
+          ],
+          [
+            94264,
+            2
+          ],
+          [
+            94265,
+            1
+          ],
+          [
+            94267,
+            2
+          ],
+          [
+            94273,
+            3
+          ],
+          [
+            94274,
+            4
+          ],
+          [
+            94276,
+            4
+          ],
+          [
+            94278,
+            3
+          ],
+          [
+            95685,
+            3
+          ],
+          [
+            95686,
+            3
+          ],
+          [
+            95690,
+            5
+          ],
+          [
+            95691,
+            4
+          ],
+          [
+            95692,
+            5
+          ],
+          [
+            95707,
+            5
+          ],
+          [
+            95709,
+            4
+          ],
+          [
+            95711,
+            5
+          ],
+          [
+            95750,
+            2
+          ],
+          [
+            95751,
+            2
+          ],
+          [
+            95758,
+            2
+          ],
+          [
+            95759,
+            1
+          ],
+          [
+            95760,
+            1
+          ],
+          [
+            95777,
+            1
+          ],
+          [
+            95779,
+            1
+          ],
+          [
+            127321,
+            4
+          ],
+          [
+            127322,
+            4
+          ],
+          [
+            127324,
+            2
+          ],
+          [
+            127325,
+            3
+          ],
+          [
+            127326,
+            3
+          ],
+          [
+            127327,
+            3
+          ],
+          [
+            127330,
+            2
+          ],
+          [
+            127332,
+            3
+          ],
+          [
+            127333,
+            5
+          ],
+          [
+            127334,
+            2
+          ],
+          [
+            127335,
+            1
+          ],
+          [
+            127336,
+            1
+          ],
+          [
+            127349,
+            1
+          ],
+          [
+            127351,
+            1
+          ],
+          [
+            127759,
+            5
+          ]
+        ],
+        "minimumBoundaryDistance": 9,
+        "maxActive": 360,
+        "maxRadius": 155.6764578219924,
+        "centroidDisplacement": 74.29238903401837,
+        "absoluteRepeat": false,
+        "translatedReturns": [],
+        "emissions": [
+          {
+            "emission": 1,
+            "maxActive": 18,
+            "maxRadius": 2.7005640945707383,
+            "minimumBoundaryDistance": 28,
+            "centroidDisplacement": 70.16236610812416,
+            "translatedReturn": {
+              "from": 130,
+              "to": 193,
+              "cells": 18,
+              "haloCells": 154,
+              "radius": 3,
+              "transform": {
+                "dx": -55.22678756713867,
+                "dy": 0
+              },
+              "worstPolygonError": 0.00000762939453125
+            }
+          },
+          {
+            "emission": 2,
+            "maxActive": 18,
+            "maxRadius": 2.7005649606854303,
+            "minimumBoundaryDistance": 9,
+            "centroidDisplacement": 69.84081499833815,
+            "translatedReturn": {
+              "from": 120,
+              "to": 159,
+              "cells": 16,
+              "haloCells": 149,
+              "radius": 3,
+              "transform": {
+                "dx": -27.61339569091797,
+                "dy": 20.06231689453125
+              },
+              "worstPolygonError": 0.000015728399755926745
+            }
+          },
+          {
+            "emission": 3,
+            "maxActive": 18,
+            "maxRadius": 2.700563359832446,
+            "minimumBoundaryDistance": 74,
+            "centroidDisplacement": 69.63116031934338,
+            "translatedReturn": {
+              "from": 120,
+              "to": 159,
+              "cells": 14,
+              "haloCells": 137,
+              "radius": 3,
+              "transform": {
+                "dx": -10.547378540039062,
+                "dy": -32.46149218082428
+              },
+              "worstPolygonError": 0.000004436443821413134
+            }
+          },
+          {
+            "emission": 4,
+            "maxActive": 18,
+            "maxRadius": 2.70056563392555,
+            "minimumBoundaryDistance": 20,
+            "centroidDisplacement": 69.64708021296322,
+            "translatedReturn": {
+              "from": 120,
+              "to": 144,
+              "cells": 16,
+              "haloCells": 155,
+              "radius": 3,
+              "transform": {
+                "dx": -17.066017150878906,
+                "dy": -12.399187088012695
+              },
+              "worstPolygonError": 0.000007864199877963372
+            }
+          },
+          {
+            "emission": 5,
+            "maxActive": 18,
+            "maxRadius": 2.7005659679585956,
+            "minimumBoundaryDistance": 11,
+            "centroidDisplacement": 70.14414666183369,
+            "translatedReturn": {
+              "from": 120,
+              "to": 159,
+              "cells": 15,
+              "haloCells": 150,
+              "radius": 3,
+              "transform": {
+                "dx": -27.61339569091797,
+                "dy": -20.06230592727661
+              },
+              "worstPolygonError": 0.000007688768146799611
+            }
+          },
+          {
+            "emission": 6,
+            "maxActive": 18,
+            "maxRadius": 2.7005666240983097,
+            "minimumBoundaryDistance": 60,
+            "centroidDisplacement": 70.14414855349189,
+            "translatedReturn": {
+              "from": 130,
+              "to": 154,
+              "cells": 15,
+              "haloCells": 153,
+              "radius": 3,
+              "transform": {
+                "dx": 6.5186381340026855,
+                "dy": -20.06230926513672
+              },
+              "worstPolygonError": 0.000004074098465594068
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "longCases": [
+    {
+      "id": "hat-edmond-b-long-flight",
+      "tiling": "hat",
+      "depth": 6,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-B",
+      "referenceTable": "hatB",
+      "generations": 4,
+      "cellStates": [
+        [
+          208107,
+          3
+        ],
+        [
+          208109,
+          1
+        ]
+      ],
+      "horizon": 1129,
+      "translatedReturns": [
+        {
+          "from": 25,
+          "to": 67,
+          "transform": {
+            "dx": 43.5,
+            "dy": -11.258331298828125
+          },
+          "radius": 3
+        }
+      ],
+      "expected": {
+        "id": "hat-edmond-b-long-flight",
+        "verifiedThrough": 1129,
+        "tileCount": 372100,
+        "trajectorySha256": "f923e39c16884068aa74738a2024f3123de94e9f296b41abfd2197f7a666be8f",
+        "finalCellStates": [
+          [
+            334603,
+            1
+          ],
+          [
+            334605,
+            1
+          ],
+          [
+            334610,
+            1
+          ],
+          [
+            334684,
+            1
+          ],
+          [
+            334699,
+            3
+          ],
+          [
+            334701,
+            3
+          ]
+        ],
+        "minimumBoundaryDistance": 4,
+        "maxActive": 13,
+        "maxRadius": 4.501558517627182,
+        "centroidDisplacement": 1191.172784041133,
+        "absoluteRepeat": false,
+        "translatedReturns": [
+          {
+            "from": 25,
+            "to": 67,
+            "cells": 6,
+            "haloCells": 73,
+            "radius": 3,
+            "transform": {
+              "dx": 43.5,
+              "dy": -11.258331298828125
+            },
+            "worstPolygonError": 0.00000762939453125
+          }
+        ],
+        "emissions": []
+      }
+    },
+    {
+      "id": "hat-simple-long-flight",
+      "tiling": "hat",
+      "depth": 6,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-SIMPLE",
+      "referenceTable": "hatSimple",
+      "generations": 3,
+      "cellStates": [
+        [
+          208107,
+          2
+        ],
+        [
+          208109,
+          1
+        ]
+      ],
+      "horizon": 1129,
+      "translatedReturns": [
+        {
+          "from": 25,
+          "to": 67,
+          "transform": {
+            "dx": 43.5,
+            "dy": -11.258331298828125
+          },
+          "radius": 3
+        }
+      ],
+      "expected": {
+        "id": "hat-simple-long-flight",
+        "verifiedThrough": 1129,
+        "tileCount": 372100,
+        "trajectorySha256": "1f06e06523c1c09023aa3de79a6b6252a378158af90de24b4ee3a1639ac84726",
+        "finalCellStates": [
+          [
+            334603,
+            1
+          ],
+          [
+            334605,
+            1
+          ],
+          [
+            334610,
+            1
+          ],
+          [
+            334684,
+            1
+          ],
+          [
+            334699,
+            2
+          ],
+          [
+            334701,
+            2
+          ]
+        ],
+        "minimumBoundaryDistance": 4,
+        "maxActive": 13,
+        "maxRadius": 4.501558517627182,
+        "centroidDisplacement": 1191.172784041133,
+        "absoluteRepeat": false,
+        "translatedReturns": [
+          {
+            "from": 25,
+            "to": 67,
+            "cells": 6,
+            "haloCells": 73,
+            "radius": 3,
+            "transform": {
+              "dx": 43.5,
+              "dy": -11.258331298828125
+            },
+            "worstPolygonError": 0.00000762939453125
+          }
+        ],
+        "emissions": []
+      }
+    }
+  ],
+  "longTransplant": {
+    "sourceDepth": 5,
+    "targetDepth": 6,
+    "radius": 3,
+    "polygonPlacements": 6101,
+    "haloPlacements": 98,
+    "screenedPlacements": 98,
+    "sourceCertificate": {
+      "cells": 2,
+      "haloCells": 49,
+      "radius": 3,
+      "transform": {
+        "dx": -399,
+        "dy": 124.70766258239746
+      },
+      "worstPolygonError": 0.0000133514404296875
+    }
+  }
+}

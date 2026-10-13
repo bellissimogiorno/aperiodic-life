@@ -2,7 +2,7 @@
 
 ## Finite boards
 
-All boards are finite and have a dead exterior. Dead-border rings lock cells near the boundary; they do not emulate an infinite plane indefinitely. None of the four tilings uses toroidal wrap.
+All boards are finite. Outside cells are absent: this is equivalent to a dead exterior for B/S rules, but an absent neighbour does not contribute to a priority table's count of state-0 neighbours. Dead-border rings lock existing cells near the boundary; they do not emulate an infinite plane indefinitely. None of the four tilings uses toroidal wrap.
 
 `B3/S23` is ordinary Conway Life only on the square Moore graph. On square shared-edge, hexagonal, hat, and Penrose graphs it is a graph-totalistic generalisation with different degree and local geometry. A pattern that works on one graph need not work on another.
 
@@ -22,7 +22,15 @@ The four-, five-, and six-state `B2/S` catalogue phases are verified for 220 gen
 
 These are finite observations. A local translated return on a Penrose tiling does not establish indefinite motion, because the substrate has no global translation symmetry. A changing environment may stop or alter the pattern beyond the measured interval. Launch-dependent rule clauses also do not establish a different perpetual propagation mechanism.
 
-The project makes no claim of an indefinitely propagating Penrose or Einstein-hat glider, glider gun, stable collision system, logical gate, or universality construction.
+The two depth-11 Penrose launchers are checked for 240 generations (five-state, five travellers) and 200 generations (six-state, six travellers). Their separated objects are a finite launch result, not periodic emission from a gun.
+
+## Einstein-hat priority rules
+
+The Hat A, Hat B, Hat C and derived three-state single travellers have complete-state catalogue replays through 307, 307, 311 and 307 generations respectively. The Hat C triple launcher is checked through generation 160. These examples extend the rule model: neighbours can see signal states above 1. They do not demonstrate a glider under the original B/S Generations semantics.
+
+James Edmond's [2026 preprint](https://arxiv.org/abs/2609.22579) predates these reproductions and reports much longer finite flights on hat and Spectre tilings. It explicitly leaves an indefinite-propagation proof open. The project makes no first-Einstein-glider claim. SIMPLE is a derived rule which matches tested flights, not an equivalent rewriting on all possible configurations.
+
+A local translated phase or a finite collection of observed surrounding patches cannot certify indefinite motion on an aperiodic tiling. Such a proof must cover every future legal neighbourhood and establish continuing escape as well as bounded survival. The project supplies no such proof for its aperiodic catalogue, nor a glider gun, stable collision system, logical gate or universality construction on an aperiodic substrate.
 
 ## Regular-lattice spaceships
 
@@ -36,11 +44,13 @@ Browser cycle detection compares complete state bytes within a finite history wi
 
 Active fields and long transients are checked only through their stated horizons. They may later cycle, freeze, die, or reach the boundary. Search failure applies only to the recorded rules, seeds, horizons, and bounds; it is not a nonexistence proof.
 
-Coarse search fingerprints do not count distinct mathematical structures. Evolutionary candidates are correlated, and candidate totals are not statistical confidence levels. The 69 curated catalogue entries have individual verification contracts; raw search output does not automatically qualify for the catalogue.
+Coarse search fingerprints do not count distinct mathematical structures. Evolutionary candidates are correlated, and candidate totals are not statistical confidence levels. The 81 curated catalogue entries have individual verification contracts; raw search output does not automatically qualify for the catalogue.
 
 ## Expressiveness
 
-Rules inspect the cell's current state and the total number of state-1 neighbours. They do not inspect tile orientation, Penrose thin/thick type, hat chirality, hierarchy, edge direction, vertex configuration, or Penrose ribbon information. Adding these distinctions changes the automaton model.
+B/S rules inspect the cell's current state and the total number of state-1 neighbours. Named priority tables instead count neighbours in each state separately. Neither family inspects tile orientation, Penrose thin/thick type, hat chirality, hierarchy, edge direction, or ribbon labels. Adding those distinctions would change the model further.
+
+Goucher's published Penrose glider uses uniform neighbour-state counts; it does not read ribbon information. Ribbons explain its propagation geometrically. The programmatic `TABLE:PENROSE-GOUCHER` rule reproduces its corrected mathematical table. `TABLE:SPECTRE` is another programmatic rule name: the package has no Spectre geometry backend, and its Einstein option continues to mean the hat tiling.
 
 ## Reproducibility and browser limits
 

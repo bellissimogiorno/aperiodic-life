@@ -59,3 +59,7 @@ The [reproduction guide](../research/hex-search/README.md) provides the search p
 - The computational survey recovered one of the `B2/S34` period-48 oscillators shown in **drc**'s published two-pattern example in the [hexagonal-rule discussion](https://conwaylife.com/forums/viewtopic.php?p=28428). Its inclusion does not imply a new discovery.
 
 See [third-party attribution](../THIRD_PARTY_LICENSES.md) for the existing Golly/Carter Bays spaceship and the published pattern sources.
+
+## Small-seed launchers and knightships
+
+Five further examples come from the exhaustive connected-seed scan: a three-cell `B2/S0` three-state glider (period 2), a four-cell diagonal launcher (period 8), a five-cell launcher (period 43), and six-cell knightship launchers (periods 9 and 10). A knightship moves between standard hexagonal axes and diagonals. All five have complete-state translated recurrence in an independent unbounded simulator. The period-10 launcher uses `S5` during ignition but not in its recurring orbit. See [the intensive search report](GLIDER_SEARCH.md) for exact rules, transients, displacements and scope, and run `node test-hex-exhaustive-evidence.js` to reproduce their certificates. The catalogue contains 33 hexagonal configurations.

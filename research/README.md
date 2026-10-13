@@ -1,6 +1,8 @@
 # Reproducible automaton search
 
-The research tools verify the 69 examples in the application catalogue and search for additional structures on square, hexagonal, Penrose and Einstein-hat tilings. Catalogue verification runs with Node.js and requires no package-manager dependencies. The optional bulk hexagonal miners use C++17, with Python replay and analysis helpers.
+The research tools verify the 81 examples in the application catalogue and search for additional structures on square, hexagonal, Penrose and Einstein-hat tilings. Catalogue verification runs with Node.js and requires no package-manager dependencies. The optional bulk hexagonal miners use C++17, with Python replay and analysis helpers.
+
+See the [intensive search report](../docs/GLIDER_SEARCH.md) and [campaign sources](exhaustive-search/README.md) for the Hat, Penrose and small-seed hexagonal campaigns. `node test-priority-rules.js` checks the independent table semantics and aperiodic replays; `node test-hex-exhaustive-evidence.js` checks the five small hexagonal launchers.
 
 See the [hexagonal search guide](hex-search/README.md) for the 6,630,400-trial campaign, and the [hexagonal configuration guide](../docs/HEXAGONAL_STRUCTURES.md) for its curated results and published examples. `node test-hexagonal-evidence.js` (from the repository root) independently checks full-state recurrences, rotations, boundary clearance, emission certificates, wall repair and replication. The [hexagonal atlas](figures/hexagonal-atlas.svg) renders exact phases from the application geometry.
 
@@ -38,13 +40,13 @@ node research/search-mobile-patterns.js --help
 node research/verify-penrose-traveller.js --depth 10 --horizon 300
 ```
 
-`lib/sparse-automaton.js` supplies the sparse engine used by the search tools. It supports rules without `B0`; zero-neighbour births require dense whole-board updates.
+`lib/sparse-automaton.js` supplies the sparse engine used by the search tools. It supports rules without `B0` and the named quiescent priority tables; non-quiescent backgrounds require dense whole-board updates.
 
 ## Interpreting a result
 
 A recurrence requires equality of the complete state, including refractory cells. Hashes and shape signatures identify candidates for exact comparison; they do not establish recurrence on their own. The oscillator miner's fingerprints suppress duplicates heuristically and are not counts of graph-isomorphism classes.
 
-A translated return on a finite Penrose patch is a checked observation over a stated interval. The surrounding tiling need not repeat, so such a return does not establish indefinite travel. The catalogue includes finite Penrose travellers, stationary Penrose and hat oscillators, and a hat directional transient that becomes fully extinct at generation 83. It does not claim a sustained Einstein-hat glider.
+A translated return on a finite Penrose patch is a checked observation over a stated interval. The surrounding tiling need not repeat, so such a return does not establish indefinite travel. The catalogue includes finite Penrose travellers, stationary Penrose and hat oscillators, and a hat directional transient that becomes fully extinct at generation 83. It also independently reproduces published Einstein-hat glider behaviour under named priority tables. The evidence establishes the recorded finite flights and does not prove immortality.
 
 On the regular square and hexagonal lattices, an exact translated complete state can establish a repeating spaceship when the local evolution is independent of the finite boundary. Independent traveller checks include this boundary condition. Every bounded negative search remains a result about its sampled configurations and horizon, not a proof of nonexistence.
 

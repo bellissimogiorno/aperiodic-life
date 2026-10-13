@@ -1,0 +1,237 @@
+{
+  "schema": 1,
+  "description": "New Penrose campaigns in this release; earlier search trials are excluded.",
+  "generator": "xorshift64* with the explicit seeds below; mixed connected soups and, in general campaigns,60% elite mutations",
+  "completedCandidateExecutions": 6121536,
+  "simulatedTransitions": 122563637,
+  "distinctEffectiveGeneralConfigurations": 18011,
+  "campaigns": [
+    {
+      "id": "touch-broad",
+      "randomSeed": 36511001,
+      "tiling": "penrose",
+      "penroseSeed": "sun",
+      "depth": 9,
+      "neighborhood": "touch",
+      "tileCount": 20800,
+      "configurationRows": 900,
+      "distinctEffectiveConfigurations": 855,
+      "trialsPerRow": 1200,
+      "completedCandidateExecutions": 1080000,
+      "simulatedTransitions": 15964693,
+      "horizon": 384,
+      "maximumNonzeroCells": 350,
+      "maximumRadius": 40,
+      "initialBoundaryDistance": 22,
+      "terminationBoundaryDistanceBelow": 3,
+      "generations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "outcomes": {
+        "boundary": 11947,
+        "cycle": 249071,
+        "extinct": 282586,
+        "horizon": 260,
+        "spread": 536136
+      },
+      "graphSHA256": "d3e6fdeedf6597239fe659e242d88fe2d472b4b9dd0d3889f43fb3e89c09d5d8",
+      "command": "./penrose-search OUTPUT/penrose-9-touch.graph OUTPUT/touch-broad.jsonl 36511001 900 1200 384 broad",
+      "accounting": "accounting/touch-broad.csv"
+    },
+    {
+      "id": "edge-binary-grid",
+      "randomSeed": 36511002,
+      "tiling": "penrose",
+      "penroseSeed": "sun",
+      "depth": 9,
+      "neighborhood": "edge",
+      "tileCount": 20800,
+      "configurationRows": 16256,
+      "distinctEffectiveConfigurations": 512,
+      "trialsPerRow": 128,
+      "completedCandidateExecutions": 2080768,
+      "simulatedTransitions": 48232523,
+      "horizon": 384,
+      "maximumNonzeroCells": 350,
+      "maximumRadius": 40,
+      "initialBoundaryDistance": 22,
+      "terminationBoundaryDistanceBelow": 3,
+      "generations": [
+        2
+      ],
+      "outcomes": {
+        "boundary": 18240,
+        "cycle": 744330,
+        "extinct": 245576,
+        "horizon": 42351,
+        "spread": 1030271
+      },
+      "graphSHA256": "4cf6ec074d3b54b6fb46592abab0a24863a166675da62f6c820b126107b9db02",
+      "command": "./penrose-search OUTPUT/penrose-9-edge.graph OUTPUT/edge-binary-grid.jsonl 36511002 16256 128 384 grid-binary",
+      "accounting": "accounting/edge-binary-grid.csv"
+    },
+    {
+      "id": "touch-binary-grid",
+      "randomSeed": 36511004,
+      "tiling": "penrose",
+      "penroseSeed": "sun",
+      "depth": 9,
+      "neighborhood": "touch",
+      "tileCount": 20800,
+      "configurationRows": 16256,
+      "distinctEffectiveConfigurations": 16256,
+      "trialsPerRow": 128,
+      "completedCandidateExecutions": 2080768,
+      "simulatedTransitions": 28181515,
+      "horizon": 384,
+      "maximumNonzeroCells": 350,
+      "maximumRadius": 40,
+      "initialBoundaryDistance": 22,
+      "terminationBoundaryDistanceBelow": 3,
+      "generations": [
+        2
+      ],
+      "outcomes": {
+        "boundary": 12,
+        "cycle": 243965,
+        "extinct": 102922,
+        "horizon": 3748,
+        "spread": 1730121
+      },
+      "graphSHA256": "d3e6fdeedf6597239fe659e242d88fe2d472b4b9dd0d3889f43fb3e89c09d5d8",
+      "command": "./penrose-search OUTPUT/penrose-9-touch.graph OUTPUT/touch-binary-grid.jsonl 36511004 16256 128 384 grid-binary",
+      "accounting": "accounting/touch-binary-grid.csv"
+    },
+    {
+      "id": "touch-high",
+      "randomSeed": 36511005,
+      "tiling": "penrose",
+      "penroseSeed": "sun",
+      "depth": 9,
+      "neighborhood": "touch",
+      "tileCount": 20800,
+      "configurationRows": 600,
+      "distinctEffectiveConfigurations": 591,
+      "trialsPerRow": 1200,
+      "completedCandidateExecutions": 720000,
+      "simulatedTransitions": 17568554,
+      "horizon": 512,
+      "maximumNonzeroCells": 350,
+      "maximumRadius": 40,
+      "initialBoundaryDistance": 22,
+      "terminationBoundaryDistanceBelow": 3,
+      "generations": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "outcomes": {
+        "boundary": 13410,
+        "cycle": 210266,
+        "extinct": 246253,
+        "horizon": 642,
+        "spread": 249429
+      },
+      "graphSHA256": "d3e6fdeedf6597239fe659e242d88fe2d472b4b9dd0d3889f43fb3e89c09d5d8",
+      "command": "./penrose-search OUTPUT/penrose-9-touch.graph OUTPUT/touch-high.jsonl 36511005 600 1200 512 high",
+      "accounting": "accounting/touch-high.csv"
+    },
+    {
+      "id": "multi-launchers",
+      "randomSeed": 36511003,
+      "tiling": "penrose",
+      "penroseSeed": "sun",
+      "depth": 10,
+      "neighborhood": "touch",
+      "tileCount": 54560,
+      "completedCandidateExecutions": 160000,
+      "simulatedTransitions": 12616352,
+      "horizon": 110,
+      "maximumNonzeroCells": 1500,
+      "maximumRadius": 140,
+      "initialBoundaryDistance": 60,
+      "initialCentreRadius": 32,
+      "terminationBoundaryDistanceBelow": 3,
+      "generations": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "rules": "B2 optionally plus one birth count 4\u20137; optional one survival count 4\u20136",
+      "outcomes": {
+        "boundary": 11080,
+        "extinct": 52107,
+        "horizon": 94309,
+        "spread": 2504
+      },
+      "qualifyingScreenCandidates": 18934,
+      "qualifyingScreenDefinition": "At generation110,2\u20136 components, each5\u201350 nonzero cells and radius<=7, each centre at least60 units from initial centre, minimum boundary distance>=5. These are screening positives, not certified gliders.",
+      "command": "./penrose-launchers OUTPUT/penrose-10-touch.graph OUTPUT/multi-launchers.jsonl 160000 36511003",
+      "graphSHA256": "f2babdd1706df93d2f53a4a5d28ce86c651ee87181bf01465171d028eebe7d0b"
+    }
+  ],
+  "separateTransplantScreens": {
+    "executions": 125,
+    "targetDepth": 11,
+    "minimumInitialBoundaryDistance": 60,
+    "maximumHorizon": 500,
+    "sourceHaloRadius": 3,
+    "families": [
+      {
+        "source": "three-traveller C4",
+        "exactPlacements": 64,
+        "eligible": 21
+      },
+      {
+        "source": "four-traveller C5",
+        "exactPlacements": 168,
+        "eligible": 51
+      },
+      {
+        "source": "five-traveller C6",
+        "exactPlacements": 168,
+        "eligible": 53
+      }
+    ]
+  },
+  "limits": [
+    "These are bounded candidate executions, not an enumeration of all seeds. Mutation streams can revisit identical seeds.",
+    "The edge binary grid has512 effective rule combinations, since counts above degree4 are dormant; its16256 syntactic rows are not distinct effective rules.",
+    "The touch binary grid covers birth subsets1\u20137 and survival subsets0\u20136, not all possible counts through11.",
+    "The C++ screen retains top displacement and selected oscillator elites. Its64-bit recurrence hash is a search guard only; selected launchers are verified using full labelled states.",
+    "Finite Penrose translated returns do not establish indefinite motion or translation invariance of the substrate.",
+    "Parallel emitted travellers count as separate bodies, not necessarily separate directions."
+  ]
+}

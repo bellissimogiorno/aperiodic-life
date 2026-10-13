@@ -89,7 +89,7 @@ for (const id of requiredIds) {
 }
 
 const catalogue = require('./discoveries.js');
-assert.equal(catalogue.length, 69, 'unexpected curated discovery count');
+assert.equal(catalogue.length, 81, 'unexpected curated discovery count');
 for (const [id, title] of [
   ['hex-b245s3-p10-traveller', 'Hexagonal B245/S3 p10 traveller'],
   ['hex-b235s146-c4-launcher-traveller', 'Hexagonal B235/S146 four-state launcher'],

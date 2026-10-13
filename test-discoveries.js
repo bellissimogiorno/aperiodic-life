@@ -9,6 +9,18 @@ const VIEW_EPSILON = 1e-5;
 const VIEW_MODES = new Set(['initial', 'trajectory', 'contain']);
 const MAX_UI_SPEED = 240;
 const EXPECTED_SPEEDS = Object.freeze({
+  'hex-b2s0-c3-three-cell-glider': 3,
+  'hex-b234s1346-c3-four-cell-launcher': 4,
+  'hex-b2456s1345-c4-five-cell-launcher': 6,
+  'hex-b23s13-c4-p9-knightship-launcher': 4,
+  'hex-b234s245-c5-p10-knightship-launcher': 4,
+  'hat-edmond-b-glider': 6,
+  'hat-edmond-a-glider': 6,
+  'hat-edmond-c-glider': 6,
+  'hat-simple-glider': 6,
+  'hat-edmond-c-triple-launcher': 6,
+  'penrose-b2-c5-five-launcher': 6,
+  'penrose-b2-c6-six-launcher': 6,
   'hex-conway-p4': 4,
   'hex-conway-p5': 5,
   'hex-conway-p8': 5,
@@ -411,7 +423,7 @@ function exactFirstCycle(simulation, limit, observe = null) {
   return null;
 }
 
-assert.equal(discoveries.length, 69);
+assert.equal(discoveries.length, 81);
 assert.equal(new Set(discoveries.map((entry) => entry.id)).size, discoveries.length, 'discovery IDs must be unique');
 assert.equal(Object.keys(EXPECTED_SPEEDS).length, discoveries.length, 'expected speed table must cover the catalogue exactly');
 
@@ -631,7 +643,9 @@ for (const entry of discoveries) {
       simulation.step();
       if (observeInitialView) observeInitialView(step);
       totalChanged += simulation.lastChangedCount;
-      assert(simulation.aliveCount() > 0, `${entry.id}: extinct at generation ${step}`);
+      const active = simulation.rule.kind === 'priority'
+        ? simulation.state.some((state) => state !== 0) : simulation.aliveCount() > 0;
+      assert(active, `${entry.id}: extinct at generation ${step}`);
     }
     assert(simulation.lastChangedCount > 0, `${entry.id}: static at the tested horizon`);
     assert(totalChanged > entry.expectedActivityThrough, `${entry.id}: implausibly little cumulative activity`);

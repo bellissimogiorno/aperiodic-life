@@ -1,0 +1,18 @@
+{
+  "seed": 3651039,
+  "trials": 2000,
+  "horizon": 500,
+  "comparisons": {
+    "compressed": {
+      "states": 331521,
+      "matches": 2000,
+      "differences": 0
+    },
+    "simplified": {
+      "states": 331521,
+      "matches": 2000,
+      "differences": 0
+    }
+  },
+  "firstDifferences": []
+}

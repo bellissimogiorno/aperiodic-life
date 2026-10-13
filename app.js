@@ -51,6 +51,10 @@
     brain: { rule: 'B2/S', generations: 3 },
     starwars: { rule: 'B2/S345', generations: 4 },
     lwd: { birth: [3], surviveAll: true, generations: 2 },
+    hata: { rule: 'TABLE:HAT-A', generations: 4 },
+    hatb: { rule: 'TABLE:HAT-B', generations: 4 },
+    hatc: { rule: 'TABLE:HAT-C', generations: 4 },
+    hatsimple: { rule: 'TABLE:HAT-SIMPLE', generations: 3 },
   };
 
   function resolvePresetRule(preset, maxDegree) {
@@ -106,7 +110,10 @@
       }
     }
     if (typeof data.rule !== 'string' || data.rule.length > 4096) throw new Error('Invalid rule.');
-    Core.parseRule(data.rule);
+    const parsedRule = Core.parseRule(data.rule);
+    if (parsedRule.kind === 'priority' && data.generations !== parsedRule.states) {
+      throw new Error('The state count does not match the selected priority-table rule.');
+    }
     if (typeof data.graphFingerprint !== 'string' || !/^[a-f0-9]{8}-[a-f0-9]{8}$/.test(data.graphFingerprint)) {
       throw new Error('The state file has no valid graph fingerprint.');
     }
@@ -686,7 +693,7 @@
         'runButton', 'viewportRunButton', 'stepButton', 'randomizeButton', 'clearButton', 'tilingSelect',
         'depthSelect', 'penroseSeedField', 'penroseSeedSelect',
         'neighborhoodSelect', 'neighborhoodHelp', 'neighborhoodInfoButton', 'borderInput', 'presetSelect',
-        'ruleInput', 'ruleHelp', 'ruleInfoButton', 'rulesDialog', 'randomRuleButton', 'generationsInput',
+        'ruleInput', 'ruleHelp', 'ruleMeaningHelp', 'statesHelp', 'ruleInfoButton', 'rulesDialog', 'randomRuleButton', 'generationsInput',
         'discoverySelect', 'discoverySearch', 'discoveryCount', 'catalogueCount',
         'loadDiscoveryButton', 'loadRunDiscoveryButton', 'discoveryDescription',
         'saveSnapshotButton', 'loadSnapshotButton', 'snapshotFileInput', 'snapshotStatus',
@@ -1001,8 +1008,9 @@
       this.elements.ruleInput.value = resolvePresetRule(preset, maxDegree);
       this.elements.generationsInput.value = preset.generations;
       if (this.simulation) {
-        this.simulation.setGenerations(preset.generations);
         this.applyRule(false, false);
+        this.simulation.setGenerations(preset.generations);
+        this.elements.generationsInput.value = this.simulation.generations;
         this.renderer.updateState(this.simulation.state);
         this.resetCycleDetector();
         this.updateStats(true);
@@ -1014,11 +1022,23 @@
       if (!this.simulation) return false;
       const input = this.elements.ruleInput;
       try {
+        const previousStateCount = this.simulation.generations;
         const rule = this.simulation.setRule(input.value);
         input.classList.remove('invalid');
         input.setAttribute('aria-invalid', 'false');
         input.value = rule.text;
-        if (rule.ignored.length) {
+        const priority = rule.kind === 'priority';
+        this.elements.generationsInput.disabled = priority;
+        this.elements.generationsInput.value = this.simulation.generations;
+        this.elements.ruleMeaningHelp.textContent = priority
+          ? 'Ordered rules count neighbours in every state, including 0. The first matching rule wins; otherwise the cell becomes 0.'
+          : 'B lists birth counts; S lists survival counts. Only state-1 neighbours count.';
+        this.elements.statesHelp.textContent = priority
+          ? `${rule.states} states fixed by this table. Higher states are signals that influence neighbouring cells.`
+          : 'Includes state 0 (dead) and state 1 (live); any higher states are refractory.';
+        if (priority) {
+          this.elements.ruleHelp.textContent = `${rule.name || rule.text}. Use Edge or corner on the Hat tiling for the curated gliders. See ? for the rule model and evidence limits.`;
+        } else if (rule.ignored.length) {
           this.elements.ruleHelp.textContent = `Counts ${rule.ignored.join(', ')} exceed this graph’s maximum degree ${this.simulation.graph.maxDegree} and are ignored.`;
         } else {
           this.elements.ruleHelp.textContent = `Valid for degrees 0–${this.simulation.graph.maxDegree}. Use compact digits, comma-separated counts, or brackets for multi-digit counts.`;
@@ -1026,6 +1046,10 @@
         if (markCustom) {
           this.elements.presetSelect.value = 'custom';
           this.clearActiveDiscovery();
+        }
+        if (previousStateCount !== this.simulation.generations) {
+          this.renderer.updateState(this.simulation.state);
+          this.dirty = true;
         }
         if (resetCycle) {
           this.resetCycleDetector();
@@ -1042,6 +1066,10 @@
 
     changeGenerations() {
       if (!this.simulation) return;
+      if (this.simulation.rule.kind === 'priority') {
+        this.elements.generationsInput.value = this.simulation.generations;
+        return;
+      }
       this.clearActiveDiscovery();
       const numeric = Number(this.elements.generationsInput.value);
       const value = Math.max(2, Math.min(32, Number.isFinite(numeric) ? Math.trunc(numeric) : 2));

@@ -1,0 +1,216 @@
+{
+  "schema": 1,
+  "trialDefinition": "One initial configuration, one B/S rule, one number of states. Replayed emitter classification is not counted a second time. Trials can share trajectories or differ only in inactive rule clauses.",
+  "exhaustiveScope": {
+    "connectedSeedSizes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "freePolyhexCounts": [
+      1,
+      1,
+      3,
+      7,
+      22,
+      82
+    ],
+    "initialStates": "Every seed site is state 1; all other sites are state 0.",
+    "birthMasks": "All subsets of {1,2,3,4,5,6}; B0 is excluded.",
+    "survivalMasks": "All subsets of {0,1,2,3,4,5,6}.",
+    "generations": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "ruleParameters": 8192,
+    "seedShapes": 116,
+    "trials": 4751360,
+    "generationLimit": 400,
+    "populationStop": "Stop before stepping a state whose nonzero support exceeds 600.",
+    "boundaryStop": "Stop when any nonzero cell is within the outer three coordinate rows or columns of a 512\u00d7512 axial array; there is no wrapping.",
+    "recurrencePopulationCap": 350
+  },
+  "totals": {
+    "trials": 4998720,
+    "steps": 127452139,
+    "extinct": 866374,
+    "boundaryStopped": 19856,
+    "populationStopped": 3145302,
+    "periodic": 895395,
+    "moving": 55948,
+    "horizonStopped": 71793,
+    "records": 2485
+  },
+  "campaigns": [
+    {
+      "mode": "exhaustive",
+      "seedFile": "small-seeds.txt",
+      "maxSteps": 400,
+      "maxPopulation": 600,
+      "recurrencePopulationCap": 350,
+      "gridWidth": 512,
+      "seedCount": 12,
+      "maximumC": 6,
+      "deduplication": "Complete-state normalised phase, period, translation and C; rule ignored to collapse inactive-clause variants. Full D6/orbit deduplication follows independently.",
+      "counts": {
+        "trials": 491520,
+        "steps": 9864731,
+        "extinct": 93782,
+        "boundaryStopped": 1200,
+        "populationStopped": 305453,
+        "periodic": 87878,
+        "moving": 1061,
+        "horizonStopped": 3207,
+        "records": 24
+      },
+      "campaign": "small",
+      "seedFileSha256": "5b324341d31b10f57f38f739f60db2d193d308c3ea5c42586e3d4534b0d256db"
+    },
+    {
+      "mode": "exhaustive",
+      "seedFile": "n5-seeds.txt",
+      "maxSteps": 400,
+      "maxPopulation": 600,
+      "recurrencePopulationCap": 350,
+      "gridWidth": 512,
+      "seedCount": 22,
+      "maximumC": 6,
+      "deduplication": "Complete-state normalised phase, period, translation and C; rule ignored to collapse inactive-clause variants. Full D6/orbit deduplication follows independently.",
+      "counts": {
+        "trials": 901120,
+        "steps": 19386441,
+        "extinct": 145898,
+        "boundaryStopped": 984,
+        "populationStopped": 590876,
+        "periodic": 155794,
+        "moving": 2599,
+        "horizonStopped": 7568,
+        "records": 100
+      },
+      "campaign": "n5",
+      "seedFileSha256": "bdd9f7009abdf05578985ccba8757d37fa27f209303a5faebd90f3b8e20eeb9d"
+    },
+    {
+      "mode": "exhaustive",
+      "seedFile": "n6-seeds.txt",
+      "maxSteps": 400,
+      "maxPopulation": 600,
+      "recurrencePopulationCap": 350,
+      "gridWidth": 512,
+      "seedCount": 82,
+      "maximumC": 6,
+      "deduplication": "Complete-state normalised phase, period, translation and C; rule ignored to collapse inactive-clause variants. Full D6/orbit deduplication follows independently.",
+      "counts": {
+        "trials": 3358720,
+        "steps": 71709700,
+        "extinct": 530742,
+        "boundaryStopped": 2375,
+        "populationStopped": 2213293,
+        "periodic": 583645,
+        "moving": 13423,
+        "horizonStopped": 28665,
+        "records": 363
+      },
+      "campaign": "n6",
+      "seedFileSha256": "c22b26dde355f747da6066b485da195ce5b395b1b891eb0e330cf61906bc9759"
+    },
+    {
+      "mode": "mutations",
+      "seedFile": "mutation-seeds.txt",
+      "maxSteps": 1200,
+      "maxPopulation": 850,
+      "recurrencePopulationCap": 350,
+      "gridWidth": 512,
+      "seedCount": 200000,
+      "maximumC": 8,
+      "deduplication": "Complete-state normalised phase, period, translation and C; rule ignored to collapse inactive-clause variants. Full D6/orbit deduplication follows independently.",
+      "counts": {
+        "trials": 200000,
+        "steps": 18139240,
+        "extinct": 95159,
+        "boundaryStopped": 15297,
+        "populationStopped": 35680,
+        "periodic": 53712,
+        "moving": 37328,
+        "horizonStopped": 152,
+        "records": 1949
+      },
+      "campaign": "mutations",
+      "seedFileSha256": "0ffe1205edda191f473ceedebb98424c76457f684e99880c47971e6c2a29d8f0"
+    },
+    {
+      "mode": "emitters",
+      "seedFile": "emitter-seeds.txt",
+      "maxSteps": 240,
+      "maxPopulation": 650,
+      "recurrencePopulationCap": 350,
+      "gridWidth": 512,
+      "seedCount": 47360,
+      "maximumC": 4,
+      "deduplication": "Complete-state normalised phase, period, translation and C; rule ignored to collapse inactive-clause variants. Full D6/orbit deduplication follows independently.",
+      "counts": {
+        "trials": 47360,
+        "steps": 8352027,
+        "extinct": 793,
+        "boundaryStopped": 0,
+        "populationStopped": 0,
+        "periodic": 14366,
+        "moving": 1537,
+        "horizonStopped": 32201,
+        "records": 49
+      },
+      "campaign": "emitters",
+      "seedFileSha256": "12afa8e4600b105b1b061732491caea5c412d028556860454d3c7e99ceb1d656"
+    }
+  ],
+  "mutationGeneration": {
+    "prng": "xorshift32",
+    "initialSeed": "0x3652026",
+    "trials": 200000,
+    "basePhases": 612,
+    "counts": {
+      "hex-b2s1-c3-p158-traveller": 51703,
+      "hex-b234s13-c4-p23-traveller": 7546,
+      "hex-b235s134-c5-launcher-traveller": 29118,
+      "hex-b235s146-c4-launcher-traveller": 29290,
+      "hex-b245s35-p25-traveller": 8232,
+      "hex-b23s13-c5-p138-traveller": 45274,
+      "hex-b23s4-p13-traveller": 4210,
+      "hex-b25s34-p20-puffer": 9991,
+      "hex-b245s3-p10-traveller": 3235,
+      "hex-b2s35-p5-traveller": 1630,
+      "hex-b246s246-c4-p30-gun": 9771
+    },
+    "method": "1\u20136 cell edits within a 5\u00d75 axial box around a randomly selected phase cell; 20% random C in 2..8; 25% one or two flips among B1..B6 and S0..S5; all surviving refractory states retained."
+  },
+  "emitterGeneration": {
+    "trials": 47360,
+    "exhaustiveSingleCellTrials": 17360,
+    "randomMultiCellTrials": 30000,
+    "bases": 40,
+    "sourcePhases": "g0..19 of the existing p30 three-way gun and p20 puffer",
+    "singleCellWindow": "All 217 axial sites with hex radius <=8 about origin, substituting every other permitted state",
+    "randomMethod": "2..8 state edits within axial \u00b13 of a source-phase cell",
+    "prng": "xorshift32",
+    "randomSeed": "0x365e117"
+  },
+  "emitterFollowUp": {
+    "replayedTrials": 47360,
+    "replayedTransitions": 8352027,
+    "criterion": "The complete state inside axial radius 12 agrees at generations 120,180,240, with equal positive support growth over both 60-generation intervals.",
+    "rawCandidates": 230,
+    "conclusion": "No additional distinct indefinite gun or puffer is certified by this campaign. Local recurrence and linear growth are filters, not proofs of an emitter."
+  },
+  "limits": [
+    "Exhaustiveness applies only to the stated finite input classes, bounds and stop conditions.",
+    "Failure within these bounds does not imply absence of larger, slower, refractory-seeded or B0-background gliders.",
+    "Raw recurrence record collection collapses identical normalised recurrent phases with equal C, period and translation even across rules; it is not a complete census of dynamically distinct orbits.",
+    "The five released patterns are replayed independently, compared by full phase orbit under D6, and checked against the earlier catalogue. No priority or mathematical novelty claim is made."
+  ]
+}

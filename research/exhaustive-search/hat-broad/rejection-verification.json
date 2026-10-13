@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "examples": [
+    {
+      "id": "endpoint-drift-wave",
+      "generationsCompared": 558,
+      "independentQueryParity": true,
+      "maxPopulation": 283,
+      "maximumRadius": 61.94011147108993,
+      "minimumBoundaryDistance": 43,
+      "translatedReturn": null,
+      "matchedDeadHaloRings": null,
+      "outcome": {
+        "extinction": 557
+      }
+    },
+    {
+      "id": "two-cell-shift-then-clock",
+      "generationsCompared": 41,
+      "independentQueryParity": true,
+      "maxPopulation": 10,
+      "maximumRadius": 5.765058996907081,
+      "minimumBoundaryDistance": 34,
+      "translatedReturn": {
+        "from": 0,
+        "to": 37,
+        "translation": [
+          4.5,
+          2.59808
+        ]
+      },
+      "matchedDeadHaloRings": 0,
+      "outcome": {
+        "transient": 38,
+        "period": 2
+      }
+    },
+    {
+      "id": "compact-pulse-c5",
+      "generationsCompared": 49,
+      "independentQueryParity": true,
+      "maxPopulation": 41,
+      "maximumRadius": 17.49899701296007,
+      "minimumBoundaryDistance": 27,
+      "translatedReturn": {
+        "from": 13,
+        "to": 29,
+        "translation": [
+          12,
+          12.1244
+        ]
+      },
+      "matchedDeadHaloRings": 0,
+      "outcome": {
+        "extinction": 48
+      }
+    },
+    {
+      "id": "compact-pulse-c6",
+      "generationsCompared": 51,
+      "independentQueryParity": true,
+      "maxPopulation": 29,
+      "maximumRadius": 11.366838816671658,
+      "minimumBoundaryDistance": 20,
+      "translatedReturn": {
+        "from": 15,
+        "to": 31,
+        "translation": [
+          -16.5,
+          4.33013
+        ]
+      },
+      "matchedDeadHaloRings": 0,
+      "outcome": {
+        "extinction": 50
+      }
+    }
+  ]
+}

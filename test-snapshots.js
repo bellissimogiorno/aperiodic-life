@@ -65,13 +65,52 @@ for (const tiling of ['square', 'hex', 'hat', 'penrose']) {
   }
 }
 
+// Named tables retain their model and every visible signal state on export.
+for (const rule of ['TABLE:HAT-A', 'TABLE:HAT-B', 'TABLE:HAT-C', 'TABLE:HAT-SIMPLE']) {
+  const original = experiment('hat', 'touch');
+  original.simulation.setRule(rule);
+  const snapshot = clone(original.createSnapshot());
+  const restored = prepareSnapshot(snapshot);
+  assert.equal(restored.simulation.rule.text, rule);
+  assert.deepStrictEqual(restored.simulation.state, original.simulation.state);
+  for (let step = 0; step < 20; step++) {
+    restored.simulation.step();
+    original.simulation.step();
+    assert.deepStrictEqual(restored.simulation.state, original.simulation.state);
+  }
+  snapshot.generations = 5;
+  assert.throws(() => validateSnapshot(snapshot), /state count/);
+  roundTrips++;
+}
+
+// Preset switching must unlock the B/S state control and remove invalid states.
+const controls = experiment('hat', 'touch');
+Object.assign(controls.elements, {
+  presetSelect: { value: 'hatsimple' }, generationsInput: { value: 4 },
+  ruleInput: { value: '', classList: { add() {}, remove() {} }, setAttribute() {} },
+  ruleHelp: {}, ruleMeaningHelp: {}, statesHelp: {},
+});
+controls.renderer.updateState = () => {};
+controls.clearActiveDiscovery = controls.resetCycleDetector = controls.updateStats = () => {};
+controls.applyPreset();
+assert.equal(controls.simulation.rule.text, 'TABLE:HAT-SIMPLE');
+assert.equal(controls.simulation.generations, 3);
+assert.equal(controls.elements.generationsInput.disabled, true);
+assert(controls.elements.statesHelp.textContent.includes('signals'));
+controls.elements.presetSelect.value = 'conway';
+controls.applyPreset();
+assert.equal(controls.simulation.generations, 2);
+assert.equal(controls.elements.generationsInput.disabled, false);
+assert(controls.simulation.state.every((value) => value < 2));
+assert(controls.elements.ruleMeaningHelp.textContent.includes('Only state-1'));
+
 const original = experiment('penrose', 'touch');
 const valid = clone(original.createSnapshot());
 for (const mutation of [
   (data) => { data.format = 'settings-only'; },
   (data) => { data.version = 2; },
   (data) => { data.tiling = '__proto__'; },
-  (data) => { data.patchDepth = 11; },
+  (data) => { data.patchDepth = 12; },
   (data) => { data.tileCount++; },
   (data) => { data.neighborhood = 'nearest'; },
   (data) => { data.penroseSeed = 'star'; },

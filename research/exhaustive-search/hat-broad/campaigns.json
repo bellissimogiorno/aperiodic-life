@@ -1,0 +1,313 @@
+{
+  "schema": 1,
+  "interpretation": "Bounded random and systematic searches, not a proof of non-existence or a count of unique configurations. Candidate returns require independent complete-state and background checks.",
+  "randomTrials": 10100000,
+  "transplantTrials": 45180,
+  "totalTrials": 10145180,
+  "statesExaminedInRandomCampaigns": 240351258,
+  "candidateCellUpdatesInRandomCampaigns": 46102984663,
+  "randomCampaigns": [
+    {
+      "seedDecimal": "7525949657324569941",
+      "prng": "xorshift64star",
+      "trialsCompleted": 100000,
+      "trialsRequested": 100000,
+      "statesExamined": 2354901,
+      "cellUpdates": 438198869,
+      "extinct": 45785,
+      "boundaryStopped": 258,
+      "populationStopped": 28527,
+      "stationaryHashReturn": 25288,
+      "horizonStopped": 142,
+      "translatedCandidates": 0,
+      "longCycleRecords": 4,
+      "horizon": 800,
+      "maxPopulation": 350,
+      "bestMobilityScore": 4.66382,
+      "seconds": 13.2465,
+      "name": "edge-broad",
+      "tiling": "hat",
+      "depth": 5,
+      "patchCells": 54289,
+      "neighborhood": "edge",
+      "smallSeeds": false,
+      "candidateScore": "endpoint-radii",
+      "commandArguments": [
+        "hat-5-edge.dat",
+        100000,
+        "edge-broad",
+        "7525949657324569941",
+        800,
+        350,
+        0,
+        1
+      ]
+    },
+    {
+      "seedDecimal": "7525949657324569942",
+      "prng": "xorshift64star",
+      "trialsCompleted": 3000000,
+      "trialsRequested": 3000000,
+      "statesExamined": 79598539,
+      "cellUpdates": 20536873566,
+      "extinct": 1372683,
+      "boundaryStopped": 24243,
+      "populationStopped": 837412,
+      "stationaryHashReturn": 761989,
+      "horizonStopped": 3673,
+      "translatedCandidates": 16,
+      "longCycleRecords": 5,
+      "horizon": 1200,
+      "maxPopulation": 500,
+      "bestMobilityScore": 10.5275,
+      "seconds": 568.559,
+      "name": "edge-wide",
+      "tiling": "hat",
+      "depth": 5,
+      "patchCells": 54289,
+      "neighborhood": "edge",
+      "smallSeeds": false,
+      "candidateScore": "endpoint-radii",
+      "commandArguments": [
+        "hat-5-edge.dat",
+        3000000,
+        "edge-wide",
+        "7525949657324569942",
+        1200,
+        500,
+        0,
+        1
+      ],
+      "translatedSeedReplay": {
+        "distinctTrials": 7,
+        "maximumFurtherGenerations": 5000,
+        "maxPopulation": 1500,
+        "stopBelowBoundaryRings": 4,
+        "outcomes": {
+          "population": 3,
+          "stationary-cycle": 1,
+          "extinct": 2,
+          "boundary": 1
+        }
+      }
+    },
+    {
+      "seedDecimal": "7525949657324569943",
+      "prng": "xorshift64star",
+      "trialsCompleted": 3000000,
+      "trialsRequested": 3000000,
+      "statesExamined": 71619239,
+      "cellUpdates": 14389033997,
+      "extinct": 1265610,
+      "boundaryStopped": 7443,
+      "populationStopped": 1123918,
+      "stationaryHashReturn": 600354,
+      "horizonStopped": 2675,
+      "translatedCandidates": 115,
+      "longCycleRecords": 7,
+      "horizon": 1200,
+      "maxPopulation": 350,
+      "bestMobilityScore": 2.39711,
+      "seconds": 425.569,
+      "name": "touch-compact",
+      "tiling": "hat",
+      "depth": 5,
+      "patchCells": 54289,
+      "neighborhood": "touch",
+      "smallSeeds": false,
+      "candidateScore": "maximum-checkpoint-radius",
+      "commandArguments": [
+        "hat-5-touch.dat",
+        3000000,
+        "touch-compact",
+        "7525949657324569943",
+        1200,
+        350,
+        0,
+        0
+      ],
+      "translatedSeedReplay": {
+        "distinctTrials": 26,
+        "maximumFurtherGenerations": 5000,
+        "maxPopulation": 1500,
+        "stopBelowBoundaryRings": 4,
+        "outcomes": {
+          "extinct": 25,
+          "population": 1
+        }
+      },
+      "mobilityScreenReplay": {
+        "candidates": 200,
+        "maxGenerations": 5000,
+        "maxPopulation": 2000,
+        "stopBelowBoundaryRings": 4,
+        "outcomes": {
+          "boundary": 28,
+          "extinct": 147,
+          "population": 13,
+          "stationary-cycle": 12
+        }
+      }
+    },
+    {
+      "seedDecimal": "7525949657324569944",
+      "prng": "xorshift64star",
+      "trialsCompleted": 2000000,
+      "trialsRequested": 2000000,
+      "statesExamined": 45640585,
+      "cellUpdates": 5438146474,
+      "extinct": 705205,
+      "boundaryStopped": 982,
+      "populationStopped": 906687,
+      "stationaryHashReturn": 387035,
+      "horizonStopped": 91,
+      "translatedCandidates": 28,
+      "longCycleRecords": 7,
+      "horizon": 1600,
+      "maxPopulation": 250,
+      "bestMobilityScore": 1.80706,
+      "seconds": 187.042,
+      "name": "edge-small",
+      "tiling": "hat",
+      "depth": 5,
+      "patchCells": 54289,
+      "neighborhood": "edge",
+      "smallSeeds": true,
+      "candidateScore": "maximum-checkpoint-radius",
+      "commandArguments": [
+        "hat-5-edge.dat",
+        2000000,
+        "edge-small",
+        "7525949657324569944",
+        1600,
+        250,
+        1,
+        0
+      ],
+      "translatedSeedReplay": {
+        "distinctTrials": 10,
+        "maximumFurtherGenerations": 5000,
+        "maxPopulation": 1500,
+        "stopBelowBoundaryRings": 4,
+        "outcomes": {
+          "extinct": 2,
+          "stationary-cycle": 1,
+          "boundary": 5,
+          "population": 2
+        }
+      },
+      "mobilityScreenReplay": {
+        "candidates": 200,
+        "maxGenerations": 5000,
+        "maxPopulation": 2000,
+        "stopBelowBoundaryRings": 4,
+        "outcomes": {
+          "extinct": 107,
+          "population": 22,
+          "boundary": 58,
+          "stationary-cycle": 13
+        }
+      }
+    },
+    {
+      "seedDecimal": "7525949657324569945",
+      "prng": "xorshift64star",
+      "trialsCompleted": 2000000,
+      "trialsRequested": 2000000,
+      "statesExamined": 41137994,
+      "cellUpdates": 5300731757,
+      "extinct": 590513,
+      "boundaryStopped": 2450,
+      "populationStopped": 1117532,
+      "stationaryHashReturn": 289497,
+      "horizonStopped": 8,
+      "translatedCandidates": 72,
+      "longCycleRecords": 6,
+      "horizon": 1600,
+      "maxPopulation": 250,
+      "bestMobilityScore": 2.53096,
+      "seconds": 183.542,
+      "name": "touch-small",
+      "tiling": "hat",
+      "depth": 5,
+      "patchCells": 54289,
+      "neighborhood": "touch",
+      "smallSeeds": true,
+      "candidateScore": "maximum-checkpoint-radius",
+      "commandArguments": [
+        "hat-5-touch.dat",
+        2000000,
+        "touch-small",
+        "7525949657324569945",
+        1600,
+        250,
+        1,
+        0
+      ],
+      "translatedSeedReplay": {
+        "distinctTrials": 10,
+        "maximumFurtherGenerations": 5000,
+        "maxPopulation": 1500,
+        "stopBelowBoundaryRings": 4,
+        "outcomes": {
+          "extinct": 10
+        }
+      },
+      "mobilityScreenReplay": {
+        "candidates": 200,
+        "maxGenerations": 5000,
+        "maxPopulation": 2000,
+        "stopBelowBoundaryRings": 4,
+        "outcomes": {
+          "extinct": 119,
+          "stationary-cycle": 19,
+          "boundary": 40,
+          "population": 22
+        }
+      }
+    }
+  ],
+  "systematicCampaign": {
+    "sourceTrials": [
+      8541,
+      25645
+    ],
+    "sites": 440,
+    "trials": 45180,
+    "steps": 1234671,
+    "outcomes": {
+      "extinct": 31571,
+      "radius": 7040,
+      "population": 6190,
+      "boundary": 147,
+      "stationary-cycle": 232
+    },
+    "maximumGenerations": 16,
+    "horizon": 1200,
+    "maxActive": 200,
+    "maxRadius": 25,
+    "seconds": 12.522,
+    "name": "touch-phase-transplants",
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "source": "transplant-seeds.jsonl",
+    "translationSitesIncludeOriginalPlacement": true,
+    "minimumAnchorBoundaryDistance": 18,
+    "stopBelowBoundaryRings": 5,
+    "maximumGenerationsFieldMeansStateCount": true
+  },
+  "releaseMinerReproduction": {
+    "trials": 100000,
+    "allAccountingFieldsIdentical": true,
+    "countedAsAdditionalSearch": false
+  },
+  "sourceSha256": {
+    "search.cpp": "7a77e09ea19a137fcbe81fb411502e7ac58e5dec03b95ca9a1a5cf2bf5cbb7a0",
+    "classify-translated.js": "1f6a050cd1965fbdd92c7717da48d6e1fdb937cb8bde5ac03147f676fc0dbd65",
+    "verify-rejections.js": "867305e675e4e41786bdbd60d1ba8815538a32e7c2459d5a137f411c192b5d52",
+    "transplant.js": "899cf425a2c5dcf926321115953dae18a72fed162fac6345c0d65d7433f5a4bb",
+    "export.js": "c8327ca8d8891b6f6c344bd561cdbeeaf6ef9061f3a8fc0a6ade192dec898772",
+    "screen-mobility.js": "295f993f18afdb2d5b89a216074d9e71a5da080ba31ea2843264126832753e8a"
+  }
+}

@@ -6,13 +6,15 @@ This package was vibe-coded by Murdoch J. Gabbay. I hope you find it useful and 
 
 Explore cellular automata on **square, hexagonal, Einstein-hat, and Penrose tilings**. Each tile is one cell. Change the rules, paint a seed, and watch patterns evolve on periodic and aperiodic boards.
 
-Aperiodic Life 3.6.4 runs offline in a WebGL2-capable browser and includes **69 verified examples**. No installation or npm dependencies are needed to use it.
+Aperiodic Life 3.7.1 runs offline in a WebGL2-capable browser and includes **81 verified examples**. No installation or npm dependencies are needed to use it. You can also run it immediately in your browser at [https://bellissimogiorno.github.io/aperiodic-life/](https://bellissimogiorno.github.io/aperiodic-life/).
 
-![Penrose period-840 collective field rendered from catalogue data](preview.png)
+![Einstein-hat glider and launcher phases rendered from exact simulation states](research/figures/hat-gliders.svg)
 
-*The Penrose B12/S collective field at generation 51, rendered from the catalogue and its exact tile geometry.*
+*Published Hat gliders reproduced on independently generated geometry, alongside a two-cell launcher emitting three travellers. These are finite observations, not an immortality proof.*
 
 ## Run it
+
+Run the app immediately in your browser at **[https://bellissimogiorno.github.io/aperiodic-life/](https://bellissimogiorno.github.io/aperiodic-life/)**.
 
 Download or clone the repository, then open **[aperiodic-life-standalone.html](aperiodic-life-standalone.html)** in your browser. This single file includes the application, catalogue, styles, and licence notices.
 
@@ -28,19 +30,21 @@ Open [http://127.0.0.1:8000/index.html](http://127.0.0.1:8000/index.html). This 
 
 - Search **Curated configurations** at the top of the controls by tiling, rule, or name. **Load** prepares an example paused; **Load & run** starts it immediately.
 - Use **Play/Pause** at the top right of the canvas to start or stop the simulation. It stays accessible on mobile, including while the controls are open or scrolled.
-- Try the Penrose period-822 oscillator, Einstein-hat rotating waves, compact Penrose travellers, or familiar square-grid gliders.
-- For hexagonal highlights, search for **three-way spaceship gun**, **giant breather**, **self-repairing wall**, or **p4104**. The catalogue includes 28 hexagonal examples; the [hexagonal guide](docs/HEXAGONAL_STRUCTURES.md) explains their behaviour and evidence.
+- Start with **Hat glider B**, **Hat triple launcher**, **Penrose six-traveller launcher**, or either hexagonal **knightship**. The [search report](docs/GLIDER_SEARCH.md) explains the evidence and attribution.
+- For hexagonal highlights, search for **three-way spaceship gun**, **giant breather**, **self-repairing wall**, or **p4104**. The catalogue includes 33 hexagonal examples; the [hexagonal guide](docs/HEXAGONAL_STRUCTURES.md) explains their behaviour and evidence.
 - Drag to pan; pinch with two fingers or use the wheel to zoom. Moving two fingers together pans, including with **Paint / erase cells** selected. Use a fresh one-finger tap or drag to paint.
 - Use **Save state** and **Load state** to exchange exact experiments, including refractory cells and generation. **Copy settings** copies controls only.
 - Open either **?** button for the rules, neighbourhoods, and finite-boundary explanation.
 
-Rules use `B…/S…` notation, such as Conway's `B3/S23`. Additional cell states create refractory phases. Both shared-edge and edge-or-corner neighbourhoods are available.
+Rules use `B…/S…` notation, such as Conway's `B3/S23`. Additional cell states create refractory phases. Named priority tables such as `TABLE:HAT-B` count all states separately and enable the published Hat gliders. Both shared-edge and edge-or-corner neighbourhoods are available.
 
 ## What the catalogue establishes
 
-The catalogue includes exact localised oscillators, long transients, regular-lattice spaceships, and compact Penrose waves observed over stated finite intervals. Hexagonal examples include a period-4,104 clock, a period-999 rotor, a spaceship gun, an oscillator-trail puffer, a self-repairing wall, and a seven-copy replicator. The hexagonal search ran 6,630,400 deterministic seed trials, alongside a review and independent replay of published patterns. This is a bounded search, with no claim that the catalogue additions are previously unknown mathematical discoveries.
+The catalogue includes exact localised oscillators, long transients, regular-lattice spaceships, compact Penrose waves, and independently reproduced Hat gliders observed over stated finite intervals. Hexagonal examples include a period-4,104 clock, a period-999 rotor, a spaceship gun, an oscillator-trail puffer, a self-repairing wall, and a seven-copy replicator. Search sources and manifests include an exhaustive bounded scan of 4,751,360 small hexagonal seed/rule/state combinations, extensive Hat and Penrose campaigns, and the 6,630,400-trial hexagonal campaign supporting the other examples. These counts describe executed trials, not distinct discoveries.
 
-**The aperiodic travellers are finite-patch observations; no indefinitely propagating Penrose or Einstein-hat glider is claimed.** A translated return between two observed states does not establish that an aperiodic substrate repeats forever. Rotating waves are localised oscillators. Unsuccessful searches are bounded results, not nonexistence proofs.
+James Edmond’s [September 2026 preprint](https://arxiv.org/abs/2609.22579) reports Hat and Spectre gliders. This project independently reproduces the Hat rules, including a compact 1,129-generation flight on 372,100 tiles. The derived three-state variant matches the tested flights but is not equivalent on arbitrary input. Credit for the published rules remains with Edmond.
+
+**Our aperiodic replays are finite-patch observations; we do not prove indefinite propagation or claim the first Hat glider.** A translated return between two observed states does not establish that an aperiodic substrate repeats forever. Rotating waves are localised oscillators. Unsuccessful searches are bounded results, not nonexistence proofs.
 
 See the [rule survey](docs/RULE_SURVEY.md), [research tools](research/README.md), [hexagonal phase atlas](research/figures/hexagonal-atlas.svg), and [aperiodic oscillator phase atlas](research/figures/oscillator-atlas.svg).
 

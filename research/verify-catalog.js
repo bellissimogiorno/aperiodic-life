@@ -474,7 +474,9 @@ function verifyEntry(entry) {
       simulation.step();
       totalChanged += simulation.lastChangedCount;
       maximumAlive = Math.max(maximumAlive, simulation.aliveCount());
-      assert(simulation.aliveCount() > 0, `${entry.id}: extinct at ${step}`);
+      const active = simulation.rule.kind === 'priority'
+        ? simulation.state.some((state) => state !== 0) : simulation.aliveCount() > 0;
+      assert(active, `${entry.id}: extinct at ${step}`);
       if (step % interval === 0 || step === entry.expectedActivityThrough) {
         checkpoints.push({ generation: step, alive: simulation.aliveCount(), changed: simulation.lastChangedCount });
       }

@@ -30,7 +30,7 @@ node test-structures.js
 node test-traveller-evidence.js
 ```
 
-All 69 catalogue entries have explicit replay contracts. Exact periods require the first return of the complete state; population counts and hashes are insufficient. Extinction requires every cell to be zero, including refractory states. Transient-cycle entries must not return before the stated transient and period.
+All 81 catalogue entries have explicit replay contracts. Exact periods require the first return of the complete state; population counts and hashes are insufficient. Extinction requires every cell to be zero, including refractory states. Transient-cycle entries must not return before the stated transient and period.
 
 `test-hexagonal-evidence.js` additionally uses an unbounded coordinate-map reference whose update code is independent of the production engine. It checks complete-state periods and translations, rotations, genuine full-period cells, equivalence under lattice symmetries and phase shifts, and production parity with boundary clearance. Gun and puffer checks include exact emission equations and permanently separating projections; wall repair requires equality to the pristine evolving wall, including the empty exterior. Negative controls guard against accepting mutated refractory states or emission contracts. The fixture and source records are in `research/fixtures/hexagonal-*.json`.
 
@@ -75,8 +75,14 @@ Direct acceptance remains necessary for target browser/GPU combinations. Check t
 
 ## Source and release checks
 
-Static checks require the four tilings, all 69 entries, discovery and help controls, complete MIT and BSD notices, and absence of external runtime scripts or styles. `node build-standalone.js --check` requires the checked-in standalone to match the expanded source.
+Static checks require the four tilings, all 81 entries, discovery and help controls, complete MIT and BSD notices, and absence of external runtime scripts or styles. `node build-standalone.js --check` requires the checked-in standalone to match the expanded source.
 
 `test-package.py` and `test-repository.py` cover deterministic archives, source completeness, safe paths, file exclusions, integrity metadata, standalone freshness, output-path rejection, and the static-site payload. Both run in the standard profile. See [release operations](OPERATIONS.md) for packaging and [CI](CI.md) for hosted workflows.
 
 Record the commands, runtimes, and outcomes for a release. Report unavailable prerequisites separately from passing checks; automated local checks do not imply a successful hosted workflow or browser run.
+
+## Priority tables and intensive-search results
+
+`node test-priority-rules.js` checks every neighbour-count histogram through degree 10, independent state transitions, all seven curated Hat/Penrose trajectories, emitted-body independence and complete labelled polygon/dead-halo returns. `node test-hex-exhaustive-evidence.js` independently checks the five small hexagonal seeds and their complete translated cycles. Both run in the standard and research profiles.
+
+`node research/verify-aperiodic.js --long` additionally reconstructs the 372,100-cell depth-6 Hat patch and repeats the 1,129-generation B and three-state flights; it is included in the large profile. The [search report](GLIDER_SEARCH.md) distinguishes exhaustive finite parameter spaces from sampled campaigns and empirical evidence from proofs.

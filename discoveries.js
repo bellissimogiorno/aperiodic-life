@@ -60,6 +60,1131 @@
 
   const entries = [
     {
+      "id": "hex-b2s0-c3-three-cell-glider",
+      "category": "Hexagonal travellers",
+      "title": "Hexagonal three-cell glider",
+      "summary": "Three live cells form an exact three-state spaceship. Its complete state moves one axial cell every two generations; the alternating refractory phase is part of the glider.",
+      "tiling": "hex",
+      "depth": 128,
+      "neighborhood": "edge",
+      "rule": "B2/S0",
+      "generations": 3,
+      "borderRings": 1,
+      "speed": 3,
+      "coordinateStates": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      "expectedTravel": {
+        "steps": 120,
+        "minimumDisplacement": 103.923,
+        "minimumDirectionality": 0.999,
+        "maximumRadius": 1.733,
+        "minimumActive": 3,
+        "maximumActive": 5,
+        "minimumLive": 2,
+        "maximumLive": 3,
+        "minimumBoundaryDistance": 68,
+        "connectedThroughout": false,
+        "expectedRuleClauses": [
+          {
+            "kind": "birth",
+            "liveNeighbors": 2,
+            "count": 180,
+            "lastToGeneration": 120
+          },
+          {
+            "kind": "survival",
+            "liveNeighbors": 0,
+            "count": 120,
+            "lastToGeneration": 120
+          }
+        ],
+        "translatedReturn": {
+          "fromGeneration": 1,
+          "toGeneration": 3,
+          "dx": -0.8660253882408142,
+          "dy": -1.5,
+          "neighborhoodRadius": 3
+        },
+        "finalHash": [
+          1531259721,
+          1540034580
+        ],
+        "finalCellStates": [
+          [
+            24709,
+            1
+          ],
+          [
+            24965,
+            1
+          ],
+          [
+            25221,
+            1
+          ]
+        ]
+      },
+      "view": {
+        "mode": "trajectory",
+        "bounds": [
+          -10.392304420471191,
+          -19,
+          4.330127239227295,
+          2.5
+        ],
+        "steps": 24,
+        "padding": 3
+      }
+    },
+    {
+      "id": "hex-b234s1346-c3-four-cell-launcher",
+      "category": "Hexagonal travellers",
+      "title": "Hexagonal four-cell diagonal launcher",
+      "summary": "Four live cells settle after nine generations into a period-8 spaceship travelling by axial (1,1). Every live and refractory cell repeats in the translated cycle.",
+      "tiling": "hex",
+      "depth": 128,
+      "neighborhood": "edge",
+      "rule": "B234/S1346",
+      "generations": 3,
+      "borderRings": 1,
+      "speed": 4,
+      "coordinateStates": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      "expectedTravel": {
+        "steps": 120,
+        "minimumDisplacement": 43.125,
+        "minimumDirectionality": 0.64,
+        "maximumRadius": 8.223,
+        "minimumActive": 4,
+        "maximumActive": 27,
+        "minimumLive": 4,
+        "maximumLive": 19,
+        "minimumBoundaryDistance": 97,
+        "connectedThroughout": false,
+        "expectedRuleClauses": [
+          {
+            "kind": "birth",
+            "liveNeighbors": 2,
+            "count": 595,
+            "lastToGeneration": 120
+          },
+          {
+            "kind": "birth",
+            "liveNeighbors": 3,
+            "count": 171,
+            "lastToGeneration": 119
+          },
+          {
+            "kind": "birth",
+            "liveNeighbors": 4,
+            "count": 57,
+            "lastToGeneration": 116
+          },
+          {
+            "kind": "survival",
+            "liveNeighbors": 1,
+            "count": 125,
+            "lastToGeneration": 120
+          },
+          {
+            "kind": "survival",
+            "liveNeighbors": 3,
+            "count": 369,
+            "lastToGeneration": 119
+          },
+          {
+            "kind": "survival",
+            "liveNeighbors": 4,
+            "count": 297,
+            "lastToGeneration": 118
+          },
+          {
+            "kind": "survival",
+            "liveNeighbors": 6,
+            "count": 28,
+            "lastToGeneration": 117
+          }
+        ],
+        "translatedReturn": {
+          "fromGeneration": 9,
+          "toGeneration": 17,
+          "dx": 2.5980762243270874,
+          "dy": 1.5,
+          "neighborhoodRadius": 3
+        },
+        "finalHash": [
+          2862079887,
+          2583090950
+        ],
+        "finalCellStates": [
+          [
+            28047,
+            1
+          ],
+          [
+            28049,
+            2
+          ],
+          [
+            28290,
+            1
+          ],
+          [
+            28291,
+            1
+          ],
+          [
+            28532,
+            1
+          ],
+          [
+            28534,
+            1
+          ],
+          [
+            28773,
+            1
+          ],
+          [
+            28775,
+            2
+          ],
+          [
+            29013,
+            1
+          ],
+          [
+            29014,
+            1
+          ],
+          [
+            29015,
+            1
+          ],
+          [
+            29492,
+            2
+          ]
+        ]
+      },
+      "view": {
+        "mode": "trajectory",
+        "bounds": [
+          -4.330127239227295,
+          -5.5,
+          12.990381240844727,
+          10
+        ],
+        "steps": 25,
+        "padding": 3
+      }
+    },
+    {
+      "id": "hex-b2456s1345-c4-five-cell-launcher",
+      "category": "Hexagonal travellers",
+      "title": "Hexagonal five-cell p43 launcher",
+      "summary": "Five live cells launch a compact four-state spaceship. Its complete shape follows a 43-generation cycle, moving six hexagonal neighbour steps along a diagonal.",
+      "tiling": "hex",
+      "depth": 128,
+      "neighborhood": "edge",
+      "rule": "B2456/S1345",
+      "generations": 4,
+      "borderRings": 1,
+      "speed": 6,
+      "coordinateStates": [
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "expectedTravel": {
+        "steps": 178,
+        "minimumDisplacement": 38.833,
+        "minimumDirectionality": 0.366,
+        "maximumRadius": 13.955,
+        "minimumActive": 5,
+        "maximumActive": 48,
+        "minimumLive": 5,
+        "maximumLive": 32,
+        "minimumBoundaryDistance": 102,
+        "connectedThroughout": false,
+        "expectedRuleClauses": [
+          {
+            "kind": "birth",
+            "liveNeighbors": 2,
+            "count": 880,
+            "lastToGeneration": 178
+          },
+          {
+            "kind": "birth",
+            "liveNeighbors": 4,
+            "count": 84,
+            "lastToGeneration": 172
+          },
+          {
+            "kind": "birth",
+            "liveNeighbors": 5,
+            "count": 16,
+            "lastToGeneration": 163
+          },
+          {
+            "kind": "birth",
+            "liveNeighbors": 6,
+            "count": 16,
+            "lastToGeneration": 167
+          },
+          {
+            "kind": "survival",
+            "liveNeighbors": 1,
+            "count": 540,
+            "lastToGeneration": 178
+          },
+          {
+            "kind": "survival",
+            "liveNeighbors": 3,
+            "count": 632,
+            "lastToGeneration": 178
+          },
+          {
+            "kind": "survival",
+            "liveNeighbors": 4,
+            "count": 392,
+            "lastToGeneration": 170
+          },
+          {
+            "kind": "survival",
+            "liveNeighbors": 5,
+            "count": 136,
+            "lastToGeneration": 168
+          }
+        ],
+        "translatedReturn": {
+          "fromGeneration": 6,
+          "toGeneration": 49,
+          "dx": -7.794228623310725,
+          "dy": 4.5,
+          "neighborhoodRadius": 3
+        },
+        "finalHash": [
+          3522641762,
+          4221220525
+        ],
+        "finalCellStates": [
+          [
+            18425,
+            1
+          ],
+          [
+            18428,
+            1
+          ],
+          [
+            18655,
+            1
+          ],
+          [
+            18656,
+            1
+          ],
+          [
+            18657,
+            3
+          ],
+          [
+            18659,
+            3
+          ],
+          [
+            18660,
+            1
+          ],
+          [
+            18661,
+            1
+          ],
+          [
+            18888,
+            3
+          ],
+          [
+            18889,
+            1
+          ],
+          [
+            18892,
+            1
+          ],
+          [
+            18893,
+            3
+          ],
+          [
+            19124,
+            3
+          ],
+          [
+            19357,
+            3
+          ],
+          [
+            19358,
+            1
+          ],
+          [
+            19359,
+            1
+          ],
+          [
+            19360,
+            3
+          ],
+          [
+            19594,
+            1
+          ]
+        ]
+      },
+      "view": {
+        "mode": "trajectory",
+        "bounds": [
+          -18.186532974243164,
+          -4,
+          10.392304420471191,
+          20.5
+        ],
+        "steps": 92,
+        "padding": 3
+      }
+    },
+    {
+      "id": "hex-b23s13-c4-p9-knightship-launcher",
+      "category": "Hexagonal travellers",
+      "title": "Hexagonal six-cell p9 knightship launcher",
+      "summary": "Six live cells launch a spaceship travelling between the standard hexagonal axes and diagonals. The exact four-state cycle shifts by axial (5,-4) every nine generations.",
+      "tiling": "hex",
+      "depth": 128,
+      "neighborhood": "edge",
+      "rule": "B23/S13",
+      "generations": 4,
+      "borderRings": 1,
+      "speed": 4,
+      "coordinateStates": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "expectedTravel": {
+        "steps": 120,
+        "minimumDisplacement": 101.306,
+        "minimumDirectionality": 0.811,
+        "maximumRadius": 11.288,
+        "minimumActive": 6,
+        "maximumActive": 33,
+        "minimumLive": 6,
+        "maximumLive": 15,
+        "minimumBoundaryDistance": 61,
+        "connectedThroughout": false,
+        "expectedRuleClauses": [
+          {
+            "kind": "birth",
+            "liveNeighbors": 2,
+            "count": 581,
+            "lastToGeneration": 120
+          },
+          {
+            "kind": "birth",
+            "liveNeighbors": 3,
+            "count": 179,
+            "lastToGeneration": 120
+          },
+          {
+            "kind": "survival",
+            "liveNeighbors": 1,
+            "count": 334,
+            "lastToGeneration": 120
+          },
+          {
+            "kind": "survival",
+            "liveNeighbors": 3,
+            "count": 208,
+            "lastToGeneration": 120
+          }
+        ],
+        "translatedReturn": {
+          "fromGeneration": 16,
+          "toGeneration": 25,
+          "dx": 5.1961523691813145,
+          "dy": -6,
+          "neighborhoodRadius": 3
+        },
+        "finalHash": [
+          884841413,
+          1339690346
+        ],
+        "finalCellStates": [
+          [
+            38564,
+            3
+          ],
+          [
+            38566,
+            3
+          ],
+          [
+            38567,
+            1
+          ],
+          [
+            38762,
+            1
+          ],
+          [
+            38763,
+            1
+          ],
+          [
+            38764,
+            3
+          ],
+          [
+            38953,
+            1
+          ],
+          [
+            38956,
+            3
+          ],
+          [
+            38957,
+            3
+          ],
+          [
+            39146,
+            2
+          ],
+          [
+            39147,
+            2
+          ],
+          [
+            39148,
+            1
+          ],
+          [
+            39149,
+            2
+          ],
+          [
+            39150,
+            3
+          ],
+          [
+            39151,
+            2
+          ],
+          [
+            39152,
+            3
+          ],
+          [
+            39153,
+            3
+          ],
+          [
+            39338,
+            1
+          ],
+          [
+            39339,
+            1
+          ],
+          [
+            39341,
+            2
+          ],
+          [
+            39342,
+            1
+          ],
+          [
+            39345,
+            3
+          ],
+          [
+            39346,
+            2
+          ],
+          [
+            39530,
+            1
+          ],
+          [
+            39531,
+            2
+          ],
+          [
+            39532,
+            1
+          ],
+          [
+            39533,
+            1
+          ],
+          [
+            39534,
+            1
+          ],
+          [
+            39535,
+            3
+          ],
+          [
+            39536,
+            2
+          ],
+          [
+            39537,
+            1
+          ],
+          [
+            39722,
+            1
+          ],
+          [
+            39723,
+            1
+          ]
+        ]
+      },
+      "view": {
+        "mode": "trajectory",
+        "bounds": [
+          -2.598076105117798,
+          -25,
+          22.516660690307617,
+          10
+        ],
+        "steps": 34,
+        "padding": 3
+      }
+    },
+    {
+      "id": "hex-b234s245-c5-p10-knightship-launcher",
+      "category": "Hexagonal travellers",
+      "title": "Hexagonal six-cell p10 knightship launcher",
+      "summary": "Six live cells launch a second oblique spaceship: its complete five-state shape repeats with axial shift (1,2) every ten generations, rather than following a hexagonal axis or diagonal.",
+      "tiling": "hex",
+      "depth": 128,
+      "neighborhood": "edge",
+      "rule": "B234/S245",
+      "generations": 5,
+      "borderRings": 1,
+      "speed": 4,
+      "coordinateStates": [
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          1
+        ]
+      ],
+      "expectedTravel": {
+        "steps": 120,
+        "minimumDisplacement": 54.116,
+        "minimumDirectionality": 0.425,
+        "maximumRadius": 12.705,
+        "minimumActive": 6,
+        "maximumActive": 58,
+        "minimumLive": 6,
+        "maximumLive": 24,
+        "minimumBoundaryDistance": 85,
+        "connectedThroughout": false,
+        "expectedRuleClauses": [
+          {
+            "kind": "birth",
+            "liveNeighbors": 2,
+            "count": 722,
+            "lastToGeneration": 120
+          },
+          {
+            "kind": "birth",
+            "liveNeighbors": 3,
+            "count": 246,
+            "lastToGeneration": 120
+          },
+          {
+            "kind": "birth",
+            "liveNeighbors": 4,
+            "count": 11,
+            "lastToGeneration": 111
+          },
+          {
+            "kind": "survival",
+            "liveNeighbors": 2,
+            "count": 629,
+            "lastToGeneration": 120
+          },
+          {
+            "kind": "survival",
+            "liveNeighbors": 4,
+            "count": 95,
+            "lastToGeneration": 120
+          },
+          {
+            "kind": "survival",
+            "liveNeighbors": 5,
+            "count": 4,
+            "lastToGeneration": 3
+          }
+        ],
+        "translatedReturn": {
+          "fromGeneration": 12,
+          "toGeneration": 22,
+          "dx": 3.464101642370224,
+          "dy": 3,
+          "neighborhoodRadius": 3
+        },
+        "finalHash": [
+          4282980425,
+          1911281688
+        ],
+        "finalCellStates": [
+          [
+            28055,
+            1
+          ],
+          [
+            28056,
+            1
+          ],
+          [
+            28297,
+            1
+          ],
+          [
+            28298,
+            1
+          ],
+          [
+            28299,
+            2
+          ],
+          [
+            28300,
+            1
+          ],
+          [
+            28540,
+            1
+          ],
+          [
+            28541,
+            3
+          ],
+          [
+            28542,
+            1
+          ],
+          [
+            28543,
+            1
+          ],
+          [
+            28781,
+            1
+          ],
+          [
+            28782,
+            2
+          ],
+          [
+            28783,
+            4
+          ],
+          [
+            28785,
+            1
+          ],
+          [
+            28786,
+            4
+          ],
+          [
+            29022,
+            1
+          ],
+          [
+            29023,
+            2
+          ],
+          [
+            29024,
+            3
+          ],
+          [
+            29025,
+            1
+          ],
+          [
+            29026,
+            2
+          ],
+          [
+            29262,
+            1
+          ],
+          [
+            29263,
+            1
+          ],
+          [
+            29264,
+            2
+          ],
+          [
+            29265,
+            2
+          ],
+          [
+            29266,
+            1
+          ],
+          [
+            29502,
+            1
+          ],
+          [
+            29503,
+            1
+          ]
+        ]
+      },
+      "view": {
+        "mode": "trajectory",
+        "bounds": [
+          -0.8660253882408142,
+          -5.5,
+          24.24871063232422,
+          14.5
+        ],
+        "steps": 32,
+        "padding": 3
+      }
+    },
+    {
+      "id": "hat-edmond-b-glider",
+      "category": "Einstein-hat gliders and launchers",
+      "title": "Hat glider B — Edmond rule",
+      "summary": "A two-cell seed launches a compact Hat glider under James Edmond’s published B priority table. Verified through 307 generations with a dead boundary buffer; no immortality or first-discovery claim.",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-B",
+      "generations": 4,
+      "borderRings": 1,
+      "speed": 6,
+      "view": {
+        "mode": "contain",
+        "padding": 4
+      },
+      "cellStates": [
+        [
+          2945,
+          1
+        ],
+        [
+          2943,
+          3
+        ]
+      ],
+      "expectedActivityThrough": 307
+    },
+    {
+      "id": "hat-edmond-a-glider",
+      "category": "Einstein-hat gliders and launchers",
+      "title": "Hat glider A — Edmond rule",
+      "summary": "A two-cell seed launches a compact Hat glider under James Edmond’s published A priority table. Verified through 307 generations with a dead boundary buffer; no immortality or first-discovery claim.",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-A",
+      "generations": 4,
+      "borderRings": 1,
+      "speed": 6,
+      "view": {
+        "mode": "contain",
+        "padding": 4
+      },
+      "cellStates": [
+        [
+          2945,
+          2
+        ],
+        [
+          2943,
+          1
+        ]
+      ],
+      "expectedActivityThrough": 307
+    },
+    {
+      "id": "hat-edmond-c-glider",
+      "category": "Einstein-hat gliders and launchers",
+      "title": "Hat glider C — Edmond rule",
+      "summary": "A two-cell seed launches a compact Hat glider under James Edmond’s published C priority table. Verified through 311 generations with a dead boundary buffer; no immortality or first-discovery claim.",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-C",
+      "generations": 4,
+      "borderRings": 1,
+      "speed": 6,
+      "view": {
+        "mode": "contain",
+        "padding": 4
+      },
+      "cellStates": [
+        [
+          7267,
+          1
+        ],
+        [
+          7283,
+          2
+        ]
+      ],
+      "expectedActivityThrough": 311
+    },
+    {
+      "id": "hat-simple-glider",
+      "category": "Einstein-hat gliders and launchers",
+      "title": "Hat glider — three-state variant",
+      "summary": "A derived three-state version of Edmond’s B rule reproduces the tested compact flights after relabelling. It differs on some other inputs; this is a finite reproduction, not a proof of endless travel.",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-SIMPLE",
+      "generations": 3,
+      "borderRings": 1,
+      "speed": 6,
+      "view": {
+        "mode": "contain",
+        "padding": 4
+      },
+      "cellStates": [
+        [
+          2945,
+          1
+        ],
+        [
+          2943,
+          2
+        ]
+      ],
+      "expectedActivityThrough": 307
+    },
+    {
+      "id": "hat-edmond-c-triple-launcher",
+      "category": "Einstein-hat gliders and launchers",
+      "title": "Hat triple launcher — two-cell seed",
+      "summary": "Two cells under Edmond’s C rule emit three separated compact travellers. Their complete independent evolutions reproduce the whole configuration through generation 160, with no leftover debris. This is a finite launcher, not a repeating gun.",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-C",
+      "generations": 4,
+      "borderRings": 1,
+      "speed": 6,
+      "view": {
+        "mode": "contain",
+        "padding": 4
+      },
+      "cellStates": [
+        [
+          23905,
+          1
+        ],
+        [
+          23907,
+          2
+        ]
+      ],
+      "expectedActivityThrough": 160
+    },
+    {
+      "id": "penrose-b2-c5-five-launcher",
+      "category": "Aperiodic travelling dynamics",
+      "title": "Penrose five-traveller launcher",
+      "summary": "Three live cells launch 5 separate compact 5-state travellers. Each emitted wave has a verified complete-state translated return with matching tile polygons and three surrounding neighbour rings; the demonstrated 240-generation traversal is finite.",
+      "tiling": "penrose",
+      "depth": 11,
+      "penroseSeed": "sun",
+      "neighborhood": "touch",
+      "rule": "B2/S",
+      "generations": 5,
+      "borderRings": 0,
+      "speed": 6,
+      "view": {
+        "mode": "contain",
+        "padding": 4
+      },
+      "cellStates": [
+        [
+          120863,
+          1
+        ],
+        [
+          120865,
+          1
+        ],
+        [
+          120867,
+          1
+        ]
+      ],
+      "expectedActivityThrough": 240
+    },
+    {
+      "id": "penrose-b2-c6-six-launcher",
+      "category": "Aperiodic travelling dynamics",
+      "title": "Penrose six-traveller launcher",
+      "summary": "Three live cells launch 6 separate compact 6-state travellers. Each emitted wave has a verified complete-state translated return with matching tile polygons and three surrounding neighbour rings; the demonstrated 200-generation traversal is finite.",
+      "tiling": "penrose",
+      "depth": 11,
+      "penroseSeed": "sun",
+      "neighborhood": "touch",
+      "rule": "B2/S",
+      "generations": 6,
+      "borderRings": 0,
+      "speed": 6,
+      "view": {
+        "mode": "contain",
+        "padding": 4
+      },
+      "cellStates": [
+        [
+          65275,
+          1
+        ],
+        [
+          65271,
+          1
+        ],
+        [
+          65274,
+          1
+        ]
+      ],
+      "expectedActivityThrough": 200
+    },
+    {
       id: 'square-block',
       category: 'Classic square Life',
       title: 'Block still life',
@@ -1389,5 +2514,14 @@
     },
   ];
 
-  return Object.freeze(entries.map((entry) => Object.freeze(entry)));
+  const hatHighlights = 'Einstein-hat gliders and launchers';
+  const orderedEntries = [
+    ...entries.filter((entry) => entry.category === hatHighlights),
+    ...entries.filter((entry) => entry.category !== hatHighlights),
+  ];
+  return Object.freeze(orderedEntries.map((entry) => {
+    if (entry.view.bounds) Object.freeze(entry.view.bounds);
+    Object.freeze(entry.view);
+    return Object.freeze(entry);
+  }));
 });

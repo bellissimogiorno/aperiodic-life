@@ -178,6 +178,7 @@
       Object.freeze({ depth: 6, tileCount: 1140 }),
       Object.freeze({ depth: 8, tileCount: 7920 }),
       Object.freeze({ depth: 10, tileCount: 54560 }),
+      Object.freeze({ depth: 11, tileCount: 143010, label: 'depth 11 — 143,010 cells (large)' }),
     ]),
   });
 
@@ -1547,14 +1548,101 @@
     return `B${formatCountList(births)}/S${formatCountList(survivals)}`;
   }
 
+  // Published semi-totalistic rules: all neighbour states are visible. The
+  // mathematical tables are independently transcribed; source records and
+  // attribution are in research/fixtures/published-priority-rules.json.
+  // Each row is [own state (null means any), [[state, minimum count], ...], next].
+  function priorityDefinition(states, name, rows) {
+    return Object.freeze({
+      states,
+      name,
+      rows: Object.freeze(rows.map(([own, conditions, next]) => Object.freeze({
+        own,
+        conditions: Object.freeze(conditions.map((condition) => Object.freeze(condition))),
+        next,
+      }))),
+    });
+  }
+
+  const PRIORITY_RULES = Object.freeze({
+    'TABLE:HAT-A': priorityDefinition(4, 'Edmond hat A', [
+      [0, [[2, 2]], 0],
+      [null, [[1, 3]], 3],
+      [2, [[1, 1], [0, 1]], 1],
+      [1, [[2, 1]], 3],
+      [0, [[1, 1]], 2],
+    ]),
+    'TABLE:HAT-B': priorityDefinition(4, 'Edmond hat B', [
+      [0, [[1, 2], [0, 1]], 0],
+      [0, [[0, 2], [2, 2]], 1],
+      [0, [[0, 2], [3, 1]], 1],
+      [1, [[3, 1]], 3],
+    ]),
+    'TABLE:HAT-C': priorityDefinition(4, 'Edmond hat C', [
+      [null, [[2, 1], [1, 3]], 3],
+      [1, [[2, 1]], 2],
+      [3, [[3, 3]], 3],
+      [0, [[3, 2]], 1],
+      [null, [[2, 1]], 1],
+    ]),
+    // A derived three-state variant of Hat B, with state 3 relabelled 2 and
+    // the empty-neighbour condition removed. It is not globally equivalent.
+    'TABLE:HAT-SIMPLE': priorityDefinition(3, 'Three-state hat relay', [
+      [0, [[1, 2]], 0],
+      [0, [[2, 1]], 1],
+      [1, [[2, 1]], 2],
+    ]),
+    'TABLE:SPECTRE': priorityDefinition(4, 'Edmond Spectre relay', [
+      [0, [[0, 3], [1, 1]], 3],
+      [3, [[3, 3]], 0],
+      [3, [[1, 1]], 1],
+    ]),
+    'TABLE:PENROSE-GOUCHER': priorityDefinition(4, 'Goucher Penrose glider', [
+      [0, [[1, 1], [2, 1]], 3],
+      [0, [[1, 1], [3, 2]], 1],
+      [1, [[3, 1]], 2],
+      [1, [], 1],
+      [2, [], 3],
+    ]),
+  });
+
+  function priorityTransition(rule, own, counts) {
+    for (const row of rule.rows) {
+      if (row.own !== null && row.own !== own) continue;
+      let matches = true;
+      for (const [state, minimum] of row.conditions) {
+        if ((counts[state] || 0) < minimum) {
+          matches = false;
+          break;
+        }
+      }
+      if (matches) return row.next;
+    }
+    return 0;
+  }
+
   function parseRule(text, maxDegree = 255) {
     if (!Number.isInteger(maxDegree) || maxDegree < 0 || maxDegree > 255) {
       throw new RangeError('maxDegree must be an integer from 0 to 255');
     }
     const normalized = String(text).toUpperCase().replace(/\s+/g, '');
+    if (normalized.startsWith('TABLE:')) {
+      const definition = Object.prototype.hasOwnProperty.call(PRIORITY_RULES, normalized)
+        ? PRIORITY_RULES[normalized]
+        : null;
+      if (!definition) throw new Error(`Unknown named priority rule: ${normalized}`);
+      return {
+        kind: 'priority',
+        text: normalized,
+        name: definition.name,
+        states: definition.states,
+        rows: definition.rows,
+        ignored: [],
+      };
+    }
     const match = /^B([^/]*)\/S(.*)$/.exec(normalized);
     if (!match) {
-      throw new Error('Use B…/S… notation, for example B3/S23, B2,4/S1,2,3, or B[10]/S[9,10]');
+      throw new Error('Use B…/S… notation, for example B3/S23 or B[10]/S[9,10], or a named rule such as TABLE:HAT-B');
     }
     const birth = parseCountList(match[1]);
     const survive = parseCountList(match[2]);
@@ -1610,6 +1698,7 @@
       this.borderRings = clampInteger(options.borderRings, 0, 0xffff, 0);
       this.boundaryDistance = graph.boundaryDistance || computeBoundaryDistance(graph.boundary || patch.boundary, graph);
       this.rule = parseRule(options.rule ?? 'B3/S23', graph.maxDegree);
+      if (this.rule.kind === 'priority') this.generations = this.rule.states;
       this.lastStepMilliseconds = 0;
       this.smoothedStepMilliseconds = 0;
       this.lastChangedCount = 0;
@@ -1660,12 +1749,16 @@
     }
 
     setRule(text) {
-      this.rule = parseRule(text, this.graph.maxDegree);
+      const rule = parseRule(text, this.graph.maxDegree);
+      this.rule = rule;
+      if (rule.kind === 'priority') this.setGenerations(rule.states);
       return this.rule;
     }
 
     setGenerations(value) {
-      this.generations = clampInteger(value, 2, 255, this.generations);
+      this.generations = this.rule.kind === 'priority'
+        ? this.rule.states
+        : clampInteger(value, 2, 255, this.generations);
       for (let i = 0; i < this.state.length; i++) {
         if (this.state[i] >= this.generations) this.state[i] = 0;
       }
@@ -1754,9 +1847,26 @@
       if (this.liveListDirty) this.rebuildLiveList();
       const { offsets, neighbors } = this.graph;
       const n = this.state.length;
+      const priority = this.rule.kind === 'priority';
+      const stateCounts = priority ? new Uint16Array(this.rule.states) : null;
       this.counts.fill(0);
 
-      for (let p = 0; p < this.liveLength; p++) {
+      // Every registered table keeps an all-zero neighbourhood quiescent at
+      // every degree. Only occupied cells and their neighbours need the table
+      // interpreter; the complete board is still updated and hashed below.
+      if (priority) {
+        if (!this.priorityCandidates) this.priorityCandidates = new Uint8Array(n);
+        this.priorityCandidates.fill(0);
+        for (let i = 0; i < n; i++) {
+          if (this.state[i] === 0) continue;
+          this.priorityCandidates[i] = 1;
+          for (let k = offsets[i]; k < offsets[i + 1]; k++) {
+            this.priorityCandidates[neighbors[k]] = 1;
+          }
+        }
+      }
+
+      for (let p = 0; !priority && p < this.liveLength; p++) {
         const cell = this.liveList[p];
         for (let k = offsets[cell]; k < offsets[cell + 1]; k++) {
           this.counts[neighbors[k]]++;
@@ -1775,6 +1885,16 @@
         let value = previous;
         if (this.isLocked(i)) {
           value = 0;
+        } else if (priority) {
+          value = 0;
+          if (this.priorityCandidates[i]) {
+            stateCounts.fill(0);
+            for (let k = offsets[i]; k < offsets[i + 1]; k++) {
+              stateCounts[this.state[neighbors[k]]]++;
+            }
+            this.counts[i] = stateCounts[1];
+            value = priorityTransition(this.rule, previous, stateCounts);
+          }
         } else if (value === 0) {
           value = birth[this.counts[i]] ? 1 : 0;
         } else if (value === 1) {
@@ -1930,6 +2050,8 @@
     buildEinsteinPatch,
     buildPenrosePatch,
     parseRule,
+    PRIORITY_RULES,
+    priorityTransition,
     formatRule,
     hashSeed,
     mulberry32,

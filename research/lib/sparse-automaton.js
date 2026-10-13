@@ -14,12 +14,23 @@ class SparseAutomaton {
   constructor(patch, graph, ruleText, generations) {
     this.patch = patch;
     this.graph = graph;
-    if (!Number.isInteger(generations) || generations < 2 || generations > 255) {
+    this.rule = Core.parseRule(ruleText, graph.maxDegree);
+    const stateCount = this.rule.kind === 'priority' ? this.rule.states : generations;
+    if (!Number.isInteger(stateCount) || stateCount < 2 || stateCount > 255) {
       throw new RangeError('generations must be an integer from 2 to 255');
     }
-    this.generations = generations;
-    this.rule = Core.parseRule(ruleText, graph.maxDegree);
-    if (this.rule.birthLookup[0]) {
+    this.generations = stateCount;
+    if (this.rule.kind === 'priority') {
+      // Sparse evaluation requires quiescence even on a finite-board boundary.
+      // Count zero neighbours explicitly: omitting them changes these rules.
+      const counts = new Uint16Array(stateCount);
+      for (let degree = 0; degree <= graph.maxDegree; degree++) {
+        counts[0] = degree;
+        if (Core.priorityTransition(this.rule, 0, counts) !== 0) {
+          throw new RangeError('SparseAutomaton requires a quiescent priority rule');
+        }
+      }
+    } else if (this.rule.birthLookup[0]) {
       throw new RangeError('SparseAutomaton does not support B0 rules');
     }
 
@@ -60,6 +71,7 @@ class SparseAutomaton {
   }
 
   step() {
+    if (this.rule.kind === 'priority') return this.stepPriority();
     const { offsets, neighbors } = this.graph;
     this.candidates.length = 0;
     this.countTouched.length = 0;
@@ -107,6 +119,55 @@ class SparseAutomaton {
     }
     for (const cell of this.countTouched) this.counts[cell] = 0;
 
+    this.active = nextActive;
+    this.live = nextLive;
+    this.generation++;
+    this.lastChangedCount = changed;
+    return this.active.length;
+  }
+
+  stepPriority() {
+    const { offsets, neighbors } = this.graph;
+    this.candidates.length = 0;
+    const mark = (cell) => {
+      if (this.candidateFlag[cell]) return;
+      this.candidateFlag[cell] = 1;
+      this.candidates.push(cell);
+    };
+    // Every nonzero state can influence its neighbours, including a wing or
+    // inhibitor which would be invisible to a Generations rule.
+    for (const cell of this.active) {
+      mark(cell);
+      for (let cursor = offsets[cell]; cursor < offsets[cell + 1]; cursor++) {
+        mark(neighbors[cursor]);
+      }
+    }
+
+    const counts = new Uint16Array(this.generations);
+    const updates = [];
+    const nextActive = [];
+    const nextLive = [];
+    let changed = 0;
+    for (const cell of this.candidates) {
+      counts.fill(0);
+      for (let cursor = offsets[cell]; cursor < offsets[cell + 1]; cursor++) {
+        counts[this.state[neighbors[cursor]]]++;
+      }
+      const previous = this.state[cell];
+      const value = Core.priorityTransition(this.rule, previous, counts);
+      updates.push(value);
+      if (value !== previous) changed++;
+      if (value) {
+        nextActive.push(cell);
+        if (value === 1) nextLive.push(cell);
+      }
+    }
+    // Apply only after all reads, so the update is synchronous.
+    for (let index = 0; index < this.candidates.length; index++) {
+      const cell = this.candidates[index];
+      this.state[cell] = updates[index];
+      this.candidateFlag[cell] = 0;
+    }
     this.active = nextActive;
     this.live = nextLive;
     this.generation++;

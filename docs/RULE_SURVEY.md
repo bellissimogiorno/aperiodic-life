@@ -1,6 +1,22 @@
 # Catalogue rules and structures
 
-The 69 configurations in `discoveries.js` use a uniform graph-totalistic model: each tile is one cell, and rules inspect only its state and number of state-1 neighbours. Geometry and the selected contact graph supply the local structure. The [configuration reference](CONFIGURATION.md) defines binary and refractory transitions.
+The 81 configurations in `discoveries.js` use each tile as one cell. B/S rules count state-1 neighbours, with optional refractory states; named priority tables count neighbours in each state separately. Neither family reads tile orientation or hierarchy. Geometry and the selected contact graph supply the local structure. The [configuration reference](CONFIGURATION.md) defines both transition models.
+
+## Einstein-hat travellers and launchers
+
+The hat catalogue now includes travelling patterns under James Edmond's published priority-table rules and a derived three-state rule. They use the existing hat touch graph. The listed horizons are complete-state replays on this project's independently generated geometry, with boundary clearance throughout.
+
+| Configuration | Named rule | States | Verified generations |
+| --- | --- | ---: | ---: |
+| Hat A single traveller | `TABLE:HAT-A` | 4 | 307 |
+| Hat B single traveller | `TABLE:HAT-B` | 4 | 307 |
+| Hat C single traveller | `TABLE:HAT-C` | 4 | 311 |
+| Three-state hat relay | `TABLE:HAT-SIMPLE` | 3 | 307 |
+| Hat C triple launcher | `TABLE:HAT-C` | 4 | 160 |
+
+These are finite demonstrations, not proofs of unlimited flight. The triple launcher emits separate moving objects; it is not a periodically emitting gun. A launch and a settled single traveller are different catalogue behaviours under the same rule.
+
+Edmond's [18 September 2026 preprint](https://arxiv.org/abs/2609.22579) reports hat and Spectre patterns followed for one million graph-distance rings, while explicitly leaving indefinite propagation unproved. His rules therefore precede these reproductions. The derived SIMPLE rule relabels Hat B's state 3 as 2 and removes its empty-neighbour condition. It matches the checked flights but differs on arbitrary states; no priority claim is made for that simplification. See [rule sources](../research/fixtures/published-priority-rules.json) and [attribution](../THIRD_PARTY_LICENSES.md).
 
 ## Exact localised oscillators
 
@@ -35,14 +51,16 @@ The touch-graph `B2/S` family has a live front followed by refractory cells. Fou
 | `B2/S4` | 5 | 7 live cells | 200 | Two four-neighbour survivals |
 | `B26/S` | 4 | 18 nonzero cells, including 8 live | 200 | One six-neighbour birth |
 | `B27/S4` | 4 | 26 live cells | 200 | Four seven-neighbour births and seven four-neighbour survivals |
+| `B2/S` | 5 | Five-traveller launcher, depth 11 | 240 | Multiple separate compact travellers |
+| `B2/S` | 6 | Six-traveller launcher, depth 11 | 200 | Multiple separate compact travellers |
 
 The launchers demonstrate distinct rule-dependent transients into related compact motion. Catalogue contracts check the distinguishing events, boundary clearance, trajectory bounds, translated phases, and complete final states.
 
-**All Penrose travel claims are finite.** A radius-3 graph match at two phases does not give a global translation symmetry. The continuation may encounter a different environment. These results do not establish an indefinitely propagating glider, a gun, a stable collision system, or computation on the tiling.
+**All catalogue Penrose travel claims are finite.** A radius-3 graph match at two phases does not give a global translation symmetry. The continuation may encounter a different environment. These results do not establish an indefinitely propagating B/S glider, a gun, a stable collision system, or computation on the tiling. Goucher's different multistate rule has a published geometric propagation argument, discussed below.
 
 ## Regular hexagonal spaceships
 
-The catalogue contains 28 hexagonal configurations. The [hexagonal guide](HEXAGONAL_STRUCTURES.md) covers the full selection, including exact spaceships, oscillators, rotors, a gun, a puffer, wall repair, a billiard table and a parity replicator. The table below records the original traveller benchmarks; the guide supplies the additional examples and their source and verification records.
+The catalogue contains 33 hexagonal configurations, including exact spaceships, oscillators, rotors, a gun, a puffer, wall repair, a billiard table and a parity replicator. The [hexagonal guide](HEXAGONAL_STRUCTURES.md) introduces the main behaviours. The table below records the original traveller benchmarks; the catalogue and research fixtures supply the complete current selection and verification records.
 
 The regular hexagonal lattice is translation invariant. Exact complete-state recurrence under a nonzero axial translation therefore establishes indefinitely repeated motion on the unbounded lattice when the observed evolution is independent of the finite boundary.
 
@@ -86,9 +104,13 @@ Search output is evidence for its recorded configurations and horizons. Coarse d
 
 ## Related mathematical work
 
-Life-like Penrose rules, ribbon-based glider constructions, and universal semi-totalistic Penrose automata provide useful comparisons. Ribbon information or richer local classifications change the model: they are not equivalent to the uniform neighbour-count rules implemented here.
+Goucher's four-state Penrose rule is uniform and semi-totalistic: it reads neighbour-state counts, not ribbon labels or tile orientations. De Bruijn ribbons enter its geometric proof: on P3 rhombs, entering one edge and leaving the opposite parallel edge gives monotone progress. On kite-and-dart tilings related paths can close. Its printed table's second row must produce state 1 rather than 3 to agree with the adjoining prose; the corrected rule is available programmatically as `TABLE:PENROSE-GOUCHER`.
 
-- N. Owens and S. Stepney, *Investigations of Game of Life Cellular Automata Rules on Penrose Tilings*, [arXiv:0901.3979](https://arxiv.org/abs/0901.3979).
-- D. Bailey and E. Lindsey, *A Game of Life Glider on the Penrose Tiling*, [arXiv:1708.09301](https://arxiv.org/abs/1708.09301).
-- K. Imai, H. Ishizaka, and V. Poupet, *A Universal Semi-Totalistic Cellular Automaton on Kite and Dart Penrose Tilings*, [arXiv:1201.1379](https://arxiv.org/abs/1201.1379).
+The Bailey–Lindsey construction uses additional local tiling structure to obtain an automaton isomorphic to ordinary Life. It is a different construction from Goucher's rule and from the catalogue's B/S travellers. Aperiodicity alone does not prohibit gliders or universal computation.
+
+- N. Owens and S. Stepney, *Investigations of Game of Life Cellular Automata Rules on Penrose Tilings: Lifetime, Ash, and Oscillator Statistics*, Journal of Cellular Automata 5(3), 2010, 207–225, [author's copy](https://www-users.york.ac.uk/~ss44/bib/ss/nonstd/jca10.pdf).
+- A. P. Goucher, *Gliders in Cellular Automata on Penrose Tilings*, Journal of Cellular Automata 7(5–6), 2012, 385–392, [author's copy](https://cp4space.hatsya.com/wp-content/uploads/2012/11/2012-penrose-gliders.pdf).
+- D. A. Bailey and K. A. Lindsey, *A Game of Life on Penrose tilings*, [arXiv:1708.09301](https://arxiv.org/abs/1708.09301).
+- K. Imai, T. Hatsuda, V. Poupet, and K. Sato, *A Universal Semi-totalistic Cellular Automaton on Kite and Dart Penrose Tilings*, [arXiv:1208.2771](https://arxiv.org/abs/1208.2771).
+- J. Edmond, *Gliders on Aperiodic Monotilings: Cellular Automata on the Hat and Spectre*, [arXiv:2609.22579](https://arxiv.org/abs/2609.22579).
 - Carter Bays, *A Note on the Game of Life in Hexagonal and Pentagonal Tessellations*, [Complex Systems 15(3)](https://www.complex-systems.com/abstracts/v15_i03_a04/).

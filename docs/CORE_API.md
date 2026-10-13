@@ -72,9 +72,23 @@ Graphs are undirected, duplicate-free, self-loop-free, and connected for built-i
 Core.parseRule('B3/S23', 8);
 Core.parseRule('B2,4/S1,2,3', 8);
 Core.parseRule('B[10]/S[9,10]', 11);
+Core.parseRule('TABLE:HAT-B', 7);
 ```
 
-The result contains canonical `text`, sorted count arrays, byte lookup tables, and `ignored` counts above the graph degree. Counts are restricted to 0–255.
+For `B…/S…`, the result contains canonical `text`, sorted count arrays, byte lookup tables, and `ignored` counts above the graph degree. Counts are restricted to 0–255.
+
+A named table returns `{ kind: 'priority', text, name, states, rows, ignored: [] }`. Each row has `{ own, conditions, next }`: `own: null` matches any current state, and each condition `[state, minimum]` tests a neighbour-state count. The first matching row determines the next state; no matching row means state 0. Counts include neighbours in state 0. These objects do not have B/S lookup arrays.
+
+### `PRIORITY_RULES` and `priorityTransition(rule, own, counts)`
+
+The immutable registry provides `TABLE:HAT-A`, `TABLE:HAT-B`, `TABLE:HAT-C`, `TABLE:HAT-SIMPLE`, `TABLE:SPECTRE` and `TABLE:PENROSE-GOUCHER`. `priorityTransition` evaluates one cell from an already parsed table and an array of counts indexed by state. It does not inspect geometry or mutate its arguments.
+
+```js
+const rule = Core.parseRule('TABLE:HAT-SIMPLE');
+Core.priorityTransition(rule, 0, [5, 0, 1]); // 1
+```
+
+The names identify rules, not geometry backends: `TABLE:SPECTRE` does not add a Spectre tiling to the app. Only the hat table presets are presented in the browser. The [source records](../research/fixtures/published-priority-rules.json) distinguish published rules from the derived three-state variant.
 
 ### `formatRule(birth, survive)`
 
@@ -111,7 +125,13 @@ Methods:
 - `refreshDerivedState()` after intentional direct state mutation
 - `refreshStateHash()` and `ensureStateHash()`
 
-Only state 1 contributes to neighbour counts. State 2 and above are refractory.
+With B/S rules, only state 1 contributes to neighbour counts and states 2 and above are refractory. Priority tables count every state separately; higher states can send signals to their neighbours and need not age towards zero. `aliveCount()` continues to mean the count of state-1 cells, rather than the complete nonzero population.
+
+A table fixes its state count. Construction and `setRule()` adopt that count; `setGenerations()` preserves it while a table is selected. Switching to a smaller count clears cells whose values are no longer valid. To return to a chosen B/S count, call `setRule('B…/S…')` followed by `setGenerations(count)`.
+
+`setCell()` remains a binary painting operation. For a multistate experimental seed, assign valid integers below `generations` directly to `state`, then call `refreshDerivedState()`. Exact state files retain those values.
+
+All registered tables preserve an entirely zero neighbourhood at every graph degree. The engine uses this property to interpret only occupied cells and their neighbours while still updating and hashing the whole state array. The research `SparseAutomaton` follows the same synchronous semantics and includes neighbours of every nonzero state. Its constructor checks quiescence at every degree up to the graph maximum.
 
 The dual hashes are deterministic acceleration keys, not cryptographic digests. Confirm full state equality before declaring recurrence.
 

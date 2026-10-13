@@ -1,0 +1,70 @@
+{
+  "tiling": "hat",
+  "depth": 5,
+  "neighborhood": "touch",
+  "centre": 24272,
+  "degree": 7,
+  "originalSeed": [
+    [
+      24271,
+      3
+    ],
+    [
+      24273,
+      3
+    ],
+    [
+      24279,
+      3
+    ],
+    [
+      24282,
+      3
+    ],
+    [
+      24283,
+      3
+    ],
+    [
+      24286,
+      3
+    ],
+    [
+      24270,
+      3
+    ]
+  ],
+  "simplifiedSeed": [
+    [
+      24271,
+      2
+    ],
+    [
+      24273,
+      2
+    ],
+    [
+      24279,
+      2
+    ],
+    [
+      24282,
+      2
+    ],
+    [
+      24283,
+      2
+    ],
+    [
+      24286,
+      2
+    ],
+    [
+      24270,
+      2
+    ]
+  ],
+  "originalNextCentre": 0,
+  "simplifiedNextCentre": 1,
+  "meaning": "The missing empty-neighbour birth requirement changes arbitrary configurations; the two rules are not globally equivalent."
+}

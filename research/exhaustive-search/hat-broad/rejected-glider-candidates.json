@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "tiling": "hat",
+  "depth": 5,
+  "examples": [
+    {
+      "id": "endpoint-drift-wave",
+      "neighborhood": "edge",
+      "rule": "B26/S2358",
+      "generations": 6,
+      "cellStates": [
+        [
+          8294,
+          1
+        ],
+        [
+          8295,
+          1
+        ],
+        [
+          8298,
+          1
+        ],
+        [
+          8332,
+          1
+        ]
+      ],
+      "expectedExtinction": 557,
+      "description": "Large endpoint displacement conceals a spreading and contracting transient."
+    },
+    {
+      "id": "two-cell-shift-then-clock",
+      "neighborhood": "edge",
+      "rule": "B2/S145",
+      "generations": 2,
+      "cellStates": [
+        [
+          13411,
+          1
+        ],
+        [
+          13504,
+          1
+        ]
+      ],
+      "translatedReturn": {
+        "from": 0,
+        "to": 37,
+        "translation": [
+          4.5,
+          2.59808
+        ]
+      },
+      "expectedCycle": {
+        "transient": 38,
+        "period": 2
+      },
+      "description": "A complete translated two-cell return is followed by a stationary oscillator."
+    },
+    {
+      "id": "compact-pulse-c5",
+      "neighborhood": "touch",
+      "rule": "B268/S256",
+      "generations": 5,
+      "cellStates": [
+        [
+          21945,
+          1
+        ],
+        [
+          21946,
+          1
+        ],
+        [
+          21959,
+          1
+        ],
+        [
+          21960,
+          1
+        ],
+        [
+          21961,
+          1
+        ],
+        [
+          21962,
+          1
+        ],
+        [
+          22052,
+          1
+        ],
+        [
+          22054,
+          1
+        ],
+        [
+          22055,
+          1
+        ],
+        [
+          22058,
+          1
+        ],
+        [
+          22059,
+          1
+        ],
+        [
+          22060,
+          1
+        ],
+        [
+          22061,
+          1
+        ],
+        [
+          22063,
+          1
+        ],
+        [
+          22247,
+          1
+        ],
+        [
+          22262,
+          1
+        ],
+        [
+          29405,
+          1
+        ],
+        [
+          29407,
+          1
+        ],
+        [
+          29409,
+          1
+        ],
+        [
+          29410,
+          1
+        ]
+      ],
+      "translatedReturn": {
+        "from": 13,
+        "to": 29,
+        "translation": [
+          12,
+          12.1244
+        ]
+      },
+      "expectedExtinction": 48,
+      "description": "Compact motion has complete translated phases but eventually extinguishes."
+    },
+    {
+      "id": "compact-pulse-c6",
+      "neighborhood": "touch",
+      "rule": "B2/S256",
+      "generations": 6,
+      "cellStates": [
+        [
+          3158,
+          1
+        ],
+        [
+          3159,
+          1
+        ],
+        [
+          3160,
+          1
+        ],
+        [
+          3161,
+          1
+        ],
+        [
+          3793,
+          1
+        ],
+        [
+          3795,
+          1
+        ],
+        [
+          3886,
+          1
+        ],
+        [
+          3890,
+          1
+        ],
+        [
+          3896,
+          1
+        ],
+        [
+          3900,
+          1
+        ],
+        [
+          3901,
+          1
+        ]
+      ],
+      "translatedReturn": {
+        "from": 15,
+        "to": 31,
+        "translation": [
+          -16.5,
+          4.33013
+        ]
+      },
+      "expectedExtinction": 50,
+      "description": "Compact motion has complete translated phases but eventually extinguishes."
+    }
+  ]
+}

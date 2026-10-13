@@ -1,0 +1,14 @@
+'use strict';
+const fs=require('fs');const P=require('./priority-probe.js');const {patch,graph,edge,definitions,initialise,step,snapshot}=P;
+const random=require('../../../core.js').mulberry32(3651041);
+const starts=Array.from({length:patch.tileCount},(_,i)=>i).filter(i=>graph.boundaryDistance[i]>70);
+function clusters(cells){const n=cells.length,seen=new Set(),out=[];for(let i=0;i<n;i++){if(seen.has(i))continue;const todo=[i];seen.add(i);for(let k=0;k<todo.length;k++){const a=cells[todo[k]][0];for(let j=0;j<n;j++){const b=cells[j][0];if(!seen.has(j)&&Math.hypot(patch.centers[2*a]-patch.centers[2*b],patch.centers[2*a+1]-patch.centers[2*b+1])<12){seen.add(j);todo.push(j);}}}const group=todo.map(j=>cells[j]);let x=0,y=0;for(const [i]of group){x+=patch.centers[2*i];y+=patch.centers[2*i+1];}x/=group.length;y/=group.length;let radius=0;for(const [i]of group)radius=Math.max(radius,Math.hypot(patch.centers[2*i]-x,patch.centers[2*i+1]-y));out.push({cells:group,centre:[x,y],radius});}return out;}
+let count=0,accepted=0;
+for(const name of ['C','B','A'])for(let trial=0;trial<3000;trial++){
+ count++;const a=starts[Math.floor(random()*starts.length)],nb=edge.neighbors.slice(edge.offsets[a],edge.offsets[a+1]),b=nb[Math.floor(random()*nb.length)],pair=definitions[name].pair,seed=trial%2?[[a,pair[0]],[b,pair[1]]]:[[a,pair[1]],[b,pair[0]]];initialise(seed);const checkpoints=[];let peak=0,border=99999,good=true,final=[];for(let t=0;t<=160;t++){const cells=snapshot();peak=Math.max(peak,cells.length);for(const [i]of cells)border=Math.min(border,graph.boundaryDistance[i]);if(border<5||peak>45||!cells.length){good=false;break;}if([80,120,160].includes(t))checkpoints.push({generation:t,clusters:clusters(cells)});if(t===160){final=cells;break;}step(definitions[name]);}
+ if(!good)continue;const groups=checkpoints[2].clusters;const multiplicity=groups.length;if(multiplicity<2||multiplicity>4)continue;if(checkpoints.some(c=>c.clusters.length!==multiplicity||c.clusters.some(g=>g.cells.length<4||g.radius>8)))continue;
+ // Require each separated object's centre to progress at least 25 units during both measured 40-generation windows.
+ let match=true;for(let c=1;c<checkpoints.length;c++)for(const g of checkpoints[c].clusters){const distances=checkpoints[c-1].clusters.map(h=>Math.hypot(g.centre[0]-h.centre[0],g.centre[1]-h.centre[1]));if(Math.min(...distances)<25)match=false;}
+ if(!match)continue;accepted++;const result={kind:'launcher',tiling:'hat',depth:5,neighborhood:'touch',ruleFamily:'priority-table',preset:name,trial,cellStates:seed,multiplicity,verifiedThrough:160,maxPopulation:peak,minimumBoundary:border,checkpoints,finalStates:final};console.log(JSON.stringify(result));if(accepted%20===0)console.error('accepted',accepted,'count',count);
+}
+console.log(JSON.stringify({kind:'summary',seed:3651041,trials:count,horizon:160,accepted}));

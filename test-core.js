@@ -226,7 +226,7 @@ let largestPenrosePatch;
 
 assert.deepEqual(
   PATCH_OPTIONS.penrose.map((entry) => [entry.depth, entry.tileCount]),
-  penroseDepths.map((depth, index) => [depth, penroseCounts[index]]),
+  [...penroseDepths.map((depth, index) => [depth, penroseCounts[index]]), [11, 143010]],
 );
 assert.deepEqual(
   PATCH_OPTIONS.hat.map((entry) => [entry.depth, entry.tileCount]),

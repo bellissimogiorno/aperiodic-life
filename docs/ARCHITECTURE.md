@@ -33,7 +33,7 @@ Hashes are only candidate keys. Browser cycle detection confirms equality agains
 
 ### Catalogue (`discoveries.js`)
 
-The catalogue is declarative data. An entry specifies a board, graph, rule, state count, border, declared playback speed, view policy, and either explicit cells or a deterministic random seed. Speeds are integers in the UI's 1–240 range, and the exact 69-entry mapping is frozen by regression tests; view objects and trajectory-bound arrays are immutable. Claimed periods, finite travel, horizons, and presentation metadata are regression-tested by `test-discoveries.js`; `research/verify-catalog.js` independently checks the behavioural catalogue claims. Traveller entries may also declare directionality, live-population bounds, component-count history, required birth or survival clauses, and exact translated phases; independent tests replay their complete states and local graph translations. Regular-hexagonal fixtures use axial translations; Penrose fixtures additionally require a checked local-graph radius because congruent translated tile sets do not imply a global symmetry of the aperiodic board.
+The catalogue is declarative data. An entry specifies a board, graph, rule, state count, border, declared playback speed, view policy, and either explicit cells or a deterministic random seed. Speeds are integers in the UI's 1–240 range, and the exact 81-entry mapping is frozen by regression tests; view objects and trajectory-bound arrays are immutable. Claimed periods, finite travel, horizons, and presentation metadata are regression-tested by `test-discoveries.js`; `research/verify-catalog.js` independently checks the behavioural catalogue claims. Traveller entries may also declare directionality, live-population bounds, component-count history, required birth or survival clauses, and exact translated phases; independent tests replay their complete states and local graph translations. Regular-hexagonal fixtures use axial translations; Penrose fixtures additionally require a checked local-graph radius because congruent translated tile sets do not imply a global symmetry of the aperiodic board.
 
 View metadata has one of three modes:
 
@@ -165,3 +165,9 @@ Each generation is keyed by two state hashes and alive count, then checked byte-
 ## Determinism
 
 Geometry, seeded random initialisation, catalogue loading, and research scripts are deterministic for a fixed source revision. Rendering pixels are not promised byte-identical across GPUs or browsers.
+
+## Priority-table rules
+
+The named registry in `core.js` defines immutable ordered semi-totalistic tables. Every neighbour state, including zero, contributes to its own count. First-match priority and the default-to-zero transition are explicit. Each registered table is quiescent on an all-zero neighbourhood. Dense stepping therefore marks every nonzero cell and its neighbours before interpreting tables, while still updating and hashing the entire board. Ordinary B/S stepping keeps its state-1 neighbour accumulation. The sparse engine follows the same synchronous semantics; independent references in `research/aperiodic-reference.js` verify them.
+
+The rule selector locks the state count for a table and explains that its higher states influence neighbours. Exact snapshots retain named rules and reject mismatched state counts. Penrose depth 11 is available for the larger launcher examples. `test-priority-rules.js` checks transitions, all-state trajectories, emitted-body independence and labelled tile/dead-halo matches; it does not infer infinite propagation from a finite match.
