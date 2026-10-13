@@ -29,6 +29,8 @@ PROFILES = {
         ["node", "test-regular-topology.js"],
         ["node", "test-interactions.js"],
         ["node", "test-snapshots.js"],
+        ["node", "tools/build_catalogue_credits.js", "--check"],
+        ["node", "research/verify-hex-published-provenance.js"],
         ["node", "test-discoveries.js"],
         ["node", "test-structures.js"],
         ["node", "test-search-tools.js"],

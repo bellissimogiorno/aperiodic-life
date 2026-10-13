@@ -75,6 +75,10 @@ Direct acceptance remains necessary for target browser/GPU combinations. Check t
 
 ## Source and release checks
 
+`node tools/build_catalogue_credits.js --check` requires exactly one valid provenance record per example, existing local evidence paths, HTTP(S) source links, and matching generated documentation and offline data. Interaction tests check safe credit rendering, author searching and removal of stale source links when the selection changes. These checks establish consistency of attribution metadata, not historical originality.
+
+`node research/verify-hex-published-provenance.js` independently compares all eleven published hexagonal examples with retained source RLEs, allowing the recorded phase shifts, lattice symmetries and translations. The period-48 source contains two independent oscillators; the verifier checks the extracted component. These identity checks also cover known patterns independently recovered by the search.
+
 Static checks require the four tilings, all 81 entries, discovery and help controls, complete MIT and BSD notices, and absence of external runtime scripts or styles. `node build-standalone.js --check` requires the checked-in standalone to match the expanded source.
 
 `test-package.py` and `test-repository.py` cover deterministic archives, source completeness, safe paths, file exclusions, integrity metadata, standalone freshness, output-path rejection, and the static-site payload. Both run in the standard profile. See [release operations](OPERATIONS.md) for packaging and [CI](CI.md) for hosted workflows.

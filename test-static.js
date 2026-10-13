@@ -79,7 +79,7 @@ const requiredIds = [
   'tilingSelect', 'depthSelect', 'penroseSeedField', 'penroseSeedSelect',
   'neighborhoodSelect', 'neighborhoodHelp', 'neighborhoodInfoButton', 'borderInput', 'presetSelect',
   'ruleInput', 'ruleInfoButton', 'rulesDialog', 'generationsInput', 'discoverySelect', 'loadDiscoveryButton', 'loadRunDiscoveryButton',
-  'discoveryDescription', 'densityInput', 'seedInput', 'speedInput',
+  'discoveryDescription', 'discoveryProvenance', 'densityInput', 'seedInput', 'speedInput',
   'typeCheckbox', 'tilingStat', 'changedStat', 'cycleStat', 'tileTypesStat',
   'lifeCanvas',
 ];
@@ -90,6 +90,15 @@ for (const id of requiredIds) {
 
 const catalogue = require('./discoveries.js');
 assert.equal(catalogue.length, 81, 'unexpected curated discovery count');
+const provenance = require('./research/fixtures/catalogue-provenance.json');
+assert.deepStrictEqual(catalogue.map((entry) => ({ id: entry.id, ...entry.provenance })), provenance,
+  'offline credits must match the canonical records for every example');
+for (const entry of catalogue) {
+  assert(Object.isFrozen(entry.provenance), `mutable credit: ${entry.id}`);
+  assert(Object.isFrozen(entry.provenance.sources), `mutable sources: ${entry.id}`);
+  assert(entry.provenance.sources.every(Object.isFrozen), `mutable source link: ${entry.id}`);
+  assert(Object.isFrozen(entry.provenance.evidence), `mutable evidence: ${entry.id}`);
+}
 for (const [id, title] of [
   ['hex-b245s3-p10-traveller', 'Hexagonal B245/S3 p10 traveller'],
   ['hex-b235s146-c4-launcher-traveller', 'Hexagonal B235/S146 four-state launcher'],

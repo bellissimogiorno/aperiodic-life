@@ -66,9 +66,13 @@
 
   function discoveryMatches(entry, query) {
     const terms = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    const provenance = entry.provenance || {};
+    const sourceLabels = Array.isArray(provenance.sources)
+      ? provenance.sources.map((source) => source.label).join(' ')
+      : '';
     const text = [entry.title, entry.summary, entry.category, entry.tiling,
       entry.tiling === 'hat' ? 'Einstein' : '', entry.neighborhood, entry.rule,
-      `${entry.generations} states`].join(' ').toLowerCase();
+      `${entry.generations} states`, provenance.credit, sourceLabels].join(' ').toLowerCase();
     return terms.every((term) => text.includes(term));
   }
 
@@ -695,7 +699,7 @@
         'neighborhoodSelect', 'neighborhoodHelp', 'neighborhoodInfoButton', 'borderInput', 'presetSelect',
         'ruleInput', 'ruleHelp', 'ruleMeaningHelp', 'statesHelp', 'ruleInfoButton', 'rulesDialog', 'randomRuleButton', 'generationsInput',
         'discoverySelect', 'discoverySearch', 'discoveryCount', 'catalogueCount',
-        'loadDiscoveryButton', 'loadRunDiscoveryButton', 'discoveryDescription',
+        'loadDiscoveryButton', 'loadRunDiscoveryButton', 'discoveryDescription', 'discoveryProvenance',
         'saveSnapshotButton', 'loadSnapshotButton', 'snapshotFileInput', 'snapshotStatus',
         'densityInput', 'densityOutput', 'seedInput', 'newSeedButton', 'speedInput',
         'speedOutput', 'toolSelect', 'gridCheckbox', 'typeCheckbox', 'paletteSelect',
@@ -731,10 +735,10 @@
         option.textContent = entry.title;
         group.appendChild(option);
       }
-      placeholder.textContent = count ? 'Choose a verified example…' : 'No matching discoveries';
+      placeholder.textContent = count ? 'Choose a verified example…' : 'No matching examples';
       select.replaceChildren(placeholder, ...groups.values());
       select.value = [...select.options].some((option) => option.value === selected) ? selected : '';
-      this.elements.discoveryCount.textContent = `${count} of ${DISCOVERIES.length} discoveries`;
+      this.elements.discoveryCount.textContent = `${count} of ${DISCOVERIES.length} examples`;
       this.elements.catalogueCount.textContent = String(DISCOVERIES.length);
       this.updateDiscoveryDescription();
     }
@@ -1507,6 +1511,43 @@
       this.elements.discoveryDescription.textContent = entry
         ? entry.summary
         : 'Includes classic reference patterns, high-period aperiodic oscillators, and evolving fields.';
+      const container = this.elements.discoveryProvenance;
+      const provenance = entry && entry.provenance;
+      container.replaceChildren();
+      container.hidden = !provenance;
+      if (!provenance) return;
+
+      const statusLabels = {
+        published: 'Published example',
+        adapted: 'Adapted example',
+        'package-found': 'Found in package searches',
+        'package-constructed': 'Package demonstration',
+        unresolved: 'Attribution unresolved',
+      };
+      const status = document.createElement('strong');
+      status.textContent = `${statusLabels[provenance.status] || 'Provenance'}: `;
+      const credit = document.createElement('span');
+      credit.textContent = provenance.credit;
+      container.appendChild(status);
+      container.appendChild(credit);
+
+      const sources = document.createElement('span');
+      sources.className = 'discovery-source-links';
+      let linkCount = 0;
+      for (const source of provenance.sources || []) {
+        let url;
+        try { url = new URL(source.url); } catch (_) { continue; }
+        if (!['https:', 'http:'].includes(url.protocol)) continue;
+        if (linkCount) sources.appendChild(document.createTextNode(' · '));
+        const link = document.createElement('a');
+        link.href = url.href;
+        link.textContent = source.label;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        sources.appendChild(link);
+        if (++linkCount === 3) break;
+      }
+      if (linkCount) container.appendChild(sources);
     }
 
     coordinateMap() {

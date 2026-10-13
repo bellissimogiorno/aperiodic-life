@@ -25,8 +25,115 @@ const windowStub = {
   addEventListener() {},
 };
 class HTMLElementStub {}
-vm.runInNewContext(instrumented, { window: windowStub, HTMLElement: HTMLElementStub });
+class DOMNodeStub extends HTMLElementStub {
+  constructor(tagName) {
+    super();
+    this.tagName = tagName.toUpperCase();
+    this.children = [];
+    this._text = '';
+    this.value = '';
+  }
+  set textContent(value) { this._text = String(value); this.children = []; }
+  get textContent() { return this._text + this.children.map((child) => child.textContent).join(''); }
+  set innerHTML(_) { throw new Error('Example credits must use text and DOM nodes'); }
+  appendChild(child) { this.children.push(child); return child; }
+  replaceChildren(...children) { this._text = ''; this.children = children; }
+  get options() {
+    return this.children.flatMap((child) => child.tagName === 'OPTION' ? [child] : child.options || []);
+  }
+  querySelector() { return this.options.find((option) => option.value === '') || null; }
+}
+const documentStub = {
+  createElement: (tagName) => new DOMNodeStub(tagName),
+  createTextNode: (textContent) => ({ textContent }),
+};
+vm.runInNewContext(instrumented, {
+  window: windowStub, HTMLElement: HTMLElementStub, document: documentStub, URL,
+});
 const { AperiodicLifeApp, WebGLRenderer } = windowStub.__interactionTestClasses;
+
+{
+  // Credits follow the selected example without retaining stale attribution.
+  // Markup-looking credit text stays text, and only web links are clickable.
+  const app = Object.create(AperiodicLifeApp.prototype);
+  const first = {
+    id: 'credited', title: 'Finite traveller', summary: 'A finite replay.',
+    category: 'Hat examples', tiling: 'hat', generations: 4, rule: 'TABLE:HAT-B',
+    provenance: {
+      status: 'published', credit: '<img src=x> James Edmond',
+      sources: [
+        { label: 'Unsafe', url: 'javascript:alert(1)' },
+        { label: 'Broken', url: 'not a URL' },
+        { label: 'Project <b>site</b>', url: 'https://offlattice.org/monotile/' },
+        { label: 'Paper', url: 'https://arxiv.org/abs/2609.22579' },
+        { label: 'Compendium', url: 'https://github.com/jamesedmond/monotile-ca/blob/main/GLIDERS.md' },
+        { label: 'Fourth source', url: 'https://example.org/' },
+      ],
+    },
+  };
+  const second = {
+    id: 'unresolved', title: 'Unresolved example', summary: 'A recorded example.',
+    category: 'Other examples',
+    provenance: { status: 'unresolved', credit: 'Earlier attribution is unconfirmed.', sources: [] },
+  };
+  const uncredited = { id: 'legacy', summary: 'No provenance record.' };
+  app.discoveryById = new Map([first, second, uncredited].map((entry) => [entry.id, entry]));
+  app.busyState = false;
+  app.elements = Object.fromEntries([
+    'discoverySelect', 'discoverySearch', 'discoveryCount', 'catalogueCount',
+    'discoveryDescription', 'discoveryProvenance', 'loadDiscoveryButton', 'loadRunDiscoveryButton',
+  ].map((id) => [id, new DOMNodeStub('span')]));
+  const placeholder = new DOMNodeStub('option');
+  app.elements.discoverySelect.appendChild(placeholder);
+  const container = app.elements.discoveryProvenance;
+
+  app.updateDiscoveryDescription();
+  assert.equal(container.hidden, true);
+  assert.equal(container.children.length, 0);
+  assert.equal(app.elements.loadDiscoveryButton.disabled, true);
+  app.elements.discoverySelect.value = first.id;
+  app.updateDiscoveryDescription();
+  assert.equal(container.hidden, false);
+  assert.equal(app.elements.discoveryDescription.textContent, first.summary);
+  assert.equal(container.children[0].textContent, 'Published example: ');
+  assert.equal(container.children[1].textContent, '<img src=x> James Edmond');
+  const links = container.children[2].children.filter((child) => child.tagName === 'A');
+  assert.equal(links.length, 3, 'show at most three usable source links');
+  assert.equal(links[0].textContent, 'Project <b>site</b>');
+  assert.equal(links[0].href, 'https://offlattice.org/monotile/');
+  for (const link of links) {
+    assert.equal(link.target, '_blank');
+    assert.equal(link.rel, 'noopener noreferrer');
+  }
+  assert.equal(first.provenance.sources.length, 6, 'rendering must preserve the complete source record');
+
+  app.elements.discoverySelect.value = second.id;
+  app.updateDiscoveryDescription();
+  assert.equal(container.children.length, 2, 'switching examples must remove old links');
+  assert.equal(container.children[0].textContent, 'Attribution unresolved: ');
+  assert(!container.textContent.includes('Edmond'));
+  app.elements.discoverySelect.value = uncredited.id;
+  app.updateDiscoveryDescription();
+  assert.equal(container.hidden, true, 'legacy records must not inherit another example’s credit');
+
+  // Searching by author preserves a matching selection, then clears its credit
+  // and disables loading when a later filter removes that example.
+  windowStub.AperiodicLifeDiscoveries.push(first, second);
+  app.elements.discoverySelect.value = first.id;
+  app.elements.discoverySearch.value = 'Edmond';
+  app.populateDiscoveries();
+  assert.equal(app.elements.discoverySelect.value, first.id);
+  assert.equal(app.elements.discoveryCount.textContent, '1 of 2 examples');
+  assert.equal(container.hidden, false);
+  app.elements.discoverySearch.value = 'absent author';
+  app.populateDiscoveries();
+  assert.equal(app.elements.discoverySelect.value, '');
+  assert.equal(app.elements.discoveryCount.textContent, '0 of 2 examples');
+  assert.equal(placeholder.textContent, 'No matching examples');
+  assert.equal(container.hidden, true);
+  assert.equal(app.elements.loadRunDiscoveryButton.disabled, true);
+  windowStub.AperiodicLifeDiscoveries.length = 0;
+}
 
 {
   // Both entry points must describe the same playback state, including while
@@ -841,4 +948,4 @@ for (const end of ['pointerCancel', 'pointerCaptureLost', 'finishPointer']) {
   assert.equal(h.app.activePointerId, null);
 }
 
-console.log('viewport bounds, discovery camera policy, manual overrides, pinch zoom, touch painting and pointer interaction checks passed');
+console.log('example provenance, viewport bounds, discovery camera policy, manual overrides, pinch zoom, touch painting and pointer interaction checks passed');

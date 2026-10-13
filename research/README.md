@@ -8,6 +8,8 @@ See the [hexagonal search guide](hex-search/README.md) for the 6,630,400-trial c
 
 ## Verify the catalogue
 
+Every example has a record in [catalogue-provenance.json](fixtures/catalogue-provenance.json), rendered as [Catalogue credits and provenance](../docs/CATALOGUE_CREDITS.md) and embedded in the offline app. These records distinguish published rules and patterns from independent rediscoveries, adaptations and locally selected demonstrations. They do not certify worldwide originality. James Edmond’s [Hat and Spectre paper](https://arxiv.org/abs/2609.22579) and [interactive project](https://offlattice.org/monotile/) are credited for the Hat A/B/C gliders and Hat C triple behaviour.
+
 Run these commands from the repository root:
 
 ```bash
@@ -15,6 +17,7 @@ node research/verify-catalog.js
 node test-research.js
 node test-traveller-evidence.js
 node test-structures.js
+node tools/build_catalogue_credits.js --check
 ```
 
 `verify-catalog.js` reconstructs every catalogue configuration and checks its stated contract: an exact period, translated complete state, replication, extinction time or finite activity horizon. `fixtures/catalogue-verification.json` contains the expected results. Tests also compare sparse and dense evolution and independently replay the moving patterns and selected localised structures.

@@ -1,6 +1,6 @@
 # Hexagonal structures
 
-The hexagonal catalogue contains 28 configurations, including compact clocks, rotating waves, expanding and contracting oscillators, spaceships, a replicator, a gun, a puffer and a repairing wall. Open **Curated configurations**, search for a rule or period, and choose **Load and run**. **Play/Pause** remains available above the canvas on a phone as well as a desktop.
+The hexagonal catalogue contains 33 configurations, including compact clocks, rotating waves, expanding and contracting oscillators, spaceships, a replicator, a gun, a puffer and a repairing wall. Open **Curated configurations**, search for a rule or period, and choose **Load and run**. **Play/Pause** remains available above the canvas on a phone as well as a desktop.
 
 Every example uses the regular honeycomb and its six adjacent cells. These examples illustrate several different rules; they do not all run under `B3/S23`. The configuration loads the appropriate rule, state count, speed and view automatically. In the tables below, `C` is the total number of states, including dead state 0. Only live state 1 contributes to neighbour counts. States 2 to `C−1` are refractory.
 
@@ -45,6 +45,8 @@ The **replicator** has an additional algebraic explanation. `B135/S0246` compute
 
 ## Search and provenance
 
+Every hexagonal example has an [individual credit record](CATALOGUE_CREDITS.md#hexagonal-examples), also shown in the controls. The period-25 `B245/S35` traveller matches muzik’s published pattern, independently recovered by the package’s searches. “Found by this package” identifies the source of a seed without asserting worldwide originality; previously published patterns receive credit even when the search found them independently.
+
 The examples combine deterministic computational searches, independent coordinate-based replay, and patterns retrieved from their authors' public posts. Candidate selection compares cycle phases under all twelve rotations and reflections of the hexagonal lattice, and checks the complete states against the application's simulation engine. Rule clauses unused by a selected recurring orbit are removed where the reduced rule reproduces that entire orbit.
 
 The computational work completed **6,630,400 seed trials** across complementary binary, refractory-state and oscillator searches, and added 21 hexagonal examples to the catalogue. It samples finite soups and rules under explicit generation, population and boundary limits. It is a substantial search, not an exhaustive classification. A failed trial or an empty result for a rule does not prove that interesting patterns cannot exist. No mathematical priority claim is made for the computationally found examples.
@@ -56,6 +58,7 @@ The [reproduction guide](../research/hex-search/README.md) provides the search p
 - **Naszvadi** posted the binary `B25/S34` puffer in [this post](https://conwaylife.com/forums/viewtopic.php?p=177053#p177053); the thread also points to an [earlier occurrence](https://conwaylife.com/forums/viewtopic.php?p=163227#p163227).
 - **Dean Hickerson** supplied the repairing wall and billiard-table examples in the [hexagonal-rule discussion](https://conwaylife.com/forums/viewtopic.php?p=28428).
 - **John Cerkan** supplied the `B23/S4` period-13 spaceship in the [hexagonal-rule discussion](https://conwaylife.com/forums/viewtopic.php?f=11&t=3670).
+- **muzik** published the `B245/S35` period-25 spaceship in the [same discussion](https://conwaylife.com/forums/viewtopic.php?f=11&t=3670); the package independently recovered a different phase of the same pattern.
 - The computational survey recovered one of the `B2/S34` period-48 oscillators shown in **drc**'s published two-pattern example in the [hexagonal-rule discussion](https://conwaylife.com/forums/viewtopic.php?p=28428). Its inclusion does not imply a new discovery.
 
 See [third-party attribution](../THIRD_PARTY_LICENSES.md) for the existing Golly/Carter Bays spaceship and the published pattern sources.

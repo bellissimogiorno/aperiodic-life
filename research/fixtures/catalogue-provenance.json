@@ -1,0 +1,1446 @@
+[
+  {
+    "id": "hat-edmond-b-glider",
+    "status": "published",
+    "credit": "James Edmond — Hat B; seed placement found for Aperiodic Life",
+    "note": "Uses Edmond’s published Hat B transition rule and previously demonstrated travelling behaviour. Aperiodic Life independently selected this two-cell placement on its own finite hat patch; its tile numbering and recorded trajectory are not an import of Edmond’s saved run. The package’s finite replay does not establish indefinite propagation.",
+    "sources": [
+      {
+        "label": "James Edmond’s interactive project",
+        "url": "https://offlattice.org/monotile/"
+      },
+      {
+        "label": "Edmond’s paper: Gliders on Aperiodic Monotilings",
+        "url": "https://arxiv.org/abs/2609.22579"
+      },
+      {
+        "label": "Edmond’s Glider Compendium",
+        "url": "https://github.com/jamesedmond/monotile-ca/blob/main/GLIDERS.md"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/published-priority-rules.json",
+      "research/fixtures/aperiodic-evidence.json",
+      "research/exhaustive-search/hat-targeted/selected.json",
+      "test-priority-rules.js"
+    ]
+  },
+  {
+    "id": "hat-edmond-a-glider",
+    "status": "published",
+    "credit": "James Edmond — Hat A; seed placement found for Aperiodic Life",
+    "note": "Uses Edmond’s published Hat A transition rule and previously demonstrated travelling behaviour. Aperiodic Life independently selected this two-cell placement on its own finite hat patch; its tile numbering and recorded trajectory are not an import of Edmond’s saved run. The package’s finite replay does not establish indefinite propagation.",
+    "sources": [
+      {
+        "label": "James Edmond’s interactive project",
+        "url": "https://offlattice.org/monotile/"
+      },
+      {
+        "label": "Edmond’s paper: Gliders on Aperiodic Monotilings",
+        "url": "https://arxiv.org/abs/2609.22579"
+      },
+      {
+        "label": "Edmond’s Glider Compendium",
+        "url": "https://github.com/jamesedmond/monotile-ca/blob/main/GLIDERS.md"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/published-priority-rules.json",
+      "research/fixtures/aperiodic-evidence.json",
+      "research/exhaustive-search/hat-targeted/selected.json",
+      "test-priority-rules.js"
+    ]
+  },
+  {
+    "id": "hat-edmond-c-glider",
+    "status": "published",
+    "credit": "James Edmond — Hat C; seed placement found for Aperiodic Life",
+    "note": "Uses Edmond’s published Hat C transition rule and previously demonstrated travelling behaviour. Aperiodic Life independently selected this two-cell placement on its own finite hat patch; its tile numbering and recorded trajectory are not an import of Edmond’s saved run. The package’s finite replay does not establish indefinite propagation.",
+    "sources": [
+      {
+        "label": "James Edmond’s interactive project",
+        "url": "https://offlattice.org/monotile/"
+      },
+      {
+        "label": "Edmond’s paper: Gliders on Aperiodic Monotilings",
+        "url": "https://arxiv.org/abs/2609.22579"
+      },
+      {
+        "label": "Edmond’s Glider Compendium",
+        "url": "https://github.com/jamesedmond/monotile-ca/blob/main/GLIDERS.md"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/published-priority-rules.json",
+      "research/fixtures/aperiodic-evidence.json",
+      "research/exhaustive-search/hat-targeted/selected.json",
+      "test-priority-rules.js"
+    ]
+  },
+  {
+    "id": "hat-simple-glider",
+    "status": "adapted",
+    "credit": "Aperiodic Life variant of James Edmond’s Hat B rule",
+    "note": "Derived from Edmond’s Hat B: remove its unreachable state from the two-cell launch, relabel state 3 as 2, and drop the empty-neighbour birth requirement. The resulting three-state rule matches the checked launches but differs on other inputs. Credit for the parent rule and travelling mechanism belongs to Edmond; no claim of historical priority is made for the simplification.",
+    "sources": [
+      {
+        "label": "James Edmond’s interactive project",
+        "url": "https://offlattice.org/monotile/"
+      },
+      {
+        "label": "Edmond’s paper: Gliders on Aperiodic Monotilings",
+        "url": "https://arxiv.org/abs/2609.22579"
+      },
+      {
+        "label": "Edmond’s Glider Compendium",
+        "url": "https://github.com/jamesedmond/monotile-ca/blob/main/GLIDERS.md"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/published-priority-rules.json",
+      "research/fixtures/aperiodic-evidence.json",
+      "research/exhaustive-search/hat-targeted/selected.json",
+      "test-priority-rules.js",
+      "research/exhaustive-search/hat-targeted/priority-simplification.json",
+      "research/exhaustive-search/hat-targeted/simplification-counterexample.json"
+    ]
+  },
+  {
+    "id": "hat-edmond-c-triple-launcher",
+    "status": "published",
+    "credit": "James Edmond — Hat C triple launch; seed placement found for Aperiodic Life",
+    "note": "Edmond’s compendium already demonstrates a two-cell Hat C seed producing three gliders. This catalogue entry uses the same published rule with a placement independently selected on Aperiodic Life’s patch. Its three separated travellers are verified through the stated finite horizon. It is a reproduction of published launch behaviour, not a claim to the first triple launcher or a repeating gun.",
+    "sources": [
+      {
+        "label": "James Edmond’s interactive project",
+        "url": "https://offlattice.org/monotile/"
+      },
+      {
+        "label": "Edmond’s paper: Gliders on Aperiodic Monotilings",
+        "url": "https://arxiv.org/abs/2609.22579"
+      },
+      {
+        "label": "Edmond’s Glider Compendium",
+        "url": "https://github.com/jamesedmond/monotile-ca/blob/main/GLIDERS.md"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/published-priority-rules.json",
+      "research/fixtures/aperiodic-evidence.json",
+      "research/exhaustive-search/hat-targeted/selected.json",
+      "test-priority-rules.js",
+      "research/exhaustive-search/hat-targeted/selected-launchers.json",
+      "research/exhaustive-search/hat-targeted/priority-launchers.js"
+    ]
+  },
+  {
+    "id": "hex-b2s0-c3-three-cell-glider",
+    "status": "package-found",
+    "credit": "Found by this package’s bounded exhaustive search; discovery priority has not been established.",
+    "note": "Campaign small, enumerated seed 3, recorded trial 101391. Three live cells already form a period-2 spaceship in B2/S0 with three states; complete-state translation is (0,-1). The campaign enumerated connected all-live seeds of one to six cells up to translations, rotations and reflections, with all 8,192 quiescent binary birth/survival rules and state counts 2–6, subject to its documented simulation limits. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hex-exhaustive-evidence.json",
+      "research/exhaustive-search/hex/campaigns.json",
+      "research/exhaustive-search/hex/search.cpp",
+      "test-hex-exhaustive-evidence.js"
+    ]
+  },
+  {
+    "id": "hex-b234s1346-c3-four-cell-launcher",
+    "status": "package-found",
+    "credit": "Found by this package’s bounded exhaustive search; discovery priority has not been established.",
+    "note": "Campaign small, enumerated seed 6, recorded trial 120894. Four live cells settle after nine generations into a period-8 spaceship translating (1,1). This is a finite launch, not a periodically emitting gun. The campaign enumerated connected all-live seeds of one to six cells up to translations, rotations and reflections, with all 8,192 quiescent binary birth/survival rules and state counts 2–6, subject to its documented simulation limits. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hex-exhaustive-evidence.json",
+      "research/exhaustive-search/hex/campaigns.json",
+      "research/exhaustive-search/hex/search.cpp",
+      "test-hex-exhaustive-evidence.js"
+    ]
+  },
+  {
+    "id": "hex-b2456s1345-c4-five-cell-launcher",
+    "status": "package-found",
+    "credit": "Found by this package’s bounded exhaustive search; discovery priority has not been established.",
+    "note": "Campaign n5, enumerated seed n5s19, recorded trial 525071. Five live cells settle after six generations into a period-43 spaceship translating (-6,3). This is a finite launch, not a periodically emitting gun. The campaign enumerated connected all-live seeds of one to six cells up to translations, rotations and reflections, with all 8,192 quiescent binary birth/survival rules and state counts 2–6, subject to its documented simulation limits. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hex-exhaustive-evidence.json",
+      "research/exhaustive-search/hex/campaigns.json",
+      "research/exhaustive-search/hex/search.cpp",
+      "test-hex-exhaustive-evidence.js"
+    ]
+  },
+  {
+    "id": "hex-b23s13-c4-p9-knightship-launcher",
+    "status": "package-found",
+    "credit": "Found by this package’s bounded exhaustive search; discovery priority has not been established.",
+    "note": "Campaign n6, enumerated seed n6s14, recorded trial 1407298. Six live cells settle after sixteen generations into a period-9 spaceship translating (5,-4). Its oblique heading is outside the edge-axis and angle-bisector directions; this does not establish a first such hexagonal spaceship. The campaign enumerated connected all-live seeds of one to six cells up to translations, rotations and reflections, with all 8,192 quiescent binary birth/survival rules and state counts 2–6, subject to its documented simulation limits. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hex-exhaustive-evidence.json",
+      "research/exhaustive-search/hex/campaigns.json",
+      "research/exhaustive-search/hex/search.cpp",
+      "test-hex-exhaustive-evidence.js"
+    ]
+  },
+  {
+    "id": "hex-b234s245-c5-p10-knightship-launcher",
+    "status": "package-found",
+    "credit": "Found by this package’s bounded exhaustive search; discovery priority has not been established.",
+    "note": "Campaign n6, enumerated seed n6s78, recorded trial 2166518. Six live cells settle after twelve generations into a period-10 spaceship translating (1,2). Survival clause S5 acts during the launch, although inactive in the eventual orbit; removing it before launch destroys the example. This is a finite launch, not a gun. The campaign enumerated connected all-live seeds of one to six cells up to translations, rotations and reflections, with all 8,192 quiescent binary birth/survival rules and state counts 2–6, subject to its documented simulation limits. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hex-exhaustive-evidence.json",
+      "research/exhaustive-search/hex/campaigns.json",
+      "research/exhaustive-search/hex/search.cpp",
+      "test-hex-exhaustive-evidence.js"
+    ]
+  },
+  {
+    "id": "penrose-b2-c5-five-launcher",
+    "status": "package-found",
+    "credit": "Launcher found by package search; priority unestablished",
+    "note": "This three-live-cell launch and its depth-11 placement were located by the package's connected-seed search and polygon-matched transplants. Its five emitted bodies use the existing B2/S travelling family, with finite verification through generation 240. This identifies the origin of this recorded launch, not a first-discovery claim for the rule or propagating mechanism. Earlier published Penrose gliders use a different rule.",
+    "sources": [
+      {
+        "label": "Goucher (2012): earlier Penrose glider under a different rule",
+        "url": "https://cp4space.hatsya.com/wp-content/uploads/2012/11/2012-penrose-gliders.pdf"
+      }
+    ],
+    "evidence": [
+      "research/exhaustive-search/penrose/campaigns.json",
+      "research/exhaustive-search/penrose/selected-launcher-evidence.json",
+      "research/fixtures/aperiodic-evidence.json",
+      "docs/GLIDER_SEARCH.md"
+    ]
+  },
+  {
+    "id": "penrose-b2-c6-six-launcher",
+    "status": "package-found",
+    "credit": "Launcher found by package search; priority unestablished",
+    "note": "This three-live-cell launch and its depth-11 placement were located by the package's connected-seed search and polygon-matched transplants. Its six emitted bodies use the existing B2/S travelling family, with finite verification through generation 200. This identifies the origin of this recorded launch, not a first-discovery claim for the rule or propagating mechanism. Earlier published Penrose gliders use a different rule.",
+    "sources": [
+      {
+        "label": "Goucher (2012): earlier Penrose glider under a different rule",
+        "url": "https://cp4space.hatsya.com/wp-content/uploads/2012/11/2012-penrose-gliders.pdf"
+      }
+    ],
+    "evidence": [
+      "research/exhaustive-search/penrose/campaigns.json",
+      "research/exhaustive-search/penrose/selected-launcher-evidence.json",
+      "research/fixtures/aperiodic-evidence.json",
+      "docs/GLIDER_SEARCH.md"
+    ]
+  },
+  {
+    "id": "square-block",
+    "status": "published",
+    "credit": "Classical Conway Life pattern",
+    "note": "Published in the original 1970 presentation of Conway Life. The package uses the standard four-cell block, translated for display; it makes no separate discovery claim. An individual discoverer is not assigned here.",
+    "sources": [
+      {
+        "label": "Martin Gardner, Scientific American, October 1970 (original article)",
+        "url": "https://www.ibiblio.org/lifepatterns/october1970.html"
+      },
+      {
+        "label": "Stephen Silver, Life Lexicon: block (Golly distribution)",
+        "url": "https://sources.debian.org/data/main/g/golly/3.2-2/Help/Lexicon/lex_b.htm"
+      }
+    ],
+    "evidence": [
+      "discoveries.js",
+      "test-discoveries.js",
+      "research/verify-catalog.js",
+      "research/fixtures/catalogue-verification.json"
+    ]
+  },
+  {
+    "id": "square-blinker",
+    "status": "published",
+    "credit": "John H. Conway",
+    "note": "The Life Lexicon credits Conway; the period-2 three-cell oscillator also appears in Gardner’s original article. The package uses its standard horizontal phase, translated for display.",
+    "sources": [
+      {
+        "label": "Stephen Silver, Life Lexicon: blinker (Golly distribution)",
+        "url": "https://sources.debian.org/data/main/g/golly/3.2-2/Help/Lexicon/lex_b.htm"
+      },
+      {
+        "label": "Martin Gardner, Scientific American, October 1970 (original article)",
+        "url": "https://www.ibiblio.org/lifepatterns/october1970.html"
+      }
+    ],
+    "evidence": [
+      "discoveries.js",
+      "test-discoveries.js",
+      "research/verify-catalog.js",
+      "research/fixtures/catalogue-verification.json"
+    ]
+  },
+  {
+    "id": "square-pulsar",
+    "status": "published",
+    "credit": "John H. Conway",
+    "note": "The Life Lexicon credits Conway, and the 48-cell pulsar is described in the original 1970 article. The package uses the standard published 48-cell phase; placement and playback settings are package choices.",
+    "sources": [
+      {
+        "label": "Stephen Silver, Life Lexicon: pulsar (Golly distribution)",
+        "url": "https://sources.debian.org/data/main/g/golly/3.2-2/Help/Lexicon/lex_p.htm"
+      },
+      {
+        "label": "Martin Gardner, Scientific American, October 1970 (original article)",
+        "url": "https://www.ibiblio.org/lifepatterns/october1970.html"
+      }
+    ],
+    "evidence": [
+      "discoveries.js",
+      "test-discoveries.js",
+      "research/verify-catalog.js",
+      "research/fixtures/catalogue-verification.json"
+    ]
+  },
+  {
+    "id": "square-pentadecathlon",
+    "status": "published",
+    "credit": "John H. Conway",
+    "note": "The Life Lexicon credits Conway’s 1970 investigation of short rows. This is the published 12-cell oscillator phase, not a new 12-cell construction; the ten-cell row is a predecessor.",
+    "sources": [
+      {
+        "label": "Stephen Silver, Life Lexicon: pentadecathlon (Golly distribution)",
+        "url": "https://sources.debian.org/data/main/g/golly/3.2-2/Help/Lexicon/lex_p.htm"
+      },
+      {
+        "label": "Martin Gardner, Scientific American, October 1970 (original article)",
+        "url": "https://www.ibiblio.org/lifepatterns/october1970.html"
+      }
+    ],
+    "evidence": [
+      "discoveries.js",
+      "test-discoveries.js",
+      "research/verify-catalog.js",
+      "research/fixtures/catalogue-verification.json"
+    ]
+  },
+  {
+    "id": "square-glider",
+    "status": "published",
+    "credit": "Richard K. Guy",
+    "note": "Credit is to Richard K. Guy, as explicitly recorded in the Life Lexicon, rather than to Conway personally. The package seed is a rotated and translated standard glider phase. Older sources conventionally date it 1970 and newer histories say 1969; no discovery year is asserted here.",
+    "sources": [
+      {
+        "label": "Stephen Silver, Life Lexicon: glider (Golly distribution)",
+        "url": "https://sources.debian.org/data/main/g/golly/3.2-2/Help/Lexicon/lex_g.htm"
+      }
+    ],
+    "evidence": [
+      "discoveries.js",
+      "test-discoveries.js",
+      "research/verify-catalog.js",
+      "research/fixtures/catalogue-verification.json",
+      "test-traveller-evidence.js"
+    ]
+  },
+  {
+    "id": "square-lwss",
+    "status": "published",
+    "credit": "John H. Conway",
+    "note": "The Life Lexicon credits Conway’s 1970 discovery of the lightweight spaceship. The package uses the published nine-cell phase, translated for display, under ordinary B3/S23.",
+    "sources": [
+      {
+        "label": "Stephen Silver, Life Lexicon: LWSS (Golly distribution)",
+        "url": "https://sources.debian.org/data/main/g/golly/3.2-2/Help/Lexicon/lex_l.htm"
+      }
+    ],
+    "evidence": [
+      "discoveries.js",
+      "test-discoveries.js",
+      "research/verify-catalog.js",
+      "research/fixtures/catalogue-verification.json",
+      "test-traveller-evidence.js"
+    ]
+  },
+  {
+    "id": "square-highlife-replicator",
+    "status": "published",
+    "credit": "Nathan Thompson (1994)",
+    "note": "Eppstein credits the HighLife replicator to Nathan Thompson in 1994. David Bell subsequently documented and investigated HighLife; he is not credited here as this replicator’s discoverer. The package uses the published 12-cell B36/S23 seed and independently checks its two-copy return after 12 generations.",
+    "sources": [
+      {
+        "label": "David Eppstein, Replicators: HighLife",
+        "url": "https://ics.uci.edu/~eppstein/ca/replicators/b36s23.html"
+      },
+      {
+        "label": "Published HighLife replicator seed",
+        "url": "https://conwaylife.com/wiki/OCA:HighLife/Replicator"
+      }
+    ],
+    "evidence": [
+      "discoveries.js",
+      "test-discoveries.js",
+      "research/verify-catalog.js",
+      "research/fixtures/catalogue-verification.json"
+    ]
+  },
+  {
+    "id": "square-diehard",
+    "status": "published",
+    "credit": "Classical pattern; discoverer unconfirmed",
+    "note": "The seven-cell seed matches the published Life Lexicon diehard exactly after translation. Its extinction at generation 130 is independently checked. The consulted sources do not establish an individual discoverer; no personal attribution or new-discovery claim is made.",
+    "sources": [
+      {
+        "label": "Stephen Silver, Life Lexicon: diehard (Golly distribution)",
+        "url": "https://sources.debian.org/data/main/g/golly/3.2-2/Help/Lexicon/lex_d.htm"
+      }
+    ],
+    "evidence": [
+      "discoveries.js",
+      "test-discoveries.js",
+      "research/verify-catalog.js",
+      "research/fixtures/catalogue-verification.json"
+    ]
+  },
+  {
+    "id": "square-r-pentomino",
+    "status": "published",
+    "credit": "John H. Conway’s classical R-pentomino",
+    "note": "Gardner’s original article documents Conway’s study of this five-cell seed; the package uses the standard published shape. Its finite-board check establishes activity through generation 1,103, not equality with the infinite-plane final census.",
+    "sources": [
+      {
+        "label": "Martin Gardner, Scientific American, October 1970 (original article)",
+        "url": "https://www.ibiblio.org/lifepatterns/october1970.html"
+      },
+      {
+        "label": "Stephen Silver, Life Lexicon: R-pentomino (Golly distribution)",
+        "url": "https://sources.debian.org/data/main/g/golly/3.2-2/Help/Lexicon/lex_r.htm"
+      }
+    ],
+    "evidence": [
+      "discoveries.js",
+      "test-discoveries.js",
+      "research/verify-catalog.js",
+      "research/fixtures/catalogue-verification.json"
+    ]
+  },
+  {
+    "id": "square-acorn",
+    "status": "published",
+    "credit": "Charles L. Corderman",
+    "note": "Robert Wainwright’s Lifeline No. 3 (1971), page 12, credits Charles L. Corderman; Wainwright supplied the name. The package uses the same seven-cell seed, translated for display. Its finite-board replay establishes activity through 5,206 generations, not the infinite-plane final ash. Gosper is not the discoverer of this seed.",
+    "sources": [
+      {
+        "label": "Robert Wainwright, Lifeline No. 3 (1971), page 12: original Acorn attribution",
+        "url": "https://conwaylife.com/wiki/Lifeline_Volume_3"
+      },
+      {
+        "label": "Stephen Silver, Life Lexicon: acorn (Golly distribution)",
+        "url": "https://sources.debian.org/data/main/g/golly/3.2-2/Help/Lexicon/lex_a.htm"
+      }
+    ],
+    "evidence": [
+      "discoveries.js",
+      "test-discoveries.js",
+      "research/verify-catalog.js",
+      "research/fixtures/catalogue-verification.json"
+    ]
+  },
+  {
+    "id": "hex-conway-p2",
+    "status": "package-found",
+    "credit": "Independently found by this package’s soup search; earlier discovery priority has not been established.",
+    "note": "Recovered campaign provenance: deterministic soup seed hex-conway-v31-2, B3/S23 with six edge neighbours, hexagonal depth 32, density 0.12, transient 6, period 2. The archived soup campaign covered indices 0–4,999 and used a 1,200-generation limit. Exact full-orbit comparison with the archived result confirms the curated pattern. The old campaign archive was examined in the handover workspace; it is not part of the fresh release. “Conway” describes the birth/survival rule notation and is not a claim that John Conway discovered this hexagonal pattern. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/mine-oscillators.js",
+      "discoveries.js",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js"
+    ]
+  },
+  {
+    "id": "hex-conway-p3",
+    "status": "package-found",
+    "credit": "Independently found by this package’s soup search; earlier discovery priority has not been established.",
+    "note": "Recovered campaign provenance: deterministic soup seed hex-conway-v31-3851, B3/S23 with six edge neighbours, hexagonal depth 32, density 0.35, transient 28, period 3. The archived soup campaign covered indices 0–4,999 and used a 1,200-generation limit. Exact full-orbit comparison with the archived result confirms the curated pattern. The old campaign archive was examined in the handover workspace; it is not part of the fresh release. “Conway” describes the birth/survival rule notation and is not a claim that John Conway discovered this hexagonal pattern. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/mine-oscillators.js",
+      "discoveries.js",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js"
+    ]
+  },
+  {
+    "id": "hex-conway-p6",
+    "status": "package-found",
+    "credit": "Independently found by this package’s soup search; earlier discovery priority has not been established.",
+    "note": "Recovered campaign provenance: deterministic soup seed hex-conway-v31-2813, B3/S23 with six edge neighbours, hexagonal depth 32, density 0.35, transient 39, period 6. The archived soup campaign covered indices 0–4,999 and used a 1,200-generation limit. Exact full-orbit comparison with the archived result confirms the curated pattern. The old campaign archive was examined in the handover workspace; it is not part of the fresh release. “Conway” describes the birth/survival rule notation and is not a claim that John Conway discovered this hexagonal pattern. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/mine-oscillators.js",
+      "discoveries.js",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js"
+    ]
+  },
+  {
+    "id": "hex-b2s35-p5-traveller",
+    "status": "published",
+    "credit": "Known B2/S35 spaceship described by Carter Bays (2005), with a matching RLE published by John Cerkan (2016). Independently recovered for this package.",
+    "note": "Bays Figure 3 documents a period-5, one-cell-displacement spaceship in rule 3,5/2, equivalent to B2/S35. Cerkan’s 22 January 2016 RLE is 2bo$o3bo$2bo$bo2bo$6bo$2bo2bo$4bo!. Mapping Golly coordinates by (q,r)=(x,y-x) and comparing every complete orbit state proves exact equivalence to the catalogue: phase shift 2, rotation by one 60-degree step, no reflection, translation (3,0). The package’s independent constrained-search recovery does not make this a new spaceship. The earlier paper supplies scholarly context; its drawing was not independently transcribed in this audit.",
+    "sources": [
+      {
+        "label": "Carter Bays, A Note on the Game of Life in Hexagonal and Pentagonal Tessellations (2005)",
+        "url": "https://www.complex-systems.com/abstracts/v15_i03_a04/"
+      },
+      {
+        "label": "Bays (2005), Figures 3 and 4",
+        "url": "https://wpmedia.wolfram.com/uploads/sites/13/2018/02/15-3-4.pdf"
+      },
+      {
+        "label": "John Cerkan, published B2/S35H spaceship RLE (22 January 2016)",
+        "url": "https://conwaylife.com/forums/viewtopic.php?p=28428"
+      }
+    ],
+    "evidence": [
+      "discoveries.js",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "test-traveller-evidence.js",
+      "research/fixtures/hex-published-provenance.json",
+      "research/verify-hex-published-provenance.js"
+    ]
+  },
+  {
+    "id": "hex-b245s3-p10-traveller",
+    "status": "published",
+    "credit": "Published Golly example, corresponding to the B245/S3 spaceship described by Carter Bays (2005).",
+    "note": "The catalogue is D6-equivalent to Golly’s official QuickLife hexagonal example, RLE obo$4bo$2bo$bo2bobo$3bo$5bo!, using (q,r)=(x,y-x). Complete-state replay verifies period 10 and a two-cell displacement. Bays Figure 4 documents this rule and motion. Golly’s page does not itself name Bays, so distinguish the executable pattern source from scholarly context; this is not a new package discovery.",
+    "sources": [
+      {
+        "label": "Golly QuickLife documentation, hexagonal neighbourhood example",
+        "url": "https://golly.sourceforge.io/Help/Algorithms/QuickLife.html"
+      },
+      {
+        "label": "Carter Bays, A Note on the Game of Life in Hexagonal and Pentagonal Tessellations (2005)",
+        "url": "https://www.complex-systems.com/abstracts/v15_i03_a04/"
+      },
+      {
+        "label": "Bays (2005), Figures 3 and 4",
+        "url": "https://wpmedia.wolfram.com/uploads/sites/13/2018/02/15-3-4.pdf"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/hex-b245s3-source.json",
+      "test-traveller-evidence.js",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/fixtures/hex-published-provenance.json",
+      "research/verify-hex-published-provenance.js"
+    ]
+  },
+  {
+    "id": "hex-b235s146-c4-launcher-traveller",
+    "status": "adapted",
+    "credit": "Package rule adaptation of the published B2/S35 spaceship geometry (Bays; Cerkan). Priority of this multistate launcher has not been established.",
+    "note": "The initial twelve live-cell coordinates are identical to the package’s published B2/S35 p5 spaceship phase, but the rule is changed to B235/S146 with 4 states. After 21 generations the seed becomes a period-10 spaceship translating (-5,0). Credit Bays and Cerkan for the starting pattern, not for these changed-rule dynamics. The package establishes this particular adaptation and verifies its launch and eventual complete-state recurrence; it does not establish worldwide priority for the launcher or resulting ship.",
+    "sources": [
+      {
+        "label": "Carter Bays, A Note on the Game of Life in Hexagonal and Pentagonal Tessellations (2005)",
+        "url": "https://www.complex-systems.com/abstracts/v15_i03_a04/"
+      },
+      {
+        "label": "John Cerkan, published B2/S35H spaceship RLE (22 January 2016)",
+        "url": "https://conwaylife.com/forums/viewtopic.php?p=28428"
+      }
+    ],
+    "evidence": [
+      "discoveries.js",
+      "docs/RULE_SURVEY.md",
+      "test-traveller-evidence.js",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js"
+    ]
+  },
+  {
+    "id": "hex-b235s134-c5-launcher-traveller",
+    "status": "adapted",
+    "credit": "Package rule adaptation of the published B2/S35 spaceship geometry (Bays; Cerkan). Priority of this multistate launcher has not been established.",
+    "note": "The initial twelve live-cell coordinates are identical to the package’s published B2/S35 p5 spaceship phase, but the rule is changed to B235/S134 with 5 states. After 58 generations the seed becomes a period-4 spaceship translating (2,0). Credit Bays and Cerkan for the starting pattern, not for these changed-rule dynamics. The package establishes this particular adaptation and verifies its launch and eventual complete-state recurrence; it does not establish worldwide priority for the launcher or resulting ship.",
+    "sources": [
+      {
+        "label": "Carter Bays, A Note on the Game of Life in Hexagonal and Pentagonal Tessellations (2005)",
+        "url": "https://www.complex-systems.com/abstracts/v15_i03_a04/"
+      },
+      {
+        "label": "John Cerkan, published B2/S35H spaceship RLE (22 January 2016)",
+        "url": "https://conwaylife.com/forums/viewtopic.php?p=28428"
+      }
+    ],
+    "evidence": [
+      "discoveries.js",
+      "docs/RULE_SURVEY.md",
+      "test-traveller-evidence.js",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js"
+    ]
+  },
+  {
+    "id": "penrose-edge-b23s23-p822",
+    "status": "package-found",
+    "credit": "Found by package search; priority unestablished",
+    "note": "Recovered in the package's focused B23/S23 edge search, then transplanted from depth 7 to depth 8. The recorded full period is 822 and 39 individual sites have that period. Owens–Stepney is earlier work on Penrose oscillators, but its Conway touch-graph catalogue does not establish authorship of this different-rule edge-graph pattern. No external exact-pattern attribution was established.",
+    "sources": [
+      {
+        "label": "Owens & Stepney (2010): Penrose Life catalogue and classification",
+        "url": "https://www-users.york.ac.uk/~ss44/bib/ss/nonstd/penroselife.htm"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "docs/RULE_SURVEY.md",
+      "research/render-oscillator-atlas.js"
+    ]
+  },
+  {
+    "id": "penrose-conway-c3-p14",
+    "status": "package-found",
+    "credit": "Found by package search; priority unestablished",
+    "note": "Recovered in the package's multistate oscillator survey and transplanted from depth 7 to depth 8. This is a three-state B3/S23 Generations oscillator; it must not be identified with a published binary Penrose oscillator merely by period. External first-discovery priority of this exact configuration is unestablished.",
+    "sources": [
+      {
+        "label": "Owens & Stepney (2010): Penrose Life catalogue and classification",
+        "url": "https://www-users.york.ac.uk/~ss44/bib/ss/nonstd/penroselife.htm"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "docs/RULE_SURVEY.md",
+      "research/render-oscillator-atlas.js"
+    ]
+  },
+  {
+    "id": "hat-b2s1-c3-rotor-p39",
+    "status": "package-found",
+    "credit": "Found in Aperiodic Life searches; earlier priority unestablished",
+    "note": "Found by the package’s compact-seed oscillator search under three-state B2/S1 on the shared-edge graph. The retained phase is an exact period-39 rotating wave. Its original search record identifies trial 44 of the B2/S1 edge-orbit follow-up. No earlier publication of this exact configuration was identified in the reviewed sources; this records its origin within the package, not a claim of first discovery.",
+    "sources": [],
+    "evidence": [
+      "discoveries.js",
+      "research/fixtures/catalogue-verification.json",
+      "research/verify-catalog.js",
+      "test-structures.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "hat-b2s23-c6-rotor-p219",
+    "status": "package-found",
+    "credit": "Found in Aperiodic Life searches; earlier priority unestablished",
+    "note": "Found by the package’s compact-seed oscillator search under six-state B2/S23 on the shared-edge graph. The retained phase is an exact period-219 rotating wave. Its original pilot record identifies trial 122 for that rule and state count. No earlier publication of this exact configuration was identified in the reviewed sources; this records its origin within the package, not a claim of first discovery.",
+    "sources": [],
+    "evidence": [
+      "discoveries.js",
+      "research/fixtures/catalogue-verification.json",
+      "research/verify-catalog.js",
+      "test-structures.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "hat-b2s13-c4-clock-p11",
+    "status": "package-found",
+    "credit": "Found in Aperiodic Life searches; earlier priority unestablished",
+    "note": "Developed from an eight-tile clock found by the package’s B2/S13 search at ten states (trial 1730). The catalogue keeps the same two-live-cell phase and changes the state count to four, giving period 11. The relation period = 2C + 3 was then checked for C = 4 through 255. No earlier publication of this exact configuration was identified in the reviewed sources; this records its origin within the package, not a claim of first discovery.",
+    "sources": [],
+    "evidence": [
+      "discoveries.js",
+      "research/fixtures/catalogue-verification.json",
+      "research/verify-catalog.js",
+      "test-structures.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "hat-directional-transient-83",
+    "status": "package-found",
+    "credit": "Found in Aperiodic Life searches; earlier priority unestablished",
+    "note": "Selected from the package’s Hat B/S motion search and reduced to a ten-cell complete phase, including one refractory cell. The reduction preserves the retained parent state at generation 40. All activity ends at generation 83; the example is a directional transient, not a glider. No earlier publication of this exact configuration was identified in the reviewed sources; this records its origin within the package, not a claim of first discovery.",
+    "sources": [],
+    "evidence": [
+      "discoveries.js",
+      "research/fixtures/catalogue-verification.json",
+      "research/verify-catalog.js",
+      "test-structures.js",
+      "research/search-mobile-patterns.js"
+    ]
+  },
+  {
+    "id": "hex-conway-p4",
+    "status": "package-found",
+    "credit": "Found by this package’s deterministic soup search; discovery priority has not been established.",
+    "note": "Oscillator miner source seed 272632, radius 8, initial density 60%, soup transient 19; the displayed phase is offset 1 within the resulting orbit. The source fixture retains the replayable initial state and resulting cycle. Known rule notation does not establish authorship of this exact pattern. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/hex-search/oscillators/miner.cpp",
+      "research/hex-search/oscillators/campaigns.json"
+    ]
+  },
+  {
+    "id": "hex-conway-p5",
+    "status": "package-found",
+    "credit": "Found by this package’s deterministic soup search; discovery priority has not been established.",
+    "note": "Oscillator miner source seed 1045970, radius 6, initial density 67%, soup transient 10; the displayed phase is offset 0 within the resulting orbit. The source fixture retains the replayable initial state and resulting cycle. Known rule notation does not establish authorship of this exact pattern. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/hex-search/oscillators/miner.cpp",
+      "research/hex-search/oscillators/campaigns.json"
+    ]
+  },
+  {
+    "id": "hex-conway-p8",
+    "status": "package-found",
+    "credit": "Found by this package’s deterministic soup search; discovery priority has not been established.",
+    "note": "Oscillator miner source seed 511247, radius 9, initial density 46%, soup transient 25; the displayed phase is offset 6 within the resulting orbit. The source fixture retains the replayable initial state and resulting cycle. Known rule notation does not establish authorship of this exact pattern. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/hex-search/oscillators/miner.cpp",
+      "research/hex-search/oscillators/campaigns.json"
+    ]
+  },
+  {
+    "id": "hex-b34s234-p269",
+    "status": "package-found",
+    "credit": "Found by this package’s deterministic soup search; discovery priority has not been established.",
+    "note": "Oscillator miner source seed 15338, radius 6, initial density 18%, soup transient 182; the displayed phase is offset 266 within the resulting orbit. The source fixture retains the replayable initial state and resulting cycle. Known rule notation does not establish authorship of this exact pattern. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/hex-search/oscillators/miner.cpp",
+      "research/hex-search/oscillators/campaigns.json"
+    ]
+  },
+  {
+    "id": "hex-b245s35-p25-traveller",
+    "status": "published",
+    "credit": "Published by muzik (2019), independently rediscovered by this package’s search.",
+    "note": "The primary hexagonal spaceship thread credits muzik (2019) for B245/S35H RLE b3o$bobo$4o$bo!. Independent full-orbit comparison with the catalogue succeeds after phase shift 5, rotation by four 60-degree steps, no reflection and translation (1,1), using (q,r)=(x,y-x). Thus the package’s binary campaign seed 20261011, trial 483, mode 3, transient 57 recovered an already published spaceship. The displayed phase and orientation are not a distinct discovery.",
+    "sources": [
+      {
+        "label": "muzik, B245/S35H period-25 spaceship (2019)",
+        "url": "https://conwaylife.com/forums/viewtopic.php?f=11&t=3670"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/hex-search/binary/search.cpp",
+      "research/hex-search/binary/campaigns.json",
+      "research/fixtures/hex-published-provenance.json",
+      "research/verify-hex-published-provenance.js"
+    ]
+  },
+  {
+    "id": "hex-b2s34-p48-rotor",
+    "status": "published",
+    "credit": "Published by drc (2016), independently rediscovered by this package’s search.",
+    "note": "The 18 January 2016 RLE o16bo$obo12b2o$2b2o10bobo$5bo9bo! contains two independently oscillating six-cell components. Catalogue coordinates translated by axial (2,-1) reproduce its first component exactly at generation zero. Extracting that independent component does not create a new oscillator. The package independently recovered it in binary campaign seed 20261011, trial 194, mode 4. Dean Hickerson also mentions earlier work on the rule, but the audit does not assign him priority for this particular oscillator.",
+    "sources": [
+      {
+        "label": "drc, published pair of B2/S34 period-48 oscillators (18 January 2016)",
+        "url": "https://conwaylife.com/forums/viewtopic.php?p=28430"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/hex-search/binary/search.cpp",
+      "research/hex-search/binary/campaigns.json",
+      "research/fixtures/hex-published-provenance.json",
+      "research/verify-hex-published-provenance.js"
+    ]
+  },
+  {
+    "id": "hex-b245s3-p57-pulsator",
+    "status": "package-found",
+    "credit": "Found by this package’s binary-rule soup search; discovery priority has not been established.",
+    "note": "Binary campaign seed 20261011, trial 2586, mode 1, transient 7, chosen cycle phase offset 34. The source fixture retains the initial state and verification evidence. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/hex-search/binary/search.cpp",
+      "research/hex-search/binary/campaigns.json"
+    ]
+  },
+  {
+    "id": "hex-b24s3-p128-rotor",
+    "status": "package-found",
+    "credit": "Found by this package’s binary-rule soup search; discovery priority has not been established.",
+    "note": "Binary campaign seed 908020261011, trial 53543, mode 3, transient 25, chosen cycle phase offset 67. The source fixture retains the initial state and verification evidence. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/hex-search/binary/search.cpp",
+      "research/hex-search/binary/campaigns.json"
+    ]
+  },
+  {
+    "id": "hex-b234s3-p4104",
+    "status": "package-found",
+    "credit": "Found by this package’s binary-rule soup search; discovery priority has not been established.",
+    "note": "Binary campaign seed 60520261011, trial 127, mode 2, transient 802, chosen cycle phase offset 2268. The source fixture retains the initial state and verification evidence. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/hex-search/binary/search.cpp",
+      "research/hex-search/binary/campaigns.json"
+    ]
+  },
+  {
+    "id": "hex-b2s3456-c7-p372-rotor",
+    "status": "package-found",
+    "credit": "Found by this package’s Generations search; discovery priority has not been established.",
+    "note": "Generations campaign first, random seed 7522551138070962214, trial 75416, original rule B25/S3456, source transient 13. The displayed rule B2/S3456 removes B5, which is inactive throughout the verified periodic orbit. Rule simplification certifies the selected complete-state orbit; it does not assert that the original preperiodic soup takes the same route under the simplified rule. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/hex-search/generations/search.cpp",
+      "research/hex-search/generations/analyse.py",
+      "research/hex-search/generations/campaigns.json"
+    ]
+  },
+  {
+    "id": "hex-b24s16-c3-p248-breather",
+    "status": "package-found",
+    "credit": "Found by this package’s Generations search; discovery priority has not been established.",
+    "note": "Generations campaign million, random seed 7529271334792788165, trial 15937, original rule B24/S16, source transient 86. The original searched rule is retained. Rule simplification certifies the selected complete-state orbit; it does not assert that the original preperiodic soup takes the same route under the simplified rule. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/hex-search/generations/search.cpp",
+      "research/hex-search/generations/analyse.py",
+      "research/hex-search/generations/campaigns.json"
+    ]
+  },
+  {
+    "id": "hex-b23s13-c5-p138-traveller",
+    "status": "package-found",
+    "credit": "Found by this package’s Generations search; discovery priority has not been established.",
+    "note": "Generations campaign million, random seed 7529271334792788165, trial 106888, original rule B235/S13, source transient 53. The displayed rule B23/S13 removes B5, which is inactive throughout the verified travelling orbit. Rule simplification certifies the selected complete-state orbit; it does not assert that the original preperiodic soup takes the same route under the simplified rule. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/hex-search/generations/search.cpp",
+      "research/hex-search/generations/analyse.py",
+      "research/hex-search/generations/campaigns.json"
+    ]
+  },
+  {
+    "id": "hex-b234s13-c4-p23-traveller",
+    "status": "package-found",
+    "credit": "Found by this package’s Generations search; discovery priority has not been established.",
+    "note": "Generations campaign first, random seed 7522551138070962214, trial 50, original rule B2345/S135, source transient 15. The displayed rule B234/S13 removes B5 and S5, which are inactive throughout the verified travelling orbit. Rule simplification certifies the selected complete-state orbit; it does not assert that the original preperiodic soup takes the same route under the simplified rule. No earlier exact-pattern match was established in this audit; this records package provenance, not worldwide discovery priority.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/hex-search/generations/search.cpp",
+      "research/hex-search/generations/analyse.py",
+      "research/hex-search/generations/campaigns.json"
+    ]
+  },
+  {
+    "id": "hex-b246s246-c4-p30-gun",
+    "status": "published",
+    "credit": "Published by confocaloid (2024). The package independently verifies indefinite three-way emission.",
+    "note": "Confocaloid published the twelve-live-cell seed 3A$4A$.3A$2.2A! on 14 October 2024 in Hexagonal Generations Rules. Direct comparison confirms that the catalogue retains exactly the published initial states, after coordinate conversion and translation. The package adds a complete-state emission certificate for the period-30 core and three permanently separating output streams; that verification is not authorship of the gun.",
+    "sources": [
+      {
+        "label": "confocaloid, 246/246/4H three-way gun (14 October 2024)",
+        "url": "https://conwaylife.com/forums/viewtopic.php?f=11&t=1319"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/hex-search/literature/certify-emitters.py",
+      "research/fixtures/hex-published-provenance.json",
+      "research/verify-hex-published-provenance.js"
+    ]
+  },
+  {
+    "id": "hex-b25s34-p20-puffer",
+    "status": "published",
+    "credit": "Published by Naszvadi (2024); Dmitry Maitak points to an earlier 2023 occurrence. The package independently verifies its persistent oscillator trail.",
+    "note": "Naszvadi’s 1 February 2024 post supplies the exact twenty-three-cell RLE used here and describes it as probably known. Dmitry Maitak’s later response links to a 2023 occurrence. This audit confirms the 2024 source and the report of earlier publication, but does not establish the original discoverer or independently compare the linked 2023 seed. Initial-state comparison confirms translation-only equivalence to the 2024 RLE. The package adds a certificate of period-20 translated core recurrence and independently separating period-2 deposits.",
+    "sources": [
+      {
+        "label": "Naszvadi, B25/S34H puffer (1 February 2024)",
+        "url": "https://conwaylife.com/forums/viewtopic.php?p=177053#p177053"
+      },
+      {
+        "label": "Source thread containing Naszvadi’s RLE and Dmitry Maitak’s earlier-publication note",
+        "url": "https://conwaylife.com/forums/viewtopic.php?p=162954"
+      },
+      {
+        "label": "Earlier 2023 occurrence cited by Dmitry Maitak; original priority not established in this audit",
+        "url": "https://conwaylife.com/forums/viewtopic.php?p=163227#p163227"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/hex-search/literature/certify-emitters.py",
+      "research/fixtures/hex-published-provenance.json",
+      "research/verify-hex-published-provenance.js"
+    ]
+  },
+  {
+    "id": "hex-b2s1-c3-p999-rotor",
+    "status": "published",
+    "credit": "Published by c0b0p0 (2014); independently replayed and verified for this package.",
+    "note": "The Hexagonal Generations Rules post by c0b0p0 dated 27 February 2014 supplies this exact B2/S1 three-state period-999 rotor RLE. The catalogue retains every live and refractory initial state under (q,r)=(x,y-x), followed only by a centring translation. The full-state dynamics are therefore a replay of the published object, not a new package discovery.",
+    "sources": [
+      {
+        "label": "c0b0p0, B2/S1 three-state period-999 rotor (27 February 2014)",
+        "url": "https://conwaylife.com/forums/viewtopic.php?f=11&t=1319"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/fixtures/hex-published-provenance.json",
+      "research/verify-hex-published-provenance.js"
+    ]
+  },
+  {
+    "id": "hex-b23s4-p13-traveller",
+    "status": "published",
+    "credit": "Published by John Cerkan (2020); independently replayed and verified for this package.",
+    "note": "John Cerkan’s 15 March 2020 post in Outer-totalistic hexagonal rules with spaceships gives RLE o3bo$bo2bo$2b3o$2bo2bo! for B23/S4H. The catalogue is exactly this nine-cell published seed after (q,r)=(x,y-x) and a centring translation. The exact period and displacement were independently replayed. Use the original thread URL rather than the author-search URL retained in the older source fixture.",
+    "sources": [
+      {
+        "label": "John Cerkan, B23/S4H period-13 spaceship (15 March 2020)",
+        "url": "https://conwaylife.com/forums/viewtopic.php?f=11&t=3670"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/fixtures/hex-published-provenance.json",
+      "research/verify-hex-published-provenance.js"
+    ]
+  },
+  {
+    "id": "hex-b2s1-c3-p158-traveller",
+    "status": "published",
+    "credit": "Published by c0b0p0 (2014); independently replayed and verified for this package.",
+    "note": "The Hexagonal Generations Rules post by c0b0p0 dated 27 February 2014 supplies this exact B2/S1 three-state period-158 spaceship RLE. The catalogue retains every live and refractory initial state under (q,r)=(x,y-x), followed only by a centring translation. The full-state dynamics are therefore a replay of the published object, not a new package discovery.",
+    "sources": [
+      {
+        "label": "c0b0p0, B2/S1 three-state period-158 spaceship (27 February 2014)",
+        "url": "https://conwaylife.com/forums/viewtopic.php?f=11&t=1319"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/fixtures/hex-published-provenance.json",
+      "research/verify-hex-published-provenance.js"
+    ]
+  },
+  {
+    "id": "hex-b2s34-wall-repair",
+    "status": "published",
+    "credit": "Self-repairing wall published by Dean Hickerson (2016). The package independently verifies recovery of the complete state.",
+    "note": "The 20 January 2016 post supplies the exact damaged-wall RLE used here. Direct coordinate comparison confirms the catalogue changes only embedding and centring. Independent replay of damaged and pristine walls shows full-state reunion at generation 44, including exterior debris. Hickerson describes earlier investigations of the rule, but this audit dates the retrieved public example to 2016 rather than assigning an unverified earlier discovery date.",
+    "sources": [
+      {
+        "label": "Dean Hickerson, B2/S34 walls and billiard tables (20 January 2016)",
+        "url": "https://conwaylife.com/forums/viewtopic.php?p=28428"
+      },
+      {
+        "label": "Primary discussion containing the published wall and billiard-table RLEs",
+        "url": "https://conwaylife.com/forums/viewtopic.php?p=26919"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/fixtures/hex-published-provenance.json",
+      "research/verify-hex-published-provenance.js"
+    ]
+  },
+  {
+    "id": "hex-b2s34-p2044-billiard",
+    "status": "published",
+    "credit": "Period-2044 billiard table published by Dean Hickerson (2016); independently verified for this package.",
+    "note": "The 20 January 2016 post supplies the exact B2/S34H period-2044 billiard-table RLE used here and describes the one-dimensional XOR behaviour inside its walls. Direct coordinate comparison confirms the catalogue changes only embedding and centring. The package’s long complete-state replay verifies the published oscillator; it does not establish a new oscillator or a new XOR mechanism.",
+    "sources": [
+      {
+        "label": "Dean Hickerson, B2/S34 walls and billiard tables (20 January 2016)",
+        "url": "https://conwaylife.com/forums/viewtopic.php?p=28428"
+      },
+      {
+        "label": "Primary discussion containing the published wall and billiard-table RLEs",
+        "url": "https://conwaylife.com/forums/viewtopic.php?p=26919"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "research/fixtures/hex-published-provenance.json",
+      "research/verify-hex-published-provenance.js"
+    ]
+  },
+  {
+    "id": "hex-parity-seven-copy",
+    "status": "package-constructed",
+    "credit": "Illustrative seed constructed for this package using the standard additive/XOR cellular-automaton mechanism.",
+    "note": "The three-live-cell initial pattern was assembled for the package, not mined from a soup or imported as an attributed published pattern. B135/S0246 computes the XOR of the centre and six neighbours. Over GF(2), powers of two of this linear update yield translated copies, giving the seven-copy demonstration once their supports are disjoint. The package claims this illustrative arrangement and its exact verification only; neither XOR replication nor the underlying algebra is a new principle. No external source is asserted for this particular seed.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/hexagonal-sources.json",
+      "research/fixtures/hexagonal-evidence.json",
+      "research/hex-reference.js",
+      "test-hexagonal-evidence.js",
+      "docs/HEXAGONAL_STRUCTURES.md"
+    ]
+  },
+  {
+    "id": "penrose-conway-p4",
+    "status": "package-found",
+    "credit": "Independently found here; published-pattern identity unresolved",
+    "note": "The package record recovers this exact phase from deterministic soup penrose-touch-B3/S23-2-osc-v3-6566, density 0.16. It has 12 support tiles and minimum population 9. Penrose Conway oscillators were catalogued by Owens and Stepney, but an exact identification with their illustrated patterns has not been established; this is a package search attribution, not a worldwide originality claim.",
+    "sources": [
+      {
+        "label": "Owens & Stepney (2010): Penrose Life catalogue and classification",
+        "url": "https://www-users.york.ac.uk/~ss44/bib/ss/nonstd/penroselife.htm"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "research/mine-oscillators.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "penrose-conway-p5",
+    "status": "package-found",
+    "credit": "Independently found here; published-pattern identity unresolved",
+    "note": "The exact phase is recorded under soup penrose-touch-B3/S23-2-osc-v3-1151, density 0.35. It has 18 support tiles and minimum population 8. It is not identified with the published r-p5-14-7 juggler: those support/population invariants differ. Other possible earlier matches remain unestablished.",
+    "sources": [
+      {
+        "label": "Owens & Stepney (2010): Penrose Life catalogue and classification",
+        "url": "https://www-users.york.ac.uk/~ss44/bib/ss/nonstd/penroselife.htm"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "research/mine-oscillators.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "penrose-conway-p7",
+    "status": "package-found",
+    "credit": "Independently found here; published-pattern identity unresolved",
+    "note": "The package soup replay records seed penrose-touch-osc-149, density 0.16, and this exact isolated period-7 phase. It has 20 support tiles and minimum population 7. Prior Penrose Conway oscillator catalogues are relevant background, but an exact earlier-pattern identification remains unestablished.",
+    "sources": [
+      {
+        "label": "Owens & Stepney (2010): Penrose Life catalogue and classification",
+        "url": "https://www-users.york.ac.uk/~ss44/bib/ss/nonstd/penroselife.htm"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "research/mine-oscillators.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "penrose-conway-p12",
+    "status": "package-found",
+    "credit": "Package search; possible Owens–Stepney fireworks match, exact identity unverified",
+    "note": "Found from the package’s deterministic soup penrose-touch-osc-98 at density 0.08. The published fireworks oscillator r-p12-33-6 in Stepney’s 2016 Fig. 6, reproduced from Owens–Stepney 2010 Fig. 18.96, has matching period 12, cycle support 33 and minimum population 6. These invariants do not establish identity: the primary phase geometry has not been independently compared. The earlier oscillator is therefore credited as a possible antecedent, without claiming that this is either a confirmed reproduction or a new pattern. Historical priority remains unestablished.",
+    "sources": [
+      {
+        "label": "Stepney (2016), Fig. 6: published fireworks oscillator",
+        "url": "https://www-users.york.ac.uk/~ss44/bib/ss/nonstd/AAGoL2016.pdf"
+      },
+      {
+        "label": "Owens & Stepney (2010): Penrose Life catalogue and classification",
+        "url": "https://www-users.york.ac.uk/~ss44/bib/ss/nonstd/penroselife.htm"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "research/mine-oscillators.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "penrose-edge-conway-p4",
+    "status": "package-found",
+    "credit": "Found by package search; priority unestablished",
+    "note": "The exact phase is recorded under soup penrose-edge-B3/S23-2-osc-v3-4732, density 0.30. This example uses edge adjacency, unlike the generalised Moore contact graph in the cited Penrose Conway catalogue. Same rule name or period alone does not identify an earlier exact pattern; external priority remains unestablished.",
+    "sources": [
+      {
+        "label": "Owens & Stepney (2010): Penrose Life catalogue and classification",
+        "url": "https://www-users.york.ac.uk/~ss44/bib/ss/nonstd/penroselife.htm"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "research/mine-oscillators.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "hat-conway-p6",
+    "status": "package-found",
+    "credit": "Found in Aperiodic Life searches; earlier priority unestablished",
+    "note": "Extracted from a deterministic soup by the package’s oscillator miner: source seed hat-touch-B3/S23-2-osc-v3-2285, density 0.35. The isolated component has period 6. No earlier publication of this exact configuration was identified in the reviewed sources; this records its origin within the package, not a claim of first discovery.",
+    "sources": [],
+    "evidence": [
+      "discoveries.js",
+      "research/fixtures/catalogue-verification.json",
+      "research/verify-catalog.js",
+      "research/mine-oscillators.js"
+    ]
+  },
+  {
+    "id": "hat-conway-p9",
+    "status": "package-found",
+    "credit": "Found in Aperiodic Life searches; earlier priority unestablished",
+    "note": "Extracted from the package’s deterministic Conway-rule soup hat-touch-osc-61 at density 0.30. The whole soup has period 18; the isolated catalogue component has period 9. The name credits Conway’s B3/S23 rule, not authorship of this hat configuration. No earlier publication of this exact configuration was identified in the reviewed sources; this records its origin within the package, not a claim of first discovery.",
+    "sources": [],
+    "evidence": [
+      "discoveries.js",
+      "research/fixtures/catalogue-verification.json",
+      "research/verify-catalog.js",
+      "research/mine-oscillators.js"
+    ]
+  },
+  {
+    "id": "hat-conway-p26",
+    "status": "package-found",
+    "credit": "Found in Aperiodic Life searches; earlier priority unestablished",
+    "note": "Extracted from the package’s deterministic Conway-rule soup hat-touch-osc-27 at density 0.35. The isolated catalogue component has period 26. The name credits Conway’s B3/S23 rule, not authorship of this hat configuration. No earlier publication of this exact configuration was identified in the reviewed sources; this records its origin within the package, not a claim of first discovery.",
+    "sources": [],
+    "evidence": [
+      "discoveries.js",
+      "research/fixtures/catalogue-verification.json",
+      "research/verify-catalog.js",
+      "research/mine-oscillators.js"
+    ]
+  },
+  {
+    "id": "hat-edge-conway-p15",
+    "status": "package-found",
+    "credit": "Found in Aperiodic Life searches; earlier priority unestablished",
+    "note": "Extracted from a deterministic soup by the package’s oscillator miner: source seed hat-edge-B3/S23-2-osc-v3-467, density 0.35. This is an exact period-15 component on the shared-edge hat graph, using Conway’s B3/S23 counts. No earlier publication of this exact configuration was identified in the reviewed sources; this records its origin within the package, not a claim of first discovery.",
+    "sources": [],
+    "evidence": [
+      "discoveries.js",
+      "research/fixtures/catalogue-verification.json",
+      "research/verify-catalog.js",
+      "research/mine-oscillators.js"
+    ]
+  },
+  {
+    "id": "hat-seeds-p8",
+    "status": "package-found",
+    "credit": "Found in Aperiodic Life searches; earlier priority unestablished",
+    "note": "Extracted from a deterministic soup by the package’s oscillator miner: source seed hat-edge-B2/S-2-osc-v3-97, density 0.04. The four-live-cell catalogue phase has period 8 on the shared-edge hat graph. Seeds names the B2/S rule family; it does not identify a published source for this particular configuration. No earlier publication of this exact configuration was identified in the reviewed sources; this records its origin within the package, not a claim of first discovery.",
+    "sources": [],
+    "evidence": [
+      "discoveries.js",
+      "research/fixtures/catalogue-verification.json",
+      "research/verify-catalog.js",
+      "research/mine-oscillators.js"
+    ]
+  },
+  {
+    "id": "hat-b23-p20",
+    "status": "package-found",
+    "credit": "Found in Aperiodic Life searches; earlier priority unestablished",
+    "note": "Extracted from a deterministic soup by the package’s oscillator miner: source seed hat-edge-B23/S-2-osc-v3-333, density 0.12. The whole soup has period 60; the isolated catalogue component has period 20. No earlier publication of this exact configuration was identified in the reviewed sources; this records its origin within the package, not a claim of first discovery.",
+    "sources": [],
+    "evidence": [
+      "discoveries.js",
+      "research/fixtures/catalogue-verification.json",
+      "research/verify-catalog.js",
+      "research/mine-oscillators.js"
+    ]
+  },
+  {
+    "id": "hat-b23-p24",
+    "status": "package-found",
+    "credit": "Found in Aperiodic Life searches; earlier priority unestablished",
+    "note": "Extracted from a deterministic soup by the package’s oscillator miner: source seed hat-edge-B23/S-2-osc-v3-748, density 0.10. The eight-live-cell catalogue phase has period 24. No earlier publication of this exact configuration was identified in the reviewed sources; this records its origin within the package, not a claim of first discovery.",
+    "sources": [],
+    "evidence": [
+      "discoveries.js",
+      "research/fixtures/catalogue-verification.json",
+      "research/verify-catalog.js",
+      "research/mine-oscillators.js"
+    ]
+  },
+  {
+    "id": "hat-b23-p28",
+    "status": "package-found",
+    "credit": "Found in Aperiodic Life searches; earlier priority unestablished",
+    "note": "Extracted from a deterministic soup by the package’s oscillator miner: source seed hat-edge-B23/S-2-osc-v3-694, density 0.16. The whole soup has period 56; the isolated catalogue component has period 28. No earlier publication of this exact configuration was identified in the reviewed sources; this records its origin within the package, not a claim of first discovery.",
+    "sources": [],
+    "evidence": [
+      "discoveries.js",
+      "research/fixtures/catalogue-verification.json",
+      "research/verify-catalog.js",
+      "research/mine-oscillators.js"
+    ]
+  },
+  {
+    "id": "penrose-b2-c4-compact-traveller",
+    "status": "package-found",
+    "credit": "Traveller phase found here; priority unestablished",
+    "note": "The package retains an explicit source phase and a polygon-preserving transplant verifier. It is a 4-state B2/S live-front/refractory-wake example with a finite 220-generation certificate. Earlier published Penrose gliders use a different rule; no exact-pattern identity with them is asserted. The general refractory idea is established, and no worldwide first-discovery claim is made for this Penrose phase.",
+    "sources": [
+      {
+        "label": "Goucher (2012): earlier Penrose glider under a different rule",
+        "url": "https://cp4space.hatsya.com/wp-content/uploads/2012/11/2012-penrose-gliders.pdf"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "test-traveller-evidence.js",
+      "research/search-mobile-patterns.js",
+      "docs/RULE_SURVEY.md",
+      "research/verify-penrose-traveller.js"
+    ]
+  },
+  {
+    "id": "penrose-b2-c5-compact-traveller",
+    "status": "package-found",
+    "credit": "Traveller phase found here; priority unestablished",
+    "note": "The recorded depth-10 phase is taken from the package's five-state traveller campaign. It is a 5-state B2/S live-front/refractory-wake example with a finite 220-generation certificate. Earlier published Penrose gliders use a different rule; no exact-pattern identity with them is asserted. The general refractory idea is established, and no worldwide first-discovery claim is made for this Penrose phase.",
+    "sources": [
+      {
+        "label": "Goucher (2012): earlier Penrose glider under a different rule",
+        "url": "https://cp4space.hatsya.com/wp-content/uploads/2012/11/2012-penrose-gliders.pdf"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "test-traveller-evidence.js",
+      "research/search-mobile-patterns.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "penrose-b2-c6-compact-traveller",
+    "status": "package-found",
+    "credit": "Traveller phase found here; priority unestablished",
+    "note": "The recorded depth-10 phase is taken from the package's six-state traveller campaign. It is a 6-state B2/S live-front/refractory-wake example with a finite 220-generation certificate. Earlier published Penrose gliders use a different rule; no exact-pattern identity with them is asserted. The general refractory idea is established, and no worldwide first-discovery claim is made for this Penrose phase.",
+    "sources": [
+      {
+        "label": "Goucher (2012): earlier Penrose glider under a different rule",
+        "url": "https://cp4space.hatsya.com/wp-content/uploads/2012/11/2012-penrose-gliders.pdf"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "test-traveller-evidence.js",
+      "research/search-mobile-patterns.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "penrose-b24-c4-launcher-traveller",
+    "status": "package-found",
+    "credit": "Launcher found by package search; priority unestablished",
+    "note": "The package's altered-rule search supplied this 27-cell phased launcher. Eight B4 births affect its launch; its mature travelling core belongs to the package's B2/S family. This attributes the recorded seed and launch mechanism, not a new recurrent glider core or a proved immortal Penrose glider. No external exact-pattern source has been established.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "test-traveller-evidence.js",
+      "research/search-mobile-patterns.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "penrose-b2s4-c5-survival-launcher",
+    "status": "package-found",
+    "credit": "Launcher found by package search; priority unestablished",
+    "note": "This seven-live-cell seed comes from the package's Penrose traveller search. Two S4 survivals distinguish its launch before it settles into the established B2/S-type wave. The exact seed, clause ablation and finite traversal are documented; prior worldwide identity of this launch is unestablished.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "test-traveller-evidence.js",
+      "research/search-mobile-patterns.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "penrose-b26s-c4-birth-launcher",
+    "status": "package-found",
+    "credit": "Launcher found by package search; priority unestablished",
+    "note": "The package search supplied this eighteen-cell phased seed. One B6 birth genuinely affects the launch; its eventual recurrent wave uses the established B2/S mechanism. It is a separately recorded launcher rather than evidence of a new recurrent rule mechanism. No external exact-pattern attribution was established.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "test-traveller-evidence.js",
+      "research/search-mobile-patterns.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "penrose-b27s4-c4-dual-clause-launcher",
+    "status": "package-found",
+    "credit": "Launcher found by package search; priority unestablished",
+    "note": "The recorded 26-live-cell launch comes from the package's altered-rule campaign. Both added clauses fire during launch: B7 births and S4 survivals. The mature core belongs to the B2/S travelling family. This is package provenance for the seed, with external first-discovery priority unestablished.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "test-traveller-evidence.js",
+      "research/search-mobile-patterns.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "penrose-conway-diehard-293",
+    "status": "package-found",
+    "credit": "Found by package search; priority unestablished",
+    "note": "This exact fourteen-cell seed is the retained extinction-at-293 result of the package's 5,000-candidate transient campaign, deterministic seed penrose-touch-B3/S23-2-transient-v1. Earlier Penrose Life lifetime studies provide context, but do not identify this exact initial state. No world-record or original-discovery claim is made.",
+    "sources": [
+      {
+        "label": "Owens & Stepney (2010): Penrose Life statistics",
+        "url": "https://www-users.york.ac.uk/~ss44/bib/ss/nonstd/jca10.pdf"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "research/search-transients.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "penrose-conway-methuselah-289",
+    "status": "package-found",
+    "credit": "Found by package search; priority unestablished",
+    "note": "The exact 22-live-cell seed is the retained result of the package's 35,000-candidate campaign penrose-touch-b3s23-transient-v2. Its transient is 289 generations before a fixed point. This is a locally documented search result, not an attribution of the underlying Conway rule or a claim to the longest known Penrose transient.",
+    "sources": [
+      {
+        "label": "Owens & Stepney (2010): Penrose Life statistics",
+        "url": "https://www-users.york.ac.uk/~ss44/bib/ss/nonstd/jca10.pdf"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "research/search-transients.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "penrose-b12-p840-field",
+    "status": "package-constructed",
+    "credit": "Deterministic field generated for this package",
+    "note": "The initial field is generated by the package from seed penrose-edge-B12/S-2, density 0.12 and eight dead border rings. The finite field has transient 51 and period 840. This is a reproducible seeded demonstration, not a claim to an independently indivisible period-840 oscillator or an original cellular-automaton rule.",
+    "sources": [],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "research/survey-fields.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "penrose-brain-field",
+    "status": "package-constructed",
+    "credit": "Package-seeded field; Brian Silverman's Brain rule",
+    "note": "The B2/S three-state transition is Brian Silverman's established Brain rule, here applied to the Penrose touch graph instead of its usual square neighbourhood. The exact random field is package-generated from seed penrose-touch-B2/S-3 at density 0.12 with eight border rings. Its 3,000-generation observation is a finite demonstration, not a published fixed pattern or a first-discovery claim.",
+    "sources": [
+      {
+        "label": "CelLab documentation: Brian Silverman's Brain rule",
+        "url": "https://www.fourmilab.ch/cellab/manual/chap4.html"
+      }
+    ],
+    "evidence": [
+      "research/fixtures/catalogue-verification.json",
+      "research/survey-fields.js",
+      "docs/RULE_SURVEY.md"
+    ]
+  },
+  {
+    "id": "hat-b1-field",
+    "status": "package-constructed",
+    "credit": "Aperiodic Life seeded-field demonstration",
+    "note": "A reproducible pseudorandom field constructed for the package’s rule survey, using seed hat-touch-B1/S-2, density 0.12 and an eight-ring dead border. It was selected because it remains active through 3,000 generations. This is a finite-board demonstration of collective dynamics, not an attributed compact pattern or a claim of a newly discovered rule.",
+    "sources": [],
+    "evidence": [
+      "discoveries.js",
+      "research/fixtures/catalogue-verification.json",
+      "research/verify-catalog.js",
+      "research/survey-fields.js"
+    ]
+  }
+]

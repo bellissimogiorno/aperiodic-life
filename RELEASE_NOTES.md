@@ -1,4 +1,4 @@
-# Aperiodic Life 3.7.1
+# Aperiodic Life 3.7.2
 
 Aperiodic Life is an offline browser laboratory for cellular automata on square, hexagonal, Einstein-hat, and Penrose tilings.
 
@@ -7,11 +7,12 @@ Aperiodic Life is an offline browser laboratory for cellular automata on square,
 - Four geometry backends with shared-edge and edge-or-corner contact graphs.
 - Synchronous `B/S` rules with binary or refractory multistate evolution, plus named priority tables whose higher states influence neighbours.
 - A searchable catalogue of 81 reproducible configurations, with automatic framing and slower playback for the twelve Hat, Penrose and hexagonal glider and launcher highlights (3–6 steps per second).
+- Individual credits and source links for every example, searchable by credited author, with a complete [provenance audit](docs/CATALOGUE_CREDITS.md). Published patterns and adaptations are distinguished from package-found configurations whose historical priority is unestablished.
 - Curated configurations at the top of the controls and an always-visible canvas Play/Pause button, including on mobile.
 - Exact JSON state save/load, settings export, PNG export, painting, panning, and zooming.
 - Mobile pinch-to-zoom and two-finger panning in either tool, with single-finger painting protected from accidental edits when starting a pinch.
 - Localised Penrose oscillators of periods 822 and 14; Einstein-hat rotating waves of periods 39 and 219; and an eight-tile refractory clock.
-- Independent reproductions of Edmond’s published Hat A/B/C gliders, a derived three-state variant, and a two-cell Hat triple launcher.
+- Independent reproductions of James Edmond’s published Hat A/B/C gliders and Hat C triple behaviour, with a derived three-state variant. His [paper](https://arxiv.org/abs/2609.22579) and [interactive project](https://offlattice.org/monotile/) receive explicit credit.
 - Three-cell Penrose seeds emitting five and six independent compact travellers.
 - Tiny hexagonal glider seeds and two knightship launchers with exact complete-state translated recurrence.
 - Finite Penrose travellers, exact regular-lattice spaceships, long transients, replicators, and collective fields.

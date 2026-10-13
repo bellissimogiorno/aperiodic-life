@@ -16,7 +16,7 @@
         "rule": "B2/S0",
         "generations": 3,
         "borderRings": 1,
-        "speed": 6,
+        "speed": 3,
         "coordinateStates": [
           [
             0,
@@ -168,7 +168,7 @@
         "rule": "B234/S1346",
         "generations": 3,
         "borderRings": 1,
-        "speed": 8,
+        "speed": 4,
         "coordinateStates": [
           [
             0,
@@ -401,7 +401,7 @@
         "rule": "B2456/S1345",
         "generations": 4,
         "borderRings": 1,
-        "speed": 12,
+        "speed": 6,
         "coordinateStates": [
           [
             0,
@@ -675,7 +675,7 @@
         "rule": "B23/S13",
         "generations": 4,
         "borderRings": 1,
-        "speed": 8,
+        "speed": 4,
         "coordinateStates": [
           [
             0,
@@ -992,7 +992,7 @@
         "rule": "B234/S245",
         "generations": 5,
         "borderRings": 1,
-        "speed": 8,
+        "speed": 4,
         "coordinateStates": [
           [
             0,

@@ -165,6 +165,17 @@ assert(catalogue.filter((entry) => discoveryMatches(entry, 'Einstein p26')).leng
 assert(catalogue.filter((entry) => discoveryMatches(entry, 'B2/S 4 states')).length >= 1);
 assert.equal(catalogue.filter((entry) => discoveryMatches(entry, 'no-such-pattern')).length, 0);
 assert.equal(catalogue.filter((entry) => discoveryMatches(entry, '  ')).length, catalogue.length);
+const creditedExample = {
+  title: 'Travelling pair', tiling: 'hat', rule: 'TABLE:HAT-B', generations: 4,
+  provenance: {
+    credit: 'James Edmond; independently placed seed',
+    sources: [{ label: 'Author’s Glider Compendium', url: 'https://example.org/' }],
+  },
+};
+assert(discoveryMatches(creditedExample, 'JAMES EDMOND Einstein'));
+assert(discoveryMatches(creditedExample, 'compendium 4 states'));
+assert(!discoveryMatches(creditedExample, 'Edmond Penrose'));
+assert(!discoveryMatches({ title: 'Uncredited example' }, 'Edmond'));
 
 async function testFailedRestore() {
   const app = experiment('penrose', 'touch');

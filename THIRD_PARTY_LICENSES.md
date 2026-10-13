@@ -1,5 +1,7 @@
 # Third-party attribution
 
+Individual pattern credits, source links, and the distinction between published examples and package-found configurations are recorded for all 81 entries in [Catalogue credits and provenance](docs/CATALOGUE_CREDITS.md). Preserve those records when redistributing the catalogue. Scientific credit is separate from the software licence notices below.
+
 ## Einstein hat geometry
 
 The hat outline, affine geometry helpers, initial H/T/P/F metatiles, and hierarchical substitution construction in `core.js` are adapted from Craig S. Kaplan's `hatviz` project:
@@ -42,6 +44,7 @@ Monotilings: Cellular Automata on the Hat and Spectre*, submitted on
 18 September 2026, and its accompanying rule compendium:
 
 - https://arxiv.org/abs/2609.22579
+- https://offlattice.org/monotile/
 - https://github.com/jamesedmond/monotile-ca/blob/main/GLIDERS.md
 - https://github.com/jamesedmond/monotile-ca/blob/main/LICENSE-MIT
 
@@ -49,7 +52,7 @@ The source records and exact transition semantics are retained in
 [the priority-rule fixture](research/fixtures/published-priority-rules.json).
 The simulation engine and the catalogue's searches for seeds on this project's
 geometry were written independently. The project does not claim original
-discovery of Edmond's Hat travellers. `TABLE:HAT-SIMPLE` is a derived
+discovery of Edmond's Hat travellers or Hat C triple-launch behaviour; independently selected seed positions do not make those behaviours original to this package. `TABLE:HAT-SIMPLE` is a derived
 three-state variant of Hat B; it is not equivalent to Hat B on every initial
 configuration. The Spectre rule is available through the core API, but a
 Spectre tiling backend is not included.
@@ -106,8 +109,19 @@ earlier example noted by Dmitry Maitak), c0b0p0 (the period-999 rotor and
 period-158 spaceship), John Cerkan (the period-13 spaceship), and Dean Hickerson
 (the repairing wall and period-2,044 billiard table). The period-48 B2/S34
 oscillator was also published by drc and was independently encountered by the
-project's search. Author names identify the cited publications and do not
+project's search. The period-25 B245/S35 spaceship matches muzik's published
+pattern and was likewise independently recovered. The B2/S35 spaceship matches
+John Cerkan's published phase, with earlier scholarly context in Carter Bays's
+2005 paper; two multistate launchers adapt its seed geometry. Author names identify the cited publications and do not
 assert discovery priority.
+
+The Penrose period-12 example may correspond to the fireworks oscillator
+published by Owens and Stepney: period, cycle territory and minimum population
+agree, but exact pattern identity remains unverified. Their work is credited
+as a possible antecedent. The square examples are established Life and HighLife patterns;
+their individual credits include Richard K. Guy, Nathan Thompson and
+Charles L. Corderman. Full sources and unresolved authorship are recorded in
+the [individual catalogue credits](docs/CATALOGUE_CREDITS.md).
 
 Original RLE or generating seeds, source URLs, coordinate conversions, and
 attribution are retained in the [hexagonal source records](research/fixtures/hexagonal-sources.json)

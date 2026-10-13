@@ -1,12 +1,12 @@
 # Gliders, launchers and the limits of the evidence
 
-This report records the intensive search supporting Aperiodic Life 3.7.1. The release adds twelve playable examples: five Hat configurations, two Penrose launchers and five hexagonal gliders or launchers. Seeds, rules, complete-state evidence, independent replay code and campaign manifests accompany the application.
+This report records the intensive search supporting Aperiodic Life 3.7.2. The catalogue includes twelve highlights from this work: five Hat configurations, two Penrose launchers and five hexagonal gliders or launchers. Seeds, rules, complete-state evidence, independent replay code and campaign manifests accompany the application.
 
 ## The Einstein-hat result and its attribution
 
 There is already a public report of Hat gliders: James Edmond, [*Gliders on Aperiodic Monotilings: Cellular Automata on the Hat and Spectre*](https://arxiv.org/abs/2609.22579), submitted 18 September 2026. Its rule tables count neighbours in every state, use ordered conditions and include corner contacts. Those are different dynamics from ordinary B/S Generations, whose higher states age without influencing neighbours. The preprint presents extensive computational evidence, including million-ring sliding-window flights, and explicitly does not prove immortality (§5.2).
 
-This project independently implements the tables and reproduces their Hat behaviour on its own substitution-generated contact graphs. It does not claim the first Hat glider. The public paper and its [code and records](https://github.com/jamesedmond/monotile-ca) deserve the credit for the published rules and prior discovery. Our independently located seed placements and launcher demonstrations are useful reproducible examples; a claim that they are new to mathematics would require a separate priority investigation.
+This project independently implements the tables and reproduces their Hat behaviour on its own substitution-generated contact graphs. It does not claim the first Hat glider. The public paper, [interactive project](https://offlattice.org/monotile/) and [code and records](https://github.com/jamesedmond/monotile-ca) deserve the credit for the published rules and prior discovery, including the Hat C triple behaviour. The package independently located its seed placements; this does not establish a new launcher mechanism. The [individual credits](CATALOGUE_CREDITS.md) record provenance and originality limits for every catalogue example.
 
 | Playable configuration | Seed size | Rule | Verified finite horizon |
 | --- | ---: | --- | ---: |

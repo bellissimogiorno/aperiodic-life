@@ -20,6 +20,8 @@ Edmond's [18 September 2026 preprint](https://arxiv.org/abs/2609.22579) reports 
 
 ## Exact localised oscillators
 
+The [individual catalogue credits](CATALOGUE_CREDITS.md) distinguish earlier publications from package search results. The binary Penrose period-12 example has the same period, cycle territory and minimum population as Owens and Stepney’s published “fireworks” oscillator. Its exact identity remains unverified; those statistics alone do not establish a match. The earlier work is credited as a possible antecedent. Package search records alone do not establish historical priority.
+
 A period is the first return of the complete labelled state, including all refractory cells. Cycle territory counts every tile used during a period rather than the simultaneous population.
 
 | Pattern | Rule and graph | States | Period | Cycle territory |

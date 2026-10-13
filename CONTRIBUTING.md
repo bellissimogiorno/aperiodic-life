@@ -49,6 +49,7 @@ A promising animation is a candidate. A catalogue entry needs reproducible evide
 - The deterministic seed and full command line for searches, their stopping conditions and horizons, and the unedited result records.
 - A replay through the production engine and an independent check of the stated behaviour. Preserve refractory states and all other nonzero cells.
 - The specific claim being made: first-return period, extinction generation, transient length, exact translated return, or activity over a stated finite interval.
+- A provenance record in `research/fixtures/catalogue-provenance.json`: check earlier papers, pattern collections and author posts; distinguish authorship of the rule, pattern and selected seed. Record known sources and any uncertainty. Independent rediscovery does not establish historical priority.
 
 For oscillators, establish the first return of the complete state; matching population or hashes is insufficient. Check boundary clearance and, for a localised pattern, show that its behaviour is not sustained by the finite border. For travellers, record compactness, displacement, connectivity, boundary distance, and the exact generations compared. Aperiodic translated returns require checking the surrounding contact graph and remain finite observations unless a separate argument establishes indefinite propagation. Distinguish a localised rotating wave from translation.
 
@@ -59,9 +60,11 @@ Write new results to a separate directory first. Keep the complete result record
 ```bash
 node research/verify-catalog.js
 node test-discoveries.js
+node tools/build_catalogue_credits.js
+node build-standalone.js
 ```
 
-The [research guide](research/README.md) and [rule survey](docs/RULE_SURVEY.md) describe the retained methods and limitations.
+The credits generator updates both the offline catalogue and [readable provenance records](docs/CATALOGUE_CREDITS.md). `node tools/build_catalogue_credits.js --check` rejects missing, duplicate or stale records. The [research guide](research/README.md) and [rule survey](docs/RULE_SURVEY.md) describe the retained methods and limitations.
 
 ## Submitting a change
 

@@ -22,7 +22,10 @@ const orbits = [];
 for (const evidence of fixture.entries) {
   const entry = catalogue.find(candidate => candidate.id === evidence.id);
   assert(entry, `${evidence.id}: missing playable catalogue entry`);
-  assert.deepEqual(entry, evidence.entry, `${entry.id}: scientific fixture and playable entry disagree`);
+  // Attribution is checked against its own canonical record in test-static.
+  // Preserve the independent scientific fixture without duplicating credits.
+  const { provenance, ...configuration } = entry;
+  assert.deepEqual(configuration, evidence.entry, `${entry.id}: scientific fixture and playable entry disagree`);
   assert(entry.coordinateStates.every(cell => cell[2] === 1), 'All launch seeds consist only of live cells');
   const orbit = reference.findOrbit(entry, { maxSteps: evidence.expected.transient + evidence.expected.period });
   assert.equal(orbit.kind, 'spaceship');

@@ -33,6 +33,8 @@ Hashes are only candidate keys. Browser cycle detection confirms equality agains
 
 ### Catalogue (`discoveries.js`)
 
+Each entry also has immutable `provenance` metadata: classification, short credit, scope note, source links and local evidence paths. Edit `research/fixtures/catalogue-provenance.json` and run `node tools/build_catalogue_credits.js` to update the embedded data and `docs/CATALOGUE_CREDITS.md`. The standard tests reject missing or stale records. No runtime network request is needed; source links open only when the user follows them.
+
 The catalogue is declarative data. An entry specifies a board, graph, rule, state count, border, declared playback speed, view policy, and either explicit cells or a deterministic random seed. Speeds are integers in the UI's 1–240 range, and the exact 81-entry mapping is frozen by regression tests; view objects and trajectory-bound arrays are immutable. Claimed periods, finite travel, horizons, and presentation metadata are regression-tested by `test-discoveries.js`; `research/verify-catalog.js` independently checks the behavioural catalogue claims. Traveller entries may also declare directionality, live-population bounds, component-count history, required birth or survival clauses, and exact translated phases; independent tests replay their complete states and local graph translations. Regular-hexagonal fixtures use axial translations; Penrose fixtures additionally require a checked local-graph radius because congruent translated tile sets do not imply a global symmetry of the aperiodic board.
 
 View metadata has one of three modes:

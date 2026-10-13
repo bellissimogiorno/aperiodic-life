@@ -1,5 +1,7 @@
 # Limitations and interpretation
 
+Every curated example has a [provenance record](CATALOGUE_CREDITS.md). “Found by this package” describes its computational source, not a claim of originality. Published rules and mechanisms, independently rediscovered patterns, and package-selected launch positions receive separate credit where the evidence permits. A missing earlier citation does not establish priority.
+
 ## Finite boards
 
 All boards are finite. Outside cells are absent: this is equivalent to a dead exterior for B/S rules, but an absent neighbour does not contribute to a priority table's count of state-0 neighbours. Dead-border rings lock existing cells near the boundary; they do not emulate an infinite plane indefinitely. None of the four tilings uses toroidal wrap.

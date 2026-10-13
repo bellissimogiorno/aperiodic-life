@@ -6,11 +6,11 @@ This package was vibe-coded by Murdoch J. Gabbay. I hope you find it useful and 
 
 Explore cellular automata on **square, hexagonal, Einstein-hat, and Penrose tilings**. Each tile is one cell. Change the rules, paint a seed, and watch patterns evolve on periodic and aperiodic boards.
 
-Aperiodic Life 3.7.1 runs offline in a WebGL2-capable browser and includes **81 verified examples**. No installation or npm dependencies are needed to use it. You can also run it immediately in your browser at [https://bellissimogiorno.github.io/aperiodic-life/](https://bellissimogiorno.github.io/aperiodic-life/).
+Aperiodic Life 3.7.2 runs offline in a WebGL2-capable browser and includes **81 verified examples**. No installation or npm dependencies are needed to use it. You can also run it immediately in your browser at [https://bellissimogiorno.github.io/aperiodic-life/](https://bellissimogiorno.github.io/aperiodic-life/).
 
 ![Einstein-hat glider and launcher phases rendered from exact simulation states](research/figures/hat-gliders.svg)
 
-*Published Hat gliders reproduced on independently generated geometry, alongside a two-cell launcher emitting three travellers. These are finite observations, not an immortality proof.*
+*James Edmond’s published Hat gliders and triple-launch behaviour, reproduced at independently selected positions. These are finite observations, not an immortality proof.*
 
 ## Run it
 
@@ -28,7 +28,7 @@ Open [http://127.0.0.1:8000/index.html](http://127.0.0.1:8000/index.html). This 
 
 ## Explore
 
-- Search **Curated configurations** at the top of the controls by tiling, rule, or name. **Load** prepares an example paused; **Load & run** starts it immediately.
+- Search **Curated configurations** at the top of the controls by tiling, rule, name, or credited author. Each selection shows its credit and source links. **Load** prepares an example paused; **Load & run** starts it immediately.
 - Use **Play/Pause** at the top right of the canvas to start or stop the simulation. It stays accessible on mobile, including while the controls are open or scrolled.
 - Start with **Hat glider B**, **Hat triple launcher**, **Penrose six-traveller launcher**, or either hexagonal **knightship**. The [search report](docs/GLIDER_SEARCH.md) explains the evidence and attribution.
 - For hexagonal highlights, search for **three-way spaceship gun**, **giant breather**, **self-repairing wall**, or **p4104**. The catalogue includes 33 hexagonal examples; the [hexagonal guide](docs/HEXAGONAL_STRUCTURES.md) explains their behaviour and evidence.
@@ -42,7 +42,9 @@ Rules use `B…/S…` notation, such as Conway's `B3/S23`. Additional cell state
 
 The catalogue includes exact localised oscillators, long transients, regular-lattice spaceships, compact Penrose waves, and independently reproduced Hat gliders observed over stated finite intervals. Hexagonal examples include a period-4,104 clock, a period-999 rotor, a spaceship gun, an oscillator-trail puffer, a self-repairing wall, and a seven-copy replicator. Search sources and manifests include an exhaustive bounded scan of 4,751,360 small hexagonal seed/rule/state combinations, extensive Hat and Penrose campaigns, and the 6,630,400-trial hexagonal campaign supporting the other examples. These counts describe executed trials, not distinct discoveries.
 
-James Edmond’s [September 2026 preprint](https://arxiv.org/abs/2609.22579) reports Hat and Spectre gliders. This project independently reproduces the Hat rules, including a compact 1,129-generation flight on 372,100 tiles. The derived three-state variant matches the tested flights but is not equivalent on arbitrary input. Credit for the published rules remains with Edmond.
+James Edmond’s [interactive project](https://offlattice.org/monotile/) and [*Gliders on Aperiodic Monotilings: Cellular Automata on the Hat and Spectre*](https://arxiv.org/abs/2609.22579) supply the Hat A/B/C rules, their gliders and the Hat C triple behaviour. This project independently selects placements and reproduces those behaviours, including a compact 1,129-generation flight on 372,100 tiles. Its derived three-state variant matches the tested flights but is not equivalent on arbitrary input.
+
+The [individual catalogue credits](docs/CATALOGUE_CREDITS.md) cover all 81 examples, distinguishing published patterns, adaptations, package searches and constructed demonstrations. **“Found by this package” does not assert a first discovery:** historical priority remains unestablished unless a prior source is identified. The credit records include known patterns independently recovered by these searches.
 
 **Our aperiodic replays are finite-patch observations; we do not prove indefinite propagation or claim the first Hat glider.** A translated return between two observed states does not establish that an aperiodic substrate repeats forever. Rotating waves are localised oscillators. Unsuccessful searches are bounded results, not nonexistence proofs.
 

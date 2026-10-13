@@ -2880,7 +2880,14 @@
           1
         ]
       ],
-      "expectedPeriod": 25
+      "expectedPeriod": 25,
+      "relatedPublishedPattern": {
+        "author": "muzik",
+        "date": "2019",
+        "url": "https://conwaylife.com/forums/viewtopic.php?f=11&t=3670",
+        "rle": "b3o$bobo$4o$bo!",
+        "relationship": "Exact full-orbit match to the published B245/S35H spaceship: hex-reference.equivalentOrbits(catalogueOrbit,publishedOrbit) gives phase shift 5, rotation60Steps 4, no reflection, translation [1,1]. The package search independently rediscovered a published pattern; it does not establish discovery priority."
+      }
     },
     {
       "catalogueId": "hex-b2s34-p48-rotor",
@@ -3135,7 +3142,7 @@
       "relatedPublishedPattern": {
         "author": "drc",
         "date": "2016-01-18",
-        "url": "https://conwaylife.com/forums/viewtopic.php?p=28428",
+        "url": "https://conwaylife.com/forums/viewtopic.php?p=28430",
         "rle": "o16bo$obo12b2o$2b2o10bobo$5bo9bo!",
         "relationship": "One of two independently oscillating six-cell components in the published RLE. Catalogue coordinates plus axial (2,-1) reproduce the first component exactly at generation zero."
       }
@@ -16252,7 +16259,7 @@
       "rle": "o3bo$bo2bo$2b3o$2bo2bo!",
       "author": "John Cerkan",
       "date": "2020-03-15",
-      "url": "https://conwaylife.com/forums/search.php?author_id=1455&sr=posts",
+      "url": "https://conwaylife.com/forums/viewtopic.php?f=11&t=3670",
       "generations": 2,
       "coordinateStates": [
         [

@@ -1,0 +1,260 @@
+{
+  "schema": "aperiodic-life-hex-published-provenance-v1",
+  "coordinateConvention": "Published Golly RLE coordinates (x,y) map to axial (q,r)=(x,y-x). RLE o or A is state 1; B is refractory state 2.",
+  "reference": "research/hex-reference.js",
+  "orbitComparisonConvention": "reference.equivalentOrbits(catalogueOrbit,publishedOrbit); shift, rotation60Steps, reflected and translation use that function’s exact contract.",
+  "scope": "These eleven matches establish that the displayed objects were published before this package. Publication dates and authors describe the retrieved sources, and need not establish first discovery priority. This is provenance evidence, not a claim of an exhaustive literature search.",
+  "entries": [
+    {
+      "id": "hex-b245s35-p25-traveller",
+      "rule": "B245/S35",
+      "generations": 2,
+      "publishedRle": "b3o$bobo$4o$bo!",
+      "method": "Full complete-state orbit comparison, including every phase and the displacement; phase, D6 symmetry and translation allowed.",
+      "comparison": {
+        "shift": 5,
+        "rotation60Steps": 4,
+        "reflected": false,
+        "translation": [
+          1,
+          1
+        ]
+      },
+      "sources": [
+        {
+          "label": "muzik, B245/S35H period-25 spaceship (2019)",
+          "url": "https://conwaylife.com/forums/viewtopic.php?f=11&t=3670"
+        }
+      ]
+    },
+    {
+      "id": "hex-b2s35-p5-traveller",
+      "rule": "B2/S35",
+      "generations": 2,
+      "publishedRle": "2bo$o3bo$2bo$bo2bo$6bo$2bo2bo$4bo!",
+      "method": "Full complete-state orbit comparison, including every phase and the displacement; phase, D6 symmetry and translation allowed.",
+      "comparison": {
+        "shift": 2,
+        "rotation60Steps": 1,
+        "reflected": false,
+        "translation": [
+          3,
+          0
+        ]
+      },
+      "sources": [
+        {
+          "label": "Carter Bays, A Note on the Game of Life in Hexagonal and Pentagonal Tessellations (2005)",
+          "url": "https://www.complex-systems.com/abstracts/v15_i03_a04/"
+        },
+        {
+          "label": "Bays (2005), Figures 3 and 4",
+          "url": "https://wpmedia.wolfram.com/uploads/sites/13/2018/02/15-3-4.pdf"
+        },
+        {
+          "label": "John Cerkan, published B2/S35H spaceship RLE (22 January 2016)",
+          "url": "https://conwaylife.com/forums/viewtopic.php?p=28428"
+        }
+      ]
+    },
+    {
+      "id": "hex-b245s3-p10-traveller",
+      "rule": "B245/S3",
+      "generations": 2,
+      "publishedRle": "obo$4bo$2bo$bo2bobo$3bo$5bo!",
+      "method": "Full complete-state orbit comparison, including every phase and the displacement; phase, D6 symmetry and translation allowed.",
+      "comparison": {
+        "shift": 0,
+        "rotation60Steps": 4,
+        "reflected": false,
+        "translation": [
+          3,
+          0
+        ]
+      },
+      "sources": [
+        {
+          "label": "Golly QuickLife documentation, hexagonal neighbourhood example",
+          "url": "https://golly.sourceforge.io/Help/Algorithms/QuickLife.html"
+        },
+        {
+          "label": "Carter Bays, A Note on the Game of Life in Hexagonal and Pentagonal Tessellations (2005)",
+          "url": "https://www.complex-systems.com/abstracts/v15_i03_a04/"
+        },
+        {
+          "label": "Bays (2005), Figures 3 and 4",
+          "url": "https://wpmedia.wolfram.com/uploads/sites/13/2018/02/15-3-4.pdf"
+        }
+      ]
+    },
+    {
+      "id": "hex-b246s246-c4-p30-gun",
+      "rule": "B246/S246",
+      "generations": 4,
+      "publishedRle": "3A$4A$.3A$2.2A!",
+      "method": "Exact initial-state equality after translation; all live and refractory state values retained.",
+      "comparison": {
+        "catalogueEqualsPublishedPlusTranslation": [
+          -1,
+          1
+        ]
+      },
+      "sources": [
+        {
+          "label": "confocaloid, 246/246/4H three-way gun (14 October 2024)",
+          "url": "https://conwaylife.com/forums/viewtopic.php?f=11&t=1319"
+        }
+      ]
+    },
+    {
+      "id": "hex-b25s34-p20-puffer",
+      "rule": "B25/S34",
+      "generations": 2,
+      "publishedRle": "5bo$bobo$ob2obo$o5bo$3bo$2o$3bo$bo2bobo$2b3o$3b2obo$5bo!",
+      "method": "Exact initial-state equality after translation; all live and refractory state values retained.",
+      "comparison": {
+        "catalogueEqualsPublishedPlusTranslation": [
+          -3,
+          0
+        ]
+      },
+      "sources": [
+        {
+          "label": "Naszvadi, B25/S34H puffer (1 February 2024)",
+          "url": "https://conwaylife.com/forums/viewtopic.php?p=177053#p177053"
+        },
+        {
+          "label": "Source thread containing Naszvadi’s RLE and Dmitry Maitak’s earlier-publication note",
+          "url": "https://conwaylife.com/forums/viewtopic.php?p=162954"
+        },
+        {
+          "label": "Earlier 2023 occurrence cited by Dmitry Maitak; original priority not established in this audit",
+          "url": "https://conwaylife.com/forums/viewtopic.php?p=163227#p163227"
+        }
+      ]
+    },
+    {
+      "id": "hex-b2s1-c3-p999-rotor",
+      "rule": "B2/S1",
+      "generations": 3,
+      "publishedRle": "8.B$8.A$8.A2BA$8.B.B.B.B$6.A4.A2B$5.ABA5.2B$B2AB3A5.A.B$2.B2.A3.A.ABA.A$2.2B.2A2.B2AB.2A$2.A.A.A2.BA.A3.BA$3.2B2.B.2A6.A$4.B9.2A$3.B2AB8.A3$12.B2$12.B.B!",
+      "method": "Exact initial-state equality after translation; all live and refractory state values retained.",
+      "comparison": {
+        "catalogueEqualsPublishedPlusTranslation": [
+          -8,
+          1
+        ]
+      },
+      "sources": [
+        {
+          "label": "c0b0p0, B2/S1 three-state period-999 rotor (27 February 2014)",
+          "url": "https://conwaylife.com/forums/viewtopic.php?f=11&t=1319"
+        }
+      ]
+    },
+    {
+      "id": "hex-b23s4-p13-traveller",
+      "rule": "B23/S4",
+      "generations": 2,
+      "publishedRle": "o3bo$bo2bo$2b3o$2bo2bo!",
+      "method": "Exact initial-state equality after translation; all live and refractory state values retained.",
+      "comparison": {
+        "catalogueEqualsPublishedPlusTranslation": [
+          -2,
+          2
+        ]
+      },
+      "sources": [
+        {
+          "label": "John Cerkan, B23/S4H period-13 spaceship (15 March 2020)",
+          "url": "https://conwaylife.com/forums/viewtopic.php?f=11&t=3670"
+        }
+      ]
+    },
+    {
+      "id": "hex-b2s1-c3-p158-traveller",
+      "rule": "B2/S1",
+      "generations": 3,
+      "publishedRle": "2.A$2.AB$4.BA$4.2A$.A2.A$ABA.BA$A3.BA$.A2.BA$.2A.2A!",
+      "method": "Exact initial-state equality after translation; all live and refractory state values retained.",
+      "comparison": {
+        "catalogueEqualsPublishedPlusTranslation": [
+          -2,
+          -2
+        ]
+      },
+      "sources": [
+        {
+          "label": "c0b0p0, B2/S1 three-state period-158 spaceship (27 February 2014)",
+          "url": "https://conwaylife.com/forums/viewtopic.php?f=11&t=1319"
+        }
+      ]
+    },
+    {
+      "id": "hex-b2s34-wall-repair",
+      "rule": "B2/S34",
+      "generations": 2,
+      "publishedRle": "o$3o$2b3o$4b3o$6b3o$8b3o$10b3o$12b3o$14b3o$16b3o$18b3o$20bobo$22b3o$24b3o$26b3o$28b3o$30b3o$32b3o$34b3o$36b3o$38b3o$40b3o$42bo!",
+      "method": "Exact initial-state equality after translation; all live and refractory state values retained.",
+      "comparison": {
+        "catalogueEqualsPublishedPlusTranslation": [
+          -21,
+          10
+        ]
+      },
+      "sources": [
+        {
+          "label": "Dean Hickerson, B2/S34 walls and billiard tables (20 January 2016)",
+          "url": "https://conwaylife.com/forums/viewtopic.php?p=28428"
+        },
+        {
+          "label": "Primary discussion containing the published wall and billiard-table RLEs",
+          "url": "https://conwaylife.com/forums/viewtopic.php?p=26919"
+        }
+      ]
+    },
+    {
+      "id": "hex-b2s34-p2044-billiard",
+      "rule": "B2/S34",
+      "generations": 2,
+      "publishedRle": "3bo$3bo$ob4o$b3ob4o$2bo4bo$2b2o3b2o$3bo4bo$3b2o3b2o$4bob2obo$4b2o3b2o$5bo4bo$5b2o3b2o$6bo4bo$6b2o3b2o$7bo4bo$7b2o3b2o$8bo4bo$8b2o3b2o$9bo4bo$9b2o3b2o$10bo4bo$10b2o3b2o$11bo4bo$11b2o3b2o$12bo4bo$12b2o3b2o$13bo4bo$13b2o3b2o$14bo4bo$14b2o3b2o$15bo4bo$15b2o3b2o$16bo4bo$16b2o3b2o$17bo4bo$17b2o3b2o$18bo4bo$18b2o3b2o$19bo4bo$19b2o3b2o$20bo4bo$20b2o3b2o$21bo4bo$20b4ob3o$23b4obo$25bo$25bo!",
+      "method": "Exact initial-state equality after translation; all live and refractory state values retained.",
+      "comparison": {
+        "catalogueEqualsPublishedPlusTranslation": [
+          -14,
+          -9
+        ]
+      },
+      "sources": [
+        {
+          "label": "Dean Hickerson, B2/S34 walls and billiard tables (20 January 2016)",
+          "url": "https://conwaylife.com/forums/viewtopic.php?p=28428"
+        },
+        {
+          "label": "Primary discussion containing the published wall and billiard-table RLEs",
+          "url": "https://conwaylife.com/forums/viewtopic.php?p=26919"
+        }
+      ]
+    },
+    {
+      "id": "hex-b2s34-p48-rotor",
+      "rule": "B2/S34",
+      "generations": 2,
+      "publishedRle": "o16bo$obo12b2o$2b2o10bobo$5bo9bo!",
+      "method": "Published RLE consists of two independent components; select its left component (published axial q<10), then compare every initial state after translation.",
+      "comparison": {
+        "catalogueEqualsPublishedComponentPlusTranslation": [
+          -2,
+          1
+        ],
+        "publishedComponentCells": 6
+      },
+      "sources": [
+        {
+          "label": "drc, published pair of B2/S34 period-48 oscillators (18 January 2016)",
+          "url": "https://conwaylife.com/forums/viewtopic.php?p=28430"
+        }
+      ]
+    }
+  ]
+}
