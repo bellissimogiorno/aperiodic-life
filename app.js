@@ -55,6 +55,8 @@
     hatb: { rule: 'TABLE:HAT-B', generations: 4 },
     hatc: { rule: 'TABLE:HAT-C', generations: 4 },
     hatsimple: { rule: 'TABLE:HAT-SIMPLE', generations: 3 },
+    hatwake: { rule: 'TABLE:HAT-WAKE', generations: 4 },
+    hatrelay: { rule: 'TABLE:HAT-RELAY', generations: 3 },
   };
 
   function resolvePresetRule(preset, maxDegree) {

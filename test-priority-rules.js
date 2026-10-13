@@ -39,6 +39,38 @@ for (const [name, key] of Object.entries(names)) {
   for (let degree = 0; degree <= 10; degree++) enumerate(0, degree);
 }
 
+// Independent closed-form descriptions of the new searched rules. Exhausting
+// every histogram through degree ten includes every possible Hat neighbourhood
+// (the touch graph has maximum degree seven), including overlapping conditions.
+const searchedRules = [
+  ['TABLE:HAT-WAKE', 4, (own, n) => {
+    if (own === 1) return n[2] >= 1 && n[0] >= 3 ? 2 : n[0] >= 4 ? 3 : 0;
+    if (own === 0) return n[2] < 1 ? 0 : n[0] >= 4 ? 1 : n[1] >= 1 ? 3 : 0;
+    return 0;
+  }],
+  ['TABLE:HAT-RELAY', 3, (own, n) => n[2] < 1 ? 0 : own === 1 ? 2 : own === 0 && n[0] >= 4 ? 1 : 0],
+];
+for (const [name, states, expected] of searchedRules) {
+  const parsed = Core.parseRule(name, 10);
+  assert.equal(parsed.kind, 'priority');
+  assert.equal(parsed.states, states);
+  const counts = new Uint16Array(states);
+  function enumerate(state, remaining) {
+    if (state === states - 1) {
+      counts[state] = remaining;
+      for (let own = 0; own < states; own++) {
+        const before = [...counts];
+        assert.equal(Core.priorityTransition(parsed, own, counts), expected(own, before), `${name}, own=${own}, counts=${before}`);
+        assert.deepStrictEqual([...counts], before, 'transition mutates its neighbour counts');
+        localCases++;
+      }
+      return;
+    }
+    for (let count = 0; count <= remaining; count++) { counts[state] = count; enumerate(state + 1, remaining - count); }
+  }
+  for (let degree = 0; degree <= 10; degree++) enumerate(0, degree);
+}
+
 // Hat B's state-2 guard matters for manually painted states even though state 2
 // is absent from its published seed's trajectory. All nonzero states count.
 assert.equal(Core.priorityTransition(Core.parseRule('TABLE:HAT-B'), 0, [2, 0, 2, 0]), 1);

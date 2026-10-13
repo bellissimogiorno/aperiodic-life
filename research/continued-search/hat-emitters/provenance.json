@@ -1,0 +1,13 @@
+{
+  "sourceAuthor": "James Edmond",
+  "sourceTitle": "Gliders on Aperiodic Monotilings: Cellular Automata on the Hat and Spectre",
+  "source": "https://arxiv.org/html/2609.22579v1",
+  "tables": {
+    "A": 4,
+    "B": 5,
+    "C": 6
+  },
+  "simple": "D is the documented three-state reduction of Hat B with the two-empty-neighbour birth condition removed; this is a variant, not an equivalent rule on arbitrary inputs.",
+  "selectedSeedProvenance": "Deterministic connected-seed search on independently generated finite hat patches, 13 October2026. Seeds and finite dynamics are new to this campaign. No historical priority claim is made for launching or periodic-emission mechanisms.",
+  "catalogueInterpretation": "Credit Edmond for the unchanged Hat A/B rules. Separate the newly recorded seed, finite verification and repeating-source evidence from any claim of an indefinitely firing gun."
+}

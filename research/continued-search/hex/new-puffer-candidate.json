@@ -1,0 +1,197 @@
+{
+  "id": "hex-b245s02-c5-p6-puffer",
+  "source": "mixed-small-seeds.txt",
+  "sourceSeedId": "mixed-n3-c5-s10",
+  "launcher": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      2,
+      0,
+      1
+    ]
+  ],
+  "sourceExtractionGeneration": 240,
+  "sourceExtraction": "All cells with r>=147 from generation 240, the positive-r moving head",
+  "entry": {
+    "rule": "B245/S02",
+    "generations": 5,
+    "coordinateStates": [
+      [
+        -78,
+        157,
+        1
+      ],
+      [
+        -77,
+        155,
+        4
+      ],
+      [
+        -77,
+        156,
+        2
+      ],
+      [
+        -77,
+        157,
+        1
+      ],
+      [
+        -76,
+        152,
+        1
+      ],
+      [
+        -76,
+        153,
+        1
+      ],
+      [
+        -76,
+        155,
+        1
+      ],
+      [
+        -76,
+        156,
+        2
+      ],
+      [
+        -76,
+        157,
+        1
+      ],
+      [
+        -75,
+        151,
+        2
+      ],
+      [
+        -75,
+        152,
+        2
+      ],
+      [
+        -75,
+        153,
+        1
+      ],
+      [
+        -75,
+        155,
+        4
+      ],
+      [
+        -74,
+        148,
+        2
+      ],
+      [
+        -74,
+        149,
+        3
+      ],
+      [
+        -74,
+        150,
+        4
+      ],
+      [
+        -74,
+        151,
+        4
+      ],
+      [
+        -74,
+        152,
+        2
+      ],
+      [
+        -74,
+        153,
+        1
+      ],
+      [
+        -73,
+        148,
+        2
+      ],
+      [
+        -73,
+        149,
+        4
+      ],
+      [
+        -73,
+        150,
+        4
+      ],
+      [
+        -73,
+        151,
+        2
+      ],
+      [
+        -73,
+        152,
+        1
+      ],
+      [
+        -72,
+        147,
+        1
+      ],
+      [
+        -72,
+        148,
+        2
+      ],
+      [
+        -72,
+        149,
+        3
+      ],
+      [
+        -71,
+        148,
+        2
+      ]
+    ]
+  },
+  "proof": {
+    "emissionPeriod": 6,
+    "coreTranslation": [
+      -2,
+      4
+    ],
+    "debrisPeriod": 1,
+    "debrisCoordinateStates": [
+      [
+        -72,
+        147,
+        1
+      ]
+    ]
+  },
+  "certificate": {
+    "type": "puffer",
+    "emissionPeriod": 6,
+    "translation": [
+      -2,
+      4
+    ],
+    "debrisPeriod": 1,
+    "debrisPopulation": 1,
+    "separationChecks": 12,
+    "minimumProjectionGap": 4
+  }
+}

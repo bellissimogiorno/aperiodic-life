@@ -10,6 +10,87 @@
   // Edit research/fixtures/catalogue-provenance.json, then run:
   // node tools/build_catalogue_credits.js
   const PROVENANCE = {
+    "hat-wake-traveller": {
+      "status": "package-found",
+      "credit": "Aperiodic Life search; published Hat glider framework credited to James Edmond",
+      "note": "Random-initialised evolutionary lineage, evaluation 358893, epoch 11. Four-row reduction preserves the recorded seven-row trajectory. The original six-cell launch supplies the larger-patch evidence; at generation 1000 it retains eight boundary rings. None of 341 tested nontrivial state projections reproduces its observed mature dynamics under the included reference tables. This is not a proof of a wholly new transport mechanism, historical priority or indefinite flight.",
+      "sources": [
+        {
+          "label": "James Edmond’s Hat and Spectre paper",
+          "url": "https://arxiv.org/abs/2609.22579"
+        },
+        {
+          "label": "Edmond’s Glider Compendium",
+          "url": "https://github.com/jamesedmond/monotile-ca/blob/main/GLIDERS.md"
+        }
+      ],
+      "evidence": [
+        "research/continued-search/hat-relay/campaigns.json",
+        "research/continued-search/hat-relay/final-rules.json",
+        "research/continued-search/verification/README.md"
+      ]
+    },
+    "hat-two-row-relay": {
+      "status": "adapted",
+      "credit": "Aperiodic Life variant of James Edmond’s Spectre relay",
+      "note": "The rule was reached by simplifying the independently evolved wake rule, but comparison identifies the mature generation 60–235 trajectory as Edmond’s published Spectre mechanism under [0,1,2] → [0,3,1]. The global guards and ignition differ. Credit for the reproduced travelling mechanism belongs to Edmond; this is not counted as another independent glider discovery.",
+      "sources": [
+        {
+          "label": "James Edmond’s Hat and Spectre paper",
+          "url": "https://arxiv.org/abs/2609.22579"
+        },
+        {
+          "label": "Edmond’s Glider Compendium",
+          "url": "https://github.com/jamesedmond/monotile-ca/blob/main/GLIDERS.md"
+        }
+      ],
+      "evidence": [
+        "research/continued-search/hat-relay/final-rules.json",
+        "research/continued-search/hat-relay/README.md",
+        "research/continued-search/verification/README.md"
+      ]
+    },
+    "hat-edmond-a-six-way-launcher": {
+      "status": "package-found",
+      "credit": "Aperiodic Life seed search under James Edmond’s published rule",
+      "note": "A connected six-cell seed found by this package launches six separated bodies under Edmond’s published Hat A table. Independent packet evolution reconstructs the complete state from generation 60 to 180. Every nontrivial seed bipartition diverges from the interacting launch; no smaller subset reaches the same checked outcome. The rule and glider mechanism are published; this is a newly catalogued finite launch configuration. Historical priority is unestablished.",
+      "sources": [
+        {
+          "label": "James Edmond’s Hat and Spectre paper",
+          "url": "https://arxiv.org/abs/2609.22579"
+        },
+        {
+          "label": "Edmond’s Glider Compendium",
+          "url": "https://github.com/jamesedmond/monotile-ca/blob/main/GLIDERS.md"
+        }
+      ],
+      "evidence": [
+        "research/continued-search/hat-emitters/README.md",
+        "research/continued-search/verification/README.md",
+        "research/continued-search/verification/hat-a-six-launcher-evidence.json"
+      ]
+    },
+    "hat-edmond-b-periodic-emitter": {
+      "status": "package-found",
+      "credit": "Aperiodic Life seed search under James Edmond’s published rule",
+      "note": "A three-cell seed found by this package ignites a recurring source under Edmond’s unchanged Hat B table. The whole state at generation 30 is a 56-cell source: after 40 steps it returns with a 23-cell packet containing four travellers. Independent cohort reconstruction is checked at every source generation through 180 with seven boundary rings. Two pairs follow the same trajectories 20 steps apart. This establishes finite recurring emission, not a least period of 40 or perpetual operation. Credit for the rule and travelling mechanism belongs to Edmond; historical priority for this emitting configuration is unestablished.",
+      "sources": [
+        {
+          "label": "James Edmond’s Hat and Spectre paper",
+          "url": "https://arxiv.org/abs/2609.22579"
+        },
+        {
+          "label": "Edmond’s Glider Compendium",
+          "url": "https://github.com/jamesedmond/monotile-ca/blob/main/GLIDERS.md"
+        }
+      ],
+      "evidence": [
+        "research/continued-search/hat-emitters/README.md",
+        "research/continued-search/verification/README.md",
+        "research/continued-search/verification/hat-emitter-independent.json",
+        "research/continued-search/verification/verify-hat-emitter.js"
+      ]
+    },
     "hat-edmond-b-glider": {
       "status": "published",
       "credit": "James Edmond — Hat B; seed placement found for Aperiodic Life",
@@ -137,6 +218,47 @@
         "test-priority-rules.js",
         "research/exhaustive-search/hat-targeted/selected-launchers.json",
         "research/exhaustive-search/hat-targeted/priority-launchers.js"
+      ]
+    },
+    "penrose-b2-c6-twelve-launcher": {
+      "status": "package-found",
+      "credit": "Aperiodic Life seed search in the existing B2/S traveller family",
+      "note": "Three live cells selected by the connected/phased-seed campaign launch twelve independent compact bodies from generation 90 to 130, with seven boundary rings. All twelve have translated full-state and polygon returns, while five have radius-three halo returns within that horizon. All six nonempty proper seed subsets differ at generation 130. This is a finite launcher using an established package propagation family, not a new glider mechanism or repeating gun. Larger locally matching placements need not preserve this outcome. Historical priority is unestablished.",
+      "sources": [],
+      "evidence": [
+        "research/continued-search/penrose/campaigns.json",
+        "research/continued-search/penrose/twelve-launcher-evidence.json",
+        "research/continued-search/penrose/verify-twelve.js"
+      ]
+    },
+    "hex-b245s02-c5-p6-puffer": {
+      "status": "package-found",
+      "credit": "Found and independently verified in this package’s bounded search; discovery priority has not been established.",
+      "note": "A moving head extracted from the three-cell mixed-state seed. Its complete period-6 recurrence and permanent separation from every deposit are certified. B5 is unused in flight; the three-cell launch uses B5 twice. This is a newly verified package example, not a claim of first discovery.",
+      "sources": [],
+      "evidence": [
+        "research/continued-search/hex/campaigns.json",
+        "research/continued-search/hex/selected-evidence.json"
+      ]
+    },
+    "hex-b245s02-c5-three-cell-twin-puffer-launcher": {
+      "status": "package-found",
+      "credit": "Found and independently verified in this package’s bounded search; discovery priority has not been established.",
+      "note": "Mixed-state exhaustive campaign, seed mixed-n3-c5-s10. Complete replay gives two opposite certified p6 puffers and four stationary live cells at generation 30. This is a finite launch, not a stationary gun. A related four-live-cell seed had remained unclassified in the earlier exhaustive campaign; priority outside this package is unestablished.",
+      "sources": [],
+      "evidence": [
+        "research/continued-search/hex/campaigns.json",
+        "research/continued-search/hex/selected-evidence.json"
+      ]
+    },
+    "hex-b2345s24-c4-p48-traveller": {
+      "status": "package-found",
+      "credit": "Found and independently verified in this package’s bounded search; discovery priority has not been established.",
+      "note": "Seven-cell exhaustive campaign, seed n7c4s245: seven live cells settle after 16 generations into this exact period-48 ship. The displayed recurrent phase was centred for viewing. Full D6/phase comparison finds no match in the preceding 33-entry hexagonal catalogue. Independent decomposition at every phase confirms one persistent body with short-lived sparks, rather than a convoy of independently recurring ships. No worldwide priority claim is made.",
+      "sources": [],
+      "evidence": [
+        "research/continued-search/hex/campaigns.json",
+        "research/continued-search/hex/selected-evidence.json"
       ]
     },
     "hex-b2s0-c3-three-cell-glider": {
@@ -1436,6 +1558,542 @@
   }
 
   const entries = [
+  // BEGIN CONTINUED SEARCH ENTRIES
+    {
+      "id": "hat-wake-traveller",
+      "title": "Hat wake traveller",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-WAKE",
+      "generations": 4,
+      "cellStates": [
+        [
+          7392,
+          2
+        ],
+        [
+          7396,
+          1
+        ],
+        [
+          7307,
+          3
+        ],
+        [
+          2948,
+          1
+        ],
+        [
+          2955,
+          1
+        ],
+        [
+          2952,
+          1
+        ]
+      ],
+      "expectedActivityThrough": 293,
+      "speed": 6,
+      "borderRings": 1,
+      "view": {
+        "mode": "contain",
+        "padding": 4
+      },
+      "category": "Einstein-hat gliders and launchers",
+      "summary": "An independently evolved four-state rule carries a compact wake traveller through 293 generations. Larger-patch evidence covers 1,000 interior generations with at most nine nonzero cells. Finite evidence; priority and indefinite propagation remain open."
+    },
+    {
+      "id": "hat-two-row-relay",
+      "title": "Hat two-row relay — Spectre variant",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-RELAY",
+      "generations": 3,
+      "cellStates": [
+        [
+          7293,
+          2
+        ],
+        [
+          7295,
+          1
+        ]
+      ],
+      "expectedActivityThrough": 235,
+      "speed": 6,
+      "borderRings": 1,
+      "view": {
+        "mode": "contain",
+        "padding": 4
+      },
+      "category": "Einstein-hat gliders and launchers",
+      "summary": "A two-cell seed travels under a three-state rule with just two rows. The mature trajectory matches Edmond’s Spectre relay after relabelling; this is a credited adaptation. Verified through 235 finite generations; the complete support can split."
+    },
+    {
+      "id": "hat-edmond-a-six-way-launcher",
+      "category": "Einstein-hat gliders and launchers",
+      "title": "Hat A six-way launcher",
+      "summary": "A connected six-cell seed launches six independently verified Hat A gliders under Edmond’s published rule. Complete-state replay is checked through generation 180; this is a finite launcher.",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-A",
+      "generations": 4,
+      "borderRings": 1,
+      "speed": 6,
+      "view": {
+        "mode": "contain",
+        "padding": 4
+      },
+      "cellStates": [
+        [
+          24180,
+          2
+        ],
+        [
+          24181,
+          1
+        ],
+        [
+          24717,
+          2
+        ],
+        [
+          24718,
+          1
+        ],
+        [
+          24722,
+          1
+        ],
+        [
+          24724,
+          2
+        ]
+      ],
+      "expectedActivityThrough": 180
+    },
+    {
+      "id": "hat-edmond-b-periodic-emitter",
+      "category": "Einstein-hat gliders and launchers",
+      "title": "Hat B recurring emitter — finite verification",
+      "summary": "Three cells ignite a recurring source under Edmond’s Hat B rule. A complete 40-generation emission identity and separated-packet replay are verified over finite intervals; perpetual emission is not proved.",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-B",
+      "generations": 4,
+      "borderRings": 1,
+      "speed": 6,
+      "view": {
+        "mode": "contain",
+        "padding": 4
+      },
+      "cellStates": [
+        [
+          23821,
+          1
+        ],
+        [
+          23824,
+          3
+        ],
+        [
+          23836,
+          1
+        ]
+      ],
+      "expectedActivityThrough": 180
+    },
+    {
+      "id": "penrose-b2-c6-twelve-launcher",
+      "category": "Aperiodic travelling dynamics",
+      "title": "Penrose twelve-traveller launcher",
+      "summary": "Three live cells launch twelve compact six-state travellers. Their independent evolutions reconstruct the whole state from generation 90 through 130; 5 have a verified complete-state translated return with matching tile polygons and three surrounding neighbour rings during that interval. This finite traversal uses the established B2/S traveller family.",
+      "tiling": "penrose",
+      "depth": 10,
+      "penroseSeed": "sun",
+      "neighborhood": "touch",
+      "rule": "B2/S",
+      "generations": 6,
+      "borderRings": 0,
+      "speed": 6,
+      "view": {
+        "mode": "trajectory",
+        "bounds": [
+          -98.0040922164917,
+          -98.19349271059036,
+          75.3704924583435,
+          92.6484106183052
+        ],
+        "steps": 130,
+        "padding": 4
+      },
+      "cellStates": [
+        [
+          46186,
+          1
+        ],
+        [
+          51676,
+          1
+        ],
+        [
+          51680,
+          1
+        ]
+      ],
+      "expectedActivityThrough": 130
+    },
+    {
+      "tiling": "hex",
+      "neighborhood": "edge",
+      "borderRings": 1,
+      "speed": 4,
+      "id": "hex-b245s02-c5-p6-puffer",
+      "category": "Hexagonal guns, puffers and replication",
+      "title": "Hexagonal p6 single-cell-trail puffer",
+      "summary": "A five-state puffer shifts by axial (−2,4) every six generations, depositing one stationary live cell each cycle. Exact separation certificates prove continued propagation on the infinite hexagonal lattice.",
+      "depth": 128,
+      "rule": "B245/S02",
+      "generations": 5,
+      "coordinateStates": [
+        [
+          -3,
+          5,
+          1
+        ],
+        [
+          -2,
+          3,
+          4
+        ],
+        [
+          -2,
+          4,
+          2
+        ],
+        [
+          -2,
+          5,
+          1
+        ],
+        [
+          -1,
+          0,
+          1
+        ],
+        [
+          -1,
+          1,
+          1
+        ],
+        [
+          -1,
+          3,
+          1
+        ],
+        [
+          -1,
+          4,
+          2
+        ],
+        [
+          -1,
+          5,
+          1
+        ],
+        [
+          0,
+          -1,
+          2
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          1,
+          -4,
+          2
+        ],
+        [
+          1,
+          -3,
+          3
+        ],
+        [
+          1,
+          -2,
+          4
+        ],
+        [
+          1,
+          -1,
+          4
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          -4,
+          2
+        ],
+        [
+          2,
+          -3,
+          4
+        ],
+        [
+          2,
+          -2,
+          4
+        ],
+        [
+          2,
+          -1,
+          2
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          -5,
+          1
+        ],
+        [
+          3,
+          -4,
+          2
+        ],
+        [
+          3,
+          -3,
+          3
+        ],
+        [
+          4,
+          -4,
+          2
+        ]
+      ],
+      "expectedActivityThrough": 120,
+      "view": {
+        "mode": "trajectory",
+        "bounds": [
+          -3.464101552963257,
+          -8.5,
+          5.196152210235596,
+          68.5
+        ],
+        "steps": 60,
+        "padding": 3
+      }
+    },
+    {
+      "tiling": "hex",
+      "neighborhood": "edge",
+      "borderRings": 1,
+      "speed": 4,
+      "id": "hex-b245s02-c5-three-cell-twin-puffer-launcher",
+      "category": "Hexagonal guns, puffers and replication",
+      "title": "Hexagonal three-cell twin-puffer launcher",
+      "summary": "Two live cells and one refractory cell launch two opposite puffers. By generation 30 they have separated from four stationary cells; each puffer then deposits one live cell every six generations.",
+      "depth": 128,
+      "rule": "B245/S02",
+      "generations": 5,
+      "coordinateStates": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      "expectedActivityThrough": 120,
+      "view": {
+        "mode": "trajectory",
+        "bounds": [
+          -8.66025447845459,
+          -56.5,
+          13.856406211853027,
+          56.5
+        ],
+        "steps": 60,
+        "padding": 3
+      }
+    },
+    {
+      "tiling": "hex",
+      "neighborhood": "edge",
+      "borderRings": 1,
+      "speed": 4,
+      "id": "hex-b2345s24-c4-p48-traveller",
+      "category": "Hexagonal travellers",
+      "title": "Hexagonal p48 long-cycle spaceship",
+      "summary": "A four-state spaceship follows a 48-generation cycle, moving by axial (−32,16). It can also be launched from seven live cells, as recorded in the accompanying evidence.",
+      "depth": 192,
+      "rule": "B2345/S24",
+      "generations": 4,
+      "coordinateStates": [
+        [
+          -4,
+          4,
+          1
+        ],
+        [
+          -3,
+          3,
+          1
+        ],
+        [
+          -3,
+          4,
+          1
+        ],
+        [
+          -2,
+          2,
+          3
+        ],
+        [
+          -2,
+          3,
+          1
+        ],
+        [
+          -2,
+          4,
+          3
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          2,
+          -3,
+          2
+        ],
+        [
+          2,
+          -2,
+          3
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          3,
+          -4,
+          3
+        ],
+        [
+          3,
+          -1,
+          3
+        ],
+        [
+          4,
+          -2,
+          3
+        ]
+      ],
+      "expectedPeriod": 48,
+      "moving": true,
+      "translation": [
+        -32,
+        16
+      ],
+      "view": {
+        "mode": "trajectory",
+        "bounds": [
+          -56.29165267944336,
+          -7,
+          9.52627944946289,
+          38.5
+        ],
+        "steps": 60,
+        "padding": 3
+      }
+    },
+  // END CONTINUED SEARCH ENTRIES
     {
       "id": "hex-b2s0-c3-three-cell-glider",
       "category": "Hexagonal travellers",

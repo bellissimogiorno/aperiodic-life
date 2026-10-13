@@ -38,6 +38,9 @@ PROFILES = {
         ["node", "test-traveller-evidence.js"],
         ["node", "test-hexagonal-evidence.js"],
         ["node", "test-priority-rules.js"],
+        ["node", "research/continued-search/verification/verify.js"],
+        ["node", "research/continued-search/hex/verify-selected.js", "./discoveries.js"],
+        ["node", "research/continued-search/penrose/verify-twelve.js"],
         ["node", "test-hex-exhaustive-evidence.js"],
         ["node", "research/exhaustive-search/hat-broad/verify-rejections.js"],
         ["node", "test-static.js"],
@@ -51,6 +54,7 @@ PROFILES = {
         ["node", "test-regular-topology.js"],
     ],
     "large": [
+        ["node", "--max-old-space-size=4096", "research/continued-search/verification/verify.js", "--long"],
         ["node", "--max-old-space-size=4096", "research/verify-aperiodic.js", "--long"],
         ["node", "--max-old-space-size=4096", "test-depth6-smoke.js"],
         ["node", "--max-old-space-size=4096", "test-boundary-depth6.js"],

@@ -1,10 +1,12 @@
 # Reproducible automaton search
 
-The research tools verify the 81 examples in the application catalogue and search for additional structures on square, hexagonal, Penrose and Einstein-hat tilings. Catalogue verification runs with Node.js and requires no package-manager dependencies. The optional bulk hexagonal miners use C++17, with Python replay and analysis helpers.
+The research tools verify the 89 examples in the application catalogue and search for additional structures on square, hexagonal, Penrose and Einstein-hat tilings. Catalogue verification runs with Node.js and requires no package-manager dependencies. The optional bulk hexagonal miners use C++17, with Python replay and analysis helpers.
 
 See the [intensive search report](../docs/GLIDER_SEARCH.md) and [campaign sources](exhaustive-search/README.md) for the Hat, Penrose and small-seed hexagonal campaigns. `node test-priority-rules.js` checks the independent table semantics and aperiodic replays; `node test-hex-exhaustive-evidence.js` checks the five small hexagonal launchers.
 
 See the [hexagonal search guide](hex-search/README.md) for the 6,630,400-trial campaign, and the [hexagonal configuration guide](../docs/HEXAGONAL_STRUCTURES.md) for its curated results and published examples. `node test-hexagonal-evidence.js` (from the repository root) independently checks full-state recurrences, rotations, boundary clearance, emission certificates, wall repair and replication. The [hexagonal atlas](figures/hexagonal-atlas.svg) renders exact phases from the application geometry.
+
+See also the [continued searches](continued-search/README.md) and [findings report](../docs/CONTINUED_SEARCH.md) for mixed-state seeds, evolved priority tables and independent verification.
 
 ## Verify the catalogue
 

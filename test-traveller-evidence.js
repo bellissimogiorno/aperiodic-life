@@ -227,7 +227,7 @@ function prepare(entry) {
 }
 
 const travellers = discoveries.filter((entry) => entry.expectedTravel || entry.moving);
-assert.equal(travellers.length, 23, 'current catalogue traveller count');
+assert.equal(travellers.length, 24, 'current catalogue traveller count');
 let statesCompared = 0;
 let translatedReturns = 0;
 let refractoryNegativeControls = 0;

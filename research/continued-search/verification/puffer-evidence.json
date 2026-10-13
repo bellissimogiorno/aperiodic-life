@@ -1,0 +1,1148 @@
+{
+  "schema": "aperiodic-life-independent-puffer-proof-v1",
+  "centred": {
+    "id": "hex-b245s02-c5-p6-puffer",
+    "source": "mixed-small-seeds.txt",
+    "sourceSeedId": "mixed-n3-c5-s10",
+    "launcher": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        1
+      ]
+    ],
+    "sourceExtractionGeneration": 240,
+    "sourceExtraction": "All cells with r>=147 from generation 240, the positive-r moving head",
+    "entry": {
+      "rule": "B245/S02",
+      "generations": 5,
+      "coordinateStates": [
+        [
+          -3,
+          5,
+          1
+        ],
+        [
+          -2,
+          3,
+          4
+        ],
+        [
+          -2,
+          4,
+          2
+        ],
+        [
+          -2,
+          5,
+          1
+        ],
+        [
+          -1,
+          0,
+          1
+        ],
+        [
+          -1,
+          1,
+          1
+        ],
+        [
+          -1,
+          3,
+          1
+        ],
+        [
+          -1,
+          4,
+          2
+        ],
+        [
+          -1,
+          5,
+          1
+        ],
+        [
+          0,
+          -1,
+          2
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          1,
+          -4,
+          2
+        ],
+        [
+          1,
+          -3,
+          3
+        ],
+        [
+          1,
+          -2,
+          4
+        ],
+        [
+          1,
+          -1,
+          4
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          -4,
+          2
+        ],
+        [
+          2,
+          -3,
+          4
+        ],
+        [
+          2,
+          -2,
+          4
+        ],
+        [
+          2,
+          -1,
+          2
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          -5,
+          1
+        ],
+        [
+          3,
+          -4,
+          2
+        ],
+        [
+          3,
+          -3,
+          3
+        ],
+        [
+          4,
+          -4,
+          2
+        ]
+      ]
+    },
+    "proof": {
+      "emissionPeriod": 6,
+      "coreTranslation": [
+        -2,
+        4
+      ],
+      "debrisPeriod": 1,
+      "debrisCoordinateStates": [
+        [
+          3,
+          -5,
+          1
+        ]
+      ]
+    },
+    "certificate": {
+      "type": "puffer",
+      "emissionPeriod": 6,
+      "translation": [
+        -2,
+        4
+      ],
+      "debrisPeriod": 1,
+      "debrisPopulation": 1,
+      "separationChecks": 12,
+      "minimumProjectionGap": 4
+    },
+    "centringOffset": [
+      75,
+      -152
+    ]
+  },
+  "twin": {
+    "schema": "aperiodic-life-hex-twin-puffer-v1",
+    "launcher": {
+      "rule": "B245/S02",
+      "generations": 5,
+      "coordinateStates": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ]
+    },
+    "source": {
+      "campaign": "mixed",
+      "seedId": "mixed-n3-c5-s10",
+      "initialLive": 2,
+      "initialRefractory": 1
+    },
+    "claim": "Two opposite indefinitely propagating period-6 puffers, each leaving one stationary live-cell deposit per six generations. This is a finite launch of two puffers, not a stationary glider gun.",
+    "proofExplanation": "Exact finite replay gives the complete split. Each head separately satisfies a complete-state translated-core-plus-deposit recurrence with permanently disjoint dependency neighbourhoods. At every phase the two heads and pre-existing stationary debris have separating cube-coordinate projections; each head moves outwards. Each head’s later deposits lie on its own outward ray, behind that head and separated from the other head and its deposits. Translation invariance and determinism then extend the decomposition indefinitely on the unbounded hexagonal lattice.",
+    "minimalSplitScope": "Earliest successful split among generations divisible by six, for the selected complete head phases; not a claim of the earliest possible phase-dependent decomposition.",
+    "generation": 30,
+    "groups": [
+      {
+        "entry": {
+          "rule": "B245/S02",
+          "generations": 5,
+          "coordinateStates": [
+            [
+              -8,
+              17,
+              1
+            ],
+            [
+              -7,
+              15,
+              4
+            ],
+            [
+              -7,
+              16,
+              2
+            ],
+            [
+              -7,
+              17,
+              1
+            ],
+            [
+              -6,
+              12,
+              1
+            ],
+            [
+              -6,
+              13,
+              1
+            ],
+            [
+              -6,
+              15,
+              1
+            ],
+            [
+              -6,
+              16,
+              2
+            ],
+            [
+              -6,
+              17,
+              1
+            ],
+            [
+              -5,
+              11,
+              2
+            ],
+            [
+              -5,
+              12,
+              2
+            ],
+            [
+              -5,
+              13,
+              1
+            ],
+            [
+              -5,
+              15,
+              4
+            ],
+            [
+              -4,
+              8,
+              2
+            ],
+            [
+              -4,
+              9,
+              3
+            ],
+            [
+              -4,
+              10,
+              4
+            ],
+            [
+              -4,
+              11,
+              4
+            ],
+            [
+              -4,
+              12,
+              2
+            ],
+            [
+              -4,
+              13,
+              1
+            ],
+            [
+              -3,
+              8,
+              2
+            ],
+            [
+              -3,
+              9,
+              4
+            ],
+            [
+              -3,
+              10,
+              4
+            ],
+            [
+              -3,
+              11,
+              2
+            ],
+            [
+              -3,
+              12,
+              1
+            ],
+            [
+              -2,
+              7,
+              1
+            ],
+            [
+              -2,
+              8,
+              2
+            ],
+            [
+              -2,
+              9,
+              3
+            ],
+            [
+              -1,
+              8,
+              2
+            ]
+          ]
+        },
+        "proof": {
+          "emissionPeriod": 6,
+          "coreTranslation": [
+            -2,
+            4
+          ],
+          "debrisCoordinateStates": [
+            [
+              -2,
+              7,
+              1
+            ]
+          ],
+          "debrisPeriod": 1
+        },
+        "certificate": {
+          "type": "puffer",
+          "emissionPeriod": 6,
+          "translation": [
+            -2,
+            4
+          ],
+          "debrisPeriod": 1,
+          "debrisPopulation": 1,
+          "separationChecks": 12,
+          "minimumProjectionGap": 4
+        }
+      },
+      {
+        "entry": {
+          "rule": "B245/S02",
+          "generations": 5,
+          "coordinateStates": [
+            [
+              4,
+              -8,
+              2
+            ],
+            [
+              5,
+              -9,
+              3
+            ],
+            [
+              5,
+              -8,
+              2
+            ],
+            [
+              5,
+              -7,
+              1
+            ],
+            [
+              6,
+              -12,
+              1
+            ],
+            [
+              6,
+              -11,
+              2
+            ],
+            [
+              6,
+              -10,
+              4
+            ],
+            [
+              6,
+              -9,
+              4
+            ],
+            [
+              6,
+              -8,
+              2
+            ],
+            [
+              7,
+              -13,
+              1
+            ],
+            [
+              7,
+              -12,
+              2
+            ],
+            [
+              7,
+              -11,
+              4
+            ],
+            [
+              7,
+              -10,
+              4
+            ],
+            [
+              7,
+              -9,
+              3
+            ],
+            [
+              7,
+              -8,
+              2
+            ],
+            [
+              8,
+              -15,
+              4
+            ],
+            [
+              8,
+              -13,
+              1
+            ],
+            [
+              8,
+              -12,
+              2
+            ],
+            [
+              8,
+              -11,
+              2
+            ],
+            [
+              9,
+              -17,
+              1
+            ],
+            [
+              9,
+              -16,
+              2
+            ],
+            [
+              9,
+              -15,
+              1
+            ],
+            [
+              9,
+              -13,
+              1
+            ],
+            [
+              9,
+              -12,
+              1
+            ],
+            [
+              10,
+              -17,
+              1
+            ],
+            [
+              10,
+              -16,
+              2
+            ],
+            [
+              10,
+              -15,
+              4
+            ],
+            [
+              11,
+              -17,
+              1
+            ]
+          ]
+        },
+        "proof": {
+          "emissionPeriod": 6,
+          "coreTranslation": [
+            2,
+            -4
+          ],
+          "debrisCoordinateStates": [
+            [
+              5,
+              -7,
+              1
+            ]
+          ],
+          "debrisPeriod": 1
+        },
+        "certificate": {
+          "type": "puffer",
+          "emissionPeriod": 6,
+          "translation": [
+            2,
+            -4
+          ],
+          "debrisPeriod": 1,
+          "debrisPopulation": 1,
+          "separationChecks": 12,
+          "minimumProjectionGap": 4
+        }
+      }
+    ],
+    "stationaryDebris": [
+      [
+        -4,
+        0,
+        1
+      ],
+      [
+        0,
+        3,
+        1
+      ],
+      [
+        3,
+        -3,
+        1
+      ],
+      [
+        7,
+        0,
+        1
+      ]
+    ],
+    "separation": [
+      {
+        "phase": 0,
+        "first": "head-0",
+        "second": "stationary-debris",
+        "axis": [
+          0,
+          1
+        ],
+        "gap": 4,
+        "firstIncrement": 4,
+        "secondIncrement": 0
+      },
+      {
+        "phase": 0,
+        "first": "head-1",
+        "second": "stationary-debris",
+        "axis": [
+          0,
+          -1
+        ],
+        "gap": 4,
+        "firstIncrement": 4,
+        "secondIncrement": 0
+      },
+      {
+        "phase": 0,
+        "first": "head-0",
+        "second": "head-1",
+        "axis": [
+          0,
+          1
+        ],
+        "gap": 14,
+        "firstIncrement": 4,
+        "secondIncrement": -4
+      },
+      {
+        "phase": 1,
+        "first": "head-0",
+        "second": "stationary-debris",
+        "axis": [
+          0,
+          1
+        ],
+        "gap": 4,
+        "firstIncrement": 4,
+        "secondIncrement": 0
+      },
+      {
+        "phase": 1,
+        "first": "head-1",
+        "second": "stationary-debris",
+        "axis": [
+          0,
+          -1
+        ],
+        "gap": 4,
+        "firstIncrement": 4,
+        "secondIncrement": 0
+      },
+      {
+        "phase": 1,
+        "first": "head-0",
+        "second": "head-1",
+        "axis": [
+          0,
+          1
+        ],
+        "gap": 14,
+        "firstIncrement": 4,
+        "secondIncrement": -4
+      },
+      {
+        "phase": 2,
+        "first": "head-0",
+        "second": "stationary-debris",
+        "axis": [
+          0,
+          1
+        ],
+        "gap": 4,
+        "firstIncrement": 4,
+        "secondIncrement": 0
+      },
+      {
+        "phase": 2,
+        "first": "head-1",
+        "second": "stationary-debris",
+        "axis": [
+          0,
+          -1
+        ],
+        "gap": 4,
+        "firstIncrement": 4,
+        "secondIncrement": 0
+      },
+      {
+        "phase": 2,
+        "first": "head-0",
+        "second": "head-1",
+        "axis": [
+          0,
+          1
+        ],
+        "gap": 14,
+        "firstIncrement": 4,
+        "secondIncrement": -4
+      },
+      {
+        "phase": 3,
+        "first": "head-0",
+        "second": "stationary-debris",
+        "axis": [
+          0,
+          1
+        ],
+        "gap": 4,
+        "firstIncrement": 4,
+        "secondIncrement": 0
+      },
+      {
+        "phase": 3,
+        "first": "head-1",
+        "second": "stationary-debris",
+        "axis": [
+          0,
+          -1
+        ],
+        "gap": 4,
+        "firstIncrement": 4,
+        "secondIncrement": 0
+      },
+      {
+        "phase": 3,
+        "first": "head-0",
+        "second": "head-1",
+        "axis": [
+          0,
+          1
+        ],
+        "gap": 14,
+        "firstIncrement": 4,
+        "secondIncrement": -4
+      },
+      {
+        "phase": 4,
+        "first": "head-0",
+        "second": "stationary-debris",
+        "axis": [
+          0,
+          1
+        ],
+        "gap": 4,
+        "firstIncrement": 4,
+        "secondIncrement": 0
+      },
+      {
+        "phase": 4,
+        "first": "head-1",
+        "second": "stationary-debris",
+        "axis": [
+          0,
+          -1
+        ],
+        "gap": 4,
+        "firstIncrement": 4,
+        "secondIncrement": 0
+      },
+      {
+        "phase": 4,
+        "first": "head-0",
+        "second": "head-1",
+        "axis": [
+          0,
+          1
+        ],
+        "gap": 14,
+        "firstIncrement": 4,
+        "secondIncrement": -4
+      },
+      {
+        "phase": 5,
+        "first": "head-0",
+        "second": "stationary-debris",
+        "axis": [
+          0,
+          1
+        ],
+        "gap": 4,
+        "firstIncrement": 4,
+        "secondIncrement": 0
+      },
+      {
+        "phase": 5,
+        "first": "head-1",
+        "second": "stationary-debris",
+        "axis": [
+          0,
+          -1
+        ],
+        "gap": 4,
+        "firstIncrement": 4,
+        "secondIncrement": 0
+      },
+      {
+        "phase": 5,
+        "first": "head-0",
+        "second": "head-1",
+        "axis": [
+          0,
+          1
+        ],
+        "gap": 14,
+        "firstIncrement": 4,
+        "secondIncrement": -4
+      }
+    ],
+    "exactSplitStates": [
+      [
+        -8,
+        17,
+        1
+      ],
+      [
+        -7,
+        15,
+        4
+      ],
+      [
+        -7,
+        16,
+        2
+      ],
+      [
+        -7,
+        17,
+        1
+      ],
+      [
+        -6,
+        12,
+        1
+      ],
+      [
+        -6,
+        13,
+        1
+      ],
+      [
+        -6,
+        15,
+        1
+      ],
+      [
+        -6,
+        16,
+        2
+      ],
+      [
+        -6,
+        17,
+        1
+      ],
+      [
+        -5,
+        11,
+        2
+      ],
+      [
+        -5,
+        12,
+        2
+      ],
+      [
+        -5,
+        13,
+        1
+      ],
+      [
+        -5,
+        15,
+        4
+      ],
+      [
+        -4,
+        0,
+        1
+      ],
+      [
+        -4,
+        8,
+        2
+      ],
+      [
+        -4,
+        9,
+        3
+      ],
+      [
+        -4,
+        10,
+        4
+      ],
+      [
+        -4,
+        11,
+        4
+      ],
+      [
+        -4,
+        12,
+        2
+      ],
+      [
+        -4,
+        13,
+        1
+      ],
+      [
+        -3,
+        8,
+        2
+      ],
+      [
+        -3,
+        9,
+        4
+      ],
+      [
+        -3,
+        10,
+        4
+      ],
+      [
+        -3,
+        11,
+        2
+      ],
+      [
+        -3,
+        12,
+        1
+      ],
+      [
+        -2,
+        7,
+        1
+      ],
+      [
+        -2,
+        8,
+        2
+      ],
+      [
+        -2,
+        9,
+        3
+      ],
+      [
+        -1,
+        8,
+        2
+      ],
+      [
+        0,
+        3,
+        1
+      ],
+      [
+        3,
+        -3,
+        1
+      ],
+      [
+        4,
+        -8,
+        2
+      ],
+      [
+        5,
+        -9,
+        3
+      ],
+      [
+        5,
+        -8,
+        2
+      ],
+      [
+        5,
+        -7,
+        1
+      ],
+      [
+        6,
+        -12,
+        1
+      ],
+      [
+        6,
+        -11,
+        2
+      ],
+      [
+        6,
+        -10,
+        4
+      ],
+      [
+        6,
+        -9,
+        4
+      ],
+      [
+        6,
+        -8,
+        2
+      ],
+      [
+        7,
+        -13,
+        1
+      ],
+      [
+        7,
+        -12,
+        2
+      ],
+      [
+        7,
+        -11,
+        4
+      ],
+      [
+        7,
+        -10,
+        4
+      ],
+      [
+        7,
+        -9,
+        3
+      ],
+      [
+        7,
+        -8,
+        2
+      ],
+      [
+        7,
+        0,
+        1
+      ],
+      [
+        8,
+        -15,
+        4
+      ],
+      [
+        8,
+        -13,
+        1
+      ],
+      [
+        8,
+        -12,
+        2
+      ],
+      [
+        8,
+        -11,
+        2
+      ],
+      [
+        9,
+        -17,
+        1
+      ],
+      [
+        9,
+        -16,
+        2
+      ],
+      [
+        9,
+        -15,
+        1
+      ],
+      [
+        9,
+        -13,
+        1
+      ],
+      [
+        9,
+        -12,
+        1
+      ],
+      [
+        10,
+        -17,
+        1
+      ],
+      [
+        10,
+        -16,
+        2
+      ],
+      [
+        10,
+        -15,
+        4
+      ],
+      [
+        11,
+        -17,
+        1
+      ]
+    ],
+    "checkedCompleteGenerations": 36,
+    "launcherClauseEvidence": {
+      "originalRule": "B245/S02",
+      "orbitEffectiveRule": "B24/S02",
+      "clausesByGeneration": [
+        {
+          "transitionFrom": 11,
+          "transitionTo": 12,
+          "B5": 2
+        }
+      ],
+      "firstDivergenceWhenRemovingB5": 12,
+      "counterfactualAt100": {
+        "kind": "unresolved"
+      }
+    }
+  }
+}

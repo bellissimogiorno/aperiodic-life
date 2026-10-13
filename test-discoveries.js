@@ -9,6 +9,14 @@ const VIEW_EPSILON = 1e-5;
 const VIEW_MODES = new Set(['initial', 'trajectory', 'contain']);
 const MAX_UI_SPEED = 240;
 const EXPECTED_SPEEDS = Object.freeze({
+  'hat-wake-traveller': 6,
+  'hat-two-row-relay': 6,
+  'hat-edmond-a-six-way-launcher': 6,
+  'hat-edmond-b-periodic-emitter': 6,
+  'penrose-b2-c6-twelve-launcher': 6,
+  'hex-b245s02-c5-p6-puffer': 4,
+  'hex-b245s02-c5-three-cell-twin-puffer-launcher': 4,
+  'hex-b2345s24-c4-p48-traveller': 4,
   'hex-b2s0-c3-three-cell-glider': 3,
   'hex-b234s1346-c3-four-cell-launcher': 4,
   'hex-b2456s1345-c4-five-cell-launcher': 6,
@@ -423,7 +431,7 @@ function exactFirstCycle(simulation, limit, observe = null) {
   return null;
 }
 
-assert.equal(discoveries.length, 81);
+assert.equal(discoveries.length, 89);
 assert.equal(new Set(discoveries.map((entry) => entry.id)).size, discoveries.length, 'discovery IDs must be unique');
 assert.equal(Object.keys(EXPECTED_SPEEDS).length, discoveries.length, 'expected speed table must cover the catalogue exactly');
 

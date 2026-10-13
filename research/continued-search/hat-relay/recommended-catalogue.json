@@ -1,0 +1,85 @@
+[
+  {
+    "id": "hat-wake-traveller",
+    "title": "Hat wake traveller",
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "rule": "TABLE:HAT-WAKE",
+    "generations": 4,
+    "cellStates": [
+      [
+        7392,
+        2
+      ],
+      [
+        7396,
+        1
+      ],
+      [
+        7307,
+        3
+      ],
+      [
+        2948,
+        1
+      ],
+      [
+        2955,
+        1
+      ],
+      [
+        2952,
+        1
+      ]
+    ],
+    "expectedActivityThrough": 293,
+    "speed": 6,
+    "borderRings": 1,
+    "view": {
+      "mode": "contain",
+      "padding": 4
+    },
+    "reportedSearchMetrics": {
+      "maximumRadius": 4.6378,
+      "maximumNonzero": 9,
+      "displacement": 315.733,
+      "minimumBoundary": 4
+    },
+    "provenance": "Random-initialised rule lineage; four-row simplification. The six-cell launch, not a different two-cell launch, supplies the depth6 long-flight certificate."
+  },
+  {
+    "id": "hat-two-row-relay",
+    "title": "Hat two-row relay — Spectre variant",
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "rule": "TABLE:HAT-RELAY",
+    "generations": 3,
+    "cellStates": [
+      [
+        7293,
+        2
+      ],
+      [
+        7295,
+        1
+      ]
+    ],
+    "expectedActivityThrough": 235,
+    "speed": 6,
+    "borderRings": 1,
+    "view": {
+      "mode": "contain",
+      "padding": 4
+    },
+    "reportedSearchMetrics": {
+      "peakPopulation": 11,
+      "maximumRadius": 4.5743091859170075,
+      "displacement": 220.04793885982946,
+      "minimumBoundary": 4,
+      "maxMatureComponents": 2
+    },
+    "provenance": "A two-row simplification reached from the independently evolved rule. The selected mature trajectory60–235 is exactly the published Spectre relay after state map[0,1,2]→[0,3,1]; credit this as an adaptation, not a new mature mechanism. The whole support can have two components."
+  }
+]

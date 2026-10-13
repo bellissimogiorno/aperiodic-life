@@ -1,0 +1,975 @@
+{
+  "entry": {
+    "id": "hat-relay-two-row-valid",
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "rule": "TABLE:HAT-RELAY",
+    "table": {
+      "states": 3,
+      "default": 0,
+      "rows": [
+        {
+          "state": 1,
+          "atLeast": {
+            "2": 1
+          },
+          "next": 2
+        },
+        {
+          "state": 0,
+          "atLeast": {
+            "0": 4,
+            "2": 1
+          },
+          "next": 1
+        }
+      ]
+    },
+    "cellStates": [
+      [
+        7293,
+        2
+      ],
+      [
+        7295,
+        1
+      ]
+    ],
+    "horizon": 235,
+    "checkpoints": [
+      {
+        "generation": 0,
+        "cellStates": [
+          [
+            7293,
+            2
+          ],
+          [
+            7295,
+            1
+          ]
+        ],
+        "centre": [
+          -62.36538314819336,
+          29.01185131072998
+        ],
+        "radius": 0.7854069258298826
+      },
+      {
+        "generation": 50,
+        "cellStates": [
+          [
+            2715,
+            2
+          ],
+          [
+            2701,
+            1
+          ],
+          [
+            2702,
+            1
+          ],
+          [
+            2718,
+            1
+          ],
+          [
+            2717,
+            1
+          ],
+          [
+            3272,
+            1
+          ]
+        ],
+        "centre": [
+          -93.06410090128581,
+          -3.5751304626464844
+        ],
+        "radius": 2.6019002907029507
+      },
+      {
+        "generation": 100,
+        "cellStates": [
+          [
+            1221,
+            2
+          ],
+          [
+            1317,
+            1
+          ],
+          [
+            1319,
+            1
+          ],
+          [
+            1324,
+            1
+          ],
+          [
+            1322,
+            1
+          ],
+          [
+            1315,
+            1
+          ]
+        ],
+        "centre": [
+          -85.19230779012044,
+          -50.47373644510905
+        ],
+        "radius": 3.177520735929272
+      },
+      {
+        "generation": 150,
+        "cellStates": [
+          [
+            6057,
+            2
+          ],
+          [
+            6053,
+            1
+          ],
+          [
+            5971,
+            1
+          ],
+          [
+            5968,
+            1
+          ],
+          [
+            6056,
+            1
+          ],
+          [
+            6054,
+            1
+          ]
+        ],
+        "centre": [
+          -71.12179311116536,
+          -102.62400945027669
+        ],
+        "radius": 2.565161340367049
+      },
+      {
+        "generation": 200,
+        "cellStates": [
+          [
+            38275,
+            2
+          ],
+          [
+            38285,
+            1
+          ],
+          [
+            37628,
+            1
+          ],
+          [
+            38283,
+            1
+          ],
+          [
+            38287,
+            1
+          ],
+          [
+            38284,
+            1
+          ]
+        ],
+        "centre": [
+          -56.99358876546224,
+          -153.49745178222656
+        ],
+        "radius": 2.39763575491649
+      }
+    ],
+    "expectedFinal": [
+      [
+        37916,
+        2
+      ],
+      [
+        37914,
+        2
+      ],
+      [
+        37769,
+        1
+      ],
+      [
+        37762,
+        1
+      ],
+      [
+        37766,
+        1
+      ],
+      [
+        37899,
+        1
+      ]
+    ]
+  },
+  "result": {
+    "id": "hat-relay-two-row-valid",
+    "verifiedThrough": 235,
+    "reason": "horizon",
+    "productionParity": true,
+    "checkedMinerCheckpoints": [
+      0,
+      50,
+      100,
+      150,
+      200
+    ],
+    "trajectorySha256": "324d1d93f3f2e65f8b8ff09de34192bc777788734efaacee1f8f64ed5c67f674",
+    "minimumBoundaryDistance": 4,
+    "maximumActive": 11,
+    "maximumRadius": 4.5743091859170075,
+    "maximumComponents": 2,
+    "visitedTiles": 576,
+    "centroidDisplacement": 220.04793885982946,
+    "absoluteCycle": null,
+    "initial": [
+      [
+        7293,
+        2
+      ],
+      [
+        7295,
+        1
+      ]
+    ],
+    "final": [
+      [
+        37762,
+        1
+      ],
+      [
+        37766,
+        1
+      ],
+      [
+        37769,
+        1
+      ],
+      [
+        37899,
+        1
+      ],
+      [
+        37914,
+        2
+      ],
+      [
+        37916,
+        2
+      ]
+    ],
+    "returns": [],
+    "referenceSource": "research/aperiodic-reference.js direct-neighbour B/S; verification/replay.js direct-neighbour priority tables",
+    "scope": "Finite trajectory only. Local repeats do not prove infinite aperiodic propagation or historical novelty.",
+    "distinctLocalContexts": 52,
+    "publishedContextComparison": [
+      {
+        "name": "spectre",
+        "stateMap": [
+          0,
+          3,
+          1
+        ],
+        "distinctContextMismatches": 4,
+        "firstMismatch": {
+          "own": 0,
+          "counts": [
+            3,
+            2,
+            1
+          ],
+          "after": 0,
+          "uses": 5,
+          "mappedNext": 0,
+          "publishedNext": 3
+        }
+      },
+      {
+        "name": "hatB",
+        "stateMap": [
+          0,
+          1,
+          3
+        ],
+        "distinctContextMismatches": 4,
+        "firstMismatch": {
+          "own": 0,
+          "counts": [
+            3,
+            0,
+            3
+          ],
+          "after": 0,
+          "uses": 1,
+          "mappedNext": 0,
+          "publishedNext": 1
+        }
+      },
+      {
+        "name": "hatSimple",
+        "stateMap": [
+          0,
+          1,
+          2
+        ],
+        "distinctContextMismatches": 4,
+        "firstMismatch": {
+          "own": 0,
+          "counts": [
+            3,
+            0,
+            3
+          ],
+          "after": 0,
+          "uses": 1,
+          "mappedNext": 0,
+          "publishedNext": 1
+        }
+      },
+      {
+        "name": "hatA",
+        "stateMap": [
+          0,
+          2,
+          1
+        ],
+        "distinctContextMismatches": 11,
+        "firstMismatch": {
+          "own": 2,
+          "counts": [
+            5,
+            1,
+            0
+          ],
+          "after": 0,
+          "uses": 69,
+          "mappedNext": 0,
+          "publishedNext": 3
+        }
+      },
+      {
+        "name": "spectre",
+        "stateMap": [
+          0,
+          2,
+          3
+        ],
+        "distinctContextMismatches": 14,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 3,
+          "publishedNext": 0
+        }
+      },
+      {
+        "name": "spectre",
+        "stateMap": [
+          0,
+          3,
+          2
+        ],
+        "distinctContextMismatches": 14,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 2,
+          "publishedNext": 0
+        }
+      },
+      {
+        "name": "hatA",
+        "stateMap": [
+          0,
+          2,
+          3
+        ],
+        "distinctContextMismatches": 14,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 3,
+          "publishedNext": 0
+        }
+      },
+      {
+        "name": "hatA",
+        "stateMap": [
+          0,
+          3,
+          2
+        ],
+        "distinctContextMismatches": 14,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 2,
+          "publishedNext": 0
+        }
+      },
+      {
+        "name": "hatB",
+        "stateMap": [
+          0,
+          1,
+          2
+        ],
+        "distinctContextMismatches": 14,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 2,
+          "publishedNext": 0
+        }
+      },
+      {
+        "name": "penroseGoucher",
+        "stateMap": [
+          0,
+          2,
+          3
+        ],
+        "distinctContextMismatches": 15,
+        "firstMismatch": {
+          "own": 0,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 1,
+          "uses": 361,
+          "mappedNext": 2,
+          "publishedNext": 0
+        }
+      },
+      {
+        "name": "hatC",
+        "stateMap": [
+          0,
+          1,
+          2
+        ],
+        "distinctContextMismatches": 16,
+        "firstMismatch": {
+          "own": 0,
+          "counts": [
+            0,
+            5,
+            1
+          ],
+          "after": 0,
+          "uses": 1,
+          "mappedNext": 0,
+          "publishedNext": 3
+        }
+      },
+      {
+        "name": "hatC",
+        "stateMap": [
+          0,
+          1,
+          3
+        ],
+        "distinctContextMismatches": 16,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 3,
+          "publishedNext": 0
+        }
+      },
+      {
+        "name": "spectre",
+        "stateMap": [
+          0,
+          2,
+          1
+        ],
+        "distinctContextMismatches": 18,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 1,
+          "publishedNext": 0
+        }
+      },
+      {
+        "name": "spectre",
+        "stateMap": [
+          0,
+          1,
+          2
+        ],
+        "distinctContextMismatches": 24,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 2,
+          "publishedNext": 0
+        }
+      },
+      {
+        "name": "penroseGoucher",
+        "stateMap": [
+          0,
+          1,
+          3
+        ],
+        "distinctContextMismatches": 24,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 3,
+          "publishedNext": 2
+        }
+      },
+      {
+        "name": "penroseGoucher",
+        "stateMap": [
+          0,
+          3,
+          2
+        ],
+        "distinctContextMismatches": 24,
+        "firstMismatch": {
+          "own": 2,
+          "counts": [
+            5,
+            1,
+            0
+          ],
+          "after": 0,
+          "uses": 69,
+          "mappedNext": 0,
+          "publishedNext": 3
+        }
+      },
+      {
+        "name": "hatB",
+        "stateMap": [
+          0,
+          2,
+          1
+        ],
+        "distinctContextMismatches": 24,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 1,
+          "publishedNext": 0
+        }
+      },
+      {
+        "name": "hatA",
+        "stateMap": [
+          0,
+          3,
+          1
+        ],
+        "distinctContextMismatches": 26,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 1,
+          "publishedNext": 0
+        }
+      },
+      {
+        "name": "hatB",
+        "stateMap": [
+          0,
+          2,
+          3
+        ],
+        "distinctContextMismatches": 27,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 3,
+          "publishedNext": 0
+        }
+      },
+      {
+        "name": "hatB",
+        "stateMap": [
+          0,
+          3,
+          2
+        ],
+        "distinctContextMismatches": 29,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 2,
+          "publishedNext": 0
+        }
+      },
+      {
+        "name": "spectre",
+        "stateMap": [
+          0,
+          1,
+          3
+        ],
+        "distinctContextMismatches": 31,
+        "firstMismatch": {
+          "own": 2,
+          "counts": [
+            5,
+            1,
+            0
+          ],
+          "after": 0,
+          "uses": 69,
+          "mappedNext": 0,
+          "publishedNext": 1
+        }
+      },
+      {
+        "name": "penroseGoucher",
+        "stateMap": [
+          0,
+          3,
+          1
+        ],
+        "distinctContextMismatches": 33,
+        "firstMismatch": {
+          "own": 2,
+          "counts": [
+            5,
+            1,
+            0
+          ],
+          "after": 0,
+          "uses": 69,
+          "mappedNext": 0,
+          "publishedNext": 2
+        }
+      },
+      {
+        "name": "hatB",
+        "stateMap": [
+          0,
+          3,
+          1
+        ],
+        "distinctContextMismatches": 33,
+        "firstMismatch": {
+          "own": 2,
+          "counts": [
+            5,
+            1,
+            0
+          ],
+          "after": 0,
+          "uses": 69,
+          "mappedNext": 0,
+          "publishedNext": 3
+        }
+      },
+      {
+        "name": "hatC",
+        "stateMap": [
+          0,
+          3,
+          1
+        ],
+        "distinctContextMismatches": 33,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 1,
+          "publishedNext": 0
+        }
+      },
+      {
+        "name": "hatSimple",
+        "stateMap": [
+          0,
+          2,
+          1
+        ],
+        "distinctContextMismatches": 37,
+        "firstMismatch": {
+          "own": 2,
+          "counts": [
+            5,
+            1,
+            0
+          ],
+          "after": 0,
+          "uses": 69,
+          "mappedNext": 0,
+          "publishedNext": 2
+        }
+      },
+      {
+        "name": "hatA",
+        "stateMap": [
+          0,
+          1,
+          3
+        ],
+        "distinctContextMismatches": 38,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 3,
+          "publishedNext": 0
+        }
+      },
+      {
+        "name": "hatA",
+        "stateMap": [
+          0,
+          1,
+          2
+        ],
+        "distinctContextMismatches": 40,
+        "firstMismatch": {
+          "own": 2,
+          "counts": [
+            5,
+            1,
+            0
+          ],
+          "after": 0,
+          "uses": 69,
+          "mappedNext": 0,
+          "publishedNext": 1
+        }
+      },
+      {
+        "name": "hatC",
+        "stateMap": [
+          0,
+          3,
+          2
+        ],
+        "distinctContextMismatches": 40,
+        "firstMismatch": {
+          "own": 1,
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "after": 2,
+          "uses": 1,
+          "mappedNext": 2,
+          "publishedNext": 1
+        }
+      },
+      {
+        "name": "penroseGoucher",
+        "stateMap": [
+          0,
+          1,
+          2
+        ],
+        "distinctContextMismatches": 42,
+        "firstMismatch": {
+          "own": 2,
+          "counts": [
+            5,
+            1,
+            0
+          ],
+          "after": 0,
+          "uses": 69,
+          "mappedNext": 0,
+          "publishedNext": 3
+        }
+      },
+      {
+        "name": "penroseGoucher",
+        "stateMap": [
+          0,
+          2,
+          1
+        ],
+        "distinctContextMismatches": 42,
+        "firstMismatch": {
+          "own": 2,
+          "counts": [
+            5,
+            1,
+            0
+          ],
+          "after": 0,
+          "uses": 69,
+          "mappedNext": 0,
+          "publishedNext": 1
+        }
+      },
+      {
+        "name": "hatC",
+        "stateMap": [
+          0,
+          2,
+          1
+        ],
+        "distinctContextMismatches": 44,
+        "firstMismatch": {
+          "own": 2,
+          "counts": [
+            5,
+            1,
+            0
+          ],
+          "after": 0,
+          "uses": 69,
+          "mappedNext": 0,
+          "publishedNext": 2
+        }
+      },
+      {
+        "name": "hatC",
+        "stateMap": [
+          0,
+          2,
+          3
+        ],
+        "distinctContextMismatches": 49,
+        "firstMismatch": {
+          "own": 2,
+          "counts": [
+            5,
+            1,
+            0
+          ],
+          "after": 0,
+          "uses": 69,
+          "mappedNext": 0,
+          "publishedNext": 1
+        }
+      }
+    ],
+    "comparisonScope": "Exact state relabelling of local transitions actually encountered. A mismatch distinguishes a transition, not automatically a travelling mechanism; unvisited contexts are untested."
+  },
+  "matureProjection": {
+    "from": 60,
+    "through": 235,
+    "distinctContexts": 38,
+    "mapsChecked": 83,
+    "matches": [
+      {
+        "name": "spectre",
+        "stateMap": [
+          0,
+          3,
+          1
+        ]
+      }
+    ]
+  }
+}

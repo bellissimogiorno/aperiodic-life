@@ -1,0 +1,40 @@
+{
+  "id": "penrose-b2-c6-twelve-launcher",
+  "category": "Aperiodic travelling dynamics",
+  "title": "Penrose twelve-traveller launcher",
+  "summary": "Three live cells launch twelve compact six-state travellers. Their independent evolutions reconstruct the whole state from generation 90 through 130; 5 have a verified complete-state translated return with matching tile polygons and three surrounding neighbour rings during that interval. This finite traversal uses the established B2/S traveller family.",
+  "tiling": "penrose",
+  "depth": 10,
+  "penroseSeed": "sun",
+  "neighborhood": "touch",
+  "rule": "B2/S",
+  "generations": 6,
+  "borderRings": 0,
+  "speed": 6,
+  "view": {
+    "mode": "trajectory",
+    "bounds": [
+      -98.0040922164917,
+      -98.19349271059036,
+      75.3704924583435,
+      92.6484106183052
+    ],
+    "steps": 130,
+    "padding": 4
+  },
+  "cellStates": [
+    [
+      46186,
+      1
+    ],
+    [
+      51676,
+      1
+    ],
+    [
+      51680,
+      1
+    ]
+  ],
+  "expectedActivityThrough": 130
+}

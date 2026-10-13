@@ -1,0 +1,1099 @@
+{
+  "schema": "aperiodic-life-continued-hex-campaign-v1",
+  "trialDefinition": "One initial state, one B/S rule, one state count. Refractory values are part of the complete state. Raw candidate and orbit counts are not discovery counts.",
+  "totals": {
+    "trials": 4444400,
+    "steps": 110171326,
+    "extinct": 869804,
+    "boundaryStopped": 74959,
+    "populationStopped": 2620239,
+    "periodic": 878700,
+    "moving": 40075,
+    "horizonStopped": 698,
+    "records": 983
+  },
+  "cpuSeconds": 561.6107490000002,
+  "campaigns": [
+    {
+      "campaign": "mixed",
+      "mode": "coloured",
+      "seedFile": "mixed-small-seeds.txt",
+      "maxSteps": 700,
+      "maxPopulation": 650,
+      "recurrencePopulationCap": 350,
+      "gridWidth": 512,
+      "seedCount": 180,
+      "maximumC": 6,
+      "deduplication": "Complete-state normalised phase, period, translation and C; rule ignored to collapse inactive-clause variants. Full D6/orbit deduplication follows independently.",
+      "counts": {
+        "trials": 1474560,
+        "steps": 20538919,
+        "extinct": 364492,
+        "boundaryStopped": 3156,
+        "populationStopped": 773317,
+        "periodic": 333590,
+        "moving": 2208,
+        "horizonStopped": 5,
+        "records": 6
+      },
+      "seconds": 95.2347,
+      "resources": {
+        "command": [
+          "./search",
+          "coloured",
+          "mixed-small-seeds.txt",
+          "mixed",
+          "700",
+          "650",
+          "6"
+        ],
+        "exitCode": 0,
+        "elapsedSeconds": 95.24258542060852,
+        "userCpuSeconds": 95.203529,
+        "systemCpuSeconds": 0.019957,
+        "maximumResidentKiB": 9344
+      },
+      "seedFileSha256": "9c9367842464f40361d9bc8a4570e9dd0bb6d27e15b5b1a660eeb03bf4cffae2"
+    },
+    {
+      "campaign": "n7",
+      "mode": "coloured",
+      "seedFile": "n7-c4-seeds.txt",
+      "maxSteps": 700,
+      "maxPopulation": 650,
+      "recurrencePopulationCap": 350,
+      "gridWidth": 512,
+      "seedCount": 333,
+      "maximumC": 4,
+      "deduplication": "Complete-state normalised phase, period, translation and C; rule ignored to collapse inactive-clause variants. Full D6/orbit deduplication follows independently.",
+      "counts": {
+        "trials": 2727936,
+        "steps": 69805222,
+        "extinct": 436013,
+        "boundaryStopped": 41617,
+        "populationStopped": 1756977,
+        "periodic": 492701,
+        "moving": 17016,
+        "horizonStopped": 628,
+        "records": 229
+      },
+      "seconds": 369.532,
+      "resources": {
+        "command": [
+          "./search",
+          "coloured",
+          "n7-c4-seeds.txt",
+          "n7",
+          "700",
+          "650",
+          "4"
+        ],
+        "exitCode": 0,
+        "elapsedSeconds": 369.53715205192566,
+        "userCpuSeconds": 369.329536,
+        "systemCpuSeconds": 0.147217,
+        "maximumResidentKiB": 9344
+      },
+      "seedFileSha256": "5a481c058aaeb151349a1d225eda316cd825955244e2d29f97c5f3a03d4309e9"
+    },
+    {
+      "campaign": "n8",
+      "mode": "targeted",
+      "seedFile": "n8-targeted-seeds.txt",
+      "maxSteps": 1000,
+      "maxPopulation": 850,
+      "recurrencePopulationCap": 350,
+      "gridWidth": 512,
+      "seedCount": 141904,
+      "maximumC": 8,
+      "deduplication": "Complete-state normalised phase, period, translation and C; rule ignored to collapse inactive-clause variants. Full D6/orbit deduplication follows independently.",
+      "counts": {
+        "trials": 141904,
+        "steps": 7077851,
+        "extinct": 46536,
+        "boundaryStopped": 4302,
+        "populationStopped": 67410,
+        "periodic": 23630,
+        "moving": 5706,
+        "horizonStopped": 26,
+        "records": 354
+      },
+      "seconds": 47.4581,
+      "resources": {
+        "command": [
+          "./search",
+          "targeted",
+          "n8-targeted-seeds.txt",
+          "n8",
+          "1000",
+          "850",
+          "8"
+        ],
+        "exitCode": 0,
+        "elapsedSeconds": 47.63637375831604,
+        "userCpuSeconds": 47.602277,
+        "systemCpuSeconds": 0.028572999999999998,
+        "maximumResidentKiB": 35952
+      },
+      "seedFileSha256": "e2aa935be1184509067025aa8edfb2f688d8b40ee1083d3ff586b2d00560cede"
+    },
+    {
+      "campaign": "mutations",
+      "mode": "mutations",
+      "seedFile": "new-mutations-seeds.txt",
+      "maxSteps": 1200,
+      "maxPopulation": 850,
+      "recurrencePopulationCap": 350,
+      "gridWidth": 512,
+      "seedCount": 100000,
+      "maximumC": 8,
+      "deduplication": "Complete-state normalised phase, period, translation and C; rule ignored to collapse inactive-clause variants. Full D6/orbit deduplication follows independently.",
+      "counts": {
+        "trials": 100000,
+        "steps": 12749334,
+        "extinct": 22763,
+        "boundaryStopped": 25884,
+        "populationStopped": 22535,
+        "periodic": 28779,
+        "moving": 15145,
+        "horizonStopped": 39,
+        "records": 394
+      },
+      "seconds": 48.8598,
+      "resources": {
+        "command": [
+          "./search",
+          "mutations",
+          "new-mutations-seeds.txt",
+          "mutations",
+          "1200",
+          "850",
+          "8"
+        ],
+        "exitCode": 0,
+        "elapsedSeconds": 49.31009769439697,
+        "userCpuSeconds": 49.184552,
+        "systemCpuSeconds": 0.095108,
+        "maximumResidentKiB": 60848
+      },
+      "seedFileSha256": "598f74919623c5ab77f36a4e698bc90f73dffb8c743fc722347fc381bd1206f6"
+    }
+  ],
+  "seedGeneration": {
+    "freePolyhexCounts": [
+      1,
+      1,
+      3,
+      7,
+      22,
+      82,
+      333,
+      1448
+    ],
+    "files": [
+      {
+        "file": "n7-c4-seeds.txt",
+        "count": 333,
+        "sha256": "5a481c058aaeb151349a1d225eda316cd825955244e2d29f97c5f3a03d4309e9"
+      },
+      {
+        "file": "n8-shapes.txt",
+        "count": 1448,
+        "sha256": "7b6e8c4859244b54bf31eb4d315c51223b56158d2c528113060f741e1bd5906a"
+      },
+      {
+        "file": "mixed-small-seeds.txt",
+        "count": 180,
+        "sha256": "9c9367842464f40361d9bc8a4570e9dd0bb6d27e15b5b1a660eeb03bf4cffae2"
+      }
+    ],
+    "mixedScope": "All connected supports of 1–3 occupied cells, every assignment of nonzero states in C=3..6 containing at least one live and one refractory cell, modulo translations and D6; all-live seeds excluded."
+  },
+  "targetedGeneration": {
+    "targeted": {
+      "trials": 141904,
+      "shapes": 1448,
+      "rules": [
+        {
+          "B": 4,
+          "S": 1,
+          "C": 3,
+          "basis": "hex-b2s0-c3-three-cell-glider",
+          "changedBit": -1
+        },
+        {
+          "B": 6,
+          "S": 1,
+          "C": 3,
+          "basis": "hex-b2s0-c3-three-cell-glider",
+          "changedBit": 0
+        },
+        {
+          "B": 0,
+          "S": 1,
+          "C": 3,
+          "basis": "hex-b2s0-c3-three-cell-glider",
+          "changedBit": 1
+        },
+        {
+          "B": 12,
+          "S": 1,
+          "C": 3,
+          "basis": "hex-b2s0-c3-three-cell-glider",
+          "changedBit": 2
+        },
+        {
+          "B": 20,
+          "S": 1,
+          "C": 3,
+          "basis": "hex-b2s0-c3-three-cell-glider",
+          "changedBit": 3
+        },
+        {
+          "B": 36,
+          "S": 1,
+          "C": 3,
+          "basis": "hex-b2s0-c3-three-cell-glider",
+          "changedBit": 4
+        },
+        {
+          "B": 68,
+          "S": 1,
+          "C": 3,
+          "basis": "hex-b2s0-c3-three-cell-glider",
+          "changedBit": 5
+        },
+        {
+          "B": 4,
+          "S": 0,
+          "C": 3,
+          "basis": "hex-b2s0-c3-three-cell-glider",
+          "changedBit": 6
+        },
+        {
+          "B": 4,
+          "S": 3,
+          "C": 3,
+          "basis": "hex-b2s0-c3-three-cell-glider",
+          "changedBit": 7
+        },
+        {
+          "B": 4,
+          "S": 5,
+          "C": 3,
+          "basis": "hex-b2s0-c3-three-cell-glider",
+          "changedBit": 8
+        },
+        {
+          "B": 4,
+          "S": 9,
+          "C": 3,
+          "basis": "hex-b2s0-c3-three-cell-glider",
+          "changedBit": 9
+        },
+        {
+          "B": 4,
+          "S": 17,
+          "C": 3,
+          "basis": "hex-b2s0-c3-three-cell-glider",
+          "changedBit": 10
+        },
+        {
+          "B": 4,
+          "S": 33,
+          "C": 3,
+          "basis": "hex-b2s0-c3-three-cell-glider",
+          "changedBit": 11
+        },
+        {
+          "B": 4,
+          "S": 65,
+          "C": 3,
+          "basis": "hex-b2s0-c3-three-cell-glider",
+          "changedBit": 12
+        },
+        {
+          "B": 28,
+          "S": 90,
+          "C": 3,
+          "basis": "hex-b234s1346-c3-four-cell-launcher",
+          "changedBit": -1
+        },
+        {
+          "B": 30,
+          "S": 90,
+          "C": 3,
+          "basis": "hex-b234s1346-c3-four-cell-launcher",
+          "changedBit": 0
+        },
+        {
+          "B": 24,
+          "S": 90,
+          "C": 3,
+          "basis": "hex-b234s1346-c3-four-cell-launcher",
+          "changedBit": 1
+        },
+        {
+          "B": 20,
+          "S": 90,
+          "C": 3,
+          "basis": "hex-b234s1346-c3-four-cell-launcher",
+          "changedBit": 2
+        },
+        {
+          "B": 12,
+          "S": 90,
+          "C": 3,
+          "basis": "hex-b234s1346-c3-four-cell-launcher",
+          "changedBit": 3
+        },
+        {
+          "B": 60,
+          "S": 90,
+          "C": 3,
+          "basis": "hex-b234s1346-c3-four-cell-launcher",
+          "changedBit": 4
+        },
+        {
+          "B": 92,
+          "S": 90,
+          "C": 3,
+          "basis": "hex-b234s1346-c3-four-cell-launcher",
+          "changedBit": 5
+        },
+        {
+          "B": 28,
+          "S": 91,
+          "C": 3,
+          "basis": "hex-b234s1346-c3-four-cell-launcher",
+          "changedBit": 6
+        },
+        {
+          "B": 28,
+          "S": 88,
+          "C": 3,
+          "basis": "hex-b234s1346-c3-four-cell-launcher",
+          "changedBit": 7
+        },
+        {
+          "B": 28,
+          "S": 94,
+          "C": 3,
+          "basis": "hex-b234s1346-c3-four-cell-launcher",
+          "changedBit": 8
+        },
+        {
+          "B": 28,
+          "S": 82,
+          "C": 3,
+          "basis": "hex-b234s1346-c3-four-cell-launcher",
+          "changedBit": 9
+        },
+        {
+          "B": 28,
+          "S": 74,
+          "C": 3,
+          "basis": "hex-b234s1346-c3-four-cell-launcher",
+          "changedBit": 10
+        },
+        {
+          "B": 28,
+          "S": 122,
+          "C": 3,
+          "basis": "hex-b234s1346-c3-four-cell-launcher",
+          "changedBit": 11
+        },
+        {
+          "B": 28,
+          "S": 26,
+          "C": 3,
+          "basis": "hex-b234s1346-c3-four-cell-launcher",
+          "changedBit": 12
+        },
+        {
+          "B": 116,
+          "S": 58,
+          "C": 4,
+          "basis": "hex-b2456s1345-c4-five-cell-launcher",
+          "changedBit": -1
+        },
+        {
+          "B": 118,
+          "S": 58,
+          "C": 4,
+          "basis": "hex-b2456s1345-c4-five-cell-launcher",
+          "changedBit": 0
+        },
+        {
+          "B": 112,
+          "S": 58,
+          "C": 4,
+          "basis": "hex-b2456s1345-c4-five-cell-launcher",
+          "changedBit": 1
+        },
+        {
+          "B": 124,
+          "S": 58,
+          "C": 4,
+          "basis": "hex-b2456s1345-c4-five-cell-launcher",
+          "changedBit": 2
+        },
+        {
+          "B": 100,
+          "S": 58,
+          "C": 4,
+          "basis": "hex-b2456s1345-c4-five-cell-launcher",
+          "changedBit": 3
+        },
+        {
+          "B": 84,
+          "S": 58,
+          "C": 4,
+          "basis": "hex-b2456s1345-c4-five-cell-launcher",
+          "changedBit": 4
+        },
+        {
+          "B": 52,
+          "S": 58,
+          "C": 4,
+          "basis": "hex-b2456s1345-c4-five-cell-launcher",
+          "changedBit": 5
+        },
+        {
+          "B": 116,
+          "S": 59,
+          "C": 4,
+          "basis": "hex-b2456s1345-c4-five-cell-launcher",
+          "changedBit": 6
+        },
+        {
+          "B": 116,
+          "S": 56,
+          "C": 4,
+          "basis": "hex-b2456s1345-c4-five-cell-launcher",
+          "changedBit": 7
+        },
+        {
+          "B": 116,
+          "S": 62,
+          "C": 4,
+          "basis": "hex-b2456s1345-c4-five-cell-launcher",
+          "changedBit": 8
+        },
+        {
+          "B": 116,
+          "S": 50,
+          "C": 4,
+          "basis": "hex-b2456s1345-c4-five-cell-launcher",
+          "changedBit": 9
+        },
+        {
+          "B": 116,
+          "S": 42,
+          "C": 4,
+          "basis": "hex-b2456s1345-c4-five-cell-launcher",
+          "changedBit": 10
+        },
+        {
+          "B": 116,
+          "S": 26,
+          "C": 4,
+          "basis": "hex-b2456s1345-c4-five-cell-launcher",
+          "changedBit": 11
+        },
+        {
+          "B": 116,
+          "S": 122,
+          "C": 4,
+          "basis": "hex-b2456s1345-c4-five-cell-launcher",
+          "changedBit": 12
+        },
+        {
+          "B": 12,
+          "S": 10,
+          "C": 4,
+          "basis": "hex-b23s13-c4-p9-knightship-launcher",
+          "changedBit": -1
+        },
+        {
+          "B": 14,
+          "S": 10,
+          "C": 4,
+          "basis": "hex-b23s13-c4-p9-knightship-launcher",
+          "changedBit": 0
+        },
+        {
+          "B": 8,
+          "S": 10,
+          "C": 4,
+          "basis": "hex-b23s13-c4-p9-knightship-launcher",
+          "changedBit": 1
+        },
+        {
+          "B": 4,
+          "S": 10,
+          "C": 4,
+          "basis": "hex-b23s13-c4-p9-knightship-launcher",
+          "changedBit": 2
+        },
+        {
+          "B": 28,
+          "S": 10,
+          "C": 4,
+          "basis": "hex-b23s13-c4-p9-knightship-launcher",
+          "changedBit": 3
+        },
+        {
+          "B": 44,
+          "S": 10,
+          "C": 4,
+          "basis": "hex-b23s13-c4-p9-knightship-launcher",
+          "changedBit": 4
+        },
+        {
+          "B": 76,
+          "S": 10,
+          "C": 4,
+          "basis": "hex-b23s13-c4-p9-knightship-launcher",
+          "changedBit": 5
+        },
+        {
+          "B": 12,
+          "S": 11,
+          "C": 4,
+          "basis": "hex-b23s13-c4-p9-knightship-launcher",
+          "changedBit": 6
+        },
+        {
+          "B": 12,
+          "S": 8,
+          "C": 4,
+          "basis": "hex-b23s13-c4-p9-knightship-launcher",
+          "changedBit": 7
+        },
+        {
+          "B": 12,
+          "S": 14,
+          "C": 4,
+          "basis": "hex-b23s13-c4-p9-knightship-launcher",
+          "changedBit": 8
+        },
+        {
+          "B": 12,
+          "S": 2,
+          "C": 4,
+          "basis": "hex-b23s13-c4-p9-knightship-launcher",
+          "changedBit": 9
+        },
+        {
+          "B": 12,
+          "S": 26,
+          "C": 4,
+          "basis": "hex-b23s13-c4-p9-knightship-launcher",
+          "changedBit": 10
+        },
+        {
+          "B": 12,
+          "S": 42,
+          "C": 4,
+          "basis": "hex-b23s13-c4-p9-knightship-launcher",
+          "changedBit": 11
+        },
+        {
+          "B": 12,
+          "S": 74,
+          "C": 4,
+          "basis": "hex-b23s13-c4-p9-knightship-launcher",
+          "changedBit": 12
+        },
+        {
+          "B": 28,
+          "S": 52,
+          "C": 5,
+          "basis": "hex-b234s245-c5-p10-knightship-launcher",
+          "changedBit": -1
+        },
+        {
+          "B": 30,
+          "S": 52,
+          "C": 5,
+          "basis": "hex-b234s245-c5-p10-knightship-launcher",
+          "changedBit": 0
+        },
+        {
+          "B": 24,
+          "S": 52,
+          "C": 5,
+          "basis": "hex-b234s245-c5-p10-knightship-launcher",
+          "changedBit": 1
+        },
+        {
+          "B": 20,
+          "S": 52,
+          "C": 5,
+          "basis": "hex-b234s245-c5-p10-knightship-launcher",
+          "changedBit": 2
+        },
+        {
+          "B": 12,
+          "S": 52,
+          "C": 5,
+          "basis": "hex-b234s245-c5-p10-knightship-launcher",
+          "changedBit": 3
+        },
+        {
+          "B": 60,
+          "S": 52,
+          "C": 5,
+          "basis": "hex-b234s245-c5-p10-knightship-launcher",
+          "changedBit": 4
+        },
+        {
+          "B": 92,
+          "S": 52,
+          "C": 5,
+          "basis": "hex-b234s245-c5-p10-knightship-launcher",
+          "changedBit": 5
+        },
+        {
+          "B": 28,
+          "S": 53,
+          "C": 5,
+          "basis": "hex-b234s245-c5-p10-knightship-launcher",
+          "changedBit": 6
+        },
+        {
+          "B": 28,
+          "S": 54,
+          "C": 5,
+          "basis": "hex-b234s245-c5-p10-knightship-launcher",
+          "changedBit": 7
+        },
+        {
+          "B": 28,
+          "S": 48,
+          "C": 5,
+          "basis": "hex-b234s245-c5-p10-knightship-launcher",
+          "changedBit": 8
+        },
+        {
+          "B": 28,
+          "S": 60,
+          "C": 5,
+          "basis": "hex-b234s245-c5-p10-knightship-launcher",
+          "changedBit": 9
+        },
+        {
+          "B": 28,
+          "S": 36,
+          "C": 5,
+          "basis": "hex-b234s245-c5-p10-knightship-launcher",
+          "changedBit": 10
+        },
+        {
+          "B": 28,
+          "S": 20,
+          "C": 5,
+          "basis": "hex-b234s245-c5-p10-knightship-launcher",
+          "changedBit": 11
+        },
+        {
+          "B": 28,
+          "S": 116,
+          "C": 5,
+          "basis": "hex-b234s245-c5-p10-knightship-launcher",
+          "changedBit": 12
+        },
+        {
+          "B": 84,
+          "S": 84,
+          "C": 4,
+          "basis": "hex-b246s246-c4-p30-gun",
+          "changedBit": -1
+        },
+        {
+          "B": 86,
+          "S": 84,
+          "C": 4,
+          "basis": "hex-b246s246-c4-p30-gun",
+          "changedBit": 0
+        },
+        {
+          "B": 80,
+          "S": 84,
+          "C": 4,
+          "basis": "hex-b246s246-c4-p30-gun",
+          "changedBit": 1
+        },
+        {
+          "B": 92,
+          "S": 84,
+          "C": 4,
+          "basis": "hex-b246s246-c4-p30-gun",
+          "changedBit": 2
+        },
+        {
+          "B": 68,
+          "S": 84,
+          "C": 4,
+          "basis": "hex-b246s246-c4-p30-gun",
+          "changedBit": 3
+        },
+        {
+          "B": 116,
+          "S": 84,
+          "C": 4,
+          "basis": "hex-b246s246-c4-p30-gun",
+          "changedBit": 4
+        },
+        {
+          "B": 20,
+          "S": 84,
+          "C": 4,
+          "basis": "hex-b246s246-c4-p30-gun",
+          "changedBit": 5
+        },
+        {
+          "B": 84,
+          "S": 85,
+          "C": 4,
+          "basis": "hex-b246s246-c4-p30-gun",
+          "changedBit": 6
+        },
+        {
+          "B": 84,
+          "S": 86,
+          "C": 4,
+          "basis": "hex-b246s246-c4-p30-gun",
+          "changedBit": 7
+        },
+        {
+          "B": 84,
+          "S": 80,
+          "C": 4,
+          "basis": "hex-b246s246-c4-p30-gun",
+          "changedBit": 8
+        },
+        {
+          "B": 84,
+          "S": 92,
+          "C": 4,
+          "basis": "hex-b246s246-c4-p30-gun",
+          "changedBit": 9
+        },
+        {
+          "B": 84,
+          "S": 68,
+          "C": 4,
+          "basis": "hex-b246s246-c4-p30-gun",
+          "changedBit": 10
+        },
+        {
+          "B": 84,
+          "S": 116,
+          "C": 4,
+          "basis": "hex-b246s246-c4-p30-gun",
+          "changedBit": 11
+        },
+        {
+          "B": 84,
+          "S": 20,
+          "C": 4,
+          "basis": "hex-b246s246-c4-p30-gun",
+          "changedBit": 12
+        },
+        {
+          "B": 36,
+          "S": 24,
+          "C": 2,
+          "basis": "hex-b25s34-p20-puffer",
+          "changedBit": -1
+        },
+        {
+          "B": 38,
+          "S": 24,
+          "C": 2,
+          "basis": "hex-b25s34-p20-puffer",
+          "changedBit": 0
+        },
+        {
+          "B": 32,
+          "S": 24,
+          "C": 2,
+          "basis": "hex-b25s34-p20-puffer",
+          "changedBit": 1
+        },
+        {
+          "B": 44,
+          "S": 24,
+          "C": 2,
+          "basis": "hex-b25s34-p20-puffer",
+          "changedBit": 2
+        },
+        {
+          "B": 52,
+          "S": 24,
+          "C": 2,
+          "basis": "hex-b25s34-p20-puffer",
+          "changedBit": 3
+        },
+        {
+          "B": 4,
+          "S": 24,
+          "C": 2,
+          "basis": "hex-b25s34-p20-puffer",
+          "changedBit": 4
+        },
+        {
+          "B": 100,
+          "S": 24,
+          "C": 2,
+          "basis": "hex-b25s34-p20-puffer",
+          "changedBit": 5
+        },
+        {
+          "B": 36,
+          "S": 25,
+          "C": 2,
+          "basis": "hex-b25s34-p20-puffer",
+          "changedBit": 6
+        },
+        {
+          "B": 36,
+          "S": 26,
+          "C": 2,
+          "basis": "hex-b25s34-p20-puffer",
+          "changedBit": 7
+        },
+        {
+          "B": 36,
+          "S": 28,
+          "C": 2,
+          "basis": "hex-b25s34-p20-puffer",
+          "changedBit": 8
+        },
+        {
+          "B": 36,
+          "S": 16,
+          "C": 2,
+          "basis": "hex-b25s34-p20-puffer",
+          "changedBit": 9
+        },
+        {
+          "B": 36,
+          "S": 8,
+          "C": 2,
+          "basis": "hex-b25s34-p20-puffer",
+          "changedBit": 10
+        },
+        {
+          "B": 36,
+          "S": 56,
+          "C": 2,
+          "basis": "hex-b25s34-p20-puffer",
+          "changedBit": 11
+        },
+        {
+          "B": 36,
+          "S": 88,
+          "C": 2,
+          "basis": "hex-b25s34-p20-puffer",
+          "changedBit": 12
+        }
+      ],
+      "ruleCount": 98,
+      "sha256": "e2aa935be1184509067025aa8edfb2f688d8b40ee1083d3ff586b2d00560cede"
+    },
+    "mutations": {
+      "trials": 100000,
+      "prng": "xorshift32",
+      "seed": "0x3722026",
+      "basePhases": 235,
+      "baseCounts": {
+        "hex-b246s246-c4-p30-gun": 25623,
+        "hex-b234s1346-c3-four-cell-launcher": 7166,
+        "hex-b2456s1345-c4-five-cell-launcher": 20671,
+        "hex-b234s245-c5-p10-knightship-launcher": 9439,
+        "hex-b23s13-c4-p9-knightship-launcher": 10750,
+        "hex-b25s34-p20-puffer": 25408,
+        "hex-b2s0-c3-three-cell-glider": 943
+      },
+      "method": "One to five state substitutions in a 7-by-7 axial neighbourhood of a source-phase cell; 25% change state count to C3..8, 25% toggle one of B1..B6 or S0..S6. Refractory states retained if valid.",
+      "sha256": "598f74919623c5ab77f36a4e698bc90f73dffb8c743fc722347fc381bd1206f6"
+    },
+    "credit": "Gun and puffer source phases are published patterns credited in catalogue-baseline.json. Five remaining bases were package search finds without established discovery priority. Targeted all-live eight-cell seeds are independent generated shapes under neighbouring rules, not imported pattern geometries."
+  },
+  "moverAnalysis": {
+    "rawRecords": 983,
+    "knownOrNewOrbitDuplicates": 877,
+    "distinctCompleteOrbitsAbsentFromCatalogue": 106,
+    "caveat": "These are complete-orbit distinctions from the frozen 33-entry catalogue and one another, not publication-priority claims. Refractory-tail variants and independent convoys may remain qualitatively redundant.",
+    "longest": [
+      {
+        "rule": "B234/S14",
+        "generations": 4,
+        "period": 130,
+        "translation": [
+          65,
+          0
+        ],
+        "initial": 7,
+        "transient": 42
+      },
+      {
+        "rule": "B2345/S24",
+        "generations": 4,
+        "period": 48,
+        "translation": [
+          -32,
+          16
+        ],
+        "initial": 7,
+        "transient": 16
+      },
+      {
+        "rule": "B23/S13",
+        "generations": 5,
+        "period": 24,
+        "translation": [
+          0,
+          -12
+        ],
+        "initial": 28,
+        "transient": 116
+      },
+      {
+        "rule": "B23/S245",
+        "generations": 4,
+        "period": 21,
+        "translation": [
+          -7,
+          14
+        ],
+        "initial": 7,
+        "transient": 36
+      },
+      {
+        "rule": "B234/S245",
+        "generations": 4,
+        "period": 21,
+        "translation": [
+          14,
+          -7
+        ],
+        "initial": 7,
+        "transient": 19
+      },
+      {
+        "rule": "B236/S245",
+        "generations": 4,
+        "period": 21,
+        "translation": [
+          -7,
+          14
+        ],
+        "initial": 7,
+        "transient": 16
+      },
+      {
+        "rule": "B234/S245",
+        "generations": 5,
+        "period": 20,
+        "translation": [
+          2,
+          4
+        ],
+        "initial": 24,
+        "transient": 4
+      },
+      {
+        "rule": "B234/S25",
+        "generations": 7,
+        "period": 18,
+        "translation": [
+          0,
+          6
+        ],
+        "initial": 28,
+        "transient": 9
+      },
+      {
+        "rule": "B234/S25",
+        "generations": 8,
+        "period": 18,
+        "translation": [
+          0,
+          6
+        ],
+        "initial": 57,
+        "transient": 27
+      },
+      {
+        "rule": "B25/S34",
+        "generations": 2,
+        "period": 16,
+        "translation": [
+          0,
+          8
+        ],
+        "initial": 27,
+        "transient": 13
+      },
+      {
+        "rule": "B246/S1345",
+        "generations": 4,
+        "period": 15,
+        "translation": [
+          0,
+          1
+        ],
+        "initial": 8,
+        "transient": 8
+      },
+      {
+        "rule": "B23/S1",
+        "generations": 4,
+        "period": 12,
+        "translation": [
+          -8,
+          4
+        ],
+        "initial": 7,
+        "transient": 19
+      }
+    ]
+  },
+  "sourceHashes": {
+    "search.cpp": "83616b87ed084117a154d92171f7d1c4b880814a9ced1afde8cf7b759909685b",
+    "generate.js": "2aa444442fe637cfedbb431d5b347a22a8ca7ea990f29bad7ead611085b5a482",
+    "generate-targeted.js": "f7ea4438a1fabf3fa9215c5f0f6198d5e44066fc9c2f0c0d43783f8396f9c539",
+    "hex-reference.js": "8800884630d79212613e89fbf216d873e02a58b3662fc850bcf55744c1085f1c",
+    "catalogue-baseline.json": "a7cbf0b47eb8ff67eb9f6b8b787e232d44493944fb596ae129f504eaebe589b6"
+  },
+  "exhaustiveScope": [
+    {
+      "campaign": "mixed",
+      "scope": "Every connected occupied support with one to three cells, every nonzero-state assignment containing both live and refractory cells for C3..6, modulo translations and D6, under all 8192 quiescent B/S rules. There are 180 coloured seeds; all-live seeds and all-refractory seeds excluded.",
+      "trials": 1474560
+    },
+    {
+      "campaign": "n7",
+      "scope": "Every one of the 333 free connected seven-cell all-live seeds, with C4 only, under all 8192 quiescent B/S rules.",
+      "trials": 2727936
+    },
+    {
+      "campaign": "n8",
+      "scope": "All 1448 free connected eight-cell all-live seeds, each with 98 distinct (rule,state-count) pairs from seven fixed catalogue rules and their one-clause neighbours. This is not all rules or all state counts.",
+      "trials": 141904
+    }
+  ],
+  "limits": [
+    "512-by-512 axial array, no wrapping; stop within its outer three rows/columns.",
+    "The horizon and support caps in each campaign are hard stop conditions, not evidence of extinction or absence of later structure.",
+    "Translated recurrence is only examined while support has at most 350 nonzero cells.",
+    "Raw recurrence records suppress identical normalised phases with equal C, period and translation even across rules; complete D6/orbit comparison follows separately.",
+    "The stationary-core/linear-growth filter is only a candidate filter. Most positives are growing fronts or trails, not stationary guns.",
+    "The p130 candidate decomposes into independent p10 and p26 ships and was excluded from recommendations.",
+    "Published gun and puffer geometries are explicitly credited in the fixed catalogue baseline. No worldwide novelty or first-discovery claim is made."
+  ]
+}

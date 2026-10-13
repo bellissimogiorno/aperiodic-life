@@ -1,0 +1,201 @@
+[
+  {
+    "rule": "B234/S14",
+    "C": 4,
+    "p": 130,
+    "shift": [
+      65,
+      0
+    ],
+    "components": [
+      22,
+      41
+    ],
+    "isolated": [
+      {
+        "kind": "spaceship",
+        "period": 10,
+        "translation": [
+          5,
+          0
+        ]
+      },
+      {
+        "kind": "spaceship",
+        "period": 26,
+        "translation": [
+          13,
+          0
+        ]
+      }
+    ],
+    "independentUnionForOneFullPeriod": true
+  },
+  {
+    "rule": "B2345/S24",
+    "C": 4,
+    "p": 48,
+    "shift": [
+      -32,
+      16
+    ],
+    "components": [
+      30
+    ],
+    "isolated": [
+      {
+        "kind": "spaceship",
+        "period": 48,
+        "translation": [
+          -32,
+          16
+        ]
+      }
+    ],
+    "independentUnionForOneFullPeriod": true
+  },
+  {
+    "rule": "B23/S13",
+    "C": 5,
+    "p": 24,
+    "shift": [
+      0,
+      -12
+    ],
+    "components": [
+      33,
+      31,
+      30,
+      33
+    ],
+    "isolated": [
+      {
+        "kind": "extinction"
+      },
+      {
+        "kind": "extinction"
+      },
+      {
+        "kind": "unresolved"
+      },
+      {
+        "kind": "extinction"
+      }
+    ],
+    "independentUnionForOneFullPeriod": true
+  },
+  {
+    "rule": "B23/S245",
+    "C": 4,
+    "p": 21,
+    "shift": [
+      -7,
+      14
+    ],
+    "components": [
+      13,
+      21
+    ],
+    "isolated": [
+      {
+        "kind": "unresolved"
+      },
+      {
+        "kind": "unresolved"
+      }
+    ],
+    "independentUnionForOneFullPeriod": false
+  },
+  {
+    "rule": "B234/S245",
+    "C": 4,
+    "p": 21,
+    "shift": [
+      14,
+      -7
+    ],
+    "components": [
+      20
+    ],
+    "isolated": [
+      {
+        "kind": "spaceship",
+        "period": 21,
+        "translation": [
+          14,
+          -7
+        ]
+      }
+    ],
+    "independentUnionForOneFullPeriod": true
+  },
+  {
+    "rule": "B236/S245",
+    "C": 4,
+    "p": 21,
+    "shift": [
+      -7,
+      14
+    ],
+    "components": [
+      17
+    ],
+    "isolated": [
+      {
+        "kind": "spaceship",
+        "period": 21,
+        "translation": [
+          -7,
+          14
+        ]
+      }
+    ],
+    "independentUnionForOneFullPeriod": true
+  },
+  {
+    "rule": "B234/S245",
+    "C": 5,
+    "p": 20,
+    "shift": [
+      2,
+      4
+    ],
+    "components": [
+      48
+    ],
+    "isolated": [
+      {
+        "kind": "spaceship",
+        "period": 20,
+        "translation": [
+          2,
+          4
+        ]
+      }
+    ],
+    "independentUnionForOneFullPeriod": true
+  },
+  {
+    "rule": "B246/S1345",
+    "C": 4,
+    "p": 15,
+    "shift": [
+      0,
+      1
+    ],
+    "components": [
+      17
+    ],
+    "isolated": [
+      {
+        "kind": "spaceship",
+        "period": 15,
+        "translation": [
+          0,
+          1
+        ]
+      }
+    ],
+    "independentUnionForOneFullPeriod": true
+  }
+]

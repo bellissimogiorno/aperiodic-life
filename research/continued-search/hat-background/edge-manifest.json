@@ -1,0 +1,22 @@
+{
+  "requestedTrials": 200000,
+  "completedTrials": 200000,
+  "prng": "xorshift64star",
+  "seed": "20261013160102",
+  "maximumInteriorDegree": 6,
+  "horizon": 600,
+  "populationCap": 180,
+  "radiusCap": 20,
+  "transitions": 3028309,
+  "extinct": 61690,
+  "populationStopped": 33651,
+  "radiusStopped": 67885,
+  "boundaryStopped": 0,
+  "stationaryHashReturn": 36774,
+  "horizonStopped": 0,
+  "recordCandidates": 13,
+  "bestRecordedDisplacement": 33.589,
+  "seconds": 8.873,
+  "minimumInteriorDegreeLowerBound": 4,
+  "note": "The supplied degree lower bound restricts survival counts; it need not be the exact minimum interior degree."
+}

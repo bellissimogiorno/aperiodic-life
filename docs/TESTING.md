@@ -30,7 +30,7 @@ node test-structures.js
 node test-traveller-evidence.js
 ```
 
-All 81 catalogue entries have explicit replay contracts. Exact periods require the first return of the complete state; population counts and hashes are insufficient. Extinction requires every cell to be zero, including refractory states. Transient-cycle entries must not return before the stated transient and period.
+All catalogue entries have explicit replay contracts. Exact periods require the first return of the complete state; population counts and hashes are insufficient. Extinction requires every cell to be zero, including refractory states. Transient-cycle entries must not return before the stated transient and period.
 
 `test-hexagonal-evidence.js` additionally uses an unbounded coordinate-map reference whose update code is independent of the production engine. It checks complete-state periods and translations, rotations, genuine full-period cells, equivalence under lattice symmetries and phase shifts, and production parity with boundary clearance. Gun and puffer checks include exact emission equations and permanently separating projections; wall repair requires equality to the pristine evolving wall, including the empty exterior. Negative controls guard against accepting mutated refractory states or emission contracts. The fixture and source records are in `research/fixtures/hexagonal-*.json`.
 
@@ -79,7 +79,7 @@ Direct acceptance remains necessary for target browser/GPU combinations. Check t
 
 `node research/verify-hex-published-provenance.js` independently compares all eleven published hexagonal examples with retained source RLEs, allowing the recorded phase shifts, lattice symmetries and translations. The period-48 source contains two independent oscillators; the verifier checks the extracted component. These identity checks also cover known patterns independently recovered by the search.
 
-Static checks require the four tilings, all 81 entries, discovery and help controls, complete MIT and BSD notices, and absence of external runtime scripts or styles. `node build-standalone.js --check` requires the checked-in standalone to match the expanded source.
+Static checks require the four tilings, the complete catalogue, discovery and help controls, complete MIT and BSD notices, and absence of external runtime scripts or styles. `node build-standalone.js --check` requires the checked-in standalone to match the expanded source.
 
 `test-package.py` and `test-repository.py` cover deterministic archives, source completeness, safe paths, file exclusions, integrity metadata, standalone freshness, output-path rejection, and the static-site payload. Both run in the standard profile. See [release operations](OPERATIONS.md) for packaging and [CI](CI.md) for hosted workflows.
 
@@ -87,6 +87,14 @@ Record the commands, runtimes, and outcomes for a release. Report unavailable pr
 
 ## Priority tables and intensive-search results
 
-`node test-priority-rules.js` checks every neighbour-count histogram through degree 10, independent state transitions, all seven curated Hat/Penrose trajectories, emitted-body independence and complete labelled polygon/dead-halo returns. `node test-hex-exhaustive-evidence.js` independently checks the five small hexagonal seeds and their complete translated cycles. Both run in the standard and research profiles.
+`node test-priority-rules.js` checks every neighbour-count histogram through degree 10, independent state transitions, the original seven Hat/Penrose trajectory fixtures, emitted-body independence and complete labelled polygon/dead-halo returns. `node test-hex-exhaustive-evidence.js` independently checks the five small hexagonal seeds and their complete translated cycles. Both run in the standard and research profiles.
 
 `node research/verify-aperiodic.js --long` additionally reconstructs the 372,100-cell depth-6 Hat patch and repeats the 1,129-generation B and three-state flights; it is included in the large profile. The [search report](GLIDER_SEARCH.md) distinguishes exhaustive finite parameter spaces from sampled campaigns and empirical evidence from proofs.
+
+## Continued-search evidence
+
+The [continued-search report](CONTINUED_SEARCH.md) links the additional rule, launch and emission checks. Portable replay scripts and their recorded limits live under [`research/continued-search`](../research/continued-search/README.md). These include the wake-rule reduction and state-map comparison, the credited Spectre relay adaptation, and finite Hat launcher/emitter records. A finite source cycle is not accepted as an indefinite aperiodic-gun proof.
+
+`node research/continued-search/penrose/verify-twelve.js` compares 131 complete production/sparse states for the reduced three-cell seed and 41 complete states against the disjoint union of twelve isolated bodies. It records translated states and polygon matches for all twelve, but radius-three neighbourhood returns for only five within the displayed horizon. Proper-subset checks and boundary clearance are recorded separately.
+
+`node research/continued-search/hex/verify-selected.js` checks the period-6 puffer, twin launch and period-48 ship against independent axial evolution, including exact head/deposit equations, all-phase separation certificates and complete translated returns. Those regular-lattice certificates supply the additional argument for unbounded emission; finite browser replay alone does not.

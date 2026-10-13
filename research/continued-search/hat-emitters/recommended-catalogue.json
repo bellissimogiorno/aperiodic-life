@@ -1,0 +1,78 @@
+[
+  {
+    "id": "hat-edmond-a-six-way-launcher",
+    "category": "Einstein-hat gliders and launchers",
+    "title": "Hat A six-way launcher",
+    "summary": "A connected six-cell seed launches six independently verified Hat A gliders under Edmond’s published rule. Complete-state replay is checked through generation 180; this is a finite launcher.",
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "rule": "TABLE:HAT-A",
+    "generations": 4,
+    "borderRings": 1,
+    "speed": 6,
+    "view": {
+      "mode": "contain",
+      "padding": 4
+    },
+    "cellStates": [
+      [
+        24180,
+        2
+      ],
+      [
+        24181,
+        1
+      ],
+      [
+        24717,
+        2
+      ],
+      [
+        24718,
+        1
+      ],
+      [
+        24722,
+        1
+      ],
+      [
+        24724,
+        2
+      ]
+    ],
+    "expectedActivityThrough": 180
+  },
+  {
+    "id": "hat-edmond-b-periodic-emitter",
+    "category": "Einstein-hat gliders and launchers",
+    "title": "Hat B recurring emitter — finite verification",
+    "summary": "Three cells ignite a recurring source under Edmond’s Hat B rule. A complete 40-generation emission identity and separated-packet replay are verified over finite intervals; perpetual emission is not proved.",
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "rule": "TABLE:HAT-B",
+    "generations": 4,
+    "borderRings": 1,
+    "speed": 6,
+    "view": {
+      "mode": "contain",
+      "padding": 4
+    },
+    "cellStates": [
+      [
+        23821,
+        1
+      ],
+      [
+        23824,
+        3
+      ],
+      [
+        23836,
+        1
+      ]
+    ],
+    "expectedActivityThrough": 180
+  }
+]

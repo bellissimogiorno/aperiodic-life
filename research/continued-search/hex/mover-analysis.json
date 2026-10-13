@@ -1,0 +1,140 @@
+{
+  "rawRecords": 983,
+  "knownOrNewOrbitDuplicates": 877,
+  "distinctCompleteOrbitsAbsentFromCatalogue": 106,
+  "caveat": "These are complete-orbit distinctions from the frozen 33-entry catalogue and one another, not publication-priority claims. Refractory-tail variants and independent convoys may remain qualitatively redundant.",
+  "longest": [
+    {
+      "rule": "B234/S14",
+      "generations": 4,
+      "period": 130,
+      "translation": [
+        65,
+        0
+      ],
+      "initial": 7,
+      "transient": 42
+    },
+    {
+      "rule": "B2345/S24",
+      "generations": 4,
+      "period": 48,
+      "translation": [
+        -32,
+        16
+      ],
+      "initial": 7,
+      "transient": 16
+    },
+    {
+      "rule": "B23/S13",
+      "generations": 5,
+      "period": 24,
+      "translation": [
+        0,
+        -12
+      ],
+      "initial": 28,
+      "transient": 116
+    },
+    {
+      "rule": "B23/S245",
+      "generations": 4,
+      "period": 21,
+      "translation": [
+        -7,
+        14
+      ],
+      "initial": 7,
+      "transient": 36
+    },
+    {
+      "rule": "B234/S245",
+      "generations": 4,
+      "period": 21,
+      "translation": [
+        14,
+        -7
+      ],
+      "initial": 7,
+      "transient": 19
+    },
+    {
+      "rule": "B236/S245",
+      "generations": 4,
+      "period": 21,
+      "translation": [
+        -7,
+        14
+      ],
+      "initial": 7,
+      "transient": 16
+    },
+    {
+      "rule": "B234/S245",
+      "generations": 5,
+      "period": 20,
+      "translation": [
+        2,
+        4
+      ],
+      "initial": 24,
+      "transient": 4
+    },
+    {
+      "rule": "B234/S25",
+      "generations": 7,
+      "period": 18,
+      "translation": [
+        0,
+        6
+      ],
+      "initial": 28,
+      "transient": 9
+    },
+    {
+      "rule": "B234/S25",
+      "generations": 8,
+      "period": 18,
+      "translation": [
+        0,
+        6
+      ],
+      "initial": 57,
+      "transient": 27
+    },
+    {
+      "rule": "B25/S34",
+      "generations": 2,
+      "period": 16,
+      "translation": [
+        0,
+        8
+      ],
+      "initial": 27,
+      "transient": 13
+    },
+    {
+      "rule": "B246/S1345",
+      "generations": 4,
+      "period": 15,
+      "translation": [
+        0,
+        1
+      ],
+      "initial": 8,
+      "transient": 8
+    },
+    {
+      "rule": "B23/S1",
+      "generations": 4,
+      "period": 12,
+      "translation": [
+        -8,
+        4
+      ],
+      "initial": 7,
+      "transient": 19
+    }
+  ]
+}

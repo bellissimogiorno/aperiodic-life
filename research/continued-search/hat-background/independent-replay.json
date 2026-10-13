@@ -1,0 +1,56 @@
+[
+  {
+    "graph": "touch",
+    "trial": 58753,
+    "rule": "B01346/S01234",
+    "denseSnapshotParity": true,
+    "maximumPopulation": 73,
+    "minimumBoundary": 54,
+    "maximumRadius": 16.923530096231328,
+    "outcome": {
+      "kind": "defect extinction",
+      "generation": 120
+    }
+  },
+  {
+    "graph": "touch",
+    "trial": 113706,
+    "rule": "B0146/S0123",
+    "denseSnapshotParity": true,
+    "maximumPopulation": 40,
+    "minimumBoundary": 70,
+    "maximumRadius": 15.961131646317908,
+    "outcome": {
+      "kind": "defect extinction",
+      "generation": 223
+    }
+  },
+  {
+    "graph": "touch",
+    "trial": 151761,
+    "rule": "B0156/S13",
+    "denseSnapshotParity": true,
+    "maximumPopulation": 46,
+    "minimumBoundary": 41,
+    "maximumRadius": 22.288123518190858,
+    "outcome": {
+      "kind": "stationary exact defect cycle",
+      "transient": 310,
+      "period": 2
+    }
+  },
+  {
+    "graph": "edge",
+    "trial": 28255,
+    "rule": "B015/S013",
+    "denseSnapshotParity": true,
+    "maximumPopulation": 43,
+    "minimumBoundary": 55,
+    "maximumRadius": 16.746839969769866,
+    "outcome": {
+      "kind": "stationary exact defect cycle",
+      "transient": 273,
+      "period": 24
+    }
+  }
+]

@@ -1,0 +1,82 @@
+{
+  "seed": "7525949657324569972",
+  "trials": 1000000,
+  "requested": 1000000,
+  "attempts": 1067294,
+  "duplicateHashesSkipped": 67294,
+  "baselineAttempts": 1276,
+  "mutationAttempts": 906381,
+  "randomSoupAttempts": 159637,
+  "statesExamined": 59597029,
+  "candidateUpdates": 3056091749,
+  "returnRecords": 75,
+  "horizon": 4096,
+  "populationCap": 180,
+  "radiusCapEveryGeneration": 18,
+  "boundaryStopBelow": 6,
+  "outcomes": [
+    520694,
+    23448,
+    69,
+    441070,
+    14718,
+    1,
+    0
+  ],
+  "outcomeNames": [
+    "extinct",
+    "population",
+    "boundary",
+    "radius",
+    "stationaryHash",
+    "horizon",
+    "unexpected"
+  ],
+  "seconds": 182.075,
+  "schema": 1,
+  "tiling": "hat",
+  "depth": 5,
+  "patchCells": 54289,
+  "graphs": [
+    "edge",
+    "touch"
+  ],
+  "prng": "xorshift64star",
+  "stateTransitions": 58597029,
+  "scope": "1,000,000 evaluations after initial-state hash deduplication; includes pre-existing seed evaluations, mutations and fresh soups. This is a bounded search, not proof of non-existence.",
+  "reproductionSubset": {
+    "evaluations": 509317,
+    "purpose": "Recover the sole 4,096-step survivor by deterministic replay; not counted as additional new search.",
+    "seed": "7525949657324569972"
+  },
+  "seedRows": 1276,
+  "candidateReplays": {
+    "leadingMobilityCandidates": 20,
+    "translatedSeeds": 26,
+    "translatedOutcomes": {
+      "extinct": 26
+    },
+    "horizonSurvivors": 1,
+    "maxReplayGenerations": 10000,
+    "maxReplayPopulation": 2000,
+    "replayBoundaryStopBelow": 4
+  },
+  "graphSha256": {
+    "edge": "f252a7d845602401ec5f5d18ad849d3b0cea4c3f84d55409edeb6c998032089b",
+    "touch": "80b6709f8f55338fcbfb3cee3a33084a6e152554842d082a02a0dd8d61582949"
+  },
+  "sourceSha256": {
+    "evolve.cpp": "e8273e5b16024c4e2f5f146887fc6b7ac3170f317a9baabe97115b98858f6d3e",
+    "screen.js": "93dbdc905aaa3294d0da30fb6d0d76395dc823432f21c023d71b591b042e4f84",
+    "seeds.dat": "592cd454563d8ac8013d57d05edeeb2f64f81a135bf76cdb45865d725a7cecbe",
+    "seed-provenance.json": "d34e1dcc78a51d1800c0a79dae171db4ede42ebab2446c42a31297bd22ce925f"
+  },
+  "portableMinerSmoke": {
+    "evaluations": 10000,
+    "statesExamined": 260240,
+    "bestScore": 2.65937,
+    "bestGeneration": 144,
+    "translatedRecords": 47,
+    "matchesOriginalProgressRecord": true
+  }
+}

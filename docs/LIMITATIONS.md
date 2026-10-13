@@ -26,13 +26,17 @@ These are finite observations. A local translated return on a Penrose tiling doe
 
 The two depth-11 Penrose launchers are checked for 240 generations (five-state, five travellers) and 200 generations (six-state, six travellers). Their separated objects are a finite launch result, not periodic emission from a gun.
 
+The depth-10, three-live-cell six-state launcher produces twelve independently evolving bodies over generations 90–130, with boundary margin seven. All twelve have complete-state/polygon translated returns in that interval; only five have the stronger radius-3 surrounding-neighbourhood match. The tested larger-patch placements change the later behaviour, so the shorter demonstration is retained. It is not a new propagation rule or an unbounded-flight proof.
+
 ## Einstein-hat priority rules
 
 The Hat A, Hat B, Hat C and derived three-state single travellers have complete-state catalogue replays through 307, 307, 311 and 307 generations respectively. The Hat C triple launcher is checked through generation 160. These examples extend the rule model: neighbours can see signal states above 1. They do not demonstrate a glider under the original B/S Generations semantics.
 
+The four-state wake rule obtained from a random-table lineage is checked through generation 293 in its catalogue placement, with a longer six-cell-seed replay through 1,049 on depth 6. Its mature dynamics differ from the included reference tables under the tested state maps, which is a limited comparison rather than a historical originality claim. The two-row relay is instead a credited adaptation of Edmond's Spectre mechanism over its checked mature trajectory.
+
 James Edmond's [2026 preprint](https://arxiv.org/abs/2609.22579) predates these reproductions and reports much longer finite flights on hat and Spectre tilings. It explicitly leaves an indefinite-propagation proof open. The project makes no first-Einstein-glider claim. SIMPLE is a derived rule which matches tested flights, not an equivalent rewriting on all possible configurations.
 
-A local translated phase or a finite collection of observed surrounding patches cannot certify indefinite motion on an aperiodic tiling. Such a proof must cover every future legal neighbourhood and establish continuing escape as well as bounded survival. The project supplies no such proof for its aperiodic catalogue, nor a glider gun, stable collision system, logical gate or universality construction on an aperiodic substrate.
+A local translated phase or a finite collection of observed surrounding patches cannot certify indefinite motion on an aperiodic tiling. Such a proof must cover every future legal neighbourhood and establish continuing escape as well as bounded survival. The project supplies no such proof for its aperiodic catalogue. A Hat B source with a finite periodic-emission record is treated as an emitter candidate: the observed source cycle and emitted bodies do not prove indefinite operation on the unseen aperiodic environment. No indefinitely operating aperiodic gun, stable collision system, logical gate or universality construction is established. See the [continued-search report](CONTINUED_SEARCH.md) for the exact checked intervals.
 
 ## Regular-lattice spaceships
 
@@ -46,7 +50,7 @@ Browser cycle detection compares complete state bytes within a finite history wi
 
 Active fields and long transients are checked only through their stated horizons. They may later cycle, freeze, die, or reach the boundary. Search failure applies only to the recorded rules, seeds, horizons, and bounds; it is not a nonexistence proof.
 
-Coarse search fingerprints do not count distinct mathematical structures. Evolutionary candidates are correlated, and candidate totals are not statistical confidence levels. The 81 curated catalogue entries have individual verification contracts; raw search output does not automatically qualify for the catalogue.
+Coarse search fingerprints do not count distinct mathematical structures. Evolutionary candidates are correlated, and candidate totals are not statistical confidence levels. The curated catalogue entries have individual verification contracts; raw search output does not automatically qualify for the catalogue.
 
 ## Expressiveness
 

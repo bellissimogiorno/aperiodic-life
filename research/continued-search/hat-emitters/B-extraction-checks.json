@@ -1,0 +1,164 @@
+[
+  {
+    "generation": 30,
+    "period": 40,
+    "radius": 10,
+    "coreSize": 24,
+    "emittedSize": 56,
+    "emissionSuperpositionFailure": 1,
+    "originalPartitionFailure": 1
+  },
+  {
+    "generation": 32,
+    "period": 40,
+    "radius": 12,
+    "coreSize": 26,
+    "emittedSize": 51,
+    "emissionSuperpositionFailure": 1,
+    "originalPartitionFailure": 1
+  },
+  {
+    "generation": 30,
+    "period": 40,
+    "radius": 14,
+    "coreSize": 29,
+    "emittedSize": 42,
+    "emissionSuperpositionFailure": 1,
+    "originalPartitionFailure": 1
+  },
+  {
+    "generation": 32,
+    "period": 40,
+    "radius": 16,
+    "coreSize": 31,
+    "emittedSize": 41,
+    "emissionSuperpositionFailure": 1,
+    "originalPartitionFailure": 1
+  },
+  {
+    "generation": 34,
+    "period": 40,
+    "radius": 18,
+    "coreSize": 36,
+    "emittedSize": 36,
+    "emissionSuperpositionFailure": 1,
+    "originalPartitionFailure": 1
+  },
+  {
+    "generation": 36,
+    "period": 40,
+    "radius": 20,
+    "coreSize": 38,
+    "emittedSize": 32,
+    "emissionSuperpositionFailure": null,
+    "originalPartitionFailure": 1
+  },
+  {
+    "generation": 32,
+    "period": 40,
+    "radius": 22,
+    "coreSize": 42,
+    "emittedSize": 19,
+    "emissionSuperpositionFailure": null,
+    "originalPartitionFailure": 1
+  },
+  {
+    "generation": 31,
+    "period": 40,
+    "radius": 24,
+    "coreSize": 48,
+    "emittedSize": 23,
+    "emissionSuperpositionFailure": null,
+    "originalPartitionFailure": 1
+  },
+  {
+    "generation": 31,
+    "period": 40,
+    "radius": 26,
+    "coreSize": 51,
+    "emittedSize": 28,
+    "emissionSuperpositionFailure": null,
+    "originalPartitionFailure": 1
+  },
+  {
+    "generation": 33,
+    "period": 40,
+    "radius": 28,
+    "coreSize": 57,
+    "emittedSize": 23,
+    "emissionSuperpositionFailure": null,
+    "originalPartitionFailure": 1
+  },
+  {
+    "generation": 30,
+    "period": 40,
+    "radius": 30,
+    "coreSize": 56,
+    "emittedSize": 23,
+    "emissionSuperpositionFailure": null,
+    "originalPartitionFailure": null
+  },
+  {
+    "generation": 32,
+    "period": 40,
+    "radius": 34,
+    "coreSize": 60,
+    "emittedSize": 23,
+    "emissionSuperpositionFailure": null,
+    "originalPartitionFailure": null
+  },
+  {
+    "generation": 36,
+    "period": 40,
+    "radius": 38,
+    "coreSize": 66,
+    "emittedSize": 22,
+    "emissionSuperpositionFailure": null,
+    "originalPartitionFailure": null
+  },
+  {
+    "generation": 40,
+    "period": 40,
+    "radius": 42,
+    "coreSize": 73,
+    "emittedSize": 21,
+    "emissionSuperpositionFailure": null,
+    "originalPartitionFailure": null
+  },
+  {
+    "generation": 44,
+    "period": 40,
+    "radius": 46,
+    "coreSize": 74,
+    "emittedSize": 22,
+    "emissionSuperpositionFailure": null,
+    "originalPartitionFailure": null
+  },
+  {
+    "generation": 48,
+    "period": 40,
+    "radius": 50,
+    "coreSize": 75,
+    "emittedSize": 23,
+    "emissionSuperpositionFailure": null,
+    "originalPartitionFailure": null
+  },
+  {
+    "generation": 52,
+    "period": 40,
+    "radius": 54,
+    "coreSize": 77,
+    "emittedSize": 22,
+    "emissionSuperpositionFailure": null,
+    "originalPartitionFailure": null
+  },
+  {
+    "generation": 56,
+    "period": 40,
+    "radius": 58,
+    "coreSize": 68,
+    "emittedSize": 21,
+    "emissionSuperpositionFailure": null,
+    "originalPartitionFailure": null
+  }
+]

@@ -113,6 +113,8 @@
             <option value="hatb">Hat glider B — Edmond table</option>
             <option value="hatc">Hat glider C — Edmond table</option>
             <option value="hatsimple">Hat glider — three-state table</option>
+            <option value="hatwake">Hat wake traveller</option>
+            <option value="hatrelay">Hat two-row relay — Spectre variant</option>
             <option value="custom">Custom</option>
           </select>
         </label>
@@ -279,9 +281,10 @@
 
       <section aria-labelledby="priorityTitle">
         <h3 id="priorityTitle">Hat gliders and priority tables</h3>
-        <p>The Hat presets implement James Edmond’s published A, B and C tables. Each ordered row tests the current state and minimum neighbour counts in specified states. The first matching row supplies the next state; no match gives state 0. Higher states are visible signals, not automatically ageing refractory cells. The number of states is fixed by the table.</p>
+        <p>The Hat A, B and C presets implement James Edmond’s published tables. Each ordered row tests the current state and minimum neighbour counts in specified states. The first matching row supplies the next state; no match gives state 0. Higher states are visible signals, not automatically ageing refractory cells. The number of states is fixed by the table.</p>
         <p>The derived three-state preset uses this shorter rule: a state-0 cell becomes 1 if it has fewer than two state-1 neighbours and at least one state-2 neighbour; a state-1 cell becomes 2 if it has a state-2 neighbour; everything else becomes 0. It reproduces the tested B flights after relabelling, but differs on some other configurations.</p>
-        <p>Choose a curated Hat glider or launcher to load its seed and neighbourhood. These are finite reproductions of published glider behaviour, not a new discovery of the first Hat glider or a proof of endless travel. Source tables, longer replays and search records accompany the project.</p>
+        <p>The Hat wake traveller comes from this project’s rule search. Its two-row simplification changes state 1 to 2 when a state-2 neighbour is present; a state-0 cell becomes 1 when it has at least four state-0 neighbours and a state-2 neighbour. Everything else becomes 0. This simplification reproduces the published Spectre relay’s checked mature flight after relabelling, although its launch can differ. The four-state wake rule has a different body, including a short-lived state 3.</p>
+        <p>Choose a curated Hat traveller or launcher to load its seed and neighbourhood. Each summary distinguishes published rules from separately searched ones. The evidence describes finite observations; neither a first-discovery claim nor a proof of endless travel is made. Source tables, longer replays and search records accompany the project.</p>
       </section>
 
       <section aria-labelledby="travellerEvidenceTitle">

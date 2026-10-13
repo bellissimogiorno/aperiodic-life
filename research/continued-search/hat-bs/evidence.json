@@ -1,0 +1,3521 @@
+{
+  "schema": 1,
+  "strongestDirectedRepresentative": {
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "rule": "B2357/S1345",
+    "generations": 9,
+    "trial": 673468,
+    "parentTrial": 665915,
+    "score": 3.15769,
+    "bestAt": 132,
+    "stoppedAt": 137,
+    "outcomeCode": 3,
+    "netTravelAtBest": 88.093,
+    "maximumRadiusWholeRun": 18.0545,
+    "maximumPopulationWholeRun": 112,
+    "minimumBoundaryWholeRun": 56,
+    "cellStates": [
+      [
+        11561,
+        4
+      ],
+      [
+        11563,
+        1
+      ],
+      [
+        11564,
+        3
+      ],
+      [
+        11566,
+        2
+      ],
+      [
+        11567,
+        5
+      ],
+      [
+        11568,
+        6
+      ],
+      [
+        11569,
+        3
+      ],
+      [
+        11571,
+        7
+      ],
+      [
+        11572,
+        4
+      ],
+      [
+        11573,
+        3
+      ],
+      [
+        11601,
+        2
+      ],
+      [
+        11626,
+        3
+      ],
+      [
+        11629,
+        1
+      ],
+      [
+        11637,
+        2
+      ],
+      [
+        11638,
+        1
+      ],
+      [
+        11639,
+        1
+      ],
+      [
+        11640,
+        1
+      ],
+      [
+        11641,
+        1
+      ],
+      [
+        11644,
+        1
+      ],
+      [
+        11645,
+        1
+      ],
+      [
+        23122,
+        1
+      ],
+      [
+        23125,
+        2
+      ],
+      [
+        23214,
+        5
+      ],
+      [
+        23215,
+        1
+      ],
+      [
+        23216,
+        4
+      ],
+      [
+        23217,
+        1
+      ],
+      [
+        23218,
+        2
+      ],
+      [
+        23219,
+        1
+      ],
+      [
+        23221,
+        1
+      ],
+      [
+        23224,
+        2
+      ],
+      [
+        23277,
+        8
+      ],
+      [
+        23281,
+        3
+      ],
+      [
+        23282,
+        1
+      ],
+      [
+        23284,
+        1
+      ],
+      [
+        23288,
+        1
+      ],
+      [
+        23290,
+        1
+      ],
+      [
+        23293,
+        3
+      ],
+      [
+        23298,
+        1
+      ],
+      [
+        23300,
+        1
+      ],
+      [
+        23301,
+        1
+      ],
+      [
+        23302,
+        2
+      ],
+      [
+        23305,
+        3
+      ],
+      [
+        23306,
+        8
+      ],
+      [
+        23313,
+        1
+      ],
+      [
+        23316,
+        1
+      ],
+      [
+        23317,
+        7
+      ],
+      [
+        23337,
+        2
+      ],
+      [
+        23338,
+        7
+      ],
+      [
+        23340,
+        8
+      ],
+      [
+        23342,
+        8
+      ],
+      [
+        23352,
+        6
+      ],
+      [
+        23353,
+        3
+      ],
+      [
+        23420,
+        8
+      ],
+      [
+        23423,
+        7
+      ],
+      [
+        23433,
+        1
+      ],
+      [
+        23435,
+        2
+      ],
+      [
+        23436,
+        2
+      ],
+      [
+        23438,
+        1
+      ],
+      [
+        23449,
+        7
+      ],
+      [
+        23450,
+        2
+      ],
+      [
+        23451,
+        6
+      ],
+      [
+        23513,
+        3
+      ],
+      [
+        23523,
+        2
+      ],
+      [
+        23524,
+        8
+      ],
+      [
+        23525,
+        1
+      ],
+      [
+        23526,
+        4
+      ],
+      [
+        23527,
+        6
+      ],
+      [
+        23529,
+        7
+      ],
+      [
+        23530,
+        8
+      ],
+      [
+        23532,
+        1
+      ],
+      [
+        23533,
+        4
+      ],
+      [
+        23534,
+        8
+      ],
+      [
+        23535,
+        1
+      ],
+      [
+        23537,
+        6
+      ],
+      [
+        23538,
+        3
+      ]
+    ],
+    "endpoint": [
+      [
+        18050,
+        2
+      ],
+      [
+        18054,
+        1
+      ],
+      [
+        18055,
+        1
+      ],
+      [
+        18057,
+        1
+      ],
+      [
+        22630,
+        1
+      ],
+      [
+        22650,
+        1
+      ],
+      [
+        22657,
+        7
+      ],
+      [
+        22658,
+        6
+      ],
+      [
+        22661,
+        1
+      ],
+      [
+        22713,
+        2
+      ],
+      [
+        22716,
+        3
+      ],
+      [
+        22717,
+        4
+      ],
+      [
+        22718,
+        4
+      ],
+      [
+        22719,
+        2
+      ],
+      [
+        22722,
+        5
+      ],
+      [
+        22724,
+        3
+      ],
+      [
+        22729,
+        1
+      ],
+      [
+        22731,
+        1
+      ],
+      [
+        22732,
+        2
+      ],
+      [
+        22733,
+        5
+      ],
+      [
+        22734,
+        5
+      ],
+      [
+        22736,
+        7
+      ],
+      [
+        22737,
+        1
+      ],
+      [
+        22738,
+        5
+      ],
+      [
+        22739,
+        5
+      ],
+      [
+        22740,
+        3
+      ],
+      [
+        22745,
+        7
+      ],
+      [
+        22746,
+        3
+      ],
+      [
+        22747,
+        8
+      ],
+      [
+        22749,
+        7
+      ],
+      [
+        22750,
+        4
+      ],
+      [
+        22751,
+        5
+      ],
+      [
+        22752,
+        1
+      ],
+      [
+        22753,
+        5
+      ],
+      [
+        22754,
+        4
+      ],
+      [
+        22755,
+        1
+      ],
+      [
+        22762,
+        2
+      ],
+      [
+        22763,
+        1
+      ],
+      [
+        22764,
+        1
+      ],
+      [
+        22765,
+        1
+      ],
+      [
+        22770,
+        5
+      ],
+      [
+        22771,
+        1
+      ],
+      [
+        22772,
+        4
+      ],
+      [
+        22773,
+        2
+      ],
+      [
+        22774,
+        3
+      ],
+      [
+        22775,
+        4
+      ],
+      [
+        22776,
+        1
+      ],
+      [
+        22777,
+        1
+      ],
+      [
+        22778,
+        1
+      ],
+      [
+        22779,
+        1
+      ],
+      [
+        22780,
+        1
+      ],
+      [
+        22783,
+        8
+      ],
+      [
+        22784,
+        1
+      ],
+      [
+        22785,
+        6
+      ],
+      [
+        22787,
+        4
+      ],
+      [
+        22788,
+        4
+      ],
+      [
+        22789,
+        7
+      ],
+      [
+        22790,
+        1
+      ],
+      [
+        22827,
+        1
+      ],
+      [
+        22829,
+        1
+      ],
+      [
+        22830,
+        1
+      ],
+      [
+        22831,
+        1
+      ],
+      [
+        22832,
+        1
+      ],
+      [
+        22833,
+        2
+      ],
+      [
+        22834,
+        1
+      ],
+      [
+        22836,
+        1
+      ],
+      [
+        22839,
+        3
+      ],
+      [
+        22851,
+        4
+      ],
+      [
+        22852,
+        1
+      ],
+      [
+        22853,
+        1
+      ],
+      [
+        22854,
+        1
+      ],
+      [
+        22855,
+        1
+      ],
+      [
+        22856,
+        1
+      ],
+      [
+        22858,
+        1
+      ],
+      [
+        22865,
+        8
+      ],
+      [
+        22866,
+        5
+      ],
+      [
+        22867,
+        6
+      ],
+      [
+        22868,
+        3
+      ],
+      [
+        22869,
+        2
+      ],
+      [
+        22870,
+        4
+      ],
+      [
+        22871,
+        5
+      ],
+      [
+        22872,
+        6
+      ],
+      [
+        22873,
+        1
+      ],
+      [
+        22874,
+        1
+      ],
+      [
+        22875,
+        1
+      ],
+      [
+        22876,
+        1
+      ],
+      [
+        22877,
+        3
+      ],
+      [
+        22878,
+        1
+      ],
+      [
+        22879,
+        1
+      ],
+      [
+        22880,
+        1
+      ]
+    ],
+    "screen": {
+      "outcome": "population",
+      "generation": 291,
+      "cycle": null,
+      "maxRadius": 101.72491743570531,
+      "maxActive": 2003,
+      "minBoundary": 24,
+      "maxDistance": 108.33080413484477,
+      "returnVerified": null,
+      "matchedHalo": null
+    }
+  },
+  "allTwentyLeadingCandidatesOutcome": "All reach more than 2,000 nonzero cells and spread; no persistent compact motion.",
+  "translatedSeedReplays": [
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B2/S256",
+      "generations": 6,
+      "trial": 432,
+      "from": 16,
+      "to": 32,
+      "translation": [
+        -16.5,
+        4.33013
+      ],
+      "maximumRadiusThroughReturn": 11.3668,
+      "cellStates": [
+        [
+          3158,
+          1
+        ],
+        [
+          3159,
+          1
+        ],
+        [
+          3160,
+          1
+        ],
+        [
+          3161,
+          1
+        ],
+        [
+          3793,
+          1
+        ],
+        [
+          3795,
+          1
+        ],
+        [
+          3886,
+          1
+        ],
+        [
+          3890,
+          1
+        ],
+        [
+          3896,
+          1
+        ],
+        [
+          3900,
+          1
+        ],
+        [
+          3901,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 50,
+        "cycle": null,
+        "maxRadius": 11.366838816671658,
+        "maxActive": 29,
+        "minBoundary": 20,
+        "maxDistance": 41.266263812470875,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B27/S25",
+      "generations": 6,
+      "trial": 434,
+      "from": 10,
+      "to": 26,
+      "translation": [
+        -16.5,
+        4.33012
+      ],
+      "maximumRadiusThroughReturn": 11.3668,
+      "cellStates": [
+        [
+          7961,
+          1
+        ],
+        [
+          8039,
+          1
+        ],
+        [
+          8041,
+          1
+        ],
+        [
+          8042,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 55,
+        "cycle": null,
+        "maxRadius": 11.550648361100905,
+        "maxActive": 23,
+        "minBoundary": 45,
+        "maxDistance": 49.789350144490335,
+        "returnVerified": true,
+        "matchedHalo": 1
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B26/S25",
+      "generations": 5,
+      "trial": 436,
+      "from": 20,
+      "to": 36,
+      "translation": [
+        4.5,
+        -16.4545
+      ],
+      "maximumRadiusThroughReturn": 17.499,
+      "cellStates": [
+        [
+          18155,
+          1
+        ],
+        [
+          18156,
+          1
+        ],
+        [
+          18158,
+          1
+        ],
+        [
+          18160,
+          1
+        ],
+        [
+          18162,
+          1
+        ],
+        [
+          18163,
+          1
+        ],
+        [
+          18164,
+          1
+        ],
+        [
+          18165,
+          1
+        ],
+        [
+          18167,
+          1
+        ],
+        [
+          18168,
+          1
+        ],
+        [
+          18174,
+          1
+        ],
+        [
+          18175,
+          1
+        ],
+        [
+          18176,
+          1
+        ],
+        [
+          18177,
+          1
+        ],
+        [
+          18178,
+          1
+        ],
+        [
+          18192,
+          1
+        ],
+        [
+          18205,
+          1
+        ],
+        [
+          18208,
+          1
+        ],
+        [
+          18209,
+          1
+        ],
+        [
+          18210,
+          1
+        ],
+        [
+          18211,
+          1
+        ],
+        [
+          18214,
+          1
+        ],
+        [
+          18221,
+          1
+        ],
+        [
+          18223,
+          1
+        ],
+        [
+          18224,
+          1
+        ],
+        [
+          18225,
+          1
+        ],
+        [
+          18226,
+          1
+        ],
+        [
+          18229,
+          1
+        ],
+        [
+          18230,
+          1
+        ],
+        [
+          18231,
+          1
+        ],
+        [
+          18232,
+          1
+        ],
+        [
+          18242,
+          1
+        ],
+        [
+          18246,
+          1
+        ],
+        [
+          18251,
+          1
+        ],
+        [
+          18252,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 47,
+        "cycle": null,
+        "maxRadius": 17.49899407379934,
+        "maxActive": 68,
+        "minBoundary": 46,
+        "maxDistance": 47.24128252280883,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B25/S25",
+      "generations": 8,
+      "trial": 438,
+      "from": 28,
+      "to": 44,
+      "translation": [
+        -4.5,
+        16.4545
+      ],
+      "maximumRadiusThroughReturn": 17.7314,
+      "cellStates": [
+        [
+          5679,
+          1
+        ],
+        [
+          5680,
+          1
+        ],
+        [
+          5690,
+          1
+        ],
+        [
+          5693,
+          1
+        ],
+        [
+          5694,
+          1
+        ],
+        [
+          5695,
+          1
+        ],
+        [
+          5698,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 56,
+        "cycle": null,
+        "maxRadius": 17.73139703998899,
+        "maxActive": 54,
+        "minBoundary": 25,
+        "maxDistance": 50.212255231977956,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B27/S25",
+      "generations": 8,
+      "trial": 449,
+      "from": 0,
+      "to": 16,
+      "translation": [
+        -12,
+        -12.1244
+      ],
+      "maximumRadiusThroughReturn": 12.9066,
+      "cellStates": [
+        [
+          9053,
+          2
+        ],
+        [
+          9055,
+          1
+        ],
+        [
+          9056,
+          1
+        ],
+        [
+          9057,
+          2
+        ],
+        [
+          9058,
+          1
+        ],
+        [
+          10428,
+          5
+        ],
+        [
+          10431,
+          6
+        ],
+        [
+          10432,
+          4
+        ],
+        [
+          10434,
+          6
+        ],
+        [
+          10439,
+          6
+        ],
+        [
+          10444,
+          4
+        ],
+        [
+          10446,
+          4
+        ],
+        [
+          10447,
+          4
+        ],
+        [
+          10448,
+          3
+        ],
+        [
+          10449,
+          7
+        ],
+        [
+          10531,
+          3
+        ],
+        [
+          10534,
+          2
+        ],
+        [
+          10535,
+          1
+        ],
+        [
+          10536,
+          2
+        ],
+        [
+          10538,
+          1
+        ],
+        [
+          10539,
+          1
+        ],
+        [
+          10540,
+          2
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 44,
+        "cycle": null,
+        "maxRadius": 13.057152946685735,
+        "maxActive": 29,
+        "minBoundary": 44,
+        "maxDistance": 40.323030122100995,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B26/S256",
+      "generations": 5,
+      "trial": 458,
+      "from": 14,
+      "to": 30,
+      "translation": [
+        12,
+        12.1244
+      ],
+      "maximumRadiusThroughReturn": 17.499,
+      "cellStates": [
+        [
+          21945,
+          1
+        ],
+        [
+          21946,
+          1
+        ],
+        [
+          21959,
+          1
+        ],
+        [
+          21960,
+          1
+        ],
+        [
+          21961,
+          1
+        ],
+        [
+          21962,
+          1
+        ],
+        [
+          22052,
+          1
+        ],
+        [
+          22054,
+          1
+        ],
+        [
+          22055,
+          1
+        ],
+        [
+          22058,
+          1
+        ],
+        [
+          22059,
+          1
+        ],
+        [
+          22060,
+          1
+        ],
+        [
+          22061,
+          1
+        ],
+        [
+          22063,
+          1
+        ],
+        [
+          22247,
+          1
+        ],
+        [
+          22262,
+          1
+        ],
+        [
+          29405,
+          1
+        ],
+        [
+          29407,
+          1
+        ],
+        [
+          29409,
+          1
+        ],
+        [
+          29410,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 48,
+        "cycle": null,
+        "maxRadius": 17.49899701296007,
+        "maxActive": 41,
+        "minBoundary": 27,
+        "maxDistance": 38.80330065431206,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B27/S25",
+      "generations": 6,
+      "trial": 471,
+      "from": 12,
+      "to": 28,
+      "translation": [
+        -4.5,
+        16.4545
+      ],
+      "maximumRadiusThroughReturn": 14.2571,
+      "cellStates": [
+        [
+          974,
+          1
+        ],
+        [
+          986,
+          1
+        ],
+        [
+          988,
+          1
+        ],
+        [
+          3487,
+          1
+        ],
+        [
+          3583,
+          1
+        ],
+        [
+          3584,
+          1
+        ],
+        [
+          3585,
+          1
+        ],
+        [
+          3586,
+          1
+        ],
+        [
+          3587,
+          1
+        ],
+        [
+          3588,
+          1
+        ],
+        [
+          3589,
+          1
+        ],
+        [
+          3590,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 54,
+        "cycle": null,
+        "maxRadius": 14.257118700857456,
+        "maxActive": 51,
+        "minBoundary": 25,
+        "maxDistance": 53.1472062667317,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B2/S256",
+      "generations": 6,
+      "trial": 524,
+      "from": 0,
+      "to": 16,
+      "translation": [
+        -16.5,
+        4.33012
+      ],
+      "maximumRadiusThroughReturn": 11.3668,
+      "cellStates": [
+        [
+          1858,
+          2
+        ],
+        [
+          1859,
+          1
+        ],
+        [
+          1883,
+          1
+        ],
+        [
+          1885,
+          1
+        ],
+        [
+          1886,
+          2
+        ],
+        [
+          1887,
+          2
+        ],
+        [
+          1888,
+          3
+        ],
+        [
+          1889,
+          3
+        ],
+        [
+          1890,
+          2
+        ],
+        [
+          1891,
+          3
+        ],
+        [
+          1892,
+          2
+        ],
+        [
+          1893,
+          3
+        ],
+        [
+          1895,
+          5
+        ],
+        [
+          5702,
+          4
+        ],
+        [
+          5705,
+          5
+        ],
+        [
+          5706,
+          5
+        ],
+        [
+          5707,
+          1
+        ],
+        [
+          5708,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 35,
+        "cycle": null,
+        "maxRadius": 11.550648758865817,
+        "maxActive": 23,
+        "minBoundary": 11,
+        "maxDistance": 31.99176466577944,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B2/S25",
+      "generations": 7,
+      "trial": 657,
+      "from": 12,
+      "to": 28,
+      "translation": [
+        12,
+        12.1244
+      ],
+      "maximumRadiusThroughReturn": 17.6274,
+      "cellStates": [
+        [
+          5838,
+          1
+        ],
+        [
+          5840,
+          1
+        ],
+        [
+          5852,
+          1
+        ],
+        [
+          5854,
+          1
+        ],
+        [
+          5855,
+          1
+        ],
+        [
+          5944,
+          1
+        ],
+        [
+          5946,
+          1
+        ],
+        [
+          5947,
+          1
+        ],
+        [
+          5948,
+          1
+        ],
+        [
+          5950,
+          1
+        ],
+        [
+          6006,
+          1
+        ],
+        [
+          6020,
+          1
+        ],
+        [
+          6021,
+          1
+        ],
+        [
+          6028,
+          1
+        ],
+        [
+          6031,
+          1
+        ],
+        [
+          6033,
+          1
+        ],
+        [
+          6034,
+          1
+        ],
+        [
+          6036,
+          1
+        ],
+        [
+          6044,
+          1
+        ],
+        [
+          37261,
+          1
+        ],
+        [
+          37262,
+          1
+        ],
+        [
+          37273,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 59,
+        "cycle": null,
+        "maxRadius": 17.627359626213995,
+        "maxActive": 58,
+        "minBoundary": 29,
+        "maxDistance": 52.59802670750683,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B2/S256",
+      "generations": 6,
+      "trial": 730,
+      "from": 12,
+      "to": 28,
+      "translation": [
+        -12,
+        -12.1244
+      ],
+      "maximumRadiusThroughReturn": 14.6438,
+      "cellStates": [
+        [
+          21969,
+          1
+        ],
+        [
+          21970,
+          1
+        ],
+        [
+          21971,
+          1
+        ],
+        [
+          21972,
+          1
+        ],
+        [
+          21973,
+          1
+        ],
+        [
+          21975,
+          1
+        ],
+        [
+          21976,
+          1
+        ],
+        [
+          21977,
+          1
+        ],
+        [
+          21978,
+          1
+        ],
+        [
+          21979,
+          1
+        ],
+        [
+          21981,
+          1
+        ],
+        [
+          21984,
+          1
+        ],
+        [
+          21985,
+          1
+        ],
+        [
+          21986,
+          1
+        ],
+        [
+          21987,
+          1
+        ],
+        [
+          21988,
+          1
+        ],
+        [
+          21989,
+          1
+        ],
+        [
+          21991,
+          1
+        ],
+        [
+          22064,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 47,
+        "cycle": null,
+        "maxRadius": 14.643750166849843,
+        "maxActive": 40,
+        "minBoundary": 34,
+        "maxDistance": 37.557030762195645,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B24/S25",
+      "generations": 7,
+      "trial": 873,
+      "from": 8,
+      "to": 24,
+      "translation": [
+        -12,
+        -12.1244
+      ],
+      "maximumRadiusThroughReturn": 12.2303,
+      "cellStates": [
+        [
+          8269,
+          1
+        ],
+        [
+          8280,
+          1
+        ],
+        [
+          8281,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 56,
+        "cycle": null,
+        "maxRadius": 12.301084770961868,
+        "maxActive": 31,
+        "minBoundary": 41,
+        "maxDistance": 46.76089932477973,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B2/S256",
+      "generations": 9,
+      "trial": 951,
+      "from": 14,
+      "to": 30,
+      "translation": [
+        -4.5,
+        16.4545
+      ],
+      "maximumRadiusThroughReturn": 13.6253,
+      "cellStates": [
+        [
+          17338,
+          1
+        ],
+        [
+          17340,
+          1
+        ],
+        [
+          17348,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 62,
+        "cycle": null,
+        "maxRadius": 13.625251158376797,
+        "maxActive": 38,
+        "minBoundary": 29,
+        "maxDistance": 50.62954467390954,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B25/S256",
+      "generations": 11,
+      "trial": 963,
+      "from": 16,
+      "to": 32,
+      "translation": [
+        -12,
+        -12.1244
+      ],
+      "maximumRadiusThroughReturn": 14.2164,
+      "cellStates": [
+        [
+          17171,
+          1
+        ],
+        [
+          17173,
+          1
+        ],
+        [
+          17174,
+          1
+        ],
+        [
+          17184,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 64,
+        "cycle": null,
+        "maxRadius": 14.566998959089341,
+        "maxActive": 40,
+        "minBoundary": 43,
+        "maxDistance": 53.79228777782456,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B2/S256",
+      "generations": 5,
+      "trial": 1030,
+      "from": 8,
+      "to": 24,
+      "translation": [
+        12,
+        12.1244
+      ],
+      "maximumRadiusThroughReturn": 17.499,
+      "cellStates": [
+        [
+          4016,
+          1
+        ],
+        [
+          4027,
+          1
+        ],
+        [
+          4028,
+          1
+        ],
+        [
+          4109,
+          1
+        ],
+        [
+          4110,
+          1
+        ],
+        [
+          4111,
+          1
+        ],
+        [
+          4112,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 43,
+        "cycle": null,
+        "maxRadius": 17.49899665646165,
+        "maxActive": 25,
+        "minBoundary": 27,
+        "maxDistance": 35.10994886424834,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B24/S25",
+      "generations": 6,
+      "trial": 1187,
+      "from": 12,
+      "to": 28,
+      "translation": [
+        16.5,
+        -4.33012
+      ],
+      "maximumRadiusThroughReturn": 12.6148,
+      "cellStates": [
+        [
+          21617,
+          1
+        ],
+        [
+          21619,
+          1
+        ],
+        [
+          21679,
+          1
+        ],
+        [
+          21686,
+          1
+        ],
+        [
+          21690,
+          1
+        ],
+        [
+          21693,
+          1
+        ],
+        [
+          21773,
+          1
+        ],
+        [
+          21775,
+          1
+        ],
+        [
+          21776,
+          1
+        ],
+        [
+          21777,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 46,
+        "cycle": null,
+        "maxRadius": 12.614835057326951,
+        "maxActive": 35,
+        "minBoundary": 26,
+        "maxDistance": 36.94586911192933,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B27/S25",
+      "generations": 7,
+      "trial": 2825,
+      "from": 16,
+      "to": 32,
+      "translation": [
+        -12,
+        -12.1244
+      ],
+      "maximumRadiusThroughReturn": 13.0136,
+      "cellStates": [
+        [
+          9053,
+          2
+        ],
+        [
+          9055,
+          1
+        ],
+        [
+          9056,
+          1
+        ],
+        [
+          9058,
+          1
+        ],
+        [
+          10428,
+          5
+        ],
+        [
+          10431,
+          1
+        ],
+        [
+          10432,
+          1
+        ],
+        [
+          10434,
+          6
+        ],
+        [
+          10439,
+          6
+        ],
+        [
+          10444,
+          4
+        ],
+        [
+          10446,
+          4
+        ],
+        [
+          10447,
+          4
+        ],
+        [
+          10448,
+          3
+        ],
+        [
+          10449,
+          6
+        ],
+        [
+          10531,
+          3
+        ],
+        [
+          10534,
+          1
+        ],
+        [
+          10535,
+          1
+        ],
+        [
+          10536,
+          2
+        ],
+        [
+          10538,
+          1
+        ],
+        [
+          10539,
+          1
+        ],
+        [
+          10540,
+          3
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 43,
+        "cycle": null,
+        "maxRadius": 13.01363916197848,
+        "maxActive": 28,
+        "minBoundary": 44,
+        "maxDistance": 40.40025517023114,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B27/S25",
+      "generations": 7,
+      "trial": 4761,
+      "from": 6,
+      "to": 22,
+      "translation": [
+        -12,
+        -12.1244
+      ],
+      "maximumRadiusThroughReturn": 12.2303,
+      "cellStates": [
+        [
+          9053,
+          2
+        ],
+        [
+          9055,
+          1
+        ],
+        [
+          9056,
+          1
+        ],
+        [
+          9057,
+          2
+        ],
+        [
+          9058,
+          1
+        ],
+        [
+          10428,
+          5
+        ],
+        [
+          10431,
+          6
+        ],
+        [
+          10432,
+          4
+        ],
+        [
+          10434,
+          6
+        ],
+        [
+          10439,
+          6
+        ],
+        [
+          10444,
+          4
+        ],
+        [
+          10447,
+          4
+        ],
+        [
+          10448,
+          3
+        ],
+        [
+          10449,
+          6
+        ],
+        [
+          10531,
+          3
+        ],
+        [
+          10534,
+          2
+        ],
+        [
+          10535,
+          1
+        ],
+        [
+          10538,
+          1
+        ],
+        [
+          10539,
+          1
+        ],
+        [
+          10540,
+          2
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 43,
+        "cycle": null,
+        "maxRadius": 12.230315581710245,
+        "maxActive": 25,
+        "minBoundary": 44,
+        "maxDistance": 40.341679826856264,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B27/S25",
+      "generations": 6,
+      "trial": 11080,
+      "from": 6,
+      "to": 22,
+      "translation": [
+        -16.5,
+        4.33013
+      ],
+      "maximumRadiusThroughReturn": 11.3668,
+      "cellStates": [
+        [
+          7942,
+          4
+        ],
+        [
+          7961,
+          1
+        ],
+        [
+          8039,
+          1
+        ],
+        [
+          8041,
+          1
+        ],
+        [
+          8042,
+          1
+        ],
+        [
+          8043,
+          2
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 55,
+        "cycle": null,
+        "maxRadius": 11.550648361100905,
+        "maxActive": 23,
+        "minBoundary": 46,
+        "maxDistance": 49.96729348678288,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B2/S256",
+      "generations": 8,
+      "trial": 18767,
+      "from": 14,
+      "to": 30,
+      "translation": [
+        -4.5,
+        16.4545
+      ],
+      "maximumRadiusThroughReturn": 12.9066,
+      "cellStates": [
+        [
+          17337,
+          7
+        ],
+        [
+          17338,
+          1
+        ],
+        [
+          17340,
+          1
+        ],
+        [
+          17348,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 61,
+        "cycle": null,
+        "maxRadius": 13.026166539217021,
+        "maxActive": 33,
+        "minBoundary": 29,
+        "maxDistance": 50.74600994436905,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B27/S25",
+      "generations": 8,
+      "trial": 19315,
+      "from": 20,
+      "to": 36,
+      "translation": [
+        -12,
+        -12.1244
+      ],
+      "maximumRadiusThroughReturn": 14.0082,
+      "cellStates": [
+        [
+          2760,
+          1
+        ],
+        [
+          2764,
+          1
+        ],
+        [
+          3464,
+          1
+        ],
+        [
+          6548,
+          1
+        ],
+        [
+          6549,
+          1
+        ],
+        [
+          6550,
+          1
+        ],
+        [
+          6561,
+          7
+        ],
+        [
+          6564,
+          1
+        ],
+        [
+          6565,
+          7
+        ],
+        [
+          6566,
+          7
+        ],
+        [
+          6583,
+          1
+        ],
+        [
+          6587,
+          1
+        ],
+        [
+          6590,
+          1
+        ],
+        [
+          6592,
+          3
+        ],
+        [
+          6595,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 55,
+        "cycle": null,
+        "maxRadius": 14.008212623149586,
+        "maxActive": 46,
+        "minBoundary": 30,
+        "maxDistance": 44.92184312067609,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B25/S25",
+      "generations": 14,
+      "trial": 25339,
+      "from": 18,
+      "to": 34,
+      "translation": [
+        -16.5,
+        4.33013
+      ],
+      "maximumRadiusThroughReturn": 16.0751,
+      "cellStates": [
+        [
+          4040,
+          1
+        ],
+        [
+          4041,
+          1
+        ],
+        [
+          4042,
+          1
+        ],
+        [
+          4043,
+          1
+        ],
+        [
+          4045,
+          13
+        ],
+        [
+          4048,
+          1
+        ],
+        [
+          4049,
+          1
+        ],
+        [
+          4050,
+          1
+        ],
+        [
+          4051,
+          1
+        ],
+        [
+          4052,
+          8
+        ],
+        [
+          4055,
+          11
+        ],
+        [
+          4058,
+          12
+        ],
+        [
+          4059,
+          1
+        ],
+        [
+          4139,
+          1
+        ],
+        [
+          4140,
+          1
+        ],
+        [
+          4142,
+          1
+        ],
+        [
+          4144,
+          1
+        ],
+        [
+          4151,
+          7
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 68,
+        "cycle": null,
+        "maxRadius": 16.075051199889888,
+        "maxActive": 58,
+        "minBoundary": 10,
+        "maxDistance": 60.729570813521896,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B2/S25",
+      "generations": 10,
+      "trial": 38538,
+      "from": 12,
+      "to": 28,
+      "translation": [
+        16.5,
+        -4.33012
+      ],
+      "maximumRadiusThroughReturn": 13.9429,
+      "cellStates": [
+        [
+          1327,
+          1
+        ],
+        [
+          1329,
+          7
+        ],
+        [
+          1330,
+          1
+        ],
+        [
+          1331,
+          1
+        ],
+        [
+          1332,
+          1
+        ],
+        [
+          1335,
+          1
+        ],
+        [
+          1337,
+          1
+        ],
+        [
+          1342,
+          1
+        ],
+        [
+          1343,
+          6
+        ],
+        [
+          1345,
+          1
+        ],
+        [
+          1434,
+          1
+        ],
+        [
+          1436,
+          1
+        ],
+        [
+          1437,
+          1
+        ],
+        [
+          1438,
+          2
+        ],
+        [
+          1989,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 61,
+        "cycle": null,
+        "maxRadius": 14.34695192128266,
+        "maxActive": 44,
+        "minBoundary": 41,
+        "maxDistance": 55.01211275034446,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B2/S25",
+      "generations": 12,
+      "trial": 145170,
+      "from": 20,
+      "to": 36,
+      "translation": [
+        -16.5,
+        4.33013
+      ],
+      "maximumRadiusThroughReturn": 14.4057,
+      "cellStates": [
+        [
+          44906,
+          1
+        ],
+        [
+          44907,
+          1
+        ],
+        [
+          44920,
+          8
+        ],
+        [
+          45003,
+          7
+        ],
+        [
+          45004,
+          6
+        ],
+        [
+          45005,
+          1
+        ],
+        [
+          45006,
+          1
+        ],
+        [
+          45008,
+          1
+        ],
+        [
+          45009,
+          1
+        ],
+        [
+          45207,
+          1
+        ],
+        [
+          45210,
+          1
+        ],
+        [
+          45211,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 71,
+        "cycle": null,
+        "maxRadius": 14.510045111573863,
+        "maxActive": 46,
+        "minBoundary": 32,
+        "maxDistance": 63.2139349278303,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B24/S25",
+      "generations": 11,
+      "trial": 347086,
+      "from": 12,
+      "to": 28,
+      "translation": [
+        -4.5,
+        16.4545
+      ],
+      "maximumRadiusThroughReturn": 14.1489,
+      "cellStates": [
+        [
+          11713,
+          6
+        ],
+        [
+          11791,
+          1
+        ],
+        [
+          11792,
+          1
+        ],
+        [
+          11797,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 63,
+        "cycle": null,
+        "maxRadius": 14.503717688930523,
+        "maxActive": 40,
+        "minBoundary": 62,
+        "maxDistance": 57.828533698917894,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B2/S25",
+      "generations": 5,
+      "trial": 470203,
+      "from": 12,
+      "to": 28,
+      "translation": [
+        -12,
+        -12.1244
+      ],
+      "maximumRadiusThroughReturn": 17.499,
+      "cellStates": [
+        [
+          9051,
+          1
+        ],
+        [
+          9053,
+          4
+        ],
+        [
+          9054,
+          1
+        ],
+        [
+          9055,
+          1
+        ],
+        [
+          9056,
+          1
+        ],
+        [
+          9057,
+          1
+        ],
+        [
+          9058,
+          1
+        ],
+        [
+          9059,
+          1
+        ],
+        [
+          10539,
+          3
+        ],
+        [
+          11175,
+          1
+        ],
+        [
+          11176,
+          1
+        ],
+        [
+          11177,
+          1
+        ],
+        [
+          11178,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 40,
+        "cycle": null,
+        "maxRadius": 17.49899397730804,
+        "maxActive": 31,
+        "minBoundary": 44,
+        "maxDistance": 35.086940581978546,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    },
+    {
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "rule": "B2/S25",
+      "generations": 5,
+      "trial": 958041,
+      "from": 18,
+      "to": 34,
+      "translation": [
+        4.5,
+        -16.4545
+      ],
+      "maximumRadiusThroughReturn": 17.499,
+      "cellStates": [
+        [
+          18154,
+          1
+        ],
+        [
+          18155,
+          1
+        ],
+        [
+          18156,
+          1
+        ],
+        [
+          18157,
+          1
+        ],
+        [
+          18158,
+          1
+        ],
+        [
+          18161,
+          1
+        ],
+        [
+          18164,
+          1
+        ],
+        [
+          18165,
+          2
+        ],
+        [
+          18167,
+          3
+        ],
+        [
+          18169,
+          1
+        ],
+        [
+          18170,
+          1
+        ],
+        [
+          18171,
+          1
+        ],
+        [
+          18172,
+          1
+        ],
+        [
+          18174,
+          1
+        ],
+        [
+          18246,
+          1
+        ],
+        [
+          18251,
+          1
+        ],
+        [
+          18266,
+          4
+        ],
+        [
+          18267,
+          2
+        ],
+        [
+          18268,
+          1
+        ],
+        [
+          45138,
+          1
+        ]
+      ],
+      "screen": {
+        "outcome": "extinct",
+        "generation": 46,
+        "cycle": null,
+        "maxRadius": 17.49899407379934,
+        "maxActive": 35,
+        "minBoundary": 46,
+        "maxDistance": 43.226221239078114,
+        "returnVerified": true,
+        "matchedHalo": 0
+      }
+    }
+  ],
+  "horizonSurvivor": {
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "rule": "B357/S12345",
+    "generations": 30,
+    "trial": 509316,
+    "parentTrial": 502894,
+    "score": 0.173011,
+    "bestAt": 76,
+    "stoppedAt": 4096,
+    "outcomeCode": 5,
+    "netTravelAtBest": 4.79359,
+    "maximumRadiusWholeRun": 13.9591,
+    "maximumPopulationWholeRun": 84,
+    "minimumBoundaryWholeRun": 56,
+    "cellStates": [
+      [
+        11564,
+        19
+      ],
+      [
+        11565,
+        28
+      ],
+      [
+        11566,
+        11
+      ],
+      [
+        11568,
+        24
+      ],
+      [
+        11569,
+        22
+      ],
+      [
+        11570,
+        19
+      ],
+      [
+        11571,
+        28
+      ],
+      [
+        11572,
+        11
+      ],
+      [
+        11573,
+        1
+      ],
+      [
+        11574,
+        27
+      ],
+      [
+        11592,
+        1
+      ],
+      [
+        11599,
+        1
+      ],
+      [
+        11600,
+        16
+      ],
+      [
+        11603,
+        3
+      ],
+      [
+        11626,
+        17
+      ],
+      [
+        11629,
+        1
+      ],
+      [
+        11638,
+        1
+      ],
+      [
+        11640,
+        1
+      ],
+      [
+        11641,
+        1
+      ],
+      [
+        11642,
+        2
+      ],
+      [
+        11643,
+        1
+      ],
+      [
+        11644,
+        1
+      ],
+      [
+        11645,
+        1
+      ],
+      [
+        23122,
+        1
+      ],
+      [
+        23125,
+        2
+      ],
+      [
+        23215,
+        2
+      ],
+      [
+        23216,
+        4
+      ],
+      [
+        23217,
+        1
+      ],
+      [
+        23218,
+        2
+      ],
+      [
+        23220,
+        1
+      ],
+      [
+        23221,
+        1
+      ],
+      [
+        23223,
+        1
+      ],
+      [
+        23226,
+        3
+      ],
+      [
+        23274,
+        6
+      ],
+      [
+        23276,
+        1
+      ],
+      [
+        23278,
+        6
+      ],
+      [
+        23280,
+        3
+      ],
+      [
+        23281,
+        16
+      ],
+      [
+        23282,
+        22
+      ],
+      [
+        23284,
+        5
+      ],
+      [
+        23285,
+        1
+      ],
+      [
+        23286,
+        1
+      ],
+      [
+        23287,
+        1
+      ],
+      [
+        23288,
+        11
+      ],
+      [
+        23289,
+        23
+      ],
+      [
+        23290,
+        1
+      ],
+      [
+        23291,
+        22
+      ],
+      [
+        23294,
+        28
+      ],
+      [
+        23298,
+        1
+      ],
+      [
+        23299,
+        26
+      ],
+      [
+        23301,
+        12
+      ],
+      [
+        23302,
+        1
+      ],
+      [
+        23304,
+        5
+      ],
+      [
+        23305,
+        1
+      ],
+      [
+        23306,
+        1
+      ],
+      [
+        23310,
+        25
+      ],
+      [
+        23313,
+        1
+      ],
+      [
+        23314,
+        1
+      ],
+      [
+        23315,
+        4
+      ],
+      [
+        23316,
+        25
+      ],
+      [
+        23319,
+        28
+      ],
+      [
+        23320,
+        1
+      ],
+      [
+        23322,
+        4
+      ],
+      [
+        23325,
+        20
+      ],
+      [
+        23328,
+        25
+      ],
+      [
+        23420,
+        21
+      ],
+      [
+        23422,
+        27
+      ],
+      [
+        23435,
+        12
+      ],
+      [
+        23436,
+        11
+      ],
+      [
+        23525,
+        5
+      ],
+      [
+        23526,
+        23
+      ],
+      [
+        23529,
+        9
+      ],
+      [
+        23531,
+        7
+      ],
+      [
+        23532,
+        14
+      ],
+      [
+        23533,
+        24
+      ],
+      [
+        23534,
+        1
+      ],
+      [
+        23535,
+        10
+      ],
+      [
+        23536,
+        4
+      ],
+      [
+        23537,
+        15
+      ],
+      [
+        23538,
+        14
+      ]
+    ],
+    "endpoint": [
+      [
+        11572,
+        1
+      ],
+      [
+        11591,
+        1
+      ],
+      [
+        11592,
+        1
+      ],
+      [
+        11594,
+        1
+      ],
+      [
+        11599,
+        1
+      ],
+      [
+        11600,
+        16
+      ],
+      [
+        11601,
+        1
+      ],
+      [
+        11603,
+        1
+      ],
+      [
+        11604,
+        1
+      ],
+      [
+        11605,
+        1
+      ],
+      [
+        11606,
+        1
+      ],
+      [
+        11609,
+        1
+      ],
+      [
+        11615,
+        1
+      ],
+      [
+        11619,
+        1
+      ],
+      [
+        11621,
+        15
+      ],
+      [
+        11622,
+        1
+      ],
+      [
+        11623,
+        1
+      ],
+      [
+        11624,
+        15
+      ],
+      [
+        11625,
+        1
+      ],
+      [
+        11626,
+        15
+      ],
+      [
+        11627,
+        15
+      ],
+      [
+        11629,
+        1
+      ],
+      [
+        11635,
+        1
+      ],
+      [
+        11636,
+        1
+      ],
+      [
+        11637,
+        15
+      ],
+      [
+        11638,
+        19
+      ],
+      [
+        11639,
+        19
+      ],
+      [
+        11640,
+        19
+      ],
+      [
+        11641,
+        1
+      ],
+      [
+        11642,
+        1
+      ],
+      [
+        11643,
+        19
+      ],
+      [
+        11644,
+        1
+      ],
+      [
+        11645,
+        1
+      ],
+      [
+        23122,
+        1
+      ],
+      [
+        23124,
+        1
+      ],
+      [
+        23125,
+        1
+      ],
+      [
+        23214,
+        1
+      ],
+      [
+        23216,
+        1
+      ],
+      [
+        23217,
+        1
+      ],
+      [
+        23219,
+        1
+      ],
+      [
+        23222,
+        1
+      ],
+      [
+        23223,
+        1
+      ],
+      [
+        23224,
+        1
+      ],
+      [
+        23225,
+        1
+      ],
+      [
+        23226,
+        1
+      ],
+      [
+        23274,
+        1
+      ],
+      [
+        23275,
+        19
+      ],
+      [
+        23276,
+        1
+      ],
+      [
+        23277,
+        1
+      ],
+      [
+        23278,
+        19
+      ],
+      [
+        23279,
+        1
+      ],
+      [
+        23280,
+        1
+      ],
+      [
+        23281,
+        16
+      ],
+      [
+        23282,
+        16
+      ],
+      [
+        23283,
+        17
+      ],
+      [
+        23284,
+        16
+      ],
+      [
+        23285,
+        1
+      ],
+      [
+        23286,
+        1
+      ],
+      [
+        23287,
+        16
+      ],
+      [
+        23288,
+        1
+      ],
+      [
+        23289,
+        1
+      ],
+      [
+        23290,
+        21
+      ],
+      [
+        23292,
+        1
+      ],
+      [
+        23293,
+        1
+      ],
+      [
+        23296,
+        1
+      ],
+      [
+        23298,
+        1
+      ],
+      [
+        23299,
+        1
+      ],
+      [
+        23300,
+        20
+      ],
+      [
+        23301,
+        1
+      ],
+      [
+        23302,
+        1
+      ],
+      [
+        23303,
+        19
+      ],
+      [
+        23304,
+        19
+      ],
+      [
+        23305,
+        1
+      ],
+      [
+        23306,
+        19
+      ],
+      [
+        23308,
+        1
+      ],
+      [
+        23311,
+        1
+      ],
+      [
+        23313,
+        1
+      ],
+      [
+        23314,
+        1
+      ],
+      [
+        23535,
+        1
+      ]
+    ],
+    "screen": {
+      "outcome": "stationary-cycle",
+      "generation": 4688,
+      "cycle": {
+        "transient": 4657,
+        "period": 31
+      },
+      "maxRadius": 13.9591119118134,
+      "maxActive": 89,
+      "minBoundary": 56,
+      "maxDistance": 5.146811858244113,
+      "returnVerified": null,
+      "matchedHalo": null
+    }
+  },
+  "oneRingHaloCounterexample": {
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "rule": "B27/S25",
+    "generations": 6,
+    "trial": 434,
+    "from": 10,
+    "to": 26,
+    "translation": [
+      -16.5,
+      4.33012
+    ],
+    "maximumRadiusThroughReturn": 11.3668,
+    "cellStates": [
+      [
+        7961,
+        1
+      ],
+      [
+        8039,
+        1
+      ],
+      [
+        8041,
+        1
+      ],
+      [
+        8042,
+        1
+      ]
+    ],
+    "screen": {
+      "outcome": "extinct",
+      "generation": 55,
+      "cycle": null,
+      "maxRadius": 11.550648361100905,
+      "maxActive": 23,
+      "minBoundary": 45,
+      "maxDistance": 49.789350144490335,
+      "returnVerified": true,
+      "matchedHalo": 1
+    }
+  }
+}

@@ -1,0 +1,714 @@
+{
+  "schema": "aperiodic-life-hat-relay-evidence-v1",
+  "scope": "Independently evolved random-lineage rule358893, reduced without changing these complete trajectories. Finite flight and novelty qualifications are essential.",
+  "originalTable": {
+    "states": 4,
+    "default": 0,
+    "rows": [
+      {
+        "state": 1,
+        "atLeast": {
+          "0": 3,
+          "2": 1
+        },
+        "next": 2
+      },
+      {
+        "state": 0,
+        "atLeast": {
+          "0": 4,
+          "2": 1
+        },
+        "next": 1
+      },
+      {
+        "state": 1,
+        "atLeast": {
+          "0": 4
+        },
+        "next": 3
+      },
+      {
+        "state": 2,
+        "atLeast": {
+          "1": 3,
+          "2": 2
+        },
+        "next": 3
+      },
+      {
+        "state": 3,
+        "atLeast": {
+          "0": 2,
+          "1": 3
+        },
+        "next": 1
+      },
+      {
+        "state": 3,
+        "atLeast": {
+          "2": 2
+        },
+        "next": 0
+      },
+      {
+        "state": 0,
+        "atLeast": {
+          "1": 1,
+          "2": 1
+        },
+        "next": 3
+      }
+    ]
+  },
+  "reducedTable": {
+    "states": 4,
+    "default": 0,
+    "rows": [
+      {
+        "state": 1,
+        "atLeast": {
+          "0": 3,
+          "2": 1
+        },
+        "next": 2
+      },
+      {
+        "state": 0,
+        "atLeast": {
+          "0": 4,
+          "2": 1
+        },
+        "next": 1
+      },
+      {
+        "state": 1,
+        "atLeast": {
+          "0": 4
+        },
+        "next": 3
+      },
+      {
+        "state": 0,
+        "atLeast": {
+          "1": 1,
+          "2": 1
+        },
+        "next": 3
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "hat-relay-source-six-cell",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "cellStates": [
+        [
+          7392,
+          2
+        ],
+        [
+          7396,
+          1
+        ],
+        [
+          7307,
+          3
+        ],
+        [
+          2948,
+          1
+        ],
+        [
+          2955,
+          1
+        ],
+        [
+          2952,
+          1
+        ]
+      ],
+      "horizon": 293,
+      "checkpoints": [
+        {
+          "generation": 0,
+          "cellStates": [
+            [
+              7392,
+              2
+            ],
+            [
+              7396,
+              1
+            ],
+            [
+              7307,
+              3
+            ],
+            [
+              2948,
+              1
+            ],
+            [
+              2955,
+              1
+            ],
+            [
+              2952,
+              1
+            ]
+          ]
+        },
+        {
+          "generation": 30,
+          "cellStates": [
+            [
+              22905,
+              3
+            ],
+            [
+              7697,
+              2
+            ],
+            [
+              7699,
+              1
+            ],
+            [
+              7701,
+              1
+            ],
+            [
+              22911,
+              3
+            ],
+            [
+              7702,
+              1
+            ]
+          ]
+        },
+        {
+          "generation": 60,
+          "cellStates": [
+            [
+              17955,
+              3
+            ],
+            [
+              17961,
+              2
+            ],
+            [
+              17957,
+              3
+            ],
+            [
+              17334,
+              1
+            ],
+            [
+              17331,
+              1
+            ],
+            [
+              17504,
+              1
+            ],
+            [
+              17960,
+              3
+            ],
+            [
+              17329,
+              1
+            ]
+          ]
+        },
+        {
+          "generation": 100,
+          "cellStates": [
+            [
+              17600,
+              3
+            ],
+            [
+              19461,
+              2
+            ],
+            [
+              17626,
+              3
+            ],
+            [
+              17633,
+              1
+            ]
+          ]
+        },
+        {
+          "generation": 160,
+          "cellStates": [
+            [
+              16434,
+              3
+            ],
+            [
+              16449,
+              2
+            ],
+            [
+              16436,
+              3
+            ],
+            [
+              16461,
+              1
+            ],
+            [
+              16448,
+              3
+            ],
+            [
+              16457,
+              1
+            ],
+            [
+              16459,
+              1
+            ]
+          ]
+        },
+        {
+          "generation": 250,
+          "cellStates": [
+            [
+              51989,
+              3
+            ],
+            [
+              52070,
+              2
+            ],
+            [
+              51995,
+              3
+            ],
+            [
+              52072,
+              1
+            ],
+            [
+              52074,
+              1
+            ],
+            [
+              52075,
+              1
+            ]
+          ]
+        },
+        {
+          "generation": 293,
+          "cellStates": [
+            [
+              53079,
+              3
+            ],
+            [
+              53082,
+              2
+            ],
+            [
+              53080,
+              2
+            ],
+            [
+              52984,
+              1
+            ],
+            [
+              53065,
+              1
+            ],
+            [
+              53084,
+              3
+            ]
+          ]
+        }
+      ],
+      "expectedFinal": [
+        [
+          53079,
+          3
+        ],
+        [
+          53082,
+          2
+        ],
+        [
+          53080,
+          2
+        ],
+        [
+          52984,
+          1
+        ],
+        [
+          53065,
+          1
+        ],
+        [
+          53084,
+          3
+        ]
+      ],
+      "expected": {
+        "id": "hat-relay-source-six-cell",
+        "verifiedThrough": 293,
+        "reason": "horizon",
+        "productionParity": true,
+        "checkedMinerCheckpoints": [
+          0,
+          30,
+          60,
+          100,
+          160,
+          250,
+          293
+        ],
+        "trajectorySha256": "6d6345ca67458fbce8623a6e414f421837858fa74f5907cca7027aec9e74df97",
+        "minimumBoundaryDistance": 4,
+        "maximumActive": 9,
+        "maximumRadius": 4.637795095723628,
+        "maximumComponents": 2,
+        "visitedTiles": 724,
+        "centroidDisplacement": 315.7326313403819,
+        "absoluteCycle": null,
+        "initial": [
+          [
+            2948,
+            1
+          ],
+          [
+            2952,
+            1
+          ],
+          [
+            2955,
+            1
+          ],
+          [
+            7307,
+            3
+          ],
+          [
+            7392,
+            2
+          ],
+          [
+            7396,
+            1
+          ]
+        ],
+        "final": [
+          [
+            52984,
+            1
+          ],
+          [
+            53065,
+            1
+          ],
+          [
+            53079,
+            3
+          ],
+          [
+            53080,
+            2
+          ],
+          [
+            53082,
+            2
+          ],
+          [
+            53084,
+            3
+          ]
+        ],
+        "returns": [],
+        "referenceSource": "research/aperiodic-reference.js direct-neighbour B/S; verification/replay.js direct-neighbour priority tables",
+        "scope": "Finite trajectory only. Local repeats do not prove infinite aperiodic propagation or historical novelty.",
+        "distinctLocalContexts": 62,
+        "comparisonScope": "Exact state relabelling of local transitions actually encountered. A mismatch distinguishes a transition, not automatically a travelling mechanism; unvisited contexts are untested.",
+        "matureProjection": {
+          "from": 60,
+          "through": 293,
+          "distinctContexts": 54,
+          "mapsChecked": 341,
+          "matches": []
+        },
+        "originalSevenRowsMatchEveryState": true
+      },
+      "rule": "TABLE:HAT-WAKE",
+      "generations": 4
+    },
+    {
+      "id": "hat-relay-two-cell-launch",
+      "tiling": "hat",
+      "depth": 5,
+      "neighborhood": "touch",
+      "cellStates": [
+        [
+          7392,
+          2
+        ],
+        [
+          7396,
+          1
+        ]
+      ],
+      "horizon": 293,
+      "checkpoints": [],
+      "expected": {
+        "id": "hat-relay-two-cell-launch",
+        "verifiedThrough": 293,
+        "reason": "horizon",
+        "productionParity": true,
+        "checkedMinerCheckpoints": [],
+        "trajectorySha256": "b499256b5bb6ea06e30c1182851d8351ca71319b7d231b8a17915dfe040ed4df",
+        "minimumBoundaryDistance": 4,
+        "maximumActive": 13,
+        "maximumRadius": 6.701892794358555,
+        "maximumComponents": 2,
+        "visitedTiles": 728,
+        "centroidDisplacement": 312.5261198722604,
+        "absoluteCycle": null,
+        "initial": [
+          [
+            7392,
+            2
+          ],
+          [
+            7396,
+            1
+          ]
+        ],
+        "final": [
+          [
+            52984,
+            1
+          ],
+          [
+            53065,
+            1
+          ],
+          [
+            53079,
+            3
+          ],
+          [
+            53080,
+            2
+          ],
+          [
+            53082,
+            2
+          ],
+          [
+            53084,
+            3
+          ]
+        ],
+        "returns": [],
+        "referenceSource": "research/aperiodic-reference.js direct-neighbour B/S; verification/replay.js direct-neighbour priority tables",
+        "scope": "Finite trajectory only. Local repeats do not prove infinite aperiodic propagation or historical novelty.",
+        "distinctLocalContexts": 76,
+        "comparisonScope": "Exact state relabelling of local transitions actually encountered. A mismatch distinguishes a transition, not automatically a travelling mechanism; unvisited contexts are untested.",
+        "matureProjection": {
+          "from": 60,
+          "through": 293,
+          "distinctContexts": 54,
+          "mapsChecked": 341,
+          "matches": []
+        },
+        "originalSevenRowsMatchEveryState": true
+      },
+      "rule": "TABLE:HAT-WAKE",
+      "generations": 4
+    },
+    {
+      "id": "hat-relay-depth6-long-flight",
+      "tiling": "hat",
+      "depth": 6,
+      "neighborhood": "touch",
+      "cellStates": [
+        [
+          7392,
+          2
+        ],
+        [
+          7396,
+          1
+        ],
+        [
+          7307,
+          3
+        ],
+        [
+          2948,
+          1
+        ],
+        [
+          2955,
+          1
+        ],
+        [
+          2952,
+          1
+        ]
+      ],
+      "horizon": 1000,
+      "checkpoints": [],
+      "claimedReturns": [
+        {
+          "from": 60,
+          "to": 128,
+          "transform": {
+            "dx": 51,
+            "dy": 51.96152329444885
+          },
+          "radius": 3
+        }
+      ],
+      "expected": {
+        "id": "hat-relay-depth6-long-flight",
+        "verifiedThrough": 1000,
+        "reason": "horizon",
+        "productionParity": true,
+        "checkedMinerCheckpoints": [],
+        "trajectorySha256": "d2ff35a1bce49d66acb83fd36fe756d92fa6b161a86beb5fa6431215a35bb105",
+        "minimumBoundaryDistance": 8,
+        "maximumActive": 9,
+        "maximumRadius": 4.637795861285243,
+        "maximumComponents": 2,
+        "visitedTiles": 2447,
+        "centroidDisplacement": 1071.9832130281436,
+        "absoluteCycle": null,
+        "initial": [
+          [
+            2948,
+            1
+          ],
+          [
+            2952,
+            1
+          ],
+          [
+            2955,
+            1
+          ],
+          [
+            7307,
+            3
+          ],
+          [
+            7392,
+            2
+          ],
+          [
+            7396,
+            1
+          ]
+        ],
+        "final": [
+          [
+            364514,
+            3
+          ],
+          [
+            364515,
+            3
+          ],
+          [
+            364525,
+            2
+          ],
+          [
+            364528,
+            3
+          ],
+          [
+            364619,
+            1
+          ]
+        ],
+        "returns": [
+          {
+            "from": 60,
+            "to": 128,
+            "cells": 8,
+            "haloCells": 81,
+            "radius": 3,
+            "transform": {
+              "dx": 51,
+              "dy": 51.96152329444885
+            },
+            "worstPolygonError": 0.0000027418136596679688
+          }
+        ],
+        "referenceSource": "research/aperiodic-reference.js direct-neighbour B/S; verification/replay.js direct-neighbour priority tables",
+        "scope": "Finite trajectory only. Local repeats do not prove infinite aperiodic propagation or historical novelty.",
+        "distinctLocalContexts": 62,
+        "comparisonScope": "Exact state relabelling of local transitions actually encountered. A mismatch distinguishes a transition, not automatically a travelling mechanism; unvisited contexts are untested.",
+        "matureProjection": {
+          "from": 60,
+          "through": 1000,
+          "distinctContexts": 54,
+          "mapsChecked": 341,
+          "matches": []
+        },
+        "originalSevenRowsMatchEveryState": true
+      },
+      "rule": "TABLE:HAT-WAKE",
+      "generations": 4
+    }
+  ],
+  "transplant": {
+    "source": "hat-relay-source-six-cell",
+    "target": "hat-relay-depth6-long-flight",
+    "transform": {
+      "dx": -277.49999618530273,
+      "dy": -77.07626342773438
+    },
+    "expected": {
+      "cells": 6,
+      "haloCells": 81,
+      "radius": 3,
+      "transform": {
+        "dx": -277.49999618530273,
+        "dy": -77.07626342773438
+      },
+      "worstPolygonError": 0.0000053947966093944364
+    }
+  },
+  "placementScreen": {
+    "polygonPlacements": 1057,
+    "completeHaloPlacements": 75,
+    "screened": 12,
+    "maximumActive": 9,
+    "maximumRadius": 4.638,
+    "allReachedBoundaryBuffer": true
+  },
+  "interpretation": [
+    "Exact finite labelled-state trajectories; all states participate in the rules, including zero-neighbour counts.",
+    "The341 tested nontrivial state maps include merged states and states mapped to zero; none reproduces the observed mature transition contexts under the six comparison tables. This is not an exhaustive classification of all possible mechanisms.",
+    "The reduced and original tables agree on the recorded flights; arbitrary configurations are not asserted equivalent.",
+    "A polygon-preserving local translated return on an aperiodic tiling does not prove unbounded propagation.",
+    "Random evolutionary provenance does not prove a world-first discovery."
+  ]
+}

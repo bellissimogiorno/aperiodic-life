@@ -1,0 +1,212 @@
+{
+  "schema": 1,
+  "date": "2026-10-13",
+  "tiling": "hat",
+  "depth": 5,
+  "patchCells": 54289,
+  "neighborhood": "touch",
+  "horizon": 180,
+  "initialSeedSizes": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "initialConnectivity": "Every seed is connected on the touch graph. Fresh growth alternates between edge and touch adjacency.",
+  "minimumStartingCellTouchBoundary": 75,
+  "eligibleStartingCells": 812,
+  "maximumActiveCells": 160,
+  "stopWhenMinimumOccupiedBoundaryBelow": 6,
+  "totalCandidateEvaluations": 400000,
+  "statisticalInterpretation": "Correlated deterministic mutations; evaluations are not independent samples or counts of unique structures.",
+  "sharedRngAcrossRules": true,
+  "graphHashes": {
+    "touch": "80b6709f8f55338fcbfb3cee3a33084a6e152554842d082a02a0dd8d61582949",
+    "edge": "f252a7d845602401ec5f5d18ad849d3b0cea4c3f84d55409edeb6c998032089b"
+  },
+  "campaigns": [
+    {
+      "file": "connected-seeds.jsonl",
+      "rng": "std::mt19937",
+      "seed": 3721301,
+      "rulesInOrder": "CABD",
+      "trialsPerRule": 80000,
+      "sourceMode": false,
+      "candidateEvaluations": 320000,
+      "evolutionSteps": 44252418,
+      "savedScreeningRecords": 649,
+      "perRule": [
+        {
+          "kind": "summary",
+          "preset": "C",
+          "rngSeed": 3721301,
+          "trials": 80000,
+          "steps": 9686262,
+          "retained": 193,
+          "sourceSignals": 1021,
+          "launcherSignalsByMultiplicity": {
+            "2": 307,
+            "3": 326,
+            "4": 27579,
+            "5": 361,
+            "6": 4,
+            "7": 4,
+            "8": 1
+          },
+          "outcomes": {
+            "boundary": 4333,
+            "extinct": 26034,
+            "horizon": 47556,
+            "population": 2077
+          }
+        },
+        {
+          "kind": "summary",
+          "preset": "A",
+          "rngSeed": 3721301,
+          "trials": 80000,
+          "steps": 11584706,
+          "retained": 150,
+          "sourceSignals": 0,
+          "launcherSignalsByMultiplicity": {
+            "4": 21446,
+            "5": 48,
+            "6": 1818
+          },
+          "outcomes": {
+            "boundary": 8089,
+            "extinct": 15258,
+            "horizon": 56262,
+            "population": 391
+          }
+        },
+        {
+          "kind": "summary",
+          "preset": "B",
+          "rngSeed": 3721301,
+          "trials": 80000,
+          "steps": 10287644,
+          "retained": 153,
+          "sourceSignals": 1,
+          "launcherSignalsByMultiplicity": {
+            "3": 1,
+            "4": 25535,
+            "5": 114,
+            "6": 1
+          },
+          "outcomes": {
+            "boundary": 7574,
+            "extinct": 22690,
+            "horizon": 48818,
+            "population": 918
+          }
+        },
+        {
+          "kind": "summary",
+          "preset": "D",
+          "rngSeed": 3721301,
+          "trials": 80000,
+          "steps": 12693806,
+          "retained": 153,
+          "sourceSignals": 2,
+          "launcherSignalsByMultiplicity": {
+            "3": 1,
+            "4": 18884,
+            "5": 47
+          },
+          "outcomes": {
+            "boundary": 9615,
+            "extinct": 9038,
+            "horizon": 61215,
+            "population": 132
+          }
+        }
+      ]
+    },
+    {
+      "file": "periodic-core.jsonl",
+      "rng": "std::mt19937",
+      "seed": 3721313,
+      "rulesInOrder": "CDAB",
+      "trialsPerRule": 20000,
+      "sourceMode": true,
+      "candidateEvaluations": 80000,
+      "evolutionSteps": 9631661,
+      "savedScreeningRecords": 1200,
+      "perRule": [
+        {
+          "kind": "summary",
+          "preset": "C",
+          "rngSeed": 3721313,
+          "trials": 20000,
+          "steps": 2824455,
+          "retained": 400,
+          "sourceSignals": 4207,
+          "launcherSignalsByMultiplicity": {},
+          "outcomes": {
+            "boundary": 927,
+            "extinct": 4275,
+            "horizon": 14403,
+            "population": 395
+          }
+        },
+        {
+          "kind": "summary",
+          "preset": "D",
+          "rngSeed": 3721313,
+          "trials": 20000,
+          "steps": 2861254,
+          "retained": 400,
+          "sourceSignals": 3394,
+          "launcherSignalsByMultiplicity": {},
+          "outcomes": {
+            "boundary": 5099,
+            "extinct": 3898,
+            "horizon": 10972,
+            "population": 31
+          }
+        },
+        {
+          "kind": "summary",
+          "preset": "A",
+          "rngSeed": 3721313,
+          "trials": 20000,
+          "steps": 1783156,
+          "retained": 0,
+          "sourceSignals": 0,
+          "launcherSignalsByMultiplicity": {},
+          "outcomes": {
+            "boundary": 3439,
+            "extinct": 9984,
+            "horizon": 6521,
+            "population": 56
+          }
+        },
+        {
+          "kind": "summary",
+          "preset": "B",
+          "rngSeed": 3721313,
+          "trials": 20000,
+          "steps": 2162796,
+          "retained": 400,
+          "sourceSignals": 2858,
+          "launcherSignalsByMultiplicity": {},
+          "outcomes": {
+            "boundary": 2313,
+            "extinct": 7916,
+            "horizon": 9454,
+            "population": 317
+          }
+        }
+      ]
+    }
+  ],
+  "screeningCaveats": [
+    "Spatial clusters and nearest-centroid motion are proposal filters; the raw source-signal label does not establish a stationary source.",
+    "The raw launcherSignalsByMultiplicity field also includes source-screen hits and counts moving clusters, not independently certified gliders.",
+    "Periodic-core signals refer to exact recurrence of a radius-20 crop, not a complete source or gun proof.",
+    "Source campaign retained counters were corrected by counting its emitted records; the original generator omitted that counter increment. Candidate states and trial/outcome counts were unchanged.",
+    "Final search.cpp includes the corrected retention counter and explicit sourceMode flag; both RNG streams and state evolutions are unchanged."
+  ],
+  "proofScope": "Selected examples undergo separate complete-state, independent-packet and no-boundary verification. No unbounded glider-gun theorem or literature-priority claim is made."
+}

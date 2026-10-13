@@ -1,0 +1,129 @@
+{
+  "schema": 1,
+  "campaign": "Hat connected launchers and periodic-source search",
+  "date": "2026-10-13",
+  "candidateEvaluations": 400000,
+  "evolutionSteps": 53884079,
+  "files": [
+    {
+      "file": "A-best-signal-analysis.json",
+      "bytes": 339322,
+      "sha256": "703506d88e0e8250aebeacdbcdbd42ebd699bcc471f92408d85199a205ea9816"
+    },
+    {
+      "file": "A-best-signal.json",
+      "bytes": 6751,
+      "sha256": "2865c5f76b1913b5345af05bcb9b8982886a25ed970655a0aae25bb648d3ed84"
+    },
+    {
+      "file": "B-core-signal-analysis.json",
+      "bytes": 730242,
+      "sha256": "a8b41b61f56818e7e7a15745921a0ff9f56846e42f0cf02677ffdd64265dda4a"
+    },
+    {
+      "file": "B-core-signal-source-analysis.json",
+      "bytes": 1118226,
+      "sha256": "8e718224717af4d9292fe2d162b8c2c8d2d753b8fb2b34ac449b694694de68c7"
+    },
+    {
+      "file": "B-core-signal.json",
+      "bytes": 17423,
+      "sha256": "db8c23573ffd6491a000e6de01536de14bed736f9042e668ad346980ea7d9108"
+    },
+    {
+      "file": "B-emission-identity.json",
+      "bytes": 23841,
+      "sha256": "3096ec70795b66df5f80dd5269d01bde9e1d487f79afa67a3be091f8f4b24b5d"
+    },
+    {
+      "file": "B-extraction-checks.json",
+      "bytes": 3360,
+      "sha256": "3e7572a682c245c4382cf97cae04fd7013347a25d5af00a6f231f5295955a241"
+    },
+    {
+      "file": "B-native-emission-identity.json",
+      "bytes": 24205,
+      "sha256": "edb035a48f25f3bb56de2f8c70bb4cca21c10bdf849789987f62857a98d4a366"
+    },
+    {
+      "file": "C-five-cell-candidate-analysis.json",
+      "bytes": 481072,
+      "sha256": "cc0cb72fb6a95688a56cc8c7cea033b5ee5a6b1825639fa16d88a900e98e4d50"
+    },
+    {
+      "file": "C-five-cell-candidate.json",
+      "bytes": 12309,
+      "sha256": "5dbd8f2305a1ed6da522435faa53803214c3c383b23021fc4d9c8ce0fe1fc506"
+    },
+    {
+      "file": "D-core-signal-source-analysis.json",
+      "bytes": 774078,
+      "sha256": "233655c213a10a2a3e5c394c4c06accccc569db370805599363edb4c0e648421"
+    },
+    {
+      "file": "D-core-signal.json",
+      "bytes": 15402,
+      "sha256": "466f0d0af8ba62109dc413278135e4c5eb48c1aa43302b007c267d8e0895b396"
+    },
+    {
+      "file": "README.md",
+      "bytes": 9808,
+      "sha256": "ae818c3792c987b9734d63299877751f317e9687261c3912cbd01d14852607dc"
+    },
+    {
+      "file": "accounting.json",
+      "bytes": 6284,
+      "sha256": "f3d529b571705f427999c26bda3b35ac99ffd0b12b4e1a237d46f3115187e792"
+    },
+    {
+      "file": "analyze-candidate.js",
+      "bytes": 4266,
+      "sha256": "98e16ac87f0d743724352c9b013b5f4dd25a546300b6ffa32b082ffe9d8a514f"
+    },
+    {
+      "file": "analyze-source.js",
+      "bytes": 3539,
+      "sha256": "6f4b83b09af56ff3f979f3a81544c8a99868b9b8b07fb3b92b768cbfac627215"
+    },
+    {
+      "file": "connected-seeds.jsonl",
+      "bytes": 790547,
+      "sha256": "2ff6d9d0ccf75076ab886ee89a9f8d59918592898a91f455d2339eaa73632210"
+    },
+    {
+      "file": "export-graphs.js",
+      "bytes": 1229,
+      "sha256": "0f2773986b47f39de530faa14859815b98b52b2d2ae1f8d8834583f2ff2d0078"
+    },
+    {
+      "file": "periodic-core.jsonl",
+      "bytes": 3244315,
+      "sha256": "fe37ec318efcd37a0360bdf7e5dde42fa12a85c7bd3dbce0c5d1e914031c55d5"
+    },
+    {
+      "file": "priority-rules.json",
+      "bytes": 1843,
+      "sha256": "e21810786ceb6282d1b6bb5886fccd54079dc0ce7b1a4868a02165ce9a088e72"
+    },
+    {
+      "file": "provenance.json",
+      "bytes": 895,
+      "sha256": "9697ecb30c276ddeb9bf451d18c82370991fe1474d69a36969f606cae26aab39"
+    },
+    {
+      "file": "recommended-catalogue.json",
+      "bytes": 1691,
+      "sha256": "7462c165d1ae24f87017e6ffe779be09ff0da93c142aff82d19f8f09a8231e82"
+    },
+    {
+      "file": "search.cpp",
+      "bytes": 9324,
+      "sha256": "e1734ad53d1fd84cebbe69141b759266d595aecdc0aa64a778596edc436fd97e"
+    }
+  ],
+  "independentVerifiers": [
+    "../verification/verify-hat-six-launcher.js",
+    "../verification/verify-hat-emitter.js"
+  ],
+  "interpretation": "Finite search and finite complete-state evidence; no unbounded gun theorem or claim of historical priority."
+}

@@ -1,0 +1,151 @@
+{
+  "schema": 1,
+  "tiling": "hat",
+  "depth": 5,
+  "neighborhood": "touch",
+  "cells": 54289,
+  "randomGenerator": "std::mt19937_64; integer draws use modulo; floating draws use the upper53bits",
+  "campaigns": [
+    {
+      "file": "evolution.jsonl",
+      "mode": "alternating planted-parent and fresh-rule epochs",
+      "kind": "summary",
+      "seed": 3721047,
+      "epochs": 16,
+      "evaluationsPerEpoch": 30000,
+      "horizon": 500,
+      "evaluations": 480000,
+      "evolutionSteps": 33674652,
+      "distinctReportedBuckets": 755,
+      "outcomes": {
+        "cycle": 24039,
+        "horizon": 3473,
+        "extinct": 271867,
+        "spread": 91998,
+        "boundary": 88623
+      }
+    },
+    {
+      "file": "random-evolution.jsonl",
+      "mode": "random-only",
+      "kind": "summary",
+      "seed": 3721049,
+      "epochs": 24,
+      "evaluationsPerEpoch": 40000,
+      "horizon": 500,
+      "evaluations": 960000,
+      "evolutionSteps": 40731416,
+      "distinctReportedBuckets": 1349,
+      "outcomes": {
+        "boundary": 85054,
+        "cycle": 61617,
+        "spread": 197998,
+        "horizon": 1734,
+        "extinct": 613597
+      }
+    }
+  ],
+  "totalRuleSeedEvaluations": 1440000,
+  "totalEvolutionSteps": 74406068,
+  "searchLimits": {
+    "maximumNonzeroSupport": 80,
+    "maximumCompleteSupportRadius": 18,
+    "boundaryStop": "minimum touch-graph boundary distance below5",
+    "initialSeedEdges": "both cells at least60touch-graph boundary rings away; planted reference controls have their explicitly stored seeds",
+    "seedSize": "2\u20136, with all three nonzero states permitted",
+    "rows": "initial3\u20138; mutations keep2\u201310",
+    "recurrenceScreen": "64-bit complete-state hash; no recurrence proof is inferred from this screen"
+  },
+  "counting": "Genotype-and-seed duplicates are rejected within each epoch, not globally. Trials, reported phenotype buckets and mathematical structures are different counts. Screened/ablated replays are validation, not added to the two bulk discovery totals.",
+  "selectedProvenance": {
+    "source": "evolution.jsonl",
+    "seed": 3721047,
+    "epoch": 11,
+    "evaluation": 358893,
+    "lineage": "random",
+    "explanation": "Epoch11 starts with fresh random rules only; elites reset between epochs. Mutation does not cross genomes and preserves lineage. This selected genome is not descended from a planted Edmond or SIMPLE table. Fitness and simulator design were informed by known gliders.",
+    "sourceRows": 7,
+    "wakeRowsAfterIdenticalTraceReduction": 4,
+    "wakeReductionInterval": [
+      0,
+      293
+    ],
+    "relayReduction": "Removing the two state3-producing rows changes anatomy. Removing the promotion empty-neighbour guard is another simplification, separately checked. The final two-row rule is not asserted equivalent to the four-row rule.",
+    "literatureRelationship": "The three-state relay resembles the published Spectre relay family. Independent provenance does not establish priority or absence of earlier equivalent rules."
+  },
+  "followupChecks": {
+    "matureTrajectoryScreen": {
+      "candidates": 180,
+      "interval": "generation60 to each candidate endpoint",
+      "parents": [
+        "HatA",
+        "HatB",
+        "HatC",
+        "SIMPLE",
+        "Spectre"
+      ],
+      "initialScreen": "all six bijective nonzero-state relabellings; independent verifier additionally checks non-injective projections"
+    },
+    "launchCheck": {
+      "subsets": 63,
+      "nearbyTwoCellPlacements": 318,
+      "finiteHorizon": 500,
+      "compactScreenRadius": 10,
+      "compactScreenMinimumDisplacement": 100,
+      "compactScreenMinimumDirectionality": 0.65,
+      "acceptedWithDuplicatesAcrossTheTwoSets": 49
+    },
+    "twoRowThresholdGrid": {
+      "trials": 2120,
+      "seedPlacements": 106,
+      "birthEmptyMinimum": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "promotionEmptyMinimum": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "maximumHorizon": 500
+    }
+  },
+  "finalRulesSHA256": "02d11966c7f2cec8aa47d28901e98f3e67d5526ddfe59ffdddfdf85faeffe070",
+  "sourceSHA256": {
+    "evolve-relay.cpp": "98d181f6724743d283f57122ed66582e806b83c6f5988280cc092e13ededb491",
+    "screen.js": "50c2d53f7dfc8db87efdde85848fa7fea881a5ac4e68b117b2f21496c948e773",
+    "reduce-candidate.js": "7c51bd5e8289a864bbf55884c1a71e2f1e3e19d23eed69c7a626edf1d25d0f4c",
+    "launch-check.js": "5b0da1266a6d4c1c78741822992eaefe6e27acc40920656f5352d3886f214945",
+    "minimal-relay.js": "d45d3eaa3b3c78acf5037e35efd2b831ab764de761d6d0723627dd08b69821b5",
+    "export-graphs.js": "3ac6080f3cb471162676a6cbadf092a6281e67075f3a800a4702e05be74e051e"
+  },
+  "independentNoveltyChecks": {
+    "wake": {
+      "matureContextComparisons": 54,
+      "nontrivialStateProjectionsChecked": 341,
+      "matchingPublishedProjections": 0,
+      "scope": "Compared against included published parents; not a proof of historical priority. Original seven-row and reduced four-row full trajectories agree through1049 generations after transplantation to depth6."
+    },
+    "relay": {
+      "matureInterval": [
+        60,
+        235
+      ],
+      "matureContextComparisons": 38,
+      "stateProjectionsChecked": 83,
+      "exactPublishedProjection": {
+        "parent": "Edmond Spectre",
+        "map": [
+          0,
+          3,
+          1
+        ]
+      },
+      "interpretation": "The selected mature flight is a relabelling of the published Spectre relay. This is a credited adaptation/transfer, not a distinct newly discovered mature mechanism; launch dynamics and the global rule differ."
+    }
+  }
+}

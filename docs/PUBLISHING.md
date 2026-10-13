@@ -125,7 +125,7 @@ Use [release operations](OPERATIONS.md) to rebuild and verify the standalone and
 For a clean repository ZIP, excluding Git internals and local build artefacts:
 
 ```bash
-python3 tools/export_repository.py --output ../aperiodic-life-source-3.7.2.zip
+python3 tools/export_repository.py --output ../aperiodic-life-source-3.7.3.zip
 ```
 
 To obtain release downloads from GitHub, manually run **Actions → CI → Run workflow**

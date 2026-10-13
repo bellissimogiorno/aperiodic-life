@@ -69,7 +69,7 @@ The contextual **?** buttons beside Tiling and Rule open the same in-app explana
 
 ### Named priority tables
 
-The hat presets select `TABLE:HAT-A`, `TABLE:HAT-B`, `TABLE:HAT-C` or `TABLE:HAT-SIMPLE`. They use ordered conditions on the numbers of neighbours in each state, including state 0. The first matching condition supplies the next state; otherwise the cell becomes zero. States above 1 are signals in these rules, not automatically ageing refractory cells. The state-count control is fixed at four for A/B/C and three for SIMPLE. The [Core API](CORE_API.md) lists the additional programmatic table names and their exact representation.
+The hat presets select `TABLE:HAT-A`, `TABLE:HAT-B`, `TABLE:HAT-C`, `TABLE:HAT-SIMPLE`, `TABLE:HAT-WAKE` or `TABLE:HAT-RELAY`. They use ordered conditions on the numbers of neighbours in each state, including state 0. The first matching condition supplies the next state; otherwise the cell becomes zero. States above 1 are signals in these rules, not automatically ageing refractory cells. The state-count control is fixed at four for A/B/C/WAKE and three for SIMPLE/RELAY. The [Core API](CORE_API.md) lists the additional programmatic table names and their exact representation.
 
 For `TABLE:HAT-SIMPLE`, a zero cell becomes 1 if it has at least one state-2 neighbour and at most one state-1 neighbour. A state-1 cell becomes 2 if it has a state-2 neighbour. Every other cell becomes zero. This is a derived rule: it agrees with relabelled Hat B on the checked flights, but is not equivalent on arbitrary configurations.
 

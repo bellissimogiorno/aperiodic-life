@@ -1,0 +1,2843 @@
+{
+  "replayedCandidates": 189,
+  "productionEndpointsAgree": true,
+  "candidatesWithLateHighCountActivity": 0,
+  "candidatesWithLateDifferencesFromB2": 0,
+  "records": [
+    {
+      "trial": 139,
+      "rule": "B29/S",
+      "generations": 8,
+      "screenedMobileCount": 8,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 149,
+      "rule": "B[2,10]/S",
+      "generations": 8,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 254,
+      "rule": "B28/S",
+      "generations": 7,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 257,
+      "rule": "B29/S",
+      "generations": 9,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 322,
+      "rule": "B[2,10]/S8",
+      "generations": 5,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 6,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 323,
+      "rule": "B[2,10]/S8",
+      "generations": 8,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 325,
+      "rule": "B[2,11]/S9",
+      "generations": 6,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 586,
+      "rule": "B28/S[10]",
+      "generations": 6,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 605,
+      "rule": "B[2,10]/S",
+      "generations": 8,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 611,
+      "rule": "B[2,10]/S",
+      "generations": 4,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 676,
+      "rule": "B[2,10]/S",
+      "generations": 5,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 722,
+      "rule": "B29/S8",
+      "generations": 7,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 2,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 774,
+      "rule": "B29/S",
+      "generations": 9,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 776,
+      "rule": "B[2,10]/S",
+      "generations": 5,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 778,
+      "rule": "B29/S9",
+      "generations": 6,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 800,
+      "rule": "B28/S",
+      "generations": 8,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 832,
+      "rule": "B29/S[10]",
+      "generations": 9,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 839,
+      "rule": "B[2,10]/S9",
+      "generations": 4,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 842,
+      "rule": "B[2,10]/S9",
+      "generations": 9,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 1,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 857,
+      "rule": "B[2,10]/S",
+      "generations": 9,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 884,
+      "rule": "B28/S",
+      "generations": 5,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 894,
+      "rule": "B29/S9",
+      "generations": 5,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 947,
+      "rule": "B[2,11]/S",
+      "generations": 5,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 989,
+      "rule": "B29/S",
+      "generations": 7,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1006,
+      "rule": "B28/S[10]",
+      "generations": 5,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1029,
+      "rule": "B[2,11]/S[10]",
+      "generations": 6,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1041,
+      "rule": "B29/S8",
+      "generations": 8,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1238,
+      "rule": "B[2,11]/S",
+      "generations": 6,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1242,
+      "rule": "B[2,11]/S9",
+      "generations": 9,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1272,
+      "rule": "B[2,11]/S",
+      "generations": 8,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1502,
+      "rule": "B28/S",
+      "generations": 7,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1511,
+      "rule": "B[2,10]/S[10]",
+      "generations": 4,
+      "screenedMobileCount": 7,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1640,
+      "rule": "B28/S8",
+      "generations": 6,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1725,
+      "rule": "B29/S8",
+      "generations": 7,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1744,
+      "rule": "B[2,11]/S8",
+      "generations": 5,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1790,
+      "rule": "B[2,11]/S[11]",
+      "generations": 8,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1831,
+      "rule": "B[2,11]/S8",
+      "generations": 7,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1904,
+      "rule": "B28/S",
+      "generations": 5,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1981,
+      "rule": "B29/S[11]",
+      "generations": 5,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 1990,
+      "rule": "B28/S9",
+      "generations": 9,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 3,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 2043,
+      "rule": "B[2,10]/S[11]",
+      "generations": 8,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 2096,
+      "rule": "B28/S8",
+      "generations": 7,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 2135,
+      "rule": "B[2,10]/S8",
+      "generations": 7,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 2287,
+      "rule": "B28/S",
+      "generations": 9,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 2318,
+      "rule": "B[2,10]/S8",
+      "generations": 7,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 2426,
+      "rule": "B29/S9",
+      "generations": 9,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 2646,
+      "rule": "B[2,10]/S9",
+      "generations": 4,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 2687,
+      "rule": "B[2,10]/S[11]",
+      "generations": 7,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 2704,
+      "rule": "B[2,11]/S",
+      "generations": 5,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 3042,
+      "rule": "B29/S",
+      "generations": 9,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 3179,
+      "rule": "B29/S",
+      "generations": 9,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 3382,
+      "rule": "B29/S8",
+      "generations": 4,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 3464,
+      "rule": "B[2,11]/S",
+      "generations": 6,
+      "screenedMobileCount": 7,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 3595,
+      "rule": "B[2,11]/S8",
+      "generations": 8,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 3628,
+      "rule": "B29/S",
+      "generations": 8,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 3734,
+      "rule": "B29/S8",
+      "generations": 5,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 3924,
+      "rule": "B[2,11]/S[10]",
+      "generations": 4,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 3965,
+      "rule": "B[2,11]/S8",
+      "generations": 9,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 3985,
+      "rule": "B29/S",
+      "generations": 7,
+      "screenedMobileCount": 8,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 4097,
+      "rule": "B[2,10]/S",
+      "generations": 5,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 4157,
+      "rule": "B[2,11]/S",
+      "generations": 8,
+      "screenedMobileCount": 9,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 4217,
+      "rule": "B[2,10]/S9",
+      "generations": 7,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 4234,
+      "rule": "B[2,11]/S8",
+      "generations": 9,
+      "screenedMobileCount": 9,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 4395,
+      "rule": "B[2,10]/S[10]",
+      "generations": 4,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 4563,
+      "rule": "B28/S[10]",
+      "generations": 8,
+      "screenedMobileCount": 7,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 4639,
+      "rule": "B[2,10]/S",
+      "generations": 4,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 4732,
+      "rule": "B[2,11]/S",
+      "generations": 8,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 4904,
+      "rule": "B[2,10]/S[10]",
+      "generations": 8,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 4908,
+      "rule": "B29/S",
+      "generations": 6,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 4991,
+      "rule": "B28/S[10]",
+      "generations": 7,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 5049,
+      "rule": "B[2,10]/S[10]",
+      "generations": 8,
+      "screenedMobileCount": 7,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 5496,
+      "rule": "B[2,11]/S",
+      "generations": 6,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 5557,
+      "rule": "B[2,10]/S",
+      "generations": 7,
+      "screenedMobileCount": 7,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 5606,
+      "rule": "B[2,10]/S[10]",
+      "generations": 8,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 5775,
+      "rule": "B[2,11]/S",
+      "generations": 5,
+      "screenedMobileCount": 8,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 5786,
+      "rule": "B[2,10]/S[11]",
+      "generations": 4,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 6251,
+      "rule": "B[2,11]/S[10]",
+      "generations": 7,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 6438,
+      "rule": "B28/S",
+      "generations": 4,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 6753,
+      "rule": "B28/S",
+      "generations": 5,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 6794,
+      "rule": "B[2,11]/S8",
+      "generations": 5,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 6870,
+      "rule": "B[2,10]/S",
+      "generations": 8,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 6971,
+      "rule": "B[2,10]/S8",
+      "generations": 7,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 7254,
+      "rule": "B[2,10]/S",
+      "generations": 9,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 7313,
+      "rule": "B29/S8",
+      "generations": 6,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 2,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 7411,
+      "rule": "B[2,11]/S",
+      "generations": 9,
+      "screenedMobileCount": 8,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 7775,
+      "rule": "B29/S",
+      "generations": 7,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 8132,
+      "rule": "B28/S",
+      "generations": 9,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 8193,
+      "rule": "B[2,10]/S",
+      "generations": 8,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 8574,
+      "rule": "B[2,11]/S[10]",
+      "generations": 7,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 9082,
+      "rule": "B28/S",
+      "generations": 6,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 9390,
+      "rule": "B28/S",
+      "generations": 5,
+      "screenedMobileCount": 6,
+      "allHighBirths": 1,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 9493,
+      "rule": "B[2,10]/S8",
+      "generations": 8,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 9564,
+      "rule": "B28/S8",
+      "generations": 5,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 9766,
+      "rule": "B[2,10]/S[11]",
+      "generations": 4,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 10428,
+      "rule": "B[2,11]/S",
+      "generations": 5,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 10911,
+      "rule": "B[2,10]/S[10]",
+      "generations": 7,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 11220,
+      "rule": "B[2,10]/S",
+      "generations": 5,
+      "screenedMobileCount": 7,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 11322,
+      "rule": "B[2,11]/S8",
+      "generations": 9,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 11354,
+      "rule": "B[2,11]/S8",
+      "generations": 8,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 11730,
+      "rule": "B29/S",
+      "generations": 5,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 11964,
+      "rule": "B[2,10]/S8",
+      "generations": 5,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 12234,
+      "rule": "B28/S",
+      "generations": 8,
+      "screenedMobileCount": 8,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 12319,
+      "rule": "B[2,11]/S",
+      "generations": 5,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 12335,
+      "rule": "B28/S[10]",
+      "generations": 4,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 12348,
+      "rule": "B29/S",
+      "generations": 8,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 12647,
+      "rule": "B[2,10]/S[10]",
+      "generations": 7,
+      "screenedMobileCount": 8,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 13442,
+      "rule": "B[2,10]/S",
+      "generations": 4,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 13563,
+      "rule": "B28/S",
+      "generations": 4,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 13619,
+      "rule": "B28/S",
+      "generations": 4,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 13782,
+      "rule": "B[2,11]/S",
+      "generations": 5,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 13797,
+      "rule": "B28/S",
+      "generations": 4,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 13798,
+      "rule": "B28/S8",
+      "generations": 5,
+      "screenedMobileCount": 7,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 13939,
+      "rule": "B29/S[11]",
+      "generations": 9,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 15369,
+      "rule": "B29/S",
+      "generations": 4,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 15436,
+      "rule": "B[2,11]/S",
+      "generations": 8,
+      "screenedMobileCount": 8,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 15805,
+      "rule": "B28/S",
+      "generations": 9,
+      "screenedMobileCount": 7,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 15890,
+      "rule": "B[2,10]/S",
+      "generations": 5,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 15907,
+      "rule": "B29/S",
+      "generations": 9,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 16394,
+      "rule": "B28/S",
+      "generations": 7,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 16843,
+      "rule": "B[2,10]/S",
+      "generations": 6,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 17337,
+      "rule": "B29/S[10]",
+      "generations": 5,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 17339,
+      "rule": "B[2,10]/S[10]",
+      "generations": 7,
+      "screenedMobileCount": 8,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 17668,
+      "rule": "B28/S[11]",
+      "generations": 8,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 17943,
+      "rule": "B[2,10]/S[11]",
+      "generations": 4,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 19298,
+      "rule": "B[2,10]/S8",
+      "generations": 7,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 19342,
+      "rule": "B[2,10]/S",
+      "generations": 9,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 19438,
+      "rule": "B28/S9",
+      "generations": 7,
+      "screenedMobileCount": 9,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 19683,
+      "rule": "B[2,10]/S9",
+      "generations": 5,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 20081,
+      "rule": "B29/S",
+      "generations": 4,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 20245,
+      "rule": "B[2,10]/S",
+      "generations": 6,
+      "screenedMobileCount": 10,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 20566,
+      "rule": "B29/S8",
+      "generations": 5,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 20654,
+      "rule": "B28/S9",
+      "generations": 4,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 20887,
+      "rule": "B29/S[10]",
+      "generations": 6,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 21467,
+      "rule": "B[2,10]/S",
+      "generations": 9,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 22552,
+      "rule": "B[2,10]/S",
+      "generations": 6,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 22603,
+      "rule": "B28/S[10]",
+      "generations": 6,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 22804,
+      "rule": "B[2,11]/S",
+      "generations": 7,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 24176,
+      "rule": "B28/S9",
+      "generations": 9,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 25136,
+      "rule": "B28/S[10]",
+      "generations": 8,
+      "screenedMobileCount": 8,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 25142,
+      "rule": "B[2,10]/S8",
+      "generations": 6,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 3,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 25652,
+      "rule": "B28/S",
+      "generations": 9,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 26176,
+      "rule": "B28/S",
+      "generations": 9,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 26896,
+      "rule": "B29/S",
+      "generations": 7,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 27764,
+      "rule": "B[2,10]/S",
+      "generations": 4,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 28123,
+      "rule": "B28/S",
+      "generations": 9,
+      "screenedMobileCount": 7,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 28697,
+      "rule": "B[2,10]/S",
+      "generations": 8,
+      "screenedMobileCount": 8,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 30079,
+      "rule": "B[2,10]/S[11]",
+      "generations": 7,
+      "screenedMobileCount": 3,
+      "allHighBirths": 1,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 30237,
+      "rule": "B[2,11]/S[11]",
+      "generations": 9,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 30778,
+      "rule": "B29/S[11]",
+      "generations": 9,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 30900,
+      "rule": "B[2,11]/S",
+      "generations": 5,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 30906,
+      "rule": "B[2,10]/S",
+      "generations": 9,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 31364,
+      "rule": "B[2,10]/S",
+      "generations": 5,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 31425,
+      "rule": "B28/S",
+      "generations": 5,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 31439,
+      "rule": "B[2,10]/S[11]",
+      "generations": 7,
+      "screenedMobileCount": 7,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 31527,
+      "rule": "B[2,11]/S[10]",
+      "generations": 6,
+      "screenedMobileCount": 7,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 31856,
+      "rule": "B28/S9",
+      "generations": 7,
+      "screenedMobileCount": 9,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 32069,
+      "rule": "B[2,10]/S[10]",
+      "generations": 5,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 32143,
+      "rule": "B28/S",
+      "generations": 9,
+      "screenedMobileCount": 8,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 33058,
+      "rule": "B[2,11]/S",
+      "generations": 5,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 33067,
+      "rule": "B[2,10]/S[11]",
+      "generations": 8,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 33373,
+      "rule": "B[2,11]/S8",
+      "generations": 7,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 34220,
+      "rule": "B29/S8",
+      "generations": 9,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 34472,
+      "rule": "B29/S[11]",
+      "generations": 8,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 34757,
+      "rule": "B[2,10]/S[11]",
+      "generations": 8,
+      "screenedMobileCount": 8,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 35301,
+      "rule": "B[2,10]/S8",
+      "generations": 5,
+      "screenedMobileCount": 11,
+      "allHighBirths": 0,
+      "allHighSurvivals": 6,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 35338,
+      "rule": "B[2,11]/S9",
+      "generations": 7,
+      "screenedMobileCount": 10,
+      "allHighBirths": 0,
+      "allHighSurvivals": 1,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 35670,
+      "rule": "B28/S",
+      "generations": 6,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 35698,
+      "rule": "B[2,11]/S9",
+      "generations": 8,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 35770,
+      "rule": "B[2,11]/S",
+      "generations": 6,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 36100,
+      "rule": "B28/S",
+      "generations": 9,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 36108,
+      "rule": "B29/S9",
+      "generations": 6,
+      "screenedMobileCount": 12,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 36150,
+      "rule": "B[2,11]/S",
+      "generations": 5,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 38222,
+      "rule": "B28/S",
+      "generations": 5,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 38490,
+      "rule": "B28/S",
+      "generations": 7,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 39420,
+      "rule": "B[2,11]/S",
+      "generations": 4,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 40746,
+      "rule": "B[2,10]/S[10]",
+      "generations": 6,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 41841,
+      "rule": "B28/S",
+      "generations": 9,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 44821,
+      "rule": "B29/S9",
+      "generations": 5,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 44934,
+      "rule": "B[2,10]/S",
+      "generations": 7,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 45022,
+      "rule": "B[2,10]/S8",
+      "generations": 6,
+      "screenedMobileCount": 9,
+      "allHighBirths": 0,
+      "allHighSurvivals": 1,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 45146,
+      "rule": "B29/S",
+      "generations": 9,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 45353,
+      "rule": "B28/S[11]",
+      "generations": 6,
+      "screenedMobileCount": 4,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 45365,
+      "rule": "B[2,11]/S",
+      "generations": 7,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 45441,
+      "rule": "B28/S",
+      "generations": 9,
+      "screenedMobileCount": 6,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 45721,
+      "rule": "B[2,10]/S8",
+      "generations": 6,
+      "screenedMobileCount": 5,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 46653,
+      "rule": "B[2,10]/S9",
+      "generations": 8,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 47188,
+      "rule": "B[2,11]/S",
+      "generations": 9,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 48854,
+      "rule": "B28/S9",
+      "generations": 6,
+      "screenedMobileCount": 3,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    },
+    {
+      "trial": 49280,
+      "rule": "B[2,11]/S[10]",
+      "generations": 8,
+      "screenedMobileCount": 2,
+      "allHighBirths": 0,
+      "allHighSurvivals": 0,
+      "lateInterval": [
+        90,
+        130
+      ],
+      "lateHighBirths": 0,
+      "lateHighSurvivals": 0,
+      "lateDifferencesFromB2": 0
+    }
+  ]
+}

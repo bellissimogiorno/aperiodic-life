@@ -12,7 +12,7 @@ Open [http://127.0.0.1:8000/index.html](http://127.0.0.1:8000/index.html). A Web
 
 ## Curated configurations
 
-The catalogue contains **81 configurations** covering classic square patterns, hexagonal benchmarks, aperiodic oscillators, compact travelling dynamics, long transients, and collective fields. Search by name, tiling, graph, rule, description, or credited author. A short provenance credit and source links appear beneath each selected example. The [complete credits](CATALOGUE_CREDITS.md) explain what is published, adapted, found by package searches, or constructed as a demonstration; local search provenance does not imply historical originality.
+The catalogue contains **89 configurations** covering classic square patterns, hexagonal benchmarks, aperiodic oscillators, compact travelling dynamics, long transients, and collective fields. Search by name, tiling, graph, rule, description, or credited author. A short provenance credit and source links appear beneath each selected example. The [complete credits](CATALOGUE_CREDITS.md) explain what is published, adapted, found by package searches, or constructed as a demonstration; local search provenance does not imply historical originality.
 
 - **Load** prepares the exact initial configuration and remains paused.
 - **Load & run** prepares the same configuration and immediately starts the simulation.

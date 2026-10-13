@@ -1,0 +1,49 @@
+{
+  "tiling": "penrose",
+  "patch": "sun",
+  "depth": 10,
+  "neighborhood": "touch",
+  "newCompletedTrials": 350000,
+  "newActualTransitions": 28171773,
+  "discoveryCampaigns": [
+    {
+      "file": "sun-connected.account.json",
+      "trials": 300000,
+      "actualTransitions": 25023752
+    },
+    {
+      "file": "touch-high-counts.account.json",
+      "trials": 50000,
+      "actualTransitions": 3148021
+    }
+  ],
+  "validationIsSeparateFromDiscoveryTrials": true,
+  "graphSha256": "f2babdd1706df93d2f53a4a5d28ce86c651ee87181bf01465171d028eebe7d0b",
+  "graphCells": 54560,
+  "highCountCandidateAudit": {
+    "retainedRecords": 189,
+    "allProductionEndpointsAgree": true,
+    "lateInterval": [
+      90,
+      130
+    ],
+    "recordsWithLateHighCountActivity": 0,
+    "recordsWithLateRuleDifferencesFromB2": 0
+  },
+  "selected": {
+    "id": "penrose-b2-c6-twelve-launcher",
+    "initialLiveCells": 3,
+    "independentBodies": 12,
+    "splitGeneration": 90,
+    "horizon": 130,
+    "minimumBoundaryDistance": 7,
+    "bodiesWithRadius3TranslatedReturn": 5
+  },
+  "normalisation": "Stored graph paths are portable basenames. Rule text is regenerated unambiguously from numeric birth/survival masks (counts 10 and 11 use bracket notation); original mining simulation used these masks. The final C++ output formatter has the same correction.",
+  "searchLimitations": [
+    "Screening uses a 64-bit repeated-state hash, with full-state production verification for the selected launcher.",
+    "Trials are executed samples and may repeat identical seeds; they are not counts of distinct configurations.",
+    "The retained elite audit is not an exhaustive nonexistence result.",
+    "Larger local transplants can change later behaviour because Penrose environments differ."
+  ]
+}

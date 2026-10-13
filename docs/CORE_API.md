@@ -81,14 +81,14 @@ A named table returns `{ kind: 'priority', text, name, states, rows, ignored: []
 
 ### `PRIORITY_RULES` and `priorityTransition(rule, own, counts)`
 
-The immutable registry provides `TABLE:HAT-A`, `TABLE:HAT-B`, `TABLE:HAT-C`, `TABLE:HAT-SIMPLE`, `TABLE:SPECTRE` and `TABLE:PENROSE-GOUCHER`. `priorityTransition` evaluates one cell from an already parsed table and an array of counts indexed by state. It does not inspect geometry or mutate its arguments.
+The immutable registry provides `TABLE:HAT-A`, `TABLE:HAT-B`, `TABLE:HAT-C`, `TABLE:HAT-SIMPLE`, `TABLE:HAT-WAKE`, `TABLE:HAT-RELAY`, `TABLE:SPECTRE` and `TABLE:PENROSE-GOUCHER`. `priorityTransition` evaluates one cell from an already parsed table and an array of counts indexed by state. It does not inspect geometry or mutate its arguments.
 
 ```js
 const rule = Core.parseRule('TABLE:HAT-SIMPLE');
 Core.priorityTransition(rule, 0, [5, 0, 1]); // 1
 ```
 
-The names identify rules, not geometry backends: `TABLE:SPECTRE` does not add a Spectre tiling to the app. Only the hat table presets are presented in the browser. The [source records](../research/fixtures/published-priority-rules.json) distinguish published rules from the derived three-state variant.
+The names identify rules, not geometry backends: `TABLE:SPECTRE` does not add a Spectre tiling to the app. Only the hat table presets are presented in the browser. The [published source records](../research/fixtures/published-priority-rules.json) and [continued-search report](CONTINUED_SEARCH.md) distinguish published rules, adaptations and the independently evolved wake rule.
 
 ### `formatRule(birth, survive)`
 

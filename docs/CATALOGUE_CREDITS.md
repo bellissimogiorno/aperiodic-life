@@ -13,11 +13,59 @@ Audit date: 13 October 2026. Generated from [catalogue-provenance.json](../resea
 | Classification | Examples |
 | --- | ---: |
 | Published example | 25 |
-| Adapted example | 3 |
-| Found by this package; priority unestablished | 49 |
+| Adapted example | 4 |
+| Found by this package; priority unestablished | 56 |
 | Constructed for this package | 4 |
 
 ## Einstein-hat examples
+
+### Hat wake traveller
+
+`hat-wake-traveller` · `TABLE:HAT-WAKE` · 4 states · edge-or-corner neighbourhood
+
+**Found by this package; priority unestablished.** Aperiodic Life search; published Hat glider framework credited to James Edmond
+
+Random-initialised evolutionary lineage, evaluation 358893, epoch 11. Four-row reduction preserves the recorded seven-row trajectory. The original six-cell launch supplies the larger-patch evidence; at generation 1000 it retains eight boundary rings. None of 341 tested nontrivial state projections reproduces its observed mature dynamics under the included reference tables. This is not a proof of a wholly new transport mechanism, historical priority or indefinite flight.
+
+Sources: [James Edmond’s Hat and Spectre paper](https://arxiv.org/abs/2609.22579); [Edmond’s Glider Compendium](https://github.com/jamesedmond/monotile-ca/blob/main/GLIDERS.md).
+
+Local evidence: [research/continued-search/hat-relay/campaigns.json](../research/continued-search/hat-relay/campaigns.json); [research/continued-search/hat-relay/final-rules.json](../research/continued-search/hat-relay/final-rules.json); [research/continued-search/verification/README.md](../research/continued-search/verification/README.md).
+
+### Hat two-row relay — Spectre variant
+
+`hat-two-row-relay` · `TABLE:HAT-RELAY` · 3 states · edge-or-corner neighbourhood
+
+**Adapted example.** Aperiodic Life variant of James Edmond’s Spectre relay
+
+The rule was reached by simplifying the independently evolved wake rule, but comparison identifies the mature generation 60–235 trajectory as Edmond’s published Spectre mechanism under [0,1,2] → [0,3,1]. The global guards and ignition differ. Credit for the reproduced travelling mechanism belongs to Edmond; this is not counted as another independent glider discovery.
+
+Sources: [James Edmond’s Hat and Spectre paper](https://arxiv.org/abs/2609.22579); [Edmond’s Glider Compendium](https://github.com/jamesedmond/monotile-ca/blob/main/GLIDERS.md).
+
+Local evidence: [research/continued-search/hat-relay/final-rules.json](../research/continued-search/hat-relay/final-rules.json); [research/continued-search/hat-relay/README.md](../research/continued-search/hat-relay/README.md); [research/continued-search/verification/README.md](../research/continued-search/verification/README.md).
+
+### Hat A six-way launcher
+
+`hat-edmond-a-six-way-launcher` · `TABLE:HAT-A` · 4 states · edge-or-corner neighbourhood
+
+**Found by this package; priority unestablished.** Aperiodic Life seed search under James Edmond’s published rule
+
+A connected six-cell seed found by this package launches six separated bodies under Edmond’s published Hat A table. Independent packet evolution reconstructs the complete state from generation 60 to 180. Every nontrivial seed bipartition diverges from the interacting launch; no smaller subset reaches the same checked outcome. The rule and glider mechanism are published; this is a newly catalogued finite launch configuration. Historical priority is unestablished.
+
+Sources: [James Edmond’s Hat and Spectre paper](https://arxiv.org/abs/2609.22579); [Edmond’s Glider Compendium](https://github.com/jamesedmond/monotile-ca/blob/main/GLIDERS.md).
+
+Local evidence: [research/continued-search/hat-emitters/README.md](../research/continued-search/hat-emitters/README.md); [research/continued-search/verification/README.md](../research/continued-search/verification/README.md); [research/continued-search/verification/hat-a-six-launcher-evidence.json](../research/continued-search/verification/hat-a-six-launcher-evidence.json).
+
+### Hat B recurring emitter — finite verification
+
+`hat-edmond-b-periodic-emitter` · `TABLE:HAT-B` · 4 states · edge-or-corner neighbourhood
+
+**Found by this package; priority unestablished.** Aperiodic Life seed search under James Edmond’s published rule
+
+A three-cell seed found by this package ignites a recurring source under Edmond’s unchanged Hat B table. The whole state at generation 30 is a 56-cell source: after 40 steps it returns with a 23-cell packet containing four travellers. Independent cohort reconstruction is checked at every source generation through 180 with seven boundary rings. Two pairs follow the same trajectories 20 steps apart. This establishes finite recurring emission, not a least period of 40 or perpetual operation. Credit for the rule and travelling mechanism belongs to Edmond; historical priority for this emitting configuration is unestablished.
+
+Sources: [James Edmond’s Hat and Spectre paper](https://arxiv.org/abs/2609.22579); [Edmond’s Glider Compendium](https://github.com/jamesedmond/monotile-ca/blob/main/GLIDERS.md).
+
+Local evidence: [research/continued-search/hat-emitters/README.md](../research/continued-search/hat-emitters/README.md); [research/continued-search/verification/README.md](../research/continued-search/verification/README.md); [research/continued-search/verification/hat-emitter-independent.json](../research/continued-search/verification/hat-emitter-independent.json); [research/continued-search/verification/verify-hat-emitter.js](../research/continued-search/verification/verify-hat-emitter.js).
 
 ### Hat glider B — Edmond rule
 
@@ -210,6 +258,16 @@ A reproducible pseudorandom field constructed for the package’s rule survey, u
 Local evidence: [discoveries.js](../discoveries.js); [research/fixtures/catalogue-verification.json](../research/fixtures/catalogue-verification.json); [research/verify-catalog.js](../research/verify-catalog.js); [research/survey-fields.js](../research/survey-fields.js).
 
 ## Penrose examples
+
+### Penrose twelve-traveller launcher
+
+`penrose-b2-c6-twelve-launcher` · `B2/S` · 6 states · edge-or-corner neighbourhood
+
+**Found by this package; priority unestablished.** Aperiodic Life seed search in the existing B2/S traveller family
+
+Three live cells selected by the connected/phased-seed campaign launch twelve independent compact bodies from generation 90 to 130, with seven boundary rings. All twelve have translated full-state and polygon returns, while five have radius-three halo returns within that horizon. All six nonempty proper seed subsets differ at generation 130. This is a finite launcher using an established package propagation family, not a new glider mechanism or repeating gun. Larger locally matching placements need not preserve this outcome. Historical priority is unestablished.
+
+Local evidence: [research/continued-search/penrose/campaigns.json](../research/continued-search/penrose/campaigns.json); [research/continued-search/penrose/twelve-launcher-evidence.json](../research/continued-search/penrose/twelve-launcher-evidence.json); [research/continued-search/penrose/verify-twelve.js](../research/continued-search/penrose/verify-twelve.js).
 
 ### Penrose five-traveller launcher
 
@@ -442,6 +500,36 @@ Sources: [CelLab documentation: Brian Silverman's Brain rule](https://www.fourmi
 Local evidence: [research/fixtures/catalogue-verification.json](../research/fixtures/catalogue-verification.json); [research/survey-fields.js](../research/survey-fields.js); [docs/RULE_SURVEY.md](../docs/RULE_SURVEY.md).
 
 ## Hexagonal examples
+
+### Hexagonal p6 single-cell-trail puffer
+
+`hex-b245s02-c5-p6-puffer` · `B245/S02` · 5 states · shared-edge neighbourhood
+
+**Found by this package; priority unestablished.** Found and independently verified in this package’s bounded search; discovery priority has not been established.
+
+A moving head extracted from the three-cell mixed-state seed. Its complete period-6 recurrence and permanent separation from every deposit are certified. B5 is unused in flight; the three-cell launch uses B5 twice. This is a newly verified package example, not a claim of first discovery.
+
+Local evidence: [research/continued-search/hex/campaigns.json](../research/continued-search/hex/campaigns.json); [research/continued-search/hex/selected-evidence.json](../research/continued-search/hex/selected-evidence.json).
+
+### Hexagonal three-cell twin-puffer launcher
+
+`hex-b245s02-c5-three-cell-twin-puffer-launcher` · `B245/S02` · 5 states · shared-edge neighbourhood
+
+**Found by this package; priority unestablished.** Found and independently verified in this package’s bounded search; discovery priority has not been established.
+
+Mixed-state exhaustive campaign, seed mixed-n3-c5-s10. Complete replay gives two opposite certified p6 puffers and four stationary live cells at generation 30. This is a finite launch, not a stationary gun. A related four-live-cell seed had remained unclassified in the earlier exhaustive campaign; priority outside this package is unestablished.
+
+Local evidence: [research/continued-search/hex/campaigns.json](../research/continued-search/hex/campaigns.json); [research/continued-search/hex/selected-evidence.json](../research/continued-search/hex/selected-evidence.json).
+
+### Hexagonal p48 long-cycle spaceship
+
+`hex-b2345s24-c4-p48-traveller` · `B2345/S24` · 4 states · shared-edge neighbourhood
+
+**Found by this package; priority unestablished.** Found and independently verified in this package’s bounded search; discovery priority has not been established.
+
+Seven-cell exhaustive campaign, seed n7c4s245: seven live cells settle after 16 generations into this exact period-48 ship. The displayed recurrent phase was centred for viewing. Full D6/phase comparison finds no match in the preceding 33-entry hexagonal catalogue. Independent decomposition at every phase confirms one persistent body with short-lived sparks, rather than a convoy of independently recurring ships. No worldwide priority claim is made.
+
+Local evidence: [research/continued-search/hex/campaigns.json](../research/continued-search/hex/campaigns.json); [research/continued-search/hex/selected-evidence.json](../research/continued-search/hex/selected-evidence.json).
 
 ### Hexagonal three-cell glider
 

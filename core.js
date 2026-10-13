@@ -1548,9 +1548,9 @@
     return `B${formatCountList(births)}/S${formatCountList(survivals)}`;
   }
 
-  // Published semi-totalistic rules: all neighbour states are visible. The
-  // mathematical tables are independently transcribed; source records and
-  // attribution are in research/fixtures/published-priority-rules.json.
+  // Named semi-totalistic rules: all neighbour states are visible. Published
+  // tables are independently transcribed in the source fixture; the separately
+  // searched Hat rules and their finite evidence are described in GLIDER_SEARCH.
   // Each row is [own state (null means any), [[state, minimum count], ...], next].
   function priorityDefinition(states, name, rows) {
     return Object.freeze({
@@ -1591,6 +1591,20 @@
       [0, [[1, 2]], 0],
       [0, [[2, 1]], 1],
       [1, [[2, 1]], 2],
+    ]),
+    // Reduced from a random-initialised rule-search lineage. All four rows
+    // affect its checked complete trajectory; perpetual travel is not proved.
+    'TABLE:HAT-WAKE': priorityDefinition(4, 'Hat wake traveller', [
+      [1, [[0, 3], [2, 1]], 2],
+      [0, [[0, 4], [2, 1]], 1],
+      [1, [[0, 4]], 3],
+      [0, [[1, 1], [2, 1]], 3],
+    ]),
+    // Removing the wake changes the anatomy. The selected mature flight is a
+    // state relabelling of the published Spectre relay; ignition can differ.
+    'TABLE:HAT-RELAY': priorityDefinition(3, 'Hat two-row relay — Spectre variant', [
+      [1, [[2, 1]], 2],
+      [0, [[0, 4], [2, 1]], 1],
     ]),
     'TABLE:SPECTRE': priorityDefinition(4, 'Edmond Spectre relay', [
       [0, [[0, 3], [1, 1]], 3],

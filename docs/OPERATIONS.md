@@ -39,7 +39,7 @@ The browser harness tests application interactions over local HTTP and opens the
 
 ## Build release files
 
-Keep `VERSION` and `tools/package.py` aligned at `3.7.2`. Run the tests above, then:
+Keep `VERSION` and `tools/package.py` aligned at `3.7.3`. Run the tests above, then:
 
 ```bash
 python3 tools/package.py --output-dir ../aperiodic-life-release
@@ -49,17 +49,17 @@ The output directory must be new or empty and outside the source tree. Existing 
 
 | File | Contents |
 |---|---|
-| `aperiodic-life-3.7.2.html` | The complete offline application, including licence notices |
-| `aperiodic-life-source-3.7.2.zip` | Source, tests, documentation, current research fixtures and GitHub configuration, under one `aperiodic-life/` directory |
-| `aperiodic-life-source-3.7.2.manifest.json` | Every archived source path, SHA-256 digest, byte size and file mode |
-| `aperiodic-life-3.7.2.sha256` | SHA-256 checksums for the other three release files |
+| `aperiodic-life-3.7.3.html` | The complete offline application, including licence notices |
+| `aperiodic-life-source-3.7.3.zip` | Source, tests, documentation, current research fixtures and GitHub configuration, under one `aperiodic-life/` directory |
+| `aperiodic-life-source-3.7.3.manifest.json` | Every archived source path, SHA-256 digest, byte size and file mode |
+| `aperiodic-life-3.7.3.sha256` | SHA-256 checksums for the other three release files |
 
 The ZIP has sorted paths, fixed timestamps and explicit file modes. Two builds from unchanged source produce identical files with the same Python compression implementation. The packager checks ZIP paths, file types, CRCs and the complete manifest before publishing its local output. It excludes VCS internals, dependency environments, local configuration, caches and common build directories. Ordinary source symlinks are rejected.
 
 Verify downloaded files from their containing directory with:
 
 ```bash
-sha256sum --check aperiodic-life-3.7.2.sha256
+sha256sum --check aperiodic-life-3.7.3.sha256
 ```
 
 For a release check, extract the source ZIP into a new directory, run the standard and topology profiles there, and test the standalone in the target browser. Keep the source ZIP, manifest and checksum file alongside the standalone when distributing it.
@@ -69,7 +69,7 @@ For a release check, extract the source ZIP into a new directory, run the standa
 To produce only the source archive:
 
 ```bash
-python3 tools/export_repository.py --output ../aperiodic-life-source-3.7.2.zip
+python3 tools/export_repository.py --output ../aperiodic-life-source-3.7.3.zip
 ```
 
 The exporter checks required repository files and standalone freshness. Its archive contents match the source ZIP from the release packager. The destination must be outside the source tree and must not already exist. A different `.zip` filename may be supplied when needed.

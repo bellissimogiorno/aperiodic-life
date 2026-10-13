@@ -1,0 +1,4316 @@
+[
+  {
+    "kind": "candidate",
+    "evaluation": 358893,
+    "epoch": 11,
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "lineage": "random",
+    "rows": [
+      {
+        "own": 1,
+        "counts": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 2
+      },
+      {
+        "own": 0,
+        "counts": [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 1
+      },
+      {
+        "own": 1,
+        "counts": [
+          [
+            0,
+            4
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 2,
+        "counts": [
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 3,
+        "counts": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "next": 1
+      },
+      {
+        "own": 3,
+        "counts": [
+          [
+            2,
+            2
+          ]
+        ],
+        "next": 0
+      },
+      {
+        "own": 0,
+        "counts": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 3
+      }
+    ],
+    "default": 0,
+    "cellStates": [
+      [
+        7392,
+        2
+      ],
+      [
+        7396,
+        1
+      ],
+      [
+        7307,
+        3
+      ],
+      [
+        2948,
+        1
+      ],
+      [
+        2955,
+        1
+      ],
+      [
+        2952,
+        1
+      ]
+    ],
+    "score": 4385.79,
+    "steps": 293,
+    "outcome": "boundary",
+    "displacement": 315.733,
+    "maximumRadius": 4.6378,
+    "peakPopulation": 9,
+    "minimumCruisePopulation": 4,
+    "directionality": 0.784873,
+    "lateProgress": 42.8162,
+    "minimumBoundary": 4,
+    "territory": 724,
+    "usedRowsMask": 103,
+    "stateSumsAfter30": [
+      674,
+      284,
+      654
+    ],
+    "comparisonStart": 60,
+    "knownMatureMechanisms": [],
+    "comparisonFirstMismatches": [
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      }
+    ],
+    "maxMatureComponents": 1,
+    "stateSumsAfter60": [
+      0,
+      597,
+      250,
+      580
+    ],
+    "checkpoints": [
+      {
+        "generation": 0,
+        "cellStates": [
+          [
+            7392,
+            2
+          ],
+          [
+            7396,
+            1
+          ],
+          [
+            7307,
+            3
+          ],
+          [
+            2948,
+            1
+          ],
+          [
+            2955,
+            1
+          ],
+          [
+            2952,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 30,
+        "cellStates": [
+          [
+            22905,
+            3
+          ],
+          [
+            7697,
+            2
+          ],
+          [
+            7699,
+            1
+          ],
+          [
+            7701,
+            1
+          ],
+          [
+            22911,
+            3
+          ],
+          [
+            7702,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 60,
+        "cellStates": [
+          [
+            17955,
+            3
+          ],
+          [
+            17961,
+            2
+          ],
+          [
+            17957,
+            3
+          ],
+          [
+            17334,
+            1
+          ],
+          [
+            17331,
+            1
+          ],
+          [
+            17504,
+            1
+          ],
+          [
+            17960,
+            3
+          ],
+          [
+            17329,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 100,
+        "cellStates": [
+          [
+            17600,
+            3
+          ],
+          [
+            19461,
+            2
+          ],
+          [
+            17626,
+            3
+          ],
+          [
+            17633,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 160,
+        "cellStates": [
+          [
+            16434,
+            3
+          ],
+          [
+            16449,
+            2
+          ],
+          [
+            16436,
+            3
+          ],
+          [
+            16461,
+            1
+          ],
+          [
+            16448,
+            3
+          ],
+          [
+            16457,
+            1
+          ],
+          [
+            16459,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 250,
+        "cellStates": [
+          [
+            51989,
+            3
+          ],
+          [
+            52070,
+            2
+          ],
+          [
+            51995,
+            3
+          ],
+          [
+            52072,
+            1
+          ],
+          [
+            52074,
+            1
+          ],
+          [
+            52075,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 293,
+        "cellStates": [
+          [
+            53079,
+            3
+          ],
+          [
+            53082,
+            2
+          ],
+          [
+            53080,
+            2
+          ],
+          [
+            52984,
+            1
+          ],
+          [
+            53065,
+            1
+          ],
+          [
+            53084,
+            3
+          ]
+        ]
+      }
+    ],
+    "finalCellStates": [
+      [
+        53079,
+        3
+      ],
+      [
+        53082,
+        2
+      ],
+      [
+        53080,
+        2
+      ],
+      [
+        52984,
+        1
+      ],
+      [
+        53065,
+        1
+      ],
+      [
+        53084,
+        3
+      ]
+    ]
+  },
+  {
+    "kind": "candidate",
+    "evaluation": 358807,
+    "epoch": 11,
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "lineage": "random",
+    "rows": [
+      {
+        "own": 1,
+        "counts": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 2
+      },
+      {
+        "own": 0,
+        "counts": [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 1
+      },
+      {
+        "own": 1,
+        "counts": [
+          [
+            0,
+            4
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 2,
+        "counts": [
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 3,
+        "counts": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "next": 1
+      },
+      {
+        "own": 3,
+        "counts": [
+          [
+            2,
+            2
+          ]
+        ],
+        "next": 0
+      },
+      {
+        "own": 0,
+        "counts": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 1,
+        "counts": [
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 1
+      }
+    ],
+    "default": 0,
+    "cellStates": [
+      [
+        7392,
+        2
+      ],
+      [
+        7396,
+        1
+      ],
+      [
+        7307,
+        3
+      ],
+      [
+        2948,
+        1
+      ],
+      [
+        2955,
+        3
+      ],
+      [
+        2952,
+        1
+      ]
+    ],
+    "score": 4385.58,
+    "steps": 293,
+    "outcome": "boundary",
+    "displacement": 315.733,
+    "maximumRadius": 4.68307,
+    "peakPopulation": 8,
+    "minimumCruisePopulation": 4,
+    "directionality": 0.78412,
+    "lateProgress": 42.8162,
+    "minimumBoundary": 4,
+    "territory": 724,
+    "usedRowsMask": 103,
+    "stateSumsAfter30": [
+      674,
+      284,
+      654
+    ],
+    "comparisonStart": 60,
+    "knownMatureMechanisms": [],
+    "comparisonFirstMismatches": [
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      }
+    ],
+    "maxMatureComponents": 1,
+    "stateSumsAfter60": [
+      0,
+      597,
+      250,
+      580
+    ],
+    "checkpoints": [
+      {
+        "generation": 0,
+        "cellStates": [
+          [
+            7392,
+            2
+          ],
+          [
+            7396,
+            1
+          ],
+          [
+            7307,
+            3
+          ],
+          [
+            2948,
+            1
+          ],
+          [
+            2955,
+            3
+          ],
+          [
+            2952,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 30,
+        "cellStates": [
+          [
+            22905,
+            3
+          ],
+          [
+            7697,
+            2
+          ],
+          [
+            7699,
+            1
+          ],
+          [
+            7701,
+            1
+          ],
+          [
+            22911,
+            3
+          ],
+          [
+            7702,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 60,
+        "cellStates": [
+          [
+            17955,
+            3
+          ],
+          [
+            17961,
+            2
+          ],
+          [
+            17957,
+            3
+          ],
+          [
+            17334,
+            1
+          ],
+          [
+            17331,
+            1
+          ],
+          [
+            17504,
+            1
+          ],
+          [
+            17960,
+            3
+          ],
+          [
+            17329,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 100,
+        "cellStates": [
+          [
+            17600,
+            3
+          ],
+          [
+            19461,
+            2
+          ],
+          [
+            17626,
+            3
+          ],
+          [
+            17633,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 160,
+        "cellStates": [
+          [
+            16434,
+            3
+          ],
+          [
+            16449,
+            2
+          ],
+          [
+            16436,
+            3
+          ],
+          [
+            16461,
+            1
+          ],
+          [
+            16448,
+            3
+          ],
+          [
+            16457,
+            1
+          ],
+          [
+            16459,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 250,
+        "cellStates": [
+          [
+            51989,
+            3
+          ],
+          [
+            52070,
+            2
+          ],
+          [
+            51995,
+            3
+          ],
+          [
+            52072,
+            1
+          ],
+          [
+            52074,
+            1
+          ],
+          [
+            52075,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 293,
+        "cellStates": [
+          [
+            53079,
+            3
+          ],
+          [
+            53082,
+            2
+          ],
+          [
+            53080,
+            2
+          ],
+          [
+            52984,
+            1
+          ],
+          [
+            53065,
+            1
+          ],
+          [
+            53084,
+            3
+          ]
+        ]
+      }
+    ],
+    "finalCellStates": [
+      [
+        53079,
+        3
+      ],
+      [
+        53082,
+        2
+      ],
+      [
+        53080,
+        2
+      ],
+      [
+        52984,
+        1
+      ],
+      [
+        53065,
+        1
+      ],
+      [
+        53084,
+        3
+      ]
+    ]
+  },
+  {
+    "kind": "candidate",
+    "evaluation": 358827,
+    "epoch": 11,
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "lineage": "random",
+    "rows": [
+      {
+        "own": 1,
+        "counts": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 2
+      },
+      {
+        "own": -1,
+        "counts": [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 1
+      },
+      {
+        "own": 1,
+        "counts": [
+          [
+            0,
+            4
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 3,
+        "counts": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "next": 1
+      },
+      {
+        "own": 2,
+        "counts": [
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 3,
+        "counts": [
+          [
+            2,
+            2
+          ]
+        ],
+        "next": 0
+      },
+      {
+        "own": 0,
+        "counts": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 1,
+        "counts": [
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 1
+      }
+    ],
+    "default": 0,
+    "cellStates": [
+      [
+        7392,
+        2
+      ],
+      [
+        7396,
+        1
+      ],
+      [
+        7307,
+        3
+      ],
+      [
+        2948,
+        1
+      ],
+      [
+        2955,
+        3
+      ],
+      [
+        2952,
+        1
+      ]
+    ],
+    "score": 4371.26,
+    "steps": 293,
+    "outcome": "boundary",
+    "displacement": 314.887,
+    "maximumRadius": 4.84964,
+    "peakPopulation": 10,
+    "minimumCruisePopulation": 4,
+    "directionality": 0.781451,
+    "lateProgress": 41.9706,
+    "minimumBoundary": 4,
+    "territory": 724,
+    "usedRowsMask": 103,
+    "stateSumsAfter30": [
+      894,
+      284,
+      807
+    ],
+    "comparisonStart": 60,
+    "knownMatureMechanisms": [],
+    "comparisonFirstMismatches": [
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      }
+    ],
+    "maxMatureComponents": 1,
+    "stateSumsAfter60": [
+      0,
+      790,
+      250,
+      714
+    ],
+    "checkpoints": [
+      {
+        "generation": 0,
+        "cellStates": [
+          [
+            7392,
+            2
+          ],
+          [
+            7396,
+            1
+          ],
+          [
+            7307,
+            3
+          ],
+          [
+            2948,
+            1
+          ],
+          [
+            2955,
+            3
+          ],
+          [
+            2952,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 30,
+        "cellStates": [
+          [
+            22882,
+            1
+          ],
+          [
+            22905,
+            3
+          ],
+          [
+            7697,
+            2
+          ],
+          [
+            7699,
+            1
+          ],
+          [
+            7701,
+            1
+          ],
+          [
+            22911,
+            3
+          ],
+          [
+            7702,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 60,
+        "cellStates": [
+          [
+            17955,
+            3
+          ],
+          [
+            17328,
+            1
+          ],
+          [
+            17961,
+            2
+          ],
+          [
+            17957,
+            3
+          ],
+          [
+            17334,
+            1
+          ],
+          [
+            17331,
+            1
+          ],
+          [
+            17504,
+            1
+          ],
+          [
+            17960,
+            3
+          ],
+          [
+            17329,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 100,
+        "cellStates": [
+          [
+            17585,
+            3
+          ],
+          [
+            17603,
+            3
+          ],
+          [
+            17600,
+            3
+          ],
+          [
+            19461,
+            2
+          ],
+          [
+            17626,
+            3
+          ],
+          [
+            17633,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 160,
+        "cellStates": [
+          [
+            16315,
+            3
+          ],
+          [
+            16464,
+            1
+          ],
+          [
+            16468,
+            3
+          ],
+          [
+            16449,
+            2
+          ],
+          [
+            16436,
+            3
+          ],
+          [
+            16448,
+            3
+          ],
+          [
+            16461,
+            1
+          ],
+          [
+            16457,
+            1
+          ],
+          [
+            16459,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 250,
+        "cellStates": [
+          [
+            52085,
+            1
+          ],
+          [
+            51989,
+            3
+          ],
+          [
+            52070,
+            2
+          ],
+          [
+            51995,
+            3
+          ],
+          [
+            52072,
+            1
+          ],
+          [
+            52074,
+            1
+          ],
+          [
+            52075,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 293,
+        "cellStates": [
+          [
+            52997,
+            3
+          ],
+          [
+            52986,
+            1
+          ],
+          [
+            53079,
+            3
+          ],
+          [
+            52991,
+            1
+          ],
+          [
+            53082,
+            2
+          ],
+          [
+            53080,
+            2
+          ],
+          [
+            53084,
+            3
+          ],
+          [
+            52984,
+            1
+          ],
+          [
+            53065,
+            1
+          ]
+        ]
+      }
+    ],
+    "finalCellStates": [
+      [
+        52997,
+        3
+      ],
+      [
+        52986,
+        1
+      ],
+      [
+        53079,
+        3
+      ],
+      [
+        52991,
+        1
+      ],
+      [
+        53082,
+        2
+      ],
+      [
+        53080,
+        2
+      ],
+      [
+        53084,
+        3
+      ],
+      [
+        52984,
+        1
+      ],
+      [
+        53065,
+        1
+      ]
+    ]
+  },
+  {
+    "kind": "candidate",
+    "evaluation": 358867,
+    "epoch": 11,
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "lineage": "random",
+    "rows": [
+      {
+        "own": 1,
+        "counts": [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "next": 0
+      },
+      {
+        "own": 1,
+        "counts": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 2
+      },
+      {
+        "own": 0,
+        "counts": [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 1
+      },
+      {
+        "own": 1,
+        "counts": [
+          [
+            0,
+            4
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 2,
+        "counts": [
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 3,
+        "counts": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "next": 1
+      },
+      {
+        "own": 3,
+        "counts": [
+          [
+            2,
+            2
+          ]
+        ],
+        "next": 0
+      },
+      {
+        "own": 0,
+        "counts": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 1,
+        "counts": [
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 1
+      }
+    ],
+    "default": 0,
+    "cellStates": [
+      [
+        7392,
+        2
+      ],
+      [
+        7396,
+        1
+      ],
+      [
+        2948,
+        1
+      ],
+      [
+        2955,
+        3
+      ],
+      [
+        2952,
+        1
+      ]
+    ],
+    "score": 4368.95,
+    "steps": 293,
+    "outcome": "boundary",
+    "displacement": 315.729,
+    "maximumRadius": 6.69916,
+    "peakPopulation": 11,
+    "minimumCruisePopulation": 4,
+    "directionality": 0.77795,
+    "lateProgress": 42.8152,
+    "minimumBoundary": 4,
+    "territory": 726,
+    "usedRowsMask": 207,
+    "stateSumsAfter30": [
+      674,
+      284,
+      654
+    ],
+    "comparisonStart": 60,
+    "knownMatureMechanisms": [],
+    "comparisonFirstMismatches": [
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      }
+    ],
+    "maxMatureComponents": 1,
+    "stateSumsAfter60": [
+      0,
+      597,
+      250,
+      580
+    ],
+    "checkpoints": [
+      {
+        "generation": 0,
+        "cellStates": [
+          [
+            7392,
+            2
+          ],
+          [
+            7396,
+            1
+          ],
+          [
+            2948,
+            1
+          ],
+          [
+            2955,
+            3
+          ],
+          [
+            2952,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 30,
+        "cellStates": [
+          [
+            22905,
+            3
+          ],
+          [
+            7697,
+            2
+          ],
+          [
+            7699,
+            1
+          ],
+          [
+            7701,
+            1
+          ],
+          [
+            22911,
+            3
+          ],
+          [
+            7702,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 60,
+        "cellStates": [
+          [
+            17955,
+            3
+          ],
+          [
+            17961,
+            2
+          ],
+          [
+            17957,
+            3
+          ],
+          [
+            17334,
+            1
+          ],
+          [
+            17331,
+            1
+          ],
+          [
+            17504,
+            1
+          ],
+          [
+            17960,
+            3
+          ],
+          [
+            17329,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 100,
+        "cellStates": [
+          [
+            17600,
+            3
+          ],
+          [
+            19461,
+            2
+          ],
+          [
+            17626,
+            3
+          ],
+          [
+            17633,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 160,
+        "cellStates": [
+          [
+            16434,
+            3
+          ],
+          [
+            16449,
+            2
+          ],
+          [
+            16436,
+            3
+          ],
+          [
+            16461,
+            1
+          ],
+          [
+            16448,
+            3
+          ],
+          [
+            16457,
+            1
+          ],
+          [
+            16459,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 250,
+        "cellStates": [
+          [
+            51989,
+            3
+          ],
+          [
+            52070,
+            2
+          ],
+          [
+            51995,
+            3
+          ],
+          [
+            52072,
+            1
+          ],
+          [
+            52074,
+            1
+          ],
+          [
+            52075,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 293,
+        "cellStates": [
+          [
+            53079,
+            3
+          ],
+          [
+            53082,
+            2
+          ],
+          [
+            53080,
+            2
+          ],
+          [
+            52984,
+            1
+          ],
+          [
+            53065,
+            1
+          ],
+          [
+            53084,
+            3
+          ]
+        ]
+      }
+    ],
+    "finalCellStates": [
+      [
+        53079,
+        3
+      ],
+      [
+        53082,
+        2
+      ],
+      [
+        53080,
+        2
+      ],
+      [
+        52984,
+        1
+      ],
+      [
+        53065,
+        1
+      ],
+      [
+        53084,
+        3
+      ]
+    ]
+  },
+  {
+    "kind": "candidate",
+    "evaluation": 358930,
+    "epoch": 11,
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "lineage": "random",
+    "rows": [
+      {
+        "own": 1,
+        "counts": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 2
+      },
+      {
+        "own": 0,
+        "counts": [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 1
+      },
+      {
+        "own": 1,
+        "counts": [
+          [
+            0,
+            4
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 2,
+        "counts": [
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 3,
+        "counts": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "next": 1
+      },
+      {
+        "own": 3,
+        "counts": [
+          [
+            2,
+            2
+          ]
+        ],
+        "next": 0
+      },
+      {
+        "own": 1,
+        "counts": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "next": 2
+      },
+      {
+        "own": 0,
+        "counts": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 1,
+        "counts": [
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 1
+      }
+    ],
+    "default": 0,
+    "cellStates": [
+      [
+        7392,
+        2
+      ],
+      [
+        7396,
+        1
+      ],
+      [
+        2948,
+        1
+      ],
+      [
+        2955,
+        3
+      ],
+      [
+        2952,
+        1
+      ]
+    ],
+    "score": 4368.63,
+    "steps": 293,
+    "outcome": "boundary",
+    "displacement": 315.729,
+    "maximumRadius": 6.70189,
+    "peakPopulation": 13,
+    "minimumCruisePopulation": 4,
+    "directionality": 0.777077,
+    "lateProgress": 42.8152,
+    "minimumBoundary": 4,
+    "territory": 728,
+    "usedRowsMask": 167,
+    "stateSumsAfter30": [
+      674,
+      284,
+      654
+    ],
+    "comparisonStart": 60,
+    "knownMatureMechanisms": [],
+    "comparisonFirstMismatches": [
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      }
+    ],
+    "maxMatureComponents": 1,
+    "stateSumsAfter60": [
+      0,
+      597,
+      250,
+      580
+    ],
+    "checkpoints": [
+      {
+        "generation": 0,
+        "cellStates": [
+          [
+            7392,
+            2
+          ],
+          [
+            7396,
+            1
+          ],
+          [
+            2948,
+            1
+          ],
+          [
+            2955,
+            3
+          ],
+          [
+            2952,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 30,
+        "cellStates": [
+          [
+            22905,
+            3
+          ],
+          [
+            7697,
+            2
+          ],
+          [
+            7699,
+            1
+          ],
+          [
+            7701,
+            1
+          ],
+          [
+            22911,
+            3
+          ],
+          [
+            7702,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 60,
+        "cellStates": [
+          [
+            17955,
+            3
+          ],
+          [
+            17961,
+            2
+          ],
+          [
+            17957,
+            3
+          ],
+          [
+            17334,
+            1
+          ],
+          [
+            17331,
+            1
+          ],
+          [
+            17504,
+            1
+          ],
+          [
+            17960,
+            3
+          ],
+          [
+            17329,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 100,
+        "cellStates": [
+          [
+            17600,
+            3
+          ],
+          [
+            19461,
+            2
+          ],
+          [
+            17626,
+            3
+          ],
+          [
+            17633,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 160,
+        "cellStates": [
+          [
+            16434,
+            3
+          ],
+          [
+            16449,
+            2
+          ],
+          [
+            16436,
+            3
+          ],
+          [
+            16461,
+            1
+          ],
+          [
+            16448,
+            3
+          ],
+          [
+            16457,
+            1
+          ],
+          [
+            16459,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 250,
+        "cellStates": [
+          [
+            51989,
+            3
+          ],
+          [
+            52070,
+            2
+          ],
+          [
+            51995,
+            3
+          ],
+          [
+            52072,
+            1
+          ],
+          [
+            52074,
+            1
+          ],
+          [
+            52075,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 293,
+        "cellStates": [
+          [
+            53079,
+            3
+          ],
+          [
+            53082,
+            2
+          ],
+          [
+            53080,
+            2
+          ],
+          [
+            52984,
+            1
+          ],
+          [
+            53065,
+            1
+          ],
+          [
+            53084,
+            3
+          ]
+        ]
+      }
+    ],
+    "finalCellStates": [
+      [
+        53079,
+        3
+      ],
+      [
+        53082,
+        2
+      ],
+      [
+        53080,
+        2
+      ],
+      [
+        52984,
+        1
+      ],
+      [
+        53065,
+        1
+      ],
+      [
+        53084,
+        3
+      ]
+    ]
+  },
+  {
+    "kind": "candidate",
+    "evaluation": 359213,
+    "epoch": 11,
+    "tiling": "hat",
+    "depth": 5,
+    "neighborhood": "touch",
+    "lineage": "random",
+    "rows": [
+      {
+        "own": 1,
+        "counts": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 2
+      },
+      {
+        "own": -1,
+        "counts": [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 1
+      },
+      {
+        "own": 1,
+        "counts": [
+          [
+            0,
+            4
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 3,
+        "counts": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "next": 1
+      },
+      {
+        "own": 2,
+        "counts": [
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 2,
+        "counts": [
+          [
+            2,
+            2
+          ]
+        ],
+        "next": 0
+      },
+      {
+        "own": -1,
+        "counts": [
+          [
+            2,
+            2
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 0,
+        "counts": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 3
+      },
+      {
+        "own": 1,
+        "counts": [
+          [
+            2,
+            1
+          ]
+        ],
+        "next": 1
+      }
+    ],
+    "default": 0,
+    "cellStates": [
+      [
+        7392,
+        2
+      ],
+      [
+        7396,
+        1
+      ],
+      [
+        7307,
+        3
+      ],
+      [
+        2955,
+        3
+      ],
+      [
+        2952,
+        1
+      ]
+    ],
+    "score": 4365.24,
+    "steps": 293,
+    "outcome": "boundary",
+    "displacement": 314.385,
+    "maximumRadius": 4.84964,
+    "peakPopulation": 10,
+    "minimumCruisePopulation": 4,
+    "directionality": 0.783383,
+    "lateProgress": 41.9711,
+    "minimumBoundary": 4,
+    "territory": 723,
+    "usedRowsMask": 199,
+    "stateSumsAfter30": [
+      894,
+      284,
+      826
+    ],
+    "comparisonStart": 60,
+    "knownMatureMechanisms": [],
+    "comparisonFirstMismatches": [
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "A",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "B",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "C",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "S",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "firstMismatch": 60
+      },
+      {
+        "name": "SIMPLE",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "firstMismatch": 60
+      }
+    ],
+    "maxMatureComponents": 1,
+    "stateSumsAfter60": [
+      0,
+      790,
+      250,
+      731
+    ],
+    "checkpoints": [
+      {
+        "generation": 0,
+        "cellStates": [
+          [
+            7392,
+            2
+          ],
+          [
+            7396,
+            1
+          ],
+          [
+            7307,
+            3
+          ],
+          [
+            2955,
+            3
+          ],
+          [
+            2952,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 30,
+        "cellStates": [
+          [
+            22882,
+            1
+          ],
+          [
+            22905,
+            3
+          ],
+          [
+            7697,
+            2
+          ],
+          [
+            7699,
+            1
+          ],
+          [
+            7701,
+            1
+          ],
+          [
+            22911,
+            3
+          ],
+          [
+            7702,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 60,
+        "cellStates": [
+          [
+            17955,
+            3
+          ],
+          [
+            17328,
+            1
+          ],
+          [
+            17961,
+            2
+          ],
+          [
+            17957,
+            3
+          ],
+          [
+            17334,
+            1
+          ],
+          [
+            17331,
+            1
+          ],
+          [
+            17504,
+            1
+          ],
+          [
+            17960,
+            3
+          ],
+          [
+            17329,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 100,
+        "cellStates": [
+          [
+            17585,
+            3
+          ],
+          [
+            17603,
+            3
+          ],
+          [
+            17600,
+            3
+          ],
+          [
+            19461,
+            2
+          ],
+          [
+            17626,
+            3
+          ],
+          [
+            17633,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 160,
+        "cellStates": [
+          [
+            16315,
+            3
+          ],
+          [
+            16464,
+            1
+          ],
+          [
+            16468,
+            3
+          ],
+          [
+            16449,
+            2
+          ],
+          [
+            16436,
+            3
+          ],
+          [
+            16448,
+            3
+          ],
+          [
+            16461,
+            1
+          ],
+          [
+            16457,
+            1
+          ],
+          [
+            16459,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 250,
+        "cellStates": [
+          [
+            52085,
+            1
+          ],
+          [
+            51989,
+            3
+          ],
+          [
+            52070,
+            2
+          ],
+          [
+            51995,
+            3
+          ],
+          [
+            52072,
+            1
+          ],
+          [
+            52074,
+            1
+          ],
+          [
+            52075,
+            1
+          ]
+        ]
+      },
+      {
+        "generation": 293,
+        "cellStates": [
+          [
+            52997,
+            3
+          ],
+          [
+            52986,
+            1
+          ],
+          [
+            53079,
+            3
+          ],
+          [
+            52991,
+            1
+          ],
+          [
+            53082,
+            2
+          ],
+          [
+            53080,
+            2
+          ],
+          [
+            53084,
+            3
+          ],
+          [
+            52984,
+            1
+          ],
+          [
+            53065,
+            1
+          ]
+        ]
+      }
+    ],
+    "finalCellStates": [
+      [
+        52997,
+        3
+      ],
+      [
+        52986,
+        1
+      ],
+      [
+        53079,
+        3
+      ],
+      [
+        52991,
+        1
+      ],
+      [
+        53082,
+        2
+      ],
+      [
+        53080,
+        2
+      ],
+      [
+        53084,
+        3
+      ],
+      [
+        52984,
+        1
+      ],
+      [
+        53065,
+        1
+      ]
+    ]
+  }
+]

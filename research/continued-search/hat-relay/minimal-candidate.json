@@ -1,0 +1,234 @@
+{
+  "cellStates": [
+    [
+      7293,
+      2
+    ],
+    [
+      7295,
+      1
+    ]
+  ],
+  "steps": 235,
+  "outcome": "boundary",
+  "peakPopulation": 11,
+  "minimumCruisePopulation": 5,
+  "maximumRadius": 4.5743091859170075,
+  "minimumBoundary": 4,
+  "displacement": 220.04793885982946,
+  "maxMatureComponents": 2,
+  "trace": [
+    {
+      "generation": 0,
+      "cellStates": [
+        [
+          7293,
+          2
+        ],
+        [
+          7295,
+          1
+        ]
+      ],
+      "centre": [
+        -62.36538314819336,
+        29.01185131072998
+      ],
+      "radius": 0.7854069258298826
+    },
+    {
+      "generation": 50,
+      "cellStates": [
+        [
+          2715,
+          2
+        ],
+        [
+          2701,
+          1
+        ],
+        [
+          2702,
+          1
+        ],
+        [
+          2718,
+          1
+        ],
+        [
+          2717,
+          1
+        ],
+        [
+          3272,
+          1
+        ]
+      ],
+      "centre": [
+        -93.06410090128581,
+        -3.5751304626464844
+      ],
+      "radius": 2.6019002907029507
+    },
+    {
+      "generation": 100,
+      "cellStates": [
+        [
+          1221,
+          2
+        ],
+        [
+          1317,
+          1
+        ],
+        [
+          1319,
+          1
+        ],
+        [
+          1324,
+          1
+        ],
+        [
+          1322,
+          1
+        ],
+        [
+          1315,
+          1
+        ]
+      ],
+      "centre": [
+        -85.19230779012044,
+        -50.47373644510905
+      ],
+      "radius": 3.177520735929272
+    },
+    {
+      "generation": 150,
+      "cellStates": [
+        [
+          6057,
+          2
+        ],
+        [
+          6053,
+          1
+        ],
+        [
+          5971,
+          1
+        ],
+        [
+          5968,
+          1
+        ],
+        [
+          6056,
+          1
+        ],
+        [
+          6054,
+          1
+        ]
+      ],
+      "centre": [
+        -71.12179311116536,
+        -102.62400945027669
+      ],
+      "radius": 2.565161340367049
+    },
+    {
+      "generation": 200,
+      "cellStates": [
+        [
+          38275,
+          2
+        ],
+        [
+          38285,
+          1
+        ],
+        [
+          37628,
+          1
+        ],
+        [
+          38283,
+          1
+        ],
+        [
+          38287,
+          1
+        ],
+        [
+          38284,
+          1
+        ]
+      ],
+      "centre": [
+        -56.99358876546224,
+        -153.49745178222656
+      ],
+      "radius": 2.39763575491649
+    }
+  ],
+  "finalCellStates": [
+    [
+      37916,
+      2
+    ],
+    [
+      37914,
+      2
+    ],
+    [
+      37769,
+      1
+    ],
+    [
+      37762,
+      1
+    ],
+    [
+      37766,
+      1
+    ],
+    [
+      37899,
+      1
+    ]
+  ],
+  "tiling": "hat",
+  "depth": 5,
+  "neighborhood": "touch",
+  "generations": 3,
+  "rows": [
+    {
+      "own": 1,
+      "counts": [
+        [
+          2,
+          1
+        ]
+      ],
+      "next": 2
+    },
+    {
+      "own": 0,
+      "counts": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "next": 1
+    }
+  ],
+  "default": 0,
+  "provenance": "Two-row reduction of independently evolved random-lineage genome358893. Original discovery seed3721047; epoch11; removal of decorative-wake outputs changes the anatomy. The empty-neighbour condition on promotion is subsequently removed as a separate rule simplification."
+}

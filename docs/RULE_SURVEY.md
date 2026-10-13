@@ -1,10 +1,10 @@
 # Catalogue rules and structures
 
-The 81 configurations in `discoveries.js` use each tile as one cell. B/S rules count state-1 neighbours, with optional refractory states; named priority tables count neighbours in each state separately. Neither family reads tile orientation or hierarchy. Geometry and the selected contact graph supply the local structure. The [configuration reference](CONFIGURATION.md) defines both transition models.
+The curated configurations in `discoveries.js` use each tile as one cell. B/S rules count state-1 neighbours, with optional refractory states; named priority tables count neighbours in each state separately. Neither family reads tile orientation or hierarchy. Geometry and the selected contact graph supply the local structure. The [configuration reference](CONFIGURATION.md) defines both transition models.
 
 ## Einstein-hat travellers and launchers
 
-The hat catalogue now includes travelling patterns under James Edmond's published priority-table rules and a derived three-state rule. They use the existing hat touch graph. The listed horizons are complete-state replays on this project's independently generated geometry, with boundary clearance throughout.
+The hat catalogue includes James Edmond's published priority-table rules, credited adaptations, and a four-state wake rule obtained from a random-table search lineage. They use the existing hat touch graph. The listed horizons are complete-state replays on this project's independently generated geometry, with boundary clearance throughout.
 
 | Configuration | Named rule | States | Verified generations |
 | --- | --- | ---: | ---: |
@@ -13,10 +13,15 @@ The hat catalogue now includes travelling patterns under James Edmond's publishe
 | Hat C single traveller | `TABLE:HAT-C` | 4 | 311 |
 | Three-state hat relay | `TABLE:HAT-SIMPLE` | 3 | 307 |
 | Hat C triple launcher | `TABLE:HAT-C` | 4 | 160 |
+| Hat A six-packet launcher | `TABLE:HAT-A` | 4 | 180 |
+| Hat wake traveller | `TABLE:HAT-WAKE` | 4 | 293 |
+| Two-row relay, Spectre adaptation | `TABLE:HAT-RELAY` | 3 | 235 |
 
-These are finite demonstrations, not proofs of unlimited flight. The triple launcher emits separate moving objects; it is not a periodically emitting gun. A launch and a settled single traveller are different catalogue behaviours under the same rule.
+These are finite demonstrations, not proofs of unlimited flight. The triple launcher emits separate moving objects; it is not a periodically emitting gun. The six-packet Hat A launch is also a finite emission event under a published rule. A launch and a settled single traveller are different catalogue behaviours under the same rule. The Hat B periodic-emitter candidate restores its extracted source after 40 generations while adding an emitted state; the checked finite separations do not establish an indefinitely operating gun.
 
-Edmond's [18 September 2026 preprint](https://arxiv.org/abs/2609.22579) reports hat and Spectre patterns followed for one million graph-distance rings, while explicitly leaving indefinite propagation unproved. His rules therefore precede these reproductions. The derived SIMPLE rule relabels Hat B's state 3 as 2 and removes its empty-neighbour condition. It matches the checked flights but differs on arbitrary states; no priority claim is made for that simplification. See [rule sources](../research/fixtures/published-priority-rules.json) and [attribution](../THIRD_PARTY_LICENSES.md).
+Edmond's [18 September 2026 preprint](https://arxiv.org/abs/2609.22579) reports hat and Spectre patterns followed for one million graph-distance rings, while explicitly leaving indefinite propagation unproved. His published Hat A/B/C and Spectre rules precede their package reproductions and adaptations. The derived SIMPLE rule relabels Hat B's state 3 as 2 and removes its empty-neighbour condition. It matches the checked flights but differs on arbitrary states; no priority claim is made for that simplification. See [rule sources](../research/fixtures/published-priority-rules.json) and [attribution](../THIRD_PARTY_LICENSES.md).
+
+The wake traveller's six-cell launch also has a depth-6 replay through generation 1,049; that longer result belongs to the recorded six-cell seed. Its mature transitions differ from the included published tables under the checked state maps. This establishes a distinction within that comparison, not worldwide priority or indefinite propagation. The two-row relay instead reproduces Edmond's Spectre mechanism over its checked mature flight after relabelling states; it is credited as an adaptation. The [continued-search report](CONTINUED_SEARCH.md) gives the rules, comparison limits and launcher/emitter results.
 
 ## Exact localised oscillators
 
@@ -55,14 +60,15 @@ The touch-graph `B2/S` family has a live front followed by refractory cells. Fou
 | `B27/S4` | 4 | 26 live cells | 200 | Four seven-neighbour births and seven four-neighbour survivals |
 | `B2/S` | 5 | Five-traveller launcher, depth 11 | 240 | Multiple separate compact travellers |
 | `B2/S` | 6 | Six-traveller launcher, depth 11 | 200 | Multiple separate compact travellers |
+| `B2/S` | 6 | Three live cells, depth 10 | 130 | Twelve independently evolving compact travellers after generation 90 |
 
-The launchers demonstrate distinct rule-dependent transients into related compact motion. Catalogue contracts check the distinguishing events, boundary clearance, trajectory bounds, translated phases, and complete final states.
+The launchers demonstrate different transients into related compact motion. Catalogue contracts check the distinguishing events, boundary clearance, trajectory bounds, translated phases, and complete final states. For the twelve-traveller launcher, all twelve bodies have complete-state/polygon translated returns, while five also have a radius-3 neighbourhood match within generations 90–130. Independently evolving the twelve bodies reproduces the entire labelled state at every generation of that interval. This is an additional launcher for the existing B2/S family, not a new recurring mechanism.
 
 **All catalogue Penrose travel claims are finite.** A radius-3 graph match at two phases does not give a global translation symmetry. The continuation may encounter a different environment. These results do not establish an indefinitely propagating B/S glider, a gun, a stable collision system, or computation on the tiling. Goucher's different multistate rule has a published geometric propagation argument, discussed below.
 
 ## Regular hexagonal spaceships
 
-The catalogue contains 33 hexagonal configurations, including exact spaceships, oscillators, rotors, a gun, a puffer, wall repair, a billiard table and a parity replicator. The [hexagonal guide](HEXAGONAL_STRUCTURES.md) introduces the main behaviours. The table below records the original traveller benchmarks; the catalogue and research fixtures supply the complete current selection and verification records.
+The hexagonal catalogue includes exact spaceships, oscillators, rotors, a gun, puffers, wall repair, a billiard table and a parity replicator. The [hexagonal guide](HEXAGONAL_STRUCTURES.md) introduces the main behaviours. The table below records selected traveller benchmarks; the catalogue and research fixtures supply the complete current selection and verification records.
 
 The regular hexagonal lattice is translation invariant. Exact complete-state recurrence under a nonzero axial translation therefore establishes indefinitely repeated motion on the unbounded lattice when the observed evolution is independent of the finite boundary.
 
@@ -72,10 +78,15 @@ The regular hexagonal lattice is translation invariant. Exact complete-state rec
 | `B245/S3` | 2 | Generation 0 to 10 | `(2, 0)` |
 | `B235/S146` | 4 | Generation 21 to 31 | `(-5, 0)` |
 | `B235/S134` | 5 | Generation 58 to 62 | `(2, 0)` |
+| `B2345/S24` | 4 | Recurrent phase 0 to 48 | `(-32, 16)` |
 
 The binary `B245/S3` phase comes from Golly's hexagonal-rule example and corresponds to Carter Bays's period-10, displacement-2 ship in survival/birth notation `3/2,4,5`. The nine-cell supplied phase has population sequence `9, 13, 17, 18, 16, 17, 15, 16, 15, 11, 9`. See the [pattern source record](../research/fixtures/hex-b245s3-source.json) and [third-party attribution](../THIRD_PARTY_LICENSES.md).
 
-The two multistate examples share a 12-live-cell seed geometry but have different launches and recurring orbits. `B235/S146` reaches a period-10 orbit using only `B23/S1`; `B5`, `S4`, and `S6` are launch-only clauses. `B235/S134` reaches a period-4 orbit using `B23/S134`, with `B5` active only during launch. A launch rule is not the same thing as the effective recurring rule.
+The `B235/S146` and `B235/S134` examples share a 12-live-cell seed geometry but have different launches and recurring orbits. `B235/S146` reaches a period-10 orbit using only `B23/S1`; `B5`, `S4`, and `S6` are launch-only clauses. `B235/S134` reaches a period-4 orbit using `B23/S134`, with `B5` active only during launch. A launch rule is not the same thing as the effective recurring rule.
+
+The four-state period-48 `B2345/S24` ship has one persistent moving body with short-lived sparks. Its recurrent orbit uses only `B234/S24`; `B5` is inactive during that orbit. A seven-live-cell seed reaches the orbit after 16 generations.
+
+The five-state `B245/S02` puffer advances by axial `(-2, 4)` every six generations and deposits one stationary live cell per cycle. A three-cell mixed-state launch produces two opposite copies plus four stationary cells by generation 30. Exact separation certificates establish unbounded continuation on the regular lattice; the browser board remains finite. The `B5` clause fires twice during ignition and is unused in the recurring heads. See the [continued-search report](CONTINUED_SEARCH.md) and [hexagonal guide](HEXAGONAL_STRUCTURES.md).
 
 Hexagonal `B3/S23` oscillators of periods 2, 3, and 6 provide further small calibration cases. Both contact-graph choices coincide on the regular honeycomb.
 

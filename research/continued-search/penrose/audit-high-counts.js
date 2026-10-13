@@ -1,0 +1,10 @@
+'use strict';
+const fs=require('fs'),assert=require('assert');
+const Core=require('../../../core.js');
+const {SparseAutomaton}=require('../../lib/sparse-automaton.js');
+const p=Core.buildPatch('penrose',10,{seed:'sun'}),g=p.touchGraph;
+const rows=fs.readFileSync(__dirname+'/touch-high-counts.jsonl','utf8').trim().split('\n').map(JSON.parse),out=[];
+function counts(mask){return Array.from({length:16},(_,i)=>i).filter(i=>mask>>i&1);}
+for(const r of rows){const rule=Core.formatRule(counts(r.birthMask),counts(r.survivalMask)),a=new SparseAutomaton(p,g,rule,r.generations);a.initialize(r.cellStates);let allHighBirths=0,allHighSurvivals=0,lateHighBirths=0,lateHighSurvivals=0,lateDifferencesFromB2=0;
+for(let t=0;t<130;t++){const e=a.entries(),states=new Map(e),nc=new Map();for(const[c,v]of e)if(v===1)for(let k=g.offsets[c];k<g.offsets[c+1];k++){const n=g.neighbors[k];nc.set(n,(nc.get(n)||0)+1);}for(const[c,k]of nc){const old=states.get(c)||0,highBirth=old===0&&k>=8&&(r.birthMask>>k&1),highSurvive=old===1&&k>=8&&(r.survivalMask>>k&1);allHighBirths+=Number(highBirth);allHighSurvivals+=Number(highSurvive);if(t>=90){lateHighBirths+=Number(highBirth);lateHighSurvivals+=Number(highSurvive);if(old===0&&Boolean(r.birthMask>>k&1)!==(k===2)||old===1&&(r.survivalMask>>k&1))lateDifferencesFromB2++;}}a.step();}assert.deepStrictEqual(a.entries(),r.finalCellStates,`miner production parity trial${r.trial}`);out.push({trial:r.trial,rule,generations:r.generations,screenedMobileCount:r.configuration,allHighBirths,allHighSurvivals,lateInterval:[90,130],lateHighBirths,lateHighSurvivals,lateDifferencesFromB2});}
+fs.writeFileSync(__dirname+'/high-count-candidate-audit.json',JSON.stringify({replayedCandidates:out.length,productionEndpointsAgree:true,candidatesWithLateHighCountActivity:out.filter(x=>x.lateHighBirths||x.lateHighSurvivals).length,candidatesWithLateDifferencesFromB2:out.filter(x=>x.lateDifferencesFromB2).length,records:out},null,2)+'\n');console.log('AUDIT',out.length,'latehigh',out.filter(x=>x.lateHighBirths||x.lateHighSurvivals).length,'late differences',out.filter(x=>x.lateDifferencesFromB2).length);

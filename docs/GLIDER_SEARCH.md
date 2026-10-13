@@ -1,6 +1,8 @@
 # Gliders, launchers and the limits of the evidence
 
-This report records the intensive search supporting Aperiodic Life 3.7.2. The catalogue includes twelve highlights from this work: five Hat configurations, two Penrose launchers and five hexagonal gliders or launchers. Seeds, rules, complete-state evidence, independent replay code and campaign manifests accompany the application.
+This report records the intensive search supporting Aperiodic Life 3.7.3. The catalogue includes twelve highlights from this work: five Hat configurations, two Penrose launchers and five hexagonal gliders or launchers. Seeds, rules, complete-state evidence, independent replay code and campaign manifests accompany the application.
+
+The [continued search report](CONTINUED_SEARCH.md) adds complementary campaigns and newly verified findings. The sections below describe the original intensive campaign and its published-rule reproductions.
 
 ## The Einstein-hat result and its attribution
 

@@ -1,8 +1,175 @@
 {
   "schema": 2,
   "generatedBy": "research/verify-catalog.js",
-  "catalogEntries": 81,
+  "catalogEntries": 89,
   "results": [
+    {
+      "id": "hat-wake-traveller",
+      "title": "Hat wake traveller",
+      "category": "Einstein-hat gliders and launchers",
+      "tiling": "hat",
+      "cells": 54289,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-WAKE",
+      "generations": 4,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 293,
+      "finalAlive": 2,
+      "finalChanged": 9,
+      "maximumAlive": 4,
+      "totalChanged": 2840,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 3,
+          "changed": 11
+        },
+        {
+          "generation": 100,
+          "alive": 1,
+          "changed": 8
+        },
+        {
+          "generation": 150,
+          "alive": 3,
+          "changed": 10
+        },
+        {
+          "generation": 200,
+          "alive": 3,
+          "changed": 10
+        },
+        {
+          "generation": 250,
+          "alive": 3,
+          "changed": 11
+        },
+        {
+          "generation": 293,
+          "alive": 2,
+          "changed": 9
+        }
+      ]
+    },
+    {
+      "id": "hat-two-row-relay",
+      "title": "Hat two-row relay — Spectre variant",
+      "category": "Einstein-hat gliders and launchers",
+      "tiling": "hat",
+      "cells": 54289,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-RELAY",
+      "generations": 3,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 235,
+      "finalAlive": 4,
+      "finalChanged": 10,
+      "maximumAlive": 10,
+      "totalChanged": 2440,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 5,
+          "changed": 11
+        },
+        {
+          "generation": 100,
+          "alive": 5,
+          "changed": 11
+        },
+        {
+          "generation": 150,
+          "alive": 5,
+          "changed": 11
+        },
+        {
+          "generation": 200,
+          "alive": 5,
+          "changed": 11
+        },
+        {
+          "generation": 235,
+          "alive": 4,
+          "changed": 10
+        }
+      ]
+    },
+    {
+      "id": "hat-edmond-a-six-way-launcher",
+      "title": "Hat A six-way launcher",
+      "category": "Einstein-hat gliders and launchers",
+      "tiling": "hat",
+      "cells": 54289,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-A",
+      "generations": 4,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 180,
+      "finalAlive": 9,
+      "finalChanged": 66,
+      "maximumAlive": 9,
+      "totalChanged": 12190,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 8,
+          "changed": 65
+        },
+        {
+          "generation": 100,
+          "alive": 6,
+          "changed": 72
+        },
+        {
+          "generation": 150,
+          "alive": 7,
+          "changed": 70
+        },
+        {
+          "generation": 180,
+          "alive": 9,
+          "changed": 66
+        }
+      ]
+    },
+    {
+      "id": "hat-edmond-b-periodic-emitter",
+      "title": "Hat B recurring emitter — finite verification",
+      "category": "Einstein-hat gliders and launchers",
+      "tiling": "hat",
+      "cells": 54289,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-B",
+      "generations": 4,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 180,
+      "finalAlive": 109,
+      "finalChanged": 244,
+      "maximumAlive": 118,
+      "totalChanged": 29218,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 62,
+          "changed": 141
+        },
+        {
+          "generation": 100,
+          "alive": 70,
+          "changed": 160
+        },
+        {
+          "generation": 150,
+          "alive": 100,
+          "changed": 228
+        },
+        {
+          "generation": 180,
+          "alive": 109,
+          "changed": 244
+        }
+      ]
+    },
     {
       "id": "hat-edmond-b-glider",
       "title": "Hat glider B — Edmond rule",
@@ -252,6 +419,174 @@
           "changed": 40
         }
       ]
+    },
+    {
+      "id": "penrose-b2-c6-twelve-launcher",
+      "title": "Penrose twelve-traveller launcher",
+      "category": "Aperiodic travelling dynamics",
+      "tiling": "penrose",
+      "cells": 54560,
+      "neighborhood": "touch",
+      "rule": "B2/S",
+      "generations": 6,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 130,
+      "finalAlive": 34,
+      "finalChanged": 230,
+      "maximumAlive": 103,
+      "totalChanged": 37338,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 66,
+          "changed": 480
+        },
+        {
+          "generation": 100,
+          "alive": 36,
+          "changed": 230
+        },
+        {
+          "generation": 130,
+          "alive": 34,
+          "changed": 230
+        }
+      ]
+    },
+    {
+      "id": "hex-b245s02-c5-p6-puffer",
+      "title": "Hexagonal p6 single-cell-trail puffer",
+      "category": "Hexagonal guns, puffers and replication",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B245/S02",
+      "generations": 5,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 120,
+      "finalAlive": 30,
+      "finalChanged": 28,
+      "maximumAlive": 34,
+      "totalChanged": 2820,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 19,
+          "changed": 21
+        },
+        {
+          "generation": 100,
+          "alive": 27,
+          "changed": 20
+        },
+        {
+          "generation": 120,
+          "alive": 30,
+          "changed": 28
+        }
+      ]
+    },
+    {
+      "id": "hex-b245s02-c5-three-cell-twin-puffer-launcher",
+      "title": "Hexagonal three-cell twin-puffer launcher",
+      "category": "Hexagonal guns, puffers and replication",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B245/S02",
+      "generations": 5,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 120,
+      "finalAlive": 54,
+      "finalChanged": 56,
+      "maximumAlive": 62,
+      "totalChanged": 5325,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 32,
+          "changed": 42
+        },
+        {
+          "generation": 100,
+          "alive": 48,
+          "changed": 40
+        },
+        {
+          "generation": 120,
+          "alive": 54,
+          "changed": 56
+        }
+      ]
+    },
+    {
+      "id": "hex-b2345s24-c4-p48-traveller",
+      "title": "Hexagonal p48 long-cycle spaceship",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 111169,
+      "neighborhood": "edge",
+      "rule": "B2345/S24",
+      "generations": 4,
+      "kind": "spaceship benchmark",
+      "steps": 48,
+      "translation": [
+        -32,
+        16
+      ],
+      "liveCells": 10,
+      "phasePopulations": [
+        10,
+        16,
+        22,
+        23,
+        23,
+        22,
+        18,
+        21,
+        21,
+        22,
+        19,
+        14,
+        12,
+        16,
+        20,
+        19,
+        20,
+        18,
+        12,
+        13,
+        14,
+        13,
+        12,
+        10,
+        10,
+        16,
+        22,
+        23,
+        23,
+        22,
+        18,
+        21,
+        21,
+        22,
+        19,
+        14,
+        12,
+        16,
+        20,
+        19,
+        20,
+        18,
+        12,
+        13,
+        14,
+        13,
+        12,
+        10,
+        10
+      ],
+      "ruleClauseActivity": []
     },
     {
       "id": "hex-b2s0-c3-three-cell-glider",

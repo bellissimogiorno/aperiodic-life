@@ -6,12 +6,18 @@ const Core = require('./core.js');
 const catalogue = require('./discoveries.js').filter((entry) => entry.tiling === 'hex');
 const reference = require('./research/hex-reference.js');
 const fixture = require('./research/fixtures/hexagonal-evidence.json');
+const continued = require('./research/continued-search/hex/selected-evidence.json');
 
 // This reference never calls Core's neighbour-counting or state-update code.
 // It models the infinite axial lattice with exact integer coordinates and
 // compares every nonzero state, including every refractory value.
 assert.equal(fixture.schema, 1);
-assert.deepEqual(fixture.entries.map((entry) => entry.id).sort(), catalogue.map((entry) => entry.id).sort());
+// The continued-search gate checks the new certificates and catalogue ties;
+// together, the two independently retained fixture sets cover every example.
+const coveredIds = [...fixture.entries.map((entry) => entry.id),
+  ...continued.entries.map((record) => record.entry.id)];
+assert.equal(new Set(coveredIds).size, coveredIds.length, 'Duplicate hexagonal evidence');
+assert.deepEqual(coveredIds.sort(), catalogue.map((entry) => entry.id).sort());
 const results = new Map();
 let comparedCells = 0;
 let comparedGenerations = 0;

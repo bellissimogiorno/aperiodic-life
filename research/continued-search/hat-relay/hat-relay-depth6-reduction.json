@@ -1,0 +1,55 @@
+{
+  "id": "hat-relay-358893-depth6-placement8",
+  "reducedTable": {
+    "states": 4,
+    "default": 0,
+    "rows": [
+      {
+        "state": 1,
+        "atLeast": {
+          "0": 3,
+          "2": 1
+        },
+        "next": 2
+      },
+      {
+        "state": 0,
+        "atLeast": {
+          "0": 4,
+          "2": 1
+        },
+        "next": 1
+      },
+      {
+        "state": 1,
+        "atLeast": {
+          "0": 4
+        },
+        "next": 3
+      },
+      {
+        "state": 0,
+        "atLeast": {
+          "1": 1,
+          "2": 1
+        },
+        "next": 3
+      }
+    ]
+  },
+  "matchedFullSevenRowTrajectoryThrough": 1049,
+  "matureDistinctContexts": 54,
+  "projectionMapsChecked": 341,
+  "exactNontrivialProjections": [],
+  "at1000": {
+    "active": 5,
+    "live": 1,
+    "components": 1,
+    "centroid": [
+      411.0923095703125,
+      718.721142578125
+    ],
+    "radius": 3.350608550456589,
+    "boundaryDistance": 8
+  }
+}

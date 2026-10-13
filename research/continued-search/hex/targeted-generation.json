@@ -1,0 +1,714 @@
+{
+  "targeted": {
+    "trials": 141904,
+    "shapes": 1448,
+    "rules": [
+      {
+        "B": 4,
+        "S": 1,
+        "C": 3,
+        "basis": "hex-b2s0-c3-three-cell-glider",
+        "changedBit": -1
+      },
+      {
+        "B": 6,
+        "S": 1,
+        "C": 3,
+        "basis": "hex-b2s0-c3-three-cell-glider",
+        "changedBit": 0
+      },
+      {
+        "B": 0,
+        "S": 1,
+        "C": 3,
+        "basis": "hex-b2s0-c3-three-cell-glider",
+        "changedBit": 1
+      },
+      {
+        "B": 12,
+        "S": 1,
+        "C": 3,
+        "basis": "hex-b2s0-c3-three-cell-glider",
+        "changedBit": 2
+      },
+      {
+        "B": 20,
+        "S": 1,
+        "C": 3,
+        "basis": "hex-b2s0-c3-three-cell-glider",
+        "changedBit": 3
+      },
+      {
+        "B": 36,
+        "S": 1,
+        "C": 3,
+        "basis": "hex-b2s0-c3-three-cell-glider",
+        "changedBit": 4
+      },
+      {
+        "B": 68,
+        "S": 1,
+        "C": 3,
+        "basis": "hex-b2s0-c3-three-cell-glider",
+        "changedBit": 5
+      },
+      {
+        "B": 4,
+        "S": 0,
+        "C": 3,
+        "basis": "hex-b2s0-c3-three-cell-glider",
+        "changedBit": 6
+      },
+      {
+        "B": 4,
+        "S": 3,
+        "C": 3,
+        "basis": "hex-b2s0-c3-three-cell-glider",
+        "changedBit": 7
+      },
+      {
+        "B": 4,
+        "S": 5,
+        "C": 3,
+        "basis": "hex-b2s0-c3-three-cell-glider",
+        "changedBit": 8
+      },
+      {
+        "B": 4,
+        "S": 9,
+        "C": 3,
+        "basis": "hex-b2s0-c3-three-cell-glider",
+        "changedBit": 9
+      },
+      {
+        "B": 4,
+        "S": 17,
+        "C": 3,
+        "basis": "hex-b2s0-c3-three-cell-glider",
+        "changedBit": 10
+      },
+      {
+        "B": 4,
+        "S": 33,
+        "C": 3,
+        "basis": "hex-b2s0-c3-three-cell-glider",
+        "changedBit": 11
+      },
+      {
+        "B": 4,
+        "S": 65,
+        "C": 3,
+        "basis": "hex-b2s0-c3-three-cell-glider",
+        "changedBit": 12
+      },
+      {
+        "B": 28,
+        "S": 90,
+        "C": 3,
+        "basis": "hex-b234s1346-c3-four-cell-launcher",
+        "changedBit": -1
+      },
+      {
+        "B": 30,
+        "S": 90,
+        "C": 3,
+        "basis": "hex-b234s1346-c3-four-cell-launcher",
+        "changedBit": 0
+      },
+      {
+        "B": 24,
+        "S": 90,
+        "C": 3,
+        "basis": "hex-b234s1346-c3-four-cell-launcher",
+        "changedBit": 1
+      },
+      {
+        "B": 20,
+        "S": 90,
+        "C": 3,
+        "basis": "hex-b234s1346-c3-four-cell-launcher",
+        "changedBit": 2
+      },
+      {
+        "B": 12,
+        "S": 90,
+        "C": 3,
+        "basis": "hex-b234s1346-c3-four-cell-launcher",
+        "changedBit": 3
+      },
+      {
+        "B": 60,
+        "S": 90,
+        "C": 3,
+        "basis": "hex-b234s1346-c3-four-cell-launcher",
+        "changedBit": 4
+      },
+      {
+        "B": 92,
+        "S": 90,
+        "C": 3,
+        "basis": "hex-b234s1346-c3-four-cell-launcher",
+        "changedBit": 5
+      },
+      {
+        "B": 28,
+        "S": 91,
+        "C": 3,
+        "basis": "hex-b234s1346-c3-four-cell-launcher",
+        "changedBit": 6
+      },
+      {
+        "B": 28,
+        "S": 88,
+        "C": 3,
+        "basis": "hex-b234s1346-c3-four-cell-launcher",
+        "changedBit": 7
+      },
+      {
+        "B": 28,
+        "S": 94,
+        "C": 3,
+        "basis": "hex-b234s1346-c3-four-cell-launcher",
+        "changedBit": 8
+      },
+      {
+        "B": 28,
+        "S": 82,
+        "C": 3,
+        "basis": "hex-b234s1346-c3-four-cell-launcher",
+        "changedBit": 9
+      },
+      {
+        "B": 28,
+        "S": 74,
+        "C": 3,
+        "basis": "hex-b234s1346-c3-four-cell-launcher",
+        "changedBit": 10
+      },
+      {
+        "B": 28,
+        "S": 122,
+        "C": 3,
+        "basis": "hex-b234s1346-c3-four-cell-launcher",
+        "changedBit": 11
+      },
+      {
+        "B": 28,
+        "S": 26,
+        "C": 3,
+        "basis": "hex-b234s1346-c3-four-cell-launcher",
+        "changedBit": 12
+      },
+      {
+        "B": 116,
+        "S": 58,
+        "C": 4,
+        "basis": "hex-b2456s1345-c4-five-cell-launcher",
+        "changedBit": -1
+      },
+      {
+        "B": 118,
+        "S": 58,
+        "C": 4,
+        "basis": "hex-b2456s1345-c4-five-cell-launcher",
+        "changedBit": 0
+      },
+      {
+        "B": 112,
+        "S": 58,
+        "C": 4,
+        "basis": "hex-b2456s1345-c4-five-cell-launcher",
+        "changedBit": 1
+      },
+      {
+        "B": 124,
+        "S": 58,
+        "C": 4,
+        "basis": "hex-b2456s1345-c4-five-cell-launcher",
+        "changedBit": 2
+      },
+      {
+        "B": 100,
+        "S": 58,
+        "C": 4,
+        "basis": "hex-b2456s1345-c4-five-cell-launcher",
+        "changedBit": 3
+      },
+      {
+        "B": 84,
+        "S": 58,
+        "C": 4,
+        "basis": "hex-b2456s1345-c4-five-cell-launcher",
+        "changedBit": 4
+      },
+      {
+        "B": 52,
+        "S": 58,
+        "C": 4,
+        "basis": "hex-b2456s1345-c4-five-cell-launcher",
+        "changedBit": 5
+      },
+      {
+        "B": 116,
+        "S": 59,
+        "C": 4,
+        "basis": "hex-b2456s1345-c4-five-cell-launcher",
+        "changedBit": 6
+      },
+      {
+        "B": 116,
+        "S": 56,
+        "C": 4,
+        "basis": "hex-b2456s1345-c4-five-cell-launcher",
+        "changedBit": 7
+      },
+      {
+        "B": 116,
+        "S": 62,
+        "C": 4,
+        "basis": "hex-b2456s1345-c4-five-cell-launcher",
+        "changedBit": 8
+      },
+      {
+        "B": 116,
+        "S": 50,
+        "C": 4,
+        "basis": "hex-b2456s1345-c4-five-cell-launcher",
+        "changedBit": 9
+      },
+      {
+        "B": 116,
+        "S": 42,
+        "C": 4,
+        "basis": "hex-b2456s1345-c4-five-cell-launcher",
+        "changedBit": 10
+      },
+      {
+        "B": 116,
+        "S": 26,
+        "C": 4,
+        "basis": "hex-b2456s1345-c4-five-cell-launcher",
+        "changedBit": 11
+      },
+      {
+        "B": 116,
+        "S": 122,
+        "C": 4,
+        "basis": "hex-b2456s1345-c4-five-cell-launcher",
+        "changedBit": 12
+      },
+      {
+        "B": 12,
+        "S": 10,
+        "C": 4,
+        "basis": "hex-b23s13-c4-p9-knightship-launcher",
+        "changedBit": -1
+      },
+      {
+        "B": 14,
+        "S": 10,
+        "C": 4,
+        "basis": "hex-b23s13-c4-p9-knightship-launcher",
+        "changedBit": 0
+      },
+      {
+        "B": 8,
+        "S": 10,
+        "C": 4,
+        "basis": "hex-b23s13-c4-p9-knightship-launcher",
+        "changedBit": 1
+      },
+      {
+        "B": 4,
+        "S": 10,
+        "C": 4,
+        "basis": "hex-b23s13-c4-p9-knightship-launcher",
+        "changedBit": 2
+      },
+      {
+        "B": 28,
+        "S": 10,
+        "C": 4,
+        "basis": "hex-b23s13-c4-p9-knightship-launcher",
+        "changedBit": 3
+      },
+      {
+        "B": 44,
+        "S": 10,
+        "C": 4,
+        "basis": "hex-b23s13-c4-p9-knightship-launcher",
+        "changedBit": 4
+      },
+      {
+        "B": 76,
+        "S": 10,
+        "C": 4,
+        "basis": "hex-b23s13-c4-p9-knightship-launcher",
+        "changedBit": 5
+      },
+      {
+        "B": 12,
+        "S": 11,
+        "C": 4,
+        "basis": "hex-b23s13-c4-p9-knightship-launcher",
+        "changedBit": 6
+      },
+      {
+        "B": 12,
+        "S": 8,
+        "C": 4,
+        "basis": "hex-b23s13-c4-p9-knightship-launcher",
+        "changedBit": 7
+      },
+      {
+        "B": 12,
+        "S": 14,
+        "C": 4,
+        "basis": "hex-b23s13-c4-p9-knightship-launcher",
+        "changedBit": 8
+      },
+      {
+        "B": 12,
+        "S": 2,
+        "C": 4,
+        "basis": "hex-b23s13-c4-p9-knightship-launcher",
+        "changedBit": 9
+      },
+      {
+        "B": 12,
+        "S": 26,
+        "C": 4,
+        "basis": "hex-b23s13-c4-p9-knightship-launcher",
+        "changedBit": 10
+      },
+      {
+        "B": 12,
+        "S": 42,
+        "C": 4,
+        "basis": "hex-b23s13-c4-p9-knightship-launcher",
+        "changedBit": 11
+      },
+      {
+        "B": 12,
+        "S": 74,
+        "C": 4,
+        "basis": "hex-b23s13-c4-p9-knightship-launcher",
+        "changedBit": 12
+      },
+      {
+        "B": 28,
+        "S": 52,
+        "C": 5,
+        "basis": "hex-b234s245-c5-p10-knightship-launcher",
+        "changedBit": -1
+      },
+      {
+        "B": 30,
+        "S": 52,
+        "C": 5,
+        "basis": "hex-b234s245-c5-p10-knightship-launcher",
+        "changedBit": 0
+      },
+      {
+        "B": 24,
+        "S": 52,
+        "C": 5,
+        "basis": "hex-b234s245-c5-p10-knightship-launcher",
+        "changedBit": 1
+      },
+      {
+        "B": 20,
+        "S": 52,
+        "C": 5,
+        "basis": "hex-b234s245-c5-p10-knightship-launcher",
+        "changedBit": 2
+      },
+      {
+        "B": 12,
+        "S": 52,
+        "C": 5,
+        "basis": "hex-b234s245-c5-p10-knightship-launcher",
+        "changedBit": 3
+      },
+      {
+        "B": 60,
+        "S": 52,
+        "C": 5,
+        "basis": "hex-b234s245-c5-p10-knightship-launcher",
+        "changedBit": 4
+      },
+      {
+        "B": 92,
+        "S": 52,
+        "C": 5,
+        "basis": "hex-b234s245-c5-p10-knightship-launcher",
+        "changedBit": 5
+      },
+      {
+        "B": 28,
+        "S": 53,
+        "C": 5,
+        "basis": "hex-b234s245-c5-p10-knightship-launcher",
+        "changedBit": 6
+      },
+      {
+        "B": 28,
+        "S": 54,
+        "C": 5,
+        "basis": "hex-b234s245-c5-p10-knightship-launcher",
+        "changedBit": 7
+      },
+      {
+        "B": 28,
+        "S": 48,
+        "C": 5,
+        "basis": "hex-b234s245-c5-p10-knightship-launcher",
+        "changedBit": 8
+      },
+      {
+        "B": 28,
+        "S": 60,
+        "C": 5,
+        "basis": "hex-b234s245-c5-p10-knightship-launcher",
+        "changedBit": 9
+      },
+      {
+        "B": 28,
+        "S": 36,
+        "C": 5,
+        "basis": "hex-b234s245-c5-p10-knightship-launcher",
+        "changedBit": 10
+      },
+      {
+        "B": 28,
+        "S": 20,
+        "C": 5,
+        "basis": "hex-b234s245-c5-p10-knightship-launcher",
+        "changedBit": 11
+      },
+      {
+        "B": 28,
+        "S": 116,
+        "C": 5,
+        "basis": "hex-b234s245-c5-p10-knightship-launcher",
+        "changedBit": 12
+      },
+      {
+        "B": 84,
+        "S": 84,
+        "C": 4,
+        "basis": "hex-b246s246-c4-p30-gun",
+        "changedBit": -1
+      },
+      {
+        "B": 86,
+        "S": 84,
+        "C": 4,
+        "basis": "hex-b246s246-c4-p30-gun",
+        "changedBit": 0
+      },
+      {
+        "B": 80,
+        "S": 84,
+        "C": 4,
+        "basis": "hex-b246s246-c4-p30-gun",
+        "changedBit": 1
+      },
+      {
+        "B": 92,
+        "S": 84,
+        "C": 4,
+        "basis": "hex-b246s246-c4-p30-gun",
+        "changedBit": 2
+      },
+      {
+        "B": 68,
+        "S": 84,
+        "C": 4,
+        "basis": "hex-b246s246-c4-p30-gun",
+        "changedBit": 3
+      },
+      {
+        "B": 116,
+        "S": 84,
+        "C": 4,
+        "basis": "hex-b246s246-c4-p30-gun",
+        "changedBit": 4
+      },
+      {
+        "B": 20,
+        "S": 84,
+        "C": 4,
+        "basis": "hex-b246s246-c4-p30-gun",
+        "changedBit": 5
+      },
+      {
+        "B": 84,
+        "S": 85,
+        "C": 4,
+        "basis": "hex-b246s246-c4-p30-gun",
+        "changedBit": 6
+      },
+      {
+        "B": 84,
+        "S": 86,
+        "C": 4,
+        "basis": "hex-b246s246-c4-p30-gun",
+        "changedBit": 7
+      },
+      {
+        "B": 84,
+        "S": 80,
+        "C": 4,
+        "basis": "hex-b246s246-c4-p30-gun",
+        "changedBit": 8
+      },
+      {
+        "B": 84,
+        "S": 92,
+        "C": 4,
+        "basis": "hex-b246s246-c4-p30-gun",
+        "changedBit": 9
+      },
+      {
+        "B": 84,
+        "S": 68,
+        "C": 4,
+        "basis": "hex-b246s246-c4-p30-gun",
+        "changedBit": 10
+      },
+      {
+        "B": 84,
+        "S": 116,
+        "C": 4,
+        "basis": "hex-b246s246-c4-p30-gun",
+        "changedBit": 11
+      },
+      {
+        "B": 84,
+        "S": 20,
+        "C": 4,
+        "basis": "hex-b246s246-c4-p30-gun",
+        "changedBit": 12
+      },
+      {
+        "B": 36,
+        "S": 24,
+        "C": 2,
+        "basis": "hex-b25s34-p20-puffer",
+        "changedBit": -1
+      },
+      {
+        "B": 38,
+        "S": 24,
+        "C": 2,
+        "basis": "hex-b25s34-p20-puffer",
+        "changedBit": 0
+      },
+      {
+        "B": 32,
+        "S": 24,
+        "C": 2,
+        "basis": "hex-b25s34-p20-puffer",
+        "changedBit": 1
+      },
+      {
+        "B": 44,
+        "S": 24,
+        "C": 2,
+        "basis": "hex-b25s34-p20-puffer",
+        "changedBit": 2
+      },
+      {
+        "B": 52,
+        "S": 24,
+        "C": 2,
+        "basis": "hex-b25s34-p20-puffer",
+        "changedBit": 3
+      },
+      {
+        "B": 4,
+        "S": 24,
+        "C": 2,
+        "basis": "hex-b25s34-p20-puffer",
+        "changedBit": 4
+      },
+      {
+        "B": 100,
+        "S": 24,
+        "C": 2,
+        "basis": "hex-b25s34-p20-puffer",
+        "changedBit": 5
+      },
+      {
+        "B": 36,
+        "S": 25,
+        "C": 2,
+        "basis": "hex-b25s34-p20-puffer",
+        "changedBit": 6
+      },
+      {
+        "B": 36,
+        "S": 26,
+        "C": 2,
+        "basis": "hex-b25s34-p20-puffer",
+        "changedBit": 7
+      },
+      {
+        "B": 36,
+        "S": 28,
+        "C": 2,
+        "basis": "hex-b25s34-p20-puffer",
+        "changedBit": 8
+      },
+      {
+        "B": 36,
+        "S": 16,
+        "C": 2,
+        "basis": "hex-b25s34-p20-puffer",
+        "changedBit": 9
+      },
+      {
+        "B": 36,
+        "S": 8,
+        "C": 2,
+        "basis": "hex-b25s34-p20-puffer",
+        "changedBit": 10
+      },
+      {
+        "B": 36,
+        "S": 56,
+        "C": 2,
+        "basis": "hex-b25s34-p20-puffer",
+        "changedBit": 11
+      },
+      {
+        "B": 36,
+        "S": 88,
+        "C": 2,
+        "basis": "hex-b25s34-p20-puffer",
+        "changedBit": 12
+      }
+    ],
+    "ruleCount": 98,
+    "sha256": "e2aa935be1184509067025aa8edfb2f688d8b40ee1083d3ff586b2d00560cede"
+  },
+  "mutations": {
+    "trials": 100000,
+    "prng": "xorshift32",
+    "seed": "0x3722026",
+    "basePhases": 235,
+    "baseCounts": {
+      "hex-b246s246-c4-p30-gun": 25623,
+      "hex-b234s1346-c3-four-cell-launcher": 7166,
+      "hex-b2456s1345-c4-five-cell-launcher": 20671,
+      "hex-b234s245-c5-p10-knightship-launcher": 9439,
+      "hex-b23s13-c4-p9-knightship-launcher": 10750,
+      "hex-b25s34-p20-puffer": 25408,
+      "hex-b2s0-c3-three-cell-glider": 943
+    },
+    "method": "One to five state substitutions in a 7-by-7 axial neighbourhood of a source-phase cell; 25% change state count to C3..8, 25% toggle one of B1..B6 or S0..S6. Refractory states retained if valid.",
+    "sha256": "598f74919623c5ab77f36a4e698bc90f73dffb8c743fc722347fc381bd1206f6"
+  },
+  "credit": "Gun and puffer source phases are published patterns credited in catalogue-baseline.json. Five remaining bases were package search finds without established discovery priority. Targeted all-live eight-cell seeds are independent generated shapes under neighbouring rules, not imported pattern geometries."
+}

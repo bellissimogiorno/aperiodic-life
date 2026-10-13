@@ -1,0 +1,378 @@
+[
+  {
+    "tiling": "hex",
+    "neighborhood": "edge",
+    "borderRings": 1,
+    "speed": 4,
+    "id": "hex-b245s02-c5-p6-puffer",
+    "category": "Hexagonal guns, puffers and replication",
+    "title": "Hexagonal p6 single-cell-trail puffer",
+    "summary": "A five-state puffer shifts by axial (−2,4) every six generations, depositing one stationary live cell each cycle. Exact separation certificates prove continued propagation on the infinite hexagonal lattice.",
+    "depth": 128,
+    "rule": "B245/S02",
+    "generations": 5,
+    "coordinateStates": [
+      [
+        -3,
+        5,
+        1
+      ],
+      [
+        -2,
+        3,
+        4
+      ],
+      [
+        -2,
+        4,
+        2
+      ],
+      [
+        -2,
+        5,
+        1
+      ],
+      [
+        -1,
+        0,
+        1
+      ],
+      [
+        -1,
+        1,
+        1
+      ],
+      [
+        -1,
+        3,
+        1
+      ],
+      [
+        -1,
+        4,
+        2
+      ],
+      [
+        -1,
+        5,
+        1
+      ],
+      [
+        0,
+        -1,
+        2
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        3,
+        4
+      ],
+      [
+        1,
+        -4,
+        2
+      ],
+      [
+        1,
+        -3,
+        3
+      ],
+      [
+        1,
+        -2,
+        4
+      ],
+      [
+        1,
+        -1,
+        4
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        -4,
+        2
+      ],
+      [
+        2,
+        -3,
+        4
+      ],
+      [
+        2,
+        -2,
+        4
+      ],
+      [
+        2,
+        -1,
+        2
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        3,
+        -5,
+        1
+      ],
+      [
+        3,
+        -4,
+        2
+      ],
+      [
+        3,
+        -3,
+        3
+      ],
+      [
+        4,
+        -4,
+        2
+      ]
+    ],
+    "expectedActivityThrough": 120,
+    "provenance": {
+      "status": "package-found",
+      "credit": "Found and independently verified in this package’s bounded search; discovery priority has not been established.",
+      "note": "A moving head extracted from the three-cell mixed-state seed. Its complete period-6 recurrence and permanent separation from every deposit are certified. B5 is unused in flight; the three-cell launch uses B5 twice. This is a newly verified package example, not a claim of first discovery.",
+      "sources": [],
+      "evidence": [
+        "research/continued-search/hex/campaigns.json",
+        "research/continued-search/hex/selected-evidence.json"
+      ]
+    },
+    "view": {
+      "mode": "trajectory",
+      "bounds": [
+        -3.464101552963257,
+        -8.5,
+        5.196152210235596,
+        68.5
+      ],
+      "steps": 60,
+      "padding": 3
+    }
+  },
+  {
+    "tiling": "hex",
+    "neighborhood": "edge",
+    "borderRings": 1,
+    "speed": 4,
+    "id": "hex-b245s02-c5-three-cell-twin-puffer-launcher",
+    "category": "Hexagonal guns, puffers and replication",
+    "title": "Hexagonal three-cell twin-puffer launcher",
+    "summary": "Two live cells and one refractory cell launch two opposite puffers. By generation 30 they have separated from four stationary cells; each puffer then deposits one live cell every six generations.",
+    "depth": 128,
+    "rule": "B245/S02",
+    "generations": 5,
+    "coordinateStates": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        1
+      ]
+    ],
+    "expectedActivityThrough": 120,
+    "provenance": {
+      "status": "package-found",
+      "credit": "Found and independently verified in this package’s bounded search; discovery priority has not been established.",
+      "note": "Mixed-state exhaustive campaign, seed mixed-n3-c5-s10. Complete replay gives two opposite certified p6 puffers and four stationary live cells at generation 30. This is a finite launch, not a stationary gun. A related four-live-cell seed had remained unclassified in the earlier exhaustive campaign; priority outside this package is unestablished.",
+      "sources": [],
+      "evidence": [
+        "research/continued-search/hex/campaigns.json",
+        "research/continued-search/hex/selected-evidence.json"
+      ]
+    },
+    "view": {
+      "mode": "trajectory",
+      "bounds": [
+        -8.66025447845459,
+        -56.5,
+        13.856406211853027,
+        56.5
+      ],
+      "steps": 60,
+      "padding": 3
+    }
+  },
+  {
+    "tiling": "hex",
+    "neighborhood": "edge",
+    "borderRings": 1,
+    "speed": 4,
+    "id": "hex-b2345s24-c4-p48-traveller",
+    "category": "Hexagonal travellers",
+    "title": "Hexagonal p48 long-cycle spaceship",
+    "summary": "A four-state spaceship follows a 48-generation cycle, moving by axial (−32,16). It can also be launched from seven live cells, as recorded in the accompanying evidence.",
+    "depth": 192,
+    "rule": "B2345/S24",
+    "generations": 4,
+    "coordinateStates": [
+      [
+        -4,
+        4,
+        1
+      ],
+      [
+        -3,
+        3,
+        1
+      ],
+      [
+        -3,
+        4,
+        1
+      ],
+      [
+        -2,
+        2,
+        3
+      ],
+      [
+        -2,
+        3,
+        1
+      ],
+      [
+        -2,
+        4,
+        3
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        2,
+        2
+      ],
+      [
+        0,
+        3,
+        1
+      ],
+      [
+        0,
+        4,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        3,
+        1
+      ],
+      [
+        2,
+        -3,
+        2
+      ],
+      [
+        2,
+        -2,
+        3
+      ],
+      [
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        3,
+        3
+      ],
+      [
+        3,
+        -4,
+        3
+      ],
+      [
+        3,
+        -1,
+        3
+      ],
+      [
+        4,
+        -2,
+        3
+      ]
+    ],
+    "expectedPeriod": 48,
+    "moving": true,
+    "translation": [
+      -32,
+      16
+    ],
+    "provenance": {
+      "status": "package-found",
+      "credit": "Found and independently verified in this package’s bounded search; discovery priority has not been established.",
+      "note": "Seven-cell exhaustive campaign, seed n7c4s245: seven live cells settle after 16 generations into this exact period-48 ship. The displayed recurrent phase was centred for viewing. Full D6/phase comparison finds no match in the preceding 33-entry hexagonal catalogue. Independent decomposition at every phase confirms one persistent body with short-lived sparks, rather than a convoy of independently recurring ships. No worldwide priority claim is made.",
+      "sources": [],
+      "evidence": [
+        "research/continued-search/hex/campaigns.json",
+        "research/continued-search/hex/selected-evidence.json"
+      ]
+    },
+    "view": {
+      "mode": "trajectory",
+      "bounds": [
+        -56.29165267944336,
+        -7,
+        9.52627944946289,
+        38.5
+      ],
+      "steps": 60,
+      "padding": 3
+    }
+  }
+]

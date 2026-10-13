@@ -89,7 +89,7 @@ for (const id of requiredIds) {
 }
 
 const catalogue = require('./discoveries.js');
-assert.equal(catalogue.length, 81, 'unexpected curated discovery count');
+assert.equal(catalogue.length, 89, 'unexpected curated discovery count');
 const provenance = require('./research/fixtures/catalogue-provenance.json');
 assert.deepStrictEqual(catalogue.map((entry) => ({ id: entry.id, ...entry.provenance })), provenance,
   'offline credits must match the canonical records for every example');
