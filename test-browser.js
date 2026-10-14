@@ -398,6 +398,31 @@ async function checkPlaybackControls(cdp) {
       await assertPlaybackState(cdp, false);
       await touchButton(cdp, 'viewportRunButton');
       await assertPlaybackState(cdp, true);
+      await cdp.evaluate("document.getElementById('aboutButton').scrollIntoView({ block: 'end' }); true");
+      await touchButton(cdp, 'aboutButton');
+      await waitFor(cdp, "document.getElementById('aboutDialog').open", 'mobile About dialog');
+      const aboutGeometry = await cdp.evaluate(`(() => {
+        const dialog = document.getElementById('aboutDialog');
+        const rect = dialog.getBoundingClientRect();
+        const form = dialog.querySelector('form');
+        return {
+          insideViewport: rect.left >= 0 && rect.top >= 0 && rect.right <= innerWidth && rect.bottom <= innerHeight,
+          scrollable: form.scrollHeight <= form.clientHeight || ['auto', 'scroll'].includes(getComputedStyle(form).overflowY),
+          activeInside: dialog.contains(document.activeElement),
+        };
+      })()`);
+      assert.deepStrictEqual(aboutGeometry, { insideViewport: true, scrollable: true, activeInside: true }, `${width}×${height}: About must fit and scroll`);
+      await cdp.evaluate("document.getElementById('cataloguePdfLink').scrollIntoView({ block: 'center' }); true");
+      assert.strictEqual(await cdp.evaluate(`(() => {
+        const link = document.getElementById('cataloguePdfLink');
+        const rect = link.getBoundingClientRect();
+        return link.contains(document.elementFromPoint(rect.left + rect.width / 2, rect.top + rect.height / 2));
+      })()`), true, `${width}×${height}: catalogue link must be reachable`);
+      await cdp.evaluate("document.getElementById('aboutCloseButton').scrollIntoView({ block: 'start' }); true");
+      await touchButton(cdp, 'aboutCloseButton');
+      await waitFor(cdp, "!document.getElementById('aboutDialog').open", 'mobile About closes');
+      assert.strictEqual(await cdp.evaluate("document.activeElement.id"), 'aboutButton', 'closing About returns focus to its trigger');
+      assert.strictEqual(await cdp.evaluate("document.getElementById('controls').classList.contains('open')"), true, 'closing About keeps the mobile controls open');
       await cdp.evaluate("document.getElementById('controls').scrollTop = 0; true");
       await touchButton(cdp, 'closeControls');
       await waitFor(cdp, "!document.getElementById('controls').classList.contains('open')", 'closed mobile drawer');
@@ -711,7 +736,31 @@ async function checkPage(cdp) {
   await pressSpace(cdp);
   await waitFor(cdp, "document.getElementById('aboutDialog').open", 'Space activation of About', 5_000);
   assert.strictEqual(await cdp.evaluate("document.getElementById('runButton').textContent"), 'Run');
-  await cdp.evaluate("document.getElementById('aboutDialog').close(); true");
+  const about = await cdp.evaluate(`(() => {
+    const dialog = document.getElementById('aboutDialog');
+    return {
+      activeInside: dialog.contains(document.activeElement),
+      labelledBy: dialog.getAttribute('aria-labelledby'),
+      credit: document.getElementById('aboutCredit').textContent,
+      version: document.getElementById('aboutVersion').textContent,
+      pdf: document.getElementById('cataloguePdfLink').getAttribute('href'),
+      source: document.getElementById('catalogueSourceLink').getAttribute('href'),
+      bottomOfControls: document.getElementById('controls').lastElementChild.id,
+    };
+  })()`);
+  assert.deepStrictEqual(about, {
+    activeInside: true,
+    labelledBy: 'aboutDialogTitle',
+    credit: 'Aperiodic life package, vibe-coded by Murdoch J. Gabbay',
+    version: fs.readFileSync(path.join(ROOT, 'VERSION'), 'utf8').trim(),
+    pdf: 'docs/catalogue/aperiodic-life-catalogue.pdf',
+    source: 'docs/catalogue/catalogue.md',
+    bottomOfControls: 'aboutButton',
+  });
+  await cdp.call('Input.dispatchKeyEvent', { type: 'keyDown', key: 'Escape', code: 'Escape', windowsVirtualKeyCode: 27 });
+  await cdp.call('Input.dispatchKeyEvent', { type: 'keyUp', key: 'Escape', code: 'Escape', windowsVirtualKeyCode: 27 });
+  await waitFor(cdp, "!document.getElementById('aboutDialog').open", 'Escape closes About', 5_000);
+  assert.strictEqual(await cdp.evaluate("document.activeElement.id"), 'aboutButton');
 
   await cdp.evaluate("document.getElementById('ruleInfoButton').focus(); true");
   await pressSpace(cdp);

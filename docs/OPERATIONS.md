@@ -2,7 +2,7 @@
 
 ## Requirements
 
-The application needs a WebGL2-capable browser. Development tools require Node.js 22 or 24 and Python 3.10 or later. Automated browser checks additionally need Chromium or Google Chrome. No npm or Python package installation is required.
+The application needs a WebGL2-capable browser. Development tools require Node.js 22 or 24 and Python 3.10 or later. Automated browser checks additionally need Chromium or Google Chrome. No npm or Python package installation is required for the app, its tests, or release packaging. Rebuilding the optional PDF catalogue requires the dependencies listed in [catalogue source and rebuilding](catalogue/README.md).
 
 ## Run locally
 
@@ -37,9 +37,13 @@ python3 tools/project.py test research
 
 The browser harness tests application interactions over local HTTP and opens the standalone through `file://`. Set `CHROMIUM` to a browser executable when it is not on `PATH`. Under restrictive navigation policies, the local harness can use document injection; that result checks application behaviour but does not establish that HTTP and file navigation work. CI requires both actual navigation modes. See [TESTING.md](TESTING.md) and [CI.md](CI.md).
 
+## Rebuild the catalogue
+
+The full PDF, editable Markdown, structured data, diagrams, and builder live in [`docs/catalogue/`](catalogue/README.md). Follow its README to rebuild the catalogue after changing patterns, rules, evidence, or provenance. Commit the resulting PDF and source together. App use, normal tests, site staging, and packaging use these checked-in files and do not invoke the PDF dependencies.
+
 ## Build release files
 
-Keep `VERSION` and `tools/package.py` aligned at `3.7.3`. Run the tests above, then:
+Keep `VERSION` and `tools/package.py` aligned at `3.7.4`. Run the tests above, then:
 
 ```bash
 python3 tools/package.py --output-dir ../aperiodic-life-release
@@ -49,17 +53,17 @@ The output directory must be new or empty and outside the source tree. Existing 
 
 | File | Contents |
 |---|---|
-| `aperiodic-life-3.7.3.html` | The complete offline application, including licence notices |
-| `aperiodic-life-source-3.7.3.zip` | Source, tests, documentation, current research fixtures and GitHub configuration, under one `aperiodic-life/` directory |
-| `aperiodic-life-source-3.7.3.manifest.json` | Every archived source path, SHA-256 digest, byte size and file mode |
-| `aperiodic-life-3.7.3.sha256` | SHA-256 checksums for the other three release files |
+| `aperiodic-life-3.7.4.html` | The complete offline application, including licence notices |
+| `aperiodic-life-source-3.7.4.zip` | Source, tests, documentation including the full PDF catalogue and its editable source, current research fixtures and GitHub configuration, under one `aperiodic-life/` directory |
+| `aperiodic-life-source-3.7.4.manifest.json` | Every archived source path, SHA-256 digest, byte size and file mode |
+| `aperiodic-life-3.7.4.sha256` | SHA-256 checksums for the other three release files |
 
 The ZIP has sorted paths, fixed timestamps and explicit file modes. Two builds from unchanged source produce identical files with the same Python compression implementation. The packager checks ZIP paths, file types, CRCs and the complete manifest before publishing its local output. It excludes VCS internals, dependency environments, local configuration, caches and common build directories. Ordinary source symlinks are rejected.
 
 Verify downloaded files from their containing directory with:
 
 ```bash
-sha256sum --check aperiodic-life-3.7.3.sha256
+sha256sum --check aperiodic-life-3.7.4.sha256
 ```
 
 For a release check, extract the source ZIP into a new directory, run the standard and topology profiles there, and test the standalone in the target browser. Keep the source ZIP, manifest and checksum file alongside the standalone when distributing it.
@@ -69,10 +73,10 @@ For a release check, extract the source ZIP into a new directory, run the standa
 To produce only the source archive:
 
 ```bash
-python3 tools/export_repository.py --output ../aperiodic-life-source-3.7.3.zip
+python3 tools/export_repository.py --output ../aperiodic-life-source-3.7.4.zip
 ```
 
-The exporter checks required repository files and standalone freshness. Its archive contents match the source ZIP from the release packager. The destination must be outside the source tree and must not already exist. A different `.zip` filename may be supplied when needed.
+The exporter checks required repository and catalogue files and standalone freshness. Its archive contents match the source ZIP from the release packager. The destination must be outside the source tree and must not already exist. A different `.zip` filename may be supplied when needed.
 
 Extract the archive before creating the repository; its top-level `aperiodic-life/` directory is the repository root. See [PUBLISHING.md](PUBLISHING.md) for repository and release setup.
 
@@ -82,4 +86,4 @@ Extract the archive before creating the repository; its top-level `aperiodic-lif
 python3 tools/build_site.py --output-dir ../aperiodic-life-site
 ```
 
-This creates only `index.html` containing the standalone, `LICENSE`, `THIRD_PARTY_LICENSES.md` and `.nojekyll`. The destination must be new or empty and outside the checkout. This command stages files locally. The optional manual Pages workflow performs publication when explicitly run; commits and pull requests do not publish the site.
+This creates `index.html` containing the standalone, `LICENSE`, `THIRD_PARTY_LICENSES.md`, `docs/catalogue/` containing the PDF and its editable source, and `.nojekyll`. The catalogue remains a separate file; its relative link works from the application’s **About** dialogue. The destination must be new or empty and outside the checkout. This command stages files locally. The optional manual Pages workflow performs publication when explicitly run; commits and pull requests do not publish the site.

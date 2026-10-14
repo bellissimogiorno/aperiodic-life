@@ -129,6 +129,7 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 
 .button-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .wide-button { width: 100%; margin-bottom: 9px; }
+.about-button { width: 100%; min-height: 44px; margin-top: 8px; }
 .discovery-actions { margin-bottom: 9px; }
 .discovery-note { margin: 0; color: var(--muted); font-size: 0.8rem; line-height: 1.45; }
 .discovery-provenance { margin: 8px 0 0; color: var(--muted); font-size: 0.76rem; line-height: 1.45; overflow-wrap: anywhere; }
@@ -238,6 +239,21 @@ dialog h2 { margin: 0 0 14px; font-size: 1.5rem; }
 dialog p { color: #b9ccd4; line-height: 1.55; }
 dialog code { color: var(--accent); }
 .dialog-close { position: absolute; right: 14px; top: 14px; width: 36px; min-height: 36px; padding: 0; font-size: 1.4rem; }
+.about-dialog { width: min(680px, calc(100% - 32px)); max-height: calc(100% - 32px); max-height: calc(100dvh - 32px); }
+.about-dialog form { max-height: inherit; overflow-y: auto; overscroll-behavior: contain; }
+.about-dialog h2 { padding-right: 40px; }
+.about-dialog button { min-height: 44px; }
+.about-dialog .dialog-close { width: 44px; min-height: 44px; }
+.about-dialog a { color: var(--accent); text-underline-offset: 3px; }
+.about-dialog a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.about-dialog .release-details { margin-top: -6px; color: var(--muted); font-size: 0.9rem; }
+.about-catalogue { margin: 20px 0; padding: 18px; border: 1px solid #315061; border-radius: 9px; background: #10232f; }
+.about-catalogue h3 { margin: 0 0 8px; font-size: 1.05rem; }
+.about-catalogue p { margin: 0 0 12px; }
+.about-catalogue p:last-child { margin-bottom: 0; }
+.catalogue-links a { display: inline-block; padding: 7px 0; }
+.catalogue-pdf-link { font-weight: 800; }
+.about-catalogue .catalogue-offline-note { font-size: 0.85rem; }
 .rules-dialog { width: min(680px, calc(100% - 32px)); max-height: min(820px, calc(100% - 32px)); }
 .rules-dialog form { max-height: inherit; overflow-y: auto; overscroll-behavior: contain; }
 .rules-dialog section { padding: 15px 0 4px; border-top: 1px solid var(--line); }
@@ -458,7 +474,6 @@ dialog code { color: var(--accent); }
           <button id="fitButton" title="Fit patch to view (F)" aria-keyshortcuts="F">Fit view</button>
           <button id="saveButton">Save PNG</button>
           <button id="copyButton" title="Copy settings only; use Save state to preserve the cells">Copy settings</button>
-          <button id="aboutButton">About</button>
         </div>
       </section>
 
@@ -479,6 +494,7 @@ dialog code { color: var(--accent); }
       </section>
 
       <p class="footer-note">Space: run · N: step · R: reseed · F: fit · Shift-drag or right-drag: pan</p>
+      <button class="about-button" id="aboutButton" type="button" aria-haspopup="dialog" aria-controls="aboutDialog">About</button>
     </aside>
 
     <main class="stage" id="stage">
@@ -497,16 +513,26 @@ dialog code { color: var(--accent); }
     </main>
   </div>
 
-  <dialog id="aboutDialog">
+  <dialog class="about-dialog" id="aboutDialog" aria-labelledby="aboutDialogTitle" aria-describedby="aboutCredit">
     <form method="dialog">
-      <button class="dialog-close" aria-label="Close">×</button>
-      <h2>Aperiodic Life</h2>
+      <button class="dialog-close" id="aboutCloseButton" aria-label="Close About" autofocus>×</button>
+      <h2 id="aboutDialogTitle">About Aperiodic Life</h2>
+      <p id="aboutCredit">Aperiodic life package, vibe-coded by Murdoch J. Gabbay</p>
+      <p class="release-details">Version <strong id="aboutVersion">3.7.4</strong> · Released <time datetime="2026-10-14">14 October 2026</time></p>
+      <div class="about-catalogue" aria-labelledby="aboutCatalogueTitle">
+        <h3 id="aboutCatalogueTitle">Complete pattern catalogue</h3>
+        <p>All <span id="catalogueCount"></span> curated configurations, with precise rules, diagrams, verification, originality assessments and sources.</p>
+        <p class="catalogue-links"><a class="catalogue-pdf-link" id="cataloguePdfLink" href="docs/catalogue/aperiodic-life-catalogue.pdf" target="_blank" rel="noopener">Open the full catalogue (PDF)</a><br><a id="catalogueSourceLink" href="docs/catalogue/catalogue.md" target="_blank" rel="noopener">Read the editable catalogue source (Markdown)</a></p>
+        <p class="catalogue-offline-note">The PDF and source are included in the full package. If you copied the standalone HTML elsewhere, keep its <code>docs/catalogue</code> folder alongside it, or <a href="https://bellissimogiorno.github.io/aperiodic-life/docs/catalogue/aperiodic-life-catalogue.pdf" target="_blank" rel="noopener">read the online catalogue</a>.</p>
+      </div>
       <p>The app supports traditional square and hexagonal boards, the Einstein “hat” monotile, and Penrose P3 rhombs. Every tile is one automaton cell.</p>
       <p><strong>On a phone or tablet:</strong> drag one finger to pan, pinch two fingers to zoom, or move both fingers together to pan. Pinching works with either tool selected. In <strong>Paint / erase cells</strong>, tap or drag one finger to edit; after a pinch, lift all fingers before starting a new paint stroke.</p>
       <p>The Einstein patch is generated from the H/T/P/F substitution system. The Penrose patch is generated by exact Robinson-triangle deflation and paired into thin and thick golden rhombs. Hat contacts use exact triangular-lattice coordinates; Penrose vertices use exact integer coefficients in <code>Z[φ]</code>. Adjacency is therefore not inferred from visual tolerances.</p>
-      <p><strong>Shared edge</strong> gives the von Neumann graph on squares and the ordinary six-neighbour graph on hexagons. <strong>Edge or corner</strong> gives the Moore graph on squares; it coincides with shared-edge adjacency for regular hexagons. On the aperiodic tilings it also counts point contacts. Missing cells outside the finite patch are dead; border rings can be locked dead to keep experiments away from the boundary.</p>
+      <p><strong>Shared edge</strong> gives the von Neumann graph on squares and the ordinary six-neighbour graph on hexagons. <strong>Edge or corner</strong> gives the Moore graph on squares; it coincides with shared-edge adjacency for regular hexagons. On the aperiodic tilings it also counts point contacts. Cells beyond the finite patch are absent and contribute to no neighbour count. Border rings can be locked in state 0 to keep experiments away from the boundary.</p>
       <p>Birth/survival rules use <code>B…/S…</code> notation. For example, <code>B3/S23</code> births a dead cell with three live neighbours and preserves a live cell with two or three. Counts can be comma-separated; use brackets for multi-digit counts, such as <code>B[10]/S[9,10]</code>. Named priority tables such as <code>TABLE:HAT-B</code> also count higher states and support the Hat gliders published by James Edmond in September 2026.</p>
-      <p>The Curated configurations section at the top of the controls contains <span id="catalogueCount"></span> verified configurations: classic square references, hexagonal oscillators and travel, localised aperiodic oscillators, compact Penrose travelling dynamics, long transients, and collective fields. Search by tiling, rule, or pattern name. Use <strong>Load</strong> to inspect a paused initial state or <strong>Load &amp; run</strong> to start it immediately. The <strong>Play/Pause</strong> button at the top right of the canvas stays available on phones, including while the controls are open. <strong>Save state</strong> preserves an exact experimental phase, including refractory cells, for later inspection or sharing. Geometry attribution, search methodology, and licence details are included with the source project and in the standalone file’s source header.</p>
+      <p>Search <strong>Curated configurations</strong> at the top of the controls by tiling, rule, pattern name or credited author. Use <strong>Load</strong> to inspect a paused initial state or <strong>Load &amp; run</strong> to start it immediately. The <strong>Play/Pause</strong> button at the top right of the canvas stays available on phones, including while the controls are open. <strong>Save state</strong> preserves an exact experimental phase, including refractory cells, for later inspection or sharing.</p>
+      <p>Published patterns and adaptations are credited individually in the catalogue and app. Patterns found by this package are identified separately; an unsuccessful search for precedents does not establish historical priority. Hat A/B/C rules and gliders are credited to James Edmond’s <a href="https://offlattice.org/monotile/" target="_blank" rel="noopener">interactive project</a> and <a href="https://arxiv.org/abs/2609.22579" target="_blank" rel="noopener">2026 paper</a>.</p>
+      <p>Project code is MIT-licensed; Hat geometry adapted from Craig S. Kaplan retains its BSD 3-Clause licence. The full licence notices are included in the source package and the standalone file’s source header. This software is provided as is, without warranty, including fitness for a particular purpose; the authors accept no liability to the extent permitted by law.</p>
       <button class="primary">Close</button>
     </form>
   </dialog>
@@ -8008,6 +8034,7 @@ dialog code { color: var(--accent); }
       e.saveButton.addEventListener('click', () => this.savePNG());
       e.copyButton.addEventListener('click', () => this.copyConfig());
       e.aboutButton.addEventListener('click', () => e.aboutDialog.showModal());
+      e.aboutDialog.addEventListener('close', () => e.aboutButton.focus({ preventScroll: true }));
       e.neighborhoodInfoButton.addEventListener('click', () => e.rulesDialog.showModal());
       e.ruleInfoButton.addEventListener('click', () => e.rulesDialog.showModal());
       e.openControls.addEventListener('click', () => {

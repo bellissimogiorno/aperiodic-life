@@ -8,3 +8,7 @@ research/fixtures/** -text
 *.gif binary
 *.pdf binary
 *.zip binary
+
+# Bundled catalogue fonts are binary assets.
+*.ttf binary
+*.otf binary

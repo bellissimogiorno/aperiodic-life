@@ -45,16 +45,24 @@ class RepositoryExportTest(unittest.TestCase):
                 self.assertFalse(PurePosixPath(name).is_absolute())
         for name in [".github/workflows/ci.yml", ".github/workflows/pages.yml",
                      ".gitignore", "LICENSE", "THIRD_PARTY_LICENSES.md",
-                     "docs/PUBLISHING.md", "research/fixtures/catalogue-verification.json"]:
+                     "docs/PUBLISHING.md", "research/fixtures/catalogue-verification.json",
+                     *release.REQUIRED_CATALOGUE_PATHS]:
             self.assertIn("aperiodic-life/" + name, expected)
 
-    def test_site_is_only_the_offline_application_and_notices(self):
-        self.assertEqual({p.name for p in self.site.iterdir()},
-                         {"index.html", "LICENSE", "THIRD_PARTY_LICENSES.md", ".nojekyll"})
+    def test_site_includes_the_offline_application_notices_and_catalogue(self):
+        catalogue_files = {name: path for name, path, _ in release.source_files()
+                           if name.startswith(release.CATALOGUE_ROOT)}
+        self.assertEqual({p.relative_to(self.site).as_posix() for p in self.site.rglob("*")
+                          if p.is_file()},
+                         {"index.html", "LICENSE", "THIRD_PARTY_LICENSES.md", ".nojekyll",
+                          *catalogue_files})
         self.assertEqual((self.site / "index.html").read_bytes(),
                          (release.ROOT / "aperiodic-life-standalone.html").read_bytes())
         for name in ["LICENSE", "THIRD_PARTY_LICENSES.md"]:
             self.assertEqual((self.site / name).read_bytes(), (release.ROOT / name).read_bytes())
+        for name, source in catalogue_files.items():
+            self.assertEqual((self.site / name).read_bytes(), source.read_bytes(), name)
+        self.assertTrue((self.site / release.REQUIRED_CATALOGUE_PATHS[0]).read_bytes().startswith(b"%PDF-"))
 
     def test_outputs_cannot_overlap_the_checkout_or_replace_existing_files(self):
         for directory in [release.ROOT, release.ROOT / "new-site", release.ROOT.parent]:

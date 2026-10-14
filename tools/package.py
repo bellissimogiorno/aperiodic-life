@@ -15,12 +15,27 @@ import tempfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = "3.7.3"
+VERSION = "3.7.4"
 ARCHIVE_ROOT = "aperiodic-life"
 STANDALONE_NAME = f"aperiodic-life-{VERSION}.html"
 SOURCE_ZIP_NAME = f"aperiodic-life-source-{VERSION}.zip"
 MANIFEST_NAME = f"aperiodic-life-source-{VERSION}.manifest.json"
 CHECKSUM_NAME = f"aperiodic-life-{VERSION}.sha256"
+CATALOGUE_ROOT = "docs/catalogue/"
+REQUIRED_CATALOGUE_PATHS = (
+    CATALOGUE_ROOT + "aperiodic-life-catalogue.pdf",
+    CATALOGUE_ROOT + "catalogue.md",
+    CATALOGUE_ROOT + "build_catalogue.py",
+    CATALOGUE_ROOT + "README.md",
+    CATALOGUE_ROOT + "catalogue-source.json",
+    CATALOGUE_ROOT + "geometry/diagrams.json",
+    CATALOGUE_ROOT + "requirements.txt",
+    CATALOGUE_ROOT + "fonts/LICENCE.txt",
+    *(CATALOGUE_ROOT + "fonts/" + name for name in (
+        "DejaVuSans.ttf", "DejaVuSans-Bold.ttf", "DejaVuSansMono.ttf",
+        "DejaVuSerif.ttf", "DejaVuSerif-Bold.ttf",
+    )),
+)
 # ZIP's earliest timestamp avoids dependence on source mtimes or build dates.
 STAMP = (1980, 1, 1, 0, 0, 0)
 EXECUTABLE_SOURCE_PATHS = {
@@ -204,10 +219,22 @@ def require_current_standalone() -> None:
         raise RuntimeError(f"standalone bundle is missing or out of date: {detail}")
 
 
+def require_catalogue() -> None:
+    """Require the distributed catalogue and its editable source before staging."""
+    missing = [name for name in REQUIRED_CATALOGUE_PATHS
+               if not (ROOT / name).is_file() or not (ROOT / name).stat().st_size]
+    if missing:
+        raise RuntimeError(f"missing catalogue release files: {missing}")
+    with (ROOT / REQUIRED_CATALOGUE_PATHS[0]).open("rb") as source:
+        if source.read(5) != b"%PDF-":
+            raise RuntimeError("the catalogue release file is not a PDF")
+
+
 def build(output_dir: Path) -> dict[str, str]:
     output = validate_output_directory(output_dir)
     require_release_version()
     require_current_standalone()
+    require_catalogue()
     entries = source_snapshot()
     standalone = next(data for name, data, _ in entries if name == "aperiodic-life-standalone.html")
     manifest = source_manifest(entries)

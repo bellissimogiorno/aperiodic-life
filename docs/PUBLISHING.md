@@ -61,8 +61,8 @@ After uploading, open the repository and check that `README.md` renders, the sou
 
 ### Curated site through GitHub Actions
 
-The included **Deploy Pages (manual)** workflow publishes only the standalone
-application and licence files. It runs only when you request it:
+The included **Deploy Pages (manual)** workflow publishes the standalone
+application, licence files, and the full PDF catalogue with its editable source. It runs only when you request it:
 
 1. Open the repository's **Settings → Pages** and set **Source** to **GitHub Actions**.
 2. Open **Actions → Deploy Pages (manual) → Run workflow**.
@@ -80,7 +80,9 @@ python3 tools/build_site.py --output-dir ../aperiodic-life-site
 ```
 
 The output contains `index.html` with the complete application, licence files,
-and `.nojekyll`. Keep the output outside the source tree.
+`docs/catalogue/` with the PDF and editable source, and `.nojekyll`. The **About**
+links work at the same relative paths on the site and in the extracted release.
+Keep the output outside the source tree.
 
 ### Serve the root branch instead
 
@@ -91,9 +93,9 @@ Alternatively, GitHub can serve the source application directly from the reposit
 3. Select branch **main** and folder **/(root)**, then **Save**.
 4. Wait for deployment and open the URL shown by GitHub.
 
-The root `index.html` is the application entry point. Keep its accompanying `styles.css`, `core.js`, `discoveries.js`, and `app.js` at their relative paths. The included `.nojekyll` file requests plain static serving. The `docs/` directory contains project documentation and is not the application root. This branch-based alternative deploys subsequent changes to `main` automatically.
+The root `index.html` is the application entry point. Keep its accompanying `styles.css`, `core.js`, `discoveries.js`, and `app.js` at their relative paths, and keep `docs/catalogue/` for the **About** links. The included `.nojekyll` file requests plain static serving. The `docs/` directory contains project documentation and is not the application root. This branch-based alternative deploys subsequent changes to `main` automatically.
 
-Check a discovery, stepping, state-file save/load, and browser-console errors on the published site. The hosted page is fetched from GitHub Pages; the app itself has no backend or telemetry. A downloaded standalone still works offline.
+Check a discovery, stepping, state-file save/load, the **About → Open the full catalogue (PDF)** link, and browser-console errors on the published site. The hosted page is fetched from GitHub Pages; the app itself has no backend or telemetry. A downloaded standalone still works offline.
 
 ## Later changes and release files
 
@@ -125,7 +127,7 @@ Use [release operations](OPERATIONS.md) to rebuild and verify the standalone and
 For a clean repository ZIP, excluding Git internals and local build artefacts:
 
 ```bash
-python3 tools/export_repository.py --output ../aperiodic-life-source-3.7.3.zip
+python3 tools/export_repository.py --output ../aperiodic-life-source-3.7.4.zip
 ```
 
 To obtain release downloads from GitHub, manually run **Actions → CI → Run workflow**

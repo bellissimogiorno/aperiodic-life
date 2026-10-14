@@ -23,6 +23,7 @@ def export_repository(output: Path) -> Path:
         raise FileExistsError(f"output already exists: {output}")
     release.require_release_version()
     release.require_current_standalone()
+    release.require_catalogue()
     files = release.source_files()
     required = {
         "README.md", "LICENSE", "THIRD_PARTY_LICENSES.md", "CONTRIBUTING.md",

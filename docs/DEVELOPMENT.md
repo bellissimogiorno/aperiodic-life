@@ -19,6 +19,8 @@ The catalogue contains **89 configurations** covering classic square patterns, h
 
 Each entry supplies a playback speed and view policy. On narrow layouts, a successful load closes the controls drawer to expose the canvas. An unsuccessful load keeps the controls available with an error message.
 
+The [full PDF catalogue](catalogue/aperiodic-life-catalogue.pdf) covers every curated configuration, its complete rule-set, evidence, and source credit. Open **About** at the bottom of the controls to find the catalogue, author credit, version, and release date. [Editable catalogue source and rebuilding instructions](catalogue/README.md) are included.
+
 The [rule survey](RULE_SURVEY.md) explains the catalogue's scientific claims. The [oscillator atlas](../research/figures/oscillator-atlas.svg) shows selected exact phases.
 
 ## View and playback
@@ -82,6 +84,7 @@ State files include graph fingerprints to detect accidental geometry or tile-ord
 | `app.js` | WebGL2 rendering, input, playback, and state exchange |
 | `build-standalone.js` | Reproducible standalone builder |
 | `research/` | Search tools, replay fixtures, and generated figures |
+| `docs/catalogue/` | Full PDF catalogue, editable source, data, diagrams, and PDF builder |
 | `tools/` | Development, release, repository-export, and site helpers |
 | `.github/` | Contribution templates and workflows |
 

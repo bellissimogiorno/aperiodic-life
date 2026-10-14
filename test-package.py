@@ -31,6 +31,8 @@ class PackageTest(unittest.TestCase):
             destination = cls.source / name
             destination.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(release.ROOT / name, destination)
+        shutil.copytree(release.ROOT / "docs/catalogue", cls.source / "docs/catalogue",
+                        ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
         subprocess.run(["node", "build-standalone.js"], cwd=cls.source, check=True,
                        stdout=subprocess.PIPE, text=True)
         cls.root_patch = patch.object(release, "ROOT", cls.source)
@@ -46,9 +48,9 @@ class PackageTest(unittest.TestCase):
         cls.temporary.cleanup()
 
     def test_versioned_output_contract_and_determinism(self):
-        self.assertEqual(release.VERSION, "3.7.3")
-        expected = {"aperiodic-life-3.7.3.html", "aperiodic-life-source-3.7.3.zip",
-                    "aperiodic-life-source-3.7.3.manifest.json", "aperiodic-life-3.7.3.sha256"}
+        self.assertEqual(release.VERSION, "3.7.4")
+        expected = {"aperiodic-life-3.7.4.html", "aperiodic-life-source-3.7.4.zip",
+                    "aperiodic-life-source-3.7.4.manifest.json", "aperiodic-life-3.7.4.sha256"}
         self.assertEqual(set(self.first_result), expected)
         self.assertEqual({path.name for path in self.first.iterdir()}, expected)
         self.assertEqual(self.first_result, self.second_result)
@@ -110,6 +112,29 @@ class PackageTest(unittest.TestCase):
                 self.assertFalse(destination.exists())
             finally:
                 path.write_bytes(before)
+
+    def test_missing_or_invalid_catalogue_fails_before_output(self):
+        for index, name in enumerate(release.REQUIRED_CATALOGUE_PATHS):
+            path = self.source / name
+            before = path.read_bytes()
+            destination = self.base / f"missing-catalogue-{index}"
+            try:
+                path.unlink()
+                with self.assertRaisesRegex(RuntimeError, "missing catalogue release files"):
+                    release.build(destination)
+                self.assertFalse(destination.exists())
+            finally:
+                path.write_bytes(before)
+        pdf = self.source / release.REQUIRED_CATALOGUE_PATHS[0]
+        before = pdf.read_bytes()
+        destination = self.base / "invalid-catalogue"
+        try:
+            pdf.write_text("not a PDF\n")
+            with self.assertRaisesRegex(RuntimeError, "not a PDF"):
+                release.build(destination)
+            self.assertFalse(destination.exists())
+        finally:
+            pdf.write_bytes(before)
 
     def test_no_output_overlaps_or_replaces_existing_data(self):
         for directory in [self.source, self.source / "output", self.source.parent, self.first]:

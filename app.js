@@ -799,6 +799,7 @@
       e.saveButton.addEventListener('click', () => this.savePNG());
       e.copyButton.addEventListener('click', () => this.copyConfig());
       e.aboutButton.addEventListener('click', () => e.aboutDialog.showModal());
+      e.aboutDialog.addEventListener('close', () => e.aboutButton.focus({ preventScroll: true }));
       e.neighborhoodInfoButton.addEventListener('click', () => e.rulesDialog.showModal());
       e.ruleInfoButton.addEventListener('click', () => e.rulesDialog.showModal());
       e.openControls.addEventListener('click', () => {

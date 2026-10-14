@@ -81,7 +81,7 @@ Direct acceptance remains necessary for target browser/GPU combinations. Check t
 
 Static checks require the four tilings, the complete catalogue, discovery and help controls, complete MIT and BSD notices, and absence of external runtime scripts or styles. `node build-standalone.js --check` requires the checked-in standalone to match the expanded source.
 
-`test-package.py` and `test-repository.py` cover deterministic archives, source completeness, safe paths, file exclusions, integrity metadata, standalone freshness, output-path rejection, and the static-site payload. Both run in the standard profile. See [release operations](OPERATIONS.md) for packaging and [CI](CI.md) for hosted workflows.
+`test-package.py` and `test-repository.py` cover deterministic archives, source completeness, safe paths, file exclusions, integrity metadata, standalone freshness, output-path rejection, and the static-site payload, including the PDF catalogue and its source files. They require those catalogue assets to be present and preserve them byte-for-byte in archives and the staged site. Both run in the standard profile. See [release operations](OPERATIONS.md) for packaging and [CI](CI.md) for hosted workflows.
 
 Record the commands, runtimes, and outcomes for a release. Report unavailable prerequisites separately from passing checks; automated local checks do not imply a successful hosted workflow or browser run.
 

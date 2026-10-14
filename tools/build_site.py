@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage the standalone and licence notices for a static host such as GitHub Pages."""
+"""Stage the application, notices and catalogue for a static host."""
 from __future__ import annotations
 
 import argparse
@@ -23,6 +23,9 @@ def build_site(output: Path) -> Path:
         raise ValueError("site output directory must be new or empty")
     release.require_release_version()
     release.require_current_standalone()
+    release.require_catalogue()
+    catalogue_files = [(name, path, mode) for name, path, mode in release.source_files()
+                       if name.startswith(release.CATALOGUE_ROOT)]
     output.mkdir(parents=True, exist_ok=True)
     for source, target in [
         ("aperiodic-life-standalone.html", "index.html"),
@@ -30,9 +33,12 @@ def build_site(output: Path) -> Path:
         ("THIRD_PARTY_LICENSES.md", "THIRD_PARTY_LICENSES.md"),
     ]:
         release.copy_file(root / source, output / target)
+    for name, path, mode in catalogue_files:
+        release.copy_file(path, output / name, mode)
     release.write_text(output / ".nojekyll", "")
     print(json.dumps({"directory": str(output), "version": release.VERSION,
-                      "files": sorted(p.name for p in output.iterdir())}, indent=2))
+                      "files": sorted(p.relative_to(output).as_posix()
+                                      for p in output.rglob("*") if p.is_file())}, indent=2))
     return output
 
 

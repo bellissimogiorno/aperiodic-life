@@ -1,6 +1,6 @@
 # Third-party attribution
 
-Individual pattern credits, source links, and the distinction between published examples and package-found configurations are recorded for all 81 entries in [Catalogue credits and provenance](docs/CATALOGUE_CREDITS.md). Preserve those records when redistributing the catalogue. Scientific credit is separate from the software licence notices below.
+Individual pattern credits, source links, and the distinction between published examples and package-found configurations are recorded for all 89 entries in [Catalogue credits and provenance](docs/CATALOGUE_CREDITS.md). Preserve those records when redistributing the catalogue. Scientific credit is separate from the software licence notices below.
 
 ## Einstein hat geometry
 
@@ -130,3 +130,7 @@ and search code were written for this project; no forum or Golly simulator
 implementation is included. Preserve these pattern credits when redistributing
 the catalogue. The project does not claim original authorship of the published
 patterns or assign a separate software licence to their mathematical facts.
+
+## Catalogue fonts
+
+The full PDF catalogue and its build source use bundled [DejaVu fonts](https://dejavu-fonts.github.io/). The original Bitstream Vera fonts carry the Bitstream Vera licence; the DejaVu changes are in the public domain. The complete supplied copyright and permission notice is retained in [`docs/catalogue/fonts/LICENCE.txt`](docs/catalogue/fonts/LICENCE.txt). Preserve that notice with the bundled font files. These fonts are used for the separate catalogue and are not runtime dependencies of the application.

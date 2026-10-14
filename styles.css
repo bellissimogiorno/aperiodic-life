@@ -67,6 +67,7 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 
 .button-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .wide-button { width: 100%; margin-bottom: 9px; }
+.about-button { width: 100%; min-height: 44px; margin-top: 8px; }
 .discovery-actions { margin-bottom: 9px; }
 .discovery-note { margin: 0; color: var(--muted); font-size: 0.8rem; line-height: 1.45; }
 .discovery-provenance { margin: 8px 0 0; color: var(--muted); font-size: 0.76rem; line-height: 1.45; overflow-wrap: anywhere; }
@@ -176,6 +177,21 @@ dialog h2 { margin: 0 0 14px; font-size: 1.5rem; }
 dialog p { color: #b9ccd4; line-height: 1.55; }
 dialog code { color: var(--accent); }
 .dialog-close { position: absolute; right: 14px; top: 14px; width: 36px; min-height: 36px; padding: 0; font-size: 1.4rem; }
+.about-dialog { width: min(680px, calc(100% - 32px)); max-height: calc(100% - 32px); max-height: calc(100dvh - 32px); }
+.about-dialog form { max-height: inherit; overflow-y: auto; overscroll-behavior: contain; }
+.about-dialog h2 { padding-right: 40px; }
+.about-dialog button { min-height: 44px; }
+.about-dialog .dialog-close { width: 44px; min-height: 44px; }
+.about-dialog a { color: var(--accent); text-underline-offset: 3px; }
+.about-dialog a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.about-dialog .release-details { margin-top: -6px; color: var(--muted); font-size: 0.9rem; }
+.about-catalogue { margin: 20px 0; padding: 18px; border: 1px solid #315061; border-radius: 9px; background: #10232f; }
+.about-catalogue h3 { margin: 0 0 8px; font-size: 1.05rem; }
+.about-catalogue p { margin: 0 0 12px; }
+.about-catalogue p:last-child { margin-bottom: 0; }
+.catalogue-links a { display: inline-block; padding: 7px 0; }
+.catalogue-pdf-link { font-weight: 800; }
+.about-catalogue .catalogue-offline-note { font-size: 0.85rem; }
 .rules-dialog { width: min(680px, calc(100% - 32px)); max-height: min(820px, calc(100% - 32px)); }
 .rules-dialog form { max-height: inherit; overflow-y: auto; overscroll-behavior: contain; }
 .rules-dialog section { padding: 15px 0 4px; border-top: 1px solid var(--line); }

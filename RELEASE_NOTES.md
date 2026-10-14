@@ -1,8 +1,15 @@
-# Aperiodic Life 3.7.3
+# Aperiodic Life 3.7.4
+
+Release date: **14 October 2026**.
 
 Aperiodic Life is an offline browser laboratory for cellular automata on square, hexagonal, Einstein-hat, and Penrose tilings.
 
 ## Included features
+
+- A [full illustrated PDF catalogue](docs/catalogue/aperiodic-life-catalogue.pdf) of all 89 curated configurations and all 12 named rule templates, with complete rule definitions, uniquely labelled rule-sets, reproducible seeds, verification limits, and individual provenance.
+- Catalogue documentation revision 2 adds the authorship statement “AI generated following prompts by Murdoch J. Gabbay”, named parent works for adaptations, precise linked citations, and dated originality statements. The release version remains 3.7.4.
+- Editable [catalogue source and rebuild instructions](docs/catalogue/README.md), included with the Python PDF builder, structured data, and figures.
+- An **About** button at the bottom of the controls with author credit, release date, version, and links to the catalogue and its editable source. Both branch-based Pages hosting and the curated Pages build include the catalogue.
 
 - Four geometry backends with shared-edge and edge-or-corner contact graphs.
 - Synchronous `B/S` rules with binary or refractory multistate evolution, plus named priority tables whose higher states influence neighbours.

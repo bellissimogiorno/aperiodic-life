@@ -1,0 +1,459 @@
+{
+  "date": "2026-10-14",
+  "squareMethod": "Independent sparse unbounded Moore-neighbour model and independent fixed-square-boundary control.",
+  "hexMethod": "Integer-axial reference; full-state returns, all-phase rotations, wall reunion and emission separation certificates.",
+  "results": [
+    {
+      "id": "square-block",
+      "horizon": 1,
+      "firstCycle": {
+        "period": 1,
+        "translation": [
+          0,
+          0
+        ]
+      },
+      "firstExtinct": null,
+      "firstFiniteBoardDifference": null,
+      "infiniteFinalPopulation": 4,
+      "finiteFinalPopulation": 4
+    },
+    {
+      "id": "square-blinker",
+      "horizon": 2,
+      "firstCycle": {
+        "period": 2,
+        "translation": [
+          0,
+          0
+        ]
+      },
+      "firstExtinct": null,
+      "firstFiniteBoardDifference": null,
+      "infiniteFinalPopulation": 3,
+      "finiteFinalPopulation": 3
+    },
+    {
+      "id": "square-pulsar",
+      "horizon": 3,
+      "firstCycle": {
+        "period": 3,
+        "translation": [
+          0,
+          0
+        ]
+      },
+      "firstExtinct": null,
+      "firstFiniteBoardDifference": null,
+      "infiniteFinalPopulation": 48,
+      "finiteFinalPopulation": 48
+    },
+    {
+      "id": "square-pentadecathlon",
+      "horizon": 15,
+      "firstCycle": {
+        "period": 15,
+        "translation": [
+          0,
+          0
+        ]
+      },
+      "firstExtinct": null,
+      "firstFiniteBoardDifference": null,
+      "infiniteFinalPopulation": 12,
+      "finiteFinalPopulation": 12
+    },
+    {
+      "id": "square-glider",
+      "horizon": 4,
+      "firstCycle": {
+        "period": 4,
+        "translation": [
+          1,
+          1
+        ]
+      },
+      "firstExtinct": null,
+      "firstFiniteBoardDifference": null,
+      "infiniteFinalPopulation": 5,
+      "finiteFinalPopulation": 5
+    },
+    {
+      "id": "square-lwss",
+      "horizon": 4,
+      "firstCycle": {
+        "period": 4,
+        "translation": [
+          -2,
+          0
+        ]
+      },
+      "firstExtinct": null,
+      "firstFiniteBoardDifference": null,
+      "infiniteFinalPopulation": 9,
+      "finiteFinalPopulation": 9
+    },
+    {
+      "id": "square-highlife-replicator",
+      "horizon": 12,
+      "firstCycle": null,
+      "firstExtinct": null,
+      "firstFiniteBoardDifference": null,
+      "infiniteFinalPopulation": 24,
+      "finiteFinalPopulation": 24,
+      "replication": {
+        "steps": 12,
+        "translations": [
+          [
+            -2,
+            -2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "copies": 2
+      }
+    },
+    {
+      "id": "square-diehard",
+      "horizon": 130,
+      "firstCycle": null,
+      "firstExtinct": 130,
+      "firstFiniteBoardDifference": null,
+      "infiniteFinalPopulation": 0,
+      "finiteFinalPopulation": 0
+    },
+    {
+      "id": "square-r-pentomino",
+      "horizon": 1103,
+      "firstCycle": null,
+      "firstExtinct": null,
+      "firstFiniteBoardDifference": 641,
+      "infiniteFinalPopulation": 116,
+      "finiteFinalPopulation": 111
+    },
+    {
+      "id": "square-acorn",
+      "horizon": 5206,
+      "firstCycle": null,
+      "firstExtinct": null,
+      "firstFiniteBoardDifference": 812,
+      "infiniteFinalPopulation": 633,
+      "finiteFinalPopulation": 620
+    },
+    {
+      "id": "hex-b2s35-p5-traveller",
+      "kind": "spaceship",
+      "period": 5,
+      "transient": 0,
+      "translation": [
+        1,
+        0
+      ],
+      "liveRange": [
+        10,
+        18
+      ],
+      "activeRange": [
+        10,
+        18
+      ],
+      "rotation": null,
+      "repair": null
+    },
+    {
+      "id": "hex-b245s3-p10-traveller",
+      "kind": "spaceship",
+      "period": 10,
+      "transient": 0,
+      "translation": [
+        2,
+        0
+      ],
+      "liveRange": [
+        9,
+        18
+      ],
+      "activeRange": [
+        9,
+        18
+      ],
+      "rotation": null,
+      "repair": null
+    },
+    {
+      "id": "hex-b235s146-c4-launcher-traveller",
+      "kind": "spaceship",
+      "period": 10,
+      "transient": 21,
+      "translation": [
+        -5,
+        0
+      ],
+      "liveRange": [
+        6,
+        12
+      ],
+      "activeRange": [
+        13,
+        27
+      ],
+      "rotation": null,
+      "repair": null
+    },
+    {
+      "id": "hex-b235s134-c5-launcher-traveller",
+      "kind": "spaceship",
+      "period": 4,
+      "transient": 58,
+      "translation": [
+        2,
+        0
+      ],
+      "liveRange": [
+        4,
+        5
+      ],
+      "activeRange": [
+        8,
+        10
+      ],
+      "rotation": null,
+      "repair": null
+    },
+    {
+      "id": "hex-b245s35-p25-traveller",
+      "kind": "spaceship",
+      "period": 25,
+      "transient": 0,
+      "translation": [
+        1,
+        1
+      ],
+      "liveRange": [
+        9,
+        24
+      ],
+      "activeRange": [
+        9,
+        24
+      ],
+      "rotation": null,
+      "repair": null
+    },
+    {
+      "id": "hex-b2s34-p48-rotor",
+      "kind": "oscillator",
+      "period": 48,
+      "transient": 0,
+      "translation": [
+        0,
+        0
+      ],
+      "liveRange": [
+        6,
+        16
+      ],
+      "activeRange": [
+        6,
+        16
+      ],
+      "rotation": {
+        "interval": 24,
+        "rotation60Steps": 3,
+        "translation": [
+          4,
+          -1
+        ],
+        "centreAxial": [
+          [
+            2,
+            1
+          ],
+          [
+            -1,
+            2
+          ]
+        ],
+        "verifiedPhases": 48
+      },
+      "repair": null
+    },
+    {
+      "id": "hex-b246s246-c4-p30-gun",
+      "type": "gun",
+      "emissionPeriod": 30,
+      "groupsPerEmission": 3,
+      "velocities": [
+        [
+          20,
+          -10
+        ],
+        [
+          -10,
+          -10
+        ],
+        [
+          -10,
+          20
+        ]
+      ],
+      "separationChecks": 270,
+      "minimumProjectionGap": 7
+    },
+    {
+      "id": "hex-b25s34-p20-puffer",
+      "type": "puffer",
+      "emissionPeriod": 20,
+      "translation": [
+        0,
+        10
+      ],
+      "debrisPeriod": 2,
+      "debrisPopulation": 4,
+      "separationChecks": 40,
+      "minimumProjectionGap": 3
+    },
+    {
+      "id": "hex-b2s1-c3-p999-rotor",
+      "kind": "oscillator",
+      "period": 999,
+      "transient": 0,
+      "translation": [
+        0,
+        0
+      ],
+      "liveRange": [
+        11,
+        80
+      ],
+      "activeRange": [
+        21,
+        129
+      ],
+      "rotation": {
+        "interval": 333,
+        "rotation60Steps": 4,
+        "translation": [
+          10,
+          3
+        ],
+        "centreAxial": [
+          [
+            23,
+            3
+          ],
+          [
+            -7,
+            3
+          ]
+        ],
+        "verifiedPhases": 999
+      },
+      "repair": null
+    },
+    {
+      "id": "hex-b23s4-p13-traveller",
+      "kind": "spaceship",
+      "period": 13,
+      "transient": 0,
+      "translation": [
+        1,
+        1
+      ],
+      "liveRange": [
+        8,
+        15
+      ],
+      "activeRange": [
+        8,
+        15
+      ],
+      "rotation": null,
+      "repair": null
+    },
+    {
+      "id": "hex-b2s1-c3-p158-traveller",
+      "kind": "spaceship",
+      "period": 158,
+      "transient": 0,
+      "translation": [
+        -11,
+        22
+      ],
+      "liveRange": [
+        14,
+        73
+      ],
+      "activeRange": [
+        24,
+        126
+      ],
+      "rotation": null,
+      "repair": null
+    },
+    {
+      "id": "hex-b2s34-wall-repair",
+      "kind": "oscillator",
+      "period": 5,
+      "transient": 44,
+      "translation": [
+        0,
+        0
+      ],
+      "liveRange": [
+        63,
+        73
+      ],
+      "activeRange": [
+        63,
+        73
+      ],
+      "rotation": null,
+      "repair": {
+        "firstExactMatch": 44,
+        "resultingSupport": 73
+      }
+    },
+    {
+      "id": "hex-b2s34-p2044-billiard",
+      "kind": "oscillator",
+      "period": 2044,
+      "transient": 0,
+      "translation": [
+        0,
+        0
+      ],
+      "liveRange": [
+        146,
+        198
+      ],
+      "activeRange": [
+        146,
+        198
+      ],
+      "rotation": {
+        "interval": 1022,
+        "rotation60Steps": 3,
+        "translation": [
+          0,
+          0
+        ],
+        "centreAxial": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "verifiedPhases": 2044
+      },
+      "repair": null
+    }
+  ]
+}

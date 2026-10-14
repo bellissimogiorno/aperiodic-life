@@ -79,7 +79,7 @@ The build job reruns the standard profile and executes:
 python3 tools/build_site.py --output-dir "$RUNNER_TEMP/aperiodic-life-site"
 ```
 
-Only that curated static directory is uploaded. A separate job deploys it through the `github-pages` environment. Repository environment protection rules apply. The workflow exposes the resulting URL through the deployment environment. Commits and pull requests do not trigger publication.
+That curated static directory includes the application, notices, and `docs/catalogue/` with the PDF and editable source. Only that directory is uploaded. A separate job deploys it through the `github-pages` environment. Repository environment protection rules apply. The workflow exposes the resulting URL through the deployment environment. Commits and pull requests do not trigger publication.
 
 ## Permissions and action updates
 
