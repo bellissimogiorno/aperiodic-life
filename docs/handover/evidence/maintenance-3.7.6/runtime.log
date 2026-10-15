@@ -1,0 +1,3 @@
+{"standaloneBytes":381235,"tilings":["square","hex","hat","penrose"],"embeddedRuntimeAssets":true,"curatedDiscoveries":89,"requiredNotices":["MIT","BSD-3-Clause"],"externalRuntimeRequests":0}
+fresh Randomise and seeded replay, entropy fallback, focused arrow panning, example provenance, viewport bounds, discovery camera policy, manual overrides, pinch zoom, touch painting and pointer interaction checks passed
+{"roundTrips":14,"continuationStepsPerRoundTrip":20,"strictSchema":"passed","graphMismatch":"passed","lockedBorder":"passed","failurePreservesExperiment":"passed","catalogueSearch":"passed"}

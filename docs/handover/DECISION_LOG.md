@@ -1,6 +1,6 @@
 # Decision log
 
-**Updated:** 15 October 2026. **Application baseline:** 3.7.5. **Catalogue:** 3.7.4, revision 2.
+**Updated:** 15 October 2026. **Application baseline:** 3.7.6. **Catalogue:** 3.7.4, revision 2.
 
 This is a reconstruction from the visible discussion and the current project, not a dated commit history. `User requirement` marks an explicit request; `Implementation choice` marks the method used to meet it; `Evidence constraint` marks a conclusion imposed by the current records. Active decisions should be retained unless a later user instruction or new evidence justifies a change. Append superseding decisions rather than silently deleting the reason for an earlier choice.
 
@@ -10,7 +10,7 @@ This is a reconstruction from the visible discussion and the current project, no
 | DEC-02 | **User requirement:** GitHub-ready open source and immediate browser use (REQ-03/08). **Implementation choice:** modular sources plus a checked single-file build. | Makes the same application easy to run and maintain without npm installation. | Implemented. Preserve offline operation and licences when changing the build. |
 | DEC-03 | **User requirement:** UK spelling (REQ-04). | Consistent public presentation. | Active. Do not rename standard API fields or alter cited titles/licence text solely for spelling. |
 | DEC-04 | **User requirement:** a fresh release without historical files (REQ-05). **Implementation choice:** retain only the current project and evidence supporting it. | Eliminates obsolete artefacts while keeping reproducibility. | Active. This newly requested decision log is intentional documentation, not an old release bundle. |
-| DEC-05 | **User requirement:** deliberate version changes; later explicit bump requests superseded earlier retention requests (REQ-06). **Implementation choice:** release app 3.7.5 and retain the reviewed 3.7.4 catalogue revision 2. | The Randomise fix changes app behaviour; the scientific catalogue is unchanged. | Updated 15 October 2026. Application and catalogue versions are recorded separately. |
+| DEC-05 | **User requirement:** deliberate version changes; later explicit bump requests superseded earlier retention requests (REQ-06). **Implementation choice:** release app 3.7.6 and retain the reviewed 3.7.4 catalogue revision 2. | The Randomise fix changes app behaviour; the scientific catalogue is unchanged. | Updated 15 October 2026. Application and catalogue versions are recorded separately. |
 | DEC-06 | **User requirement:** exact opening README credit and robust disclaimer (REQ-07). | Establishes authorship, welcomes patches and states the supplied terms. | Implemented in README/LICENSE. Retain wording and third-party notices. |
 | DEC-07 | **User requirement:** public run URL in two README locations (REQ-08). | Readers can use the app immediately and understand GitHub source view versus a hosted webpage. | Implemented. The live deployment may differ from the packaged snapshot; hosting was not changed for this handover. |
 | DEC-08 | **User requirement:** curated configurations first, with both load actions (REQ-09). | Examples become discoverable and can be inspected before running. | Implemented. Preserve source/credit display and paused Load semantics. |
@@ -39,3 +39,5 @@ No choice of a new search horizon, new rule family, Spectre geometry implementat
 - **DEC-23 — Verification:** run the available simulation, topology, large-patch, interaction and packaging checks; record unavailable browser prerequisites as limitations, not passes. Preserve earlier dated evidence as historical evidence.
 
 - **DEC-24 — Canvas keyboard navigation:** arrow keys pan the viewed area in the named direction only while the canvas has focus; each step is 40 CSS pixels, or 120 with Shift. A click or Tab focuses the canvas. Manual keyboard panning disables automatic discovery framing like other manual navigation. Form controls and modal dialogs keep their keyboard behaviour.
+
+- **DEC-25 — Versioned source assets:** the source entry point requests CSS and JavaScript with `?v=3.7.6`, checked against `VERSION` during the standalone build. This prevents a new source page from reusing previously cached unversioned scripts. Do not add an alias that allows old JavaScript to silently bind its old behaviour to the new Apply seed control. The actual element collector is checked against source and standalone HTML; external browser/deployment state remains unverified.

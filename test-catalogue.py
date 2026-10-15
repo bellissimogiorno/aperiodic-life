@@ -17,12 +17,12 @@ spec.loader.exec_module(catalogue)
 class CatalogueTest(unittest.TestCase):
     def test_reviewed_catalogue_validates_against_current_application(self):
         self.assertEqual(catalogue.VERSION, "3.7.4")
-        self.assertEqual((catalogue.ROOT / "VERSION").read_text().strip(), "3.7.5")
+        self.assertEqual((catalogue.ROOT / "VERSION").read_text().strip(), "3.7.6")
         self.assertEqual(catalogue.SOURCE["documentationRevision"], 2)
         catalogue.validate()
 
     def test_version_compatibility_is_limited_to_later_application_patches(self):
-        for application in ["3.7.4", "3.7.5", "3.7.10"]:
+        for application in ["3.7.4", "3.7.5", "3.7.6", "3.7.10"]:
             catalogue.validate_catalogue_version("3.7.4", application)
         for application in ["3.7.3", "3.6.99", "3.8.0", "4.0.0", "3.07.5", "3.7", None]:
             with self.subTest(application=application), self.assertRaises(ValueError):

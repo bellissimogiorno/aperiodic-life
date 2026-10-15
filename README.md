@@ -6,7 +6,7 @@ This package was vibe-coded by Murdoch J. Gabbay. I hope you find it useful and 
 
 Explore cellular automata on **square, hexagonal, Einstein-hat, and Penrose tilings**. Each tile is one cell. Change the rules, paint a seed, and watch patterns evolve on periodic and aperiodic boards.
 
-Aperiodic Life 3.7.5 runs offline in a WebGL2-capable browser and includes **89 verified examples**. No installation or npm dependencies are needed to use it. You can also run it immediately in your browser at [https://bellissimogiorno.github.io/aperiodic-life/](https://bellissimogiorno.github.io/aperiodic-life/).
+Aperiodic Life 3.7.6 runs offline in a WebGL2-capable browser and includes **89 verified examples**. No installation or npm dependencies are needed to use it. You can also run it immediately in your browser at [https://bellissimogiorno.github.io/aperiodic-life/](https://bellissimogiorno.github.io/aperiodic-life/).
 
 ![Einstein-hat glider and launcher phases rendered from exact simulation states](research/figures/hat-gliders.svg)
 
@@ -28,6 +28,8 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 Open [http://127.0.0.1:8000/index.html](http://127.0.0.1:8000/index.html). This also works when browser policy prevents opening local HTML files directly.
 
+If an updated site reports a missing interface element (for example `#newSeedButton`), refresh with **Ctrl+Shift+R** (or **Cmd+Shift+R** on macOS) after replacing the complete source set. This indicates mismatched interface and script versions. Release 3.7.6 versions all source asset URLs so a new page does not reuse the previous release’s cached scripts. The self-contained HTML and the curated Pages build embed the runtime in one file.
+
 ## Explore
 
 - Search **Curated configurations** at the top of the controls by tiling, rule, name, or credited author. Each selection shows its credit and source links. **Load** prepares an example paused; **Load & run** starts it immediately.
@@ -47,7 +49,7 @@ Rules use `B…/S…` notation, such as Conway's `B3/S23`. Additional cell state
 
 The [full illustrated catalogue](docs/catalogue/aperiodic-life-catalogue.pdf) covers **all 89 curated configurations and all 12 named rule templates**. Each configuration records its complete rule-set, neighbourhood, state count, seed, verification limits, and provenance. Unique linked rule labels lead to a plain-language notation guide and complete rule register. Known patterns name their sources; package-found patterns are marked as such, with historical originality distinguished from independent discovery.
 
-The reviewed catalogue remains version **3.7.4, documentation revision 2 (14 October 2026)**; release 3.7.5 changes randomisation and keyboard controls without changing its patterns or rules. It is **AI generated following prompts by Murdoch J. Gabbay**. Adaptations name their parent work and the change; originality statements specify the scope and date of the literature review.
+The reviewed catalogue remains version **3.7.4, documentation revision 2 (14 October 2026)**; releases 3.7.5–3.7.6 change randomisation, keyboard and asset-loading behaviour without changing its patterns or rules. It is **AI generated following prompts by Murdoch J. Gabbay**. Adaptations name their parent work and the change; originality statements specify the scope and date of the literature review.
 
 The [editable Markdown source](docs/catalogue/catalogue.md), structured data, figures, and [Python PDF builder](docs/catalogue/build_catalogue.py) are included in the repository. See [catalogue source and rebuilding](docs/catalogue/README.md) for the exact dependencies and commands. Reading the supplied PDF needs no build tools.
 

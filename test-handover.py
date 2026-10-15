@@ -98,7 +98,7 @@ class HandoverTest(unittest.TestCase):
 
     def test_patch_release_preserves_reviewed_catalogue_and_its_download_names(self):
         manifest = json.loads((self.first / "MANIFEST.json").read_text())
-        self.assertEqual(manifest["version"], "3.7.5")
+        self.assertEqual(manifest["version"], "3.7.6")
         self.assertEqual(manifest["catalogueVersion"], "3.7.4")
         self.assertEqual(manifest["catalogueRevision"], 2)
         self.assertEqual(self.first_result["catalogueVersion"], "3.7.4")
@@ -111,13 +111,13 @@ class HandoverTest(unittest.TestCase):
             self.assertEqual(assets[key]["name"], filename)
             self.assertEqual(base64.b64decode(assets[key]["data"]), (self.first / source).read_bytes())
             self.assertEqual((self.first / source).read_bytes(), (self.source / source.removeprefix("source/")).read_bytes())
-        self.assertIn("Application 3.7.5; catalogue 3.7.4, revision 2", (self.first / "README.md").read_text())
+        self.assertIn("Application 3.7.6; catalogue 3.7.4, revision 2", (self.first / "README.md").read_text())
         self.assertIn("Catalogue 3.7.4, revision 2", (self.first / "START_HERE.html").read_text())
 
     def test_versions_allow_only_compatible_nonfuture_catalogues(self):
-        for version in ["3.7.0", "3.7.4", "3.7.5"]:
+        for version in ["3.7.0", "3.7.4", "3.7.5", "3.7.6"]:
             handover.require_catalogue_version(version)
-        for version in ["3.7.6", "3.6.99", "3.8.0", "4.0.0", "3.07.4", "3.7", "3.7.4-dev", "", None]:
+        for version in ["3.7.7", "3.6.99", "3.8.0", "4.0.0", "3.07.4", "3.7", "3.7.4-dev", "", None]:
             with self.subTest(version=version), self.assertRaises(ValueError):
                 handover.require_catalogue_version(version)
 
@@ -180,7 +180,7 @@ class HandoverTest(unittest.TestCase):
     def test_verifier_checks_versions_and_embedded_assets_beyond_checksums(self):
         root = self.copy_handover("changed-semantics")
         original = json.loads((root / "MANIFEST.json").read_text())
-        for key, value in [("version", "3.7.6"), ("catalogueVersion", "3.7.5"), ("catalogueRevision", 99)]:
+        for key, value in [("version", "3.7.7"), ("catalogueVersion", "3.7.5"), ("catalogueRevision", 99)]:
             manifest = json.loads(json.dumps(original))
             manifest[key] = value
             self.rewrite_manifest(root, manifest)
@@ -188,7 +188,7 @@ class HandoverTest(unittest.TestCase):
                 verifier["verify"](root)
         metadata_path = root / handover.CATALOGUE_METADATA
         metadata_bytes = metadata_path.read_bytes()
-        for version in ["3.6.99", "3.7.6", "3.8.0"]:
+        for version in ["3.6.99", "3.7.7", "3.8.0"]:
             manifest = json.loads(json.dumps(original))
             manifest["catalogueVersion"] = version
             metadata = json.loads(metadata_bytes)

@@ -9,7 +9,7 @@ AI generated following prompts by Murdoch J. Gabbay.
 Catalogue documentation revision 2, 14 October 2026, accompanies release 3.7.4.
 This revision names the source of each adaptation and separates direct sources
 from background literature, with linked rule identifiers and numbered references.
-Application release 3.7.5 retains this reviewed 3.7.4 catalogue, including its PDF,
+Application release 3.7.6 retains this reviewed 3.7.4 catalogue, including its PDF,
 editable prose, metadata, data and geometry. The application and catalogue
 versions are recorded separately in the handover manifest and download names.
 

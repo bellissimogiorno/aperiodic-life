@@ -1,0 +1,17 @@
+test_archive_paths_and_writes_are_safe (__main__.PackageTest.test_archive_paths_and_writes_are_safe) ... ok
+test_checksums_cover_all_other_deliverables (__main__.PackageTest.test_checksums_cover_all_other_deliverables) ... ok
+test_failed_preparation_leaves_destination_unchanged (__main__.PackageTest.test_failed_preparation_leaves_destination_unchanged) ... ok
+test_manifest_covers_every_source_member_and_permissions (__main__.PackageTest.test_manifest_covers_every_source_member_and_permissions) ... ok
+test_manifest_detects_tampering_omissions_and_duplicates (__main__.PackageTest.test_manifest_detects_tampering_omissions_and_duplicates) ... ok
+test_missing_or_invalid_catalogue_fails_before_output (__main__.PackageTest.test_missing_or_invalid_catalogue_fails_before_output) ... ok
+test_no_output_overlaps_or_replaces_existing_data (__main__.PackageTest.test_no_output_overlaps_or_replaces_existing_data) ... ok
+test_source_asset_urls_must_match_release (__main__.PackageTest.test_source_asset_urls_must_match_release) ... ok
+test_source_mtimes_and_permissions_do_not_change_output (__main__.PackageTest.test_source_mtimes_and_permissions_do_not_change_output) ... ok
+test_stale_standalone_and_wrong_version_fail_before_output (__main__.PackageTest.test_stale_standalone_and_wrong_version_fail_before_output) ... ok
+test_versioned_output_contract_and_determinism (__main__.PackageTest.test_versioned_output_contract_and_determinism) ... ok
+test_zip_verifier_rejects_symlinks (__main__.PackageTest.test_zip_verifier_rejects_symlinks) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 11.444s
+
+OK

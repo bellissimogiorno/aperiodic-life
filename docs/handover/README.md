@@ -1,8 +1,8 @@
 # Aperiodic Life: handover
 
-Prepared on **15 October 2026** for **Aperiodic Life 3.7.5**, with **complete catalogue revision 2**. AI generated following prompts by Murdoch J. Gabbay.
+Prepared on **15 October 2026** for **Aperiodic Life 3.7.6**, with **complete catalogue revision 2**. AI generated following prompts by Murdoch J. Gabbay.
 
-This handover preserves the current working project and the requirements established in the accompanying discussion. Release 3.7.5 fixes repeated Randomise actions, adds explicit seed replay, and adds arrow-key panning when the canvas has focus. The simulation rules, geometry, curated patterns and reviewed 3.7.4 catalogue remain unchanged. Earlier release archives, abandoned working copies and temporary search output are excluded. Exact curated seeds and the currently distributed evidence are retained, including their original dates. Some older raw soup-search archives referenced by provenance were inspected in an earlier workspace and are not included in the fresh release; this handover does not reconstruct those missing archives.
+This handover preserves the current working project and the requirements established in the accompanying discussion. Releases 3.7.5–3.7.6 fix repeated Randomise actions, add explicit seed replay and focused arrow-key panning, and version source asset URLs to prevent reuse of stale scripts after an update. The simulation rules, geometry, curated patterns and reviewed 3.7.4 catalogue remain unchanged. Earlier release archives, abandoned working copies and temporary search output are excluded. Exact curated seeds and the currently distributed evidence are retained, including their original dates. Some older raw soup-search archives referenced by provenance were inspected in an earlier workspace and are not included in the fresh release; this handover does not reconstruct those missing archives.
 
 ## Read these documents in order
 

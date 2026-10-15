@@ -45,6 +45,7 @@ PROFILES = {
         ["node", "test-hex-exhaustive-evidence.js"],
         ["node", "research/exhaustive-search/hat-broad/verify-rejections.js"],
         ["node", "test-static.js"],
+        ["node", "test-interface.js"],
         ["node", "build-standalone.js", "--check"],
         ["python3", "test-package.py"],
         ["python3", "test-repository.py"],

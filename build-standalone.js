@@ -85,6 +85,10 @@ function hasRawEndTag(source, elementName) {
 }
 
 function build() {
+  const version = read('VERSION');
+  if (!/^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$/.test(version)) {
+    throw new Error('VERSION must contain major.minor.patch');
+  }
   const css = read('styles.css');
   const core = read('core.js');
   const discoveries = read('discoveries.js');
@@ -103,7 +107,7 @@ function build() {
 
   html = replaceOnce(
     html,
-    '  <link rel="stylesheet" href="styles.css">',
+    `  <link rel="stylesheet" href="styles.css?v=${version}">`,
     `  <style>
 ${css}
   </style>`,
@@ -111,9 +115,9 @@ ${css}
   );
   html = replaceOnce(
     html,
-    `  <script src="core.js"></script>
-  <script src="discoveries.js"></script>
-  <script src="app.js"></script>`,
+    `  <script src="core.js?v=${version}"></script>
+  <script src="discoveries.js?v=${version}"></script>
+  <script src="app.js?v=${version}"></script>`,
     `  <script>
 ${core}
   </script>
@@ -126,7 +130,7 @@ ${app}
     'the runtime script block',
   );
 
-  if (/href="styles\.css"|src="(?:core|discoveries|app)\.js"/.test(html)) {
+  if (/href="styles\.css(?:\?[^"]*)?"|src="(?:core|discoveries|app)\.js(?:\?[^"]*)?"/.test(html)) {
     throw new Error('Failed to inline one or more source assets');
   }
 

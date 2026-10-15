@@ -1,0 +1,9 @@
+test_archive_is_deterministic_and_complete (__main__.RepositoryExportTest.test_archive_is_deterministic_and_complete) ... ok
+test_local_files_are_excluded_but_research_data_and_github_files_survive (__main__.RepositoryExportTest.test_local_files_are_excluded_but_research_data_and_github_files_survive) ... ok
+test_outputs_cannot_overlap_the_checkout_or_replace_existing_files (__main__.RepositoryExportTest.test_outputs_cannot_overlap_the_checkout_or_replace_existing_files) ... ok
+test_site_includes_the_offline_application_notices_and_catalogue (__main__.RepositoryExportTest.test_site_includes_the_offline_application_notices_and_catalogue) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 7.057s
+
+OK

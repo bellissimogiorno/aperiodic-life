@@ -1,6 +1,6 @@
 # Design brief
 
-**Baseline:** Aperiodic Life 3.7.5; retained catalogue 3.7.4, revision 2; 15 October 2026.
+**Baseline:** Aperiodic Life 3.7.6; retained catalogue 3.7.4, revision 2; 15 October 2026.
 
 ## Purpose and priorities
 
@@ -21,7 +21,7 @@ The quoted fragments below identify the relevant user requests. They preserve in
 | REQ-03 | Make an open-source project suitable for GitHub. | Include source, tests, documentation, research evidence, licences, standalone build, packaging and GitHub workflow files. `source/` in the handover is the repository root. |
 | REQ-04 | “Switch spelling to UK spelling throughout”. | Use UK spelling in prose and interface text: catalogue, behaviour, colour, neighbour, centre, initialise, licence. Preserve required API identifiers, URLs, quoted publication titles and verbatim third-party notices. |
 | REQ-05 | “Clean out all historical files. Present this … as a fresh release.” | Ship the current project, not old release ZIPs, superseded catalogues, backups or working directories. Keep evidence needed for current claims. The requested decision log records reasons, rather than bundling obsolete releases. |
-| REQ-06 | Keep versioning deliberate. The user first requested retention, later explicitly requested version bumps. | Current app version is 3.7.5, bumped for the Randomise fix. The reviewed catalogue remains 3.7.4, revision 2. Substantive future app releases should receive a deliberate version bump; do not reuse an old version merely for convenience. |
+| REQ-06 | Keep versioning deliberate. The user first requested retention, later explicitly requested version bumps. | Current app version is 3.7.6, following the Randomise fix and source-cache compatibility fix. The reviewed catalogue remains 3.7.4, revision 2. Substantive future app releases should receive a deliberate version bump; do not reuse an old version merely for convenience. |
 | REQ-07 | Begin the README with the requested Murdoch J. Gabbay credit, invitation for patches and a no-warranty/no-fitness/no-liability disclaimer. | Preserve the exact opening paragraph in `README.md` and its existing disclaimer and licence link. Do not silently rewrite the authorship or remove the computer-crash/data-loss scope. |
 | REQ-08 | Let the user “just open the webpage and run the app in their browser”; provide a locally browsable HTML. | No installation or npm dependencies for use. Supply the offline WebGL2 standalone. Keep the live URL in both the introductory runtime paragraph and “Run it”: https://bellissimogiorno.github.io/aperiodic-life/ . |
 | REQ-09 | Put “curated configurations” and its “load” and “load and run” buttons “at the top of the controls”. | The selector remains prominent. Load prepares a paused configuration; Load & run starts it. Preserve search, credit/source display and appropriate framing. |

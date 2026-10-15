@@ -40,6 +40,10 @@ The structure suite uses direct-neighbour stepping to verify the localised Penro
 
 Presentation checks are separate from dynamics. Playback speeds must match each entry's declared values. View metadata is immutable and schema-valid; every fixed trajectory envelope must contain the complete rendered bounding box of every nonzero tile at every generation in its interval.
 
+## Interface and asset consistency
+
+`node test-interface.js` executes the production element collector against the IDs in both `index.html` and the generated standalone. Every required ID must be present and unique, and the source runtime URLs must use the current `VERSION`. Negative checks confirm that missing controls are rejected. It is a dependency-free interface contract check, not a real DOM/WebGL browser test.
+
 ## Interaction and state files
 
 Dependency-free interaction tests exercise fresh Randomise/R seeds, deterministic Apply seed/Enter replay, busy-state protection, canvas arrow-key focus and camera ownership, responsive framing, containment, trajectory legibility, post-horizon following, painting and pan overrides, pinch scale and midpoint anchoring, two-finger panning, finger lifting, zoom limits, touch paint deferral, pointer cancellation, rule-dialog keyboard isolation, and synchronised playback controls during play, pause, and rebuilds.

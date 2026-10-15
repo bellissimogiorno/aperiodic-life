@@ -1,8 +1,15 @@
-# Aperiodic Life 3.7.5
+# Aperiodic Life 3.7.6
 
 Release date: **15 October 2026**.
 
 Aperiodic Life is an offline browser laboratory for cellular automata on square, hexagonal, Einstein-hat, and Penrose tilings.
+
+## Changes in 3.7.6
+
+- Fixed a source-hosting upgrade hazard: `index.html` now requests every runtime script and stylesheet with the application version in its URL. This avoids reusing older cached JavaScript after an interface change.
+- The standalone builder checks those references against `VERSION` and refuses missing or mismatched asset references. The generated standalone and curated Pages payload remain fully inline.
+- Added a dependency-free interface regression that executes the actual production element collector against the supplied HTML, including the embedded standalone script. It checks every required element and versioned asset URL.
+- The reported `#newSeedButton` error is reproduced when older JavaScript is combined with the updated interface. The previously delivered 3.7.5 archive itself contains matching scripts and HTML; the user’s exact browser/cache/deployment state was not accessible for confirmation.
 
 ## Changes in 3.7.5
 

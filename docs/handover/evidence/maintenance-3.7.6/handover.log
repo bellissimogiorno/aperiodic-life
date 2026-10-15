@@ -1,0 +1,14 @@
+test_archive_publication_failure_restores_empty_or_absent_output (__main__.HandoverTest.test_archive_publication_failure_restores_empty_or_absent_output) ... ok
+test_build_is_deterministic_and_archive_matches_extracted_files (__main__.HandoverTest.test_build_is_deterministic_and_archive_matches_extracted_files) ... ok
+test_existing_outputs_and_unsafe_destinations_are_preserved (__main__.HandoverTest.test_existing_outputs_and_unsafe_destinations_are_preserved) ... ok
+test_incompatible_catalogue_leaves_destinations_untouched (__main__.HandoverTest.test_incompatible_catalogue_leaves_destinations_untouched) ... ok
+test_patch_release_preserves_reviewed_catalogue_and_its_download_names (__main__.HandoverTest.test_patch_release_preserves_reviewed_catalogue_and_its_download_names) ... ok
+test_verifier_checks_versions_and_embedded_assets_beyond_checksums (__main__.HandoverTest.test_verifier_checks_versions_and_embedded_assets_beyond_checksums) ... ok
+test_verifier_detects_corruption_omission_and_unexpected_files (__main__.HandoverTest.test_verifier_detects_corruption_omission_and_unexpected_files) ... ok
+test_verifier_rejects_malformed_manifest_paths_and_records (__main__.HandoverTest.test_verifier_rejects_malformed_manifest_paths_and_records) ... ok
+test_versions_allow_only_compatible_nonfuture_catalogues (__main__.HandoverTest.test_versions_allow_only_compatible_nonfuture_catalogues) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 9.494s
+
+OK

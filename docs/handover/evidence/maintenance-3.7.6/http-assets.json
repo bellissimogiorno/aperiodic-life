@@ -1,0 +1,21 @@
+{
+  "outcome": "passed",
+  "checks": [
+    {
+      "url": "styles.css?v=3.7.6",
+      "sha256": "efb60c739e62c7fc8393320c1f31446c015e461fb97e445b04e9a83a37a55ce7"
+    },
+    {
+      "url": "core.js?v=3.7.6",
+      "sha256": "d39d1a0b0ed3b1307a9d9a9bbbabb75ee4479e257301674ac38c6b2b622b6ef3"
+    },
+    {
+      "url": "discoveries.js?v=3.7.6",
+      "sha256": "9f0d8e6969a0c6fe5fde89e29bc33437c39fb87e6464fa125c1be9da28fc5187"
+    },
+    {
+      "url": "app.js?v=3.7.6",
+      "sha256": "626c9fc47587562a9ea8ed543475a6a39000ead3b9882e3e8c08403a1c9d4f8f"
+    }
+  ]
+}

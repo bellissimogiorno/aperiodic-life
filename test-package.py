@@ -48,9 +48,9 @@ class PackageTest(unittest.TestCase):
         cls.temporary.cleanup()
 
     def test_versioned_output_contract_and_determinism(self):
-        self.assertEqual(release.VERSION, "3.7.5")
-        expected = {"aperiodic-life-3.7.5.html", "aperiodic-life-source-3.7.5.zip",
-                    "aperiodic-life-source-3.7.5.manifest.json", "aperiodic-life-3.7.5.sha256"}
+        self.assertEqual(release.VERSION, "3.7.6")
+        expected = {"aperiodic-life-3.7.6.html", "aperiodic-life-source-3.7.6.zip",
+                    "aperiodic-life-source-3.7.6.manifest.json", "aperiodic-life-3.7.6.sha256"}
         self.assertEqual(set(self.first_result), expected)
         self.assertEqual({path.name for path in self.first.iterdir()}, expected)
         self.assertEqual(self.first_result, self.second_result)
@@ -112,6 +112,21 @@ class PackageTest(unittest.TestCase):
                 self.assertFalse(destination.exists())
             finally:
                 path.write_bytes(before)
+
+    def test_source_asset_urls_must_match_release(self):
+        index = self.source / "index.html"
+        before = index.read_text()
+        try:
+            for asset in ("styles.css", "core.js", "discoveries.js", "app.js"):
+                for suffix in ("", "?v=0.0.0"):
+                    with self.subTest(asset=asset, suffix=suffix):
+                        index.write_text(before.replace(f'{asset}?v={release.VERSION}', asset + suffix))
+                        destination = self.base / f"invalid-url-{asset}-{bool(suffix)}"
+                        with self.assertRaisesRegex(RuntimeError, "standalone bundle is missing or out of date"):
+                            release.build(destination)
+                        self.assertFalse(destination.exists())
+        finally:
+            index.write_text(before)
 
     def test_missing_or_invalid_catalogue_fails_before_output(self):
         for index, name in enumerate(release.REQUIRED_CATALOGUE_PATHS):

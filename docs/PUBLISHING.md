@@ -93,7 +93,7 @@ Alternatively, GitHub can serve the source application directly from the reposit
 3. Select branch **main** and folder **/(root)**, then **Save**.
 4. Wait for deployment and open the URL shown by GitHub.
 
-The root `index.html` is the application entry point. Keep its accompanying `styles.css`, `core.js`, `discoveries.js`, and `app.js` at their relative paths, and keep `docs/catalogue/` for the **About** links. The included `.nojekyll` file requests plain static serving. The `docs/` directory contains project documentation and is not the application root. This branch-based alternative deploys subsequent changes to `main` automatically.
+The root `index.html` is the application entry point. Keep its accompanying `styles.css`, `core.js`, `discoveries.js`, and `app.js` at their relative paths, and keep `docs/catalogue/` for the **About** links. The included `.nojekyll` file requests plain static serving. The `docs/` directory contains project documentation and is not the application root. This branch-based alternative deploys subsequent changes to `main` automatically. Runtime asset URLs include the release version to avoid stale-script/interface mismatches. Publish the complete source set, including `index.html` and all scripts. If a previously opened page still shows a missing-interface-element error after deployment, use a hard refresh; the curated Pages workflow above embeds all runtime assets in one HTML file.
 
 Check a discovery, stepping, state-file save/load, the **About → Open the full catalogue (PDF)** link, and browser-console errors on the published site. The hosted page is fetched from GitHub Pages; the app itself has no backend or telemetry. A downloaded standalone still works offline.
 
@@ -127,7 +127,7 @@ Use [release operations](OPERATIONS.md) to rebuild and verify the standalone and
 For a clean repository ZIP, excluding Git internals and local build artefacts:
 
 ```bash
-python3 tools/export_repository.py --output ../aperiodic-life-source-3.7.5.zip
+python3 tools/export_repository.py --output ../aperiodic-life-source-3.7.6.zip
 ```
 
 To obtain release downloads from GitHub, manually run **Actions → CI → Run workflow**

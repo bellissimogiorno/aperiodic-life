@@ -2,7 +2,7 @@
 
 ## Current state
 
-Use **application 3.7.5 / retained catalogue 3.7.4 revision 2**. Randomise/R now chooses a fresh visible seed; Apply seed/Enter repeats a specified seed. Arrow keys pan a focused canvas; Shift increases the step. There are **89 curated configurations**: 22 Hat, 21 Penrose, 36 hexagonal and 10 square. The full catalogue has **135 pages**, **56 complete rule-sets**, **12 named rule-selector templates**, **267 pattern panels** and **34 bibliography records**. Its attribution categories are 55 qualified package-original configurations, one unresolved possible antecedent (P09), four constructions, 25 published examples and four adaptations.
+Use **application 3.7.6 / retained catalogue 3.7.4 revision 2**. Randomise/R now chooses a fresh visible seed; Apply seed/Enter repeats a specified seed. Arrow keys pan a focused canvas; Shift increases the step. There are **89 curated configurations**: 22 Hat, 21 Penrose, 36 hexagonal and 10 square. The full catalogue has **135 pages**, **56 complete rule-sets**, **12 named rule-selector templates**, **267 pattern panels** and **34 bibliography records**. Its attribution categories are 55 qualified package-original configurations, one unresolved possible antecedent (P09), four constructions, 25 published examples and four adaptations.
 
 Read the [design brief](DESIGN_BRIEF.md) before changing behaviour or wording. Run development commands from the project root (`source/` in the handover), not from the outer handover directory.
 
@@ -71,7 +71,7 @@ python3 tools/project.py test standard
 python3 tools/project.py test topology
 ```
 
-After an application change, run `node build-standalone.js` and retain the generated result. Choose additional `research`, `large` and `browser` profiles for the affected risk. Large profiles require substantial memory. Missing browser prerequisites are not a pass.
+After a version bump, update all four runtime `?v=` references in `index.html` to match `VERSION`. After an application change, run `node build-standalone.js` and retain the generated result. Choose additional `research`, `large` and `browser` profiles for the affected risk. Large profiles require substantial memory. Missing browser prerequisites are not a pass.
 
 For a catalogue prose/credit edit, update the Markdown and/or source JSON, rebuild with `python3 docs/catalogue/build_catalogue.py`, inspect all changed pages and links, and check source/PDF agreement. If seeds, geometry or rules change, first regenerate `node docs/catalogue/export_geometry.js` and replay the affected scientific evidence, including `node research/verify-catalog.js`. Do not rerun million-trial searches merely to typeset a wording correction.
 
@@ -84,7 +84,7 @@ Record the full automaton, exact seed, deterministic search parameters, patch/gr
 To regenerate a handover from the current source, choose a new destination outside the project:
 
 ```bash
-python3 tools/build_handover.py --output-dir ../aperiodic-life-handover-3.7.5-2026-10-15 --date 2026-10-15
+python3 tools/build_handover.py --output-dir ../aperiodic-life-handover-3.7.6-2026-10-15 --date 2026-10-15
 ```
 
 This creates the directory and its sibling ZIP. Use a new date/name for a later handover, review the brief and verification record first, and do not overwrite earlier evidence silently.

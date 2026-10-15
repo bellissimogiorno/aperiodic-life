@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-15",
+  "applicationVersion": "3.7.6",
+  "catalogueVersion": "3.7.4",
+  "catalogueRevision": 2,
+  "scope": "Source asset caching and interface compatibility; simulation/runtime behaviour unchanged from 3.7.5.",
+  "diagnostic": {
+    "reported": "Unable to start: Required interface element #newSeedButton is missing",
+    "reproduced": "Original 3.7.4 app.js element collector against updated HTML throws the exact missing-control error.",
+    "delivered375": "Expanded source and both standalone entry points use applySeedButton consistently.",
+    "userEnvironment": "Not accessible; cached or mixed-version assets are the supported explanation, not an observed browser trace."
+  },
+  "checks": [
+    {
+      "check": "Interface collection/event wiring, both entry points",
+      "outcome": "passed",
+      "log": "maintenance-3.7.6/interface.log"
+    },
+    {
+      "check": "Static assets, interactions and snapshots",
+      "outcome": "passed",
+      "log": "maintenance-3.7.6/runtime.log"
+    },
+    {
+      "check": "Release packaging (12 tests)",
+      "outcome": "passed",
+      "log": "maintenance-3.7.6/packaging.log"
+    },
+    {
+      "check": "Repository/site packaging (4 tests)",
+      "outcome": "passed",
+      "log": "maintenance-3.7.6/repository.log"
+    },
+    {
+      "check": "Handover packaging (9 tests)",
+      "outcome": "passed",
+      "log": "maintenance-3.7.6/handover.log"
+    },
+    {
+      "check": "Catalogue source validation and 4 tests",
+      "outcome": "passed",
+      "log": "maintenance-3.7.6/catalogue.log"
+    }
+  ],
+  "localHTTPAssets": {
+    "outcome": "passed",
+    "checks": [
+      {
+        "url": "styles.css?v=3.7.6",
+        "sha256": "efb60c739e62c7fc8393320c1f31446c015e461fb97e445b04e9a83a37a55ce7"
+      },
+      {
+        "url": "core.js?v=3.7.6",
+        "sha256": "d39d1a0b0ed3b1307a9d9a9bbbabb75ee4479e257301674ac38c6b2b622b6ef3"
+      },
+      {
+        "url": "discoveries.js?v=3.7.6",
+        "sha256": "9f0d8e6969a0c6fe5fde89e29bc33437c39fb87e6464fa125c1be9da28fc5187"
+      },
+      {
+        "url": "app.js?v=3.7.6",
+        "sha256": "626c9fc47587562a9ea8ed543475a6a39000ead3b9882e3e8c08403a1c9d4f8f"
+      }
+    ]
+  },
+  "unchangedFrom375": [
+    "app.js",
+    "styles.css",
+    "core.js",
+    "discoveries.js",
+    "Scientific catalogue PDF/prose/data/geometry"
+  ],
+  "priorBroadVerification": "maintenance-3.7.5.json",
+  "currentSourceSha256": {
+    "index.html": "3c041e755acac13e8fc0192e4d47c0170a435a429dde10729acfebe97bad0f71",
+    "build-standalone.js": "55f870ec1feed03e6fe359cc27185dd0f09e14b0d7746c673b95d5ea6f4e0a61",
+    "app.js": "626c9fc47587562a9ea8ed543475a6a39000ead3b9882e3e8c08403a1c9d4f8f",
+    "core.js": "d39d1a0b0ed3b1307a9d9a9bbbabb75ee4479e257301674ac38c6b2b622b6ef3",
+    "discoveries.js": "9f0d8e6969a0c6fe5fde89e29bc33437c39fb87e6464fa125c1be9da28fc5187",
+    "styles.css": "efb60c739e62c7fc8393320c1f31446c015e461fb97e445b04e9a83a37a55ce7",
+    "test-interface.js": "30443f75fa6aaa7c496dad588b84ba9221087751a4d1c829a0ebee6ab203045d",
+    "aperiodic-life-standalone.html": "79116118689056ee2dc6a6e6698f01aba96bb98943c97b99c785765101b121ed"
+  },
+  "limitations": [
+    "Chromium unavailable; no real-browser rendering or cache replay claimed.",
+    "Live deployment inaccessible; no remote deployment performed."
+  ],
+  "assembly": "Fresh archive extraction and interface checking of the browser convenience HTML are performed before delivery. Final manifest describes the completed payload."
+}
