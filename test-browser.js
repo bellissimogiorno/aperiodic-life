@@ -307,6 +307,140 @@ async function click(cdp, id) {
   await cdp.evaluate(`document.getElementById(${JSON.stringify(id)}).click(); true`);
 }
 
+async function savedSnapshot(cdp) {
+  return cdp.evaluate(`(async () => {
+    let savedBlob;
+    const createURL = URL.createObjectURL;
+    const clickAnchor = HTMLAnchorElement.prototype.click;
+    URL.createObjectURL = (blob) => { savedBlob = blob; return createURL(blob); };
+    HTMLAnchorElement.prototype.click = function () {};
+    try { document.getElementById('saveSnapshotButton').click(); }
+    finally { URL.createObjectURL = createURL; HTMLAnchorElement.prototype.click = clickAnchor; }
+    if (!savedBlob) throw new Error('Save state did not create a snapshot');
+    return JSON.parse(await savedBlob.text());
+  })()`);
+}
+
+async function checkRandomise(cdp) {
+  console.error('[browser] testing fresh random patterns and reproducible seeds');
+  await setAndChange(cdp, 'densityInput', '0.22');
+  await setAndChange(cdp, 'seedInput', 'browser-regression-seed');
+  await click(cdp, 'applySeedButton');
+  const original = await savedSnapshot(cdp);
+  assert.strictEqual(original.generation, 0);
+  assert(original.cellStates.length > 0 && original.cellStates.length < original.tileCount,
+    'the replay seed must produce a nontrivial pattern');
+
+  await click(cdp, 'stepButton');
+  await click(cdp, 'applySeedButton');
+  const replay = await savedSnapshot(cdp);
+  assert.strictEqual(replay.generation, 0, 'Apply seed resets the generation');
+  assert.deepStrictEqual(replay.cellStates, original.cellStates, 'Apply seed must reproduce the complete pattern');
+  assert.strictEqual(await cdp.evaluate("document.getElementById('seedInput').value"), 'browser-regression-seed');
+
+  await click(cdp, 'randomizeButton');
+  const firstSeed = await cdp.evaluate("document.getElementById('seedInput').value");
+  const first = await savedSnapshot(cdp);
+  assert.notStrictEqual(firstSeed, 'browser-regression-seed', 'Randomise must replace the displayed seed');
+  assert.notDeepStrictEqual(first.cellStates, original.cellStates, 'Randomise must change the pattern');
+  await click(cdp, 'randomizeButton');
+  const secondSeed = await cdp.evaluate("document.getElementById('seedInput').value");
+  const second = await savedSnapshot(cdp);
+  assert.notStrictEqual(secondSeed, firstSeed, 'successive Randomise clicks must use fresh seeds');
+  assert.notDeepStrictEqual(second.cellStates, first.cellStates, 'successive Randomise clicks must change cells');
+
+  await setAndChange(cdp, 'seedInput', firstSeed);
+  await cdp.evaluate("document.getElementById('seedInput').focus(); true");
+  await cdp.call('Input.dispatchKeyEvent', { type: 'keyDown', key: 'Enter', code: 'Enter', windowsVirtualKeyCode: 13 });
+  await cdp.call('Input.dispatchKeyEvent', { type: 'keyUp', key: 'Enter', code: 'Enter', windowsVirtualKeyCode: 13 });
+  assert.deepStrictEqual((await savedSnapshot(cdp)).cellStates, first.cellStates,
+    'Enter in the seed input must replay a saved random seed');
+
+  await cdp.evaluate("document.body.tabIndex = -1; document.body.focus(); true");
+  await cdp.call('Input.dispatchKeyEvent', { type: 'keyDown', key: 'r', code: 'KeyR', text: 'r', windowsVirtualKeyCode: 82 });
+  await cdp.call('Input.dispatchKeyEvent', { type: 'keyUp', key: 'r', code: 'KeyR', windowsVirtualKeyCode: 82 });
+  const shortcutSeed = await cdp.evaluate("document.getElementById('seedInput').value");
+  const shortcut = await savedSnapshot(cdp);
+  assert.notStrictEqual(shortcutSeed, firstSeed, 'R must generate a fresh seed');
+  assert.notDeepStrictEqual(shortcut.cellStates, first.cellStates, 'R must randomise the pattern');
+  assert.strictEqual(shortcut.generation, 0);
+}
+
+async function pressArrow(cdp, key, modifiers = 0) {
+  const keyCode = { ArrowLeft: 37, ArrowUp: 38, ArrowRight: 39, ArrowDown: 40 }[key];
+  assert(keyCode, `unsupported arrow key ${key}`);
+  const common = { key, code: key, windowsVirtualKeyCode: keyCode, modifiers };
+  await cdp.call('Input.dispatchKeyEvent', { type: 'keyDown', ...common });
+  await cdp.call('Input.dispatchKeyEvent', { type: 'keyUp', ...common });
+}
+
+async function checkCanvasArrowPanning(cdp) {
+  console.error('[browser] testing focused-canvas arrow panning and native input keys');
+  const initial = await savedSnapshot(cdp);
+  assert.strictEqual(await cdp.evaluate("document.getElementById('lifeCanvas').tabIndex"), 0,
+    'the canvas must be reachable by keyboard');
+  await cdp.evaluate("document.getElementById('lifeCanvas').focus(); true");
+  assert.strictEqual(await cdp.evaluate('document.activeElement.id'), 'lifeCanvas');
+
+  for (const [key, dx, dy, modifiers] of [
+    ['ArrowRight', 40, 0, 0], ['ArrowDown', 0, -40, 0],
+    ['ArrowLeft', -40, 0, 0], ['ArrowUp', 0, 40, 0],
+    ['ArrowRight', 120, 0, 8], ['ArrowLeft', -120, 0, 8],
+  ]) {
+    const before = await cameraView(cdp);
+    await pressArrow(cdp, key, modifiers);
+    await delay(100);
+    const after = await cameraView(cdp);
+    const tolerance = 0.2 / before.zoom;
+    assert(Math.abs(after.center[0] - before.center[0] - dx / before.zoom) <= tolerance,
+      `${key} horizontal camera movement${modifiers ? ' with Shift' : ''}`);
+    assert(Math.abs(after.center[1] - before.center[1] - dy / before.zoom) <= tolerance,
+      `${key} vertical camera movement${modifiers ? ' with Shift' : ''}`);
+    assert.strictEqual(after.zoom, before.zoom, 'arrow panning must preserve zoom');
+  }
+
+  const stableView = await cameraCenter(cdp);
+  await cdp.evaluate("document.body.tabIndex = -1; document.body.focus(); true");
+  await pressArrow(cdp, 'ArrowRight');
+  await delay(100);
+  assert.deepStrictEqual(await cameraCenter(cdp), stableView, 'arrows require canvas focus');
+
+  await cdp.evaluate(`(() => {
+    const input = document.getElementById('seedInput');
+    input.focus(); input.setSelectionRange(input.value.length, input.value.length);
+    return true;
+  })()`);
+  const caret = await cdp.evaluate("document.getElementById('seedInput').selectionStart");
+  await pressArrow(cdp, 'ArrowLeft');
+  assert.strictEqual(await cdp.evaluate("document.getElementById('seedInput').selectionStart"), caret - 1,
+    'arrows in a text input must move its caret');
+  assert.deepStrictEqual(await cameraCenter(cdp), stableView, 'text-field arrows must not pan');
+
+  const speed = await cdp.evaluate(`(() => {
+    const input = document.getElementById('speedInput');
+    const previous = input.value;
+    input.value = '24'; input.dispatchEvent(new Event('input')); input.focus();
+    return previous;
+  })()`);
+  await pressArrow(cdp, 'ArrowRight');
+  assert.strictEqual(await cdp.evaluate("document.getElementById('speedInput').value"), '25',
+    'arrows in the speed control must retain native range behavior');
+  assert.deepStrictEqual(await cameraCenter(cdp), stableView, 'range-control arrows must not pan');
+  await cdp.evaluate(`(() => {
+    const input = document.getElementById('speedInput');
+    input.value = ${JSON.stringify(speed)}; input.dispatchEvent(new Event('input'));
+    return true;
+  })()`);
+
+  await setAndChange(cdp, 'toolSelect', 'pan');
+  await mouseDrag(cdp, await canvasPoint(cdp), 0, 0);
+  assert.strictEqual(await cdp.evaluate('document.activeElement.id'), 'lifeCanvas',
+    'interacting with the canvas must focus it for arrow panning');
+  const final = await savedSnapshot(cdp);
+  assert.strictEqual(final.generation, initial.generation, 'panning must not advance the simulation');
+  assert.deepStrictEqual(final.cellStates, initial.cellStates, 'panning must preserve every cell');
+}
+
 async function touchButton(cdp, id) {
   const target = await cdp.evaluate(`(() => {
     const button = document.getElementById(${JSON.stringify(id)});
@@ -791,6 +925,9 @@ async function checkPage(cdp) {
   await cdp.evaluate("window.dispatchEvent(new KeyboardEvent('keydown', { key: 'n', ctrlKey: true, bubbles: true })); true");
   assert.strictEqual(await cdp.evaluate("document.getElementById('generationStat').textContent"), '2');
 
+  await checkRandomise(cdp);
+  await checkCanvasArrowPanning(cdp);
+
   // Native pointer events must actually move the rendered camera. Pan is the
   // safe default for inspecting discoveries; Paint remains an explicit tool,
   // and its Shift-drag override must pan without changing cells.
@@ -864,16 +1001,7 @@ async function checkPage(cdp) {
   assert.strictEqual(await cdp.evaluate("document.getElementById('aliveStat').textContent.startsWith('5 ')"), true);
 
   console.error('[browser] testing saved experiment files');
-  const savedState = await cdp.evaluate(`(async () => {
-    let savedBlob;
-    const createURL = URL.createObjectURL;
-    const clickAnchor = HTMLAnchorElement.prototype.click;
-    URL.createObjectURL = (blob) => { savedBlob = blob; return createURL(blob); };
-    HTMLAnchorElement.prototype.click = function () {};
-    try { document.getElementById('saveSnapshotButton').click(); }
-    finally { URL.createObjectURL = createURL; HTMLAnchorElement.prototype.click = clickAnchor; }
-    return JSON.parse(await savedBlob.text());
-  })()`);
+  const savedState = await savedSnapshot(cdp);
   assert.strictEqual(savedState.format, 'aperiodic-life-state');
   assert.strictEqual(savedState.generation, 4);
   assert.strictEqual(savedState.cellStates.length, 5);
@@ -1182,6 +1310,8 @@ async function checkPage(cdp) {
     touchBorderTwoAlive: 6188,
     keyboardButtons: 'passed',
     shortcutModifiers: 'passed',
+    randomiseAndSeedReplay: 'passed',
+    canvasArrowPanning: 'passed',
     paintAndPan: 'passed',
     squareBoard: 'passed',
     squareGlider: 'passed',
@@ -1242,6 +1372,8 @@ async function main() {
         "document.readyState === 'complete' && document.getElementById('busy')?.hidden && document.getElementById('cellsStat')?.textContent === '7,921'",
         'standalone file patch',
       );
+      await checkRandomise(browser.cdp);
+      await checkCanvasArrowPanning(browser.cdp);
       await checkMobilePinch(browser.cdp);
     }
 
@@ -1259,6 +1391,8 @@ async function main() {
     assert.strictEqual(standalone.glError, 0);
     assert.deepStrictEqual(standalone.externalResources, []);
     standalone.mobilePinch = 'passed';
+    standalone.randomiseAndSeedReplay = 'passed';
+    standalone.canvasArrowPanning = 'passed';
 
     console.error('[browser] standalone checks passed');
     console.log(JSON.stringify({ mode, interactions: httpResult, standalone }, null, 2));

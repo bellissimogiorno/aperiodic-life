@@ -1,0 +1,67 @@
+{
+  "scope": "handover builder smoke; no changes to application behaviour",
+  "checks": [
+    {
+      "check": "Complete staged directory and ZIP build",
+      "passed": true
+    },
+    {
+      "check": "Every copied source file is byte-for-byte identical to canonical source",
+      "passed": true
+    },
+    {
+      "check": "ZIP has complete safe member set, exact payload bytes, fixed timestamps and explicit regular-file modes",
+      "passed": true
+    },
+    {
+      "check": "Second ZIP from identical staged payload is byte-for-byte deterministic",
+      "passed": true
+    },
+    {
+      "check": "Modified file rejected",
+      "passed": true,
+      "diagnostic": "Handover verification failed: content differs from manifest: README.md"
+    },
+    {
+      "check": "Unexpected extra file rejected",
+      "passed": true,
+      "diagnostic": "Handover verification failed: file set differs; missing=[], unexpected=['unexpected.txt']"
+    },
+    {
+      "check": "Existing non-empty output and ZIP are not overwritten",
+      "passed": true
+    },
+    {
+      "check": "Builder and generated verifier compile",
+      "passed": true
+    },
+    {
+      "check": "Canonical PDF and Markdown are exactly embedded",
+      "passed": true
+    },
+    {
+      "check": "Source-root and ancestor outputs rejected",
+      "passed": true
+    },
+    {
+      "check": "ZIP inside source/output and non-ZIP suffix rejected",
+      "passed": true
+    }
+  ],
+  "buildResult": {
+    "zipSha256": "13f9e3f16fedb3f879753657056bd0cfb62d827d7673d2f672cc9cfff25f2301",
+    "zipBytes": 12133181,
+    "version": "3.7.4",
+    "catalogueRevision": 2,
+    "verifiedFiles": 312,
+    "patterns": 89,
+    "embeddedCatalogueMatchesSource": true
+  },
+  "finalVerification": {
+    "version": "3.7.4",
+    "catalogueRevision": 2,
+    "verifiedFiles": 312,
+    "patterns": 89,
+    "embeddedCatalogueMatchesSource": true
+  }
+}

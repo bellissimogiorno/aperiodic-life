@@ -1,0 +1,102 @@
+
+== topology ==
++ node test-topology.js
+{"depth":0,"n":4,"buildMs":1.6,"edgeEdges":4,"touchEdges":5,"edgeBoundaryCells":4,"touchBoundaryCells":4,"points":40,"segments":43,"boundarySegments":30,"euler":1,"maxInteriorVertices":1,"interiorVerticesByEdgeLength":{"1":2,"0.25":0,"0.75":0},"maxEdgeBoundaryDistance":0,"maxTouchBoundaryDistance":0,"transforms":{"detPositive":3,"detNegative":1,"maxMetricError":6.730586754599699e-9,"maxVertexError":3.5762786865234375e-7},"centerSamples":4}
+{"depth":1,"n":25,"buildMs":1.3,"edgeEdges":51,"touchEdges":63,"edgeBoundaryCells":15,"touchBoundaryCells":15,"points":190,"segments":214,"boundarySegments":78,"euler":1,"maxInteriorVertices":1,"interiorVerticesByEdgeLength":{"1":12,"0.25":0,"0.75":0},"maxEdgeBoundaryDistance":2,"maxTouchBoundaryDistance":2,"transforms":{"detPositive":22,"detNegative":3,"maxMetricError":6.730586754599699e-9,"maxVertexError":4.327761375932937e-7},"centerSamples":25}
+{"depth":2,"n":169,"buildMs":3.1,"edgeEdges":400,"touchEdges":486,"edgeBoundaryCells":60,"touchBoundaryCells":62,"points":1144,"segments":1312,"boundarySegments":258,"euler":1,"maxInteriorVertices":1,"interiorVerticesByEdgeLength":{"1":80,"0.25":0,"0.75":0},"maxEdgeBoundaryDistance":6,"maxTouchBoundaryDistance":5,"transforms":{"detPositive":147,"detNegative":22,"maxMetricError":6.730586754599699e-9,"maxVertexError":0.0000011026859283447266},"centerSamples":169}
+{"depth":3,"n":1156,"buildMs":11.4,"edgeEdges":2943,"touchEdges":3531,"edgeBoundaryCells":228,"touchBoundaryCells":228,"points":7402,"segments":8557,"boundarySegments":930,"euler":1,"maxInteriorVertices":1,"interiorVerticesByEdgeLength":{"1":565,"0.25":0,"0.75":0},"maxEdgeBoundaryDistance":14,"maxTouchBoundaryDistance":13,"transforms":{"detPositive":1009,"detNegative":147,"maxMetricError":6.730586754599699e-9,"maxVertexError":0.0000036656856536865234},"centerSamples":1156}
+{"depth":4,"n":7921,"buildMs":68.2,"edgeEdges":20887,"touchEdges":24921,"edgeBoundaryCells":855,"touchBoundaryCells":857,"points":49246,"segments":57166,"boundarySegments":3438,"euler":1,"maxInteriorVertices":1,"interiorVerticesByEdgeLength":{"1":3882,"0.25":0,"0.75":0},"maxEdgeBoundaryDistance":37,"maxTouchBoundaryDistance":33,"transforms":{"detPositive":6912,"detNegative":1009,"maxMetricError":6.730586754599699e-9,"maxVertexError":0.000006415271130322253},"centerSamples":2641}
+{"depth":5,"n":54289,"buildMs":573.8,"edgeEdges":145845,"touchEdges":173493,"edgeBoundaryCells":3195,"touchBoundaryCells":3195,"points":332134,"segments":386422,"boundarySegments":12798,"euler":1,"maxInteriorVertices":1,"interiorVerticesByEdgeLength":{"1":26636,"0.25":0,"0.75":0},"maxEdgeBoundaryDistance":96,"maxTouchBoundaryDistance":85,"transforms":{"detPositive":47377,"detNegative":6912,"maxMetricError":6.730586754599699e-9,"maxVertexError":0.0000293034547098614},"centerSamples":2011}
+geometry and graph checks passed
++ node test-penrose-topology.js
+{"seed":"sun","depth":1,"tiles":10,"thin":5,"thick":5,"points":16,"edges":25,"edgePairs":15,"touchPairs":25,"edgeBoundary":5,"touchBoundary":10,"boundaryVertices":10,"euler":1,"coverageDifference":0,"maxInteriorAngleError":0,"buildMs":1.2}
+{"seed":"sun","depth":2,"tiles":20,"thin":10,"thick":10,"points":31,"edges":50,"edgePairs":30,"touchPairs":60,"edgeBoundary":15,"touchBoundary":15,"boundaryVertices":20,"euler":1,"coverageDifference":0,"maxInteriorAngleError":8.881784197001252e-16,"buildMs":0.2}
+{"seed":"sun","depth":3,"tiles":60,"thin":25,"thick":35,"points":76,"edges":135,"edgePairs":105,"touchPairs":240,"edgeBoundary":25,"touchBoundary":25,"boundaryVertices":30,"euler":1,"coverageDifference":7.105427357601002e-15,"maxInteriorAngleError":8.881784197001252e-16,"buildMs":0.5}
+{"seed":"sun","depth":4,"tiles":160,"thin":60,"thick":100,"points":191,"edges":350,"edgePairs":290,"touchPairs":680,"edgeBoundary":40,"touchBoundary":55,"boundaryVertices":60,"euler":1,"coverageDifference":0,"maxInteriorAngleError":1.7763568394002505e-15,"buildMs":1.1}
+{"seed":"sun","depth":5,"tiles":430,"thin":165,"thick":265,"points":476,"edges":905,"edgePairs":815,"touchPairs":1900,"edgeBoundary":55,"touchBoundary":100,"boundaryVertices":90,"euler":1,"coverageDifference":1.1368683772161603e-13,"maxInteriorAngleError":1.7763568394002505e-15,"buildMs":3.5}
+{"seed":"sun","depth":6,"tiles":1140,"thin":440,"thick":700,"points":1211,"edges":2350,"edgePairs":2210,"touchPairs":5150,"edgeBoundary":100,"touchBoundary":160,"boundaryVertices":140,"euler":1,"coverageDifference":1.1368683772161603e-13,"maxInteriorAngleError":1.7763568394002505e-15,"buildMs":4.4}
+{"seed":"sun","depth":7,"tiles":3010,"thin":1155,"thick":1855,"points":3126,"edges":6135,"edgePairs":5905,"touchPairs":13860,"edgeBoundary":175,"touchBoundary":255,"boundaryVertices":230,"euler":1,"coverageDifference":2.2737367544323206e-12,"maxInteriorAngleError":1.7763568394002505e-15,"buildMs":7.6}
+{"seed":"sun","depth":8,"tiles":7920,"thin":3030,"thick":4890,"points":8111,"edges":16030,"edgePairs":15650,"touchPairs":36860,"edgeBoundary":280,"touchBoundary":425,"boundaryVertices":380,"euler":1,"coverageDifference":1.546140993013978e-11,"maxInteriorAngleError":1.7763568394002505e-15,"buildMs":16.9}
+{"seed":"sun","depth":9,"tiles":20800,"thin":7955,"thick":12845,"points":21106,"edges":41905,"edgePairs":41295,"touchPairs":97390,"edgeBoundary":445,"touchBoundary":700,"boundaryVertices":610,"euler":1,"coverageDifference":0,"maxInteriorAngleError":1.7763568394002505e-15,"buildMs":42.6}
+{"seed":"sun","depth":10,"tiles":54560,"thin":20860,"thick":33700,"points":55051,"edges":109610,"edgePairs":108630,"touchPairs":256430,"edgeBoundary":730,"touchBoundary":1130,"boundaryVertices":980,"euler":1,"coverageDifference":4.43833414465189e-10,"maxInteriorAngleError":2.6645352591003757e-15,"buildMs":148.9}
+{"seed":"sun-mirror","depth":1,"tiles":10,"thin":5,"thick":5,"points":16,"edges":25,"edgePairs":15,"touchPairs":25,"edgeBoundary":5,"touchBoundary":10,"boundaryVertices":10,"euler":1,"coverageDifference":0,"maxInteriorAngleError":8.881784197001252e-16,"buildMs":0.3}
+{"seed":"sun-mirror","depth":2,"tiles":20,"thin":10,"thick":10,"points":31,"edges":50,"edgePairs":30,"touchPairs":60,"edgeBoundary":15,"touchBoundary":15,"boundaryVertices":20,"euler":1,"coverageDifference":0,"maxInteriorAngleError":8.881784197001252e-16,"buildMs":0.2}
+{"seed":"sun-mirror","depth":3,"tiles":60,"thin":25,"thick":35,"points":76,"edges":135,"edgePairs":105,"touchPairs":240,"edgeBoundary":25,"touchBoundary":25,"boundaryVertices":30,"euler":1,"coverageDifference":0,"maxInteriorAngleError":8.881784197001252e-16,"buildMs":0.4}
+{"seed":"sun-mirror","depth":4,"tiles":160,"thin":60,"thick":100,"points":191,"edges":350,"edgePairs":290,"touchPairs":680,"edgeBoundary":40,"touchBoundary":55,"boundaryVertices":60,"euler":1,"coverageDifference":0,"maxInteriorAngleError":1.7763568394002505e-15,"buildMs":0.4}
+{"seed":"sun-mirror","depth":5,"tiles":430,"thin":165,"thick":265,"points":476,"edges":905,"edgePairs":815,"touchPairs":1900,"edgeBoundary":55,"touchBoundary":100,"boundaryVertices":90,"euler":1,"coverageDifference":0,"maxInteriorAngleError":1.7763568394002505e-15,"buildMs":1.1}
+{"seed":"sun-mirror","depth":6,"tiles":1140,"thin":440,"thick":700,"points":1211,"edges":2350,"edgePairs":2210,"touchPairs":5150,"edgeBoundary":100,"touchBoundary":160,"boundaryVertices":140,"euler":1,"coverageDifference":2.2737367544323206e-13,"maxInteriorAngleError":1.7763568394002505e-15,"buildMs":1.7}
+{"seed":"sun-mirror","depth":7,"tiles":3010,"thin":1155,"thick":1855,"points":3126,"edges":6135,"edgePairs":5905,"touchPairs":13860,"edgeBoundary":175,"touchBoundary":255,"boundaryVertices":230,"euler":1,"coverageDifference":2.7284841053187847e-12,"maxInteriorAngleError":1.7763568394002505e-15,"buildMs":4.8}
+{"seed":"sun-mirror","depth":8,"tiles":7920,"thin":3030,"thick":4890,"points":8111,"edges":16030,"edgePairs":15650,"touchPairs":36860,"edgeBoundary":280,"touchBoundary":425,"boundaryVertices":380,"euler":1,"coverageDifference":5.4569682106375694e-12,"maxInteriorAngleError":1.7763568394002505e-15,"buildMs":25}
+{"seed":"sun-mirror","depth":9,"tiles":20800,"thin":7955,"thick":12845,"points":21106,"edges":41905,"edgePairs":41295,"touchPairs":97390,"edgeBoundary":445,"touchBoundary":700,"boundaryVertices":610,"euler":1,"coverageDifference":3.637978807091713e-12,"maxInteriorAngleError":1.7763568394002505e-15,"buildMs":53.6}
+{"seed":"sun-mirror","depth":10,"tiles":54560,"thin":20860,"thick":33700,"points":55051,"edges":109610,"edgePairs":108630,"touchPairs":256430,"edgeBoundary":730,"touchBoundary":1130,"boundaryVertices":980,"euler":1,"coverageDifference":5.020410753786564e-10,"maxInteriorAngleError":2.6645352591003757e-15,"buildMs":132.6}
+independent Penrose geometry and topology reconstruction passed
++ node test-regular-topology.js
+{
+  "square": [
+    {
+      "size": 3,
+      "cells": 9,
+      "edgePairs": 12,
+      "touchPairs": 20
+    },
+    {
+      "size": 8,
+      "cells": 64,
+      "edgePairs": 112,
+      "touchPairs": 210
+    },
+    {
+      "size": 25,
+      "cells": 625,
+      "edgePairs": 1200,
+      "touchPairs": 2352
+    },
+    {
+      "size": 51,
+      "cells": 2601,
+      "edgePairs": 5100,
+      "touchPairs": 10100
+    },
+    {
+      "size": 101,
+      "cells": 10201,
+      "edgePairs": 20200,
+      "touchPairs": 40200
+    }
+  ],
+  "hex": [
+    {
+      "radius": 1,
+      "cells": 7,
+      "pairs": 12
+    },
+    {
+      "radius": 2,
+      "cells": 19,
+      "pairs": 42
+    },
+    {
+      "radius": 8,
+      "cells": 217,
+      "pairs": 600
+    },
+    {
+      "radius": 16,
+      "cells": 817,
+      "pairs": 2352
+    },
+    {
+      "radius": 32,
+      "cells": 3169,
+      "pairs": 9312
+    },
+    {
+      "radius": 64,
+      "cells": 12481,
+      "pairs": 37056
+    }
+  ]
+}
+independent regular-grid topology reconstruction passed
+
+All requested test profiles passed.

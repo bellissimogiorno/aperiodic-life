@@ -669,6 +669,7 @@
       this.lastPaintedCell = -1;
       this.paintValue = null;
       this.toastTimer = 0;
+      this.randomSeedCounter = 0;
       this.rebuildRequestId = 0;
       this.resumeAfterRebuild = false;
       this.maxCycleHistory = 192;
@@ -703,7 +704,7 @@
         'discoverySelect', 'discoverySearch', 'discoveryCount', 'catalogueCount',
         'loadDiscoveryButton', 'loadRunDiscoveryButton', 'discoveryDescription', 'discoveryProvenance',
         'saveSnapshotButton', 'loadSnapshotButton', 'snapshotFileInput', 'snapshotStatus',
-        'densityInput', 'densityOutput', 'seedInput', 'newSeedButton', 'speedInput',
+        'densityInput', 'densityOutput', 'seedInput', 'applySeedButton', 'speedInput',
         'speedOutput', 'toolSelect', 'gridCheckbox', 'typeCheckbox', 'paletteSelect',
         'fitButton', 'saveButton', 'copyButton', 'aboutButton', 'aboutDialog',
         'tilingStat', 'generationStat', 'aliveStat', 'cellsStat', 'degreeStat',
@@ -787,7 +788,13 @@
       });
       e.speedInput.addEventListener('input', () => this.updateRangeLabels());
       e.seedInput.addEventListener('change', () => this.clearActiveDiscovery(false));
-      e.newSeedButton.addEventListener('click', () => this.newSeed());
+      e.seedInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          this.applySeed();
+        }
+      });
+      e.applySeedButton.addEventListener('click', () => this.applySeed());
       e.toolSelect.addEventListener('change', () => this.updateToolCursor());
       e.gridCheckbox.addEventListener('change', () => { this.dirty = true; });
       e.typeCheckbox.addEventListener('change', () => { this.dirty = true; });
@@ -882,6 +889,7 @@
       for (const button of [
         this.elements.stepButton,
         this.elements.randomizeButton,
+        this.elements.applySeedButton,
         this.elements.clearButton,
       ]) button.disabled = active;
       for (const button of [this.elements.runButton, this.elements.viewportRunButton]) {
@@ -1209,6 +1217,12 @@
 
     randomize(showMessage = true) {
       if (!this.simulation || this.busyState) return;
+      this.newSeed();
+      this.applySeed(showMessage);
+    }
+
+    applySeed(showMessage = true) {
+      if (!this.simulation || this.busyState) return;
       this.clearActiveDiscovery(false);
       this.simulation.randomize(Number(this.elements.densityInput.value), this.elements.seedInput.value);
       this.renderer.updateState(this.simulation.state);
@@ -1230,13 +1244,15 @@
 
     newSeed() {
       const words = new Uint32Array(2);
-      if (window.crypto && crypto.getRandomValues) crypto.getRandomValues(words);
+      if (window.crypto && window.crypto.getRandomValues) window.crypto.getRandomValues(words);
       else {
-        words[0] = Math.floor(Math.random() * 0xffffffff);
+        words[0] = Math.floor(Math.random() * 0x100000000);
         words[1] = Date.now() >>> 0;
       }
-      this.elements.seedInput.value = `${words[0].toString(36)}-${words[1].toString(36)}`;
-      this.clearActiveDiscovery(false);
+      // Keep rapid clicks distinct even if a fallback clock/random source
+      // repeats. The complete displayed seed remains reproducible by the core.
+      this.randomSeedCounter = (this.randomSeedCounter || 0) + 1;
+      this.elements.seedInput.value = `${words[0].toString(36)}-${words[1].toString(36)}-${this.randomSeedCounter.toString(36)}`;
     }
 
     updateRangeLabels() {
@@ -1283,6 +1299,9 @@
       } else if (this.activePointerId !== null) {
         return;
       }
+      // Pointer gestures prevent their default action below, so explicitly
+      // focus the viewport for its keyboard controls without moving the page.
+      this.canvas.focus({ preventScroll: true });
       try {
         this.canvas.setPointerCapture(event.pointerId);
       } catch (_) {
@@ -1468,7 +1487,7 @@
     }
 
     keyDown(event) {
-      if (event.defaultPrevented || event.ctrlKey || event.metaKey || event.altKey) return;
+      if (event.defaultPrevented || event.isComposing || event.ctrlKey || event.metaKey || event.altKey) return;
       // Leave all keys, including Escape, to the browser while a native modal
       // is open. On mobile the controls drawer can still be open behind the
       // dialog; closing it here would make one Escape press dismiss two layers.
@@ -1482,6 +1501,23 @@
         target instanceof HTMLElement &&
         (target.isContentEditable || /^(INPUT|SELECT|TEXTAREA|BUTTON)$/.test(target.tagName))
       ) return;
+      const arrow = {
+        ArrowLeft: [1, 0], ArrowRight: [-1, 0],
+        ArrowUp: [0, 1], ArrowDown: [0, -1],
+      }[event.key];
+      if (arrow) {
+        if (target !== this.canvas || document.activeElement !== this.canvas) return;
+        event.preventDefault();
+        if (!this.patch || !this.simulation || this.busyState) return;
+        // Arrows move the viewed area like scrolling: Right reveals cells to
+        // the right, so the rendered board moves left. Distances are CSS pixels.
+        const distance = event.shiftKey ? 120 : 40;
+        this.automaticDiscoveryView = false;
+        this.discoveryViewManaged = false;
+        this.renderer.panPixels(arrow[0] * distance, arrow[1] * distance);
+        this.dirty = true;
+        return;
+      }
       const key = event.key.toLowerCase();
       if (key === ' ') {
         event.preventDefault();

@@ -15,7 +15,7 @@ import tempfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = "3.7.4"
+VERSION = "3.7.5"
 ARCHIVE_ROOT = "aperiodic-life"
 STANDALONE_NAME = f"aperiodic-life-{VERSION}.html"
 SOURCE_ZIP_NAME = f"aperiodic-life-source-{VERSION}.zip"
@@ -40,6 +40,7 @@ REQUIRED_CATALOGUE_PATHS = (
 STAMP = (1980, 1, 1, 0, 0, 0)
 EXECUTABLE_SOURCE_PATHS = {
     "tools/project.py", "tools/package.py", "tools/export_repository.py", "tools/build_site.py",
+    "tools/build_handover.py",
 }
 
 

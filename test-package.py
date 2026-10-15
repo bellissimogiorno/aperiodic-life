@@ -48,9 +48,9 @@ class PackageTest(unittest.TestCase):
         cls.temporary.cleanup()
 
     def test_versioned_output_contract_and_determinism(self):
-        self.assertEqual(release.VERSION, "3.7.4")
-        expected = {"aperiodic-life-3.7.4.html", "aperiodic-life-source-3.7.4.zip",
-                    "aperiodic-life-source-3.7.4.manifest.json", "aperiodic-life-3.7.4.sha256"}
+        self.assertEqual(release.VERSION, "3.7.5")
+        expected = {"aperiodic-life-3.7.5.html", "aperiodic-life-source-3.7.5.zip",
+                    "aperiodic-life-source-3.7.5.manifest.json", "aperiodic-life-3.7.5.sha256"}
         self.assertEqual(set(self.first_result), expected)
         self.assertEqual({path.name for path in self.first.iterdir()}, expected)
         self.assertEqual(self.first_result, self.second_result)

@@ -9,6 +9,7 @@ const assert = require('assert');
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
+const Core = require('./core.js');
 
 const sourcePath = path.join(__dirname, 'app.js');
 const marker = "  window.addEventListener('DOMContentLoaded', () => {";
@@ -20,7 +21,7 @@ const instrumented = source.replace(
   "  window.__interactionTestClasses = { AperiodicLifeApp, WebGLRenderer };\n\n" + marker,
 );
 const windowStub = {
-  AperiodicLifeCore: {},
+  AperiodicLifeCore: Core,
   AperiodicLifeDiscoveries: [],
   addEventListener() {},
 };
@@ -47,10 +48,161 @@ const documentStub = {
   createElement: (tagName) => new DOMNodeStub(tagName),
   createTextNode: (textContent) => ({ textContent }),
 };
-vm.runInNewContext(instrumented, {
+const runtime = {
   window: windowStub, HTMLElement: HTMLElementStub, document: documentStub, URL,
-});
+  Math: Object.create(Math), Date: class extends Date {},
+};
+vm.runInNewContext(instrumented, runtime);
 const { AperiodicLifeApp, WebGLRenderer } = windowStub.__interactionTestClasses;
+
+function seedHarness(tiling = 'square', neighborhood = 'touch') {
+  const patch = Core.buildPatch(tiling, Core.PATCH_OPTIONS[tiling][1].depth);
+  const graph = neighborhood === 'touch' ? patch.touchGraph : patch.edgeGraph;
+  const simulation = new Core.Automaton(patch, graph, {
+    rule: 'B3/S23', generations: 4, borderRings: 1,
+  });
+  const node = (tagName = 'BUTTON') => Object.assign(new HTMLElementStub(), {
+    tagName, value: '', listeners: new Map(),
+    addEventListener(type, handler) { this.listeners.set(type, handler); },
+  });
+  const elements = new Proxy({}, {
+    get(target, key) { return target[key] || (target[key] = node()); },
+  });
+  elements.seedInput = node('INPUT');
+  elements.seedInput.value = 'aperiodic';
+  elements.densityInput.value = '0.37';
+  elements.aboutDialog.open = false;
+  elements.rulesDialog.open = false;
+  const app = Object.create(AperiodicLifeApp.prototype);
+  Object.assign(app, {
+    patch, simulation, elements, canvas: node('CANVAS'), randomSeedCounter: 0,
+    controls: { classList: { contains() { return false; } } },
+    activeDiscovery: 'example', automaticDiscoveryView: true, discoveryViewManaged: true,
+    renderer: { updateState(state) { assert.strictEqual(state, simulation.state); } },
+    cycleResets: 0, statsUpdates: 0, dirty: false,
+    resetCycleDetector() { this.cycleResets++; },
+    updateStats(force) { assert.equal(force, true); this.statsUpdates++; },
+    showToast(message) { this.lastToast = message; },
+  });
+  return app;
+}
+
+{
+  // Exercise the real seeded automaton across all four tilings and both
+  // neighbourhoods. Fresh UI randomisation must not change core determinism.
+  let entropyCalls = 0;
+  windowStub.crypto = {
+    getRandomValues(words) {
+      entropyCalls++;
+      // A repeated entropy sample also exercises the per-session counter.
+      words.set([123456789, 987654321]);
+      return words;
+    },
+  };
+  for (const tiling of ['square', 'hex', 'hat', 'penrose']) {
+    for (const neighborhood of ['edge', 'touch']) {
+      const app = seedHarness(tiling, neighborhood);
+      app.randomize();
+      const seed = app.elements.seedInput.value;
+      const first = app.simulation.state.slice();
+      assert.notEqual(seed, 'aperiodic', `${tiling}/${neighborhood}: Randomise must replace the old seed`);
+      assert.equal(app.simulation.generation, 0);
+      assert.equal(app.activeDiscovery, null);
+      assert.equal(app.automaticDiscoveryView, false);
+      assert.equal(app.discoveryViewManaged, false);
+      assert.equal(app.dirty, true);
+      assert(app.lastToast.includes(seed), 'the displayed seed must describe the new pattern');
+
+      app.simulation.step();
+      app.randomize();
+      assert.notEqual(app.elements.seedInput.value, seed, 'consecutive clicks need fresh seeds');
+      assert.notDeepEqual(app.simulation.state, first, `${tiling}/${neighborhood}: consecutive random patterns repeated`);
+      assert.equal(app.simulation.generation, 0, 'randomising must reset the generation');
+
+      app.elements.seedInput.value = seed;
+      app.applySeed();
+      assert.deepEqual(app.simulation.state, first, `${tiling}/${neighborhood}: the saved seed must reproduce every cell`);
+      app.simulation.step();
+      app.applySeed(false);
+      assert.deepEqual(app.simulation.state, first, 'Apply seed must reset evolved or edited states');
+      assert.equal(app.elements.seedInput.value, seed, 'Apply seed must retain the exact seed');
+      assert.equal(app.cycleResets, 4, 'all pattern resets must discard old cycle observations');
+      assert.equal(app.statsUpdates, 4);
+
+      for (const density of ['0', '1']) {
+        app.elements.densityInput.value = density;
+        app.randomize(false);
+        for (let cell = 0; cell < app.simulation.state.length; cell++) {
+          assert.equal(app.simulation.state[cell], density === '1' && !app.simulation.isLocked(cell) ? 1 : 0,
+            'density endpoints and locked borders must still be respected');
+        }
+      }
+    }
+  }
+  assert.equal(entropyCalls, 32, 'only fresh Randomise actions should request entropy');
+
+  const app = seedHarness();
+  app.bindEvents();
+  app.elements.randomizeButton.listeners.get('click')();
+  const buttonSeed = app.elements.seedInput.value;
+  app.keyDown({ key: 'r', target: null });
+  assert.notEqual(app.elements.seedInput.value, buttonSeed, 'R must also choose a fresh seed');
+  const keyboardSeed = app.elements.seedInput.value;
+  app.keyDown({ key: 'r', target: app.elements.seedInput });
+  assert.equal(app.elements.seedInput.value, keyboardSeed, 'typing r inside the seed must not randomise');
+
+  const typedSeed = '  exact Unicode seed: \u03b1\u03b2  ';
+  app.elements.seedInput.value = typedSeed;
+  app.elements.applySeedButton.listeners.get('click')();
+  const typedPattern = app.simulation.state.slice();
+  app.simulation.step();
+  let prevented = false;
+  app.elements.seedInput.listeners.get('keydown')({
+    key: 'Enter', preventDefault() { prevented = true; },
+  });
+  assert.equal(prevented, true);
+  assert.equal(app.elements.seedInput.value, typedSeed, 'typed seed text must not be normalised');
+  assert.deepEqual(app.simulation.state, typedPattern, 'Enter must reproduce the same pattern as Apply seed');
+
+  for (const unavailable of ['busy', 'missing']) {
+    const simulation = app.simulation;
+    app.busyState = unavailable === 'busy';
+    if (unavailable === 'missing') app.simulation = null;
+    const callsBefore = entropyCalls;
+    const resetsBefore = app.cycleResets;
+    app.randomize();
+    app.applySeed();
+    assert.equal(app.elements.seedInput.value, typedSeed, 'an unavailable board must not silently consume a new seed');
+    assert.equal(entropyCalls, callsBefore);
+    assert.equal(app.cycleResets, resetsBefore);
+    assert.deepEqual(simulation.state, typedPattern);
+    app.simulation = simulation;
+  }
+  delete windowStub.crypto;
+}
+
+{
+  // Offline/insecure contexts may lack Web Crypto. Even identical random and
+  // clock samples must produce distinct, reproducible seeds on rapid clicks.
+  runtime.Math.random = () => 0.25;
+  runtime.Date.now = () => 123456789;
+  const app = seedHarness();
+  const seeds = new Set();
+  const patterns = new Set();
+  for (let click = 0; click < 32; click++) {
+    app.randomize(false);
+    seeds.add(app.elements.seedInput.value);
+    patterns.add(Buffer.from(app.simulation.state).toString('base64'));
+  }
+  assert.equal(seeds.size, 32, 'fallback seeds must not repeat when the clock and entropy repeat');
+  assert.equal(patterns.size, 32, 'the checked fallback samples must produce distinct patterns');
+  const expected = app.simulation.state.slice();
+  app.simulation.step();
+  app.applySeed(false);
+  assert.deepEqual(app.simulation.state, expected, 'fallback-generated seeds must remain reproducible');
+  delete runtime.Math.random;
+  delete runtime.Date.now;
+}
 
 {
   // Credits follow the selected example without retaining stale attribution.
@@ -159,7 +311,7 @@ const { AperiodicLifeApp, WebGLRenderer } = windowStub.__interactionTestClasses;
     updateStats() {},
     elements: {
       runButton, viewportRunButton,
-      stepButton: {}, randomizeButton: {}, clearButton: {},
+      stepButton: {}, randomizeButton: {}, applySeedButton: {}, clearButton: {},
       saveSnapshotButton: {}, loadSnapshotButton: {},
       loadDiscoveryButton: {}, loadRunDiscoveryButton: {},
       discoverySelect: { value: 'example' },
@@ -186,10 +338,12 @@ const { AperiodicLifeApp, WebGLRenderer } = windowStub.__interactionTestClasses;
   }
   app.setBusy(true);
   assert(runButton.disabled && viewportRunButton.disabled, 'both controls must be disabled during rebuild');
+  assert(app.elements.applySeedButton.disabled, 'Apply seed must be disabled during rebuild');
   app.setRunning(true);
   assert.equal(app.running, false, 'busy simulation must not start from either control');
   assert.equal(viewportRunButton.textContent, 'Play');
   app.setBusy(false);
+  assert(!app.elements.applySeedButton.disabled, 'Apply seed must recover after rebuild');
   assert(!runButton.disabled && !viewportRunButton.disabled, 'both controls must recover after rebuild');
   app.simulation = null;
   app.setBusy(false);
@@ -337,6 +491,7 @@ function harness(tool = 'pan', captureThrows = false) {
   const painted = [];
   const fits = [];
   const zooms = [];
+  const focuses = [];
   const state = new Uint8Array(2);
   const app = Object.create(AperiodicLifeApp.prototype);
   Object.assign(app, {
@@ -368,6 +523,10 @@ function harness(tool = 'pan', captureThrows = false) {
     },
     picking: { find(x) { return x < 0 ? -1 : x < 50 ? 0 : 1; } },
     canvas: {
+      focus(options) {
+        focuses.push(options);
+        documentStub.activeElement = this;
+      },
       classList: {
         add(name) { classes.add(name); },
         remove(name) { classes.delete(name); },
@@ -398,7 +557,7 @@ function harness(tool = 'pan', captureThrows = false) {
     resetCycleDetector() {},
     updateStats() {},
   });
-  return { app, classes, captured, released, pans, painted, fits, zooms, state };
+  return { app, classes, captured, released, pans, painted, fits, zooms, focuses, state };
 }
 
 function cameraPolicyHarness() {
@@ -797,6 +956,88 @@ function assertWorldPoint(renderer, screen, expected, message) {
   closeTo(actual.y, expected.y, `${message}: world y`);
 }
 
+{
+  const h = harness('pan');
+  useRealCamera(h);
+  h.app.patch = {};
+  h.app.controls = { classList: { contains() { return false; } } };
+  h.app.elements.aboutDialog = { open: false };
+  h.app.elements.rulesDialog = { open: false };
+  h.app.simulation.generation = 25;
+  h.app.activeDiscovery = 'tracked';
+  h.app.discoveryById = new Map([['tracked', {
+    view: { mode: 'trajectory', steps: 20, bounds: [-1, -1, 1, 1], padding: 2 },
+  }]]);
+  h.app.renderer.containState = () => { throw new Error('Manual keyboard pan must retain camera ownership'); };
+  h.app.renderer.focusState = h.app.renderer.containState;
+
+  h.app.pointerDown(event());
+  assert.strictEqual(documentStub.activeElement, h.app.canvas, 'clicking the canvas must focus its keyboard controls');
+  assert.deepEqual(h.focuses, [{ preventScroll: true }], 'canvas focus must not scroll the page');
+  h.app.pointerUp(event());
+  const originalState = h.app.simulation.state.slice();
+
+  for (const shiftKey of [false, true]) {
+    const worldStep = shiftKey ? 12 : 4;
+    for (const [key, x, y] of [
+      ['ArrowLeft', -worldStep, 0], ['ArrowRight', worldStep, 0],
+      ['ArrowUp', 0, worldStep], ['ArrowDown', 0, -worldStep],
+    ]) {
+      h.app.renderer.camera = { x: 5, y: 7, zoom: 10 };
+      h.app.automaticDiscoveryView = true;
+      h.app.discoveryViewManaged = true;
+      h.app.dirty = false;
+      const arrow = event({ key, shiftKey, target: h.app.canvas });
+      h.app.keyDown(arrow);
+      assert.equal(arrow.prevented, true, 'focused arrows must not scroll the page');
+      assert.deepEqual(h.app.renderer.camera, { x: 5 + x, y: 7 + y, zoom: 10 },
+        `${key}${shiftKey ? ' with Shift' : ''} must move the viewed area in the named direction`);
+      assert.equal(h.app.dirty, true);
+      assert.equal(h.app.automaticDiscoveryView, false);
+      assert.equal(h.app.discoveryViewManaged, false);
+      const moved = { ...h.app.renderer.camera };
+      h.app.updateManagedDiscoveryView();
+      h.app.resizeViewport();
+      assert.deepEqual(h.app.renderer.camera, moved, 'evolution and resize must preserve the keyboard-selected view');
+    }
+  }
+  assert.deepEqual(h.app.simulation.state, originalState, 'keyboard panning must not edit cells');
+  assert.equal(h.app.simulation.generation, 25, 'keyboard panning must not advance the automaton');
+  assert.equal(h.app.activeDiscovery, 'tracked', 'a camera-only change must retain example attribution');
+
+  function untouched(overrides = {}, activeElement = h.app.canvas, shouldPrevent = false) {
+    documentStub.activeElement = activeElement;
+    const before = { ...h.app.renderer.camera };
+    const arrow = event({ key: 'ArrowRight', target: h.app.canvas, ...overrides });
+    h.app.keyDown(arrow);
+    assert.deepEqual(h.app.renderer.camera, before, 'out-of-scope or unavailable arrow controls must not pan');
+    assert.equal(arrow.prevented, shouldPrevent);
+  }
+  untouched({}, null);
+  untouched({ target: null });
+  for (const tagName of ['INPUT', 'SELECT', 'TEXTAREA', 'BUTTON', 'DIV']) {
+    const target = Object.assign(new HTMLElementStub(), { tagName, isContentEditable: tagName === 'DIV' });
+    untouched({ target }, target);
+  }
+  for (const modifier of ['ctrlKey', 'metaKey', 'altKey', 'isComposing', 'defaultPrevented']) {
+    untouched({ [modifier]: true });
+  }
+  for (const dialog of ['aboutDialog', 'rulesDialog']) {
+    h.app.elements[dialog].open = true;
+    untouched();
+    h.app.elements[dialog].open = false;
+  }
+  h.app.busyState = true;
+  untouched({}, h.app.canvas, true);
+  h.app.busyState = false;
+  h.app.patch = null;
+  untouched({}, h.app.canvas, true);
+  h.app.patch = {};
+  h.app.simulation = null;
+  untouched({}, h.app.canvas, true);
+  documentStub.activeElement = null;
+}
+
 for (const tool of ['pan', 'paint']) {
   const h = harness(tool);
   useRealCamera(h);
@@ -933,7 +1174,7 @@ for (const end of ['pointerCancel', 'pointerCaptureLost', 'finishPointer']) {
   h.app.busy = {};
   h.app.busyTitle = {};
   h.app.busyDetail = {};
-  for (const id of ['stepButton', 'randomizeButton', 'clearButton', 'runButton', 'viewportRunButton',
+  for (const id of ['stepButton', 'randomizeButton', 'applySeedButton', 'clearButton', 'runButton', 'viewportRunButton',
     'saveSnapshotButton', 'loadSnapshotButton', 'loadDiscoveryButton', 'loadRunDiscoveryButton']) {
     h.app.elements[id] = {};
   }
@@ -948,4 +1189,4 @@ for (const end of ['pointerCancel', 'pointerCaptureLost', 'finishPointer']) {
   assert.equal(h.app.activePointerId, null);
 }
 
-console.log('example provenance, viewport bounds, discovery camera policy, manual overrides, pinch zoom, touch painting and pointer interaction checks passed');
+console.log('fresh Randomise and seeded replay, entropy fallback, focused arrow panning, example provenance, viewport bounds, discovery camera policy, manual overrides, pinch zoom, touch painting and pointer interaction checks passed');

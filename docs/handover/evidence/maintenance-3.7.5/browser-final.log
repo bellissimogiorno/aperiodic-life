@@ -1,0 +1,6 @@
+[browser] starting server
+[browser] launching Chromium
+Error: Chromium was not found; set CHROMIUM to its executable path
+    at launchChromium (/workspace/scratch/415e2afcf11e/work/aperiodic-life-handover-3.7.4-2026-10-14/source/test-browser.js:161:24)
+    at main (/workspace/scratch/415e2afcf11e/work/aperiodic-life-handover-3.7.4-2026-10-14/source/test-browser.js:1348:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)

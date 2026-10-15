@@ -1,0 +1,30 @@
+{
+  "revision": 2,
+  "reviewedPdfSHA256": "8f9aa2796ab173ae2253a9578a1c967ac20dd8d654d490169839557b1fb16f20",
+  "pages": 135,
+  "sourceDataInvariant": true,
+  "details": "All 89 existing entry records, all 56 scientific rule definitions, eight ordered tables, 12 UI update specifications, geometry, measurements, verification and source hashes remain unchanged. New or rewritten fields concern attribution, source roles and citations only. Scientific narrative changes clarify identities while preserving recorded dynamics and finite horizons.",
+  "metadataAuthor": "AI generated following prompts by Murdoch J. Gabbay",
+  "authorStatementInCover": true,
+  "p09": "Explicitly unresolved and not original.",
+  "einstein": "Finite-horizon limitations retained; no immortal Einstein glider claimed.",
+  "links": {
+    "internal": 1004,
+    "external": 34
+  },
+  "numberedBibliographyLinksCheckedAgainstActualPage": 389,
+  "ruleLinksChecked": 261,
+  "patternLinksChecked": 260,
+  "stateVectorAndRuleNotation": "State arrays [0,1,2] and [0,3,1] and notation B[10]/S[9,10] remain intact and are not converted to bibliography links.",
+  "embeddedDataByteIdentical": true,
+  "genericAttributionPhrasesAbsent": [
+    "Found in this package, priority unestablished",
+    "FOUND IN THIS PACKAGE; PRIORITY UNESTABLISHED",
+    "ADAPTATION OF CREDITED PRIOR WORK",
+    "CREDITED BELOW",
+    "Source/context:",
+    "Context/credit:"
+  ],
+  "issues": [],
+  "pending": null
+}

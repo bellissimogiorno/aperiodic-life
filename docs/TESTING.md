@@ -17,7 +17,7 @@ The large profile includes 372,100 hats and 143,010 Penrose rhombs and needs sub
 
 ## Core and topology
 
-Core tests compare synchronous updates against a direct per-cell reference model. They cover rule parsing, multi-digit notation, rejected inputs, refractory states, live counts, hashes, changed-cell counts, graph switching, deterministic randomisation, dead-border masks, and picking.
+Core tests compare synchronous updates against a direct per-cell reference model. `test-core-mutations.js` adds 38,400 full-state reference comparisons with 12,960 interleaved rule, graph, border and cell-state changes. They cover rule parsing, multi-digit notation, rejected inputs, refractory states, live counts, hashes, changed-cell counts, graph switching, deterministic randomisation, dead-border masks, and picking.
 
 Independent topology tests reconstruct adjacency and both boundary-distance fields without trusting production graph maps. The hat checks include doubled lattice areas, the split side, disk topology, segment ownership, affine metrics, and sampled picking. Penrose tests reconstruct triangle geometry, rhomb pairing, edge ownership, vertex contacts, and boundary layers.
 
@@ -42,7 +42,7 @@ Presentation checks are separate from dynamics. Playback speeds must match each 
 
 ## Interaction and state files
 
-Dependency-free interaction tests exercise camera ownership, responsive framing, containment, trajectory legibility, post-horizon following, painting and pan overrides, pinch scale and midpoint anchoring, two-finger panning, finger lifting, zoom limits, touch paint deferral, pointer cancellation, rule-dialog keyboard isolation, and synchronised playback controls during play, pause, and rebuilds.
+Dependency-free interaction tests exercise fresh Randomise/R seeds, deterministic Apply seed/Enter replay, busy-state protection, canvas arrow-key focus and camera ownership, responsive framing, containment, trajectory legibility, post-horizon following, painting and pan overrides, pinch scale and midpoint anchoring, two-finger panning, finger lifting, zoom limits, touch paint deferral, pointer cancellation, rule-dialog keyboard isolation, and synchronised playback controls during play, pause, and rebuilds.
 
 Snapshot tests round-trip exact states across all tilings, both graphs, and both Penrose orientations, then continue the restored experiments. They reject malformed files, unsupported values, invalid cell indices, graph mismatches, and nonzero locked-border cells without replacing the current simulation.
 
@@ -98,3 +98,14 @@ The [continued-search report](CONTINUED_SEARCH.md) links the additional rule, la
 `node research/continued-search/penrose/verify-twelve.js` compares 131 complete production/sparse states for the reduced three-cell seed and 41 complete states against the disjoint union of twelve isolated bodies. It records translated states and polygon matches for all twelve, but radius-three neighbourhood returns for only five within the displayed horizon. Proper-subset checks and boundary clearance are recorded separately.
 
 `node research/continued-search/hex/verify-selected.js` checks the period-6 puffer, twin launch and period-48 ship against independent axial evolution, including exact head/deposit equations, all-phase separation certificates and complete translated returns. Those regular-lattice certificates supply the additional argument for unbounded emission; finite browser replay alone does not.
+
+## Optional catalogue checks
+
+With the dependencies in `docs/catalogue/requirements.txt` installed, run:
+
+```bash
+python3 docs/catalogue/build_catalogue.py --check
+python3 test-catalogue.py
+```
+
+These checks validate the retained catalogue against the current engine and preset hashes, exact geometry version, and application patch compatibility. They do not rebuild or alter the reviewed PDF. The optional dependencies are not required by the standard test profile.

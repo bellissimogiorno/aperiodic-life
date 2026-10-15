@@ -1,0 +1,9 @@
+test_current_source_and_both_recorded_hashes_must_match (__main__.CatalogueTest.test_current_source_and_both_recorded_hashes_must_match) ... ok
+test_geometry_still_requires_the_exact_catalogue_version (__main__.CatalogueTest.test_geometry_still_requires_the_exact_catalogue_version) ... ok
+test_reviewed_catalogue_validates_against_current_application (__main__.CatalogueTest.test_reviewed_catalogue_validates_against_current_application) ... ok
+test_version_compatibility_is_limited_to_later_application_patches (__main__.CatalogueTest.test_version_compatibility_is_limited_to_later_application_patches) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.010s
+
+OK

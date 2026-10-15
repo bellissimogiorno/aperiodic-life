@@ -1,0 +1,3902 @@
+{
+  "schema": 2,
+  "generatedBy": "research/verify-catalog.js",
+  "catalogEntries": 89,
+  "results": [
+    {
+      "id": "hat-wake-traveller",
+      "title": "Hat wake traveller",
+      "category": "Einstein-hat gliders and launchers",
+      "tiling": "hat",
+      "cells": 54289,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-WAKE",
+      "generations": 4,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 293,
+      "finalAlive": 2,
+      "finalChanged": 9,
+      "maximumAlive": 4,
+      "totalChanged": 2840,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 3,
+          "changed": 11
+        },
+        {
+          "generation": 100,
+          "alive": 1,
+          "changed": 8
+        },
+        {
+          "generation": 150,
+          "alive": 3,
+          "changed": 10
+        },
+        {
+          "generation": 200,
+          "alive": 3,
+          "changed": 10
+        },
+        {
+          "generation": 250,
+          "alive": 3,
+          "changed": 11
+        },
+        {
+          "generation": 293,
+          "alive": 2,
+          "changed": 9
+        }
+      ]
+    },
+    {
+      "id": "hat-two-row-relay",
+      "title": "Hat two-row relay — Spectre variant",
+      "category": "Einstein-hat gliders and launchers",
+      "tiling": "hat",
+      "cells": 54289,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-RELAY",
+      "generations": 3,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 235,
+      "finalAlive": 4,
+      "finalChanged": 10,
+      "maximumAlive": 10,
+      "totalChanged": 2440,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 5,
+          "changed": 11
+        },
+        {
+          "generation": 100,
+          "alive": 5,
+          "changed": 11
+        },
+        {
+          "generation": 150,
+          "alive": 5,
+          "changed": 11
+        },
+        {
+          "generation": 200,
+          "alive": 5,
+          "changed": 11
+        },
+        {
+          "generation": 235,
+          "alive": 4,
+          "changed": 10
+        }
+      ]
+    },
+    {
+      "id": "hat-edmond-a-six-way-launcher",
+      "title": "Hat A six-way launcher",
+      "category": "Einstein-hat gliders and launchers",
+      "tiling": "hat",
+      "cells": 54289,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-A",
+      "generations": 4,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 180,
+      "finalAlive": 9,
+      "finalChanged": 66,
+      "maximumAlive": 9,
+      "totalChanged": 12190,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 8,
+          "changed": 65
+        },
+        {
+          "generation": 100,
+          "alive": 6,
+          "changed": 72
+        },
+        {
+          "generation": 150,
+          "alive": 7,
+          "changed": 70
+        },
+        {
+          "generation": 180,
+          "alive": 9,
+          "changed": 66
+        }
+      ]
+    },
+    {
+      "id": "hat-edmond-b-periodic-emitter",
+      "title": "Hat B recurring emitter — finite verification",
+      "category": "Einstein-hat gliders and launchers",
+      "tiling": "hat",
+      "cells": 54289,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-B",
+      "generations": 4,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 180,
+      "finalAlive": 109,
+      "finalChanged": 244,
+      "maximumAlive": 118,
+      "totalChanged": 29218,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 62,
+          "changed": 141
+        },
+        {
+          "generation": 100,
+          "alive": 70,
+          "changed": 160
+        },
+        {
+          "generation": 150,
+          "alive": 100,
+          "changed": 228
+        },
+        {
+          "generation": 180,
+          "alive": 109,
+          "changed": 244
+        }
+      ]
+    },
+    {
+      "id": "hat-edmond-b-glider",
+      "title": "Hat glider B — Edmond rule",
+      "category": "Einstein-hat gliders and launchers",
+      "tiling": "hat",
+      "cells": 54289,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-B",
+      "generations": 4,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 307,
+      "finalAlive": 4,
+      "finalChanged": 10,
+      "maximumAlive": 12,
+      "totalChanged": 3189,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 5,
+          "changed": 11
+        },
+        {
+          "generation": 100,
+          "alive": 5,
+          "changed": 11
+        },
+        {
+          "generation": 150,
+          "alive": 4,
+          "changed": 10
+        },
+        {
+          "generation": 200,
+          "alive": 5,
+          "changed": 11
+        },
+        {
+          "generation": 250,
+          "alive": 4,
+          "changed": 9
+        },
+        {
+          "generation": 300,
+          "alive": 5,
+          "changed": 10
+        },
+        {
+          "generation": 307,
+          "alive": 4,
+          "changed": 10
+        }
+      ]
+    },
+    {
+      "id": "hat-edmond-a-glider",
+      "title": "Hat glider A — Edmond rule",
+      "category": "Einstein-hat gliders and launchers",
+      "tiling": "hat",
+      "cells": 54289,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-A",
+      "generations": 4,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 307,
+      "finalAlive": 2,
+      "finalChanged": 11,
+      "maximumAlive": 3,
+      "totalChanged": 3490,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 1,
+          "changed": 12
+        },
+        {
+          "generation": 100,
+          "alive": 1,
+          "changed": 12
+        },
+        {
+          "generation": 150,
+          "alive": 1,
+          "changed": 11
+        },
+        {
+          "generation": 200,
+          "alive": 1,
+          "changed": 12
+        },
+        {
+          "generation": 250,
+          "alive": 1,
+          "changed": 10
+        },
+        {
+          "generation": 300,
+          "alive": 1,
+          "changed": 11
+        },
+        {
+          "generation": 307,
+          "alive": 2,
+          "changed": 11
+        }
+      ]
+    },
+    {
+      "id": "hat-edmond-c-glider",
+      "title": "Hat glider C — Edmond rule",
+      "category": "Einstein-hat gliders and launchers",
+      "tiling": "hat",
+      "cells": 54289,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-C",
+      "generations": 4,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 311,
+      "finalAlive": 4,
+      "finalChanged": 13,
+      "maximumAlive": 14,
+      "totalChanged": 3813,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 9,
+          "changed": 13
+        },
+        {
+          "generation": 100,
+          "alive": 8,
+          "changed": 15
+        },
+        {
+          "generation": 150,
+          "alive": 4,
+          "changed": 12
+        },
+        {
+          "generation": 200,
+          "alive": 8,
+          "changed": 13
+        },
+        {
+          "generation": 250,
+          "alive": 3,
+          "changed": 11
+        },
+        {
+          "generation": 300,
+          "alive": 4,
+          "changed": 11
+        },
+        {
+          "generation": 311,
+          "alive": 4,
+          "changed": 13
+        }
+      ]
+    },
+    {
+      "id": "hat-simple-glider",
+      "title": "Hat glider — three-state variant",
+      "category": "Einstein-hat gliders and launchers",
+      "tiling": "hat",
+      "cells": 54289,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-SIMPLE",
+      "generations": 3,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 307,
+      "finalAlive": 4,
+      "finalChanged": 10,
+      "maximumAlive": 12,
+      "totalChanged": 3189,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 5,
+          "changed": 11
+        },
+        {
+          "generation": 100,
+          "alive": 5,
+          "changed": 11
+        },
+        {
+          "generation": 150,
+          "alive": 4,
+          "changed": 10
+        },
+        {
+          "generation": 200,
+          "alive": 5,
+          "changed": 11
+        },
+        {
+          "generation": 250,
+          "alive": 4,
+          "changed": 9
+        },
+        {
+          "generation": 300,
+          "alive": 5,
+          "changed": 10
+        },
+        {
+          "generation": 307,
+          "alive": 4,
+          "changed": 10
+        }
+      ]
+    },
+    {
+      "id": "hat-edmond-c-triple-launcher",
+      "title": "Hat triple launcher — two-cell seed",
+      "category": "Einstein-hat gliders and launchers",
+      "tiling": "hat",
+      "cells": 54289,
+      "neighborhood": "touch",
+      "rule": "TABLE:HAT-C",
+      "generations": 4,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 160,
+      "finalAlive": 17,
+      "finalChanged": 40,
+      "maximumAlive": 29,
+      "totalChanged": 5619,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 18,
+          "changed": 39
+        },
+        {
+          "generation": 100,
+          "alive": 14,
+          "changed": 33
+        },
+        {
+          "generation": 150,
+          "alive": 15,
+          "changed": 38
+        },
+        {
+          "generation": 160,
+          "alive": 17,
+          "changed": 40
+        }
+      ]
+    },
+    {
+      "id": "penrose-b2-c6-twelve-launcher",
+      "title": "Penrose twelve-traveller launcher",
+      "category": "Aperiodic travelling dynamics",
+      "tiling": "penrose",
+      "cells": 54560,
+      "neighborhood": "touch",
+      "rule": "B2/S",
+      "generations": 6,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 130,
+      "finalAlive": 34,
+      "finalChanged": 230,
+      "maximumAlive": 103,
+      "totalChanged": 37338,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 66,
+          "changed": 480
+        },
+        {
+          "generation": 100,
+          "alive": 36,
+          "changed": 230
+        },
+        {
+          "generation": 130,
+          "alive": 34,
+          "changed": 230
+        }
+      ]
+    },
+    {
+      "id": "hex-b245s02-c5-p6-puffer",
+      "title": "Hexagonal p6 single-cell-trail puffer",
+      "category": "Hexagonal guns, puffers and replication",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B245/S02",
+      "generations": 5,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 120,
+      "finalAlive": 30,
+      "finalChanged": 28,
+      "maximumAlive": 34,
+      "totalChanged": 2820,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 19,
+          "changed": 21
+        },
+        {
+          "generation": 100,
+          "alive": 27,
+          "changed": 20
+        },
+        {
+          "generation": 120,
+          "alive": 30,
+          "changed": 28
+        }
+      ]
+    },
+    {
+      "id": "hex-b245s02-c5-three-cell-twin-puffer-launcher",
+      "title": "Hexagonal three-cell twin-puffer launcher",
+      "category": "Hexagonal guns, puffers and replication",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B245/S02",
+      "generations": 5,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 120,
+      "finalAlive": 54,
+      "finalChanged": 56,
+      "maximumAlive": 62,
+      "totalChanged": 5325,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 32,
+          "changed": 42
+        },
+        {
+          "generation": 100,
+          "alive": 48,
+          "changed": 40
+        },
+        {
+          "generation": 120,
+          "alive": 54,
+          "changed": 56
+        }
+      ]
+    },
+    {
+      "id": "hex-b2345s24-c4-p48-traveller",
+      "title": "Hexagonal p48 long-cycle spaceship",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 111169,
+      "neighborhood": "edge",
+      "rule": "B2345/S24",
+      "generations": 4,
+      "kind": "spaceship benchmark",
+      "steps": 48,
+      "translation": [
+        -32,
+        16
+      ],
+      "liveCells": 10,
+      "phasePopulations": [
+        10,
+        16,
+        22,
+        23,
+        23,
+        22,
+        18,
+        21,
+        21,
+        22,
+        19,
+        14,
+        12,
+        16,
+        20,
+        19,
+        20,
+        18,
+        12,
+        13,
+        14,
+        13,
+        12,
+        10,
+        10,
+        16,
+        22,
+        23,
+        23,
+        22,
+        18,
+        21,
+        21,
+        22,
+        19,
+        14,
+        12,
+        16,
+        20,
+        19,
+        20,
+        18,
+        12,
+        13,
+        14,
+        13,
+        12,
+        10,
+        10
+      ],
+      "ruleClauseActivity": []
+    },
+    {
+      "id": "hex-b2s0-c3-three-cell-glider",
+      "title": "Hexagonal three-cell glider",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B2/S0",
+      "generations": 3,
+      "kind": "compact finite traveller",
+      "verifiedThrough": 120,
+      "initialActive": 3,
+      "finalActive": 3,
+      "minimumActive": 3,
+      "maximumActive": 5,
+      "minimumLive": 2,
+      "maximumLive": 3,
+      "maximumRadius": 1.7320526123046847,
+      "minimumBoundaryDistance": 68,
+      "displacement": 103.92304787854873,
+      "directionality": 0.9999999999999314,
+      "maximumSupportComponents": 1,
+      "disconnectedGenerations": [],
+      "requiredBirthCount": 0,
+      "ruleClauseActivity": [
+        {
+          "kind": "birth",
+          "liveNeighbors": 2,
+          "count": 180,
+          "lastToGeneration": 120
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 0,
+          "count": 120,
+          "lastToGeneration": 120
+        }
+      ],
+      "translatedReturn": {
+        "fromGeneration": 1,
+        "toGeneration": 3,
+        "dx": -0.8660253882408142,
+        "dy": -1.5,
+        "neighborhoodRadius": 3
+      },
+      "finalHash": [
+        1531259721,
+        1540034580
+      ]
+    },
+    {
+      "id": "hex-b234s1346-c3-four-cell-launcher",
+      "title": "Hexagonal four-cell diagonal launcher",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B234/S1346",
+      "generations": 3,
+      "kind": "compact finite traveller",
+      "verifiedThrough": 120,
+      "initialActive": 4,
+      "finalActive": 12,
+      "minimumActive": 4,
+      "maximumActive": 27,
+      "minimumLive": 4,
+      "maximumLive": 19,
+      "maximumRadius": 8.222222994802255,
+      "minimumBoundaryDistance": 97,
+      "displacement": 43.125543395699445,
+      "directionality": 0.6407225482480411,
+      "maximumSupportComponents": 5,
+      "disconnectedGenerations": [
+        2,
+        5,
+        6,
+        13,
+        15,
+        16,
+        21,
+        23,
+        24,
+        29,
+        31,
+        32,
+        37,
+        39,
+        40,
+        45,
+        47,
+        48,
+        53,
+        55,
+        56,
+        61,
+        63,
+        64,
+        69,
+        71,
+        72,
+        77,
+        79,
+        80,
+        85,
+        87,
+        88,
+        93,
+        95,
+        96,
+        101,
+        103,
+        104,
+        109,
+        111,
+        112,
+        117,
+        119,
+        120
+      ],
+      "requiredBirthCount": 0,
+      "ruleClauseActivity": [
+        {
+          "kind": "birth",
+          "liveNeighbors": 2,
+          "count": 595,
+          "lastToGeneration": 120
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 3,
+          "count": 171,
+          "lastToGeneration": 119
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 4,
+          "count": 57,
+          "lastToGeneration": 116
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 1,
+          "count": 125,
+          "lastToGeneration": 120
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 3,
+          "count": 369,
+          "lastToGeneration": 119
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 4,
+          "count": 297,
+          "lastToGeneration": 118
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 6,
+          "count": 28,
+          "lastToGeneration": 117
+        }
+      ],
+      "translatedReturn": {
+        "fromGeneration": 9,
+        "toGeneration": 17,
+        "dx": 2.5980762243270874,
+        "dy": 1.5,
+        "neighborhoodRadius": 3
+      },
+      "finalHash": [
+        2862079887,
+        2583090950
+      ]
+    },
+    {
+      "id": "hex-b2456s1345-c4-five-cell-launcher",
+      "title": "Hexagonal five-cell p43 launcher",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B2456/S1345",
+      "generations": 4,
+      "kind": "compact finite traveller",
+      "verifiedThrough": 178,
+      "initialActive": 5,
+      "finalActive": 18,
+      "minimumActive": 5,
+      "maximumActive": 48,
+      "minimumLive": 5,
+      "maximumLive": 32,
+      "maximumRadius": 13.954066890225311,
+      "minimumBoundaryDistance": 102,
+      "displacement": 38.83371945158784,
+      "directionality": 0.3660976433211357,
+      "maximumSupportComponents": 6,
+      "disconnectedGenerations": [
+        3,
+        4,
+        5,
+        6,
+        11,
+        12,
+        13,
+        17,
+        25,
+        27,
+        29,
+        30,
+        31,
+        33,
+        35,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        49,
+        54,
+        55,
+        56,
+        60,
+        68,
+        70,
+        72,
+        73,
+        74,
+        76,
+        78,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        92,
+        97,
+        98,
+        99,
+        103,
+        111,
+        113,
+        115,
+        116,
+        117,
+        119,
+        121,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        135,
+        140,
+        141,
+        142,
+        146,
+        154,
+        156,
+        158,
+        159,
+        160,
+        162,
+        164,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        178
+      ],
+      "requiredBirthCount": 0,
+      "ruleClauseActivity": [
+        {
+          "kind": "birth",
+          "liveNeighbors": 2,
+          "count": 880,
+          "lastToGeneration": 178
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 4,
+          "count": 84,
+          "lastToGeneration": 172
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 5,
+          "count": 16,
+          "lastToGeneration": 163
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 6,
+          "count": 16,
+          "lastToGeneration": 167
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 1,
+          "count": 540,
+          "lastToGeneration": 178
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 3,
+          "count": 632,
+          "lastToGeneration": 178
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 4,
+          "count": 392,
+          "lastToGeneration": 170
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 5,
+          "count": 136,
+          "lastToGeneration": 168
+        }
+      ],
+      "translatedReturn": {
+        "fromGeneration": 6,
+        "toGeneration": 49,
+        "dx": -7.794228623310725,
+        "dy": 4.5,
+        "neighborhoodRadius": 3
+      },
+      "finalHash": [
+        3522641762,
+        4221220525
+      ]
+    },
+    {
+      "id": "hex-b23s13-c4-p9-knightship-launcher",
+      "title": "Hexagonal six-cell p9 knightship launcher",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B23/S13",
+      "generations": 4,
+      "kind": "compact finite traveller",
+      "verifiedThrough": 120,
+      "initialActive": 6,
+      "finalActive": 33,
+      "minimumActive": 6,
+      "maximumActive": 33,
+      "minimumLive": 6,
+      "maximumLive": 15,
+      "maximumRadius": 11.287656967300038,
+      "minimumBoundaryDistance": 61,
+      "displacement": 101.30644866270606,
+      "directionality": 0.8110392960261487,
+      "maximumSupportComponents": 4,
+      "disconnectedGenerations": [
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        15,
+        16,
+        19,
+        21,
+        22,
+        23,
+        24,
+        25,
+        28,
+        30,
+        31,
+        32,
+        33,
+        34,
+        37,
+        39,
+        40,
+        41,
+        42,
+        43,
+        46,
+        48,
+        49,
+        50,
+        51,
+        52,
+        55,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        66,
+        67,
+        68,
+        69,
+        70,
+        73,
+        75,
+        76,
+        77,
+        78,
+        79,
+        82,
+        84,
+        85,
+        86,
+        87,
+        88,
+        91,
+        93,
+        94,
+        95,
+        96,
+        97,
+        100,
+        102,
+        103,
+        104,
+        105,
+        106,
+        109,
+        111,
+        112,
+        113,
+        114,
+        115,
+        118,
+        120
+      ],
+      "requiredBirthCount": 0,
+      "ruleClauseActivity": [
+        {
+          "kind": "birth",
+          "liveNeighbors": 2,
+          "count": 581,
+          "lastToGeneration": 120
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 3,
+          "count": 179,
+          "lastToGeneration": 120
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 1,
+          "count": 334,
+          "lastToGeneration": 120
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 3,
+          "count": 208,
+          "lastToGeneration": 120
+        }
+      ],
+      "translatedReturn": {
+        "fromGeneration": 16,
+        "toGeneration": 25,
+        "dx": 5.1961523691813145,
+        "dy": -6,
+        "neighborhoodRadius": 3
+      },
+      "finalHash": [
+        884841413,
+        1339690346
+      ]
+    },
+    {
+      "id": "hex-b234s245-c5-p10-knightship-launcher",
+      "title": "Hexagonal six-cell p10 knightship launcher",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B234/S245",
+      "generations": 5,
+      "kind": "compact finite traveller",
+      "verifiedThrough": 120,
+      "initialActive": 6,
+      "finalActive": 27,
+      "minimumActive": 6,
+      "maximumActive": 58,
+      "minimumLive": 6,
+      "maximumLive": 24,
+      "maximumRadius": 12.704769881350133,
+      "minimumBoundaryDistance": 85,
+      "displacement": 54.116310871278664,
+      "directionality": 0.4258008596491944,
+      "maximumSupportComponents": 6,
+      "disconnectedGenerations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        15,
+        16,
+        17,
+        18,
+        19,
+        25,
+        26,
+        27,
+        28,
+        29,
+        35,
+        36,
+        37,
+        38,
+        39,
+        45,
+        46,
+        47,
+        48,
+        49,
+        55,
+        56,
+        57,
+        58,
+        59,
+        65,
+        66,
+        67,
+        68,
+        69,
+        75,
+        76,
+        77,
+        78,
+        79,
+        85,
+        86,
+        87,
+        88,
+        89,
+        95,
+        96,
+        97,
+        98,
+        99,
+        105,
+        106,
+        107,
+        108,
+        109,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "requiredBirthCount": 0,
+      "ruleClauseActivity": [
+        {
+          "kind": "birth",
+          "liveNeighbors": 2,
+          "count": 722,
+          "lastToGeneration": 120
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 3,
+          "count": 246,
+          "lastToGeneration": 120
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 4,
+          "count": 11,
+          "lastToGeneration": 111
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 2,
+          "count": 629,
+          "lastToGeneration": 120
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 4,
+          "count": 95,
+          "lastToGeneration": 120
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 5,
+          "count": 4,
+          "lastToGeneration": 3
+        }
+      ],
+      "translatedReturn": {
+        "fromGeneration": 12,
+        "toGeneration": 22,
+        "dx": 3.464101642370224,
+        "dy": 3,
+        "neighborhoodRadius": 3
+      },
+      "finalHash": [
+        4282980425,
+        1911281688
+      ]
+    },
+    {
+      "id": "penrose-b2-c5-five-launcher",
+      "title": "Penrose five-traveller launcher",
+      "category": "Aperiodic travelling dynamics",
+      "tiling": "penrose",
+      "cells": 143010,
+      "neighborhood": "touch",
+      "rule": "B2/S",
+      "generations": 5,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 240,
+      "finalAlive": 18,
+      "finalChanged": 82,
+      "maximumAlive": 77,
+      "totalChanged": 31493,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 51,
+          "changed": 255
+        },
+        {
+          "generation": 100,
+          "alive": 22,
+          "changed": 127
+        },
+        {
+          "generation": 150,
+          "alive": 16,
+          "changed": 78
+        },
+        {
+          "generation": 200,
+          "alive": 15,
+          "changed": 80
+        },
+        {
+          "generation": 240,
+          "alive": 18,
+          "changed": 82
+        }
+      ]
+    },
+    {
+      "id": "penrose-b2-c6-six-launcher",
+      "title": "Penrose six-traveller launcher",
+      "category": "Aperiodic travelling dynamics",
+      "tiling": "penrose",
+      "cells": 143010,
+      "neighborhood": "touch",
+      "rule": "B2/S",
+      "generations": 6,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 200,
+      "finalAlive": 19,
+      "finalChanged": 110,
+      "maximumAlive": 82,
+      "totalChanged": 27878,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 27,
+          "changed": 178
+        },
+        {
+          "generation": 100,
+          "alive": 21,
+          "changed": 114
+        },
+        {
+          "generation": 150,
+          "alive": 23,
+          "changed": 119
+        },
+        {
+          "generation": 200,
+          "alive": 19,
+          "changed": 110
+        }
+      ]
+    },
+    {
+      "id": "square-block",
+      "title": "Block still life",
+      "category": "Classic square Life",
+      "tiling": "square",
+      "cells": 2601,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "still life",
+      "transient": 0,
+      "exactPeriod": 1,
+      "minimumAlive": 4,
+      "maximumAlive": 4,
+      "supportCells": 4,
+      "minimumBoundaryDistance": 24,
+      "center": [
+        -0.5,
+        -0.5
+      ],
+      "radius": 0.7071067811865476
+    },
+    {
+      "id": "square-blinker",
+      "title": "Blinker — period 2",
+      "category": "Classic square Life",
+      "tiling": "square",
+      "cells": 2601,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 2,
+      "minimumAlive": 3,
+      "maximumAlive": 3,
+      "supportCells": 5,
+      "minimumBoundaryDistance": 24,
+      "center": [
+        0,
+        0
+      ],
+      "radius": 1
+    },
+    {
+      "id": "square-pulsar",
+      "title": "Pulsar — period 3",
+      "category": "Classic square Life",
+      "tiling": "square",
+      "cells": 2601,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 3,
+      "minimumAlive": 48,
+      "maximumAlive": 72,
+      "supportCells": 88,
+      "minimumBoundaryDistance": 18,
+      "center": [
+        0,
+        0
+      ],
+      "radius": 7.615773105863909
+    },
+    {
+      "id": "square-pentadecathlon",
+      "title": "Pentadecathlon — period 15",
+      "category": "Classic square Life",
+      "tiling": "square",
+      "cells": 2601,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 15,
+      "minimumAlive": 12,
+      "maximumAlive": 40,
+      "supportCells": 80,
+      "minimumBoundaryDistance": 17,
+      "center": [
+        -0.5,
+        0
+      ],
+      "radius": 7.5
+    },
+    {
+      "id": "square-glider",
+      "title": "Glider — diagonal spaceship",
+      "category": "Classic square Life",
+      "tiling": "square",
+      "cells": 2601,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "spaceship benchmark",
+      "steps": 4,
+      "translation": [
+        1,
+        1
+      ],
+      "liveCells": 5,
+      "phasePopulations": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "ruleClauseActivity": []
+    },
+    {
+      "id": "square-lwss",
+      "title": "Lightweight spaceship",
+      "category": "Classic square Life",
+      "tiling": "square",
+      "cells": 2601,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "spaceship benchmark",
+      "steps": 4,
+      "translation": [
+        -2,
+        0
+      ],
+      "liveCells": 9,
+      "phasePopulations": [
+        9,
+        12,
+        9,
+        12,
+        9
+      ],
+      "ruleClauseActivity": []
+    },
+    {
+      "id": "square-highlife-replicator",
+      "title": "HighLife replicator",
+      "category": "Classic square Life",
+      "tiling": "square",
+      "cells": 10201,
+      "neighborhood": "touch",
+      "rule": "B36/S23",
+      "generations": 2,
+      "kind": "replicator benchmark",
+      "steps": 12,
+      "translations": [
+        [
+          -2,
+          -2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "initialLiveCells": 12,
+      "resultingLiveCells": 24
+    },
+    {
+      "id": "square-diehard",
+      "title": "Diehard — extinction at 130",
+      "category": "Classic square Life",
+      "tiling": "square",
+      "cells": 10201,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "compact extinction transient",
+      "extinctionGeneration": 130,
+      "maximumAlive": 40,
+      "totalChanged": 2261
+    },
+    {
+      "id": "square-r-pentomino",
+      "title": "R-pentomino methuselah",
+      "category": "Classic square Life",
+      "tiling": "square",
+      "cells": 90601,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 1103,
+      "finalAlive": 111,
+      "finalChanged": 26,
+      "maximumAlive": 314,
+      "totalChanged": 117714,
+      "checkpoints": [
+        {
+          "generation": 250,
+          "alive": 144,
+          "changed": 112
+        },
+        {
+          "generation": 500,
+          "alive": 174,
+          "changed": 107
+        },
+        {
+          "generation": 750,
+          "alive": 189,
+          "changed": 100
+        },
+        {
+          "generation": 1000,
+          "alive": 151,
+          "changed": 72
+        },
+        {
+          "generation": 1103,
+          "alive": 111,
+          "changed": 26
+        }
+      ]
+    },
+    {
+      "id": "square-acorn",
+      "title": "Acorn methuselah",
+      "category": "Classic square Life",
+      "tiling": "square",
+      "cells": 90601,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 5206,
+      "finalAlive": 620,
+      "finalChanged": 170,
+      "maximumAlive": 1045,
+      "totalChanged": 1409389,
+      "checkpoints": [
+        {
+          "generation": 250,
+          "alive": 149,
+          "changed": 119
+        },
+        {
+          "generation": 500,
+          "alive": 276,
+          "changed": 180
+        },
+        {
+          "generation": 750,
+          "alive": 295,
+          "changed": 181
+        },
+        {
+          "generation": 1000,
+          "alive": 455,
+          "changed": 275
+        },
+        {
+          "generation": 1250,
+          "alive": 308,
+          "changed": 176
+        },
+        {
+          "generation": 1500,
+          "alive": 388,
+          "changed": 188
+        },
+        {
+          "generation": 1750,
+          "alive": 379,
+          "changed": 195
+        },
+        {
+          "generation": 2000,
+          "alive": 388,
+          "changed": 214
+        },
+        {
+          "generation": 2250,
+          "alive": 400,
+          "changed": 195
+        },
+        {
+          "generation": 2500,
+          "alive": 391,
+          "changed": 178
+        },
+        {
+          "generation": 2750,
+          "alive": 495,
+          "changed": 284
+        },
+        {
+          "generation": 3000,
+          "alive": 556,
+          "changed": 311
+        },
+        {
+          "generation": 3250,
+          "alive": 578,
+          "changed": 247
+        },
+        {
+          "generation": 3500,
+          "alive": 669,
+          "changed": 376
+        },
+        {
+          "generation": 3750,
+          "alive": 635,
+          "changed": 338
+        },
+        {
+          "generation": 4000,
+          "alive": 824,
+          "changed": 498
+        },
+        {
+          "generation": 4250,
+          "alive": 796,
+          "changed": 336
+        },
+        {
+          "generation": 4500,
+          "alive": 757,
+          "changed": 362
+        },
+        {
+          "generation": 4750,
+          "alive": 702,
+          "changed": 231
+        },
+        {
+          "generation": 5000,
+          "alive": 791,
+          "changed": 317
+        },
+        {
+          "generation": 5206,
+          "alive": 620,
+          "changed": 170
+        }
+      ]
+    },
+    {
+      "id": "hex-conway-p2",
+      "title": "Hexagonal Conway p2",
+      "category": "Hexagonal benchmarks",
+      "tiling": "hex",
+      "cells": 3169,
+      "neighborhood": "edge",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 2,
+      "minimumAlive": 4,
+      "maximumAlive": 4,
+      "supportCells": 7,
+      "minimumBoundaryDistance": 31,
+      "center": [
+        0,
+        0
+      ],
+      "radius": 1.732050799797065
+    },
+    {
+      "id": "hex-conway-p3",
+      "title": "Hexagonal Conway p3",
+      "category": "Hexagonal benchmarks",
+      "tiling": "hex",
+      "cells": 3169,
+      "neighborhood": "edge",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 3,
+      "minimumAlive": 19,
+      "maximumAlive": 21,
+      "supportCells": 21,
+      "minimumBoundaryDistance": 24,
+      "center": [
+        6.103417098522186,
+        3.142857142857143
+      ],
+      "radius": 6.865074748241358
+    },
+    {
+      "id": "hex-conway-p6",
+      "title": "Hexagonal Conway p6",
+      "category": "Hexagonal benchmarks",
+      "tiling": "hex",
+      "cells": 3169,
+      "neighborhood": "edge",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 6,
+      "minimumAlive": 19,
+      "maximumAlive": 23,
+      "supportCells": 25,
+      "minimumBoundaryDistance": 23,
+      "center": [
+        1.2124355602264405,
+        -6.06
+      ],
+      "radius": 8.066821022268385
+    },
+    {
+      "id": "hex-b2s35-p5-traveller",
+      "title": "Hexagonal B2/S35 p5 traveller",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 12481,
+      "neighborhood": "edge",
+      "rule": "B2/S35",
+      "generations": 2,
+      "kind": "spaceship benchmark",
+      "steps": 5,
+      "translation": [
+        1,
+        0
+      ],
+      "liveCells": 12,
+      "phasePopulations": [
+        12,
+        17,
+        13,
+        10,
+        18,
+        12
+      ],
+      "ruleClauseActivity": []
+    },
+    {
+      "id": "hex-b245s3-p10-traveller",
+      "title": "Hexagonal B245/S3 p10 traveller",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 12481,
+      "neighborhood": "edge",
+      "rule": "B245/S3",
+      "generations": 2,
+      "kind": "spaceship benchmark",
+      "steps": 10,
+      "translation": [
+        2,
+        0
+      ],
+      "liveCells": 9,
+      "phasePopulations": [
+        9,
+        13,
+        17,
+        18,
+        16,
+        17,
+        15,
+        16,
+        15,
+        11,
+        9
+      ],
+      "ruleClauseActivity": [
+        {
+          "kind": "birth",
+          "liveNeighbors": 2,
+          "count": 90,
+          "lastToGeneration": 10
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 4,
+          "count": 32,
+          "lastToGeneration": 10
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 5,
+          "count": 3,
+          "lastToGeneration": 4
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 3,
+          "count": 22,
+          "lastToGeneration": 6
+        }
+      ]
+    },
+    {
+      "id": "hex-b235s146-c4-launcher-traveller",
+      "title": "Hexagonal B235/S146 four-state launcher",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B235/S146",
+      "generations": 4,
+      "kind": "compact finite traveller",
+      "verifiedThrough": 200,
+      "initialActive": 12,
+      "finalActive": 21,
+      "minimumActive": 12,
+      "maximumActive": 53,
+      "minimumLive": 6,
+      "maximumLive": 26,
+      "maximumRadius": 21.991562388345375,
+      "minimumBoundaryDistance": 28,
+      "displacement": 168.8337162463438,
+      "directionality": 0.9574962832724487,
+      "maximumSupportComponents": 9,
+      "disconnectedGenerations": [
+        0,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        23,
+        25,
+        30,
+        33,
+        35,
+        40,
+        43,
+        45,
+        50,
+        53,
+        55,
+        60,
+        63,
+        65,
+        70,
+        73,
+        75,
+        80,
+        83,
+        85,
+        90,
+        93,
+        95,
+        100,
+        103,
+        105,
+        110,
+        113,
+        115,
+        120,
+        123,
+        125,
+        130,
+        133,
+        135,
+        140,
+        143,
+        145,
+        150,
+        153,
+        155,
+        160,
+        163,
+        165,
+        170,
+        173,
+        175,
+        180,
+        183,
+        185,
+        190,
+        193,
+        195,
+        200
+      ],
+      "requiredBirthCount": 0,
+      "ruleClauseActivity": [
+        {
+          "kind": "birth",
+          "liveNeighbors": 2,
+          "count": 871,
+          "lastToGeneration": 200
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 3,
+          "count": 370,
+          "lastToGeneration": 200
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 5,
+          "count": 2,
+          "lastToGeneration": 2
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 1,
+          "count": 727,
+          "lastToGeneration": 200
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 4,
+          "count": 17,
+          "lastToGeneration": 10
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 6,
+          "count": 2,
+          "lastToGeneration": 2
+        }
+      ],
+      "translatedReturn": {
+        "fromGeneration": 21,
+        "toGeneration": 31,
+        "dx": -8.660254041353861,
+        "dy": 0,
+        "neighborhoodRadius": 3
+      },
+      "finalHash": [
+        2599405182,
+        2572184891
+      ]
+    },
+    {
+      "id": "hex-b235s134-c5-launcher-traveller",
+      "title": "Hexagonal B235/S134 five-state launcher",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B235/S134",
+      "generations": 5,
+      "kind": "compact finite traveller",
+      "verifiedThrough": 200,
+      "initialActive": 12,
+      "finalActive": 9,
+      "minimumActive": 8,
+      "maximumActive": 94,
+      "minimumLive": 3,
+      "maximumLive": 45,
+      "maximumRadius": 17.35987288166176,
+      "minimumBoundaryDistance": 50,
+      "displacement": 132.4056600034237,
+      "directionality": 0.807384263912178,
+      "maximumSupportComponents": 10,
+      "disconnectedGenerations": [
+        0,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        34,
+        35,
+        36,
+        37,
+        40,
+        41,
+        42,
+        43,
+        44,
+        48,
+        49,
+        50,
+        53,
+        54,
+        55,
+        56,
+        57,
+        61,
+        65,
+        69,
+        73,
+        77,
+        81,
+        85,
+        89,
+        93,
+        97,
+        101,
+        105,
+        109,
+        113,
+        117,
+        121,
+        125,
+        129,
+        133,
+        137,
+        141,
+        145,
+        149,
+        153,
+        157,
+        161,
+        165,
+        169,
+        173,
+        177,
+        181,
+        185,
+        189,
+        193,
+        197
+      ],
+      "requiredBirthCount": 0,
+      "ruleClauseActivity": [
+        {
+          "kind": "birth",
+          "liveNeighbors": 2,
+          "count": 465,
+          "lastToGeneration": 199
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 3,
+          "count": 168,
+          "lastToGeneration": 200
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 5,
+          "count": 7,
+          "lastToGeneration": 32
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 1,
+          "count": 475,
+          "lastToGeneration": 200
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 3,
+          "count": 402,
+          "lastToGeneration": 200
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 4,
+          "count": 123,
+          "lastToGeneration": 197
+        }
+      ],
+      "translatedReturn": {
+        "fromGeneration": 58,
+        "toGeneration": 62,
+        "dx": 3.4641016125679016,
+        "dy": 0,
+        "neighborhoodRadius": 3
+      },
+      "finalHash": [
+        727694774,
+        2253692016
+      ]
+    },
+    {
+      "id": "penrose-edge-b23s23-p822",
+      "title": "Penrose compact oscillator — period 822",
+      "category": "Penrose oscillators",
+      "tiling": "penrose",
+      "cells": 7920,
+      "neighborhood": "edge",
+      "rule": "B23/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 822,
+      "minimumAlive": 19,
+      "maximumAlive": 37,
+      "supportCells": 46,
+      "minimumBoundaryDistance": 40,
+      "center": [
+        -3.6306755251210667,
+        -8.211007553598154
+      ],
+      "radius": 4.085264256358358
+    },
+    {
+      "id": "penrose-conway-c3-p14",
+      "title": "Penrose three-state oscillator — period 14",
+      "category": "Penrose oscillators",
+      "tiling": "penrose",
+      "cells": 7920,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 3,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 14,
+      "minimumAlive": 4,
+      "maximumAlive": 8,
+      "supportCells": 27,
+      "minimumBoundaryDistance": 16,
+      "center": [
+        -0.35957698468808774,
+        17.44935643231427
+      ],
+      "radius": 2.8312561814505024
+    },
+    {
+      "id": "hat-b2s1-c3-rotor-p39",
+      "title": "Hat rotating wave — period 39",
+      "category": "Einstein-hat rotating waves and clocks",
+      "tiling": "hat",
+      "cells": 7921,
+      "neighborhood": "edge",
+      "rule": "B2/S1",
+      "generations": 3,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 39,
+      "minimumAlive": 3,
+      "maximumAlive": 8,
+      "supportCells": 39,
+      "minimumBoundaryDistance": 22,
+      "center": [
+        13.49999990218725,
+        18.18653351221329
+      ],
+      "radius": 7.3206363044856575
+    },
+    {
+      "id": "hat-b2s23-c6-rotor-p219",
+      "title": "Hat rotating wave — period 219",
+      "category": "Einstein-hat rotating waves and clocks",
+      "tiling": "hat",
+      "cells": 7921,
+      "neighborhood": "edge",
+      "rule": "B2/S23",
+      "generations": 6,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 219,
+      "minimumAlive": 4,
+      "maximumAlive": 36,
+      "supportCells": 300,
+      "minimumBoundaryDistance": 21,
+      "center": [
+        15.500000015050173,
+        4.330127014021079
+      ],
+      "radius": 19.931984878140135
+    },
+    {
+      "id": "hat-b2s13-c4-clock-p11",
+      "title": "Hat eight-tile refractory clock — period 11",
+      "category": "Einstein-hat rotating waves and clocks",
+      "tiling": "hat",
+      "cells": 7921,
+      "neighborhood": "edge",
+      "rule": "B2/S13",
+      "generations": 4,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 11,
+      "minimumAlive": 2,
+      "maximumAlive": 6,
+      "supportCells": 8,
+      "minimumBoundaryDistance": 33,
+      "center": [
+        6.3173075914382935,
+        3.4641015380620956
+      ],
+      "radius": 3.1662657070952087
+    },
+    {
+      "id": "hat-directional-transient-83",
+      "title": "Hat directional transient — extinction 83",
+      "category": "Einstein-hat transients",
+      "tiling": "hat",
+      "cells": 54289,
+      "neighborhood": "touch",
+      "rule": "B2/S1",
+      "generations": 10,
+      "kind": "compact extinction transient",
+      "extinctionGeneration": 83,
+      "maximumAlive": 16,
+      "totalChanged": 3484
+    },
+    {
+      "id": "hex-conway-p4",
+      "title": "Hexagonal Conway p4 half-turn rotor",
+      "category": "Hexagonal oscillators and rotors",
+      "tiling": "hex",
+      "cells": 3169,
+      "neighborhood": "edge",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 4,
+      "minimumAlive": 14,
+      "maximumAlive": 15,
+      "supportCells": 16,
+      "minimumBoundaryDistance": 26,
+      "center": [
+        1.7320507615804672,
+        1.5
+      ],
+      "radius": 6.873863483198725
+    },
+    {
+      "id": "hex-conway-p5",
+      "title": "Hexagonal Conway p5",
+      "category": "Hexagonal oscillators and rotors",
+      "tiling": "hex",
+      "cells": 3169,
+      "neighborhood": "edge",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 5,
+      "minimumAlive": 14,
+      "maximumAlive": 16,
+      "supportCells": 19,
+      "minimumBoundaryDistance": 27,
+      "center": [
+        0.31906198200426605,
+        1.0263157894736843
+      ],
+      "radius": 7.1669833895946615
+    },
+    {
+      "id": "hex-conway-p8",
+      "title": "Hexagonal Conway p8",
+      "category": "Hexagonal oscillators and rotors",
+      "tiling": "hex",
+      "cells": 3169,
+      "neighborhood": "edge",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 8,
+      "minimumAlive": 22,
+      "maximumAlive": 25,
+      "supportCells": 27,
+      "minimumBoundaryDistance": 27,
+      "center": [
+        0.8981003959973654,
+        0.6666666666666666
+      ],
+      "radius": 7.228487256189655
+    },
+    {
+      "id": "hex-b34s234-p269",
+      "title": "Hexagonal p269 clock",
+      "category": "Hexagonal oscillators and rotors",
+      "tiling": "hex",
+      "cells": 3169,
+      "neighborhood": "edge",
+      "rule": "B34/S234",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 269,
+      "minimumAlive": 25,
+      "maximumAlive": 50,
+      "supportCells": 53,
+      "minimumBoundaryDistance": 27,
+      "center": [
+        1.5849898614973392,
+        1.2735849056603774
+      ],
+      "radius": 8.588181137022278
+    },
+    {
+      "id": "hex-b245s35-p25-traveller",
+      "title": "Hexagonal p25 diagonal spaceship",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B245/S35",
+      "generations": 2,
+      "kind": "spaceship benchmark",
+      "steps": 25,
+      "translation": [
+        1,
+        1
+      ],
+      "liveCells": 9,
+      "phasePopulations": [
+        9,
+        12,
+        18,
+        17,
+        20,
+        22,
+        23,
+        24,
+        23,
+        14,
+        17,
+        18,
+        15,
+        21,
+        15,
+        14,
+        13,
+        16,
+        13,
+        12,
+        10,
+        11,
+        13,
+        10,
+        11,
+        9
+      ],
+      "ruleClauseActivity": []
+    },
+    {
+      "id": "hex-b2s34-p48-rotor",
+      "title": "Hexagonal p48 half-turn rotor",
+      "category": "Hexagonal oscillators and rotors",
+      "tiling": "hex",
+      "cells": 3169,
+      "neighborhood": "edge",
+      "rule": "B2/S34",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 48,
+      "minimumAlive": 6,
+      "maximumAlive": 16,
+      "supportCells": 78,
+      "minimumBoundaryDistance": 25,
+      "center": [
+        3.0310888985792794,
+        -0.75
+      ],
+      "radius": 8.26135593109471
+    },
+    {
+      "id": "hex-b245s3-p57-pulsator",
+      "title": "Hexagonal p57 pulsator",
+      "category": "Hexagonal oscillators and rotors",
+      "tiling": "hex",
+      "cells": 3169,
+      "neighborhood": "edge",
+      "rule": "B245/S3",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 57,
+      "minimumAlive": 9,
+      "maximumAlive": 99,
+      "supportCells": 231,
+      "minimumBoundaryDistance": 20,
+      "center": [
+        1.7320508015104186,
+        1
+      ],
+      "radius": 16.093477274598847
+    },
+    {
+      "id": "hex-b24s3-p128-rotor",
+      "title": "Hexagonal p128 half-turn rotor",
+      "category": "Hexagonal oscillators and rotors",
+      "tiling": "hex",
+      "cells": 3169,
+      "neighborhood": "edge",
+      "rule": "B24/S3",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 128,
+      "minimumAlive": 9,
+      "maximumAlive": 34,
+      "supportCells": 118,
+      "minimumBoundaryDistance": 24,
+      "center": [
+        -1.299038100040565,
+        -0.75
+      ],
+      "radius": 11.05667249084601
+    },
+    {
+      "id": "hex-b234s3-p4104",
+      "title": "Hexagonal p4104 long clock",
+      "category": "Hexagonal oscillators and rotors",
+      "tiling": "hex",
+      "cells": 3169,
+      "neighborhood": "edge",
+      "rule": "B234/S3",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 4104,
+      "minimumAlive": 12,
+      "maximumAlive": 36,
+      "supportCells": 50,
+      "minimumBoundaryDistance": 28,
+      "center": [
+        -0.9872689461708068,
+        -0.57
+      ],
+      "radius": 7.0213673712511495
+    },
+    {
+      "id": "hex-b2s3456-c7-p372-rotor",
+      "title": "Hexagonal p372 sixfold rotor",
+      "category": "Hexagonal oscillators and rotors",
+      "tiling": "hex",
+      "cells": 3169,
+      "neighborhood": "edge",
+      "rule": "B2/S3456",
+      "generations": 7,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 372,
+      "minimumAlive": 7,
+      "maximumAlive": 13,
+      "supportCells": 37,
+      "minimumBoundaryDistance": 28,
+      "center": [
+        1.7320507925909918,
+        0
+      ],
+      "radius": 5.1961525403481295
+    },
+    {
+      "id": "hex-b24s16-c3-p248-breather",
+      "title": "Hexagonal p248 giant breather",
+      "category": "Hexagonal oscillators and rotors",
+      "tiling": "hex",
+      "cells": 12481,
+      "neighborhood": "edge",
+      "rule": "B24/S16",
+      "generations": 3,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 248,
+      "minimumAlive": 9,
+      "maximumAlive": 124,
+      "supportCells": 1281,
+      "minimumBoundaryDistance": 31,
+      "center": [
+        -7.794228651344916,
+        -4.5
+      ],
+      "radius": 42.532341675868715
+    },
+    {
+      "id": "hex-b23s13-c5-p138-traveller",
+      "title": "Hexagonal p138 wandering spaceship",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B23/S13",
+      "generations": 5,
+      "kind": "spaceship benchmark",
+      "steps": 138,
+      "translation": [
+        0,
+        -8
+      ],
+      "liveCells": 12,
+      "phasePopulations": [
+        12,
+        14,
+        16,
+        18,
+        20,
+        19,
+        26,
+        28,
+        24,
+        22,
+        21,
+        20,
+        19,
+        23,
+        25,
+        19,
+        17,
+        15,
+        14,
+        18,
+        17,
+        17,
+        23,
+        21,
+        20,
+        21,
+        19,
+        17,
+        18,
+        19,
+        16,
+        16,
+        11,
+        14,
+        18,
+        16,
+        16,
+        18,
+        18,
+        19,
+        21,
+        22,
+        28,
+        36,
+        39,
+        36,
+        36,
+        40,
+        35,
+        28,
+        25,
+        26,
+        29,
+        22,
+        21,
+        28,
+        24,
+        25,
+        27,
+        19,
+        17,
+        24,
+        29,
+        17,
+        11,
+        14,
+        13,
+        9,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        19,
+        26,
+        28,
+        24,
+        22,
+        21,
+        20,
+        19,
+        23,
+        25,
+        19,
+        17,
+        15,
+        14,
+        18,
+        17,
+        17,
+        23,
+        21,
+        20,
+        21,
+        19,
+        17,
+        18,
+        19,
+        16,
+        16,
+        11,
+        14,
+        18,
+        16,
+        16,
+        18,
+        18,
+        19,
+        21,
+        22,
+        28,
+        36,
+        39,
+        36,
+        36,
+        40,
+        35,
+        28,
+        25,
+        26,
+        29,
+        22,
+        21,
+        28,
+        24,
+        25,
+        27,
+        19,
+        17,
+        24,
+        29,
+        17,
+        11,
+        14,
+        13,
+        9,
+        10,
+        12
+      ],
+      "ruleClauseActivity": []
+    },
+    {
+      "id": "hex-b234s13-c4-p23-traveller",
+      "title": "Hexagonal p23 fast spaceship",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B234/S13",
+      "generations": 4,
+      "kind": "spaceship benchmark",
+      "steps": 23,
+      "translation": [
+        10,
+        -5
+      ],
+      "liveCells": 17,
+      "phasePopulations": [
+        17,
+        16,
+        21,
+        18,
+        19,
+        18,
+        15,
+        16,
+        18,
+        18,
+        21,
+        22,
+        18,
+        15,
+        18,
+        26,
+        26,
+        30,
+        18,
+        20,
+        16,
+        16,
+        18,
+        17
+      ],
+      "ruleClauseActivity": []
+    },
+    {
+      "id": "hex-b246s246-c4-p30-gun",
+      "title": "Hexagonal three-way spaceship gun",
+      "category": "Hexagonal guns, puffers and replication",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B246/S246",
+      "generations": 4,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 120,
+      "finalAlive": 60,
+      "finalChanged": 84,
+      "maximumAlive": 96,
+      "totalChanged": 9372,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 42,
+          "changed": 105
+        },
+        {
+          "generation": 100,
+          "alive": 63,
+          "changed": 111
+        },
+        {
+          "generation": 120,
+          "alive": 60,
+          "changed": 84
+        }
+      ]
+    },
+    {
+      "id": "hex-b25s34-p20-puffer",
+      "title": "Hexagonal oscillator-trail puffer",
+      "category": "Hexagonal guns, puffers and replication",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B25/S34",
+      "generations": 2,
+      "kind": "long-lived compact seed",
+      "verifiedThrough": 160,
+      "finalAlive": 55,
+      "finalChanged": 102,
+      "maximumAlive": 59,
+      "totalChanged": 11200,
+      "checkpoints": [
+        {
+          "generation": 50,
+          "alive": 34,
+          "changed": 56
+        },
+        {
+          "generation": 100,
+          "alive": 43,
+          "changed": 78
+        },
+        {
+          "generation": 150,
+          "alive": 54,
+          "changed": 96
+        },
+        {
+          "generation": 160,
+          "alive": 55,
+          "changed": 102
+        }
+      ]
+    },
+    {
+      "id": "hex-b2s1-c3-p999-rotor",
+      "title": "Hexagonal p999 threefold rotor",
+      "category": "Hexagonal oscillators and rotors",
+      "tiling": "hex",
+      "cells": 12481,
+      "neighborhood": "edge",
+      "rule": "B2/S1",
+      "generations": 3,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 999,
+      "minimumAlive": 11,
+      "maximumAlive": 80,
+      "supportCells": 1335,
+      "minimumBoundaryDistance": 33,
+      "center": [
+        11.258330248446947,
+        -3.5
+      ],
+      "radius": 37.802116704805
+    },
+    {
+      "id": "hex-b23s4-p13-traveller",
+      "title": "Hexagonal p13 diagonal spaceship",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B23/S4",
+      "generations": 2,
+      "kind": "spaceship benchmark",
+      "steps": 13,
+      "translation": [
+        1,
+        1
+      ],
+      "liveCells": 9,
+      "phasePopulations": [
+        9,
+        10,
+        9,
+        13,
+        8,
+        10,
+        10,
+        15,
+        10,
+        10,
+        10,
+        11,
+        11,
+        9
+      ],
+      "ruleClauseActivity": []
+    },
+    {
+      "id": "hex-b2s1-c3-p158-traveller",
+      "title": "Hexagonal p158 wandering spaceship",
+      "category": "Hexagonal travellers",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B2/S1",
+      "generations": 3,
+      "kind": "spaceship benchmark",
+      "steps": 158,
+      "translation": [
+        -11,
+        22
+      ],
+      "liveCells": 18,
+      "phasePopulations": [
+        18,
+        21,
+        23,
+        22,
+        25,
+        29,
+        27,
+        34,
+        33,
+        35,
+        40,
+        34,
+        34,
+        40,
+        44,
+        54,
+        56,
+        49,
+        62,
+        55,
+        48,
+        46,
+        35,
+        30,
+        35,
+        46,
+        55,
+        61,
+        49,
+        55,
+        60,
+        62,
+        64,
+        61,
+        73,
+        67,
+        68,
+        66,
+        62,
+        59,
+        66,
+        55,
+        59,
+        62,
+        63,
+        68,
+        68,
+        62,
+        56,
+        50,
+        46,
+        55,
+        42,
+        53,
+        45,
+        40,
+        43,
+        40,
+        27,
+        21,
+        23,
+        26,
+        29,
+        35,
+        39,
+        28,
+        33,
+        23,
+        20,
+        32,
+        28,
+        35,
+        25,
+        25,
+        23,
+        22,
+        28,
+        21,
+        14,
+        18,
+        21,
+        23,
+        22,
+        25,
+        29,
+        27,
+        34,
+        33,
+        35,
+        40,
+        34,
+        34,
+        40,
+        44,
+        54,
+        56,
+        49,
+        62,
+        55,
+        48,
+        46,
+        35,
+        30,
+        35,
+        46,
+        55,
+        61,
+        49,
+        55,
+        60,
+        62,
+        64,
+        61,
+        73,
+        67,
+        68,
+        66,
+        62,
+        59,
+        66,
+        55,
+        59,
+        62,
+        63,
+        68,
+        68,
+        62,
+        56,
+        50,
+        46,
+        55,
+        42,
+        53,
+        45,
+        40,
+        43,
+        40,
+        27,
+        21,
+        23,
+        26,
+        29,
+        35,
+        39,
+        28,
+        33,
+        23,
+        20,
+        32,
+        28,
+        35,
+        25,
+        25,
+        23,
+        22,
+        28,
+        21,
+        14,
+        18
+      ],
+      "ruleClauseActivity": []
+    },
+    {
+      "id": "hex-b2s34-wall-repair",
+      "title": "Hexagonal self-repairing wall",
+      "category": "Hexagonal constructions",
+      "tiling": "hex",
+      "cells": 12481,
+      "neighborhood": "edge",
+      "rule": "B2/S34",
+      "generations": 2,
+      "kind": "localized transient to cycle",
+      "transient": 44,
+      "exactPeriod": 5,
+      "minimumAlive": 63,
+      "maximumAlive": 73,
+      "supportCells": 87,
+      "minimumBoundaryDistance": 42,
+      "center": [
+        0,
+        0
+      ],
+      "radius": 33.04542376880027
+    },
+    {
+      "id": "hex-b2s34-p2044-billiard",
+      "title": "Hexagonal p2044 billiard table",
+      "category": "Hexagonal constructions",
+      "tiling": "hex",
+      "cells": 12481,
+      "neighborhood": "edge",
+      "rule": "B2/S34",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 2044,
+      "minimumAlive": 146,
+      "maximumAlive": 198,
+      "supportCells": 243,
+      "minimumBoundaryDistance": 41,
+      "center": [
+        0,
+        0
+      ],
+      "radius": 34.51086831796022
+    },
+    {
+      "id": "hex-parity-seven-copy",
+      "title": "Hexagonal seven-copy replicator",
+      "category": "Hexagonal guns, puffers and replication",
+      "tiling": "hex",
+      "cells": 49537,
+      "neighborhood": "edge",
+      "rule": "B135/S0246",
+      "generations": 2,
+      "kind": "replicator benchmark",
+      "steps": 8,
+      "translations": [
+        [
+          0,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          -8,
+          8
+        ],
+        [
+          -8,
+          0
+        ],
+        [
+          0,
+          -8
+        ],
+        [
+          8,
+          -8
+        ]
+      ],
+      "initialLiveCells": 3,
+      "resultingLiveCells": 21
+    },
+    {
+      "id": "penrose-conway-p4",
+      "title": "Penrose Conway p4",
+      "category": "Penrose Conway oscillators",
+      "tiling": "penrose",
+      "cells": 7920,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 4,
+      "minimumAlive": 9,
+      "maximumAlive": 12,
+      "supportCells": 12,
+      "minimumBoundaryDistance": 25,
+      "center": [
+        -4.425013621648152,
+        -1.4377740919589996
+      ],
+      "radius": 2.491292428273102
+    },
+    {
+      "id": "penrose-conway-p5",
+      "title": "Penrose Conway p5",
+      "category": "Penrose Conway oscillators",
+      "tiling": "penrose",
+      "cells": 7920,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 5,
+      "minimumAlive": 8,
+      "maximumAlive": 10,
+      "supportCells": 18,
+      "minimumBoundaryDistance": 16,
+      "center": [
+        16.97667137781779,
+        5.668058580822414
+      ],
+      "radius": 2.478242931551505
+    },
+    {
+      "id": "penrose-conway-p7",
+      "title": "Penrose Conway p7",
+      "category": "Penrose Conway oscillators",
+      "tiling": "penrose",
+      "cells": 7920,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 7,
+      "minimumAlive": 7,
+      "maximumAlive": 11,
+      "supportCells": 20,
+      "minimumBoundaryDistance": 7,
+      "center": [
+        -11.109749460220337,
+        -28.33540458679199
+      ],
+      "radius": 3.0327443982380005
+    },
+    {
+      "id": "penrose-conway-p12",
+      "title": "Penrose Conway p12",
+      "category": "Penrose Conway oscillators",
+      "tiling": "penrose",
+      "cells": 7920,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 12,
+      "minimumAlive": 6,
+      "maximumAlive": 14,
+      "supportCells": 33,
+      "minimumBoundaryDistance": 17,
+      "center": [
+        -10.547378467791008,
+        11.415505322543057
+      ],
+      "radius": 3.3408758939273118
+    },
+    {
+      "id": "penrose-edge-conway-p4",
+      "title": "Penrose edge-graph p4",
+      "category": "Penrose Conway oscillators",
+      "tiling": "penrose",
+      "cells": 7920,
+      "neighborhood": "edge",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 4,
+      "minimumAlive": 22,
+      "maximumAlive": 25,
+      "supportCells": 25,
+      "minimumBoundaryDistance": 41,
+      "center": [
+        6.571211452484131,
+        5.58508487701416
+      ],
+      "radius": 4.345034241271557
+    },
+    {
+      "id": "hat-conway-p6",
+      "title": "Hat Conway p6",
+      "category": "Einstein-hat Conway oscillators",
+      "tiling": "hat",
+      "cells": 7921,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 6,
+      "minimumAlive": 10,
+      "maximumAlive": 13,
+      "supportCells": 15,
+      "minimumBoundaryDistance": 25,
+      "center": [
+        10.074359035491943,
+        12.457442283630371
+      ],
+      "radius": 5.323286821587096
+    },
+    {
+      "id": "hat-conway-p9",
+      "title": "Hat Conway p9",
+      "category": "Einstein-hat Conway oscillators",
+      "tiling": "hat",
+      "cells": 7921,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 9,
+      "minimumAlive": 8,
+      "maximumAlive": 9,
+      "supportCells": 11,
+      "minimumBoundaryDistance": 16,
+      "center": [
+        38.78671299327504,
+        -1.1567192375659898
+      ],
+      "radius": 4.916455173399217
+    },
+    {
+      "id": "hat-conway-p26",
+      "title": "Hat Conway p26",
+      "category": "Einstein-hat Conway oscillators",
+      "tiling": "hat",
+      "cells": 7921,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 26,
+      "minimumAlive": 6,
+      "maximumAlive": 10,
+      "supportCells": 14,
+      "minimumBoundaryDistance": 30,
+      "center": [
+        -6.200549466269357,
+        3.744846118347984
+      ],
+      "radius": 4.7261280349585695
+    },
+    {
+      "id": "hat-edge-conway-p15",
+      "title": "Hat edge-graph p15",
+      "category": "Einstein-hat Conway oscillators",
+      "tiling": "hat",
+      "cells": 7921,
+      "neighborhood": "edge",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 15,
+      "minimumAlive": 24,
+      "maximumAlive": 29,
+      "supportCells": 31,
+      "minimumBoundaryDistance": 6,
+      "center": [
+        42.78908181959583,
+        49.0690425749748
+      ],
+      "radius": 8.406226147622364
+    },
+    {
+      "id": "hat-seeds-p8",
+      "title": "Hat Seeds p8",
+      "category": "Alternative-rule aperiodic oscillators",
+      "tiling": "hat",
+      "cells": 7921,
+      "neighborhood": "edge",
+      "rule": "B2/S",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 8,
+      "minimumAlive": 4,
+      "maximumAlive": 5,
+      "supportCells": 12,
+      "minimumBoundaryDistance": 13,
+      "center": [
+        -2.8750000217308602,
+        43.19579315185547
+      ],
+      "radius": 4.179778115745649
+    },
+    {
+      "id": "hat-b23-p20",
+      "title": "Hat B23/S p20",
+      "category": "Alternative-rule aperiodic oscillators",
+      "tiling": "hat",
+      "cells": 7921,
+      "neighborhood": "edge",
+      "rule": "B23/S",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 20,
+      "minimumAlive": 10,
+      "maximumAlive": 16,
+      "supportCells": 32,
+      "minimumBoundaryDistance": 15,
+      "center": [
+        -21.07331734895706,
+        30.425387859344482
+      ],
+      "radius": 10.014334628197947
+    },
+    {
+      "id": "hat-b23-p24",
+      "title": "Hat B23/S p24",
+      "category": "Alternative-rule aperiodic oscillators",
+      "tiling": "hat",
+      "cells": 7921,
+      "neighborhood": "edge",
+      "rule": "B23/S",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 24,
+      "minimumAlive": 8,
+      "maximumAlive": 11,
+      "supportCells": 21,
+      "minimumBoundaryDistance": 21,
+      "center": [
+        6.463370029060614,
+        24.93074607849121
+      ],
+      "radius": 8.579249583182927
+    },
+    {
+      "id": "hat-b23-p28",
+      "title": "Hat B23/S p28",
+      "category": "Alternative-rule aperiodic oscillators",
+      "tiling": "hat",
+      "cells": 7921,
+      "neighborhood": "edge",
+      "rule": "B23/S",
+      "generations": 2,
+      "kind": "isolated oscillator",
+      "transient": 0,
+      "exactPeriod": 28,
+      "minimumAlive": 14,
+      "maximumAlive": 20,
+      "supportCells": 37,
+      "minimumBoundaryDistance": 7,
+      "center": [
+        -74.55197597194362,
+        1.6798371825669247
+      ],
+      "radius": 6.9130195675508235
+    },
+    {
+      "id": "penrose-b2-c4-compact-traveller",
+      "title": "Penrose compact traveller",
+      "category": "Aperiodic travelling dynamics",
+      "tiling": "penrose",
+      "cells": 54560,
+      "neighborhood": "touch",
+      "rule": "B2/S",
+      "generations": 4,
+      "kind": "compact finite traveller",
+      "verifiedThrough": 220,
+      "initialActive": 7,
+      "finalActive": 8,
+      "minimumActive": 7,
+      "maximumActive": 11,
+      "minimumLive": 2,
+      "maximumLive": 4,
+      "maximumRadius": 1.9884600886805777,
+      "minimumBoundaryDistance": 9,
+      "displacement": 193.2701844741263,
+      "directionality": 0.9887625034557931,
+      "maximumSupportComponents": 1,
+      "disconnectedGenerations": [],
+      "requiredBirthCount": 0,
+      "ruleClauseActivity": [],
+      "translatedReturn": {
+        "fromGeneration": 102,
+        "toGeneration": 164,
+        "dx": -55.22679090499878,
+        "dy": 0,
+        "neighborhoodRadius": 3
+      },
+      "finalHash": [
+        2716353629,
+        1431658492
+      ]
+    },
+    {
+      "id": "penrose-b2-c5-compact-traveller",
+      "title": "Penrose five-state traveller",
+      "category": "Aperiodic travelling dynamics",
+      "tiling": "penrose",
+      "cells": 54560,
+      "neighborhood": "touch",
+      "rule": "B2/S",
+      "generations": 5,
+      "kind": "compact finite traveller",
+      "verifiedThrough": 220,
+      "initialActive": 11,
+      "finalActive": 12,
+      "minimumActive": 11,
+      "maximumActive": 14,
+      "minimumLive": 2,
+      "maximumLive": 4,
+      "maximumRadius": 2.3312180258031088,
+      "minimumBoundaryDistance": 12,
+      "displacement": 192.3908986120292,
+      "directionality": 0.9947504985610133,
+      "maximumSupportComponents": 1,
+      "disconnectedGenerations": [],
+      "requiredBirthCount": 0,
+      "ruleClauseActivity": [],
+      "translatedReturn": {
+        "fromGeneration": 59,
+        "toGeneration": 161,
+        "dx": 27.61339521408081,
+        "dy": -84.98529226129705,
+        "neighborhoodRadius": 3
+      },
+      "finalHash": [
+        1804692515,
+        504227277
+      ]
+    },
+    {
+      "id": "penrose-b2-c6-compact-traveller",
+      "title": "Penrose six-state traveller",
+      "category": "Aperiodic travelling dynamics",
+      "tiling": "penrose",
+      "cells": 54560,
+      "neighborhood": "touch",
+      "rule": "B2/S",
+      "generations": 6,
+      "kind": "compact finite traveller",
+      "verifiedThrough": 220,
+      "initialActive": 14,
+      "finalActive": 15,
+      "minimumActive": 14,
+      "maximumActive": 18,
+      "minimumLive": 2,
+      "maximumLive": 4,
+      "maximumRadius": 2.7005639173395912,
+      "minimumBoundaryDistance": 11,
+      "displacement": 192.26781175971766,
+      "directionality": 0.994671764930342,
+      "maximumSupportComponents": 1,
+      "disconnectedGenerations": [],
+      "requiredBirthCount": 0,
+      "ruleClauseActivity": [],
+      "translatedReturn": {
+        "fromGeneration": 80,
+        "toGeneration": 143,
+        "dx": 55.22679030895233,
+        "dy": 0,
+        "neighborhoodRadius": 3
+      },
+      "finalHash": [
+        3638894468,
+        346151744
+      ]
+    },
+    {
+      "id": "penrose-b24-c4-launcher-traveller",
+      "title": "Penrose B24 launcher traveller",
+      "category": "Aperiodic travelling dynamics",
+      "tiling": "penrose",
+      "cells": 54560,
+      "neighborhood": "touch",
+      "rule": "B24/S",
+      "generations": 4,
+      "kind": "compact finite traveller",
+      "verifiedThrough": 200,
+      "initialActive": 27,
+      "finalActive": 9,
+      "minimumActive": 7,
+      "maximumActive": 37,
+      "minimumLive": 2,
+      "maximumLive": 13,
+      "maximumRadius": 7.492002853110257,
+      "minimumBoundaryDistance": 14,
+      "displacement": 171.8407959486262,
+      "directionality": 0.9533384870895149,
+      "maximumSupportComponents": 4,
+      "disconnectedGenerations": [
+        3,
+        4,
+        8,
+        9,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        26
+      ],
+      "requiredBirthCount": 8,
+      "ruleClauseActivity": [
+        {
+          "kind": "birth",
+          "liveNeighbors": 4,
+          "count": 8,
+          "lastToGeneration": 14
+        }
+      ],
+      "translatedReturn": {
+        "fromGeneration": 63,
+        "toGeneration": 126,
+        "dx": -55.22679011027019,
+        "dy": 0,
+        "neighborhoodRadius": 3
+      },
+      "finalHash": [
+        3684102456,
+        4123039717
+      ]
+    },
+    {
+      "id": "penrose-b2s4-c5-survival-launcher",
+      "title": "Penrose B2/S4 survival launcher",
+      "category": "Aperiodic travelling dynamics",
+      "tiling": "penrose",
+      "cells": 54560,
+      "neighborhood": "touch",
+      "rule": "B2/S4",
+      "generations": 5,
+      "kind": "compact finite traveller",
+      "verifiedThrough": 200,
+      "initialActive": 7,
+      "finalActive": 11,
+      "minimumActive": 7,
+      "maximumActive": 31,
+      "minimumLive": 2,
+      "maximumLive": 9,
+      "maximumRadius": 9.25372805427761,
+      "minimumBoundaryDistance": 17,
+      "displacement": 170.83137866903294,
+      "directionality": 0.9614596962129321,
+      "maximumSupportComponents": 2,
+      "disconnectedGenerations": [
+        5,
+        10,
+        11,
+        12,
+        13
+      ],
+      "requiredBirthCount": 0,
+      "ruleClauseActivity": [
+        {
+          "kind": "birth",
+          "liveNeighbors": 2,
+          "count": 670,
+          "lastToGeneration": 200
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 4,
+          "count": 2,
+          "lastToGeneration": 7
+        }
+      ],
+      "translatedReturn": {
+        "fromGeneration": 36,
+        "toGeneration": 60,
+        "dx": -17.066017468770344,
+        "dy": 12.399185975392662,
+        "neighborhoodRadius": 3
+      },
+      "finalHash": [
+        3636027621,
+        1670214676
+      ]
+    },
+    {
+      "id": "penrose-b26s-c4-birth-launcher",
+      "title": "Penrose B26/S birth launcher",
+      "category": "Aperiodic travelling dynamics",
+      "tiling": "penrose",
+      "cells": 54560,
+      "neighborhood": "touch",
+      "rule": "B26/S",
+      "generations": 4,
+      "kind": "compact finite traveller",
+      "verifiedThrough": 200,
+      "initialActive": 18,
+      "finalActive": 11,
+      "minimumActive": 7,
+      "maximumActive": 20,
+      "minimumLive": 2,
+      "maximumLive": 8,
+      "maximumRadius": 4.670473827658084,
+      "minimumBoundaryDistance": 15,
+      "displacement": 175.89045263065336,
+      "directionality": 0.9808926027720214,
+      "maximumSupportComponents": 3,
+      "disconnectedGenerations": [
+        1,
+        3,
+        4
+      ],
+      "requiredBirthCount": 0,
+      "ruleClauseActivity": [
+        {
+          "kind": "birth",
+          "liveNeighbors": 2,
+          "count": 637,
+          "lastToGeneration": 200
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 6,
+          "count": 1,
+          "lastToGeneration": 1
+        }
+      ],
+      "translatedReturn": {
+        "fromGeneration": 32,
+        "toGeneration": 56,
+        "dx": 6.518638610839844,
+        "dy": -20.062304496765137,
+        "neighborhoodRadius": 3
+      },
+      "finalHash": [
+        2007869915,
+        447599390
+      ]
+    },
+    {
+      "id": "penrose-b27s4-c4-dual-clause-launcher",
+      "title": "Penrose B27/S4 dual-clause launcher",
+      "category": "Aperiodic travelling dynamics",
+      "tiling": "penrose",
+      "cells": 54560,
+      "neighborhood": "touch",
+      "rule": "B27/S4",
+      "generations": 4,
+      "kind": "compact finite traveller",
+      "verifiedThrough": 200,
+      "initialActive": 26,
+      "finalActive": 10,
+      "minimumActive": 7,
+      "maximumActive": 54,
+      "minimumLive": 2,
+      "maximumLive": 26,
+      "maximumRadius": 8.75165080127383,
+      "minimumBoundaryDistance": 15,
+      "displacement": 177.3490932707913,
+      "directionality": 0.9877788019346218,
+      "maximumSupportComponents": 5,
+      "disconnectedGenerations": [
+        4,
+        5
+      ],
+      "requiredBirthCount": 0,
+      "ruleClauseActivity": [
+        {
+          "kind": "birth",
+          "liveNeighbors": 2,
+          "count": 660,
+          "lastToGeneration": 200
+        },
+        {
+          "kind": "birth",
+          "liveNeighbors": 7,
+          "count": 4,
+          "lastToGeneration": 1
+        },
+        {
+          "kind": "survival",
+          "liveNeighbors": 4,
+          "count": 7,
+          "lastToGeneration": 4
+        }
+      ],
+      "translatedReturn": {
+        "fromGeneration": 34,
+        "toGeneration": 58,
+        "dx": 6.5186384064810605,
+        "dy": 20.062305450439453,
+        "neighborhoodRadius": 3
+      },
+      "finalHash": [
+        3375366975,
+        1925669226
+      ]
+    },
+    {
+      "id": "penrose-conway-diehard-293",
+      "title": "Penrose Conway diehard — 293",
+      "category": "Aperiodic compact transients",
+      "tiling": "penrose",
+      "cells": 7920,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "compact extinction transient",
+      "extinctionGeneration": 293,
+      "maximumAlive": 79,
+      "totalChanged": 6524
+    },
+    {
+      "id": "penrose-conway-methuselah-289",
+      "title": "Penrose Conway methuselah — 289",
+      "category": "Aperiodic compact transients",
+      "tiling": "penrose",
+      "cells": 7920,
+      "neighborhood": "touch",
+      "rule": "B3/S23",
+      "generations": 2,
+      "kind": "localized transient to cycle",
+      "transient": 289,
+      "exactPeriod": 1,
+      "minimumAlive": 4,
+      "maximumAlive": 4,
+      "supportCells": 4,
+      "minimumBoundaryDistance": 22,
+      "center": [
+        -8.900374174118042,
+        -0.8328898847103119
+      ],
+      "radius": 0.8432323179133413
+    },
+    {
+      "id": "penrose-b12-p840-field",
+      "title": "Penrose B12/S p840 field",
+      "category": "Collective aperiodic dynamics",
+      "tiling": "penrose",
+      "cells": 7920,
+      "neighborhood": "edge",
+      "rule": "B12/S",
+      "generations": 2,
+      "kind": "localized transient to cycle",
+      "transient": 51,
+      "exactPeriod": 840,
+      "minimumAlive": 2553,
+      "maximumAlive": 2587,
+      "supportCells": 5252,
+      "minimumBoundaryDistance": 8,
+      "center": [
+        0.07767703647456456,
+        -0.04078699061639964
+      ],
+      "radius": 39.68326815809478
+    },
+    {
+      "id": "penrose-brain-field",
+      "title": "Penrose excitable field",
+      "category": "Collective aperiodic dynamics",
+      "tiling": "penrose",
+      "cells": 7920,
+      "neighborhood": "touch",
+      "rule": "B2/S",
+      "generations": 3,
+      "kind": "sustained field",
+      "verifiedThrough": 3000,
+      "finalAlive": 607,
+      "finalChanged": 1787,
+      "maximumAlive": 786,
+      "totalChanged": 5502268,
+      "checkpoints": [
+        {
+          "generation": 250,
+          "alive": 679,
+          "changed": 1946
+        },
+        {
+          "generation": 500,
+          "alive": 590,
+          "changed": 1801
+        },
+        {
+          "generation": 750,
+          "alive": 594,
+          "changed": 1794
+        },
+        {
+          "generation": 1000,
+          "alive": 583,
+          "changed": 1778
+        },
+        {
+          "generation": 1250,
+          "alive": 613,
+          "changed": 1851
+        },
+        {
+          "generation": 1500,
+          "alive": 581,
+          "changed": 1763
+        },
+        {
+          "generation": 1750,
+          "alive": 600,
+          "changed": 1759
+        },
+        {
+          "generation": 2000,
+          "alive": 623,
+          "changed": 1866
+        },
+        {
+          "generation": 2250,
+          "alive": 607,
+          "changed": 1876
+        },
+        {
+          "generation": 2500,
+          "alive": 619,
+          "changed": 1836
+        },
+        {
+          "generation": 2750,
+          "alive": 657,
+          "changed": 1964
+        },
+        {
+          "generation": 3000,
+          "alive": 607,
+          "changed": 1787
+        }
+      ]
+    },
+    {
+      "id": "hat-b1-field",
+      "title": "Hat B1 wave field",
+      "category": "Collective aperiodic dynamics",
+      "tiling": "hat",
+      "cells": 7921,
+      "neighborhood": "touch",
+      "rule": "B1/S",
+      "generations": 2,
+      "kind": "sustained field",
+      "verifiedThrough": 3000,
+      "finalAlive": 816,
+      "finalChanged": 1547,
+      "maximumAlive": 1175,
+      "totalChanged": 4785758,
+      "checkpoints": [
+        {
+          "generation": 250,
+          "alive": 784,
+          "changed": 1609
+        },
+        {
+          "generation": 500,
+          "alive": 762,
+          "changed": 1592
+        },
+        {
+          "generation": 750,
+          "alive": 785,
+          "changed": 1591
+        },
+        {
+          "generation": 1000,
+          "alive": 770,
+          "changed": 1576
+        },
+        {
+          "generation": 1250,
+          "alive": 766,
+          "changed": 1564
+        },
+        {
+          "generation": 1500,
+          "alive": 764,
+          "changed": 1553
+        },
+        {
+          "generation": 1750,
+          "alive": 797,
+          "changed": 1555
+        },
+        {
+          "generation": 2000,
+          "alive": 839,
+          "changed": 1622
+        },
+        {
+          "generation": 2250,
+          "alive": 821,
+          "changed": 1647
+        },
+        {
+          "generation": 2500,
+          "alive": 832,
+          "changed": 1634
+        },
+        {
+          "generation": 2750,
+          "alive": 801,
+          "changed": 1656
+        },
+        {
+          "generation": 3000,
+          "alive": 816,
+          "changed": 1547
+        }
+      ]
+    }
+  ]
+}

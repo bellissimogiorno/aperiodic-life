@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-14",
+  "applicationVersion": "3.7.4",
+  "catalogueRevision": 2,
+  "scope": "Documentation and handover assembly; no new scientific search or dynamics changes.",
+  "runtimes": {
+    "node": "v24.19.0",
+    "python": "3.12.14"
+  },
+  "checks": [
+    {
+      "command": "node build-standalone.js --check",
+      "outcome": "passed",
+      "scope": "Current source audit"
+    },
+    {
+      "command": "python3 docs/catalogue/build_catalogue.py --check",
+      "outcome": "passed",
+      "scope": "Current source audit"
+    },
+    {
+      "command": "python3 -m py_compile tools/build_handover.py",
+      "outcome": "passed",
+      "scope": "New handover builder syntax"
+    },
+    {
+      "command": "Builder integration smoke and generated standalone verifier",
+      "outcome": "passed",
+      "scope": "Exact source copies, embedded PDF/Markdown, member set, timestamps/modes, deterministic ZIP, altered/extra-file rejection and existing-output refusal",
+      "evidence": "handover-builder-smoke.json"
+    }
+  ],
+  "notRun": [
+    "New scientific searches",
+    "Full scientific replay",
+    "Real-browser or physical-phone acceptance",
+    "Live GitHub CI/Pages verification",
+    "Performance benchmark"
+  ],
+  "assembly": "Every handover build runs the staged verifier and archive checks before publishing outputs. The outer MANIFEST.json describes that exact final payload; it cannot include its own final checksum."
+}

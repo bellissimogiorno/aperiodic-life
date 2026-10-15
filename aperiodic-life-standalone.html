@@ -167,6 +167,8 @@ output { color: var(--accent); font-variant-numeric: tabular-nums; }
 
 .stage { position: relative; min-width: 0; min-height: 0; overflow: hidden; background: var(--bg); }
 #lifeCanvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: crosshair; }
+#lifeCanvas:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 #lifeCanvas.pan-tool { cursor: grab; }
 #lifeCanvas.dragging { cursor: grabbing; }
 .busy {
@@ -326,7 +328,7 @@ dialog code { color: var(--accent); }
       <div class="button-grid primary-actions">
         <button class="primary" id="runButton" title="Run simulation (Space)" aria-label="Run simulation" aria-keyshortcuts="Space" disabled>Run</button>
         <button id="stepButton" title="Advance one generation (N)" aria-keyshortcuts="N">Step</button>
-        <button id="randomizeButton" title="Randomise from the seed (R)" aria-keyshortcuts="R">Randomise</button>
+        <button id="randomizeButton" title="Randomise with a fresh seed (R)" aria-keyshortcuts="R">Randomise</button>
         <button id="clearButton" title="Clear all cells (C)" aria-keyshortcuts="C">Clear</button>
       </div>
 
@@ -435,9 +437,10 @@ dialog code { color: var(--accent); }
         <div class="field">
           <span>Random seed</span>
           <div class="inline-control">
-            <input id="seedInput" type="text" value="aperiodic" spellcheck="false">
-            <button class="compact" id="newSeedButton" title="Create a new seed">New</button>
+            <input id="seedInput" type="text" value="aperiodic" spellcheck="false" aria-label="Random seed" aria-describedby="seedHelp">
+            <button class="compact" id="applySeedButton" title="Recreate the pattern from this seed and the current settings">Apply seed</button>
           </div>
+          <small id="seedHelp">Randomise chooses a fresh seed. Apply seed (or Enter) repeats this seed with the current settings.</small>
         </div>
         <label class="field range-field">
           <span>Speed <output id="speedOutput">24 steps/s</output></span>
@@ -493,7 +496,7 @@ dialog code { color: var(--accent); }
         </dl>
       </section>
 
-      <p class="footer-note">Space: run · N: step · R: reseed · F: fit · Shift-drag or right-drag: pan</p>
+      <p class="footer-note">Space: run · N: step · R: randomise · F: fit · Shift-drag or right-drag: pan</p>
       <button class="about-button" id="aboutButton" type="button" aria-haspopup="dialog" aria-controls="aboutDialog">About</button>
     </aside>
 
@@ -502,14 +505,15 @@ dialog code { color: var(--accent); }
         <button class="menu-button mobile-only" id="openControls" aria-label="Open controls" aria-controls="controls" aria-expanded="false">Controls</button>
         <button class="primary viewport-run" id="viewportRunButton" type="button" title="Play simulation (Space)" aria-label="Play simulation" aria-keyshortcuts="Space" disabled>Play</button>
       </div>
-      <canvas id="lifeCanvas" aria-label="Cellular automaton on a periodic or aperiodic tiling"></canvas>
+      <canvas id="lifeCanvas" tabindex="0" aria-label="Cellular automaton on a periodic or aperiodic tiling" aria-describedby="canvasKeyboardHelp" aria-keyshortcuts="ArrowLeft ArrowRight ArrowUp ArrowDown" title="Click or Tab to focus; arrow keys pan the view, Shift plus arrows pans faster"></canvas>
+      <p id="canvasKeyboardHelp" hidden>When the canvas has focus, arrow keys move the view in that direction. Hold Shift to pan faster.</p>
       <div class="busy" id="busy" role="status" aria-live="polite" hidden>
         <div class="spinner" aria-hidden="true"></div>
         <strong id="busyTitle">Building tiling</strong>
         <span id="busyDetail">Generating geometry and adjacency…</span>
       </div>
       <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-      <div class="canvas-hint">Drag to pan · pinch or wheel to zoom · Paint to edit</div>
+      <div class="canvas-hint">Drag to pan · Click canvas for arrow keys · pinch/wheel to zoom</div>
     </main>
   </div>
 
@@ -518,7 +522,7 @@ dialog code { color: var(--accent); }
       <button class="dialog-close" id="aboutCloseButton" aria-label="Close About" autofocus>×</button>
       <h2 id="aboutDialogTitle">About Aperiodic Life</h2>
       <p id="aboutCredit">Aperiodic life package, vibe-coded by Murdoch J. Gabbay</p>
-      <p class="release-details">Version <strong id="aboutVersion">3.7.4</strong> · Released <time datetime="2026-10-14">14 October 2026</time></p>
+      <p class="release-details">Version <strong id="aboutVersion">3.7.5</strong> · Released <time datetime="2026-10-15">15 October 2026</time></p>
       <div class="about-catalogue" aria-labelledby="aboutCatalogueTitle">
         <h3 id="aboutCatalogueTitle">Complete pattern catalogue</h3>
         <p>All <span id="catalogueCount"></span> curated configurations, with precise rules, diagrams, verification, originality assessments and sources.</p>
@@ -7904,6 +7908,7 @@ dialog code { color: var(--accent); }
       this.lastPaintedCell = -1;
       this.paintValue = null;
       this.toastTimer = 0;
+      this.randomSeedCounter = 0;
       this.rebuildRequestId = 0;
       this.resumeAfterRebuild = false;
       this.maxCycleHistory = 192;
@@ -7938,7 +7943,7 @@ dialog code { color: var(--accent); }
         'discoverySelect', 'discoverySearch', 'discoveryCount', 'catalogueCount',
         'loadDiscoveryButton', 'loadRunDiscoveryButton', 'discoveryDescription', 'discoveryProvenance',
         'saveSnapshotButton', 'loadSnapshotButton', 'snapshotFileInput', 'snapshotStatus',
-        'densityInput', 'densityOutput', 'seedInput', 'newSeedButton', 'speedInput',
+        'densityInput', 'densityOutput', 'seedInput', 'applySeedButton', 'speedInput',
         'speedOutput', 'toolSelect', 'gridCheckbox', 'typeCheckbox', 'paletteSelect',
         'fitButton', 'saveButton', 'copyButton', 'aboutButton', 'aboutDialog',
         'tilingStat', 'generationStat', 'aliveStat', 'cellsStat', 'degreeStat',
@@ -8022,7 +8027,13 @@ dialog code { color: var(--accent); }
       });
       e.speedInput.addEventListener('input', () => this.updateRangeLabels());
       e.seedInput.addEventListener('change', () => this.clearActiveDiscovery(false));
-      e.newSeedButton.addEventListener('click', () => this.newSeed());
+      e.seedInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          this.applySeed();
+        }
+      });
+      e.applySeedButton.addEventListener('click', () => this.applySeed());
       e.toolSelect.addEventListener('change', () => this.updateToolCursor());
       e.gridCheckbox.addEventListener('change', () => { this.dirty = true; });
       e.typeCheckbox.addEventListener('change', () => { this.dirty = true; });
@@ -8117,6 +8128,7 @@ dialog code { color: var(--accent); }
       for (const button of [
         this.elements.stepButton,
         this.elements.randomizeButton,
+        this.elements.applySeedButton,
         this.elements.clearButton,
       ]) button.disabled = active;
       for (const button of [this.elements.runButton, this.elements.viewportRunButton]) {
@@ -8444,6 +8456,12 @@ dialog code { color: var(--accent); }
 
     randomize(showMessage = true) {
       if (!this.simulation || this.busyState) return;
+      this.newSeed();
+      this.applySeed(showMessage);
+    }
+
+    applySeed(showMessage = true) {
+      if (!this.simulation || this.busyState) return;
       this.clearActiveDiscovery(false);
       this.simulation.randomize(Number(this.elements.densityInput.value), this.elements.seedInput.value);
       this.renderer.updateState(this.simulation.state);
@@ -8465,13 +8483,15 @@ dialog code { color: var(--accent); }
 
     newSeed() {
       const words = new Uint32Array(2);
-      if (window.crypto && crypto.getRandomValues) crypto.getRandomValues(words);
+      if (window.crypto && window.crypto.getRandomValues) window.crypto.getRandomValues(words);
       else {
-        words[0] = Math.floor(Math.random() * 0xffffffff);
+        words[0] = Math.floor(Math.random() * 0x100000000);
         words[1] = Date.now() >>> 0;
       }
-      this.elements.seedInput.value = `${words[0].toString(36)}-${words[1].toString(36)}`;
-      this.clearActiveDiscovery(false);
+      // Keep rapid clicks distinct even if a fallback clock/random source
+      // repeats. The complete displayed seed remains reproducible by the core.
+      this.randomSeedCounter = (this.randomSeedCounter || 0) + 1;
+      this.elements.seedInput.value = `${words[0].toString(36)}-${words[1].toString(36)}-${this.randomSeedCounter.toString(36)}`;
     }
 
     updateRangeLabels() {
@@ -8518,6 +8538,9 @@ dialog code { color: var(--accent); }
       } else if (this.activePointerId !== null) {
         return;
       }
+      // Pointer gestures prevent their default action below, so explicitly
+      // focus the viewport for its keyboard controls without moving the page.
+      this.canvas.focus({ preventScroll: true });
       try {
         this.canvas.setPointerCapture(event.pointerId);
       } catch (_) {
@@ -8703,7 +8726,7 @@ dialog code { color: var(--accent); }
     }
 
     keyDown(event) {
-      if (event.defaultPrevented || event.ctrlKey || event.metaKey || event.altKey) return;
+      if (event.defaultPrevented || event.isComposing || event.ctrlKey || event.metaKey || event.altKey) return;
       // Leave all keys, including Escape, to the browser while a native modal
       // is open. On mobile the controls drawer can still be open behind the
       // dialog; closing it here would make one Escape press dismiss two layers.
@@ -8717,6 +8740,23 @@ dialog code { color: var(--accent); }
         target instanceof HTMLElement &&
         (target.isContentEditable || /^(INPUT|SELECT|TEXTAREA|BUTTON)$/.test(target.tagName))
       ) return;
+      const arrow = {
+        ArrowLeft: [1, 0], ArrowRight: [-1, 0],
+        ArrowUp: [0, 1], ArrowDown: [0, -1],
+      }[event.key];
+      if (arrow) {
+        if (target !== this.canvas || document.activeElement !== this.canvas) return;
+        event.preventDefault();
+        if (!this.patch || !this.simulation || this.busyState) return;
+        // Arrows move the viewed area like scrolling: Right reveals cells to
+        // the right, so the rendered board moves left. Distances are CSS pixels.
+        const distance = event.shiftKey ? 120 : 40;
+        this.automaticDiscoveryView = false;
+        this.discoveryViewManaged = false;
+        this.renderer.panPixels(arrow[0] * distance, arrow[1] * distance);
+        this.dirty = true;
+        return;
+      }
       const key = event.key.toLowerCase();
       if (key === ' ') {
         event.preventDefault();

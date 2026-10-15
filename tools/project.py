@@ -24,8 +24,9 @@ JAVASCRIPT_SOURCES = sorted(
 PROFILES = {
     "standard": [
         *[["node", "--check", source] for source in JAVASCRIPT_SOURCES],
-        ["python3", "-m", "py_compile", "tools/project.py", "tools/package.py", "tools/build_site.py", "tools/export_repository.py", "test-package.py", "test-repository.py"],
+        ["python3", "-m", "py_compile", "tools/project.py", "tools/package.py", "tools/build_site.py", "tools/export_repository.py", "tools/build_handover.py", "test-package.py", "test-repository.py", "test-handover.py"],
         ["node", "test-core.js"],
+        ["node", "test-core-mutations.js"],
         ["node", "test-regular-topology.js"],
         ["node", "test-interactions.js"],
         ["node", "test-snapshots.js"],
@@ -47,6 +48,7 @@ PROFILES = {
         ["node", "build-standalone.js", "--check"],
         ["python3", "test-package.py"],
         ["python3", "test-repository.py"],
+        ["python3", "test-handover.py"],
     ],
     "topology": [
         ["node", "test-topology.js"],

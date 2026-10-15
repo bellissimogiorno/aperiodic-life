@@ -1,0 +1,1579 @@
+
+== large ==
++ node --max-old-space-size=4096 research/continued-search/verification/verify.js --long
+{"passed":true,"catalogueEntriesLinkedToFixtures":["hat-wake-traveller","hat-two-row-relay","hat-edmond-a-six-way-launcher","hat-edmond-b-periodic-emitter","penrose-b2-c6-twelve-launcher","hex-b245s02-c5-p6-puffer","hex-b245s02-c5-three-cell-twin-puffer-launcher","hex-b2345s24-c4-p48-traveller"],"p48DisplayedPhase":22}
+{
+  "passed": true,
+  "cases": [
+    {
+      "id": "hat-relay-source-six-cell",
+      "through": 293,
+      "boundary": 4,
+      "maxActive": 9,
+      "maxRadius": 4.637795095723628,
+      "displacement": 315.7326313403819,
+      "projections": 341,
+      "matchingProjections": 0
+    },
+    {
+      "id": "hat-relay-two-cell-launch",
+      "through": 293,
+      "boundary": 4,
+      "maxActive": 13,
+      "maxRadius": 6.701892794358555,
+      "displacement": 312.5261198722604,
+      "projections": 341,
+      "matchingProjections": 0
+    },
+    {
+      "id": "hat-relay-depth6-long-flight",
+      "through": 1000,
+      "boundary": 8,
+      "maxActive": 9,
+      "maxRadius": 4.637795861285243,
+      "displacement": 1071.9832130281436,
+      "projections": 341,
+      "matchingProjections": 0
+    }
+  ],
+  "spectreReductionPositiveControl": true,
+  "scope": "Finite full-state replay, polygon/dead-halo returns and exact local state-projection exclusions; no historical-priority or immortality claim."
+}
+{
+  "passed": true,
+  "updater": "separate direct-neighbour integer-coordinate implementation",
+  "isolated": {
+    "emissionPeriod": 6,
+    "translation": [
+      -2,
+      4
+    ],
+    "depositPopulation": 1,
+    "separationChecks": 12,
+    "minimumGap": 4
+  },
+  "splitGeneration": 30,
+  "initialLive": 2,
+  "initialRefractory": 1,
+  "fixedCellsAtSplit": 4,
+  "twinHeads": [
+    {
+      "emissionPeriod": 6,
+      "translation": [
+        -2,
+        4
+      ],
+      "depositPopulation": 1,
+      "separationChecks": 12,
+      "minimumGap": 4
+    },
+    {
+      "emissionPeriod": 6,
+      "translation": [
+        2,
+        -4
+      ],
+      "depositPopulation": 1,
+      "separationChecks": 12,
+      "minimumGap": 4
+    }
+  ],
+  "interGroupSeparationChecks": 18,
+  "minimumInterGroupGap": 4,
+  "scope": "Exact recurrences plus outward dependency separation prove indefinite twin puffer propagation on the unbounded hexagonal lattice. This is not a stationary gun or a historical-priority claim."
+}
+{
+  "passed": true,
+  "rule": "B2345/S24",
+  "states": 4,
+  "minimalTranslatedPeriod": 48,
+  "translation": [
+    -32,
+    16
+  ],
+  "sevenLiveCellLaunchTransient": 16,
+  "liveRange": [
+    10,
+    23
+  ],
+  "activeRange": [
+    21,
+    50
+  ],
+  "maximumDependencyComponents": 3,
+  "recurrentEffectiveRule": "B234/S24",
+  "testedSpatialPartitions": 18,
+  "independentPartitionsWithOnlyOnePersistentPiece": 18,
+  "maximumDetachedSparkLifetime": 4,
+  "matchingEarlierCatalogueOrbits": [],
+  "scope": "Exact full-state recurrence proves an unbounded hexagonal spaceship. Each spatial dependency partition has only one persistent body; detached fragments die, so these splits are sparks rather than a convoy. This is not a general indecomposability theorem. Historical priority is unestablished."
+}
+{
+  "passed": true,
+  "rule": "Published Edmond Hat A",
+  "completeReplayThrough": 180,
+  "independentBodies": 6,
+  "splitGeneration": 60,
+  "allSixHaveRadius3PolygonReturns": true,
+  "minimumBoundaryDistance": 7,
+  "bodies": [
+    {
+      "maxActive": 7,
+      "maxRadius": 2.970876431735144,
+      "translatedFrom": 60,
+      "translatedTo": 170
+    },
+    {
+      "maxActive": 8,
+      "maxRadius": 3.254477398312463,
+      "translatedFrom": 71,
+      "translatedTo": 155
+    },
+    {
+      "maxActive": 8,
+      "maxRadius": 3.25447706159467,
+      "translatedFrom": 60,
+      "translatedTo": 170
+    },
+    {
+      "maxActive": 8,
+      "maxRadius": 3.2544776844047267,
+      "translatedFrom": 64,
+      "translatedTo": 90
+    },
+    {
+      "maxActive": 8,
+      "maxRadius": 3.2544790722809336,
+      "translatedFrom": 60,
+      "translatedTo": 128
+    },
+    {
+      "maxActive": 7,
+      "maxRadius": 2.9708778796669404,
+      "translatedFrom": 60,
+      "translatedTo": 170
+    }
+  ],
+  "scope": "A finite six-body launcher under a published rule. The seed is package-found, historical priority unestablished; this is not an immortal-motion or stationary-gun proof."
+}
+{
+  "passed": true,
+  "identity": {
+    "expression": "F^40(C) = C disjoint-union E",
+    "sourceCells": 56,
+    "emittedCells": 23,
+    "completeNonzeroStatesChecked": true,
+    "leastEmissionIntervalEstablished": false
+  },
+  "parentMinimumBoundary": 10,
+  "sourceMinimumBoundary": 7,
+  "packetBodies": [
+    {
+      "maximumActive": 7,
+      "maximumRadius": 3.43998328933691,
+      "displacement": 149.99426865071072
+    },
+    {
+      "maximumActive": 7,
+      "maximumRadius": 3.43998328933691,
+      "displacement": 150.2373517180145
+    },
+    {
+      "maximumActive": 6,
+      "maximumRadius": 3.1775228620557168,
+      "displacement": 149.67945602493896
+    },
+    {
+      "maximumActive": 6,
+      "maximumRadius": 3.1775222728674346,
+      "displacement": 149.68662930992664
+    }
+  ],
+  "accounting": {
+    "independentTrajectories": 7,
+    "completeProductionReferenceStateComparisons": 1067,
+    "transitionsPerEngine": 1060
+  },
+  "scope": "Finite repeating emitter only; no indefinite gun or least-period claim."
+}
++ node --max-old-space-size=4096 research/verify-aperiodic.js --long
+{
+  "result": "passed",
+  "cases": 9,
+  "statesCompared": 4099,
+  "results": [
+    {
+      "id": "hat-edmond-a-glider",
+      "verifiedThrough": 307,
+      "tileCount": 54289,
+      "trajectorySha256": "22f37ba0fdd621d58922909cd7f014faf55db27a400ba7fb58b1d437501dded7",
+      "finalCellStates": [
+        [
+          48474,
+          2
+        ],
+        [
+          48476,
+          2
+        ],
+        [
+          48481,
+          2
+        ],
+        [
+          48555,
+          2
+        ],
+        [
+          48570,
+          1
+        ],
+        [
+          48572,
+          1
+        ],
+        [
+          48573,
+          3
+        ]
+      ],
+      "minimumBoundaryDistance": 4,
+      "maxActive": 14,
+      "maxRadius": 4.564652275750605,
+      "centroidDisplacement": 311.58530573543896,
+      "absoluteRepeat": false,
+      "translatedReturns": [
+        {
+          "from": 29,
+          "to": 97,
+          "cells": 6,
+          "haloCells": 70,
+          "radius": 3,
+          "transform": {
+            "dx": 70.49999761581421,
+            "dy": -18.186532974243164
+          },
+          "worstPolygonError": 0.0000027804145311571597
+        }
+      ],
+      "emissions": []
+    },
+    {
+      "id": "hat-edmond-b-glider",
+      "verifiedThrough": 307,
+      "tileCount": 54289,
+      "trajectorySha256": "fe4c06869886744ad399f8e0935eda6844f631586353be608bff2480bb5e2dc2",
+      "finalCellStates": [
+        [
+          48474,
+          1
+        ],
+        [
+          48476,
+          1
+        ],
+        [
+          48481,
+          1
+        ],
+        [
+          48555,
+          1
+        ],
+        [
+          48570,
+          3
+        ],
+        [
+          48572,
+          3
+        ]
+      ],
+      "minimumBoundaryDistance": 4,
+      "maxActive": 13,
+      "maxRadius": 4.501559357812418,
+      "centroidDisplacement": 311.62581402912474,
+      "absoluteRepeat": false,
+      "translatedReturns": [
+        {
+          "from": 29,
+          "to": 97,
+          "cells": 5,
+          "haloCells": 70,
+          "radius": 3,
+          "transform": {
+            "dx": 70.49999761581421,
+            "dy": -18.186532974243164
+          },
+          "worstPolygonError": 0.0000027804145311571597
+        }
+      ],
+      "emissions": []
+    },
+    {
+      "id": "hat-edmond-c-glider",
+      "verifiedThrough": 311,
+      "tileCount": 54289,
+      "trajectorySha256": "44fdc2a845df92b5c498e5595085da286aeb1739fece10d64f5e703b409fdfa2",
+      "finalCellStates": [
+        [
+          47367,
+          3
+        ],
+        [
+          47368,
+          3
+        ],
+        [
+          47369,
+          1
+        ],
+        [
+          47370,
+          1
+        ],
+        [
+          47372,
+          1
+        ],
+        [
+          47957,
+          1
+        ],
+        [
+          47959,
+          2
+        ]
+      ],
+      "minimumBoundaryDistance": 4,
+      "maxActive": 18,
+      "maxRadius": 5.98168778032802,
+      "centroidDisplacement": 268.49411037174406,
+      "absoluteRepeat": false,
+      "translatedReturns": [
+        {
+          "from": 63,
+          "to": 131,
+          "cells": 7,
+          "haloCells": 76,
+          "radius": 3,
+          "transform": {
+            "dx": 70.5,
+            "dy": -18.186533451080322
+          },
+          "worstPolygonError": 9.5367431640625e-7
+        }
+      ],
+      "emissions": []
+    },
+    {
+      "id": "hat-simple-glider",
+      "verifiedThrough": 307,
+      "tileCount": 54289,
+      "trajectorySha256": "6c56eae8c69f4e6094945ba6709860b45512be9570ffe072e11ff205ed36337c",
+      "finalCellStates": [
+        [
+          48474,
+          1
+        ],
+        [
+          48476,
+          1
+        ],
+        [
+          48481,
+          1
+        ],
+        [
+          48555,
+          1
+        ],
+        [
+          48570,
+          2
+        ],
+        [
+          48572,
+          2
+        ]
+      ],
+      "minimumBoundaryDistance": 4,
+      "maxActive": 13,
+      "maxRadius": 4.501559357812418,
+      "centroidDisplacement": 311.62581402912474,
+      "absoluteRepeat": false,
+      "translatedReturns": [
+        {
+          "from": 29,
+          "to": 97,
+          "cells": 5,
+          "haloCells": 70,
+          "radius": 3,
+          "transform": {
+            "dx": 70.49999761581421,
+            "dy": -18.186532974243164
+          },
+          "worstPolygonError": 0.0000027804145311571597
+        }
+      ],
+      "emissions": []
+    },
+    {
+      "id": "hat-edmond-c-triple-launcher",
+      "verifiedThrough": 160,
+      "tileCount": 54289,
+      "trajectorySha256": "d2a0eef36ad6c4c89450b111a249c990446c3e5084366c4b9fa2762f71093652",
+      "finalCellStates": [
+        [
+          1208,
+          2
+        ],
+        [
+          1215,
+          1
+        ],
+        [
+          1217,
+          1
+        ],
+        [
+          1220,
+          1
+        ],
+        [
+          1222,
+          3
+        ],
+        [
+          1312,
+          1
+        ],
+        [
+          1313,
+          1
+        ],
+        [
+          1314,
+          1
+        ],
+        [
+          1316,
+          1
+        ],
+        [
+          3938,
+          1
+        ],
+        [
+          3939,
+          1
+        ],
+        [
+          3941,
+          1
+        ],
+        [
+          3951,
+          1
+        ],
+        [
+          3953,
+          1
+        ],
+        [
+          3962,
+          2
+        ],
+        [
+          3965,
+          3
+        ],
+        [
+          13227,
+          3
+        ],
+        [
+          13228,
+          2
+        ],
+        [
+          13229,
+          1
+        ],
+        [
+          13230,
+          1
+        ],
+        [
+          13232,
+          1
+        ],
+        [
+          13234,
+          1
+        ],
+        [
+          13321,
+          1
+        ]
+      ],
+      "minimumBoundaryDistance": 34,
+      "maxActive": 39,
+      "maxRadius": 140.15442098569412,
+      "centroidDisplacement": 80.43864155140803,
+      "absoluteRepeat": false,
+      "translatedReturns": [],
+      "emissions": [
+        {
+          "emission": 1,
+          "maxActive": 10,
+          "maxRadius": 4.142814382596109,
+          "minimumBoundaryDistance": 37,
+          "centroidDisplacement": 85.47126336144684,
+          "translatedReturn": {
+            "from": 86,
+            "to": 112,
+            "cells": 7,
+            "haloCells": 74,
+            "radius": 3,
+            "transform": {
+              "dx": -19.5,
+              "dy": -19.918583393096924
+            },
+            "worstPolygonError": 0.0000019073486328125
+          }
+        },
+        {
+          "emission": 2,
+          "maxActive": 9,
+          "maxRadius": 3.9499493603479348,
+          "minimumBoundaryDistance": 36,
+          "centroidDisplacement": 85.45347739072193,
+          "translatedReturn": {
+            "from": 98,
+            "to": 124,
+            "cells": 7,
+            "haloCells": 73,
+            "radius": 3,
+            "transform": {
+              "dx": 7.5,
+              "dy": -26.846790313720703
+            },
+            "worstPolygonError": 0.00000762939453125
+          }
+        },
+        {
+          "emission": 3,
+          "maxActive": 9,
+          "maxRadius": 3.9499453976466325,
+          "minimumBoundaryDistance": 34,
+          "centroidDisplacement": 85.6259987362178,
+          "translatedReturn": {
+            "from": 91,
+            "to": 117,
+            "cells": 7,
+            "haloCells": 73,
+            "radius": 3,
+            "transform": {
+              "dx": -27,
+              "dy": 6.928203582763672
+            },
+            "worstPolygonError": 0.0000019073486328125
+          }
+        }
+      ]
+    },
+    {
+      "id": "penrose-b2-c5-five-launcher",
+      "verifiedThrough": 240,
+      "tileCount": 143010,
+      "trajectorySha256": "31f7f78be98f58c4603ba366214806c8d3e3b177ac3719101ce098aedd4fb8a5",
+      "finalCellStates": [
+        [
+          4914,
+          1
+        ],
+        [
+          4919,
+          2
+        ],
+        [
+          4925,
+          2
+        ],
+        [
+          4926,
+          1
+        ],
+        [
+          4930,
+          1
+        ],
+        [
+          5358,
+          1
+        ],
+        [
+          5360,
+          2
+        ],
+        [
+          5365,
+          3
+        ],
+        [
+          5366,
+          3
+        ],
+        [
+          5367,
+          4
+        ],
+        [
+          5368,
+          4
+        ],
+        [
+          5374,
+          3
+        ],
+        [
+          5375,
+          3
+        ],
+        [
+          5379,
+          4
+        ],
+        [
+          23812,
+          1
+        ],
+        [
+          23818,
+          1
+        ],
+        [
+          23828,
+          2
+        ],
+        [
+          23830,
+          2
+        ],
+        [
+          23831,
+          3
+        ],
+        [
+          23832,
+          3
+        ],
+        [
+          23835,
+          2
+        ],
+        [
+          23837,
+          3
+        ],
+        [
+          23838,
+          4
+        ],
+        [
+          23839,
+          4
+        ],
+        [
+          23841,
+          4
+        ],
+        [
+          23867,
+          4
+        ],
+        [
+          23882,
+          1
+        ],
+        [
+          23883,
+          2
+        ],
+        [
+          35043,
+          1
+        ],
+        [
+          35098,
+          4
+        ],
+        [
+          35101,
+          3
+        ],
+        [
+          35102,
+          3
+        ],
+        [
+          35108,
+          2
+        ],
+        [
+          35109,
+          2
+        ],
+        [
+          35112,
+          3
+        ],
+        [
+          35113,
+          4
+        ],
+        [
+          35114,
+          4
+        ],
+        [
+          35116,
+          4
+        ],
+        [
+          35118,
+          2
+        ],
+        [
+          35120,
+          2
+        ],
+        [
+          35122,
+          1
+        ],
+        [
+          35126,
+          1
+        ],
+        [
+          88493,
+          4
+        ],
+        [
+          88501,
+          1
+        ],
+        [
+          88502,
+          3
+        ],
+        [
+          88505,
+          1
+        ],
+        [
+          88506,
+          1
+        ],
+        [
+          88507,
+          1
+        ],
+        [
+          88508,
+          4
+        ],
+        [
+          88509,
+          4
+        ],
+        [
+          88511,
+          3
+        ],
+        [
+          88512,
+          2
+        ],
+        [
+          88513,
+          2
+        ],
+        [
+          95221,
+          4
+        ],
+        [
+          95222,
+          4
+        ],
+        [
+          95224,
+          2
+        ],
+        [
+          95225,
+          3
+        ],
+        [
+          95238,
+          1
+        ],
+        [
+          95265,
+          4
+        ],
+        [
+          95380,
+          1
+        ],
+        [
+          95382,
+          3
+        ],
+        [
+          95384,
+          3
+        ],
+        [
+          95385,
+          2
+        ],
+        [
+          95386,
+          2
+        ],
+        [
+          95387,
+          3
+        ],
+        [
+          95403,
+          1
+        ],
+        [
+          95404,
+          1
+        ]
+      ],
+      "minimumBoundaryDistance": 9,
+      "maxActive": 298,
+      "maxRadius": 194.81579132701873,
+      "centroidDisplacement": 96.34525546121215,
+      "absoluteRepeat": false,
+      "translatedReturns": [],
+      "emissions": [
+        {
+          "emission": 1,
+          "maxActive": 14,
+          "maxRadius": 2.3312213215078734,
+          "minimumBoundaryDistance": 13,
+          "centroidDisplacement": 104.60030510957306,
+          "translatedReturn": {
+            "from": 120,
+            "to": 183,
+            "cells": 13,
+            "haloCells": 136,
+            "radius": 3,
+            "transform": {
+              "dx": 17.066017150878906,
+              "dy": 52.52379608154297
+            },
+            "worstPolygonError": 0.0000095367431640625
+          }
+        },
+        {
+          "emission": 2,
+          "maxActive": 14,
+          "maxRadius": 2.3312187328276464,
+          "minimumBoundaryDistance": 9,
+          "centroidDisplacement": 104.70176278423106,
+          "translatedReturn": {
+            "from": 120,
+            "to": 159,
+            "cells": 12,
+            "haloCells": 137,
+            "radius": 3,
+            "transform": {
+              "dx": -34.13203430175781,
+              "dy": 0
+            },
+            "worstPolygonError": 0.000003814697265625
+          }
+        },
+        {
+          "emission": 3,
+          "maxActive": 14,
+          "maxRadius": 2.3312165141461123,
+          "minimumBoundaryDistance": 11,
+          "centroidDisplacement": 105.10606497736524,
+          "translatedReturn": {
+            "from": 120,
+            "to": 183,
+            "cells": 11,
+            "haloCells": 134,
+            "radius": 3,
+            "transform": {
+              "dx": -55.22678756713867,
+              "dy": 0
+            },
+            "worstPolygonError": 0.00000762939453125
+          }
+        },
+        {
+          "emission": 4,
+          "maxActive": 14,
+          "maxRadius": 2.331217411204953,
+          "minimumBoundaryDistance": 66,
+          "centroidDisplacement": 105.16938730069697,
+          "translatedReturn": {
+            "from": 120,
+            "to": 183,
+            "cells": 13,
+            "haloCells": 135,
+            "radius": 3,
+            "transform": {
+              "dx": -17.06601905822754,
+              "dy": 52.52379894256592
+            },
+            "worstPolygonError": 0.00000476837158203125
+          }
+        },
+        {
+          "emission": 5,
+          "maxActive": 14,
+          "maxRadius": 2.3312222675883745,
+          "minimumBoundaryDistance": 10,
+          "centroidDisplacement": 105.47378113165628,
+          "translatedReturn": {
+            "from": 120,
+            "to": 159,
+            "cells": 14,
+            "haloCells": 133,
+            "radius": 3,
+            "transform": {
+              "dx": 27.61339569091797,
+              "dy": 20.06230926513672
+            },
+            "worstPolygonError": 0.000008529922399520072
+          }
+        }
+      ]
+    },
+    {
+      "id": "penrose-b2-c6-six-launcher",
+      "verifiedThrough": 200,
+      "tileCount": 143010,
+      "trajectorySha256": "14d9dc8b8b7ae041f02454646809dc35dd7412ded25e3613cf104f5e504cc83c",
+      "finalCellStates": [
+        [
+          45624,
+          5
+        ],
+        [
+          45632,
+          2
+        ],
+        [
+          45633,
+          4
+        ],
+        [
+          45634,
+          1
+        ],
+        [
+          45635,
+          1
+        ],
+        [
+          45636,
+          2
+        ],
+        [
+          45637,
+          2
+        ],
+        [
+          45638,
+          2
+        ],
+        [
+          45639,
+          5
+        ],
+        [
+          45640,
+          5
+        ],
+        [
+          45642,
+          4
+        ],
+        [
+          45643,
+          3
+        ],
+        [
+          45644,
+          3
+        ],
+        [
+          45645,
+          1
+        ],
+        [
+          52404,
+          5
+        ],
+        [
+          57248,
+          2
+        ],
+        [
+          57259,
+          2
+        ],
+        [
+          57264,
+          1
+        ],
+        [
+          57602,
+          5
+        ],
+        [
+          57603,
+          5
+        ],
+        [
+          57607,
+          3
+        ],
+        [
+          57608,
+          5
+        ],
+        [
+          57609,
+          4
+        ],
+        [
+          57610,
+          4
+        ],
+        [
+          57614,
+          2
+        ],
+        [
+          57615,
+          1
+        ],
+        [
+          57617,
+          2
+        ],
+        [
+          57623,
+          3
+        ],
+        [
+          57624,
+          4
+        ],
+        [
+          57626,
+          4
+        ],
+        [
+          57628,
+          3
+        ],
+        [
+          80962,
+          4
+        ],
+        [
+          80963,
+          4
+        ],
+        [
+          80965,
+          2
+        ],
+        [
+          80966,
+          3
+        ],
+        [
+          80979,
+          1
+        ],
+        [
+          81024,
+          5
+        ],
+        [
+          81121,
+          1
+        ],
+        [
+          81123,
+          3
+        ],
+        [
+          81124,
+          5
+        ],
+        [
+          81125,
+          3
+        ],
+        [
+          81126,
+          2
+        ],
+        [
+          81127,
+          2
+        ],
+        [
+          81128,
+          3
+        ],
+        [
+          81144,
+          1
+        ],
+        [
+          81145,
+          1
+        ],
+        [
+          91382,
+          2
+        ],
+        [
+          91393,
+          2
+        ],
+        [
+          91398,
+          1
+        ],
+        [
+          94252,
+          5
+        ],
+        [
+          94253,
+          5
+        ],
+        [
+          94257,
+          3
+        ],
+        [
+          94258,
+          5
+        ],
+        [
+          94259,
+          4
+        ],
+        [
+          94260,
+          4
+        ],
+        [
+          94264,
+          2
+        ],
+        [
+          94265,
+          1
+        ],
+        [
+          94267,
+          2
+        ],
+        [
+          94273,
+          3
+        ],
+        [
+          94274,
+          4
+        ],
+        [
+          94276,
+          4
+        ],
+        [
+          94278,
+          3
+        ],
+        [
+          95685,
+          3
+        ],
+        [
+          95686,
+          3
+        ],
+        [
+          95690,
+          5
+        ],
+        [
+          95691,
+          4
+        ],
+        [
+          95692,
+          5
+        ],
+        [
+          95707,
+          5
+        ],
+        [
+          95709,
+          4
+        ],
+        [
+          95711,
+          5
+        ],
+        [
+          95750,
+          2
+        ],
+        [
+          95751,
+          2
+        ],
+        [
+          95758,
+          2
+        ],
+        [
+          95759,
+          1
+        ],
+        [
+          95760,
+          1
+        ],
+        [
+          95777,
+          1
+        ],
+        [
+          95779,
+          1
+        ],
+        [
+          127321,
+          4
+        ],
+        [
+          127322,
+          4
+        ],
+        [
+          127324,
+          2
+        ],
+        [
+          127325,
+          3
+        ],
+        [
+          127326,
+          3
+        ],
+        [
+          127327,
+          3
+        ],
+        [
+          127330,
+          2
+        ],
+        [
+          127332,
+          3
+        ],
+        [
+          127333,
+          5
+        ],
+        [
+          127334,
+          2
+        ],
+        [
+          127335,
+          1
+        ],
+        [
+          127336,
+          1
+        ],
+        [
+          127349,
+          1
+        ],
+        [
+          127351,
+          1
+        ],
+        [
+          127759,
+          5
+        ]
+      ],
+      "minimumBoundaryDistance": 9,
+      "maxActive": 360,
+      "maxRadius": 155.6764578219924,
+      "centroidDisplacement": 74.29238903401837,
+      "absoluteRepeat": false,
+      "translatedReturns": [],
+      "emissions": [
+        {
+          "emission": 1,
+          "maxActive": 18,
+          "maxRadius": 2.7005640945707383,
+          "minimumBoundaryDistance": 28,
+          "centroidDisplacement": 70.16236610812416,
+          "translatedReturn": {
+            "from": 130,
+            "to": 193,
+            "cells": 18,
+            "haloCells": 154,
+            "radius": 3,
+            "transform": {
+              "dx": -55.22678756713867,
+              "dy": 0
+            },
+            "worstPolygonError": 0.00000762939453125
+          }
+        },
+        {
+          "emission": 2,
+          "maxActive": 18,
+          "maxRadius": 2.7005649606854303,
+          "minimumBoundaryDistance": 9,
+          "centroidDisplacement": 69.84081499833815,
+          "translatedReturn": {
+            "from": 120,
+            "to": 159,
+            "cells": 16,
+            "haloCells": 149,
+            "radius": 3,
+            "transform": {
+              "dx": -27.61339569091797,
+              "dy": 20.06231689453125
+            },
+            "worstPolygonError": 0.000015728399755926745
+          }
+        },
+        {
+          "emission": 3,
+          "maxActive": 18,
+          "maxRadius": 2.700563359832446,
+          "minimumBoundaryDistance": 74,
+          "centroidDisplacement": 69.63116031934338,
+          "translatedReturn": {
+            "from": 120,
+            "to": 159,
+            "cells": 14,
+            "haloCells": 137,
+            "radius": 3,
+            "transform": {
+              "dx": -10.547378540039062,
+              "dy": -32.46149218082428
+            },
+            "worstPolygonError": 0.000004436443821413134
+          }
+        },
+        {
+          "emission": 4,
+          "maxActive": 18,
+          "maxRadius": 2.70056563392555,
+          "minimumBoundaryDistance": 20,
+          "centroidDisplacement": 69.64708021296322,
+          "translatedReturn": {
+            "from": 120,
+            "to": 144,
+            "cells": 16,
+            "haloCells": 155,
+            "radius": 3,
+            "transform": {
+              "dx": -17.066017150878906,
+              "dy": -12.399187088012695
+            },
+            "worstPolygonError": 0.000007864199877963372
+          }
+        },
+        {
+          "emission": 5,
+          "maxActive": 18,
+          "maxRadius": 2.7005659679585956,
+          "minimumBoundaryDistance": 11,
+          "centroidDisplacement": 70.14414666183369,
+          "translatedReturn": {
+            "from": 120,
+            "to": 159,
+            "cells": 15,
+            "haloCells": 150,
+            "radius": 3,
+            "transform": {
+              "dx": -27.61339569091797,
+              "dy": -20.06230592727661
+            },
+            "worstPolygonError": 0.000007688768146799611
+          }
+        },
+        {
+          "emission": 6,
+          "maxActive": 18,
+          "maxRadius": 2.7005666240983097,
+          "minimumBoundaryDistance": 60,
+          "centroidDisplacement": 70.14414855349189,
+          "translatedReturn": {
+            "from": 130,
+            "to": 154,
+            "cells": 15,
+            "haloCells": 153,
+            "radius": 3,
+            "transform": {
+              "dx": 6.5186381340026855,
+              "dy": -20.06230926513672
+            },
+            "worstPolygonError": 0.000004074098465594068
+          }
+        }
+      ]
+    },
+    {
+      "id": "hat-edmond-b-long-flight",
+      "verifiedThrough": 1129,
+      "tileCount": 372100,
+      "trajectorySha256": "f923e39c16884068aa74738a2024f3123de94e9f296b41abfd2197f7a666be8f",
+      "finalCellStates": [
+        [
+          334603,
+          1
+        ],
+        [
+          334605,
+          1
+        ],
+        [
+          334610,
+          1
+        ],
+        [
+          334684,
+          1
+        ],
+        [
+          334699,
+          3
+        ],
+        [
+          334701,
+          3
+        ]
+      ],
+      "minimumBoundaryDistance": 4,
+      "maxActive": 13,
+      "maxRadius": 4.501558517627182,
+      "centroidDisplacement": 1191.172784041133,
+      "absoluteRepeat": false,
+      "translatedReturns": [
+        {
+          "from": 25,
+          "to": 67,
+          "cells": 6,
+          "haloCells": 73,
+          "radius": 3,
+          "transform": {
+            "dx": 43.5,
+            "dy": -11.258331298828125
+          },
+          "worstPolygonError": 0.00000762939453125
+        }
+      ],
+      "emissions": []
+    },
+    {
+      "id": "hat-simple-long-flight",
+      "verifiedThrough": 1129,
+      "tileCount": 372100,
+      "trajectorySha256": "1f06e06523c1c09023aa3de79a6b6252a378158af90de24b4ee3a1639ac84726",
+      "finalCellStates": [
+        [
+          334603,
+          1
+        ],
+        [
+          334605,
+          1
+        ],
+        [
+          334610,
+          1
+        ],
+        [
+          334684,
+          1
+        ],
+        [
+          334699,
+          2
+        ],
+        [
+          334701,
+          2
+        ]
+      ],
+      "minimumBoundaryDistance": 4,
+      "maxActive": 13,
+      "maxRadius": 4.501558517627182,
+      "centroidDisplacement": 1191.172784041133,
+      "absoluteRepeat": false,
+      "translatedReturns": [
+        {
+          "from": 25,
+          "to": 67,
+          "cells": 6,
+          "haloCells": 73,
+          "radius": 3,
+          "transform": {
+            "dx": 43.5,
+            "dy": -11.258331298828125
+          },
+          "worstPolygonError": 0.00000762939453125
+        }
+      ],
+      "emissions": []
+    }
+  ],
+  "interpretation": "Finite computational evidence; no proof of indefinite propagation or novelty is implied."
+}
++ node --max-old-space-size=4096 test-depth6-smoke.js
+{"cells":372100,"buildMilliseconds":5368.6412629999995,"edgeEntries":2019230,"touchEntries":2398242,"edgeBoundaryCells":11928,"touchBoundaryCells":11930}
++ node --max-old-space-size=4096 test-boundary-depth6.js
+{"cells":372100,"elementarySegments":2628565,"boundarySegments":47730,"boundaryPoints":47730,"edgeBoundaryCells":11928,"touchBoundaryCells":11930,"pointOnlyTouchBoundaryCells":[192603,259707]}
++ node --max-old-space-size=4096 test-penrose-depth11-smoke.js
+{"cells":143010,"triangles":286570,"exactPoints":143806,"edgeEntries":570450,"touchEntries":1347540,"edgeBoundaryCells":1195,"touchBoundaryCells":1825,"aliveAfter20":0,"seed":"sun","buildMilliseconds":950.315613}
+{"cells":143010,"triangles":286570,"exactPoints":143806,"edgeEntries":570450,"touchEntries":1347540,"edgeBoundaryCells":1195,"touchBoundaryCells":1825,"aliveAfter20":0,"seed":"sun-mirror","buildMilliseconds":813.017765}
+Penrose depth-11 smoke tests passed for both seeds
+
+All requested test profiles passed.

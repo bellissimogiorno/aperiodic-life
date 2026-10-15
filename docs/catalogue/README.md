@@ -9,6 +9,9 @@ AI generated following prompts by Murdoch J. Gabbay.
 Catalogue documentation revision 2, 14 October 2026, accompanies release 3.7.4.
 This revision names the source of each adaptation and separates direct sources
 from background literature, with linked rule identifiers and numbered references.
+Application release 3.7.5 retains this reviewed 3.7.4 catalogue, including its PDF,
+editable prose, metadata, data and geometry. The application and catalogue
+versions are recorded separately in the handover manifest and download names.
 
 ## Editable source
 
@@ -55,6 +58,21 @@ The catalogue builder detects stale `core.js` or `discoveries.js` hashes and
 requires its exact source metadata to agree with the snapshot export. Update
 `catalogue-source.json` only after reviewing changed evidence and regenerate the
 figures. It deliberately does not silently replace scholarly annotations.
+The catalogue may accompany an application with the same major and minor version
+and an equal or later patch version. Its geometry must still match the catalogue
+version exactly, and both recorded hashes must still match the current engine and
+preset source. An application patch never bypasses these evidence checks.
+
+To check the retained source and the catalogue validation regressions without
+regenerating the PDF, run with the optional documentation dependencies installed:
+
+```bash
+python3 docs/catalogue/build_catalogue.py --check
+python3 test-catalogue.py
+```
+
+These optional checks are separate from the standard test profile so the app's
+normal checks continue to work without ReportLab or pypdf.
 
 ## Review and attribution
 

@@ -44,7 +44,7 @@
       <div class="button-grid primary-actions">
         <button class="primary" id="runButton" title="Run simulation (Space)" aria-label="Run simulation" aria-keyshortcuts="Space" disabled>Run</button>
         <button id="stepButton" title="Advance one generation (N)" aria-keyshortcuts="N">Step</button>
-        <button id="randomizeButton" title="Randomise from the seed (R)" aria-keyshortcuts="R">Randomise</button>
+        <button id="randomizeButton" title="Randomise with a fresh seed (R)" aria-keyshortcuts="R">Randomise</button>
         <button id="clearButton" title="Clear all cells (C)" aria-keyshortcuts="C">Clear</button>
       </div>
 
@@ -153,9 +153,10 @@
         <div class="field">
           <span>Random seed</span>
           <div class="inline-control">
-            <input id="seedInput" type="text" value="aperiodic" spellcheck="false">
-            <button class="compact" id="newSeedButton" title="Create a new seed">New</button>
+            <input id="seedInput" type="text" value="aperiodic" spellcheck="false" aria-label="Random seed" aria-describedby="seedHelp">
+            <button class="compact" id="applySeedButton" title="Recreate the pattern from this seed and the current settings">Apply seed</button>
           </div>
+          <small id="seedHelp">Randomise chooses a fresh seed. Apply seed (or Enter) repeats this seed with the current settings.</small>
         </div>
         <label class="field range-field">
           <span>Speed <output id="speedOutput">24 steps/s</output></span>
@@ -211,7 +212,7 @@
         </dl>
       </section>
 
-      <p class="footer-note">Space: run · N: step · R: reseed · F: fit · Shift-drag or right-drag: pan</p>
+      <p class="footer-note">Space: run · N: step · R: randomise · F: fit · Shift-drag or right-drag: pan</p>
       <button class="about-button" id="aboutButton" type="button" aria-haspopup="dialog" aria-controls="aboutDialog">About</button>
     </aside>
 
@@ -220,14 +221,15 @@
         <button class="menu-button mobile-only" id="openControls" aria-label="Open controls" aria-controls="controls" aria-expanded="false">Controls</button>
         <button class="primary viewport-run" id="viewportRunButton" type="button" title="Play simulation (Space)" aria-label="Play simulation" aria-keyshortcuts="Space" disabled>Play</button>
       </div>
-      <canvas id="lifeCanvas" aria-label="Cellular automaton on a periodic or aperiodic tiling"></canvas>
+      <canvas id="lifeCanvas" tabindex="0" aria-label="Cellular automaton on a periodic or aperiodic tiling" aria-describedby="canvasKeyboardHelp" aria-keyshortcuts="ArrowLeft ArrowRight ArrowUp ArrowDown" title="Click or Tab to focus; arrow keys pan the view, Shift plus arrows pans faster"></canvas>
+      <p id="canvasKeyboardHelp" hidden>When the canvas has focus, arrow keys move the view in that direction. Hold Shift to pan faster.</p>
       <div class="busy" id="busy" role="status" aria-live="polite" hidden>
         <div class="spinner" aria-hidden="true"></div>
         <strong id="busyTitle">Building tiling</strong>
         <span id="busyDetail">Generating geometry and adjacency…</span>
       </div>
       <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-      <div class="canvas-hint">Drag to pan · pinch or wheel to zoom · Paint to edit</div>
+      <div class="canvas-hint">Drag to pan · Click canvas for arrow keys · pinch/wheel to zoom</div>
     </main>
   </div>
 
@@ -236,7 +238,7 @@
       <button class="dialog-close" id="aboutCloseButton" aria-label="Close About" autofocus>×</button>
       <h2 id="aboutDialogTitle">About Aperiodic Life</h2>
       <p id="aboutCredit">Aperiodic life package, vibe-coded by Murdoch J. Gabbay</p>
-      <p class="release-details">Version <strong id="aboutVersion">3.7.4</strong> · Released <time datetime="2026-10-14">14 October 2026</time></p>
+      <p class="release-details">Version <strong id="aboutVersion">3.7.5</strong> · Released <time datetime="2026-10-15">15 October 2026</time></p>
       <div class="about-catalogue" aria-labelledby="aboutCatalogueTitle">
         <h3 id="aboutCatalogueTitle">Complete pattern catalogue</h3>
         <p>All <span id="catalogueCount"></span> curated configurations, with precise rules, diagrams, verification, originality assessments and sources.</p>

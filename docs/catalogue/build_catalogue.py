@@ -124,12 +124,22 @@ BY_ID={e['id']:e for e in ENTRIES};BY_RULE={r['id']:r for r in RULES}
 VERSION=SOURCE['version'];DATE=SOURCE['date']
 REFS=SOURCE['references'];PAGE_LOG=[]
 def fixed_view(e):return e['fixedView']
+def validate_catalogue_version(catalogue_version, application_version):
+    """A UI-only patch may retain the exact, reviewed scientific catalogue."""
+    versions=[application_version,catalogue_version]
+    if any(not isinstance(value,str) or not re.fullmatch(r'(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)',value)
+           for value in versions):
+        raise ValueError('Application and catalogue versions must be major.minor.patch')
+    application,catalogue=[tuple(map(int,value.split('.'))) for value in versions]
+    if catalogue[:2]!=application[:2] or catalogue>application:
+        raise ValueError('Catalogue must match the application major/minor and not have a newer patch')
+
 def validate():
     assert len(ENTRIES)==89 and len(BY_ID)==89, '89 unique preset IDs required'
     assert len(RULES)==56 and len(BY_RULE)==56, '56 complete rule-sets required'
     assert len(UI)==12, '12 named rule templates required'
     assert set(BY_ID)==set(GEOM['entries']), 'Geometry coverage differs'
-    assert VERSION==(ROOT/'VERSION').read_text().strip(), 'Catalogue/release version differs'
+    validate_catalogue_version(VERSION,(ROOT/'VERSION').read_text().strip())
     assert GEOM['packageVersion']==VERSION, 'Geometry release version differs'
     for file in ['core.js','discoveries.js']:
         assert digest(ROOT/file)==SOURCE['sourceHashes'][file]==GEOM['sourceSHA256'][file], 'Stale engine/preset source: '+file

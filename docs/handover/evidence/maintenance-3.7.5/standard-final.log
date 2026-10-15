@@ -1,0 +1,1131 @@
+
+== standard ==
++ node --check app.js
++ node --check build-standalone.js
++ node --check core.js
++ node --check discoveries.js
++ node --check docs/catalogue/export_geometry.js
++ node --check docs/catalogue/verify_credited.js
++ node --check research/aperiodic-reference.js
++ node --check research/benchmark-core-performance.js
++ node --check research/continued-search/hat-background/verify.js
++ node --check research/continued-search/hat-bs/screen.js
++ node --check research/continued-search/hat-emitters/analyze-candidate.js
++ node --check research/continued-search/hat-emitters/analyze-source.js
++ node --check research/continued-search/hat-emitters/export-graphs.js
++ node --check research/continued-search/hat-relay/export-graphs.js
++ node --check research/continued-search/hat-relay/launch-check.js
++ node --check research/continued-search/hat-relay/minimal-relay.js
++ node --check research/continued-search/hat-relay/reduce-candidate.js
++ node --check research/continued-search/hat-relay/screen.js
++ node --check research/continued-search/hex/analyse-movers.js
++ node --check research/continued-search/hex/build-selected.js
++ node --check research/continued-search/hex/certify-twin-puffer.js
++ node --check research/continued-search/hex/generate-targeted.js
++ node --check research/continued-search/hex/generate.js
++ node --check research/continued-search/hex/hex-reference.js
++ node --check research/continued-search/hex/verify-selected.js
++ node --check research/continued-search/penrose/audit-high-counts.js
++ node --check research/continued-search/penrose/check-source-and-subsets.js
++ node --check research/continued-search/penrose/export.js
++ node --check research/continued-search/penrose/transplant-more.js
++ node --check research/continued-search/penrose/verify-twelve.js
++ node --check research/continued-search/verification/replay.js
++ node --check research/continued-search/verification/verify-catalogue-links.js
++ node --check research/continued-search/verification/verify-hat-emitter.js
++ node --check research/continued-search/verification/verify-hat-relay.js
++ node --check research/continued-search/verification/verify-hat-six-launcher.js
++ node --check research/continued-search/verification/verify-new-hex-ship.js
++ node --check research/continued-search/verification/verify-puffer.js
++ node --check research/continued-search/verification/verify.js
++ node --check research/exhaustive-search/hat-broad/classify-translated.js
++ node --check research/exhaustive-search/hat-broad/export.js
++ node --check research/exhaustive-search/hat-broad/screen-mobility.js
++ node --check research/exhaustive-search/hat-broad/transplant.js
++ node --check research/exhaustive-search/hat-broad/verify-rejections.js
++ node --check research/exhaustive-search/hat-targeted/export-graphs.js
++ node --check research/exhaustive-search/hat-targeted/priority-experiments.js
++ node --check research/exhaustive-search/hat-targeted/priority-launchers.js
++ node --check research/exhaustive-search/hat-targeted/priority-probe.js
++ node --check research/exhaustive-search/hex/generate-emitter-mutations.js
++ node --check research/exhaustive-search/hex/generate-mutations.js
++ node --check research/exhaustive-search/hex/generate-small-seeds.js
++ node --check research/exhaustive-search/penrose/audit-candidates.js
++ node --check research/exhaustive-search/penrose/export.js
++ node --check research/exhaustive-search/penrose/verify-launchers.js
++ node --check research/hex-reference.js
++ node --check research/lib/sparse-automaton.js
++ node --check research/mine-oscillators.js
++ node --check research/render-hat-gliders.js
++ node --check research/render-hat-wake-traveller.js
++ node --check research/render-hexagonal-atlas.js
++ node --check research/render-oscillator-atlas.js
++ node --check research/search-mobile-patterns.js
++ node --check research/search-movers.js
++ node --check research/search-transients.js
++ node --check research/survey-fields.js
++ node --check research/verify-aperiodic.js
++ node --check research/verify-catalog.js
++ node --check research/verify-hex-published-provenance.js
++ node --check research/verify-penrose-traveller.js
++ node --check test-boundary-depth6.js
++ node --check test-browser.js
++ node --check test-core-mutations.js
++ node --check test-core.js
++ node --check test-depth6-smoke.js
++ node --check test-discoveries.js
++ node --check test-hex-exhaustive-evidence.js
++ node --check test-hexagonal-evidence.js
++ node --check test-interactions.js
++ node --check test-penrose-depth11-smoke.js
++ node --check test-penrose-topology.js
++ node --check test-priority-rules.js
++ node --check test-regular-topology.js
++ node --check test-research.js
++ node --check test-search-tools.js
++ node --check test-snapshots.js
++ node --check test-static.js
++ node --check test-structures.js
++ node --check test-topology.js
++ node --check test-traveller-evidence.js
++ node --check tools/build_catalogue_credits.js
++ node --check tools/render-preview.js
++ python3 -m py_compile tools/project.py tools/package.py tools/build_site.py tools/export_repository.py tools/build_handover.py test-package.py test-repository.py test-handover.py
++ node test-core.js
+depth=0 cells=4 edgeEdges=4 touchEdges=5 build=0.8ms
+depth=1 cells=25 edgeEdges=51 touchEdges=63 build=1.7ms
+depth=2 cells=169 edgeEdges=400 touchEdges=486 build=3.0ms
+depth=3 cells=1156 edgeEdges=2943 touchEdges=3531 build=10.9ms
+depth=4 cells=7921 edgeEdges=20887 touchEdges=24921 build=59.6ms
+depth=5 cells=54289 edgeEdges=145845 touchEdges=173493 build=606.9ms
+penrose depth=2 cells=20 edgeEdges=30 touchEdges=60 build=0.2ms
+penrose depth=4 cells=160 edgeEdges=290 touchEdges=680 build=0.9ms
+penrose depth=6 cells=1140 edgeEdges=2210 touchEdges=5150 build=4.3ms
+penrose depth=8 cells=7920 edgeEdges=15650 touchEdges=36860 build=15.9ms
+penrose depth=10 cells=54560 edgeEdges=108630 touchEdges=256430 build=165.9ms
+core geometry, rule, automaton, boundary, and picking checks passed
++ node test-core-mutations.js
+{"result":"passed","comparisons":38400,"mutations":12960}
++ node test-regular-topology.js
+{
+  "square": [
+    {
+      "size": 3,
+      "cells": 9,
+      "edgePairs": 12,
+      "touchPairs": 20
+    },
+    {
+      "size": 8,
+      "cells": 64,
+      "edgePairs": 112,
+      "touchPairs": 210
+    },
+    {
+      "size": 25,
+      "cells": 625,
+      "edgePairs": 1200,
+      "touchPairs": 2352
+    },
+    {
+      "size": 51,
+      "cells": 2601,
+      "edgePairs": 5100,
+      "touchPairs": 10100
+    },
+    {
+      "size": 101,
+      "cells": 10201,
+      "edgePairs": 20200,
+      "touchPairs": 40200
+    }
+  ],
+  "hex": [
+    {
+      "radius": 1,
+      "cells": 7,
+      "pairs": 12
+    },
+    {
+      "radius": 2,
+      "cells": 19,
+      "pairs": 42
+    },
+    {
+      "radius": 8,
+      "cells": 217,
+      "pairs": 600
+    },
+    {
+      "radius": 16,
+      "cells": 817,
+      "pairs": 2352
+    },
+    {
+      "radius": 32,
+      "cells": 3169,
+      "pairs": 9312
+    },
+    {
+      "radius": 64,
+      "cells": 12481,
+      "pairs": 37056
+    }
+  ]
+}
+independent regular-grid topology reconstruction passed
++ node test-interactions.js
+fresh Randomise and seeded replay, entropy fallback, focused arrow panning, example provenance, viewport bounds, discovery camera policy, manual overrides, pinch zoom, touch painting and pointer interaction checks passed
++ node test-snapshots.js
+{"roundTrips":14,"continuationStepsPerRoundTrip":20,"strictSchema":"passed","graphMismatch":"passed","lockedBorder":"passed","failurePreservesExperiment":"passed","catalogueSearch":"passed"}
++ node tools/build_catalogue_credits.js --check
+Checked credits for 89 examples.
++ node research/verify-hex-published-provenance.js
+Verified exact published-pattern identity for 11 hexagonal catalogue entries.
++ node test-discoveries.js
+{
+  "discoveries": [
+    {
+      "id": "hat-wake-traveller",
+      "behavior": "active through 293",
+      "alive": 2,
+      "changed": 9,
+      "totalChanged": 2840
+    },
+    {
+      "id": "hat-two-row-relay",
+      "behavior": "active through 235",
+      "alive": 4,
+      "changed": 10,
+      "totalChanged": 2440
+    },
+    {
+      "id": "hat-edmond-a-six-way-launcher",
+      "behavior": "active through 180",
+      "alive": 9,
+      "changed": 66,
+      "totalChanged": 12190
+    },
+    {
+      "id": "hat-edmond-b-periodic-emitter",
+      "behavior": "active through 180",
+      "alive": 109,
+      "changed": 244,
+      "totalChanged": 29218
+    },
+    {
+      "id": "hat-edmond-b-glider",
+      "behavior": "active through 307",
+      "alive": 4,
+      "changed": 10,
+      "totalChanged": 3189
+    },
+    {
+      "id": "hat-edmond-a-glider",
+      "behavior": "active through 307",
+      "alive": 2,
+      "changed": 11,
+      "totalChanged": 3490
+    },
+    {
+      "id": "hat-edmond-c-glider",
+      "behavior": "active through 311",
+      "alive": 4,
+      "changed": 13,
+      "totalChanged": 3813
+    },
+    {
+      "id": "hat-simple-glider",
+      "behavior": "active through 307",
+      "alive": 4,
+      "changed": 10,
+      "totalChanged": 3189
+    },
+    {
+      "id": "hat-edmond-c-triple-launcher",
+      "behavior": "active through 160",
+      "alive": 17,
+      "changed": 40,
+      "totalChanged": 5619
+    },
+    {
+      "id": "penrose-b2-c6-twelve-launcher",
+      "behavior": "active through 130",
+      "alive": 34,
+      "changed": 230,
+      "totalChanged": 37338
+    },
+    {
+      "id": "hex-b245s02-c5-p6-puffer",
+      "behavior": "active through 120",
+      "alive": 30,
+      "changed": 28,
+      "totalChanged": 2820
+    },
+    {
+      "id": "hex-b245s02-c5-three-cell-twin-puffer-launcher",
+      "behavior": "active through 120",
+      "alive": 54,
+      "changed": 56,
+      "totalChanged": 5325
+    },
+    {
+      "id": "hex-b2345s24-c4-p48-traveller",
+      "behavior": "translation -32,16 after 48",
+      "alive": 10
+    },
+    {
+      "id": "hex-b2s0-c3-three-cell-glider",
+      "behavior": "compact travel 103.923 through 120",
+      "active": 3
+    },
+    {
+      "id": "hex-b234s1346-c3-four-cell-launcher",
+      "behavior": "compact travel 43.126 through 120",
+      "active": 12
+    },
+    {
+      "id": "hex-b2456s1345-c4-five-cell-launcher",
+      "behavior": "compact travel 38.834 through 178",
+      "active": 18
+    },
+    {
+      "id": "hex-b23s13-c4-p9-knightship-launcher",
+      "behavior": "compact travel 101.306 through 120",
+      "active": 33
+    },
+    {
+      "id": "hex-b234s245-c5-p10-knightship-launcher",
+      "behavior": "compact travel 54.116 through 120",
+      "active": 27
+    },
+    {
+      "id": "penrose-b2-c5-five-launcher",
+      "behavior": "active through 240",
+      "alive": 18,
+      "changed": 82,
+      "totalChanged": 31493
+    },
+    {
+      "id": "penrose-b2-c6-six-launcher",
+      "behavior": "active through 200",
+      "alive": 19,
+      "changed": 110,
+      "totalChanged": 27878
+    },
+    {
+      "id": "square-block",
+      "behavior": "period 1",
+      "alive": 4
+    },
+    {
+      "id": "square-blinker",
+      "behavior": "period 2",
+      "alive": 3
+    },
+    {
+      "id": "square-pulsar",
+      "behavior": "period 3",
+      "alive": 48
+    },
+    {
+      "id": "square-pentadecathlon",
+      "behavior": "period 15",
+      "alive": 12
+    },
+    {
+      "id": "square-glider",
+      "behavior": "translation 1,1 after 4",
+      "alive": 5
+    },
+    {
+      "id": "square-lwss",
+      "behavior": "translation -2,0 after 4",
+      "alive": 9
+    },
+    {
+      "id": "square-highlife-replicator",
+      "behavior": "2 replicas after 12",
+      "alive": 24
+    },
+    {
+      "id": "square-diehard",
+      "behavior": "extinction at 130",
+      "alive": 0
+    },
+    {
+      "id": "square-r-pentomino",
+      "behavior": "active through 1103",
+      "alive": 111,
+      "changed": 26,
+      "totalChanged": 117714
+    },
+    {
+      "id": "square-acorn",
+      "behavior": "active through 5206",
+      "alive": 620,
+      "changed": 170,
+      "totalChanged": 1409389
+    },
+    {
+      "id": "hex-conway-p2",
+      "behavior": "period 2",
+      "alive": 4
+    },
+    {
+      "id": "hex-conway-p3",
+      "behavior": "period 3",
+      "alive": 19
+    },
+    {
+      "id": "hex-conway-p6",
+      "behavior": "period 6",
+      "alive": 21
+    },
+    {
+      "id": "hex-b2s35-p5-traveller",
+      "behavior": "translation 1,0 after 5",
+      "alive": 12
+    },
+    {
+      "id": "hex-b245s3-p10-traveller",
+      "behavior": "translation 2,0 after 10",
+      "alive": 9
+    },
+    {
+      "id": "hex-b235s146-c4-launcher-traveller",
+      "behavior": "compact travel 168.834 through 200",
+      "active": 21
+    },
+    {
+      "id": "hex-b235s134-c5-launcher-traveller",
+      "behavior": "compact travel 132.406 through 200",
+      "active": 9
+    },
+    {
+      "id": "penrose-edge-b23s23-p822",
+      "behavior": "period 822",
+      "alive": 19
+    },
+    {
+      "id": "penrose-conway-c3-p14",
+      "behavior": "period 14",
+      "alive": 4
+    },
+    {
+      "id": "hat-b2s1-c3-rotor-p39",
+      "behavior": "period 39",
+      "alive": 4
+    },
+    {
+      "id": "hat-b2s23-c6-rotor-p219",
+      "behavior": "period 219",
+      "alive": 4
+    },
+    {
+      "id": "hat-b2s13-c4-clock-p11",
+      "behavior": "period 11",
+      "alive": 2
+    },
+    {
+      "id": "hat-directional-transient-83",
+      "behavior": "extinction at 83",
+      "alive": 0
+    },
+    {
+      "id": "hex-conway-p4",
+      "behavior": "period 4",
+      "alive": 14
+    },
+    {
+      "id": "hex-conway-p5",
+      "behavior": "period 5",
+      "alive": 14
+    },
+    {
+      "id": "hex-conway-p8",
+      "behavior": "period 8",
+      "alive": 22
+    },
+    {
+      "id": "hex-b34s234-p269",
+      "behavior": "period 269",
+      "alive": 25
+    },
+    {
+      "id": "hex-b245s35-p25-traveller",
+      "behavior": "translation 1,1 after 25",
+      "alive": 9
+    },
+    {
+      "id": "hex-b2s34-p48-rotor",
+      "behavior": "period 48",
+      "alive": 6
+    },
+    {
+      "id": "hex-b245s3-p57-pulsator",
+      "behavior": "period 57",
+      "alive": 9
+    },
+    {
+      "id": "hex-b24s3-p128-rotor",
+      "behavior": "period 128",
+      "alive": 9
+    },
+    {
+      "id": "hex-b234s3-p4104",
+      "behavior": "period 4104",
+      "alive": 12
+    },
+    {
+      "id": "hex-b2s3456-c7-p372-rotor",
+      "behavior": "period 372",
+      "alive": 8
+    },
+    {
+      "id": "hex-b24s16-c3-p248-breather",
+      "behavior": "period 248",
+      "alive": 10
+    },
+    {
+      "id": "hex-b23s13-c5-p138-traveller",
+      "behavior": "translation 0,-8 after 138",
+      "alive": 12
+    },
+    {
+      "id": "hex-b234s13-c4-p23-traveller",
+      "behavior": "translation 10,-5 after 23",
+      "alive": 17
+    },
+    {
+      "id": "hex-b246s246-c4-p30-gun",
+      "behavior": "active through 120",
+      "alive": 60,
+      "changed": 84,
+      "totalChanged": 9372
+    },
+    {
+      "id": "hex-b25s34-p20-puffer",
+      "behavior": "active through 160",
+      "alive": 55,
+      "changed": 102,
+      "totalChanged": 11200
+    },
+    {
+      "id": "hex-b2s1-c3-p999-rotor",
+      "behavior": "period 999",
+      "alive": 38
+    },
+    {
+      "id": "hex-b23s4-p13-traveller",
+      "behavior": "translation 1,1 after 13",
+      "alive": 9
+    },
+    {
+      "id": "hex-b2s1-c3-p158-traveller",
+      "behavior": "translation -11,22 after 158",
+      "alive": 18
+    },
+    {
+      "id": "hex-b2s34-wall-repair",
+      "behavior": "transient 44, period 5",
+      "alive": 73
+    },
+    {
+      "id": "hex-b2s34-p2044-billiard",
+      "behavior": "period 2044",
+      "alive": 146
+    },
+    {
+      "id": "hex-parity-seven-copy",
+      "behavior": "7 replicas after 8",
+      "alive": 21
+    },
+    {
+      "id": "penrose-conway-p4",
+      "behavior": "period 4",
+      "alive": 11
+    },
+    {
+      "id": "penrose-conway-p5",
+      "behavior": "period 5",
+      "alive": 8
+    },
+    {
+      "id": "penrose-conway-p7",
+      "behavior": "period 7",
+      "alive": 11
+    },
+    {
+      "id": "penrose-conway-p12",
+      "behavior": "period 12",
+      "alive": 6
+    },
+    {
+      "id": "penrose-edge-conway-p4",
+      "behavior": "period 4",
+      "alive": 23
+    },
+    {
+      "id": "hat-conway-p6",
+      "behavior": "period 6",
+      "alive": 11
+    },
+    {
+      "id": "hat-conway-p9",
+      "behavior": "period 9",
+      "alive": 8
+    },
+    {
+      "id": "hat-conway-p26",
+      "behavior": "period 26",
+      "alive": 10
+    },
+    {
+      "id": "hat-edge-conway-p15",
+      "behavior": "period 15",
+      "alive": 26
+    },
+    {
+      "id": "hat-seeds-p8",
+      "behavior": "period 8",
+      "alive": 4
+    },
+    {
+      "id": "hat-b23-p20",
+      "behavior": "period 20",
+      "alive": 13
+    },
+    {
+      "id": "hat-b23-p24",
+      "behavior": "period 24",
+      "alive": 8
+    },
+    {
+      "id": "hat-b23-p28",
+      "behavior": "period 28",
+      "alive": 18
+    },
+    {
+      "id": "penrose-b2-c4-compact-traveller",
+      "behavior": "compact travel 193.270 through 220",
+      "active": 8
+    },
+    {
+      "id": "penrose-b2-c5-compact-traveller",
+      "behavior": "compact travel 192.391 through 220",
+      "active": 12
+    },
+    {
+      "id": "penrose-b2-c6-compact-traveller",
+      "behavior": "compact travel 192.268 through 220",
+      "active": 15
+    },
+    {
+      "id": "penrose-b24-c4-launcher-traveller",
+      "behavior": "compact travel 171.841 through 200",
+      "active": 9
+    },
+    {
+      "id": "penrose-b2s4-c5-survival-launcher",
+      "behavior": "compact travel 170.831 through 200",
+      "active": 11
+    },
+    {
+      "id": "penrose-b26s-c4-birth-launcher",
+      "behavior": "compact travel 175.890 through 200",
+      "active": 11
+    },
+    {
+      "id": "penrose-b27s4-c4-dual-clause-launcher",
+      "behavior": "compact travel 177.349 through 200",
+      "active": 10
+    },
+    {
+      "id": "penrose-conway-diehard-293",
+      "behavior": "extinction at 293",
+      "alive": 0
+    },
+    {
+      "id": "penrose-conway-methuselah-289",
+      "behavior": "transient 289, period 1",
+      "alive": 4
+    },
+    {
+      "id": "penrose-b12-p840-field",
+      "behavior": "transient 51, period 840",
+      "alive": 2562
+    },
+    {
+      "id": "penrose-brain-field",
+      "behavior": "active through 3000",
+      "alive": 607,
+      "changed": 1787,
+      "totalChanged": 5502268
+    },
+    {
+      "id": "hat-b1-field",
+      "behavior": "active through 3000",
+      "alive": 816,
+      "changed": 1547,
+      "totalChanged": 4785758
+    }
+  ]
+}
+all curated discoveries reproduced exactly
++ node test-structures.js
+{
+  "independentDirectNeighbourReplay": "passed",
+  "structures": [
+    {
+      "id": "penrose-edge-b23s23-p822",
+      "period": 822,
+      "extinction": null,
+      "supportTiles": 46,
+      "maximumActive": 37,
+      "minimumBoundaryDistance": 40,
+      "fullPeriodCells": 39
+    },
+    {
+      "id": "penrose-conway-c3-p14",
+      "period": 14,
+      "extinction": null,
+      "supportTiles": 27,
+      "maximumActive": 12,
+      "minimumBoundaryDistance": 16,
+      "fullPeriodCells": 24
+    },
+    {
+      "id": "hat-b2s1-c3-rotor-p39",
+      "period": 39,
+      "extinction": null,
+      "supportTiles": 39,
+      "maximumActive": 13,
+      "minimumBoundaryDistance": 22,
+      "fullPeriodCells": 39
+    },
+    {
+      "id": "hat-b2s23-c6-rotor-p219",
+      "period": 219,
+      "extinction": null,
+      "supportTiles": 300,
+      "maximumActive": 79,
+      "minimumBoundaryDistance": 21,
+      "fullPeriodCells": 300
+    },
+    {
+      "id": "hat-b2s13-c4-clock-p11",
+      "period": 11,
+      "extinction": null,
+      "supportTiles": 8,
+      "maximumActive": 8,
+      "minimumBoundaryDistance": 33,
+      "fullPeriodCells": 8
+    },
+    {
+      "id": "hat-directional-transient-83",
+      "period": null,
+      "extinction": 83,
+      "supportTiles": 344,
+      "maximumActive": 76,
+      "minimumBoundaryDistance": 47,
+      "fullPeriodCells": 0,
+      "firstWithoutLiveCells": 75
+    }
+  ],
+  "rotations": {
+    "maximumLatticeResidual": 0.000008683021974320582,
+    "scope": "Recurrent-support polygons and induced graph",
+    "structures": [
+      {
+        "id": "hat-b2s1-c3-rotor-p39",
+        "phaseAdvance": 13,
+        "angleDegrees": -120,
+        "pivotScaledTriangularLattice": [
+          54,
+          42
+        ],
+        "mappedPolygons": 39,
+        "completeStateAllPhaseMapping": true,
+        "inducedSupportGraphAutomorphism": true
+      },
+      {
+        "id": "hat-b2s23-c6-rotor-p219",
+        "phaseAdvance": 73,
+        "angleDegrees": -120,
+        "pivotScaledTriangularLattice": [
+          62,
+          10
+        ],
+        "mappedPolygons": 300,
+        "completeStateAllPhaseMapping": true,
+        "inducedSupportGraphAutomorphism": true
+      }
+    ]
+  },
+  "clockFamily": {
+    "stateCounts": 252,
+    "minimumStates": 4,
+    "maximumStates": 255,
+    "periodFormula": "2*C+3",
+    "supportTiles": 8,
+    "haloTiles": 12,
+    "haloRemainsZero": true
+  }
+}
++ node test-search-tools.js
+sparse search evaluator boundary and horizon checks passed
++ node test-research.js
+best iteration=0 outcome=cycle travel=0.000 radius=1.581 mobility=0.000 translated=0
+best iteration=1 outcome=cycle travel=0.906 radius=1.709 mobility=0.530 translated=0
+best iteration=2 outcome=cycle travel=0.236 radius=0.745 mobility=0.316 translated=0
+best iteration=7 outcome=cycle travel=1.269 radius=1.811 mobility=0.701 translated=0
+best iteration=0 outcome=cycle travel=0.000 radius=1.581 mobility=0.000 translated=0
+best iteration=1 outcome=cycle travel=0.906 radius=1.709 mobility=0.530 translated=0
+best iteration=2 outcome=cycle travel=0.236 radius=0.745 mobility=0.316 translated=0
+best iteration=7 outcome=cycle travel=1.269 radius=1.811 mobility=0.701 translated=0
+best iteration=0 outcome=extinct travel=0.900 radius=1.887 mobility=0.477 translated=0
+best iteration=2 outcome=cycle travel=0.433 radius=1.984 mobility=0.218 translated=0
+best iteration=18 outcome=cycle travel=0.433 radius=1.984 mobility=0.218 translated=0
+best iteration=0 outcome=extinct travel=0.900 radius=1.887 mobility=0.477 translated=0
+best iteration=2 outcome=cycle travel=0.433 radius=1.984 mobility=0.218 translated=0
+best iteration=18 outcome=cycle travel=0.433 radius=1.984 mobility=0.218 translated=0
+best iteration=0 outcome=extinct travel=1.978 radius=3.378 mobility=0.586 translated=0
+best iteration=1 outcome=cycle travel=0.000 radius=1.537 mobility=0.000 translated=0
+best iteration=2 outcome=cycle travel=1.665 radius=3.414 mobility=0.488 translated=0
+best iteration=0 outcome=extinct travel=1.978 radius=3.378 mobility=0.586 translated=0
+best iteration=1 outcome=cycle travel=0.000 radius=1.537 mobility=0.000 translated=0
+best iteration=2 outcome=cycle travel=1.665 radius=3.414 mobility=0.488 translated=0
+best iteration=0 outcome=extinct travel=0.167 radius=0.976 mobility=0.171 translated=0
+best iteration=1 outcome=cycle travel=1.220 radius=1.881 mobility=0.649 translated=0
+best iteration=9 outcome=cycle travel=2.918 radius=2.868 mobility=1.017 translated=0
+best iteration=0 outcome=extinct travel=0.167 radius=0.976 mobility=0.171 translated=0
+best iteration=1 outcome=cycle travel=1.220 radius=1.881 mobility=0.649 translated=0
+best iteration=9 outcome=cycle travel=2.918 radius=2.868 mobility=1.017 translated=0
+{"catalogueEntriesVerified":89,"sparseDenseCases":24,"deterministicSearchCases":4,"candidatesPerSearch":24,"positiveControlGenerations":16,"result":"passed"}
++ node test-traveller-evidence.js
+{"travellerExamples":24,"statesCompared":4254,"translatedReturns":54,"refractoryNegativeControls":14,"independentSourceReplayPeriod":10,"replays":[{"id":"hex-b2345s24-c4-p48-traveller","verifiedThrough":192},{"id":"hex-b2s0-c3-three-cell-glider","verifiedThrough":120},{"id":"hex-b234s1346-c3-four-cell-launcher","verifiedThrough":120},{"id":"hex-b2456s1345-c4-five-cell-launcher","verifiedThrough":178},{"id":"hex-b23s13-c4-p9-knightship-launcher","verifiedThrough":120},{"id":"hex-b234s245-c5-p10-knightship-launcher","verifiedThrough":120},{"id":"square-glider","verifiedThrough":16},{"id":"square-lwss","verifiedThrough":16},{"id":"hex-b2s35-p5-traveller","verifiedThrough":20},{"id":"hex-b245s3-p10-traveller","verifiedThrough":40},{"id":"hex-b235s146-c4-launcher-traveller","verifiedThrough":200},{"id":"hex-b235s134-c5-launcher-traveller","verifiedThrough":200},{"id":"hex-b245s35-p25-traveller","verifiedThrough":100},{"id":"hex-b23s13-c5-p138-traveller","verifiedThrough":552},{"id":"hex-b234s13-c4-p23-traveller","verifiedThrough":92},{"id":"hex-b23s4-p13-traveller","verifiedThrough":52},{"id":"hex-b2s1-c3-p158-traveller","verifiedThrough":632},{"id":"penrose-b2-c4-compact-traveller","verifiedThrough":220},{"id":"penrose-b2-c5-compact-traveller","verifiedThrough":220},{"id":"penrose-b2-c6-compact-traveller","verifiedThrough":220},{"id":"penrose-b24-c4-launcher-traveller","verifiedThrough":200},{"id":"penrose-b2s4-c5-survival-launcher","verifiedThrough":200},{"id":"penrose-b26s-c4-birth-launcher","verifiedThrough":200},{"id":"penrose-b27s4-c4-dual-clause-launcher","verifiedThrough":200}],"interpretation":"Finite complete-state replays and local graph translations; no indefinite aperiodic motion is inferred.","result":"passed"}
++ node test-hexagonal-evidence.js
+{"hexagonalConfigurations":36,"exactCycles":30,"comparedGenerations":9814,"comparedCells":23079334,"emitterSeparationChecks":310,"transformedDuplicateControl":true,"refractoryNegativeControls":2}
++ node test-priority-rules.js
+{"result":"passed","localCases":25740,"ordinaryComparisons":99,"finiteTrajectories":7,"fullStateComparisons":1839,"isolatedEmittees":14,"negativeControls":3}
++ node research/continued-search/verification/verify.js
+{"passed":true,"catalogueEntriesLinkedToFixtures":["hat-wake-traveller","hat-two-row-relay","hat-edmond-a-six-way-launcher","hat-edmond-b-periodic-emitter","penrose-b2-c6-twelve-launcher","hex-b245s02-c5-p6-puffer","hex-b245s02-c5-three-cell-twin-puffer-launcher","hex-b2345s24-c4-p48-traveller"],"p48DisplayedPhase":22}
+{
+  "passed": true,
+  "cases": [
+    {
+      "id": "hat-relay-source-six-cell",
+      "through": 293,
+      "boundary": 4,
+      "maxActive": 9,
+      "maxRadius": 4.637795095723628,
+      "displacement": 315.7326313403819,
+      "projections": 341,
+      "matchingProjections": 0
+    },
+    {
+      "id": "hat-relay-two-cell-launch",
+      "through": 293,
+      "boundary": 4,
+      "maxActive": 13,
+      "maxRadius": 6.701892794358555,
+      "displacement": 312.5261198722604,
+      "projections": 341,
+      "matchingProjections": 0
+    }
+  ],
+  "spectreReductionPositiveControl": true,
+  "scope": "Finite full-state replay, polygon/dead-halo returns and exact local state-projection exclusions; no historical-priority or immortality claim."
+}
+{
+  "passed": true,
+  "updater": "separate direct-neighbour integer-coordinate implementation",
+  "isolated": {
+    "emissionPeriod": 6,
+    "translation": [
+      -2,
+      4
+    ],
+    "depositPopulation": 1,
+    "separationChecks": 12,
+    "minimumGap": 4
+  },
+  "splitGeneration": 30,
+  "initialLive": 2,
+  "initialRefractory": 1,
+  "fixedCellsAtSplit": 4,
+  "twinHeads": [
+    {
+      "emissionPeriod": 6,
+      "translation": [
+        -2,
+        4
+      ],
+      "depositPopulation": 1,
+      "separationChecks": 12,
+      "minimumGap": 4
+    },
+    {
+      "emissionPeriod": 6,
+      "translation": [
+        2,
+        -4
+      ],
+      "depositPopulation": 1,
+      "separationChecks": 12,
+      "minimumGap": 4
+    }
+  ],
+  "interGroupSeparationChecks": 18,
+  "minimumInterGroupGap": 4,
+  "scope": "Exact recurrences plus outward dependency separation prove indefinite twin puffer propagation on the unbounded hexagonal lattice. This is not a stationary gun or a historical-priority claim."
+}
+{
+  "passed": true,
+  "rule": "B2345/S24",
+  "states": 4,
+  "minimalTranslatedPeriod": 48,
+  "translation": [
+    -32,
+    16
+  ],
+  "sevenLiveCellLaunchTransient": 16,
+  "liveRange": [
+    10,
+    23
+  ],
+  "activeRange": [
+    21,
+    50
+  ],
+  "maximumDependencyComponents": 3,
+  "recurrentEffectiveRule": "B234/S24",
+  "testedSpatialPartitions": 18,
+  "independentPartitionsWithOnlyOnePersistentPiece": 18,
+  "maximumDetachedSparkLifetime": 4,
+  "matchingEarlierCatalogueOrbits": [],
+  "scope": "Exact full-state recurrence proves an unbounded hexagonal spaceship. Each spatial dependency partition has only one persistent body; detached fragments die, so these splits are sparks rather than a convoy. This is not a general indecomposability theorem. Historical priority is unestablished."
+}
+{
+  "passed": true,
+  "rule": "Published Edmond Hat A",
+  "completeReplayThrough": 180,
+  "independentBodies": 6,
+  "splitGeneration": 60,
+  "allSixHaveRadius3PolygonReturns": true,
+  "minimumBoundaryDistance": 7,
+  "bodies": [
+    {
+      "maxActive": 7,
+      "maxRadius": 2.970876431735144,
+      "translatedFrom": 60,
+      "translatedTo": 170
+    },
+    {
+      "maxActive": 8,
+      "maxRadius": 3.254477398312463,
+      "translatedFrom": 71,
+      "translatedTo": 155
+    },
+    {
+      "maxActive": 8,
+      "maxRadius": 3.25447706159467,
+      "translatedFrom": 60,
+      "translatedTo": 170
+    },
+    {
+      "maxActive": 8,
+      "maxRadius": 3.2544776844047267,
+      "translatedFrom": 64,
+      "translatedTo": 90
+    },
+    {
+      "maxActive": 8,
+      "maxRadius": 3.2544790722809336,
+      "translatedFrom": 60,
+      "translatedTo": 128
+    },
+    {
+      "maxActive": 7,
+      "maxRadius": 2.9708778796669404,
+      "translatedFrom": 60,
+      "translatedTo": 170
+    }
+  ],
+  "scope": "A finite six-body launcher under a published rule. The seed is package-found, historical priority unestablished; this is not an immortal-motion or stationary-gun proof."
+}
+{
+  "passed": true,
+  "identity": {
+    "expression": "F^40(C) = C disjoint-union E",
+    "sourceCells": 56,
+    "emittedCells": 23,
+    "completeNonzeroStatesChecked": true,
+    "leastEmissionIntervalEstablished": false
+  },
+  "parentMinimumBoundary": 10,
+  "sourceMinimumBoundary": 7,
+  "packetBodies": [
+    {
+      "maximumActive": 7,
+      "maximumRadius": 3.43998328933691,
+      "displacement": 149.99426865071072
+    },
+    {
+      "maximumActive": 7,
+      "maximumRadius": 3.43998328933691,
+      "displacement": 150.2373517180145
+    },
+    {
+      "maximumActive": 6,
+      "maximumRadius": 3.1775228620557168,
+      "displacement": 149.67945602493896
+    },
+    {
+      "maximumActive": 6,
+      "maximumRadius": 3.1775222728674346,
+      "displacement": 149.68662930992664
+    }
+  ],
+  "accounting": {
+    "independentTrajectories": 7,
+    "completeProductionReferenceStateComparisons": 1067,
+    "transitionsPerEngine": 1060
+  },
+  "scope": "Finite repeating emitter only; no indefinite gun or least-period claim."
+}
++ node research/continued-search/hex/verify-selected.js ./discoveries.js
+Verified p6 puffer, exact three-cell twin-puffer launch, and distinct complete-state p48 spaceship.
++ node research/continued-search/penrose/verify-twelve.js
+{"bodyCount":12,"radius3Returns":5,"boundary":7,"maximumActive":479,"sha":"f3648077a669d6ce4653422673d70c994a5525d93d0835838360d4e24fea0206"}
++ node test-hex-exhaustive-evidence.js
+{"exactHexagonalConfigurations":5,"generations":663,"essentialLaunchClauseControls":1}
++ node research/exhaustive-search/hat-broad/verify-rejections.js
+{
+  "schema": 1,
+  "examples": [
+    {
+      "id": "endpoint-drift-wave",
+      "generationsCompared": 558,
+      "independentQueryParity": true,
+      "maxPopulation": 283,
+      "maximumRadius": 61.94011147108993,
+      "minimumBoundaryDistance": 43,
+      "translatedReturn": null,
+      "matchedDeadHaloRings": null,
+      "outcome": {
+        "extinction": 557
+      }
+    },
+    {
+      "id": "two-cell-shift-then-clock",
+      "generationsCompared": 41,
+      "independentQueryParity": true,
+      "maxPopulation": 10,
+      "maximumRadius": 5.765058996907081,
+      "minimumBoundaryDistance": 34,
+      "translatedReturn": {
+        "from": 0,
+        "to": 37,
+        "translation": [
+          4.5,
+          2.59808
+        ]
+      },
+      "matchedDeadHaloRings": 0,
+      "outcome": {
+        "transient": 38,
+        "period": 2
+      }
+    },
+    {
+      "id": "compact-pulse-c5",
+      "generationsCompared": 49,
+      "independentQueryParity": true,
+      "maxPopulation": 41,
+      "maximumRadius": 17.49899701296007,
+      "minimumBoundaryDistance": 27,
+      "translatedReturn": {
+        "from": 13,
+        "to": 29,
+        "translation": [
+          12,
+          12.1244
+        ]
+      },
+      "matchedDeadHaloRings": 0,
+      "outcome": {
+        "extinction": 48
+      }
+    },
+    {
+      "id": "compact-pulse-c6",
+      "generationsCompared": 51,
+      "independentQueryParity": true,
+      "maxPopulation": 29,
+      "maximumRadius": 11.366838816671658,
+      "minimumBoundaryDistance": 20,
+      "translatedReturn": {
+        "from": 15,
+        "to": 31,
+        "translation": [
+          -16.5,
+          4.33013
+        ]
+      },
+      "matchedDeadHaloRings": 0,
+      "outcome": {
+        "extinction": 50
+      }
+    }
+  ]
+}
++ node test-static.js
+{"standaloneBytes":381235,"tilings":["square","hex","hat","penrose"],"embeddedRuntimeAssets":true,"curatedDiscoveries":89,"requiredNotices":["MIT","BSD-3-Clause"],"externalRuntimeRequests":0}
++ node build-standalone.js --check
+standalone bundle is up to date
++ python3 test-package.py
+test_archive_paths_and_writes_are_safe (__main__.PackageTest.test_archive_paths_and_writes_are_safe) ... ok
+test_checksums_cover_all_other_deliverables (__main__.PackageTest.test_checksums_cover_all_other_deliverables) ... ok
+test_failed_preparation_leaves_destination_unchanged (__main__.PackageTest.test_failed_preparation_leaves_destination_unchanged) ... ok
+test_manifest_covers_every_source_member_and_permissions (__main__.PackageTest.test_manifest_covers_every_source_member_and_permissions) ... ok
+test_manifest_detects_tampering_omissions_and_duplicates (__main__.PackageTest.test_manifest_detects_tampering_omissions_and_duplicates) ... ok
+test_missing_or_invalid_catalogue_fails_before_output (__main__.PackageTest.test_missing_or_invalid_catalogue_fails_before_output) ... ok
+test_no_output_overlaps_or_replaces_existing_data (__main__.PackageTest.test_no_output_overlaps_or_replaces_existing_data) ... ok
+test_source_mtimes_and_permissions_do_not_change_output (__main__.PackageTest.test_source_mtimes_and_permissions_do_not_change_output) ... ok
+test_stale_standalone_and_wrong_version_fail_before_output (__main__.PackageTest.test_stale_standalone_and_wrong_version_fail_before_output) ... ok
+test_versioned_output_contract_and_determinism (__main__.PackageTest.test_versioned_output_contract_and_determinism) ... ok
+test_zip_verifier_rejects_symlinks (__main__.PackageTest.test_zip_verifier_rejects_symlinks) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 10.285s
+
+OK
++ python3 test-repository.py
+test_archive_is_deterministic_and_complete (__main__.RepositoryExportTest.test_archive_is_deterministic_and_complete) ... ok
+test_local_files_are_excluded_but_research_data_and_github_files_survive (__main__.RepositoryExportTest.test_local_files_are_excluded_but_research_data_and_github_files_survive) ... ok
+test_outputs_cannot_overlap_the_checkout_or_replace_existing_files (__main__.RepositoryExportTest.test_outputs_cannot_overlap_the_checkout_or_replace_existing_files) ... ok
+test_site_includes_the_offline_application_notices_and_catalogue (__main__.RepositoryExportTest.test_site_includes_the_offline_application_notices_and_catalogue) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.626s
+
+OK
++ python3 test-handover.py
+test_archive_publication_failure_restores_empty_or_absent_output (__main__.HandoverTest.test_archive_publication_failure_restores_empty_or_absent_output) ... ok
+test_build_is_deterministic_and_archive_matches_extracted_files (__main__.HandoverTest.test_build_is_deterministic_and_archive_matches_extracted_files) ... ok
+test_existing_outputs_and_unsafe_destinations_are_preserved (__main__.HandoverTest.test_existing_outputs_and_unsafe_destinations_are_preserved) ... ok
+test_incompatible_catalogue_leaves_destinations_untouched (__main__.HandoverTest.test_incompatible_catalogue_leaves_destinations_untouched) ... ok
+test_patch_release_preserves_reviewed_catalogue_and_its_download_names (__main__.HandoverTest.test_patch_release_preserves_reviewed_catalogue_and_its_download_names) ... ok
+test_verifier_checks_versions_and_embedded_assets_beyond_checksums (__main__.HandoverTest.test_verifier_checks_versions_and_embedded_assets_beyond_checksums) ... ok
+test_verifier_detects_corruption_omission_and_unexpected_files (__main__.HandoverTest.test_verifier_detects_corruption_omission_and_unexpected_files) ... ok
+test_verifier_rejects_malformed_manifest_paths_and_records (__main__.HandoverTest.test_verifier_rejects_malformed_manifest_paths_and_records) ... ok
+test_versions_allow_only_compatible_nonfuture_catalogues (__main__.HandoverTest.test_versions_allow_only_compatible_nonfuture_catalogues) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 8.894s
+
+OK
+
+All requested test profiles passed.

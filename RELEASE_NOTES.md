@@ -1,13 +1,24 @@
-# Aperiodic Life 3.7.4
+# Aperiodic Life 3.7.5
 
-Release date: **14 October 2026**.
+Release date: **15 October 2026**.
 
 Aperiodic Life is an offline browser laboratory for cellular automata on square, hexagonal, Einstein-hat, and Penrose tilings.
+
+## Changes in 3.7.5
+
+- Fixed **Randomise** and the `R` shortcut reusing the same seed on every action. Each action now generates and displays a fresh seed before filling the board.
+- Replaced the seed-only **New** button with **Apply seed**. This applies the displayed or typed seed deterministically; Enter in the seed field does the same. Startup, geometry rebuilds and curated examples retain deterministic seeding.
+- Added canvas keyboard navigation: focus the canvas with a click or Tab, then use the arrow keys to pan; Shift pans farther. Focus is visibly indicated and form controls retain their arrow-key behaviour.
+- Added regression coverage for canvas keyboard navigation, fresh randomisation, explicit seed replay, keyboard use and busy-state handling.
+- Separated the application version from the retained catalogue version in handover metadata, catalogue download names and catalogue rebuild validation. The reviewed 3.7.4 catalogue, revision 2, and its scientific data remain unchanged.
+- Added handover build/integrity regressions and corrected malformed manifest-path handling.
+
+See [the verification record](docs/handover/VERIFICATION.md) for the checks actually executed and remaining browser-test limitations.
 
 ## Included features
 
 - A [full illustrated PDF catalogue](docs/catalogue/aperiodic-life-catalogue.pdf) of all 89 curated configurations and all 12 named rule templates, with complete rule definitions, uniquely labelled rule-sets, reproducible seeds, verification limits, and individual provenance.
-- Catalogue documentation revision 2 adds the authorship statement “AI generated following prompts by Murdoch J. Gabbay”, named parent works for adaptations, precise linked citations, and dated originality statements. The release version remains 3.7.4.
+- Catalogue documentation revision 2 adds the authorship statement “AI generated following prompts by Murdoch J. Gabbay”, named parent works for adaptations, precise linked citations, and dated originality statements. The catalogue retains its 3.7.4 version independently of the application patch release.
 - Editable [catalogue source and rebuild instructions](docs/catalogue/README.md), included with the Python PDF builder, structured data, and figures.
 - An **About** button at the bottom of the controls with author credit, release date, version, and links to the catalogue and its editable source. Both branch-based Pages hosting and the curated Pages build include the catalogue.
 

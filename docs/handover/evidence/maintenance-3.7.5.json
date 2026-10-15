@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-15",
+  "applicationVersion": "3.7.5",
+  "catalogueVersion": "3.7.4",
+  "catalogueRevision": 2,
+  "runtimes": {
+    "node": "v24.19.0",
+    "python": "3.12.14"
+  },
+  "inputHandoverIntegrity": {
+    "result": "passed",
+    "verifiedFiles": 313
+  },
+  "changes": [
+    "Randomise/R generates a fresh visible seed",
+    "Apply seed/Enter provides explicit reproducible initialization",
+    "Focused canvas arrow panning; Shift pans farther",
+    "Application/catalogue version separation with exact scientific hash checks",
+    "Malformed manifest path validation"
+  ],
+  "checks": [
+    {
+      "command": "python3 tools/project.py test standard",
+      "outcome": "passed",
+      "log": "maintenance-3.7.5/standard-final.log"
+    },
+    {
+      "command": "python3 tools/project.py test topology",
+      "outcome": "passed",
+      "log": "maintenance-3.7.5/core-topology-review.log"
+    },
+    {
+      "command": "python3 tools/project.py test large",
+      "outcome": "passed",
+      "log": "maintenance-3.7.5/core-large-review.log"
+    },
+    {
+      "command": "node research/verify-catalog.js",
+      "outcome": "passed",
+      "log": "maintenance-3.7.5/catalogue-replay.log"
+    },
+    {
+      "command": "python3 docs/catalogue/build_catalogue.py --check",
+      "outcome": "passed",
+      "log": "maintenance-3.7.5/catalogue-check-final.log"
+    },
+    {
+      "command": "python3 test-catalogue.py",
+      "outcome": "passed",
+      "log": "maintenance-3.7.5/catalogue-test-final.log"
+    },
+    {
+      "command": "node test-browser.js",
+      "outcome": "unavailable: Chromium executable absent",
+      "log": "maintenance-3.7.5/browser-final.log"
+    }
+  ],
+  "coreMutationComparisons": 38400,
+  "coreMutationOperations": 12960,
+  "preservation": {
+    "result": "passed",
+    "catalogueAssetsUnchanged": 15,
+    "catalogueAssetPaths": [
+      "docs/catalogue/aperiodic-life-catalogue.pdf",
+      "docs/catalogue/catalogue-data.json",
+      "docs/catalogue/catalogue-source.json",
+      "docs/catalogue/catalogue.md",
+      "docs/catalogue/evidence/credited-independent-verification.json",
+      "docs/catalogue/export_geometry.js",
+      "docs/catalogue/fonts/DejaVuSans-Bold.ttf",
+      "docs/catalogue/fonts/DejaVuSans.ttf",
+      "docs/catalogue/fonts/DejaVuSansMono.ttf",
+      "docs/catalogue/fonts/DejaVuSerif-Bold.ttf",
+      "docs/catalogue/fonts/DejaVuSerif.ttf",
+      "docs/catalogue/fonts/LICENCE.txt",
+      "docs/catalogue/geometry/diagrams.json",
+      "docs/catalogue/requirements.txt",
+      "docs/catalogue/verify_credited.js"
+    ],
+    "coreAndDiscoveriesUnchanged": true,
+    "cataloguePdfSha256": "8f9aa2796ab173ae2253a9578a1c967ac20dd8d654d490169839557b1fb16f20"
+  },
+  "testedSourceSha256": {
+    "app.js": "626c9fc47587562a9ea8ed543475a6a39000ead3b9882e3e8c08403a1c9d4f8f",
+    "index.html": "f5091baa1fa58863e1c2d4368c597944ae30e77ceba8ba83900d7358a22da512",
+    "styles.css": "efb60c739e62c7fc8393320c1f31446c015e461fb97e445b04e9a83a37a55ce7",
+    "core.js": "d39d1a0b0ed3b1307a9d9a9bbbabb75ee4479e257301674ac38c6b2b622b6ef3",
+    "discoveries.js": "9f0d8e6969a0c6fe5fde89e29bc33437c39fb87e6464fa125c1be9da28fc5187",
+    "aperiodic-life-standalone.html": "6d62a071f41487d57e97a0c883e5d0140c24c515d3c6878909683d8b3e2a5707",
+    "test-interactions.js": "377ea89e42fb0aa424b1af472d6ff45579f52cae0f1d6152a4dcf90e0ae2f6df",
+    "test-browser.js": "b08bff6de8c8dacb028a13a8693a67f31109dcfc55b4af5cdb13b3bca0850b38",
+    "test-core-mutations.js": "d16081726680f793af9d2391cd11d03cad2c1231a959017863eac202c22392b7",
+    "tools/build_handover.py": "3963418cd478410ee36828626b72de895f71bbf0a49b26808fa9fd75bbf72390"
+  },
+  "notPerformed": [
+    "Real-browser rendering/interactions (Chromium unavailable)",
+    "Physical-phone acceptance",
+    "Remote GitHub Actions/Pages deployment",
+    "New discovery searches, originality research or indefinite-travel proofs"
+  ],
+  "assembly": "The builder verifies its staged payload and ZIP before publication. The delivered ZIP is also freshly extracted and verified. The final outer manifest records exact completed payload hashes."
+}

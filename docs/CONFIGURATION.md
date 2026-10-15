@@ -79,6 +79,12 @@ Cells beyond a finite patch are absent and never counted. For B/S rules this is 
 
 One dead-border ring locks the outer graph boundary at state 0; every additional ring locks one more graph-distance layer inward. Locked tiles still exist and are counted as zero-state neighbours by table rules. Boundary distance uses the selected contact graph.
 
+## Random patterns and explicit seeds
+
+**Randomise** and the `R` shortcut generate and display a fresh seed, then initialise the board at the chosen density. **Apply seed**, or Enter while editing the seed field, repeats the displayed or typed seed without changing it. Reproduction requires the same geometry, density and dead-border settings; an evolved or painted board requires an exact state file.
+
+The initial page load, geometry rebuilds and curated random examples still use their specified seed deterministically. Changing the density alone does not replace the board. At density 0 or 1 (or when the entire board is locked by the dead border), different seeds can correctly produce the same pattern.
+
 ## Reproducibility boundary
 
 A configuration recreates geometry, controls, and a deterministic random initial population. It does not preserve an evolved state, hand-painted edits, camera position, or browser-specific PNG bytes. Use **Save state** and **Load state** for exact exchange as described below.

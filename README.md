@@ -6,7 +6,7 @@ This package was vibe-coded by Murdoch J. Gabbay. I hope you find it useful and 
 
 Explore cellular automata on **square, hexagonal, Einstein-hat, and Penrose tilings**. Each tile is one cell. Change the rules, paint a seed, and watch patterns evolve on periodic and aperiodic boards.
 
-Aperiodic Life 3.7.4 runs offline in a WebGL2-capable browser and includes **89 verified examples**. No installation or npm dependencies are needed to use it. You can also run it immediately in your browser at [https://bellissimogiorno.github.io/aperiodic-life/](https://bellissimogiorno.github.io/aperiodic-life/).
+Aperiodic Life 3.7.5 runs offline in a WebGL2-capable browser and includes **89 verified examples**. No installation or npm dependencies are needed to use it. You can also run it immediately in your browser at [https://bellissimogiorno.github.io/aperiodic-life/](https://bellissimogiorno.github.io/aperiodic-life/).
 
 ![Einstein-hat glider and launcher phases rendered from exact simulation states](research/figures/hat-gliders.svg)
 
@@ -34,7 +34,9 @@ Open [http://127.0.0.1:8000/index.html](http://127.0.0.1:8000/index.html). This 
 - Use **Play/Pause** at the top right of the canvas to start or stop the simulation. It stays accessible on mobile, including while the controls are open or scrolled.
 - Start with **Hat glider B**, **Hat triple launcher**, **Penrose six-traveller launcher**, or either hexagonal **knightship**. The [search report](docs/GLIDER_SEARCH.md) explains the evidence and attribution.
 - For hexagonal highlights, search for **three-way spaceship gun**, **giant breather**, **self-repairing wall**, or **p4104**. The catalogue includes 36 hexagonal examples; the [hexagonal guide](docs/HEXAGONAL_STRUCTURES.md) explains their behaviour and evidence.
+- Click or Tab to focus the canvas, then use the **arrow keys** to pan (hold **Shift** for larger steps).
 - Drag to pan; pinch with two fingers or use the wheel to zoom. Moving two fingers together pans, including with **Paint / erase cells** selected. Use a fresh one-finger tap or drag to paint.
+- Use **Randomise** (or `R`) for a fresh random pattern. To reproduce a pattern, enter its seed and use **Apply seed** (or Enter), with the same tiling, density and border settings.
 - Use **Save state** and **Load state** to exchange exact experiments, including refractory cells and generation. **Copy settings** copies controls only.
 - Open either **?** button for the rules, neighbourhoods, and finite-boundary explanation.
 - Open **About** at the bottom of the controls for the release date, version, author credit, and full PDF catalogue.
@@ -45,7 +47,7 @@ Rules use `B…/S…` notation, such as Conway's `B3/S23`. Additional cell state
 
 The [full illustrated catalogue](docs/catalogue/aperiodic-life-catalogue.pdf) covers **all 89 curated configurations and all 12 named rule templates**. Each configuration records its complete rule-set, neighbourhood, state count, seed, verification limits, and provenance. Unique linked rule labels lead to a plain-language notation guide and complete rule register. Known patterns name their sources; package-found patterns are marked as such, with historical originality distinguished from independent discovery.
 
-Catalogue documentation revision 2 (14 October 2026) is **AI generated following prompts by Murdoch J. Gabbay**. Adaptations name their parent work and the change; originality statements specify the scope and date of the literature review.
+The reviewed catalogue remains version **3.7.4, documentation revision 2 (14 October 2026)**; release 3.7.5 changes randomisation and keyboard controls without changing its patterns or rules. It is **AI generated following prompts by Murdoch J. Gabbay**. Adaptations name their parent work and the change; originality statements specify the scope and date of the literature review.
 
 The [editable Markdown source](docs/catalogue/catalogue.md), structured data, figures, and [Python PDF builder](docs/catalogue/build_catalogue.py) are included in the repository. See [catalogue source and rebuilding](docs/catalogue/README.md) for the exact dependencies and commands. Reading the supplied PDF needs no build tools.
 
@@ -78,6 +80,10 @@ The first command regenerates the checked-in standalone file. See [CONTRIBUTING.
 - [Configuration and state files](docs/CONFIGURATION.md): settings and import formats.
 - [Limitations](docs/LIMITATIONS.md) and [security and privacy](docs/SECURITY_AND_PRIVACY.md).
 - [Publishing to GitHub](docs/PUBLISHING.md) and [release operations](docs/OPERATIONS.md).
+
+## Project handover
+
+The [handover guide](docs/handover/README.md) preserves the [design brief](docs/handover/DESIGN_BRIEF.md), [rationale](docs/handover/RATIONALE.md), [decision log](docs/handover/DECISION_LOG.md), current limitations and continuation instructions. Run `python3 tools/build_handover.py --help` to regenerate the complete handover archive.
 
 ## Licence
 
